@@ -1,0 +1,820 @@
+《Python核心编程》读书笔记
+第 1 章 安装 Python
+第 2 章 第一个 Python 程序
+函数声明：函数没有定义返回的数据类型。Python 不需要指定返回值的数据类型；甚至不需要指定是否有返回值。实际上，每个 Python 函数都返回一个值；如果函数执行过 return 语句，它将返回指定的值，否则将返回 None (Python 的空值)。
+
+Python 和其他编程语言数据类型的比较
+在 Python 中，永远也不需要明确指定任何东西的数据类型。Python 会根据赋给它的值在内部将其数据类型记录下来。
+静态类型语言
+一种在编译期间就确定数据类型的语言。大多数静态类型语言是通过要求在使用任一变量之前声明其数据类型来保证这一点的。Java 和 C 是静态类型语言。
+动态类型语言
+一种在运行期间才去确定数据类型的语言，与静态类型相反。VBScript 和 Python 是动态类型的，因为它们确定一个变量的类型是在您第一次给它赋值的时候。
+强类型语言
+一种总是强制类型定义的语言。Java 和 Python 是强制类型定义的。您有一个整数，如果不明确地进行转换 ，不能将把它当成一个字符串。
+弱类型语言
+一种类型可以被忽略的语言，与强类型相反。VBScript 是弱类型的。在 VBScript 中，您可以将字符串 '12' 和整数 3 进行连接得到字符串'123'，然后可以把它看成整数 123 ，所有这些都不需要任何的显示转换。
+所以说 Python 既是动态类型语言 (因为它不使用显示数据类型声明)，又是强类型语言 (因为只要一个变量获得了一个数据类型，它实际上就一直是这个类型了)。
+
+doc string (文档字符串)
+定义 buildConnectionString 函数的 doc string
+
+def buildConnectionString(params):
+    """Build a connection string from a dictionary of parameters.
+
+    Returns string."""
+三重引号表示一个多行字符串。在开始与结束引号间的所有东西都被视为单个字符串的一部分，包括硬回车和其它的引号字符。您可以在任何地方使用它们，但是您可能会发现，它们经常被用于定义 doc string。
+在三重引号中的任何东西都是这个函数的 doc string，它们用来说明函数可以做什么。如果存在 doc string，它必须是一个函数要定义的第一个内容 (也就是说，在冒号后面的第一个内容)。在技术上不要求给出函数的 doc string，但是您应该这样做。我相信在您上过的每一种编程课上都听到过这一点，但是 Python 带给您一些额外的动机：doc string 在运行时可作为函数的属性。
+
+模块导入的搜索路径：模块是指一个可以交互使用，或者从另一 Python 程序访问的代码段。只要导入了一个模块，就可以引用它的任何公共的函数、类或属性。模块可以通过这种方法来使用其它模块的功能。当导入一个模块时，Python 在几个地方进行搜索。明确地，它会对定义在 sys.path 中的目录逐个进行搜索。
+不是所有的模块都保存为 .py 文件。有一些模块 (像 sys)，是“内置模块”，它们实际上是置于 Python 内部的。内置模块的行为如同一般的模块，但是它们的 Python 源代码是不可用的，因为它们不是用 Python 写的！(sys 模块是用 C 写的。)
+在运行时，通过向 sys.path 追加目录名，就可以在 Python 的搜索路径中增加新的目录，然后当您导入模块时，Python 也会在那个目录中进行搜索。这个作用在 Python 运行时一直生效：
+import sys
+sys.path.append('/my/new/path')
+
+在 Python 中一切都是对象，并且几乎一切都有属性和方法。所有的函数都有一个内置的 __doc__ 属性，它会返回在函数源代码中定义的 doc string；sys 模块是一个对象，它有一个叫作 path 的属性；等等。
+模块是对象，并且所有的模块都有一个内置属性 __name__。一个模块的 __name__ 的值取决于您如何应用模块。如果 import 模块，那么 __name__ 的值通常为模块的文件名，不带路径或者文件扩展名。但是您也可以像一个标准的程序一样直接运行模块，在这种情况下 __name__ 的值将是一个特别的缺省值，__main__。
+
+第 3 章 内置数据类型
+Dictionary
+在一个 dictionary 中不能有重复的 key。给一个存在的 key 赋值会覆盖原有的值。
+dictionary 的 key 是大小写敏感的。
+Dictionary 不只是用于存储字符串。Dictionary 的值可以是任意数据类型，包括字符串、整数、对象，甚至其它的 dictionary。在单个 dictionary 里，dictionary 的值并不需要全都是同一数据类型，可以根据需要混用和匹配。
+Dictionary 的 key 要严格多了，但是它们可以是字符串、整数或几种其它的类型。也可以在一个 dictionary 中混用和匹配 key 的数据类型。
+从 dictionary 中删除元素：del dict[“key”]或者dict.clear()
+dictionary中元素无序；
+
+List
+List 可以作为以 0 下标开始的数组。任何一个非空 list 的第一个元素总是 li[0]。
+负数索引从 list 的尾部开始向前计数来存取元素。任何一个非空的 list 最后一个元素总是 li[-1]。、
+分片：可以通过指定 2 个索引得到 list 的子集，叫做一个 “slice” 。返回值是一个新的 list，它包含了 list 中按顺序从第一个 slice 索引 (这里为 li[1]) 开始，直到但是不包括第二个 slice 索引 (这里为 li[3]) 的所有元素。
+如果左侧分片索引为 0，您可以将其省略，默认为 0。所以 li[:3] 同li[0:3] 是一样的。同样的，如果右侧分片索引是 list 的长度，可以将其省略。所以 li[3:] 同 li[3:5] 是一样的，因为这个 list 有 5 个元素。
+如果将两个分片索引全部省略，这将包括 list 的所有元素。但是与原始的名为 li 的 list 不同，它是一个新 list，恰好拥有与 li 一样的全部元素。li[:] 是生成一个 list 完全拷贝的一个简写。
+增加元素：
+	li.append("new") append 向 list 的末尾追加单个元素。
+	li.insert(2, "new") insert 将单个元素插入到 list 中。数值参数是插入点的索引。请注意，list 中的元素不必唯一，现在有两个独立的元素具有 'new' 这个值，li[2] 和 li[6]。
+	li.extend(["two", "elements"]) extend 用来连接 list。请注意不要使用多个参数来调用 extend，要使用一个 list 参数进行调用。在本例中，这个 list 有两个元素。
+Lists 的两个方法 extend 和 append 看起来类似，但实际上完全不同。extend 接受一个参数，这个参数总是一个 list，并且把这个 list 中的每个元素添加到原 list 中。另一方面，append 接受一个参数，这个参数可以是任何数据类型，并且简单地追加到 list 的尾部。
+搜索 list：list.index("key") index 在 list 中查找一个值的首次出现并返回索引值。如果在 list 中没有找到值，Python 会引发一个异常。这一点与大部分的语言截然不同，大部分语言会返回某个无效索引。尽管这种处理可能令人讨厌，但它仍然是件好事，因为它说明您的程序会由于源代码的问题而崩溃，好于在后面当您使用无效索引而引起崩溃。
+要测试一个值是否在 list 内，使用 in。如果值存在，它返回 True，否则返为 False： "key" in list
+删除元素：
+	li.remove("z") remove 从 list 中删除一个值的首次出现。如果在 list 中没有找到值，Python 会引发一个异常。
+	li.pop()pop 是一个有趣的东西。它会做两件事：删除 list 的最后一个元素，然后返回删除元素的值。请注意，这与 li[-1] 不同，后者返回一个值但不改变 list 本身。也不同于 li.remove(value)，后者改变 list 但并不返回值。
+List 运算符：
+	li = li + ['example', 'new']：Lists 也可以用 + 运算符连接起来。list = list + otherlist 相当于 list.extend(otherlist)。但 + 运算符把一个新 (连接后) 的 list 作为值返回，而 extend 只修改存在的 list。也就是说，对于大型 list 来说，extend 的执行速度要快一些。
+	li += ['two']：Python 支持 += 运算符。li += ['two'] 等同于 li.extend(['two'])。+= 运算符可用于 list、字符串和整数，并且它也可以被重载用于用户自定义的类中
+	li = [1, 2] * 3 ：* 运算符可以作为一个重复器作用于 list。li = [1, 2] * 3 等同于 li = [1, 2] + [1, 2] + [1, 2]，即将三个 list 连接成一个。
+list中元素有序；
+
+Tuple
+Tuple 是不可变的 list。一旦创建了一个 tuple，就不能以任何方式改变它。
+定义 tuple 与定义 list 的方式相同，但整个元素集是用小括号包围的，而不是方括号：t = ("a", "b", "mpilgrim", "z", "example")
+Tuple 的元素与 list 一样按定义的次序进行排序。同样可以使用负数索引及切片。
+Tuple 没有方法：不能向 tuple 增加、删除元素，不能在 tuple 中查找元素。可以使用 in 来查看一个元素是否存在于 tuple 中。
+使用Tuple的好处：
+Tuple 比 list 操作速度快。如果您定义了一个值的常量集，并且唯一要用它做的是不断地遍历它，请使用 tuple 代替 list。
+如果对不需要修改的数据进行 “写保护”，可以使代码更安全。使用 tuple 而不是 list 如同拥有一个隐含的 assert 语句，说明这一数据是常量。如果必须要改变这些值，则需要执行 tuple 到 list 的转换 (需要使用一个特殊的函数)。
+还记得我说过 dictionary keys 可以是字符串，整数和 “其它几种类型”吗？Tuples 就是这些类型之一。Tuples 可以在 dictionary 中被用做 key，但是 list 不行。实际上，事情要比这更复杂。Dictionary key 必须是不可变的。Tuple 本身是不可改变的，但是如果您有一个 list 的 tuple，那就认为是可变的了，用做 dictionary key 就是不安全的。只有字符串、整数或其它对 dictionary 安全的 tuple 才可以用作 dictionary key。
+Tuples 可以用在字符串格式化中，我们会很快看到。
+Tuple 到 list 再到 tuple：Tuple 可以转换成 list，反之亦然。内置的 tuple 函数接收一个 list，并返回一个有着相同元素的 tuple。而 list 函数接收一个 tuple 返回一个 list。从效果上看，tuple 冻结一个 list，而 list 解冻一个 tuple。
+
+Python 中的 True
+在 2.2.1 版本之前，Python 没有单独的布尔数据类型。为了弥补这个缺陷，Python 在布尔环境 (如 if 语句) 中几乎接受所有东西，遵循下面的规则：
+0 为 false; 其它所有数值皆为 true。
+空串 ("") 为 false; 其它所有字符串皆为 true。
+空 list ([]) 为 false; 其它所有 list 皆为 true。
+空 tuple (()) 为 false; 其它所有 tuple 皆为 true。
+空 dictionary ({}) 为 false; 其它所有 dictionary 皆为 true。
+这些规则仍然适用于 Python 2.2.1 及其后续版本。
+
+变量声明
+Python 与大多数其它语言一样有局部变量和全局变量之分，但是它没有明显的变量声明。变量通过首次赋值产生，当超出作用范围时自动消亡。
+书写多行命令：当一条命令用续行符 (“\”) 分割成多行时，后续的行可以以任何方式缩进，此时 Python 通常的严格的缩进规则无需遵守：
+myParams = {"server":"mpilgrim", \
+                "database":"master", \
+                "uid":"sa", \
+                "pwd":"secret" \
+                }
+
+一次赋多值：v 是一个三元素的 tuple，并且 (x, y, z) 是一个三变量的 tuple。将一个 tuple 赋值给另一个 tuple，会按顺序将 v 的每个值赋值给每个变量。
+v = ('a', 'b', 'e')
+	(x, y, z) = v
+连续值赋值：(MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(7)
+	内置的 range 函数返回一个元素为整数的 list。这个函数的简化调用形式是接收一个上限值，然后返回一个初始值从 0 开始的 list，它依次递增，直到但不包含上限值。
+也可以使用多变量赋值来创建返回多个值的函数，只要返回一个包含所有值的 tuple 即可。
+
+格式化字符串
+字符串格式化不只是连接。它甚至不仅仅是格式化。它也是强制类型转换。
+当定义一个 list、tuple 或 dictionary 时，您可以总是在最后一个元素后面跟上一个逗号，但是当定义一个只包含一个元素的 tuple 时逗号是必须的。如果省略逗号，Python 不会知道 (userCount) 究竟是一个只包含一个元素的 tuple 还是变量 userCount 的值。
+数值的格式化：print "Today's stock price: %+.2f" % 50.4625
+
+映射 list
+可以通过对 list 中的每个元素应用一个函数，从而将一个 list 映射为另一个 list。对 list 的解析并不改变原始的 list。
+>>> li = [1, 9, 8, 4]
+>>> [elem*2 for elem in li]      
+[2, 18, 16, 8]
+>>> li                           
+[1, 9, 8, 4]
+
+ Dictionary 的keys, values 和 items 函数
+>>> params = {"server":"mpilgrim", "database":"master", "uid":"sa", "pwd":"secret"}
+>>> params.keys()   (1)
+['server', 'uid', 'database', 'pwd']
+>>> params.values() (2)
+['mpilgrim', 'sa', 'master', 'secret']
+>>> params.items()  (3)
+[('server', 'mpilgrim'), ('uid', 'sa'), ('database', 'master'), ('pwd', 'secret')]
+e.g: ["%s=%s" % (k, v) for k, v in params.items()]
+
+连接 list 与分割字符串
+>>> params = {"server":"mpilgrim", "database":"master", "uid":"sa", "pwd":"secret"}
+>>> ["%s=%s" % (k, v) for k, v in params.items()]
+['server=mpilgrim', 'uid=sa', 'database=master', 'pwd=secret']
+>>> ";".join(["%s=%s" % (k, v) for k, v in params.items()])
+'server=mpilgrim;uid=sa;database=master;pwd=secret'
+join 只能用于元素是字符串的 list；它不进行任何的强制类型转换。连接一个存在一个或多个非字符串元素的 list 将引发一个异常。
+>>> s
+'server=mpilgrim;uid=sa;database=master;pwd=secret'
+>>> s.split(";")    (1)
+['server=mpilgrim', 'uid=sa', 'database=master', 'pwd=secret']
+>>> s.split(";", 1) (2)
+['server=mpilgrim', 'uid=sa;database=master;pwd=secret']
+split 接受一个可选的第二个参数，它是要分割的次数。
+用 split 搜索: anystring.split(delimiter, 1) 是一个有用的技术，在您想要搜索一个子串，然后分别处理字符前半部分 (即 list 中第一个元素) 和后半部分 (即 list 中第二个元素) 时，使用这个技术。
+
+第 4 章 自省的威力
+概览
+自省是指代码可以查看内存中以对象形式存在的其它模块和函数，获取它们的信息，并对它们进行操作。用这种方法，你可以定义没有名称的函数，不按函数声明的参数顺序调用函数，甚至引用事先并不知道名称的函数。
+if __name__ 技巧允许这个程序在自己独立运行时做些有用的事情，同时又不妨碍作为其它程序的模块使用。
+
+info 函数
+info 函数的设计意图是提供给工作在 Python IDE 中的开发人员使用，它可以接受任何含有函数或者方法的对象 (比如模块，含有函数，又比如list，含有方法) 作为参数，并打印出对象的所有函数和它们的 doc string：
+def info(object, spacing=10, collapse=1): 
+    """Print methods and doc strings.
+    Takes module, class, list, dictionary, or string."""
+    methodList = [method for method in dir(object) if callable(getattr(object, method))]
+    processFunc = collapse and (lambda s: " ".join(s.split())) or (lambda s: s)
+    print "\n".join(["%s %s" %
+                      (method.ljust(spacing),
+                       processFunc(str(getattr(object, method).__doc__)))
+                     for method in methodList])
+
+if __name__ == "__main__":               
+    print info.__doc__
+缺省地，程序输出进行了格式化处理，以使其易于阅读。多行 doc string 被合并到单行中，要改变这个选项需要指定 collapse 参数的值为 0。如果函数名称长于10个字符，你可以将 spacing 参数的值指定为更大的值以使输出更容易阅读。
+
+使用可选参数和命名参数
+Python 允许函数参数有缺省值；如果调用函数时不使用参数，参数将获得它的缺省值。此外，通过使用命名参数还可以以任意顺序指定参数。
+要指定 collapse 的值，但是又想要接受 spacing 的缺省值：info(odbchelper, collapse=0)
+甚至必备参数 (例如 object，没有指定缺省值) 也可以采用命名参数的方式，而且命名参数可以以任意顺序出现：info(spacing=15, object=odbchelper)
+参数不过是一个字典，调用函数时唯一必须做的事情就是为每一个必备参数指定值 (以某种方式)；以何种具体的方式和顺序都取决于你。
+
+内置函数
+ type 函数：type 函数返回任意对象的数据类型。在 types 模块中列出了可能的数据类型。
+>>> import odbchelper
+>>> type(odbchelper)  (3)
+<type 'module'>
+>>> import types      (4)
+>>> type(odbchelper) == types.ModuleType
+True
+
+str 函数：str 将数据强制转换为字符串。每种数据类型都可以强制转换为字符串。
+>>> str(odbchelper) (3)
+"<module 'odbchelper' from 'c:\\docbook\\dip\\py\\odbchelper.py'>"
+str 的一个细小但重要的行为是它可以作用于 None，None 是 Python 的 null 值。这个调用返回字符串 'None'。
+
+dir 函数：dir 函数返回任意对象的属性和方法列表，包括模块对象、函数对象、字符串对象、列表对象、字典对象 …… 相当多的东西。
+>>> li = []
+>>> dir(li)           
+['append', 'count', 'extend', 'index', 'insert',
+'pop', 'remove', 'reverse', 'sort']
+>>> dir(odbchelper)   
+['__builtins__', '__doc__', '__file__', '__name__', 'buildConnectionString']
+
+callable 函数：接收任何对象作为参数，如果参数对象是可调用的，返回 True；否则返回 False。可调用对象包括函数、类方法，甚至类自身。
+>>> import string
+>>> string.punctuation           (1)
+'!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+>>> string.join                  (2)
+<function join at 00C55A7C>
+>>> callable(string.punctuation) (3)
+False
+>>> callable(string.join)        (4)
+True
+string.punctuation 是不可调用的对象；它是一个字符串。(字符串确有可调用的方法，但是字符串本身不是可调用的。)
+
+__builtin__
+type、str、dir 和其它的 Python 内置函数都归组到了 __builtin__ (前后分别是双下划线) 这个特殊的模块中。如果有帮助的话，你可以认为 Python 在启动时自动执行了 from __builtin__ import *，此语句将所有的 “内置” 函数导入该命名空间，所以在这个命名空间中可以直接使用这些内置函数。
+
+对象引用
+使用 getattr 函数，可以得到一个直到运行时才知道名称的函数的引用。
+>>> li = ["Larry", "Curly"]
+>>> li.pop                       
+<built-in method pop of list object at 010DF884>
+该语句获取列表的 pop 方法的引用。注意该语句并不是调用 pop 方法；调用 pop 方法的应该是 li.pop()。这里指的是方法对象本身。
+>>> getattr(li, "pop")           
+<built-in method pop of list object at 010DF884>
+该语句也是返回 pop 方法的引用，但是此时，方法名称是作为一个字符串参数传递给 getattr 函数的。getattr 是一个有用到令人无法致信的内置函数，可以返回任何对象的任何属性。在这个例子中，对象是一个 list，属性是 pop 方法。
+>>> getattr(li, "append")("Moe") (3)
+>>> li
+["Larry", "Curly", "Moe"]
+getattr 的返回值是 方法，然后你就可以调用它，就像直接使用 li.append("Moe") 一样。但是实际上你没有直接调用函数；只是以字符串形式指定了函数名称。
+getattr 不仅仅适用于内置数据类型，也可作用于模块。
+getattr 缺省值：
+def output(data, format="text"):
+    output_function = getattr(statsout, "output_%s" % format, statsout.output_text)
+    return output_function(data)
+这个函数调用一定可以工作，因为你在调用 getattr 时添加了第三个参数。第三个参数是一个缺省返回值，如果第二个参数指定的属性或者方法没能找到，则将返回这个缺省返回值。
+
+过滤列表
+过滤列表语法：[mapping-expression for element in source-list if filter-expression]
+>>> li = ["a", "mpilgrim", "foo", "b", "c", "b", "d", "d"]
+>>> [elem for elem in li if len(elem) > 1]       (1)
+['mpilgrim', 'foo']
+>>> [elem for elem in li if elem != "b"]         (2)
+['a', 'mpilgrim', 'foo', 'c', 'd', 'd']
+>>> [elem for elem in li if li.count(elem) == 1] (3)
+['a', 'mpilgrim', 'foo', 'c']
+
+and 和 or
+and 和 or 执行布尔逻辑演算，如你所期待的一样。但是它们并不返回布尔值，而是返回它们实际进行比较的值之一：
+>>> 'a' and 'b'         
+'b'
+>>> '' and 'b'          
+''
+>>> 'a' and 'b' and 'c' 
+'c'
+使用 and 时，在布尔环境中从左到右演算表达式的值。0、''、[]、()、{}、None 在布尔环境中为假；其它任何东西都为真。还好，几乎是所有东西。默认情况下，布尔环境中的类实例为真，但是你可以在类中定义特定的方法使得类实例的演算值为假。如果布尔环境中的所有值都为真，那么 and 返回最后一个值。在这个例子中，and 演算 'a' 的值为真，然后是 'b' 的演算值为真，最终返回 'b'。
+如果布尔环境中的某个值为假，则 and 返回第一个假值。在这个例子中，'' 是第一个假值。
+>>> 'a' or 'b'          
+'a'
+>>> '' or 'b'           
+'b'
+>>> '' or [] or {}      
+{}
+>>> def sidefx():
+	print "in sidefx()"
+	return 1
+>>> 'a' or sidefx()     
+'a'
+使用 or 时，在布尔环境中从左到右演算值，就像 and 一样。如果有一个值为真，or 立刻返回该值。本例中，'a' 是第一个真值。如果所有的值都为假，or 返回最后一个假值。or 演算 '' 的值为假，然后演算 [] 的值为假，依次演算 {} 的值为假，最终返回 {} 。
+注意 or 在布尔环境中会一直进行表达式演算直到找到第一个真值，然后就会忽略剩余的比较值。如果某些值具有副作用，这种特性就非常重要了。在这里，函数 sidefx 永远都不会被调用，因为 or 演算 'a' 的值为真，所以紧接着就立刻返回 'a' 了。
+and-or 技巧无效的场合：
+>>> a = ""
+>>> b = "second"
+>>> 1 and a or b       
+'second'
+and-or 技巧，也就是 bool and a or b 表达式，当 a 在布尔环境中的值为假时，不会像 C 语言表达式 bool ? a : b 那样工作。
+在 and-or 技巧后面真正的技巧是，确保 a 的值决不会为假。最常用的方式是使 a 成为 [a] 、 b 成为 [b]，然后使用返回值列表的第一个元素，应该是 a 或 b中的某一个。
+>>> a = ""
+>>> b = "second"
+>>> (1 and [a] or [b])[0] 
+''
+
+使用 lambda 函数
+>>> def f(x):
+	return x*2
+>>> f(3)
+6
+>>> g = lambda x: x*2  (1)
+>>> g(3)
+6
+>>> (lambda x: x*2)(3) (2)
+6
+简短的语法：在参数列表周围没有括号，而且忽略了 return 关键字 (隐含存在，因为整个函数只有一行)。而且，该函数没有函数名称，但是可以将它赋值给一个变量进行调用。使用 lambda 函数时甚至不需要将它赋值给一个变量。这可能不是世上最有用的东西，它只是展示了 lambda 函数只是一个内联函数。
+总的来说，lambda 函数可以接收任意多个参数 (包括可选参数) 并且返回单个表达式的值。lambda 函数不能包含命令，包含的表达式不能超过一个。lambda 函数是一种风格问题。不一定非要使用它们；任何能够使用它们的地方，都可以定义一个单独的普通函数来进行替换。我将它们用在需要封装特殊的、非重用代码上，避免令我的代码充斥着大量单行函数。
+
+不带参数的 split 按照空白进行分割。所以三个空格、一个回车和一个制表符都是一样的。
+>>> s = "this   is\na\ttest"  
+>>> print s
+this   is
+a	test
+>>> print s.split()           
+['this', 'is', 'a', 'test']
+>>> print " ".join(s.split()) 
+'this is a test'
+lambda 函数在布尔环境中总是为真。(这并不意味这 lambda 函数不能返回假值。这个函数对象的布尔值为真；它的返回值可以是任何东西。)：
+processFunc = collapse and (lambda s: " ".join(s.split())) or (lambda s: s)
+processFunc 现在是一个函数，但是它到底是哪一个函数还要取决于 collapse 变量。如果 collapse 为真，processFunc(string) 将压缩空白；否则 processFunc(string) 将返回未改变的参数。
+
+一些表达式可以分割成多行而不需要使用反斜线。列表解析就是这些表达式之一，因为整个表达式包括在方括号里。
+print "\n".join(["%s %s" %
+                      (method.ljust(spacing),
+                       processFunc(str(getattr(object, method).__doc__)))
+                     for method in methodList])
+ljust 方法：ljust 用空格填充字符串以符合指定的长度。如果指定的长度小于字符串的长度，ljust 将简单地返回未变化的字符串。它决不会截断字符串。
+>>> s = 'buildConnectionString'
+>>> s.ljust(30) 
+'buildConnectionString         '
+>>> s.ljust(20) 
+'buildConnectionString'
+
+第 5 章 对象和面向对象
+fileinfo.py
+这个程序的输入要取决于你硬盘上的文件。为了得到有意义的输出，你应该修改目录路径指向你自已机器上的一个 MP3 文件目录。
+import os
+import sys
+from UserDict import UserDict
+
+def stripnulls(data):
+    "strip whitespace and nulls"
+    return data.replace("\00", "").strip()
+
+class FileInfo(UserDict):
+    "store file metadata"
+    def __init__(self, filename=None):
+        UserDict.__init__(self)
+        self["name"] = filename
+
+class MP3FileInfo(FileInfo):
+    "store ID3v1.0 MP3 tags"
+    tagDataMap = {"title"   : (  3,  33, stripnulls),
+                  "artist"  : ( 33,  63, stripnulls),
+                  "album"   : ( 63,  93, stripnulls),
+                  "year"    : ( 93,  97, stripnulls),
+                  "comment" : ( 97, 126, stripnulls),
+                  "genre"   : (127, 128, ord)}
+
+    def __parse(self, filename):
+        "parse ID3v1.0 tags from MP3 file"
+        self.clear()
+        try:                               
+            fsock = open(filename, "rb", 0)
+            try:                           
+                fsock.seek(-128, 2)        
+                tagdata = fsock.read(128)  
+            finally:                       
+                fsock.close()              
+            if tagdata[:3] == "TAG":
+                for tag, (start, end, parseFunc) in self.tagDataMap.items():
+                    self[tag] = parseFunc(tagdata[start:end])               
+        except IOError:                    
+            pass                           
+
+    def __setitem__(self, key, item):
+        if key == "name" and item:
+            self.__parse(item)
+        FileInfo.__setitem__(self, key, item)
+
+def listDirectory(directory, fileExtList):                                        
+    "get list of file info objects for files of particular extensions"
+    fileList = [os.path.normcase(f)
+                for f in os.listdir(directory)]           
+    fileList = [os.path.join(directory, f) 
+               for f in fileList
+                if os.path.splitext(f)[1] in fileExtList] 
+    def getFileInfoClass(filename, module=sys.modules[FileInfo.__module__]):      
+        "get file info class from filename extension"                             
+        subclass = "%sFileInfo" % os.path.splitext(filename)[1].upper()[1:]       
+        return hasattr(module, subclass) and getattr(module, subclass) or FileInfo
+    return [getFileInfoClass(f)(f) for f in fileList]                             
+
+if __name__ == "__main__":
+    for info in listDirectory("/music/_singles/", [".mp3"]): (1)
+        print "\n".join(["%s=%s" % (k, v) for k, v in info.items()])
+        print
+
+两种导入模块的方法
+import module
+from module import：你可以导入独立的项或使用 from module import * 来导入所有东西。
+区别：
+>>> import types
+>>> types.FunctionType             
+<type 'function'>
+>>> FunctionType                   
+Traceback (innermost last):
+  File "<interactive input>", line 1, in ?
+NameError: There is no variable named 'FunctionType'
+>>> from types import FunctionType 
+>>> FunctionType                   
+<type 'function'>
+什么时候你应该使用 from module import？
+如果你要经常访问模块的属性和方法，且不想一遍又一遍地敲入模块名，使用 from module import。
+如果你想要有选择地导入某些属性和方法，而不想要其它的，使用 from module import。
+如果模块包含的属性和方法与你的某个模块同名，你必须使用 import module 来避免名字冲突。
+除了这些情况，剩下的只是风格问题了。
+尽量少用 from module import * ，因为判定一个特殊的函数或属性是从哪来的有些困难，并且会造成调试和重构都更困难。
+
+类的定义
+Python 是完全面向对象的：你可以定义自已的类，从自已的或内置的类继承，然后从你定义的类创建实例。
+from UserDict import UserDict
+class FileInfo(UserDict):
+	"store file metadata"              
+    	def __init__(self, filename=None):
+	UserDict.__init__(self)        
+        	self["name"] = filename
+在 Python 中，类的基类只是简单地列在类名后面的小括号里。所以 FileInfo 类是从 UserDict 类 (它是从 UserDict 模块导进来的) 继承来的。UserDict 是一个像字典一样工作的类，它允许你完全子类化字典数据类型，同时增加你自已的行为。{也存在相似的类 UserList 和 UserString ，它们允许你子类化列表和字符串。)
+Python 支持多重继承。在类名后面的小括号中，你可以列出许多你想要的类名，以逗号分隔。
+__init__ ：__init__ 在类的实例创建后被立即调用。它可能会引诱你称之为类的构造函数，但这种说法并不正确。说它引诱，是因为它看上去像 (按照习惯，__init__ 是类中第一个定义的方法)，行为也像 (在一个新创建的类实例中，它是首先被执行的代码)，并且叫起来也像 (“init”当然意味着构造的本性)。说它不正确，是因为对象在调用 __init__ 时已经被构造出来了，你已经有了一个对类的新实例的有效引用。但 __init__ 是在 Python 中你可以得到的最接近构造函数的东西，并且它也扮演着非常相似的角色。注意 __init__ 方法从不返回一个值。
+self：每个类方法的第一个参数，包括 __init__，都是指向类的当前实例的引用。按照习惯这个参数总是被称为 self。在 __init__ 方法中，self 指向新创建的对象；在其它的类方法中，它指向方法被调用的类实例。尽管当定义方法时你需要明确指定 self，但在调用方法时，你不 用指定它，Python 会替你自动加上的。
+当定义你自已的类方法时，你必须 明确将 self 作为每个方法的第一个参数列出，包括 __init__。当从你的类中调用一个父类的一个方法时，你必须包括 self 参数。但当你从类的外部调用你的类方法时，你不必对 self 参数指定任何值；你完全将其忽略，而 Python 会自动地替你增加实例的引用。
+__init__ 方法是可选的，但是一旦你定义了，就必须记得显示调用父类的 __init__ 方法 (如果它定义了的话)。这样更是正确的：无论何时子类想扩展父类的行为，后代方法必须在适当的时机，使用适当的参数，显式调用父类方法。
+
+类的实例化
+要对类进行实例化，只要调用类 (就好像它是一个函数)，传入定义在 __init__ 方法中的参数。返回值将是新创建的对象。
+>>> import fileinfo
+>>> f = fileinfo.FileInfo("/music/_singles/kairo.mp3") 
+>>> f.__class__                                        
+<class fileinfo.FileInfo at 010EC204>
+垃圾回收：通常，不需要明确地释放实例，因为当指派给它们的变量超出作用域时，它们会被自动地释放。内存泄漏在 Python 中很少见。对于这种垃圾收集的方式，技术上的术语叫做“引用计数”。
+
+探索 UserDict：一个封装类
+它没有什么特别的，也是用 Python 写的，并且保存在一个 .py 文件里，就像我们其他的代码。特别之处在于，它保存在你的 Python 安装目录的 lib 目录下。
+class UserDict:                                
+    def __init__(self, dict=None):            
+        self.data = {}                         
+        if dict is not None: self.update(dict) 
+update 方法是一个字典复制器：它把一个字典中的键和值全部拷贝到另一个字典。这个操作并不 事先清空目标字典，如果一些键在目标字典中已经存在，则它们将被覆盖，那些键名在目标字典中不存在的则不改变。应该把 update 看作是合并函数，而不是复制函数。
+Java 和 Powerbuilder 支持通过参数列表的重载，也就是 一个类可以有同名的多个方法，但这些方法或者是参数个数不同，或者是参数的类型不同。其它语言 (最明显如 PL/SQL) 甚至支持通过参数名的重载，也就是 一个类可以有同名的多个方法，这些方法有相同类型，相同个数的参数，但参数名不同。Python 两种都不支持，总之是没有任何形式的函数重载。一个 __init__ 方法就是一个 __init__ 方法，不管它有什么样的参数。每个类只能有一个 __init__ 方法，并且如果一个子类拥有一个 __init__ 方法，它总是 覆盖父类的 __init__ 方法，甚至子类可以用不同的参数列表来定义它。
+应该总是在 __init__ 方法中给一个实例的所有数据属性赋予一个初始值。这样做将会节省你在后面调试的时间，不必为捕捉因使用未初始化 (也就是不存在) 的属性而导致的 AttributeError 异常费时费力。
+UserDict 常规方法：
+	def clear(self): self.data.clear()          
+    	def copy(self):                             
+        		if self.__class__ is UserDict:          
+            		return UserDict(self.data)         
+        		import copy                             
+        		return copy.copy(self)                 
+    	def keys(self): return self.data.keys()     
+    	def items(self): return self.data.items()  
+    	 def values(self): return self.data.values()
+如果 self.__class__ 不是 UserDict，那么 self 一定是 UserDict 的某个子类 (如可能为 FileInfo)，生活总是存在意外。UserDict 不知道如何生成它的子类的一个原样的拷贝，例如，有可能在子类中定义了其它的数据属性，所以我们只能完全复制它们，确定拷贝了它们的全部内容。幸运的是，Python 带了一个模块可以正确地完成这件事，它叫做 copy。copy 能够拷贝任何 Python 对象。
+在 Python 中，你可以直接继承自内建数据类型 dict，这样做有三点与 UserDict 不同：
+第一个区别是你不需要导入 UserDict 模块，因为 dict 是已经可以使用的内建数据类型。第二个区别是你不是继承自 UserDict.UserDict ，而是直接继承自 dict。
+第三个区别有些晦涩，但却很重要。UserDict 内部的工作方式要求你手工地调用它的 __init__ 方法去正确初始化它的内部数据结构。dict 并不这样工作，它不是一个封装所以不需要明确的初始化。
+
+专用类方法
+专用方法是在特殊情况下或当使用特别语法时由 Python 替你调用的，而不是在代码中直接调用 (像普通的方法那样)。它们提供了一种方法，可以将非方法调用语法映射到方法调用上。
+__getitem__ 专用方法：
+def __getitem__(self, key): return self.data[key]
+>>> f = fileinfo.FileInfo("/music/_singles/kairo.mp3")
+>>> f
+{'name':'/music/_singles/kairo.mp3'}
+>>> f.__getitem__("name") 
+'/music/_singles/kairo.mp3'
+>>> f["name"]             
+'/music/_singles/kairo.mp3'
+暗地里，Python 已经将f["name"]这个语法转化为 f.__getitem__("name") 的方法调用。这就是为什么 __getitem__ 是一个专用类方法的原因，不仅仅是你可以自已调用它，还可以通过使用正确的语法让 Python 来替你调用。
+__setitem__ 专用方法：
+def __setitem__(self, key, item): self.data[key] = item
+>>> f
+{'name':'/music/_singles/kairo.mp3'}
+>>> f.__setitem__("genre", 31) 
+>>> f
+{'name':'/music/_singles/kairo.mp3', 'genre':31}
+>>> f["genre"] = 32            
+>>> f
+{'name':'/music/_singles/kairo.mp3', 'genre':32}
+
+高级专用类方法 *
+def __repr__(self): return repr(self.data)     
+def __cmp__(self, dict):                       
+        if isinstance(dict, UserDict):            
+            return cmp(self.data, dict.data)      
+        else:                                     
+            return cmp(self.data, dict)           
+    def __len__(self): return len(self.data)       
+    def __delitem__(self, key): del self.data[key] 
+
+类属性介绍
+在 Java 中，静态变量 (在 Python 中叫类属性) 和实例变量 (在 Python 中叫数据属性) 两者都是紧跟在类定义之后定义的 (一个有 static 关键字，一个没有)。在 Python 中，只有类属性可以定义在这里，数据属性定义在 __init__ 方法中。
+类属性可以作为类级别的常量来使用 (这就是为什么我们在 MP3FileInfo 中使用它们)，但是它们不是真正的常量。你也可以修改它们。
+在 Python 中没有常量。如果你试图努力的话什么都可以改变。这一点满足 Python 的核心原则之一：坏的行为应该被克服而不是被取缔。如果你真正想改变 None 的值，也可以做到，但当无法调试的时候别来找我。
+修改类属性：
+	>>> class counter:
+...     count = 0                     (1)
+...     def __init__(self):
+...         self.__class__.count += 1 (2)
+...     
+>>> counter
+<class __main__.counter at 010EAECC>
+>>> counter.count                     (3)
+0
+>>> c = counter()
+>>> c.count                           (4)
+1
+>>> counter.count
+1
+>>> d = counter()                     (5)
+>>> d.count
+2
+>>> c.count
+2
+>>> counter.count
+2
+
+私有函数
+私有函数不可以从它们的模块外面被调用
+私有类方法不能够从它们的类外面被调用
+私有属性不能够从它们的类外面被访问
+与大多数的语言不同，一个 Python 函数，方法，或属性是私有还是公有，完全取决于它的名字。如果一个 Python 函数，类方法，或属性的名字以两个下划线开始 (但不是结束)，它是私有的；其它所有的都是公有的。 Python 没有类方法保护 的概念 (只能用于它们自已的类和子类中)。类方法或者是私有 (只能在它们自已的类中使用) 或者是公有 (任何地方都可使用)。
+严格地说，私有方法在它们的类外是可以访问的，只是不容易 处理。在 Python 中没有什么是真正私有的；你可以通过 _MP3FileInfo__parse 名字来使用 MP3FileInfo 类的 __parse 方法。
+
+第 6 章 异常和文件处理
+异常处理
+Python 使用 try...except 来处理异常，使用 raise 来引发异常。
+除了处理实际的错误条件之外，对于异常还有许多其它的用处。在标准 Python 库中一个普通的用法就是试着导入一个模块，然后检查是否它能使用。导入一个并不存在的模块将引发一个 ImportError 异常。
+
+与文件对象共事
+Python 有一个内置函数，open，用来打开在磁盘上的文件。open 返回一个文件对象，它拥有一些方法和属性，可以得到被打开文件的信息，以及对被打开文件进行操作。
+打开文件：
+>>> f = open("/music/_singles/kairo.mp3", "rb") 
+>>> f                                           
+<open file '/music/_singles/kairo.mp3', mode 'rb' at 010E3988>
+>>> f.mode                                      
+'rb'
+>>> f.name                                      
+'/music/_singles/kairo.mp3'
+读取文件：
+>>> f.tell()              
+0
+>>> f.seek(-128, 2)       
+>>> f.tell()              
+7542909
+>>> tagData = f.read(128) 
+>>> tagData
+'TAGKAIRO****THE BEST GOA         ***DJ MARY-JANE***            
+Rave Mix                      2000http://mp3.com/DJMARYJANE     \037'
+>>> f.tell()              
+7543037
+一个文件对象维护它所打开文件的状态。文件对象的 tell 方法告诉你在被打开文件中的当前位置。
+文件对象的 seek 方法在被打开文件中移动到另一个位置。第二个参数指出第一个参数是什么意思：0 表示移动到一个绝对位置 (从文件起始处算起)，1 表示移到一个相对位置 (从当前位置算起)，还有 2 表示相对于文件尾的位置。因为我们搜索的 MP3 标记保存在文件的末尾，我们使用 2 并且告诉文件对象从文件尾移动到 128 字节的位置。
+read 方法从被打开文件中读取指定个数的字节，并且返回含有读取数据的字符串。可选参数指定了读取的最大字节数。如果没有指定参数，read 将读到文件末尾。
+关闭文件：
+>>> f.closed       
+False
+>>> f.close()      
+>>> f
+<closed file '/music/_singles/kairo.mp3', mode 'rb' at 010E3988>
+>>> f.closed       
+True
+处理 I/O 错误：
+安全地打开文件和读取文件，以及优美地处理错：
+	try:
+            #open 函数可能引发 IOError 异常。(可能是文件不存在。)
+            fsock = open(filename, "rb", 0)  
+            try:   
+                #seek 方法可能引发 IOError 异常。(可能是文件长度小于 128 字节。)
+                fsock.seek(-128, 2)         
+                #read 方法可能引发 IOError 异常。
+		#(可能磁盘有坏扇区，或它在一个网络驱动器上，而网络刚好断了。)
+		tagdata = fsock.read(128)   
+            finally:
+                #一旦文件通过 open 函数被成功地打开，我们应该绝对保证把它关闭
+                fsock.close()              
+            .
+            .
+            .
+        	except IOError:                     
+            pass                           
+写入文件：有两种基本的文件模式：
+追加 (Append) 模式将数据追加到文件尾。
+写入 (write) 模式将覆盖文件的原有内容。
+如果文件还不存在，任意一种模式都将自动创建文件。
+>>> logfile = open('test.log', 'w') 
+>>> logfile.write('test succeeded') 
+>>> logfile.close()
+>>> print file('test.log').read()   
+test succeeded
+>>> logfile = open('test.log', 'a') 
+>>> logfile.write('line 2')
+>>> logfile.close()
+>>> print file('test.log').read()   
+test succeededline 2
+
+for 循环
+在 Python 中，for 循环简单地在一个列表上循环，与 list 解析的工作方式相同。
+>>> li = ['a', 'b', 'e']
+>>> for s in li:         
+...     print s          
+a
+b
+e
+简单计数：
+>>> for i in range(5):             
+...     print i
+0
+1
+2
+3
+4
+>>> li = ['a', 'b', 'c', 'd', 'e']
+>>> for i in range(len(li)):       
+...     print li[i]
+a
+b
+c
+d
+e
+遍历 dictionary：
+>>> import os
+>>> for k, v in os.environ.items():      
+...     print "%s=%s" % (k, v)
+USERPROFILE=C:\Documents and Settings\mpilgrim
+OS=Windows_NT
+… …
+
+使用 sys.modules
+与其它任何 Python 的东西一样，模块也是对象。只要导入了，总可以用全局 dictionary sys.modules 来得到一个模块的引用。sys.modules 是一个字典，它包含了从 Python 开始运行起，被导入的所有模块。键字就是模块名，键值就是模块对象。
+>>> import fileinfo         
+>>> print '\n'.join(sys.modules.keys())
+win32api
+os.path
+os
+fileinfo
+exceptions
+__main__
+ntpath
+nt
+sys
+__builtin__
+site
+signal
+UserDict
+stat
+每个 Python 类都拥有一个内置的类属性 __module__，它定义了这个类的模块的名字。将它与 sys.modules 字典复合使用，你可以得到定义了某个类的模块的引用。
+>>> sys.modules[MP3FileInfo.__module__] 
+<module 'fileinfo' from 'fileinfo.pyc'>
+
+与目录共事
+os 通过设置 path 封装不同的相关平台模块。
+构造路径名:
+>>> import os
+>>> os.path.join("c:\\music\\ap\\", "mahadeva.mp3") 
+'c:\\music\\ap\\mahadeva.mp3'
+>>> os.path.join("c:\\music\\ap", "mahadeva.mp3")   
+'c:\\music\\ap\\mahadeva.mp3'
+>>> os.path.expanduser("~")                         
+'c:\\Documents and Settings\\mpilgrim\\My Documents'
+>>> os.path.join(os.path.expanduser("~"), "Python") 
+'c:\\Documents and Settings\\mpilgrim\\My Documents\\Python'
+分割路径名:
+>>> os.path.split("c:\\music\\ap\\mahadeva.mp3")                        
+('c:\\music\\ap', 'mahadeva.mp3')
+>>> (filepath, filename) = os.path.split("c:\\music\\ap\\mahadeva.mp3") 
+>>> filepath                                                            
+'c:\\music\\ap'
+>>> filename                                                            
+'mahadeva.mp3'
+>>> (shortname, extension) = os.path.splitext(filename)                 (5)
+>>> shortname
+'mahadeva'
+>>> extension
+'.mp3'
+列出目录:
+>>> os.listdir("c:\\music\\_singles\\")              
+['a_time_long_forgotten_con.mp3', 'hellraiser.mp3',
+'kairo.mp3', 'long_way_home1.mp3', 'sidewinder.mp3', 
+'spinning.mp3']
+>>> dirname = "c:\\"
+>>> os.listdir(dirname)                              
+['AUTOEXEC.BAT', 'boot.ini', 'CONFIG.SYS', 'cygwin',
+'docbook', 'Documents and Settings', 'Incoming', 'Inetpub', 'IO.SYS',
+'MSDOS.SYS', 'Music', 'NTDETECT.COM', 'ntldr', 'pagefile.sys',
+'Program Files', 'Python20', 'RECYCLER',
+'System Volume Information', 'TEMP', 'WINNT']
+>>> [f for f in os.listdir(dirname)
+...     if os.path.isfile(os.path.join(dirname, f))] 
+['AUTOEXEC.BAT', 'boot.ini', 'CONFIG.SYS', 'IO.SYS', 'MSDOS.SYS',
+'NTDETECT.COM', 'ntldr', 'pagefile.sys']
+>>> [f for f in os.listdir(dirname)
+...     if os.path.isdir(os.path.join(dirname, f))]  
+['cygwin', 'docbook', 'Documents and Settings', 'Incoming',
+'Inetpub', 'Music', 'Program Files', 'Python20', 'RECYCLER',
+'System Volume Information', 'TEMP', 'WINNT']
+listdir 同时返回文件和文件夹，并不指出哪个是文件，哪个是文件夹。
+可以使用过滤列表和 os.path 模块的 isfile 函数，从文件夹中将文件分离出来。isfile 接收一个路径名，如果路径表示一个文件，则返回 1，否则为 0。在这里，我们使用 os.path.join 来确保得到一个全路径名，但 isfile 对部分路径 (相对于当前目录) 也是有效的。你可以使用 os.getcwd() 来得到当前目录。
+os.path 还有一个 isdir 函数，当路径表示一个目录，则返回 1，否则为 0。你可以使用它来得到一个目录下的子目录列表。
+使用 glob 列出目录:
+>>> os.listdir("c:\\music\\_singles\\")               
+['a_time_long_forgotten_con.mp3', 'hellraiser.mp3',
+'kairo.mp3', 'long_way_home1.mp3', 'sidewinder.mp3',
+'spinning.mp3']
+>>> import glob
+>>> glob.glob('c:\\music\\_singles\\*.mp3')           
+['c:\\music\\_singles\\a_time_long_forgotten_con.mp3',
+'c:\\music\\_singles\\hellraiser.mp3',
+'c:\\music\\_singles\\kairo.mp3',
+'c:\\music\\_singles\\long_way_home1.mp3',
+'c:\\music\\_singles\\sidewinder.mp3',
+'c:\\music\\_singles\\spinning.mp3']
+>>> glob.glob('c:\\music\\_singles\\s*.mp3')          
+['c:\\music\\_singles\\sidewinder.mp3',
+'c:\\music\\_singles\\spinning.mp3']
+
+第 7 章 正则表达式
+第 8 章 HTML 处理
+sgmllib.py 介绍
+HTML 处理分成三步：将 HTML 分解成它的组成片段，对片段进行加工，接着将片段再重新合成 HTML。第一步是通过 sgmllib.py 来完成的，它是标准 Python 库的一部分。
+SGMLParser 将 HTML 分析成 8 类数据，然后对每一类调用单独的方法：
+1）开始标记 (Start tag)：是开始一个块的 HTML 标记，像 <html>、<head>、<body> 或 <pre> 等，或是一个独一的标记，像 <br> 或 <img> 等。当它找到一个开始标记 tagname，SGMLParser 将查找名为 start_tagname 或 do_tagname 的方法。例如，当它找到一个 <pre> 标记，它将查找一个 start_pre 或 do_pre 的方法。如果找到了，SGMLParser 会使用这个标记的属性列表来调用这个方法；否则，它用这个标记的名字和属性列表来调用 unknown_starttag 方法。
+2）结束标记 (End tag)：是结束一个块的 HTML 标记，像 </html>、</head>、</body> 或 </pre> 等。当找到一个结束标记时，SGMLParser 将查找名为 end_tagname 的方法。如果找到，SGMLParser 调用这个方法，否则它使用标记的名字来调用 unknown_endtag 。
+3）字符引用 (Character reference)：用字符的十进制或等同的十六进制来表示的转义字符，像 &#160;。当找到，SGMLParser 使用十进制或等同的十六进制字符文本来调用 handle_charref 。
+4）实体引用 (Entity reference)：HTML 实体，像 &copy;。当找到，SGMLParser 使用 HTML 实体的名字来调用 handle_entityref 。
+5）注释 (Comment)：HTML 注释，包括在 <!-- ... -->之间。当找到，SGMLParser 用注释内容来调用 handle_comment。
+6）处理指令 (Processing instruction)：HTML 处理指令，包括在 <? ... > 之间。当找到，SGMLParser 用处理指令内容来调用 handle_pi。
+7）声明 (Declaration)：HTML 声明，如 DOCTYPE，包括在 <! ... >之间。当找到，SGMLParser 用声明内容来调用 handle_decl。
+8）文本数据 (Text data)：文本块。不满足其它 7 种类别的任何东西。当找到，SGMLParser 用文本来调用 handle_data。
+
+从 HTML 文档中提取数据
+urllib 介绍：
+urllib 模块是标准 Python 库的一部分。它包含了一些函数，可以从基于互联网的 URL (主要指网页) 来获取信息并且真正取回数据。
+urllib 模块最简单的使用是提取用 urlopen 函数取回的网页的整个文本。打开一个 URL 同打开一个文件相似。urlopen 的返回值是像文件一样的对象，它具有一个文件对象一样的方法。
+使用由 urlopen 所返回的类文件对象所能做的最简单的事情就是 read，它可以将网页的整个 HTML 读到一个字符串中。这个对象也支持 readlines 方法，这个方法可以将文本按行放入一个列表中。
+当用完这个对象，要确保将它 close，就如同一个普通的文件对象。
+>>> import urllib                                       
+>>> sock = urllib.urlopen("http://diveintopython.org/") 
+>>> htmlSource = sock.read()                            
+>>> sock.close()                                        
+>>> print htmlSource                                    
+
+locals 和 globals
+Python 有两个内置的函数，locals 和 globals，它们提供了基于 dictionary 的访问局部和全局变量的方式。
+Python 使用叫做名字空间的东西来记录变量的轨迹。名字空间只是一个 dictionary ，它的键字就是变量名，它的值就是那些变量的值。
+在一个 Python 程序中的任何一个地方，都存在几个可用的名字空间。每个函数都有着自已的名字空间，叫做局部名字空间，它记录了函数的变量，包括函数的参数和局部定义的变量。每个模块拥有它自已的名字空间，叫做全局名字空间，它记录了模块的变量，包括函数、类、其它导入的模块、模块级的变量和常量。还有就是内置名字空间，任何模块均可访问它，它存放着内置的函数和异常。
+当一行代码要使用变量 x 的值时，Python 会到所有可用的名字空间去查找变量，按照如下顺序：
+局部名字空间――特指当前函数或类的方法。如果函数定义了一个局部变量 x，或一个参数 x，Python 将使用它，然后停止搜索。
+全局名字空间――特指当前的模块。如果模块定义了一个名为 x 的变量，函数或类，Python 将使用它然后停止搜索。
+内置名字空间――对每个模块都是全局的。作为最后的尝试，Python 将假设 x 是内置函数或变量。
+如果 Python 在这些名字空间找不到 x，它将放弃查找并引发一个 NameError 异常。
+像 Python 中的许多事情一样，名字空间在运行时直接可以访问。局部名字空间可以通过内置的 locals 函数来访问。全局 (模块级别) 名字空间可以通过内置的 globals 函数来访问。
+locals 介绍：
+>>> def foo(arg): 
+...     x = 1
+...     print locals()
+...     
+>>> foo(7)        
+{'arg': 7, 'x': 1}
+>>> foo('bar')    
+{'arg': 'bar', 'x': 1}
+locals 是只读的，globals 不是：
+def foo(arg):
+    x = 1
+    print locals()    
+    locals()["x"] = 2 
+    print "x=",x      
+
+z = 7
+print "z=",z
+foo(3)
+globals()["z"] = 8    
+print "z=",z          
+locals 是一个返回 dictionary 的函数，这里您在 dictionary 中设置了一个值。您可能认为这样会改变局部变量 x 的值为 2，但并不会。locals 实际上没有返回局部名字空间，它返回的是一个拷贝。所以对它进行改变对局部名字空间中的变量值并无影响。
+由于 Python 在实现过程中内部有所区别 (关于这些区别我宁可不去研究，因为我自已还没有完全理解) ，globals 返回实际的全局名字空间，而不是一个拷贝：与 locals 的行为完全相反。所以对 globals 所返回的 dictionary 的任何的改动都会直接影响到全局变量。
+
+小结
+Python 向您提供了一个强大工具，sgmllib.py，可以通过将 HTML 结构转变为一种对象模型来进行处理。可以以许多不同的方式来使用这个工具。
+•	对 HTML 进行分析，搜索特别的东西
+•	摘录结果，如 URL lister
+•	在处理过程中顺便调整结构，如给属性值加引号
+•	将 HTML 转换为其它的东西，通过对文本进行处理，同时保留标记，如 Dialectizer
+
+第 9 章 XML 处理
+处理 XML 有两种基本的方式。一种叫做 SAX (“Simple API for XML”)，它的工作方式是，一次读出一点 XML 内容，然后对发现的每一个元素调用一个方法。另一种方式叫做 DOM (“Document Object Model”)，它的工作方式是，一次性读入整个 XML 文档，然后使用 Python 类创建一个内部表示形式 (以树结构进行连接)。Python 拥有这两种解析方式的标准模块，但是本章只涉及 DOM。
+包
+包不过是模块的目录；嵌套包是子目录。一个包 (或一个嵌套包) 中的模块也只是 .py 文件罢了，永远都是，只是它们是在一个子目录中，而不是在你的 Python 安装环境的主 lib/ 目录下。
+>>> from xml.dom import minidom 
+>>> xmldoc = minidom.parse('~/diveintopython/common/py/kgp/binary.xml')
+所以你说 from xml.dom import minidom，Python 认为它的意思是“在 xml 目录中查找 dom 目录，然后在这个目录 中查找 minidom 模块，接着导入它并以 minidom 命名 ”。但是 Python 更聪明；你不仅可以导入包含在一个包中的所有模块，还可以从包的模块中有选择地导入指定的类或者函数。语法都是一样的； Python 会根据包的布局理解你的意思，然后自动进行正确的导入。
+
+Unicode
+>>> s = u'Dive in'            
+>>> s
+u'Dive in'
+>>> print s                   
+Dive in
+print 函数会尝试将 unicode 字符串转换为 ASCII 从而打印它.
+存储非 ASCII 字符:
+>>> s = u'La Pe\xf1a'         
+>>> print s                   
+Traceback (innermost last):
+  File "<interactive input>", line 1, in ?
+UnicodeError: ASCII encoding error: ordinal not in range(128)
+>>> print s.encode('latin-1') 
+La Peña
+
+指定.py文件的编码：
+如果你打算在你的 Python 代码中保存非 ASCII 字符串，你需要在每个文件的顶端加入编码声明来指定每个 .py 文件的编码。这个声明定义了 .py 文件的编码为 UTF-8：
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+第 10 章 脚本和流
+第 11 章 HTTP Web 服务
+HTTP web 服务是指以编程的方式直接使用 HTTP 操作从远程服务器发送和接收数据。如果你要从服务器获取数据，直接使用 HTTP GET；如果您想发送新数据到服务器，使用 HTTP POST。(一些较高级的 HTTP web 服务 API 也定义了使用 HTTP PUT 和 HTTP DELETE 修改和删除现有数据的方法。) 换句话说，构建在 HTTP 协议中的 “verbs (动作)” (GET, POST, PUT 和 DELETE) 直接映射为接收、发送、修改和删除等应用级别的操作。
+第 12 章 SOAP Web 服务
+SOAP 不需要你直接与 HTTP 请求和 XML 文档打交道，而是允许你模拟返回原始数据类型的函数调用。正像你将要看到的，这个描述恰如其份；你可以使用标准 Python 调用语法通过 SOAP 库去调用一个函数，这个函数也自然会返回 Python 对象和值。但揭开这层面纱，SOAP 库实际上执行了一个多个 XML 文档和远程服务器参与的复杂处理过程。
+SOAP 的贴切定义很复杂，不要误认为 SOAP 就是用于调用远程函数。有些人觉得应该补充上：SOAP 还允许单向异步的信息通过，以及面向文档的 Web 服务。有这样想法的人是正确的，SOAP 的确是这样，但却不止于此。
+e.g：以程序化的方式访问 Google 的搜索结果
+
+第 13 章 单元测试
+第 14 章 测试优先编程
+第 15 章 重构
+第 16 章 函数编程
+第 17 章 动态函数
+第 18 章 性能优化
+
+
+
+
+
+
+
+
