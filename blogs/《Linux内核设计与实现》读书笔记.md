@@ -175,7 +175,7 @@ SCHED_RR与SCHED_FIFO大体相同，区别在于SCHED_RR带有时间片，在执
 
 ## 系统调用
 在Linux中，系统调用是用户空间访问内核的唯一手段，除异常和陷入外，它们是内核唯一的合法入口。一般情况下，应用程序通过在用户空间实现的应用编程接口（API），而不是直接通过系统调用来编程。调用printf()函数时，应用程序、C库和内核之间的关系：
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/linux_1.png)
 用户程序通过包含标准头文件并和C库链接，就可以使用系统调用。
 
 ### 系统调用号
@@ -564,10 +564,10 @@ VMA标志包含在vm_area_struct的vm_flags域内，是一种位标志，表示�
 cat /proc/<pid>/maps
 如：vi test
 然后用ps -aux查看pid：
-
+ ![image](https://github.com/woojean/woojean.github.io/blob/master/images/linux_3.png)
 
 用pid查看该进程的所有内存区域：
-
+ ![image](https://github.com/woojean/woojean.github.io/blob/master/images/linux_4.png)
 
 ### 操作内存区域
 find_vma()：找到一个给定的内存地址属于哪一个内存区域；
@@ -576,7 +576,7 @@ do_mummap()：从特定的进程地址空间中删除指定地址区间；
 
 ### 页表
 当程序访问一个虚拟地址时，必须将其转化为物理地址，然后处理器才能解析地址并访问请求。地址的转换工作需要通过查询页表才能完成：将虚拟地址分段，使每段虚拟地址都作为一个索引指向页表，而页表项则指向下一级别的页表或指向最终的物理页面。Linux中使用三级页表完成地址转换：
-
+ ![image](https://github.com/woojean/woojean.github.io/blob/master/images/linux_5.png)
 
 ## 页高速缓存和页回写
 页高速缓存是Linux内核实现的磁盘缓存，通过把磁盘中的数据缓存到物理内存中，以此减少对磁盘的I/O操作。页高速缓存由内存中的物理页组成，其内容对应磁盘上的物理块。页高速缓存大小能动态调整。Linux页高速缓存使用address_space结构体管理。
