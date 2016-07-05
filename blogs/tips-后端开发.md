@@ -93,7 +93,7 @@ OAuth的作用就是让"客户端"（第三方应用）安全可控地获取"用
 OAuth在"客户端"与"服务提供商"之间，设置了一个授权层（authorization layer）。"客户端"不能直接登录"服务提供商"，只能登录授权层，以此将用户与客户端区分开来。"客户端"登录授权层所用的令牌（token），与用户的密码不同。用户可以在登录的时候，指定授权层令牌的权限范围和有效期。"客户端"登录授权层以后，"服务提供商"根据令牌的权限范围和有效期，向"客户端"开放用户储存的资料。
 
 OAuth 2.0的运行流程如下图：
-	
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/net_7.png)	
 
 客户端的授权模式（步骤B）
 OAuth 2.0定义了四种授权方式：
@@ -120,9 +120,9 @@ OAuth 2.0定义了四种授权方式：
 其中短暂停留的那个页面的url为：
 https://www.zhihu.com/oauth/callback/login/qqconn?code=680726D150FF0B9DF2EBBE2EFEEEC0D4&state=7f13b99dc94e506e69ecb9ec83296eec
 页面效果：
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/net_8.png)
 页面代码：
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/net_9.png)
 
 
 （3）`密码模式`（resource owner password credentials）
@@ -134,30 +134,30 @@ https://www.zhihu.com/oauth/callback/login/qqconn?code=680726D150FF0B9DF2EBBE2EF
 # 网络编程基本模型
 所有的网络应用都是基于相同的基本编程模型，有着相似的整体逻辑结构，并且依赖相同的编程接口。每个网络应用都是基于客户端-服务器模型的。一个应用是由一个服务器进程和一个或多个客户端进程组成。
 	客户端-服务器模型中的基本操作是事务，一个客户端-服务器事务由四步组成：
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/basic_1.png)
 注意：客户端和服务器是进程，而不是机器或者主机。
 客户端和服务器端通过在“连接”上发送和接收字节流来通信。套接字是“连接”的端点。套接字=地址：端口。
 	当客户端发起一个连接请求时，客户端套接字地址中的端口是由内核自动分配的，称为临时端口。然而服务器套接字地址中的端口通常是某个知名的端口，是和服务对应的。在Unix机器上，文件etc/services包含一张这台机器提供的服务以及它们的知名端口号的综合列表。
 	套接字接口是一组用来结合Unix I/O函数创建网络应用的函数。大多数现代系统上都实现它，包括所有Unix变种、Windows、Macintosh系统。
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/basic_2.png)
 套接字地址存放在类型为sockaddr_in的16字节结构中。对于因特网应用，sin_family成员是AF_INTE，sin_port成员是一个16位的端口号，而sin_addr成员就是一个32位的IP地址。IP地址和端口号总是以网络字节顺序（大端法）存放的。
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/basic_3.png)
 客户端和服务器使用socket函数来创建一个套接字描述符：
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/basic_4.png)
 如：clientfd = Socket( AF_INET, SOCK_STREAM, 0);
 Socket返回的clientfd描述符仅是部分打开的，并且不能用于读写。如何完成打开套接字的工作，取决于我们是客户端还是服务器。
 客户端通过调用connect函数来建立和服务器的连接：
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/basic_5.png)
 connect函数试图与套接字地址为serv_addr的服务器建立一个因特网连接，其中addrlen是sizeof(sockaddr_in)。connect函数会阻塞，一直到连接成功建立或是发生错误，如果成功，sockfd描述符现在就准备好读写了，并且得到的连接是由套接字对：
 (x:y, serv_addr.sin_addr:serv_addr.sin_port)刻画的。x，y分别表示客户端的IP地址和端口。
 bind、listen、accept三个函数用来和客户端建立连接：
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/basic_6.png)
 bind函数告诉内核将my_addr中的服务器套接字地址和套接字描述符sockfd联系起来。
 默认情况下内核会认为socket函数创建的描述符对应于主动套接字，它存在于一个连接的客户端。服务器调用listen函数告诉内核，描述符是被服务器而不是客户端使用的。
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/basic_7.png)
 listen函数将sockfd从一个主动套接字转化为一个监听套接字，该套接字可以接受来自客户端的连接请求。backlog参数暗示了内核在开始拒绝连接请求前应该放入队列中等待的未完成连接请求的数量，其确切含义要求对TCP/IP协议的理解。通常会被设置为一个较大的值，比如1024.
 服务器通过调用accept函数来等待来自客户端的连接请求：
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/basic_8.png)
 accept函数等待来自客户端的连接请求，默认会阻塞进程，直到有一个客户连接建立后返回，它返回的是一个新的可用套接字，即“连接套接字”。参数中的listenfd是“监听套接字”，addr是一个结果参数，它用来接受一个返回值，指定客户端的地址。addrlen也是结果参数。
 如果accept成功返回，则服务器与客户端已经正确建立连接了，此时服务器通过accept返回的套接字来完成与客户的通信。
 “监听套接字”是作为客户端连接请求的一个端点，它只被创建一次，并存在于服务器的整个生命周期。“连接套接字”是客户端和服务器之间已经建立起来的连接的一个端点，服务器每次接受请求时，都会创建一次，只存在于服务器为一个客户端服务的过程。
@@ -212,20 +212,21 @@ epoll被公认为Linux2.6下性能最好的多路I/O就绪通知方法，实现�
 服务器端有以下几种IO模型：
 （1）阻塞式模型（blocking IO）
 大部分的socket接口都是阻塞型的（ listen()、accpet()、send()、recv() 等）。阻塞型接口是指系统调用（一般是 IO 接口）不返回调用结果并让当前线程一直阻塞，只有当该系统调用获得结果或者超时出错时才返回。在线程被阻塞期间，线程将无法执行任何运算或响应任何的网络请求，这给多客户机、多业务逻辑的网络编程带来了挑战。
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/basic_9.png)
 （2）多线程的服务器模型（Multi-Thread）
 应对多客户机的网络应用，最简单的解决方式是在服务器端使用多线程（或多进程）。多线程（或多进程）的目的是让每个连接都拥有独立的线程（或进程），这样任何一个连接的阻塞都不会影响其他的连接。但是如果要同时响应成千上万路的连接请求，则无论多线程还是多进程都会严重占据系统资源，降低系统对外界响应效率。
 在多线程的基础上，可以考虑使用“线程池”或“连接池”，“线程池”旨在减少创建和销毁线程的频率，其维持一定合理数量的线程，并让空闲的线程重新承担新的执行任务。“连接池”维持连接的缓存池，尽量重用已有的连接、减少创建和关闭连接的频率。这两种技术都可以很好的降低系统开销，都被广泛应用很多大型系统。
 
 （3）非阻塞式模型（Non-blocking IO）
 相比于阻塞型接口的显著差异在于，在被调用之后立即返回。
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/basic_10.png)
 需要应用程序调用许多次来等待操作完成。这可能效率不高，因为在很多情况下，当内核执行这个命令时，应用程序必须要进行忙碌等待，直到数据可用为止。
 另一个问题，在循环调用非阻塞IO的时候，将大幅度占用CPU，所以一般使用select等来检测”是否可以操作“。
 
 （4）多路复用IO（IO multiplexing）
 支持I/O复用的系统调用有select、poll、epoll、kqueue等。使用Select返回后，仍然需要轮训再检测每个socket的状态（读、写），这样的轮训检测在大量连接下也是效率不高的。因为当需要探测的句柄值较大时，select () 接口本身需要消耗大量时间去轮询各个句柄。
 很多操作系统提供了更为高效的接口，如 linux 提供 了 epoll，BSD 提供了 kqueue，Solaris 提供了 /dev/poll …。如果需要实现更高效的服务器程序，类似 epoll 这样的接口更被推荐。
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/basic_11.png)
 
 （5）使用事件驱动库libevent的服务器模型
 libevent是一个事件触发的网络库，适用于windows、linux、bsd等多种平台，内部使用select、epoll、kqueue、IOCP等系统调用管理事件机制。著名分布式缓存软件memcached也是基于libevent，而且libevent在使用上可以做到跨平台。
@@ -234,10 +235,11 @@ libevent 库提供一种事件机制，它作为底层网络后端的包装器�
 
 （6）信号驱动IO模型（Signal-driven IO）
 让内核在描述符就绪时发送SIGIO信号通知应用程序。
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/basic_12.png)
 
 （7）异步IO模型（asynchronous IO）
 告知内核启动某个操作，并让内核在整个操作（包括将数据从内核复制到我们自己的缓冲区）完成后通知我们。这种模型与信号驱动模型的主要区别在于：信号驱动式I/O是由内核通知我们何时可以启动一个I/O操作，而异步I/O模型是由内核通知我们I/O操作何时完成。
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/basic_13.png)
 
 同步和异步IO的区别：
 A synchronous I/O operation causes the requesting process to be blocked until that I/O operation completes;

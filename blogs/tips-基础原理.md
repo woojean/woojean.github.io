@@ -20,11 +20,13 @@ TCP/IP协议中，无论发送多少数据，总是要在数据前面加上协�
 
 ## Tcp连接的建立和断开的过程
 TCP用三次握手建立连接：
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/net_1.png)
 1.A的TCP向B发出连接请求报文段，其首部中的`同步位SYN = 1`，并选择`序号seq = x`，表明传送数据时的第一个数据字节的序号是 x。
 2.B的TCP收到连接请求报文段后，如同意，则发回确认。B 在确认报文段中应使`SYN = 1`，使`ACK = 1`，其确认号`ack = x+1`，自己选择的序号`seq = y`。
 3.A收到此报文段后向B给出确认，其`ACK = 1`，确认号`ack = y+1`。A 的 TCP 通知上层应用进程，连接已经建立。B 的 TCP 收到主机 A 的确认后，也通知其上层应用进程：TCP 连接已经建立。 
 
 TCP连接的断开：
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/net_2.png)
 1.数据传输结束后，通信的双方都可释放连接。现在 A 的应用进程先向其 TCP 发出连接释放报文段，并停止再发送数据，主动关闭 TCP 连接。A 把连接释放报文段首部的`FIN = 1`，其序号`seq = u`，等待 B 的确认。
 2.B发出确认，确认号`ack = u+1`，而这个报文段自己的序号`seq = v`。TCP 服务器进程通知高层应用进程。从 A 到 B 这个方向的连接就释放了，TCP 连接处于`半关闭状态`。B 若发送数据，A 仍要接收。
 3.若B已经没有要向 A 发送的数据，其应用进程就通知TCP释放连接。
@@ -114,13 +116,16 @@ TCP 把连接作为最基本的抽象。每一条 TCP 连接有两个端点。TC
 
 以字节为单位的滑动窗口,根据 B 给出的窗口值
 1.A 构造出自己的发送窗口
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/net_3.png)
 2.A 发送了 11 个字节的数据
   P3 – P1 = A 的`发送窗口`（又称为通知窗口）
   P2 – P1 = 已发送但尚未收到确认的字节数
   P3 – P2 = 允许发送但尚未发送的字节数（又称为`可用窗口`） 
-
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/net_4.png)
 3.A 收到新的确认号，发送窗口向前滑动
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/net_5.png)
 4.A 的发送窗口内的序号都已用完，但还没有再收到确认，必须停止发送。
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/net_6.png)
 
 
 ### TCP发送缓存与接收缓存
