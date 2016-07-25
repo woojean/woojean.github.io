@@ -1,10 +1,10 @@
-## <!DOCTYPE>是HTML标签吗？它的作用是什么？
-<!DOCTYPE> 声明不是HTML标签；它是指示web浏览器关于页面使用哪个HTML版本进行编写的指令。必须是HTML文档的第一行，位于<html>标签之前。没有结束标签。对大小写不敏感。
+## <!DOCTYPE>
+<!DOCTYPE> 声明`不是HTML标签`；它是指示web浏览器关于页面使用哪个HTML版本进行编写的指令。必须是HTML文档的第一行，位于<html>标签之前。没有结束标签。对大小写不敏感。
 在HTML 4.01中有三种<!DOCTYPE>声明。在HTML5中只有一种：<!DOCTYPE html>
 应该始终向HTML文档添加<!DOCTYPE>声明，这样浏览器才能获知文档类型。
 
 
-## meat标签的http-equiv属性有什么作用？
+## meat标签的http-equiv属性
 http-equiv属性可用于模拟一个HTTP响应头。
 
 // 设定网页的到期时间（一旦网页过期，必须到服务器上重新传输）
