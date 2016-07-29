@@ -4427,26 +4427,339 @@ list、sorted set（优先级队列）
 
 9.缓存
 
-## 使用redis实现消息系统的思路
+## 使用redis的setnx来实现锁存在什么问题？
+SETNX，是「SET if Not eXists」的缩写，也就是只有不存在的时候才设置。
+
+// 缓存过期时通过SetNX获取锁，如果成功了就更新缓存，然后删除锁
+$ok = $redis->setNX($key, $value);
+if ($ok) {
+    $cache->update();
+    $redis->del($key);
+}
+存在问题：如果请求执行因为某些原因意外退出了，导致创建了锁但是没有删除锁，那么这个锁将一直存在，以至于以后缓存再也得不到更新。
+
+因此需要给锁加一个过期时间以防不测。
+// 加锁
+$redis->multi();
+$redis->setNX($key, $value);
+$redis->expire($key, $ttl);
+$redis->exec();
+存在问题：当多个请求到达时，虽然只有一个请求的SetNX可以成功，但是任何一个请求的Expire却都可以成功，如此就意味着即便获取不到锁，也可以刷新过期时间，如果请求比较密集的话，那么过期时间会一直被刷新，导致锁一直有效。
+
+从 2.6.12 起，SET涵盖了SETEX的功能，并且SET本身已经包含了设置过期时间的功能：
+$ok = $redis->set($key, $value, array('nx', 'ex' => $ttl));
+if ($ok) {
+    $cache->update();
+    $redis->del($key);
+}
+
+可以利用incr命令的原子性来实现锁：
+$value = $redis->get($lock);
+if($value < 1 ){
+	$redis->incr($lock,1);
+	// ...
+	$redis->decr($lock,1);
+}
+
+不使用incr：
+// 被WATCH的键会被监视，并会发觉这些键是否被改动过了。 如果有至少一个被监视的键在EXEC执行之前被修改了，那么整个事务都会被取消
+	WATCH mykey
+		$val = GET mykey   // 乐观锁
+		$val = $val + 1
+	MULTI
+		SET mykey $val
+	EXEC
+
+
+## redis通信协议
+发送格式：
+*<参数的个数>CR LF
+$<参数1字节数>CR LF
+<参数1>CR LF
+...
+$<参数n字节数>CR LF
+<参数n>CR LF
+
+例如`set mykey myvalue`命令，相应的字符串为：*3\r\n$3\r\nSET\r\n$5\r\nmykey\r\n$7\r\nmyvalue\r\n
+
+响应格式：
+响应的类型都是由返回数据的第一个字节决定的，有如下几种类型：
+"+" 代表一个状态信息 如 +ok 
+"-" 代表发送了错误  （如：操作运算操作了错误的类型）
+":" 返回的是一个整数  格式如：":11\r\n。
+ 一些命令返回一些没有任何意义的整数，如LastSave返回一个时间戳的整数值， INCR返回一个加1后的数值；一些命令如exists将返回0或者1代表是否true or false；其他一些命令如SADD, SREM 在确实执行了操作时返回1 ，否则返回0
+"$" 返回一个块数据，被用来返回一个二进制安全的字符串
+"*" 返回多个块数据（用来返回多个值， 总是第一个字节为"*"， 后面写着包含多少个相应值，如：
+C:LRANGE mylist 0 3
+S:*4
+S:$3
+S:foo
+S:$3
+S:bar
+S:$5
+$:world
+如果指定的值不存在，那么返回*0
+
+## 乐观锁与悲观锁的区别
+悲观锁(Pessimistic Lock)每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁，这样别人想拿这个数据就会block直到它拿到锁。传统的关系型数据库里边就用到了很多这种锁机制，比如行锁，表锁等，读锁，写锁等，都是在做操作之前先上锁。
+乐观锁(Optimistic Lock)每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是`在更新的时候`会判断一下在此期间别人有没有去更新这个数据，可以使用版本号等机制。`乐观锁适用于多读的应用类型`，这样可以提高吞吐量，像数据库如果提供类似于write_condition机制的其实都是提供的乐观锁。
+两种锁各有优缺点，不可认为一种好于另一种，像乐观锁适用于写比较少的情况下，即冲突真的很少发生的时候，这样可以省去了锁的开销，加大了系统的整个吞吐量。但如果经常产生冲突，上层应用会不断的进行retry，这样反倒是降低了性能，所以这种情况下用悲观锁就比较合适。
+
+## TCP粘包
+TCP是流式传送的也就是连接建立后可以一直不停的发送,并没有明确的边界定义。而用UDP发送的时候是可以按照一个一个数据包去发送的一个数据包就是一个明确的边界。因为TCP是流式传送，所以会开辟一个缓冲区，发送端往其中写入数据，每过一段时间就发送出去，因此有可能后续发送的数据（属于另一个包）和之前发送的数据同时存在缓冲区中并一起发送，早晨粘包。接收端也有缓存，因此也存在粘包。
+处理粘包的唯一方法就是制定应用层的数据通讯协议，通过协议来规范现有接收的数据是否满足消息数据的需要。在应用中处理粘包的基础方法主要有两种分别是以4节字描述消息大小或以结束符，实际上也有两者相结合的如HTTP,redis的通讯协议等。
+
+
+## 如何查看Linux进程之间的关系？
+ps -o pid,pgid,ppid,comm | cat
+
+输出：
+  PID  PGID  PPID COMMAND
+ 3003  3003  2986 su
+ 3004  3004  3003 bash
+ 3423  3423  3004 ps
+ 3424  3423  3004 cat
+
+每个进程都会属于一个进程组(process group)，每个进程组中可以包含多个进程。进程组会有一个进程组领导进程 (process group leader)，领导进程的PID (PID见Linux进程基础)成为进程组的ID (process group ID, PGID)，以识别进程组。PID为进程自身的ID，PGID为进程所在的进程组的ID， PPID为进程的父进程ID。
+
+## redis的zset使用什么数据结构实现？
+zset使用跳表实现。
+如果是一个简单的链表，在链表中查找一个元素I的话，需要将整个链表遍历一次。 如果是说链表是排序的，并且节点中还存储了指向前面第二个节点的指针的话，那么在查找一个节点时，仅仅需要遍历N/2个节点即可。
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/skiplist_1.png)
+这基本上就是跳表的核心思想，其实也是一种通过“空间来换取时间”的一个算法，通过在每个节点中增加了向后的指针，从而提升查找的效率。
+
+如果一个结点存在k个向后的指针的话，那么称该节点是k层的节点。一个跳表的层MaxLevel义为跳表中所有节点中最大的层数。
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/skiplist_2.png)
+
+数据结构定义：
+typedef struct nodeStructure *node;
+typedef struct nodeStructure
+{
+    keyType key;		// key值
+    valueType value;	// value值
+    node forward[1];	// 指针数组，根据该节点层数的，不同指向不同大小的数组
+};
+
+// 定义跳表数据类型
+typedef struct listStructure{
+   int level; 	  					/* Maximum level of the list 
+   struct nodeStructure * header; 	/* pointer to header */
+} * list; 
+
+## 服务器出现大量TIME_WAIT和CLOSE_WAIT的可能原因是什么？有什么问题？如何解决？
+查看当前服务器网络连接状态：
+netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
+输出：
+TIME_WAIT 814
+CLOSE_WAIT 1
+FIN_WAIT1 1
+ESTABLISHED 634
+SYN_RECV 2
+LAST_ACK 1
+
+常用的三个状态是：ESTABLISHED 表示正在通信，TIME_WAIT 表示主动关闭，CLOSE_WAIT 表示被动关闭。
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/net_12.png)
+
+如果服务器出了异常，百分之八九十都是下面两种情况：
+1.服务器保持了大量TIME_WAIT状态
+2.服务器保持了大量CLOSE_WAIT状态
+因为linux分配给一个用户的文件句柄是有限的，而TIME_WAIT和CLOSE_WAIT两种状态如果一直被保持，那么意味着对应数目的通道就一直被占着，一旦达到句柄数上限，新的请求就无法被处理了，接着就是大量Too Many Open Files异常。
+
+服务器保持了大量TIME_WAIT状态的原因：
+TIME_WAIT是主动关闭连接的一方保持的状态，对于爬虫服务器来说他本身就是“客户端”，在完成一个爬取任务之后，他就 会发起主动关闭连接，从而进入TIME_WAIT的状态，然后在保持这个状态2MSL（max segment lifetime）时间之后，彻底关闭回收资源。
+而对于HTTP的交互跟上面画的那个图是不一样的，`关闭连接的不是客户端，而是服务器`，所以web服务器也是会出现大量的TIME_WAIT的情况的。解决思路很简单，就是让服务器能够快速回收和重用那些TIME_WAIT的资源，通过修改`/etc/sysctl.conf`文件实现。
+net.ipv4.tcp_tw_reuse = 1   # 表示开启重用。允许将TIME-WAIT sockets重新用于新的TCP连接，默认为0，表示关闭  
+net.ipv4.tcp_tw_recycle = 1  # 表示开启TCP连接中TIME-WAIT sockets的快速回收，默认为0，表示关闭  
+
+服务器保持了大量CLOSE_WAIT状态的原因：
+TIME_WAIT状态可以通过优化服务器参数得到解决，因为发生TIME_WAIT的情况是服务器自己可控的，要么就是对方连接的异常，要么就是自己没有迅速回收资源，总之不是由于自己程序错误导致的。
+如果一直保持在CLOSE_WAIT状态，那么只有一种情况，就是在对方关闭连接之后服务器程序自己没有进一步发出ack信号。换句话说，就是在对方连接关闭之后，程序里没有检测到，或者程序压根就忘记了这个时候需要关闭连接，于是这个资源就一直被程序占着。
+如：服 务器A是一台爬虫服务器，它使用简单的HttpClient去请求资源服务器B上面的apache获取文件资源，正常情况下，如果请求成功，那么在抓取完资源后，服务器A会主动发出关闭连接的请求，这个时候就是主动关闭连接，服务器A的连接状态我们可以看到是TIME_WAIT。如果一旦发生异常呢？假设 请求的资源服务器B上并不存在，那么这个时候就会由服务器B发出关闭连接的请求，服务器A就是被动的关闭了连接，如果服务器A被动关闭连接之后程序员忘了 让HttpClient释放连接，那就会造成CLOSE_WAIT的状态了。
+
+## primary key与unique的区别
+UNIQUED 可空，可以在一个表里的一个或多个字段定义；PRIMARY KEY 不可空不可重复，在一个表里可以定义联合主键；
+在一个表中只能有一个Primary Key，而多个Unique Key可以同时存在。 
+Primary Key一般在逻辑设计中用作记录标识，这也是设置Primary Key的本来用意，而Unique Key只是为了保证域/域组的唯一性。 
+
+## 负载均衡的基本算法
+随机：负载均衡方法随机的把负载分配到各个可用的服务器上，通过随机数生成算法选取一个服务器，然后把连接发送给它。虽然许多均衡产品都支持该算法，但是它的有效性一直受到质疑，除非把服务器的可运行时间看的很重。
+轮询：轮询算法按顺序把每个新的连接请求分配给下一个服务器，最终把所有请求平分给所有的服务器。轮询算法在大多数情况下都工作的不错，但是如果负载均衡的设备在处理速度、连接速度和内存等方面不是完全均等，那么效果会更好。
+加权轮询：该算法中，每个机器接受的连接数量是按权重比例分配的。这是对普通轮询算法的改进，比如你可以设定：第三台机器的处理能力是第一台机器的两倍，那么负载均衡器会把两倍的连接数量分配给第3台机器。
+动态轮询：类似于加权轮询，但是，权重值基于对各个服务器的持续监控，并且不断更新。这是一个动态负载均衡算法，基于服务器的实时性能分析分配连接，比如每个节点的当前连接数或者节点的最快响应时间等。
+最快算法：最快算法基于所有服务器中的最快响应时间分配连接。该算法在服务器跨不同网络的环境中特别有用。
+最少连接：系统把新连接分配给当前连接数目最少的服务器。该算法在各个服务器运算能力基本相似的环境中非常有效。
+观察算法：该算法同时利用最小连接算法和最快算法来实施负载均衡。服务器根据当前的连接数和响应时间得到一个分数，分数较高代表性能较好，会得到更多的连接。
+预判算法：该算法使用观察算法来计算分数，但是预判算法会分析分数的变化趋势来判断某台服务器的性能正在改善还是降低。具有改善趋势的服务器会得到更多的连接。该算法适用于大多数环境。
+
+## PHP对象注入漏洞的原因是什么？
+PHP支持对象的序列化和反序列化操作（serialize、unserialize）。
+如：
+class User{
+
+  public $age = 0;
+  public $name = '';
+
+  public function PrintData(){
+    echo 'User ' . $this->name . ' is ' . $this->age . ' years old. <br />';
+  }
+}
+
+$usr = unserialize('O:4:"User":2:{s:3:"age";i:20;s:4:"name";s:4:"John";}');
+$usr->PrintData();
+
+输出：
+User John is 20 years old. 
+
+当一个对象进行序列化和反序列化操作时也会自动调用其他相应的魔幻方法：
+当对象进行序列化操作时魔幻方法“__sleep”会被自动调用。（必须返回一个包含序列化的类变量名的数组）
+当对象进行反序列化操作时魔幻方法“__wakeup”会被自动调用。
+反序列化操作自动调用__wakeup和__destruct，攻击者可以操作类变量来攻击web应用，比如：
+$usr = unserialize('O:7:"LogFile":1:{s:8:"filename";s:9:".htaccess";}');
+$usr->PrintData();
+从而意外地执行了LogFile的__construct和__destruct。
+
+在处理由用户提供数据的地方不要使用“unserialize”，可以使用“json_decode”。
+
+
+## nohup与&的区别
+& 要是关闭终端那么脚本也停了，
+加nohup  既使把终端关了，脚本也会跑，是在服务器那运行的。
+
+nohup 命令运行由 Command 参数和任何相关的 Arg 参数指定的命令，忽略所有挂断（SIGHUP）信号。在注销后使用 nohup 命令运行后台中的程序。
+
+一般结合使用：nohup command & 
+
+
+## 使用swoole时出现mysql server gone away的原因
+mysql本身是一个多线程的程序，每个连接过来，会开一个线程去处理相关的query, mysql会定期回收长时间没有任何query的连接(时间周期受wait_timeout配置影响)，所以在swoole中，由于是一个长驻内存的服务，我们建立了一个mysql的连接，不主动关闭 或者是用pconnect的方式，那么这个mysql连接会一直保存着，然后长时间没有和数据库有交互，就主动被mysql server关闭了，之后继续用这个连接，就报mysql server gone away了。
+
+解决方法：
+1.修改mysql的wait_timeout值为一个非常大的值，此方法不太可取，可能会产生大量的sleep连接，导致mysql连接上限了， 建议不使用。
+
+2.每次query之前主动进行连接检测
+//如果是用mysqli，可用内置的mysqli_ping
+if (!$mysqli->ping()) {  
+	mysqli->connect(); //重连
+}
+
+//如果是pdo，可以检测mysql server的服务器信息来判断
+ try {
+	$pdo->getAttribute(\PDO::ATTR_SERVER_INFO);
+} catch (\Exception $e) {
+	if ($e->getCode() == 'HY000') {
+		$pdo = new PDO(xxx);  //重连
+	} else {
+		throw $e;
+	}
+}
+这个方案有个缺点：额外多一次请求，所以改进方法: 用一个全局变量存放最后一次query的时间，下一次query的时候先和现在时间对比一下，超过waite_timeout再重连. 或者也可以用swoole_tick定时检测。
+
+3.被动检测，每次query用try catch包起来，如有mysql gone away异常，则重新连接，再执行一次当前sql.
+try {
+	query($sql);
+} catch (\Exception $e) {
+	if ($e->getCode() == 'HY000') {
+		reconnect(); //重连
+		query($sql)
+	} else {
+		throw $e;
+	}
+}
+
+4.用短连接，务必每次操作完之后，手动close
+
+## 在PHP中，如何控制数组json_encode后为json对象或者json数组？
+$foo = array(
+  "item1" => (object)[],
+  "item2" => []
+);
+
+echo json_encode($foo);
+
+输出：
+{"item1":{},"item2":[]}
+
+
+## HTTP头Access-Control-Allow-Origin的作用
+在某域名下使用Ajax向另一个域名下的页面请求数据，会遇到跨域问题。另一个域名必须在response中添加 Access-Control-Allow-Origin 的header，才能让前者成功拿到数据。
+只有当目标页面的response中，包含了 Access-Control-Allow-Origin 这个header，并且它的值里有我们自己的域名时，浏览器才允许我们拿到它页面的数据进行下一步处理。
+如果它的值设为 * ，则表示谁都可以用。
+
+## 如何使用OpCache提高PHP应用的性能？
+sudo vim /etc/php.ini
+加入：
+; 开关打开
+opcache.enable=1
+
+; 可用内存, 酌情而定, 单位 megabytes
+opcache.memory_consumption=256
+
+; 最大缓存的文件数目, 命中率不到 100% 的话, 可以试着提高这个值
+opcache.max_accelerated_files=5000
+
+; Opcache 会在一定时间内去检查文件的修改时间, 这里设置检查的时间周期, 默认为 2, 单位为秒
+opcache.revalidate_freq=240
+
+; interned string 的内存大小, 也可调
+opcache.interned_strings_buffer=8   
+
+; 是否快速关闭, 打开后在PHP Request Shutdown的时候回收内存的速度会提高
+opcache.fast_shutdown=1
+
+; 不保存文件/函数的注释
+opcache.save_comments=0
+
+检查：
+php -v
+    PHP 5.5.3-1ubuntu2.2 (cli) (built: Feb 28 2014 20:06:05) 
+    Copyright (c) 1997-2013 The PHP Group
+    Zend Engine v2.5.0, Copyright (c) 1998-2013 Zend Technologies
+        `with Zend OPcache v7.0.3-dev`, Copyright (c) 1999-2013, by Zend Technologies
+
+需要提醒的是，在生产环境中使用上述配置之前，必须经过严格测试。 因为上述配置存在一个已知问题，它会引发一些框架和应用的异常， 尤其是在存在文档使用了备注注解的时候。
+
+重启服务：
+sudo /etc/init.d/php-fpm restart
+sudo /etc/init.d/nginx restart
+
+如果在更新代码之后，发现没有执行的还是旧代码，可使用函数 opcache_reset() 来清除缓存。
+
+## 什么是协程？
+协程，又称微线程，纤程。英文名Coroutine。
+子程序，或者称为函数，在所有语言中都是层级调用，比如A调用B，B在执行过程中又调用了C，C执行完毕返回，B执行完毕返回，最后是A执行完毕。
+所以子程序调用是通过栈实现的，一个线程就是执行一个子程序。子程序调用总是一个入口，一次返回，调用顺序是明确的。而协程的调用和子程序不同。
+协程看上去也是子程序，但执行过程中，`在子程序内部可中断`，然后转而执行别的子程序（是中断后执行，而不是函数调用其他的子程序），在适当的时候再返回来接着执行。
+协程的特点在于是一个线程执行（所以不是多线程）。优势就是极高的执行效率。因为子程序切换不是线程切换，而是由程序自身控制，因此，没有线程切换的开销，和多线程比，线程数量越多，协程的性能优势就越明显。另一个优势就是不需要多线程的锁机制，因为只有一个线程，也不存在同时写变量冲突，在协程中控制共享资源不加锁，只需要判断状态就好了，所以执行效率比多线程高很多。
+
+
+缺点：
+无法利用多核资源：协程的本质是个单线程,它不能同时将 单个CPU 的多个核用上,协程需要和进程配合才能运行在多CPU上.当然我们日常所编写的绝大部分应用都没有这个必要，除非是cpu密集型应用。
+进行阻塞（Blocking）操作（如IO时）会阻塞掉整个程序：这一点和事件驱动一样，可以使用异步IO操作来解决
+
+在PHP中基于yield实现简单的协程通信（异步信息传递）：
+包含yield关键字的函数比较特殊，返回值是一个Generator对象，此时函数内语句尚未真正执行。Generator对象是Iterator接口实例，可以通过rewind()、current()、next()、valid()系列接口进行操纵。`Generator可以视为一种“可中断”的函数，而yield构成了一系列的“中断点”`。Generator类似于车间生产的流水线，每次需要用产品的时候才从那里取一个，然后这个流水线就停在那里等待下一次取操作。
 
 
 
+<?php
 
+function gen() {
+	for($i=1;$i<=100;$i++) {
+		$cmd = (yield $i);  // yield
+		if($cmd=='stop') {
+			return;
+		}
+	}
+}
 
+$gen = gen();
+$i=0;
+foreach($gen as $item) {
+	echo $item."\n";
+	if($i>=10) {
+		$gen->send('stop');
+	}
+	$i++;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+http://www.cnblogs.com/phptea/p/5629510.html
