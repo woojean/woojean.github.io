@@ -9,7 +9,7 @@
 </receiver>  
 </application>  
 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>  
-	```
+```
 ```
 public class MyBroadcast extends BroadcastReceiver{  
 		Calendar c;  
