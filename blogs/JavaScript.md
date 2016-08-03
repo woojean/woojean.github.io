@@ -1,41 +1,44 @@
 ## JSONP的原理是什么？用来解决什么问题？
 JSONP是一种解决跨域传输JSON数据的问题的解决方案，是一种非官方跨域数据交互协议。
-
-Ajax（或者说js）直接请求普通文件存在跨域无权限访问的问题，但是Web页面上凡是拥有”src”属性的标签引用文件时则不受是否跨域的影响。如果想通过纯web端（ActiveX控件、服务端代理、Websocket等方式不算）跨域访问数据就只有一种可能：在远程服务器上设法把数据装进js格式的文件里，供客户端调用和进一步处理。
-
-为了便于客户端使用数据，逐渐形成了一种非正式传输协议，人们把它称作JSONP，该协议的一个要点就是允许用户传递一个callback参数给服务端，然后服务端返回数据时会将这个callback参数作为函数名来包裹住JSON数据，这样客户端就可以随意定制自己的函数来自动处理返回数据了。
+Ajax（或者说js）直接请求普通文件存在跨域无权限访问的问题，但是`Web页面上凡是拥有"src"属性的标签引用文件时则不受是否跨域的影响`。如果想通过纯web端（ActiveX控件、服务端代理、Websocket等方式不算）跨域访问数据就只有一种可能：在远程服务器上设法把数据装进js格式的文件里，供客户端调用和进一步处理。
+为了便于客户端使用数据，逐渐形成了一种非正式传输协议:JSONP，该协议的一个要点就是`允许用户传递一个callback参数给服务端，然后服务端返回数据时会将这个callback参数作为函数名来包裹住JSON数据`，这样客户端就可以随意定制自己的函数来自动处理返回数据了。
 
 例：使用Javascript实现JSONP
+```
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
 <script type="text/javascript">
 // 回调函数
-    	var flightHandler = function(data){
-        	alert('你查询的航班结果是：票价 ' + data.price + ' 元，' + '余票 ' + data.tickets + ' 张。');
-    	};
+  var flightHandler = function(data){
+    alert('你查询的航班结果是：票价 ' + data.price + ' 元，' + '余票 ' + data.tickets + ' 张。');
+  };
 
 // 拼凑url
-    	var url = "http://flightQuery.com/jsonp/flightResult.aspx?code=CA1998&callback=flightHandler";
+  var url = "http://flightQuery.com/jsonp/flightResult.aspx?code=CA1998&callback=flightHandler";
 
 // 拼凑<script>标签，用于发出JSONP请求
-    	var script = document.createElement('script');
-    	script.setAttribute('src', url);
-    	document.getElementsByTagName('head')[0].appendChild(script);
-    </script>
+  var script = document.createElement('script');
+  script.setAttribute('src', url);
+  document.getElementsByTagName('head')[0].appendChild(script);
+</script>
 </head>
 <body>
 </body>
 </html>
+```
 
 服务器端返回格式：
-	flightHandler({
-    	"code": "CA1998",
-    	"price": 1780,
-    	"tickets": 5
-});
+```
+  flightHandler({
+    "code": "CA1998",
+    "price": 1780,
+    "tickets": 5
+ });
+```
 
 例：使用jQuery实现JSONP
+```
 <html xmlns="http://www.w3.org/1999/xhtml" >
  <head>
      <title>Untitled Page</title>
@@ -47,8 +50,8 @@ Ajax（或者说js）直接请求普通文件存在跨域无权限访问的问�
              		async: false,
              		url: "http://flightQuery.com/jsonp/flightResult.aspx?code=CA1998",
              		dataType: "jsonp",
-             		jsonp: "callback",		# 传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(一般默认为:callback)
-             		jsonpCallback:"flightHandler",		# 自定义的jsonp回调函数名称，没有定义的话会jQuery会自动生成以jQuery开头的函数
+             		jsonp: "callback",		// 传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(一般默认为:callback)
+             		jsonpCallback:"flightHandler",		// 自定义的jsonp回调函数名称，没有定义的话会jQuery会自动生成以jQuery开头的函数
              		success: function(json){
                  		alert('您查询到航班信息：票价： ' + json.price + ' 元，余票： ' + json.tickets + ' 张。');
              		},
@@ -61,11 +64,13 @@ Ajax（或者说js）直接请求普通文件存在跨域无权限访问的问�
      </head>
   <body>
   </body>
- </html>
+</html>
+```
 jquery在处理jsonp类型的ajax时自动生成回调函数并把数据（即不含函数名的纯json格式的数据）取出来供success属性方法来调用。
 
 ## 如何解决jQuery不同版本之间、与其他js库之间的冲突？
 （1）同一页面jQuery多个版本或冲突解决方法
+```
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
  <head>
  </head>
@@ -93,9 +98,11 @@ jquery在处理jsonp类型的ajax时自动生成回调函数并把数据（即�
      </script>
  </body>
  </html>
+```
 
 （2）同一页面jQuery和其他js库冲突解决方法
 1）jQuery在其他js库之前
+```
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
  <head>
  </head>
@@ -121,8 +128,10 @@ jquery在处理jsonp类型的ajax时自动生成回调函数并把数据（即�
      </script>
  </body>
  </html>
+```
 
 2）jQuery在其他js库后
+```
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
  <head>
  </head>
@@ -145,10 +154,10 @@ jquery在处理jsonp类型的ajax时自动生成回调函数并把数据（即�
      </script>
  </body>
  </html>
-
+```
 
 ## call及apply方法有什么作用？区别是什么？
-call 和 apply 都是为了改变某个函数运行时的 context 即上下文而存在的，换句话说，就是为了改变函数体内部 this 的指向。因为 JavaScript 的函数存在「定义时上下文」和「运行时上下文」以及「上下文是可以改变的」这样的概念。
+call和apply都是为了改变某个函数运行时的context即上下文而存在的，换句话说，就是为了改变函数体内部this的指向。因为JavaScript 的函数存在`定义时上下文`和`运行时上下文`以及`上下文是可以改变的`这样的概念。
 
 二者的作用完全一样，只是接受参数的方式不太一样。例如，有一个函数 func1 定义如下：
 var func1 = function(arg1, arg2) {};
@@ -165,6 +174,7 @@ call和apply是为了动态改变this而出现的，当一个object没有某个�
 
 
 ## meat标签的http-equiv属性
+```
 http-equiv属性可用于模拟一个HTTP响应头。
 
 // 设定网页的到期时间（一旦网页过期，必须到服务器上重新传输）
@@ -203,10 +213,11 @@ http-equiv属性可用于模拟一个HTTP响应头。
 
 // 页面描述，给搜索引擎用的
 <meta http-equiv="description" content="This is my page">
+```
 
 ## 为什么要用var self = this?
 This question is not specific to jQuery, but specific to JavaScript in general. The core problem is how to "channel" a variable in embedded functions. This is the example:
-
+```
 var abc = 1; // we want to use this variable in embedded functions
 
 function xyz(){
@@ -216,8 +227,9 @@ function xyz(){
   }
   ...
 };
+```
 This technique relies on using a closure. But it doesn't work with this because this is a pseudo variable that may change from scope to scope dynamically:
-
+```
 // we want to use "this" variable in embedded functions
 
 function xyz(){
@@ -229,8 +241,9 @@ function xyz(){
   }
   ...
 };
+```
 What can we do? Assign it to some variable and use it through the alias:
-
+```
 var self = this; // we want to use this variable in embedded functions
 
 function xyz(){
@@ -242,6 +255,7 @@ function xyz(){
   }
   ...
 };
+```
 this is not unique in this respect: arguments is the other pseudo variable that should be treated the same way — by aliasing.
 
 ## <!DOCTYPE>
@@ -251,7 +265,6 @@ this is not unique in this respect: arguments is the other pseudo variable that 
 
 ## 什么是AMD规范？requireJS如何实现前端模块化加载的？
 因为JavaScript本身的灵活性：框架没办法绝对的约束你的行为，一件事情总可以用多种途径去实现，所以我们只能在方法学上去引导正确的实施方法。
-
 AMD规范：Asynchronous Module Definition，即异步模块加载机制。AMD规范简单到只有一个API，即define函数：
 　　define([module-name?], [array-of-dependencies?], [module-factory-or-object]);
 module-name: 模块标识，可以省略。
@@ -259,12 +272,13 @@ array-of-dependencies: 所依赖的模块，可以省略。
 module-factory-or-object: 模块的实现，或者一个JavaScript对象。
 当define函数执行时，它首先会异步地去调用第二个参数中列出的依赖模块，当所有的模块被载入完成之后，如果第三个参数是一个回调函数则执行，然后告诉系统模块可用，也就通知了依赖于自己的模块自己已经可用。
 实例：
+```
 	define("alpha", ["require", "exports", "beta"], function (require, exports, beta) {	// 依赖的模块做参数传入
 　　	exports.verb = function() {	
 　　		return beta.verb();
 　　	}
 　　});
-
+```
 requireJS例一：使用requirejs动态加载jquery
 目录结构：
 /web
@@ -274,6 +288,7 @@ requireJS例一：使用requirejs动态加载jquery
 /require.js				# requireJS文件
 
 index.html文件内容：
+```
 <!doctype html>
 <html>
     <head>
@@ -284,8 +299,9 @@ index.html文件内容：
   	...
     </body>
 </html>
-
+```
 main.js文件内容：
+```
 require.config({
     paths: {
         jquery: 'jquery-1.7.2'
@@ -295,14 +311,14 @@ require.config({
 require(['jquery'], function($) {		
     alert($().jquery);
 });
-
+```
 引用模块jquery，因为这里配置了jquery的paths参数，所以将使用参数所对应的值'jquery-1.7.2'（js后缀名省略）。
 jQuery从1.7以后支持AMD规范，所以当jQuery作为一个AMD模块运行时，它的模块名是jquery（区分大小写）。
 如果文件名'jquery-1.7.2'改为jquery，则无需配置path参数。
 
 requireJS例二：使用自定义模块
 目录结构：
-	/web
+/web
 /js
 /cache.js				# 自定义模块
 /event.js				# 自定义模块
@@ -312,6 +328,7 @@ requireJS例二：使用自定义模块
 /require.js
 
 index.html文件内容：
+```
 <html>
     <head>
         <meta charset="utf-8">
@@ -327,8 +344,9 @@ index.html文件内容：
         <script data-main="js/main" src="require.js"></script>
     </body>
 </html>
-
+```
 cache模块内容：返回一个js对象
+```
 	define(function() {
 ...
     return {
@@ -340,8 +358,9 @@ cache模块内容：返回一个js对象
         ...
     };
 });
-
+```
 event模块内容：依赖于cache模块（define第一个参数为依赖的模块列表，第二个参数为一个函数，函数形参直接使用模块）
+```
 define(['cache'], function(cache) {
     ...
     return {				# 返回一个js对象
@@ -350,8 +369,9 @@ define(['cache'], function(cache) {
         trigger : trigger
     };
 });
-
+```
 selector模块内容：
+```
 define(function() {
     function query(selector,context) {
         ...
@@ -359,15 +379,16 @@ define(function() {
      
     return query;		# 返回一个js函数
 });
-
+```
 main.js内容：
-	require.config({
-    	baseUrl: 'js'
+```
+require.config({
+  baseUrl: 'js'
 });
- 
+```
 require(['selector', 'event'], function($, E) {		# 函数两个形参一一对应所依赖的两个模块
     var els = $('p');
-    for (var i=0; i<els.length; i++) {
+    for (var i=0; i < els.length; i++) {
         E.bind(els[i], 'click', function() {
             alert(this.innerHTML);
         });
