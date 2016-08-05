@@ -1,3 +1,10 @@
+## 如何兼容MySQL的时间格式？
+MySql中的日期和时间是按照ISO标准处理的，即形如2008-03-29或者08-02-29这两种格式。PHP和MySql的通信常常会需要进行日期和时间的转换，这可以在其中任意一端进行：
+PHP：可以使用date()函数进行转换。需要注意的是，月份和具体的日期应该使用带有前导0的格式。
+MySql：可以使用DATE_FORMATE()或者UNIX_TIMESTAMP()。
+SELECT DATE_FORMATE(date_column,’%m %d %y’) FROM tablename;
+SELECT UNIX_TIMESTAMP(date_column) FROM tablename;
+
 ## 外联接
 	LEFT OUTER JOIN或LEFT JOIN \ RIGHT OUTER JOIN或RIGHT JOIN \ FULL OUTER JOIN或FULL JOIN
 	(左外联接的结果集中除了包括满足条件的行外，还包括左表所有的行(左表中没有满足条件的以空值的形式出现))
@@ -15,12 +22,6 @@
 第二范式（2NF）：第二范式（2NF）要求数据库表中的每个实例或行必须可以被惟一地区分。为实现区分通常需要为表加上一个列，以存储各个实例的惟一标识。简而言之，第二范式就是非主属性的部分依赖于主关键字。
 第三范式（3NF）：第三范式（3NF）要求一个数据库表中不包含已在其它表中已包含的非主关键字信息。例如，存在一个部门信息表，其中每个部门有部门编号（dept_id）、部门名称、部门简介等信息。那么在员工信息表中列出部门编号后就不能再将部门名称、部门简介等与部门有关的信息再加入员工信息表中。如果不存在部门信息表，则根据第三范式（3NF）也应该构建它，否则就会有大量的数据冗余。简而言之，第三范式就是属性不依赖于其它非主属性。
 
-## 如何兼容MySQL的时间格式？
-MySql中的日期和时间是按照ISO标准处理的，即形如2008-03-29或者08-02-29这两种格式。PHP和MySql的通信常常会需要进行日期和时间的转换，这可以在其中任意一端进行：
-PHP：可以使用date()函数进行转换。需要注意的是，月份和具体的日期应该使用带有前导0的格式。
-MySql：可以使用DATE_FORMATE()或者UNIX_TIMESTAMP()。
-SELECT DATE_FORMATE(date_column,’%m %d %y’) FROM tablename;
-SELECT UNIX_TIMESTAMP(date_column) FROM tablename;
 
 ## MySQL连接池
 连接池是可以有效降低MySQL-Server负载的。原理是 连接池使用一个共享资源的模式，如并发100个请求，实际上并不是每个请求的所有时间都在执行SQL查询。这样100个请求，共享20个MySQL连接就可以满足需求了。当一个请求操作完数据库后，开始进入模板渲染等流程，这时就会释放数据库连接给其他的请求使用。
