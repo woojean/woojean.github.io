@@ -454,7 +454,14 @@ console.log(!~1);	// false
 console.log(!~2);	// false
 console.log(!~-1);	// true
 
-
+## 
+var a = {
+    b:'a',
+    10: "vv",
+    1:"a",
+    a:''
+}
+console.log(a);
 
 
 
