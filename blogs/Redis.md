@@ -1,4 +1,4 @@
- ## 什么是Redis的管道技术？
+## 什么是Redis的管道技术？
 Redis是一种基于客户端-服务端模型以及请求/响应协议的TCP服务。这意味着通常情况下一个请求会遵循以下步骤：
 （1）客户端向服务端发送一个查询请求，并监听Socket返回，通常是以阻塞模式，等待服务端响应。
 （2）服务端处理命令，并将结果返回给客户端。
@@ -12,17 +12,17 @@ redis
 :1
 :2
 :3
-以上实例中通过使用PING命令查看redis服务是否可用，之后设置了w3ckey的值为redis，然后获取w3ckey的值并使得visitor自增3次。在返回的结果中可以看到这些命令一次性向redis服务提交，并最终一次性读取所有服务端的响应
+以上实例中通过使用PING命令查看redis服务是否可用，之后设置了w3ckey的值为redis，然后获取w3ckey的值并使得visitor自增3次。在返回的结果中可以看到`这些命令一次性向redis服务提交，并最终一次性读取所有服务端的响应`
 管道技术最显著的优势是提高了redis服务的性能。
 
 ## Redis有哪些基本的特点及优势？
 Redis（REmote DIctionary Server），特点及优势：
-（1）开源。
-（2）Redis数据库完全在内存中，使用磁盘仅用于持久性。可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用。
-（3）相比许多键值数据存储，Redis拥有一套较为丰富的数据类型。
-（4）Redis可以将数据复制到任意数量的从服务器。
-（5）异常快速：Redis的速度非常快，每秒能读约11万集合，写约81000条记录。
-（6）操作都是原子性：所有Redis操作是原子的，这保证了如果两个客户端同时访问的Redis服务器将获得更新后的值。同时Redis还支持对几个操作全并后的原子性执行。
+（1）`开源`。
+（2）Redis数据库`完全在内存中`，使用磁盘仅用于持久性。可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用。
+（3）相比许多键值数据存储，Redis拥有一套较为`丰富的数据类型`。
+（4）Redis可以将数据复制到任意数量的`从服务器`。
+（5）异常快速：Redis的`速度非常快`，每秒能读约11万集合，写约81000条记录。
+（6）操作都是原子性：`所有Redis操作是原子的`，这保证了如果两个客户端同时访问的Redis服务器将获得更新后的值。同时Redis还支持对几个操作全并后的原子性执行。
 （7）多功能实用工具：Redis是一个多功能的实用工具，可以在多个用例如缓存、消息、队列使用（Redis原生支持发布/订阅）。
 
 ## Redis应用场景
@@ -41,9 +41,11 @@ END
 
 2.取TOP N操作
 前面操作以时间为权重，这个是以某个条件为权重，使用sorted set：
+```
 zadd ss 1 a 2 b 3 c 4 d 0 x
 zincrby ss 10 x  			  # 将x的分数增加10
 zrevrange ss 0 2 withscores   # 按分数高低列出前2名
+```
 
 
 3.需要精准设定过期时间的应用
@@ -66,6 +68,7 @@ publish、pubsub
 list、sorted set（优先级队列）
 
 9.缓存
+
 
 ## Redis的发布订阅系统如何使用？
 Redis发布订阅(pub/sub)是一种消息通信模式：发送者(pub)发送消息，订阅者(sub)接收消息。Redis客户端可以订阅任意数量的频道。
@@ -160,6 +163,7 @@ redis 127.0.0.1:6379> EXEC					# 执行所有事务
 （4）UNWATCH 								# 取消WATCH命令对所有key的监视
 （5）WATCH key [key ...] 					# 监视一个（或多个）key ，如果在事务执行之前这个（或这些） key被其他命令所改动，那么事务将被打断
 
+
 ## redis通信协议
 发送格式：
 *<参数的个数>CR LF
@@ -213,6 +217,7 @@ typedef struct listStructure{
    int level; 	  					/* Maximum level of the list 
    struct nodeStructure * header; 	/* pointer to header */
 } * list; 
+
 
 ## 如何对Redis进行配置？有哪些常见的配置选项？
 Redis的配置文件位于Redis安装目录下，文件名为redis.conf。
@@ -306,6 +311,7 @@ OK
 
 （30）include /path/to/local.conf		# 指定包含其它的配置文件，可以在同一主机上多个Redis实例之间使用同一份配置文件，而同时各个实例又拥有自己的特定配置文件
 
+
 ## Redis分区有什么优势和不足？有哪些类型？ 
 分区是分割数据到多个Redis实例的处理过程，因此每个实例只保存key的一个子集。
 
@@ -330,10 +336,11 @@ Redis有两种类型分区。假设有4个Redis实例R0，R1，R2，R3，和类�
 用一个hash函数将key转换为一个数字，比如使用crc32 hash函数。对key foobar执行crc32(foobar)会输出类似93024922的整数。
 对这个整数取模，将其转化为0-3之间的数字，就可以将这个整数映射到4个Redis实例中的一个了。93024922 % 4 = 2，就是说key foobar应该被存到R2实例中。注意：取模操作是取除的余数，通常在多种编程语言中用%操作符实现。
 
+
 ## Redis有哪些数据类型？每种数据类型的存储极限是什么？
 五种数据类型：string（字符串）、hash（哈希）、list（列表）、set（集合）及zset(sorted set：有序集合)。
 String
-string类型是二进制安全的，所以redis的string可以包含任何数据。比如jpg图片或者序列化的对象。一个string最大能存储512MB。
+string类型是二进制安全的，所以redis的string可以包含任何数据。比如jpg图片或者序列化的对象。`一个string最大能存储512MB`。
 redis 127.0.0.1:6379> SET name "w3cschool.cc"
 OK
 redis 127.0.0.1:6379> GET name
@@ -395,18 +402,22 @@ redis 127.0.0.1:6379> ZRANGEBYSCORE w3cschool.cc 0 1000
 2) "mongodb"
 3) "rabitmq"
 
+
 ## Redis是以单线程方式运行的吗？有什么问题？
 Redis实际上是单线程运行的。虽然Redis是单线程运行的，但是可以同时运行多个Redis客户端进程，常见的并发问题还是会出现。像如下的代码，在get运行之后，set运行之前，powerlevel的值可能会被另一个Redis客户端给改变，从而造成错误：
+```
 redis.multi()
 current = redis.get('powerlevel')
 redis.set('powerlevel', current + 1)
 redis.exec()
+```
 
 ## 当客户端连接后，Redis会执行什么操作？
 Redis通过监听一个TCP端口或者Unix socket的方式来接收来自客户端的连接，当一个连接建立后，Redis内部会进行以下一些操作：
 （1）首先，客户端socket会被设置为非阻塞模式，因为Redis在网络事件处理上采用的是非阻塞多路复用模型
-（2）然后为这个socket设置TCP_NODELAY属性，禁用Nagle算法
+（2）然后为这个socket设置TCP_NODELAY属性，`禁用Nagle算法`
 （3）然后创建一个可读的文件事件用于监听这个客户端socket的数据发送
+
 
 ## Redis中如何切换数据库？
 在Redis里，数据库简单的使用一个数字编号来进行辨认，默认数据库的数字编号是0。如果想切换到一个不同的数据库，可以使用select命令来实现。在命令行界面里键入select 1，Redis应该会回复一条OK的信息，然后命令行界面里的提示符会变成类似redis 127.0.0.1:6379[1]>这样。如果想切换回默认数据库，只要在命令行界面键入select 0即可。
@@ -414,98 +425,53 @@ Redis通过监听一个TCP端口或者Unix socket的方式来接收来自客户�
 
 ## 使用redis的setnx来实现锁存在什么问题？
 SETNX，是「SET if Not eXists」的缩写，也就是只有不存在的时候才设置。
-
+```
 // 缓存过期时通过SetNX获取锁，如果成功了就更新缓存，然后删除锁
 $ok = $redis->setNX($key, $value);
 if ($ok) {
     $cache->update();
     $redis->del($key);
 }
+```
 存在问题：如果请求执行因为某些原因意外退出了，导致创建了锁但是没有删除锁，那么这个锁将一直存在，以至于以后缓存再也得不到更新。
 
 因此需要给锁加一个过期时间以防不测。
+```
 // 加锁
 $redis->multi();
 $redis->setNX($key, $value);
 $redis->expire($key, $ttl);
 $redis->exec();
+```
 存在问题：当多个请求到达时，虽然只有一个请求的SetNX可以成功，但是任何一个请求的Expire却都可以成功，如此就意味着即便获取不到锁，也可以刷新过期时间，如果请求比较密集的话，那么过期时间会一直被刷新，导致锁一直有效。
 
 从 2.6.12 起，SET涵盖了SETEX的功能，并且SET本身已经包含了设置过期时间的功能：
+```
 $ok = $redis->set($key, $value, array('nx', 'ex' => $ttl));
 if ($ok) {
     $cache->update();
     $redis->del($key);
 }
+```
 
-可以利用incr命令的原子性来实现锁：
-$value = $redis->get($lock);
+### 可以利用incr命令的原子性来实现锁
+```
+$value = $redis->get($lock); 
 if($value < 1 ){
-	$redis->incr($lock,1);
-	// ...
-	$redis->decr($lock,1);
+  $redis->incr($lock,1);
+  // ...
+  $redis->decr($lock,1);
 }
+```
 
 不使用incr：
+```
 // 被WATCH的键会被监视，并会发觉这些键是否被改动过了。 如果有至少一个被监视的键在EXEC执行之前被修改了，那么整个事务都会被取消
-	WATCH mykey
-		$val = GET mykey   // 乐观锁
-		$val = $val + 1
-	MULTI
-		SET mykey $val
-	EXEC
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+WATCH mykey
+  $val = GET mykey   // 乐观锁
+  $val = $val + 1
+MULTI
+  SET mykey $val
+EXEC
+```
 
