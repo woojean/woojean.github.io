@@ -686,5 +686,7 @@ MySQL只对以下操作符才使用索引：<,<=,=,>,>=,between,in,以及某些�
 8.没有where的count(*)使用MyISAM要比InnoDB快得多。因为MyISAM`内置了一个计数器`，count(*)时它直接从计数器中读，而InnoDB必须扫描全表。所以在InnoDB上执行count(*)时一般要伴随where，且where中要包含主键以外的索引列。为什么这里特别强调“主键以外”？因为InnoDB中primary index是和raw data存放在一起的，而secondary index则是单独存放，然后有个指针指向primary key。所以只是count(*)的话使用secondary index扫描更快，而primary key则主要在扫描索引同时要返回raw data时的作用较大。
 
 
-
+## group by注意点
+1.在select指定的字段要么就要包含在Group By语句的后面，作为分组的依据；要么就要被包含在聚合函数中；
+2.having 子句的作用是筛选满足条件的组，即`在分组之后过滤数据`，条件中经常包含聚合函数，使用having 条件过滤出特定的组，也可以使用多个分组标准进行分组。
 	
