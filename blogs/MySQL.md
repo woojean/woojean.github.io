@@ -689,4 +689,32 @@ MySQL只对以下操作符才使用索引：<,<=,=,>,>=,between,in,以及某些�
 ## group by注意点
 1.在select指定的字段要么就要包含在Group By语句的后面，作为分组的依据；要么就要被包含在聚合函数中；
 2.having 子句的作用是筛选满足条件的组，即`在分组之后过滤数据`，条件中经常包含聚合函数，使用having 条件过滤出特定的组，也可以使用多个分组标准进行分组。
-	
+
+
+## 编码设置
+SHOW VARIABLES LIKE 'character_set_%';
+
+Variable_name             Value                             
+------------------------  ----------------------------------
+character_set_client      utf8mb4                           
+character_set_connection  utf8mb4                           
+character_set_database    utf8mb4                           
+character_set_filesystem  binary                            
+character_set_results     utf8mb4                           
+character_set_server      utf8mb4                           
+character_set_system      utf8                              
+character_sets_dir        /usr/local/mysql/share/charsets/  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
