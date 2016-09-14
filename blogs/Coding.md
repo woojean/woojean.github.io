@@ -1183,3 +1183,193 @@ void DFSM(MGraph *G，int i){
 对于具有n个顶点和e条边的无向图或有向图，遍历算法DFSTraverse对图中每顶点至多调用一次DFS或DFSM。从DFSTraverse中调用DFS(或DFSM)及DFS(或DFSM)内部递归调用自己的总次数为n。
 当访问某顶点vi时，DFS(或DFSM)的时间主要耗费在从该顶点出发搜索它的所有邻接点上。用邻接矩阵表示图时，其搜索时间为O(n)；用邻接表表示图时，需搜索第i个边表上的所有结点。因此，对所有n个顶点访问，在邻接矩阵上共需检查n2个矩阵元素，在邻接表上需将边表中所有O(e)个结点检查一遍。
 所以，DFSTraverse的时间复杂度为O(n2) （调用DFSM）或0(n+e)（调用DFS）。
+
+## 如何对递归程序进行时间复杂度分析？
+例子：求N!。 这是一个简单的"累乘"问题，用递归算法也能解决。 
+  n! = n * (n - 1)!   n > 1 
+  0! = 1, 1! = 1      n = 0,1 
+因此，递归算法如下： 
+```  
+  fact(int n) {  
+    if(n == 0 || n == 1)          
+      return 1;  
+    else   
+      return n * fact(n - 1);  
+  }
+```    
+以n=3为例，看运行过程如下： 
+    fact(3) ----- fact(2) ----- fact(1) ------ fact(2) -----fact(3) 
+    ------------------------------>  ------------------------------> 
+                递归                            回溯 
+  递归算法在运行中不断调用自身降低规模的过程，当规模降为1，即递归到fact(1)时，满足停止条件停止递归，开始回溯(返回调用算法)并计算，从fact(1)=1计算返回到fact(2);计算2*fact(1)=2返回到fact(3)；计算3*fact(2)=6，结束递归。
+递归算法的分析方法比较多，最常用的便是迭代法。 
+  迭代法的基本步骤是先将递归算法简化为对应的递归方程，然后通过反复迭代，将递归方程的右端变换成一个级数，最后求级数的和，再估计和的渐进阶。 
+    <1> 例：n! 
+       算法的递归方程为： T(n) = T(n - 1) + O(1); 
+       迭代展开： T(n) = T(n - 1) + O(1) 
+                       = T(n - 2) + O(1) + O(1) 
+                       = T(n - 3) + O(1) + O(1) + O(1) 
+                       = ...... 
+                       = O(1) + ... + O(1) + O(1) + O(1) 
+                       = n * O(1) 
+                       = O(n) 
+      这个例子的时间复杂性是线性的。 
+  <2> 例：如下递归方程： 
+      T(n) = 2T(n/2) + 2, 且假设n=2的k次方。 
+      T(n) = 2T(n/2) + 2 
+           = 2(2T(n/2*2) + 2) + 2 
+           = 4T(n/2*2) + 4 + 2 
+           = 4(2T(n/2*2*2) + 2) + 4 + 2 
+           = 2*2*2T(n/2*2*2) + 8 + 4 + 2 
+           = ... 
+           = 2的(k-1)次方 * T(n/2的(i-1)次方) + $(i:1~(k-1))2的i次方 
+           = 2的(k-1)次方 + (2的k次方)  - 2 
+           = (3/2) * (2的k次方) - 2 
+           = (3/2) * n - 2 
+           = O(n) 
+      这个例子的时间复杂性也是线性的。 
+  <3> 例：如下递归方程： 
+      T(n) = 2T(n/2) + O(n), 且假设n=2的k次方。 
+      T(n) = 2T(n/2) + O(n) 
+           = 2T(n/4) + 2O(n/2) + O(n) 
+           = ... 
+           = O(n) + O(n) + ... + O(n) + O(n) + O(n) 
+           = k * O(n) 
+           = O(k*n) 
+           = O(nlog2n) //以2为底 
+     
+      一般地，当递归方程为`T(n) = aT(n/c) + O(n)`, T(n)的解为： 
+      O(n)          (a<c && c>1) 
+      O(nlog2n)     (a=c && c>1) //以2为底 
+      O(nlogca)     (a>c && c>1) //n的(logca)次方，以c为底 
+   上面介绍的3种递归调用形式，比较常用的是第一种情况，第二种形式也有时出现，而第三种形式(间接递归调用)使用的较少，且算法分析比较复杂。下面举个第二种形式的递归调用例子。 
+    <4> 递归方程为：T(n) = T(n/3) + T(2n/3) + n 
+     为了更好的理解，先画出递归过程相应的递归树： 
+                            n                        --------> n 
+                    n/3            2n/3              --------> n 
+              n/9       2n/9   2n/9     4n/9         --------> n 
+           ......     ......  ......  .......        ...... 
+                                                     -------- 
+                                                     总共O(nlogn) 
+     累计递归树各层的非递归项的值，每一层和都等于n，从根到叶的最长路径是： 
+      n --> (2/3)n --> (4/9)n --> (12/27)n --> ... --> 1 
+     设最长路径为k，则应该有：(2/3)的k次方 * n = 1 
+     得到 k = log(2/3)n  // 以(2/3)为底 
+     于是 T(n) <= (K + 1) * n = n (log(2/3)n + 1) 
+     即 T(n) = O(nlogn) 
+   由此例子表明，对于第二种递归形式调用，借助于递归树，用迭代法进行算法分析是简单易行的。
+
+
+
+## 基于redis实现红包算法
+```
+<?php
+
+function gen($totalMoney, $num, $min='0.01'){
+  $ret = [];
+  
+  // 剩余红包金额
+  $remainMoney = $totalMoney;  
+  
+  for ( $i = 1; $i < $num; $i++) {
+    // 剩余红包数量
+    $remainNum = $num-$i;  
+    
+    // 当前可领取的红包的最大值
+    $remainMax = ($remainMoney-$remainNum*$min)/$remainNum;  
+    
+    $allocateMoney = mt_rand($min*100, $remainMax*100)/100;
+    $remainMoney = $remainMoney-$allocateMoney;
+    $ret[$i] = array(
+      'allocation' => $allocateMoney,
+      'remainder' => $remainMoney
+    );
+  }
+  // 最后一个
+  $ret[$num] = [
+    'allocation'=>$remainMoney,
+    'remainder'=>0
+  ];
+  
+  return $ret;
+}
+
+$totalMoney = 10;  // 红包总金额
+$num = 10;  // 红包总数
+
+$redis = new Redis();
+$redis->connect('127.0.0.1', 6379);
+
+$mapStock = 'queue_stock';  // 库存队列
+$mapGrab = 'queue_grab';   // 已抢队列
+$listIndexs = 'list_indexs';  // 剩余红包索引
+
+
+$allocated = $redis->hlen($mapGrab);
+if($allocated == $num){
+  echo '已抢光！';
+  exit;
+}
+
+$inited = $redis->hlen($mapStock);
+if( 0 == $inited ){ // 索引尚未生成
+  // 生成红包库存
+  $stock = gen($totalMoney,$num);  
+  foreach($stock as $index => $hongbao){
+    $redis->hset($mapStock, $index, json_encode($hongbao));
+    $redis->lpush($listIndexs,$index);
+  }
+}
+
+$uid = intval($_GET['uid']);
+if( $uid < 1){
+  echo '用户ID非法！';
+  exit;
+}
+
+$participated = $redis->hexists($mapGrab,$uid);
+if($participated){
+  echo '不能重复参加！';
+  exit;
+}
+
+// 原子操作
+$index = $redis->lpop($listIndexs);
+if(intval($index) < 1){
+  echo '已抢光！';
+  exit;
+}
+
+$hongbao = $redis->hget($mapStock, $index);
+$redis->hset($mapGrab, $uid, json_encode($hongbao));
+
+echo $uid.' -> ' . json_encode($hongbao);
+
+
+// http://demo.com/redis_qianghongbao.php?uid=1
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
