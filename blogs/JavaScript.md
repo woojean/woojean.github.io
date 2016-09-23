@@ -466,7 +466,30 @@ console.log(a);
 
 
 
+## 使用 [].slice.call将对象转换为数组的局限性
+var arrayLike = {
+    '0': 'a',
+    '1': 'b',
+    '2': 'c',
+    length: 3
+};
 
+
+var arr = [].slice.call(arrayLike); 
+console.log(arr);  // ["a", "b", "c"]
+
+
+被转换为数组的对象必须有length属性，所谓类似数组的对象，本质特征只有一点，即必须有length属性。
+
+var arrayLike = {
+    '0': 'a',
+    '1': 'b',
+    '2': 'c'
+};
+
+
+var arr = [].slice.call(arrayLike); 
+console.log(arr);  // []
 
 
 

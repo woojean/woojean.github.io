@@ -1,4 +1,4 @@
-#《React文档》（及周边技术）学习笔记.md
+#《React文档》（及周边技术文档）阅读摘要.md
 <a href='#'>React</a>
 <a href='#'>Redux</a>
 <a href='#'>React Router</a>
@@ -27,7 +27,7 @@
         document.getElementById('example')
       );
     </script>
-  </body>
+  </body
 </html>
 ```
 
