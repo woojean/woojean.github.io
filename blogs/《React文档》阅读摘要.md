@@ -1,11 +1,4 @@
-#《React文档》（及周边技术文档）阅读摘要.md
-<a href='#'>React</a>
-<a href='#'>Redux</a>
-<a href='#'>React Router</a>
-<a href='#'>Webpack</a>
-
-# React
-
+#《React文档》阅读摘要.md
 
 ## 使用react、react-dom、babel在线转换JSX并执行：
 ```
@@ -368,7 +361,12 @@ dangerouslySetInnerHTML：提供插入纯 HTML 字符串的功能，主要为了
 
 
 
-# Redux
+
+
+
+
+ 
+
 
 
 
