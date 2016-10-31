@@ -485,14 +485,33 @@ ALTER TABLE innodb_tbl ENGINE=INNODB;
 （详略）
 
 
+
 ## 第6章 查询性能优化
 
+### 常见的导致查询过慢的原因
+1.查询不需要的记录；如误以为MySQL会只返回需要的数据，实际上却是先返回全部结果集，再进行计算。
+2.多表关联时返回全部列，如:
+```
+SELECT * FROM sakila.actor
+  INNER JOIN sakila.film_actor USING(actor_id)
+  INNER JOIN sakila.film USING(film_id)
+  WHERE sakila.film.title = '***';
+```
+该查询将会返回三个关联表的全部数据列，正确的方式应该是只取需要的列：
+```
+SELECT sakila.actor.* FROM sakila.actor...;
+```
+3.总是取出全部列：SELECT * FROM ...
+4.重复查询相同的数据，而不是使用缓存；
 
 
+### MySQL使用WHERE条件的不同方式
+从好到坏依次为：
+1.在索引中使用WHERE条件来过滤不匹配的记录，这是在存储引擎层完成的；
+2.使用索引覆盖扫描（Using index）返回记录，直接从索引中过滤不需要的记录并返回命中的结果，在MySQL服务器层完成，无需再回表查询记录；
+3.从数据表中返回数据，然后过滤不满足条件的记录（Using Where），MySQL需要先从数据表读出记录然后过滤；
 
-
-
-
+### 重构查询的方式
 
 
 
