@@ -302,6 +302,199 @@ MyISAM表支持空间索引，可以用作地理数据存储。
 3.将随机I/O变为顺序I/O；
 
 ### 高性能的索引策略
+1.如果查询中的列不是独立的，而是表达式的一部分，MySQL将不会使用索引；
+```
+ # 如下情况下不会使用索引
+ SELECT actor_id FROM sakila.actor WHERE actor_id + 1 = 5;
+```
+
+2.索引的选择性越高则查询的效率越高；（索引选择性 = 列取值基数/表记录总数）
+```
+ # 计算列的选择性
+ SELECT COUNT(DISTINCT city)/COUNT(*) FROM sakila.city_demo;
+```
+
+3.可以使用前缀索引来替代对很长的字符列做索引；
+```
+ # 计算不同前缀长度的索引的选择性
+ SELECT 
+   COUNT(DISTINCT LEFT(city,3))/COUNT(*) AS sel3,
+   COUNT(DISTINCT LEFT(city,4))/COUNT(*) AS sel4,
+   ...
+   COUNT(DISTINCT LEFT(city,7))/COUNT(*) AS sel7,
+FROM sakila.city_demo;
+
+ # 添加前缀索引
+ALTER TABLE sakila.city_demo ADD KEY(city(7));
+```
+MySQL不能使用前缀索引做ORDER BY和GROUP BY查询，也无法使用前缀索引做覆盖扫描。
+
+
+4.在多个列上建立独立的单列索引大部分情况下并不能提高MySQL的查询性能：
+（1）当出现服务器对多个索引做相交操作时（通常有多个AND条件），通常意味着需要一个包含所有相关列的多列索引，而不是多个独立的多列索引；
+（2）当服务器需要对多个索引做联合操作时（通常有多个OR条件），通常需要消耗大量的CPU和内存资源用在缓存、排序和合并操作上。而且优化器不会把这些计算到“查询成本”中，优化器只关心随机页面读取，这会导致查询的成本被低估，`甚至该执行计划还不如直接走全表扫描`。这样的查询通常通过改写成UNION查询来优化：
+```
+ # 假设actor_id和film_id这两列上都有独立的索引
+SELECT film_id,actor_id FROM sakila.film_actor
+  WHERE actor_id = 1 OR film_id = 1;
+```
+改写成：
+```
+SELECT film_id,actor_id FROM sakila.film_actor
+  WHERE actor_id = 1
+UNION ALL
+SELECT film_id,actor_id FROM sakila.film_actor
+  WHERE actor_id <> 1 AND film_id = 1;
+```
+
+5.多列索引的列顺序非常重要，在一个多列的B-Tree索引中，索引总是先按照最左列进行排序，其次是第二列，等等。
+经验：一般的选择是将选择性最高的列放到索引最前列，但是避免随机IO和排序通常更为重要，所以要优先结合值的分布情况及频繁执行的查询场景来考虑。
+
+
+### 聚簇索引
+聚簇索引并不是一种单独的索引类型，而是`一种数据存储方式`。InnoDB的聚簇索引实际上是在同一个结构中保存了B-Tree索引（主键）和数据行。
+`聚簇`表示数据行和键值紧凑地存储在一起，一个表只能有一个聚簇索引。
+
+如果没有定义主键，InnoDB会选择一个唯一的非空索引代替，如果没有这样的索引，InnoDB会隐式定义一个主键来作为聚簇索引。
+
+聚簇索引的优点：
+（1）可以将相关数据保存在一起；
+例如根据用户ID来聚集数据，这样只要从磁盘读取少数的数据页就能获取某个用户的全部记录，如果没有使用聚簇索引，则每条记录都可能导致一次磁盘I/O。
+（2）数据访问更快：
+因为索引和数据保存在同一个B-Tree中，因此从聚簇索引中获取数据通常比在非聚簇索引中查找更快。
+（3）使用覆盖索引扫描的查询可以直接使用页节点中的主键值。
+
+聚簇索引的缺点：
+（1）如果数据全部都放在内存中，则访问顺序就不那么重要了，聚簇索引也就没什么优势了；
+（2）插入速度严重依赖于插入顺序；如果不是按照主键顺序插入数据，在插入完成后最好执行OPTIMIZE TABLE重新组织表；
+（3）更新聚簇索引列的代价很高，因为会强制InnoDB将每个被更新的行移动到新的位置；
+（4）当行的主键要求必须将一行插入到某个已满的页中时，存储引擎会将该页分裂成两个页面来容纳该行，即造成“页分裂”，导致表占用更多的磁盘空间。
+（5）聚簇索引可能导致全表扫描变慢，尤其是行比较稀疏，或者由于页分裂导致数据存储不连续时；
+（6）非聚簇索引会更大，因为在非聚簇索引的叶子节点中包含了引用行的主键列；
+（7）非聚簇索引访问需要两次索引查找，而不是一次；（非聚簇索引的叶子节点保存的不是指向行的物理位置的指针，而是行的主键值），对于InnoDB，自适应哈希索引能够减少这样的重复工作。
+
+
+### InnoDB和MyISAM的数据分布对比
+InnoDB中聚簇索引的每一个叶子节点都包含了主键值、事务ID、用于事务和MVCC的回滚指针以及所有的剩余列。如果主键是一个列前缀索引，InnoDB也会包含完整的主键和剩下的其他列。
+（详略）
+
+使用InnoDB时应该尽可能地按主键顺序插入数据，并且尽可能地使用单调增加的聚簇键的值来插入新行。
+
+
+### InnoDB顺序主键的高并发问题
+在高并发情况下，在InnoDB中按主键顺序插入可能会导致明显的争用，当前主键的上界会成为“热点”，导致锁竞争。
+此外AUTO_INCREMENT锁机制（表锁）也会导致竞争。可以通过修改innodb_autoinc_lock_mode来优化：
+innodb_autoinc_lock_mode = 0 ("traditional" lock mode：全部使用表锁)
+innodb_autoinc_lock_mode = 1 (默认)("consecutive" lock mode：可`预判行数`时使用新方式，不可时使用表锁) 
+innodb_autoinc_lock_mode = 2 ("interleaved" lock mode：全部使用新方式，不安全，不适合replication)
+
+
+### 覆盖索引
+覆盖索引：索引包含，或者说覆盖所有需要查询的字段的值。
+MySQL只能使用B-Tree索引做覆盖索引。
+
+使用了覆盖索引的查询，在EXPLAIN的Extra列可以看到`Using index`的信息。
+
+### 使用索引排序
+只有当索引的列顺序和ORDER BY子句的顺序完全一致，并且所有列的排序方向都一样时，MySQL才能使用索引对结果做排序。
+如果查询关联了多张表，则只有当ORDER BY子句引用的字段全部为第一个表时，才能使用索引做排序。
+
+有一种情况下ORDER BY子句可以在不满足索引的最左前缀要求的情况下使用索引进行排序：前导列在where中被设置为常量。
+
+假设有如下索引：
+```
+PRIMARY KEY(rental_id),
+UNIQUE KEY rental_date (rental_date,inventory_id,customer_id),
+KEY idx_fk_inventory_id(inventory_id),
+KEY idx_fk_customer_id(customer_id),
+KEY idx_fk_staff_id(staff_id),
+```
+
+以下查询可以使用索引做排序：
+```
+ # 因为索引前导列在WHERE中被设置为常量
+...WHERE rental_date = '2005-05-25' ORDER BY inventory_id DESC;  
+
+ # ORDER BY使用的两列就是索引的最左前缀
+...WHERE rental_date > '2005-05-25' ORDER BY rental_date,inventory_id;  
+```
+
+以下查询不能使用索引做排序：
+```
+ # 排序方向不同
+...WHERE rental_date = '2005-05-25' ORDER BY inventory_id DESC,customer_id ASC; 
+
+ # 使用了不在索引中的列
+...WHERE rental_date = '2005-05-25' ORDER BY inventory_id,staff_id; 
+
+ # WHERE和ORDER BY中的列无法组合成索引的最左前缀
+...WHERE rental_date = '2005-05-25' ORDER BY customer_id; 
+
+ # 在索引列的第一列上使用的是范围条件，所以无法使用索引的其余列
+...WHERE rental_date > '2005-05-25' ORDER BY inventory_id,customer_id; 
+
+ # 在前置索引列上使用了范围查找
+...WHERE rental_date = '2005-05-25' AND inventory_id IN(1,2) ORDER BY customer_id; 
+```
+
+### 压缩索引
+MyISAM支持索引压缩，略。
+
+
+### 冗余和重复索引
+重复索引是指在相同的列上按照相同的顺序创建相同类型的索引。应该避免这样创建重复索引。
+
+### 未使用的索引
+使用pt-index-usage读取查询日志，统计各种索引的使用情况。
+
+### 索引和锁
+InnoDB只有在访问行的时候才会对其加锁，而索引能够减少InnoDB访问的行数，从而减少锁的数量。
+
+Extra中的"Using where"表示在存储引擎层未能实现过滤，InnoDB检索到数据并返回服务器层以后，MySQL服务器才能应用WHERE子句，这种情况下会对这些不满足WHERE条件的数据行也加锁（因为这种情况下存储引擎的操作是`从索引的开头开始`获取满足条件的记录）。
+
+即使使用了索引，InnoDB也可能锁住一些不需要的数据，如果不能使用索引查找和锁定行，MySQL会做全表扫描并锁住所有的行，而不管是不是需要。
+
+执行：
+```
+SET AUTOCOMMIT = 0;
+BEGIN;
+SELECT actor_id FROM sakila.actor WHERE actor_id < 5 AND actor_id <> 1 FOR UPDATE;
+```
+如上查询语句在存储引擎层的操作是“从索引的开头开始获取满足条件actor_id < 5的记录”，此时再执行如下语句，将被挂起：
+```
+SET AUTOCOMMIT = 0;
+BEGIN;
+SELECT actor_id FROM sakila.actor WHERE actor_id = 1 FOR UPDATE;
+```
+
+InnoDB在二级索引上使用共享锁（读锁），但在访问主键时使用排它锁（写锁）。
+
+
+### 案例学习
+（略）
+
+
+### 维护索引和表
+当碰到古怪的问题，比如不应该发生的主键冲突等等，可以通过CHECK TABLE来检查是否发生了表损坏。该命令通常能够找出大多数表和索引的错误。
+可以执行REPAIR TABLE来修复损坏的表。
+也可以通过一个不做任何数据操作的ALTER操作来重建表，以达到修复的目的：
+```
+ALTER TABLE innodb_tbl ENGINE=INNODB;
+```
+
+（详略）
+
+
+## 第6章 查询性能优化
+
+
+
+
+
+
+
+
+
 
 
 
