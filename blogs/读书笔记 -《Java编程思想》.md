@@ -367,40 +367,266 @@ abstract void f();
 
 
 # 第10章 内部类
+内部类可以访问其外围类的方法和字段，就像自己拥有它们似得（即无需使用任何前缀）。
+
+使用内部类的最主要原因是：每个内部类都能够独立地实现一个接口，所以无论外围类是否已经实现了某个接口，对内部类都没有影响（内部类使得多重继承的解决方案变得完整）。
+
+## .this
+如果想要在内部类中生成外部类对象的引用，需要在外部类名称上执行.this：
+```
+public class DotThis{
+  void f(){
+    System.out.println('Dot this !');
+  }
+    
+  public class Inner{
+    public DotThis outer(){
+      return DotThis.this;  // 返回外部类对象的引用
+    }
+  }
+
+  public Inner inner(){
+    return new Inner();
+  }
+
+  public static void main(String[] args){
+    DotThis dt = new DotThis();
+    DotThis.Inner dti = dt.inner();
+    dti.outer().f();
+  }
+}
+```
+
+## .new
+当想要创建某对象的外部类对象时，需要在该对象上执行.new操作：
+```
+public class DotNew{
+  public class Inner{
+    // ...
+  }
+
+  public static void main(String[] args){
+    DotNew dn = new DotNew();
+    DotNew.Inner dni = dn.new Inner();  // 不能使用dn.new DotNew.Inner()
+  }
+}
+```
+在拥有外部类对象之前不能创建内部类对象（因为内部类对象会连接到创建它的外部类对象上），但是如果创建的是静态内部类，就不需要对外部类对象的引用。
+
+## 内部类与向上转型
+将内部类定义为private，同时实现某个接口，并在外部类的公共方法中返回该内部类的对象（返回类型为接口），通过这种方式可以完全阻止任何依赖于类型的编码，并且完全隐藏了实现细节（因为不能访问内部类的名字，所以甚至不能向下转型）。
+
+## 局部内部类
+可以在一个方法里或者任意的作用域内定义内部类，这样创建的内部类属于定义它的作用域，在作用域外不可见。
+
+局部内部类不能有访问控制符，但是它可以访问当前代码块内的常量以及外围类的所有成员。
 
 
+## 匿名内部类
+```
+public class Parcel{
+  public Contents contents(){
+    return new Contents(){  // 创建了一个继承自Contents的匿名类的对象（自动向上转型）
+      private int i = 1;
+      public int value(){
+        return i;
+      }
+    };  // 分号（表达式结束）
+  }
+
+  public static void main(String[] args){
+    Parcel p = new Parcel();
+    Contents c = p.contents();
+  }
+}
+```
+
+如果在匿名内部类中引用了其外部定义的对象，编译器要求改对象必须是final的：
+```
+public class Parcel{
+  public Destination destination(final String dest){  // 因为这个参数会在匿名内部类中使用，所以必须为final（此处如果传递的参数仅供Destination类做构造函数参数使用，则无需为final）
+    return new Destination(){  
+      private String label = dest;
+      public String readLabel(){
+        return label;
+      }
+    };  // 分号（表达式结束）
+  }
+
+  public static void main(String[] args){
+    Parcel p = new Parcel();
+    Destination d = p.destination("test");
+  }
+}
+```
+
+选择使用局部内部类而非匿名内部类的常见原因有：
+1.需要一个已命名的构造器；
+2.需要重载构造器；
+3.需要不止一个该内部类的对象；
 
 
+## 嵌套类
+嵌套类即静态内部类，它与其外部类对象之间没有联系。
+普通内部类不能有static数据，但是嵌套类可以有。
+可以在接口中定义嵌套类。
+
+## 闭包与回调
+闭包是一个可调用的对象，它记录了一些来自于创建它的作用域的信息（内部类是面向对象的闭包）。
+
+## 内部类的继承与覆盖
+略
+
+## 内部类标识符
+内部类文件的名称为外部类名称+$+内部类名称：OuterClass$InnerClass.class
+对于匿名内部类编译器会简单地产生一个数字作为其标识符。
 
 
+# 第11章 持有对象
+如果使用ArrayList来添加属于不同类的对象，编译会通过，但是会给出警告。且在从ArrayList中取出元素时，必须进行向下转换，因为取出来的元素是Object类型。
+使用泛型方式ArrayList<T>，添加非指定类型对象时将会编译报错。且取出的元素无需进行向下转型。
 
 
+## 迭代器
+Java中的Iterator只能单向移动，可执行的操作包括：
+1.使用iterator()要求容器返回一个Iterator对象；
+2.使用next()获得序列中的下一个元素；
+3.使用hasNext()检查序列中是否还有元素；
+4.使用remove()将最近返回的元素删除（即next()返回的最后一个元素，意味着使用remove()之前必须先调用next()）；
+
+## ListIterator
+ListIterator继承自Iterator，只能用于各种List的访问，可以双向移动，可以返回前一个及后一个元素的索引，并且可以使用set()方法设置最近返回的元素。
+
+## Java容器类库
+总体上所有数据结构实现了`2个根接口`：Collection、Map，独立于这2个根接口之外还有`3个辅助根接口`：Iterator、Comparable、Comparator。
+
+Collection是所有列表类数据结构的接口，Map是所有映射类数据结构的接口，Iterator用于遍历一个序列，Collection可以生成这样的序列，而Map接口可以生成Collection（entrySet()、values()）。：
+所有实现Collection的数据结构都支持生成一个ListIterator接口，该接口是Iterator的子类。
+Map -----生成-----> Collection -----生成-----> Iterator
+                                                 ↑
+                       ...      ---生成-----> ListIterator
+
+Collection族的继承树：
+Collection接口
+    - List接口
+       - ArrayList（标记了RandomAccess接口）
+       -------------------- LinkedList（同时实现了List、Queue接口）
+    - Set接口                 |
+       - HashSet             |
+         - LinkedHashSet     |
+       - TreeSet             |
+    - Queue接口              |
+       - PriorityQueue      |
+       ----------------------
+除了TreeSet，其他Set都拥有与Collection完全一样的接口。
+以上未包括Queue的concurrent实现。
+新版本容器类库没有Stack，可以用LinkedList模拟（也没有Queue类）。
+
+Map族的继承树：
+Map接口
+    - HashMap
+        - LinkedHashMap
+    - TreeMap
+
+Comparable与Comparator可以互相生成。
+
+不应该再使用过时的Vector、Hashtable、Stack等容器类。
 
 
+# 第12章 通过异常处理错误
+异常处理把在正常执行过程中做什么事的代码和出了问题怎么办的代码相分离。
+
+所有标准异常类都有两个构造器：一个默认构造器和一个接收字符串作为参数的构造器：
+```
+throw new NullPointerException('x == null');
+```
+
+能够抛出任意类型的Throwable的对象，它是异常类型的根类。异常将在一个恰当的异常处理程序中得到解决，它的位置可能离异常被抛出的地方很远，也可能会跨越方法调用栈的许多层次。
+
+## 捕获异常
+异常处理程序必须紧跟在try块之后，当异常被抛出时异常处理机制将负责搜寻参数与异常类型相匹配的第一个处理程序（只有匹配的catch子句才能得到执行）：
+```
+try{
+    // ...
+}
+catch(Type1 e){
+    // ...
+}
+catch(Type2 e){
+    // ...
+}
+catch(Type3 e){
+    // ...
+}
+finall{
+    // 无论try块中是否抛出异常，这里都将执行，即使try中正常执行了return
+}
+```
+如果在try块中执行System.exit(0);finally中的代码不会被执行。
+finally块的语句在try或catch中的return语句执行之后返回之前执行且finally里的修改语句可能影响也可能不影响try或catch中return已经确定的返回值（取决于是值还是引用），若finally里也有return语句则覆盖try或catch中的return语句直接返回。
+在finall中执行return，异常将丢失（极其糟糕）。
+
+## 自定义异常
+对异常类来说，最重要的就是类名。
+```
+class SimpleException extends Exception{}
+
+public class Demo{
+  public void f() throws SimpleException{
+    throw new SimpleException();
+  }
+
+  public static void main(String[] args){
+    Demo demo = new Demo();
+    try{
+        demo.f();
+    }
+    catch(SimpleException e){
+        System.out.println('exception!');
+    }
+  }
+}
+```
+
+## 异常声明
+异常声明属于方法声明的一部分，描述了方法可能抛出的异常类型的列表：
+```
+void f() throws T1Exception,T2Exception{
+    // ...
+}
+```
+如果没有异常声明，就表示该方法不会抛出任何异常（除了RuntimeException，它们可以在没有异常声明的情况下被抛出）。
+如果方法里的代码产生了异常却没有进行处理，编译器会提示：要么处理这个异常，要么抛出这个异常。
+
+## 捕获所有异常
+```
+catch(Exception e){
+    // ...
+}
+``` 
+
+## 重新抛出异常
+```
+catch(Exception e){
+    // ...
+    throw e;
+}
+```
+
+## Java标准异常
+所有异常都继承自Throwable，共有两种类型：Error和Exception。Error用于表示编译时错误和系统错误，通常不需要关心。
+
+运行时异常的类型有很多，它们会被Java虚拟机自动抛出，所以无需在异常声明中罗列（这种异常属于编程错误）。如果RuntimeException没有被捕获而最终到达main()，那么在程序退出前将调用异常的printStackTrace()方法。
+
+## 异常的限制
+当覆盖方法的时候，只能抛出在基类方法的异常声明中列出的异常。
+
+异常限制对构造器不起作用：子类构造器可以抛出基类构造器中没有的异常，但是子类构造器的异常声明必须包含基类构造器的所有异常声明。
+
+派生类构造器不能捕获基类构造器抛出的异常。
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# 第13章 字符串
 
 
 
