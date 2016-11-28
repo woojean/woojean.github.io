@@ -628,6 +628,264 @@ catch(Exception e){
 
 # 第13章 字符串
  
+## String对象不可变
+String对象是不可变的，String类中每一个看起来会修改String值的方法实际上都是创建了一个全新的String对象，并返回指向新的对象的引用。
+
+Java不允许程序员重载操作符，但是自身重载了两个用于连接String对象的操作符`=`和`+=`，当使用这两个操作符连接字符串时，编译器会自动地进行优化，最终使用StringBuilder的append()方法来构建新的字符串对象。但是当在循环体中使用+连接字符串时，实际优化出来的代码会在循环体内创建StringBuilder，意味着每循环一次就会创建一个StringBuilder对象。所以，当为一个类编写toString()方法时，如果字符串的操作比较简单，可以信赖编译器，但是如果要在toString()方法中使用循环，则最好自己创建一个StringBuilder对象。
+
+与StringBuilder对应的线程安全的工具类是StringBuffer。
+
+## 打印对象内存地址
+如果想打印对象的内存地址，应该调用Object的toString()方法（即调用super.toString()），而不应该使用this，否则可能发生递归调用：因为编译器在遇到`字符串+对象`的时候，会调用对象的toString()方法：
+```
+public class InfiniteRecursion{
+  public String toString(){
+    // 会发生自动类型转换，进而发生递归，最终产生异常
+    return "InfiniteRecursion address: " + this + "\n";
+  }
+}
+```
+
+## String类的API
+（略）
+
+## 字符串格式化
+System.out.println("Row 1:[" + x + " " + y + "]");  // old way 
+System.out.format("Row 1:[%d %f]\n", x, y);
+System.out.printf("Row 1:[%d %f]\n", x, y);
+
+// 使用java.util.Formatter类
+Formatter f = new Formatter(System.out);
+f.format("Row 1:[%d %f]\n", x, y);
+（详略）
+
+// 使用String.format()对象
+String s = String.format("Row 1:[%d %f]\n", x, y);
+实际在String.format()内部也是通过创建Formatter类对象来实现格式化。
+
+## 正则表达式
+（略）
+
+
+# 第14章 类型信息
+Java主要有两种在运行时识别对象和类信息的方式：RTTI和反射。
+
+## RTTI
+使用RTTI可以查询某个基类引用所指向的对象的确切类型。每当编译一个新类，就会产生一个Class对象（属于Class类，被保存在类的.class文件中）。所有类都是在对其第一次使用时（第一次引用类的静态成员，构造函数也是静态成员）动态加载到JVM中。类加载器会首先检查当前被引用类的Class对象是否已经被加载，如果没有，则会根据类名查找对应的.class文件（其中包含了Class对象），并加载Class对象。`一旦某个类的Class对象被载入内存，它就被用来创建这个类的所有对象`。
+
+可以调用`Class.forName()`获取一个指定类名的类的Class对象的引用：
+```
+Class.forName("ClassName");
+```
+如果该类还没有被加载过，就加载它，在加载的过程中该类的static子句会被执行。
+
+如果当前已经有了一个目标类的对象，则可以通过调用`getClass()`方法来获取Class对象的引用，这个方法定义在Object中。
+
+Class类的API：
+getName();           // 类的完全限定名（含包名）
+getSimpleName();     // 简单类名
+getCanonicalName();  // 和getName()一样
+getInterfaces();     
+getSuperclass();     // 返回直接基类
+newInstance();       // 使用newInstance()来创建对象的类必须带有默认的构造器
+
+## 类字面常量
+可以不使用forName()方法，而直接使用类字面常量来获取对Class对象的引用：
+```
+ClassName.class;
+```
+使用这种方式的好处是在编译时就能够受到检查，因此不需要置于try语句块中。类字面常量还可以应用于接口、数组以及基本数据类型。
+
+对于基本数据类型的包装器类，有一个TYPE字段，指向对应的基本数据类型的Class对象。即：
+int.class等价于Integer.TYPE
+
+为了使用类而做的准备工作实际包含三个步骤：
+1.加载：类加载器查找字节码，并从字节码中创建一个Class对象；
+2.链接：验证类中的字节码，为静态域分配存储空间，解析这个类对其他类的所有引用；
+3.初始化：初始化超类，执行静态初始化器和静态初始化块；
+
+注意：当使用.class来创建对Class对象的引用时，不会自动地初始化该Class对象，而Class.forName()立即就进行了初始化。
+
+如果一个static final域被用“字面值常量”初始化(即编译期常量)，那么这个域无需对类进行初始化（意味着执行静态块）就可以被读取。否则仍然需要初始化。
+对于非final的static域，总是要求在它被读取之前先进行链接和初始化。
+
+## 泛化的Class引用
+普通的类引用可以被重新赋值为指向任何其他的Class对象，而泛型类引用只能赋值为指向其声明的类型，所以通过使用泛型语法可以让编译器强制执行额外的类型检查。
+```
+Class<Integer> genericIntClass = int.class;
+genericIntClass = Integer.class; // 与int.class一样
+genericIntClass = double.class;  // 非法
+```
+
+注意泛型对子类型的限制，比如虽然Integer继承自Number，但是如下语句无法执行：
+```
+Class<Number> genericNumberClass = int.class;
+```
+因为Integer Class对象不是Number Class对象的子类。
+
+泛型支持通配符：
+```
+Class<?> intClass = int.class;  // 与非泛型等效，但是更明确
+intClass = double.class;
+```
+
+指定为特定类的子类：
+```
+Class<? extends Number> bounded = int.class;
+bounded = double.class;  // OK
+```
+
+指定为特定类的超类：
+```
+Class<FancyToy> ftClass = FancyToy.class;
+Class<? super FancyToy> up = ftClass.getSuperclass();
+Object obj = up.newInstance();  // 将返回Object（因为无法确定是哪一个基类）
+```
+
+可以使用cast()方法进行引用转型：
+```
+class Building {}
+class House extends Building {}
+...
+Building b = new House();
+Class<House> houseType = House.class;
+House h = houseType.cast(b);
+h = (House)b;  // 效果一样
+```
+
+## instanceof
+```
+if( x instanceof Dog){  // 只能与类型做比较，而不能与Class对象做比较
+  ((Dog)x).bark();
+}
+```
+
+## Class.isInstance()
+```
+String s = new String("abcd");
+System.out.println(String.class.isInstance(s)); // true
+```
+
+使用instanceof或Class.isInstance()进行判断时，会考虑类的继承关系，而使用Class对象进行比较时，没有考虑继承关系（父类型不等于子类型）。
+
+
+## 反射
+当通过反射与一个未知类型的对象打交道时，JVM只是简单地检查这个对象，看它属于哪个类（和RTTI一样），然后加载那个类的Class对象（所以JVM必须能够获取该类的.class文件）。反射和RTTI之间真正的区别在于：对于RTTI，编译器在编译时打开和检查.class文件，而对于反射机制，.class文件在编译时是不可获取的，所以在运行时打开和检查.class文件。
+
+```
+import java.lang.reflect.*;
+
+Class<?> c = Class.forName("...");
+Method[] methods = c.getMethods();
+Constructor[] ctors = c.getConstructors();
+...
+```
+
+## 空对象
+空对象是用来替代null的一种解决方案，空对象可以响应实际对象可以响应的所有消息（仍需要某种方式去测试其是否为空）。
+
+## 绕过访问权限的操作
+通过反射可以到达并调用所有方法，包括private方法（在Method对象上setAccessible(true)）。
+
+对于编译后发布的代码，可以执行：
+```
+javap -private C
+```
+列出包括private成员在内的所有成员（包括私有内部类）。
+不过，通过反射修改final域实际是无效的（也不会抛出异常）。
+
+
+# 第15章 泛型
+泛型实现了`类型的参数化`。
+```
+public class Holder<T>{
+  private T a;
+  public Holder(T a){
+    this.a = a;
+  }
+
+  public void set(T a){
+    this.a = a;
+  }
+
+  public T get(){
+    return a;
+  }
+
+  public static void main(String[] args){
+    Holder<Automobile> h = new Holder<Automobile>(new Automobile());
+    Automobile a = h.get();  // 无需cast，取出来的类型就是正确的
+    h.set(1); // error
+  }
+}
+```
+
+## 泛型接口
+```
+public interface Generator<T>{
+  T next();
+}
+```
+（略）
+
+## 泛型方法
+可以在类中定义参数化方法，且这个方法所在的类可以是泛型类，也可以不是泛型类。
+```
+public class GenericMethods{
+  public <T> void f(T x){   // 定义泛型方法时，泛型参数列表置于返回类型之前
+    System.out.println(x.getClass().getName());
+  }
+
+  public static void main(String[] args){
+    GenericMethods gm = new GenericMethods();
+    gm.f("");   // java.lang
+    gm.f(1);
+    gm.f(1.0);
+  }
+}
+```
+
+static方法无法访问其所在泛型类的类型参数，所以如果static方法需要使用泛型能力，必须将其定义为泛型方法。
+
+## 类型参数推断
+当使用泛型类时，必须在创建对象的时候指定类型参数的值，而使用泛型方法时通常不必指明参数类型，编译器会自动找出具体的类型。所以，可以像调用普通方法一样调用泛型方法（就好像方法被多次重载过）。如果用基本类型调用泛型方法，自动打包机制会介入。
+
+如果将一个泛型方法调用的结果作为参数传递给另一个泛型方法，这时编译器不会执行类型推断，编译器会认为调用泛型方法后其返回值被赋给了一个Object类型的变量。
+
+在调用泛型方法时可以显式地指明类型：
+```
+f(New.<Person, List<Pet>>map());
+```
+
+## 泛型方法与可变参数
+泛型方法可以结合可变参数使用：
+```
+public static <T>  List<T> makeList(T... args){
+  ...
+}
+``` 
+
+## 擦除
+在泛型代码内部无法获得任何有关泛型参数类型的信息。
+Java泛型使用擦除来实现，即在使用泛型时，任何具体的类型信息都被擦除了，因此List<String>和List<Integer>在运行时实际上是相同的类型：都被擦除成它们原生的类型，即List。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
