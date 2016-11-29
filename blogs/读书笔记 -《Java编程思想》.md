@@ -847,6 +847,8 @@ public class GenericMethods{
 
 static方法无法访问其所在泛型类的类型参数，所以如果static方法需要使用泛型能力，必须将其定义为泛型方法。
 
+返回类型为泛型参数的方法，实际将返回确切的类型。
+
 ## 类型参数推断
 当使用泛型类时，必须在创建对象的时候指定类型参数的值，而使用泛型方法时通常不必指明参数类型，编译器会自动找出具体的类型。所以，可以像调用普通方法一样调用泛型方法（就好像方法被多次重载过）。如果用基本类型调用泛型方法，自动打包机制会介入。
 
@@ -866,18 +868,224 @@ public static <T>  List<T> makeList(T... args){
 ``` 
 
 ## 擦除
-在泛型代码内部无法获得任何有关泛型参数类型的信息。
+`在泛型代码内部无法获得任何有关泛型参数类型的信息`。擦除丢失了在泛型代码中执行某些操作的能力，任何在运行时需要知道确切类型信息的操作都无法进行。
+```
+public class Erased<T>{
+  private final int SIZE = 100;
+  public static void f(Object arg){
+    if(arg instanceof T){             // error
+      // ...
+    }
+
+    T var = new T();                  // error
+
+    T[] array = new T[SIZE];          // error
+
+    T[] array = (T)new Object[SIZE];  // Unchecked warning
+  }
+}
+```
+
 Java泛型使用擦除来实现，即在使用泛型时，任何具体的类型信息都被擦除了，因此List<String>和List<Integer>在运行时实际上是相同的类型：都被擦除成它们原生的类型，即List。
 
+`泛型类型参数将擦除到它的第一个边界`（边界即使用extends对类型参数的范围做限制，可能会有多个边界），如下的边界：
+```
+<T extends HasF>
+```
+T将擦除到HasF，就好像在类的声明中用HasF替换了T一样。
+
+Java的泛型之所以基于擦除来实现，是因为要兼容旧版本（Java1.0中没有泛型功能），因此泛型类型只有在静态类型检查期间才出现，在此之后程序中的所有泛型类型都将被擦除并替换为它们的非泛型上界。
+
+有时必须通过引入类型标签来对擦除进行补偿，即显式地传递类型的Class对象以便在类型表达式中使用。
+```
+ClassTypeCapture<Building> ctt = new ClassTypeCapture<Building>(Building.class);
+```
+
+## 泛型数组
+不能创建泛型数组，一般在任何想要创建泛型数组的地方都使用ArrayList。
+
+## 边界
+Java通过重用关键字extends实现在泛型参数类型上设置限制条件（可以是类或接口），从而实现强制规定泛型可以应用的类型。
+
+默认extends了Object，即
+<T>等价于<T extends Object>
+
+## 通配符
+Java中的数组是协变的，也是不安全的：
+```
+Fruit[] fruit = new Apple[10];  // 数组是协变的，可以向上转型
+fruit[0] = new Apple();   // OK
+fruit[1] = new Fruit(); // 编译不会报错，但运行时会报错，因为数组实际类型是Apple 
+```
+
+通配符的使用可以对泛型参数做出某些限制，使代码更安全。
+
+通配符引用的是明确的类型（尽管其形式上类似普通边界可以接受一系列不同的类型）。
+```
+List<? extends Fruit> flist = new ArrayList<Apple>(); 
+flist.add(new Apple());   // 编译错误
+flist.add(new Fruit());   // 编译错误
+flist.add(new Object());  // 编译错误
+flist.add(null);   // 唯一可以添加的是 null
+```
+需要注意的是，flist却可以调用contains和indexOf方法，因为在ArrayList的实现中，add()接受一个泛型类型作为参数，但是contains和indexOf接受一个Object类型的参数。
 
 
+## 无边界通配符
+无边界通配符的使用形式是一个单独的问号：List<?>，也就是没有任何限定。
+List<?> list 表示list是持有某种特定类型的List，但是不知道具体是哪种类型。`因为并不知道实际是哪种类型，所以不能添加任何类型`，这是不安全的。
+
+## 逆变
+可以使用超类型通配符来定义泛型参数的下界：
+<? super MyClass>甚至<? super T>，
+但是不能这样定义：
+<T super MyClass>
+
+## 泛型的问题
+任何基本类型都不能作为类型参数，因此不能创建类似ArrayList<int>的变量。
+
+由于擦除的原因，一个类不能实现同一个泛型接口的两种变体。
+
+使用带有泛型类型参数的转型或instanceof不会有任何效果。
+
+由于擦除的原因，仅泛型参数名不同的重载方法将产生相同的类型签名。
+
+由于擦除的原因，catch语句不能捕获泛型类型的异常（其实泛型类也不能直接或间接地继承Throwable）。
+
+## 自限定的类型
+
+不能直接继承一个泛型参数，但是可以继承在其自己的定义中使用了这个泛型参数的类：
+```
+class GenericType<T>{}
+class CuriouslyRecurringGeneric 
+  extends GenericType<CuriouslyRecurringGeneric>{}
+```
+
+泛型自限定就是要求在继承关系中将正在定义的类当做参数传递给基类：
+```
+class A extends SelfBounded<A>{}
+```
+自限定可以保证类型参数与正在被定义的类相同。
+自限定类型的价值在于它们可以产生协变参数类型：方法参数类型会随子类而变化。
+
+## 混型
+混型即混合多个类的能力，以产生一个可以表示混型中所有类型的类。在C++中可以使用多重继承实现混型，不过更好的方式是继承其类型参数的类。
+在Java中常见的做法是使用接口来产生混型效果（装饰器模式）。
+
+## 潜在类型机制
+“如果它走起来像鸭子，并且叫起来也像鸭子，那么就可以把它当做鸭子对待”
+（策略模式，略）
 
 
+# 第16章 数组
+数组与其他容器的主要区别在三个方面：效率（更高）、类型（固定）、能够保存基本类型。
+（基础知识，略）
+
+## Arrays类
+java.util.Arrays类提供了一套用于数组操作的静态方法：
+```
+equals()  // 总数、对应位置元素都要相等
+fill()    
+sort()
+binarySearch()  // 用于在已经排序的数组中查找元素
+toString()
+hashCode()
+asList()    // 接受任意的序列或数组作为其参数，并将其转变为List容器
+```
+
+## 复制数组
+使用System.arraycopy复制数组要比用for快很多：
+```
+System.arraycopy(arr1,0,arr2,0,arr1.length); 
+```
+
+## 比较与排序
+使用内置的排序方法就可以对任意的基本类型的数组进行排序。也可以对任意的对象数组进行排序，只要该对象实现了Compareable接口或具有相关联的Comparator。
 
 
+# 第17章 容器深入研究
+
+## 填充容器
+使用`Collections类`（不是Collection接口）的静态方法：
+```
+List<StringAddress> list = new ArrayList<StringAddress>(Collections.nCopies(4,new StringAddress("hello")));  // 4个指向同一个对象的引用
+
+Collections.fill(list,new StringAddress("world!")); // 4个指向同一个对象的引用
+```
+所有Collection子类型都有一个接收另一个Collection对象的构造器，用所接收的Collection对象中的元素来填充新的容器。
+
+享元模式，略。
+
+Collection的功能方法，略。
+
+List的功能方法，略。
+
+## Set对元素的要求
+Set：元素必须实现equals()方法（因为需要唯一），Set接口不保证元素次序；
+HashSet：元素必须定义hashCode()；
+TreeSet：有次序的Set，元素必须实现Comparable接口；
+LinkedHashSet：使用链表维护元素（插入顺序），元素必须定义hashCode()方法；
+
+虽然hashCode()只有在当前类元素被置于HashSet或者LinkedHashSet时才是必须的，但是对于良好的编程风格而言，应该在覆盖equals()方法时总是同时覆盖hashCode()方法。
+
+## 队列
+队列在Java中仅有的两个实现是LinkedList和PriorityQueue，它们的差异在于排序行为而非性能。
+
+LinkedList中包含支持双向队列的方法。
+
+## Map
+标准Java类库中实现的Map有：
+HashMap：插入和查询的开销是固定的；
+LinkedHashMap：迭代遍历时，取得键值对的顺序就是其插入顺序或者最近最少使用次序；
+TreeMap：基于红黑树，是唯一带有subMap()方法的Map，是目前唯一实现的SortedMap；
+WeakHashMap：如果Map之外没有引用指向某个键，则此键可以被垃圾回收器回收；
+ConcurrentHashMap：线程安全的Map，无需同步加锁；
+IdentityHashMap：使用==代替equals()对键进行比较；
+
+hashCode()是Object中定义的方法，返回代表对象的整数值。
+
+## 正确的equals()
+HashMap使用equals()判断当前的键是否与表中存在的键相同，正确的equal()方法必须同时满足下列5个条件：
+1.自反性：x.equals(x)返回true；
+2.对称性：如果y.equals(x)返回true，则x.equals(y)也返回true
+3.传递性：如果x.equals(y)和y.equals(z)返回true，则x.equals(z)也返回true
+4.一致性：如果对象中用于等价比较的信息没有改变，那么无论调用x.equals(y)多少次，返回的结果应该保持一致；
+5.对任何不是null的x，x.equals(null)一定返回false；
+
+默认的Object.equals()只是比较对象的地址，`如果要使用自己的类作为HashMap的键，必须同时重载hashCode()和equals()`，否则无法正确使用各种散列结构。
+
+实用的hashCode()必须速度快，并且有意义：基于对象的内容生成散列码，应该更关注生成速度而不是一致性（散列码不必是独一无二的），但是通过hashCode()和equals()必须能够完全确定对象的身份。好的hashCode()应该产生分布均匀的散列码。
+
+例子，略。
+
+## HashMap的性能因子
+可以通过为HashMap设置不同的性能因子来提高其性能：
+1.容量
+2.初始容量
+3.尺寸：当前存储项数
+4.负载因子：尺寸/容量，负载因子小的表产生冲突的可能性小。当负载情况达到负载因子水平时，容器将自动增加其容量：使容量大致加倍，并重新将现有的对象分布到新的位置。默认的负载因子是0.75
+```
+HashMap(int initialCapacity, float loadFactor);
+```
+
+## ConcurrentModificationException
+ConcurrentHashMap、CopyOnWriteArrayList、CopyOnWriteArraySet都使用了可以避免ConcurrentModificationException的技术。
+
+## WeakHashMap
+java.lang.ref中包含了一组类用来为垃圾回收提供更大的灵活性：SoftReference、WeakReference、PhantomReference，它们都继承自Reference类。当垃圾回收器正在考察的对象只能通过某个Reference对象才能获得时（指对象被Reference对象所代理，且没有其他的引用指向该对象，是否要保留仅仅取决于当前的Reference对象），这些不同的Reference类为垃圾回收器提供了不同级别的间接性指示。
+
+不同的Reference派生类对应不同的“可获得性”级别（由强到弱）：
+SoftReference：用以实现内存敏感的高速缓存；
+WeakReference：用以实现“规范映射”而设计，不妨碍垃圾回收器回收映射（Map）的键或值；
+PhantomReference：用以调度回收前的清理工作，比Java终止机制更灵活。
+
+WeakHashMap用来保存WeakReference，允许垃圾回收器自动清理键和值。对于向WeakHashMap添加键和值的操作，会被自动用WeakReference包装。
+
+## 已废弃的容器
+Vector、Enumeration、Hashtable、Stack、BitSet
 
 
-
+# 第18章 Java I/O系统
 
 
 
