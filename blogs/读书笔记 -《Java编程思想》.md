@@ -1087,6 +1087,410 @@ Vector、Enumeration、Hashtable、Stack、BitSet
 
 # 第18章 Java I/O系统
 
+## File类
+（略）
+
+## 输入和输出
+很少使用单一的类来创建流对象，通常会叠合多个流对象来提供所期望的功能（装饰器模式）。
+
+## InputStream和OutputStream
+每一种数据源都有相应的`InputStream`子类，如FileInputStream、ByteArrayInputStream、StringBufferInputStream、PipedInputStream...
+
+同样的，每一种输出类型也有相应的`OutputStream`子类。
+
+## FilterInputStream和FilterOutputStream
+FilterInputStream和FilterOutputStream是用来`提供装饰器类接口`以控制特定输入流和输出流的两个类。
+
+FilterInputStream类型：
+1.DataInputStream：与DataOutputStream搭配使用，可以从流读取基本数据类型；
+2.BufferedInputStream：使用缓冲区；
+3.LineNumberInputStream：跟踪输入流中的行号，可调用getLineNumber()和setLineNumber(int)；
+4.PushbackInputStream：具有能弹出一个字节的缓冲区，因此可以将读到的最后一个字符回退；
+
+FilterOutputStream类型：
+1.DataOutputStream：可以按照可移植方式向流中写入基本类型数据；
+2.PrintStream：用于产生格式化输出；
+3.BufferedOutputStream：使用缓冲区；
+
+## Reader和Writer
+InputStream和OutputStream的优势在于处理面向字节的I/O，Reader和Writer则提供兼容Unicode与面向字符的I/O功能。
+
+当需要把来自字节层次结构中的类和字符层次结构中的类结合起来使用时，需要使用适配器类，如InputStreamReader可以把InputStream转换为Reader，OutputStreamWriter可以把OutputStream转换为Writer。
+
+## RandomAccessFile
+RandomAccessFile适用于由大小已知的记录组成的文件（可以调用seek()方法）。RandomAccessFile是一个独立的类（从Object派生而来）。
+
+## 缓冲方式读取文件
+```
+public static String readFuc(String filename) throws IOException{
+  BufferedReader in = new BufferedReader(new FileReader(filename));
+  String s;
+  StringBuilder sb = new StringBuilder();
+  while( (s = in.readLine()) != null ){
+    sb.append(s+ "\n");  // 需要加上换行符，因为readLine()会删除读出来的换行符
+  }
+  in.close();
+  return sb.toString();
+}
+```
+
+## 从内存输入
+```
+StringReader in = new StringReader(readFuc(filename));  
+int c;
+while((c = in.read()) != -1){  // read()以int形式返回下一个字节
+  System.out.print((char)c);
+}
+```
+
+## 格式化的内存输入
+```
+DataInputStream in = new DataInputStream(
+  new ByteArrayInputStream(
+    readFuc(filename).getBytes()));
+while(in.avaiable() != 0){ 
+  System.out.print((char)in.readByte());
+}
+```
+DataInputStream的avaiable()方法返回在没有阻塞的情况下还能读取的字节数，对于静态文件，等于文件大小减去已读取的字节数，但是对于其他类型的流可能不是这样。
+
+
+## 输出文件
+```
+BufferedReader in = new BufferedReader(
+  new StringReader(readFuc(filename1)));
+PrintWriter out = new PrintWriter(
+  new BufferedWriter(new FileWriter(filename2)));
+int lineCount = 1;
+String s;
+while( (s = in.readLine()) != null ){
+  out.println( lineCount++ + ":" +s );  // 写
+}
+out.close();  // 会清空缓存
+```
+PrintWriter提供格式化输出功能，这样输出的内容可以当做普通文本来处理。
+
+## 使用PrinterWriter输出文件的快捷方式
+```
+BufferedReader in = new BufferedReader(
+  new StringReader(readFuc(filename1)));
+PrintWriter out = new PrintWriter(filename2);  // 接受文件名的构造函数
+int lineCount = 1;
+String s;
+while( (s = in.readLine()) != null ){
+  out.println(lineCount++ + ":" +s );
+}
+out.close();
+```
+
+## 使用DataInputStream和DataOutputStream存储和恢复数据
+如果使用DataOutputStream写入数据，Java保证可以使用DataInputStream准确地读取数据（即使读和写是在不同的平台）。
+```
+DataOutputStream out = new DataOutputStream(
+  new BufferedOutputStream(
+    new FileOutputStream("data.txt")));
+out.writeDouble(3.14);
+out.writeUTF("abcde");
+out.writeDouble();
+out.write(1.41);
+out.writeUTF("hijkl");
+out.close();
+
+DataInputStream in = new DataInputStream(
+  new BufferedInputStream(
+    new FileInputStream("data.txt")));
+System.out.println(in.readDouble());
+System.out.println(in.readUTF());
+System.out.println(in.readDouble());
+System.out.println(in.readUTF());
+```
+对于字符串，能够恢复它的唯一可靠做法是使用UTF-8编码（使用writeUTF()和readUTF()），UTF-8是多字节格式，即其编码长度根据实际使用的字符集会有所变化。ASCII使用一个字节，非ASCII字符使用两到三个字节。字符串的长度存储在UTF-8字符串的前两个字节中。
+但是，writeUTF()和readUTF()使用的是Java自定义的UTF-8变体，因此`如果用非Java程序读取用writeUTF()写的字符串时，必须编写一些特殊代码才能正确读取字符串`。
+
+## 随机访问文件
+使用RandomAccessFile时，必须知道文件排版才能正确操作它。
+```
+RandomAccessFile rf1 = new RandomAccessFile(filename,"rw");
+for( int i = 0; i < 7 ; i++ ){
+  rf1.writeDouble(i*1.414);
+}
+rf1.writeUTF("The end of the file");
+rf1.close();
+
+RandomAccessFile rf2 = new RandomAccessFile(filename,"r");
+for( int i = 0; i < 7; i++){
+  System.out.println("value "+ i + ":" + rf2.readDouble());
+}
+System.out.println(rf2.readUTF());
+rf2.close();
+
+RandomAccessFile rf3 = new RandomAccessFile(filename,"rw");
+rf3.seek(5*8);  // 定位写入点，修改第5个双精度值
+rf3.writeDouble(47.001);
+rf3.close();
+```
+
+## 标准I/O
+标准I/O的意义在于：可以很容易地把程序串联起来，一个程序的标准输出可以成为另一个程序的标准输入。
+Java提供System.in、System.out、System.err用于标准I/O。
+
+System.out和System.err实际是被包装过的printStream对象，但是System.in却是一个没有被包装过的InputStream（意味着在读取之前必须对其进行包装）。
+
+## 回显输入的每一行
+```
+BufferedReader stdin = new BufferedReader(
+  new InputStreamReader(System.in));
+String s;
+while( (s = stdin.readLine()) != null && s.length()! = 0 ){
+  System.out.println(s);
+}
+```
+
+## 标准I/O重定向
+```
+PrintStream console = System.out;  // 存储标准输出的引用
+BufferedInputStream in = new BufferedInputStream(
+  new FileInputStream("redirect.java"));
+PrintStream out = new PrintStream(
+  new BufferedOutputStream(
+    new FileOutputStream("test.out")));
+
+System.setIn(in);
+System.setOut(out);
+System.setErr(out);
+
+BufferedReader br = new BufferedReader(
+  new InputStreamReader(System.in));
+String s;
+while( (s = br.readLine()) != null ){
+  System.out.println(s);
+}
+out.close();
+System.setOut(console);  // 恢复标准输出
+```
+
+## 进程控制
+java.lang.ProcessBuilder，执行命令行。
+
+## 新I/O（nio）
+新I/O类库的目的在于提高速度，实际上旧的I/O包已经被使用nio重新实现了。速度的提高来自于所使用的结构更接近于操作系统执行I/O的方式：通道和缓冲器。唯一与通道交互的缓冲器是ByteBuffer。ByteBuffer具有从其所容纳的字节中产生出各种不同基本类型值的方法。
+（详略）
+
+## 视图缓冲器
+视图缓冲器支持通过某种特定的基本数据类型的视窗(各种类型的Buffer，如CharBuffer)查看其底层的ByteBuffer，ByteBuffer依然是实际存储数据的地方，对视图的任何修改都会映射成为对ByteBuffer中数据的修改。
+```
+ByteBuffer bb = ByteBuffer.allocate(BSIZE);
+IntBuffer ib = bb.asIntBuffer();
+ib.put(new int[]{1,2,3,4,5});
+...
+
+```
+
+File System/Network
+  -> FileInputStream/Socket
+    getChannel() -> FileChannel
+      read(ByteBuffer) -> ByteBuffer
+        asIntBuffer() -> IntBuffer
+          array()/get(int[]) -> int[]
+
+int[] -> wrap(int[]) -> IntBuffer
+
+ByteBuffer以大端方式（高位优先）存储多字节数据。
+
+## 内存映射文件
+内存映射文件允许创建和修改那些因为太大而不能放入内存的文件，通过使用内存映射文件可以假定整个文件都放在内存中，而且可以完全把它当作非常大的数组来访问。
+```
+static int LENGTH = 0x8FFFFFF; // 128MB
+MappedByteBuffer out = new RandomAccessFile("test.dat","rw")
+  .getChannel()
+  .map(FileChannel.MapMode.READ_WRITE, 0, LENGTH);
+
+for(int i = 0; i < LENGTH; i++){
+  out.put((byte)'x');
+}
+
+for(int i = LENGTH/2; i < LENGTH/2 + 6; i++){
+  printnb((char)out.get(i));
+}
+```
+映射文件的所有输出必须使用RandomAccessFile，而不能使用FileOutputStream。
+
+## 文件加锁
+文件锁对其他的操作系统进程是可见的，因为Java的文件加锁直接映射到了本地操作系统的加锁工具。
+```
+FileOutputStream fos = new FileOutputStream("file.txt");
+FileLock fl = fos.getChannel().tryLock();
+if( fl != null){
+  // 已加锁
+  ...
+  fl.release();  // 释放锁
+}
+fos.close();
+```
+SocketChannel、DatagramChannel、ServerSocketChannel不需要加锁，因为它们是从单进程实体继承而来，通常不会在两个进程之间共享网络socket。
+
+tryLock()是非阻塞的，lock()是阻塞的。
+
+也可以只对文件的一部分上锁：
+```
+lock(long position, long size, boolean shared);
+```
+
+## 对映射文件的部分加锁
+（略）
+
+## 压缩
+GZIPOutputStream、GZIPInputStream;
+ZipOutputStream、ZipInputStream;
+（略）
+
+## Java档案文件
+jar文件实际是Zip文件。
+一个jar文件由一组压缩文件构成，同时还有一张描述了所有这些文件的文件清单。
+
+生成jar文件：
+```
+jar [options] destination [manifest] inputfiles
+
+jar cmf myJarFile.jar myManifestFile.mf *.class
+```
+不能对已有的jar文件进行添加或更新操作（区别于zip）。
+
+
+## 对象序列化
+只要对象实现了Serializable接口（一个标记接口），对象的序列化处理就会非常简单。要序列化一个对象首先要创建一个OutputStream对象，然后将其封装在一个ObjectOutputStream对象内，之后只要调用writeObject()即可将对象序列化，并将其发送给OutputStream（对象序列化是基于字节的，因此要使用InputStream和OutputStream继承层次结构）。
+
+对象序列化能够追踪对象内所包含的所有引用，并保存那些对象，接着对对象内包含的每个这样的引用进行追踪（Java序列化机制用优化的算法自动维护整个对象网）。
+
+可以通过实现Externalizable接口（代替Serializable）来对序列化过程进行控制，该接口包含两个方法writeExternal()和readExternal()，这两个方法会在序列化和反序列化还原的过程中被自动调用。
+
+对于Serializable对象，完全以其存储的二进制位为基础来反序列化对象，而不会调用构造器。但是对于Externalizable对象，只会调用默认构造器，然后调用readExternal()。
+```
+import java.io.*;
+import static net.mindview.util.Print.*;
+
+public class Blip3 implements Externalizable {
+  private int i;
+  private String s; // No initialization
+
+  public Blip3() {
+    print("Blip3 Constructor"); // s, i not initialized
+  }
+  public Blip3(String x, int a) {
+    print("Blip3(String x, int a)");
+    s = x;
+    i = a;
+    // s & i initialized only in non-default constructor.
+  }
+  public String toString() { return s + i; }
+  public void writeExternal(ObjectOutput out) throws IOException {
+    print("Blip3.writeExternal");
+    // You must do this:
+    out.writeObject(s);
+    out.writeInt(i);
+  }
+  public void readExternal(ObjectInput in) 
+    throws IOException, ClassNotFoundException {
+    print("Blip3.readExternal");
+    // You must do this:
+    s = (String)in.readObject();
+    i = in.readInt();
+  }
+  public static void main(String[] args)
+  throws IOException, ClassNotFoundException {
+    print("Constructing objects:");
+    Blip3 b3 = new Blip3("A String ", 47);
+    print(b3);
+
+    // 序列化
+    ObjectOutputStream o = new ObjectOutputStream(
+      new FileOutputStream("Blip3.out"));
+    print("Saving object:");
+    o.writeObject(b3);
+    o.close();
+
+    // 反序列化
+    ObjectInputStream in = new ObjectInputStream(
+      new FileInputStream("Blip3.out"));
+    print("Recovering b3:");
+    b3 = (Blip3)in.readObject();
+    print(b3);
+  }
+} /* Output:
+Constructing objects:
+Blip3(String x, int a)
+A String 47
+Saving object:
+Blip3.writeExternal
+Recovering b3:
+Blip3 Constructor
+Blip3.readExternal
+A String 47
+*///:~
+```
+
+## transient
+有时不希望序列化对象的敏感部分（比如子对象），这可以通过将类实现为Externalizable（这样可以阻止自动序列化行为），然后在writeExternal()内部只对所需部分进行显式的序列化。
+如果只使用Serializable，为了能够予以控制，可以使用transient关键字逐个字段地关闭序列化。
+```
+public class Logon implements Serializable {
+  private Date date = new Date();
+  private String username;
+  private transient String password;  // 不会被自动保存到磁盘，反序列化时也不会尝试去恢复
+  public Logon(String name, String pwd) {
+    username = name;
+    password = pwd;
+  }
+  public String toString() {
+    return "logon info: \n   username: " + username +
+      "\n   date: " + date + "\n   password: " + password;
+  }
+  public static void main(String[] args) throws Exception {
+    Logon a = new Logon("Hulk", "myLittlePony");
+    print("logon a = " + a);
+    ObjectOutputStream o = new ObjectOutputStream(
+      new FileOutputStream("Logon.out"));
+    o.writeObject(a);
+    o.close();
+    TimeUnit.SECONDS.sleep(1); // Delay
+    // Now get them back:
+    ObjectInputStream in = new ObjectInputStream(
+      new FileInputStream("Logon.out"));
+    print("Recovering object at " + new Date());
+    a = (Logon)in.readObject();
+    print("logon a = " + a);
+  }
+}
+```
+Externalizable对象在默认情况下不保存它们的任何字段，所以transient关键字只能和Serializable对象一起使用。
+
+注意：对于Serializable对象，如果添加writeObject()和readObject()方法，在序列化和反序列化时就会使用它们而不是默认的序列化机制（即反序列化的时候会判断这两个方法是否存在）。
+```
+private void writeObject(ObjectOutputStream stream) throws IOException;
+private void readObject(ObjectInputStream stream) throws IOException, ClassNotFoundException;
+```
+然而这两个方法并不是Serializable接口定义的一部分。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
