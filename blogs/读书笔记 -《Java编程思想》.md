@@ -1472,12 +1472,535 @@ private void readObject(ObjectInputStream stream) throws IOException, ClassNotFo
 然而这两个方法并不是Serializable接口定义的一部分。
 
 
+## 带有对象引用的序列化
+通过同一个ByteArrayOutputStream（还需经ObjectOutputStream装饰）重复写入的同一个对象，再通过同样的ByteArrayOutputStream（不同的流将生成不同的反序列化网）反序列化后得到的多个对象地址相同（但与序列化之前的对象的地址不同）。
+
+## XML
+JDK随包发布了javax.xml.*类库，书中选择使用开源的XOM库。
+详略。
+
+## Preferences
+Preferences API用于存储和读取用户的偏好设置，可以自动存储和读取信息，但是只能用于小的、受限的数据集合，只能存储基本类型和字符串，并且每个字符串的存储长度不能超过8K。
+```
+import java.util.prefs.*;
+...
+// 也可以使用systemNodeForPackage()
+Preferences prefs = Preferences.userNodeForPackage( 
+  PreferencesDemo.class);
+prefs.put("Location", "Oz");  // 键值对
+prefs.put("Footwear", "Ruby Slippers");
+prefs.putInt("Companions", 4);
+prefs.putBoolean("Are there witches?", true);
+int usageCount = prefs.getInt("UsageCount", 0);
+usageCount++;
+prefs.putInt("UsageCount", usageCount);
+for(String key : prefs.keys()){
+  print(key + ": "+ prefs.get(key, null));  // 一定要提供默认值
+}
+print("How many companions does Dorothy have? " + prefs.getInt("Companions", 0));
+```
+每次运行以上代码usageCount的值都会加1，但是并没有生成任何本地文件用来存储值信息。Preferences API利用合适的系统资源完成自动存储的任务，实际使用的资源随操作系统的不同而不同，例如在Windows上是存储在注册表中。
 
 
+# 第19章 枚举类型
+
+创建enum时会生成一个类，这个类继承自java.lang.Enum，且不可被继承，其他方面与普通类一样，比如可以包含方法。
+
+枚举实例的API：ordinal()、compareTo()、equals()、getDeclaringClass()、name（）
+静态方法：values()、valueOf()
+
+## 使枚举可以带描述信息
+```
+public enum OzWitch{
+
+  // 必须先定义enum实例
+  WEST("..."),
+  ...
+  NORTH("....");  // 如果要添加方法，这里必须有分号
+  ....
+  
+  // 定义可以带参数的构造函数
+  private String description;
+  private OzWitch(String description){
+    this.description = description;
+  }
+
+  // 获取描述信息的接口
+  public String getDescription(){
+    return description;
+  }
+
+  public static void main(String[] args){
+    for(OzWitch witch:OzWitch.values()){
+      print(witch + ":" + witch.getDescription());
+    }
+  }
+}
+```
+只能在enum定义的内部使用其构造器创建enum实例，所以上面代码中有意将构造函数定义为private。
+
+也可以覆盖enum的toString()方法。
+
+## values()
+虽然可以在枚举类型上调用values()方法，但是Enum类中实际并没有定义该方法。
+`values()是由编译器添加的static方法`。（Enum的valueOf()方法带两个参数，只带一个参数的valueOf()方法也是编译器添加的 ）
+
+## 使用接口组织枚举
+无法从enum继承子类，实现接口是使其子类化的唯一方法：在一个接口的内部创建实现该接口的枚举，以此将元素进行分组。
+
+## EnumSet
+EnumSet用以替代传统的基于int的位标志（更具表达性），EnumSet中的元素必须来自一个enum，其内部将一个long值作为比特向量（即用一个long值的不同位的状态来表示某个元素是否存在），所以EnumSet非常快速高效。
+```
+public enum AlarmPoints {
+  STAIR1, STAIR2, LOBBY, OFFICE1, OFFICE2, OFFICE3,
+  OFFICE4, BATHROOM, UTILITY, KITCHEN
+}
+
+import java.util.*;
+...
+EnumSet<AlarmPoints> points =
+  EnumSet.noneOf(AlarmPoints.class); // Empty set
+points.add(BATHROOM);
+print(points);
+points.addAll(EnumSet.of(STAIR1, STAIR2, KITCHEN));
+print(points);
+points = EnumSet.allOf(AlarmPoints.class);
+points.removeAll(EnumSet.of(STAIR1, STAIR2, KITCHEN));
+print(points);
+points.removeAll(EnumSet.range(OFFICE1, OFFICE4));
+print(points);
+points = EnumSet.complementOf(points);
+print(points);
+```
+
+## EnumMap
+EnumMap要求其中的键必须来自一个enum，其在内部通过数组实现，所以速度很快。
+```
+interface Command { void action(); }
+...
+EnumMap<AlarmPoints,Command> em =
+  new EnumMap<AlarmPoints,Command>(AlarmPoints.class);
+em.put(KITCHEN, new Command() {
+  public void action() { print("Kitchen fire!"); }
+});
+...
+
+for(Map.Entry<AlarmPoints,Command> e : em.entrySet()) {
+  printnb(e.getKey() + ": ");
+  e.getValue().action();
+}
+
+try { // If there's no value for a particular key:
+  em.get(UTILITY).action();
+} catch(Exception e) {
+  print(e);
+}
+```
+命令模式，略。
+
+## 枚举实例的常量方法
+可以为enum实例编写方法，从而为每个enum实例赋予各自不同的行为。具体方式是定义abstract方法，然后每个enum实例实现该abstract方法：
+```
+public enum ConstantSpecificMethod {
+  DATE_TIME {
+    String getInfo() {
+      return
+        DateFormat.getDateInstance().format(new Date());
+    }
+  },
+  CLASSPATH {
+    String getInfo() {
+      return System.getenv("CLASSPATH");
+    }
+  },
+  VERSION {
+    String getInfo() {
+      return System.getProperty("java.version");
+    }
+  };
+  abstract String getInfo();  // 定义抽象方法
+  public static void main(String[] args) {
+    for(ConstantSpecificMethod csm : values())
+      System.out.println(csm.getInfo());
+  }
+}
+```
+
+## 多路分发
+Java只支持单路分发，即如果要执行的操作包含了不止一个类型未知的对象时，那么Java的动态绑定机制只能处理其中的一个类型。
+（详略）
 
 
+# 第20章 注解
+通过使用注解可以将一些元数据保存在Java源代码中，并利用注解API来为自己的注解构造处理工具。
+
+Java内置三种标准注解（定义在java.lang中）：
+1.@Override；
+2.@Deprecated：使用该注解将会使编译器发出警告信息；
+3.@SuppressWarnings：关闭不当的编译器警告信息；
+
+此外还有4种元注解：
+1.@Target：表示注解可以用于什么地方（构造函数、域、局部变量、方法、包、参数、类、接口、枚举）
+2.@Retention：表示在什么级别保存注解信息（源代码、class文件、运行时）
+3.@Documented：将此注解包含在Javadoc中
+4.@Inherited：允许子类继承父类中的注解
+
+注解也会被编译成class文件。
+
+## 定义、处理注解
+示例：通过注解的方式跟踪项目中的用例（方法）实现情况
+```
+import java.lang.annotation.*;
+
+// 定义注解
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface UseCase {
+  public int id();
+  public String description() default "no description";
+}
+
+// 使用注解
+public class PasswordUtils {
+  @UseCase(id = 47, description =
+  "Passwords must contain at least one numeric")
+  public boolean validatePassword(String password) {
+    return (password.matches("\\w*\\d\\w*"));
+  }
+  @UseCase(id = 48)
+  public String encryptPassword(String password) {
+   return new StringBuilder(password).reverse().toString();
+  }
+  @UseCase(id = 49, description =
+  "New passwords can't equal previously used ones")
+  public boolean checkForNewPassword(
+    List<String> prevPasswords, String password) {
+    return !prevPasswords.contains(password);
+  }
+}
+
+// 处理注解
+public class UseCaseTracker {
+  public static void trackUseCases(List<Integer> useCases, Class<?> cl) {
+    for(Method m : cl.getDeclaredMethods()) {  // 反射获取方法列表
+      UseCase uc = m.getAnnotation(UseCase.class);  // 获取方法的注解
+      if(uc != null) {
+        System.out.println("Found Use Case:" + uc.id() +
+          " " + uc.description());
+        useCases.remove(new Integer(uc.id()));
+      }
+    }
+    for(int i : useCases) {
+      System.out.println("Warning: Missing use case-" + i);
+    }
+  }
+  public static void main(String[] args) {
+    List<Integer> useCases = new ArrayList<Integer>();
+    Collections.addAll(useCases, 47, 48, 49, 50);
+    trackUseCases(useCases, PasswordUtils.class);
+  }
+}
+```
+注解的元素只能是基本类型、String、Class、enum、Annotation、或者以上类型的数组。
+注解的值不能为null（即必须赋值且非null，或者有非null的默认值）。
+注解不支持继承，即不能extends某个@interface。
+
+## 注解处理工具apt
+（略）
+
+## 基于注解的单元测试
+（略）
 
 
+# 第21章 并发
+从性能的角度看，如果没有任务会被阻塞，那么在单处理器机器上使用并发就没有任何意义（相对于该程序的所有任务都顺序执行其实开销更大，因为增加了上下文切换的代价）。
+
+实现并发最直接的方式是在操作系统级别使用进程，但是进程通常会有数量和开销的限制。某些函数式编程语言，如Erlang，被设计为可以将并发任务彼此隔离，其中每个函数调用都不会产生任何副作用，因此可以当做独立的任务来驱动。Java采取了更加传统的方式，在顺序型语言的基础上提供对线程的支持。
+
+一个线程就是在进程中的一个单一的顺序控制流，因此单个进程可以拥有多个并发执行的任务（在Java中，线程对应Thread，任务对应Runnable），CPU将轮流给每个任务分配其占用时间，所以使用线程机制是一种建立透明的、可扩展的程序的方式（为机器添加CPU就能够很容易地加快程序的运行速度）。
+
+Java的线程机制是抢占式的，即调度机制会周期性地中断线程，将上下文切换到另一个线程，从而为每个线程都提供时间片。（与抢占式对应的是协作式，即每个任务都会自动地放弃控制，这依赖于程序中的让步语句）
+
+如果机器上有多个处理器，线程调度器将会在这些处理器之间分发线程，线程调度机制是非确定性的，所以多线程任务的多次执行结果可能不同。
+
+线程的一个额外的好处是它们提供了轻量级的执行上下文切换（大约100条指令，只是改变了程序的执行序列和局部变量），而不是重量级的进程上下文切换（上千条指令，会改变所有内存空间）。
+
+## Runnable
+```
+// 定义任务
+public class LiftOff implements Runnable {
+  protected int countDown = 10;  // Default
+  private static int taskCount = 0;
+  private final int id = taskCount++;
+  public LiftOff() {}
+  public LiftOff(int countDown) {
+    this.countDown = countDown;
+  }
+  public String status() {
+    return "#" + id + "(" +
+      (countDown > 0 ? countDown : "Liftoff!") + "), ";
+  }
+  public void run() {
+    while(countDown-- > 0) {
+      System.out.print(status());
+      Thread.yield();  // 对线程调度器的建议，即可以切换给其他任务执行一段时间
+    }
+  }
+}
+
+// 在主线程中执行任务
+public static void main(String[] args) {
+  LiftOff launch = new LiftOff();
+  launch.run();
+}
+```
+
+## Thread
+// 使用新线程执行任务
+```
+public class BasicThreads {
+  public static void main(String[] args) {
+    Thread t = new Thread(new LiftOff());
+    t.start();
+    System.out.println("Waiting for LiftOff");
+  }
+}
+```
+每个Thread都会注册它自己（即会保存一个对它的引用），所以在调用start()之后，任务完成之前，不会被垃圾回收器回收。
+
+## Executor
+Executor用来管理Thread对象从而简化并发编程，是启动任务的首选方式。
+```
+ExecutorService exec = Executors.newCachedThreadPool();
+for(int i = 0; i < 5; i++){
+  exec.execute(new LiftOff());
+}
+exec.shutdown();  // 防止新的任务被提交给这个Executor
+```
+CachedThreadPool()会为每一个任务创建一个新的线程，而使用FixedThreadPool()则会使用有限的线程集来执行所提交的任务，好处在于可以预先执行代价高昂的线程分配：
+```
+// 创建大小为5的线程池
+ExecutorService exec = Executors.newFixedThreadPool(5);
+```
+在任何线程池中，现有的线程在可能的情况下都会被自动复用。
+
+SingleThreadExecutor只有一个线程，如果向它提交了多个任务，那么这些任务将排队执行（SingleThreadExecutor会序列化所有提交的任务，并维护它们的悬挂任务队列）。
+
+
+## Callable
+使用Callable接口定义的任务可以在任务完成时得到一个返回值（Runnable不返回任何值）。
+```
+// Callable的类型参数表示从call()方法中返回的返回值的类型
+class TaskWithResult implements Callable<String> {
+  private int id;
+  public TaskWithResult(int id) {
+    this.id = id;
+  }
+  public String call() {
+    return "result of TaskWithResult " + id;
+  }
+}
+
+public class CallableDemo {
+  public static void main(String[] args) {
+    ExecutorService exec = Executors.newCachedThreadPool();
+    ArrayList<Future<String>> results = new ArrayList<Future<String>>();
+    for(int i = 0; i < 10; i++){
+      // submit()将返回一个Future对象，它用Callable的返回结果进行了参数化
+      results.add(exec.submit(new TaskWithResult(i)));
+    }
+    // 打印返回值
+    for(Future<String> fs : results){
+      try {
+        // get() blocks until completion:
+        System.out.println(fs.get());  // get()将阻塞
+      } catch(InterruptedException e) {
+        System.out.println(e);
+        return;
+      } catch(ExecutionException e) {
+        System.out.println(e);
+      } finally {
+        exec.shutdown();
+      }
+    }
+  }
+}
+```
+
+## sleep()
+```
+TimeUtil.MILLISECONDS.sleep(100);
+```
+对sleep()的调用会抛出InterruptedException异常，因为异常不能跨线程传播，所以必须在run()中捕获。
+（详略）
+
+## 线程优先级
+调度器将倾向于让优先级最高的线程先执行，这并不意味着优先权较低的线程将得不到执行，优先权较低的线程仅仅是执行的频率较低。应该尽量避免操纵线程优先级，而是让所有线程以默认的优先级运行。
+```
+Thread.currentThread().serPriority(priority);  // 设置优先级
+Thread.currentThread().getPriority(priority);  // 获取当前线程的优先级
+```
+JDK定义了10个优先级，但是与多数操作系统都不能很好的映射（不同操作系统线程优先级数量不同），一般最好使用MAX_PRIORITY、NORM_PRIORITY、MIN_PRIORITY。
+
+## 让步
+```
+Thread.yield();  // 对线程调度器的建议，即可以切换给其他任务执行一段时间
+```
+
+## 后台线程
+后台线程指在程序运行时在后台提供一种通用服务的线程，这种线程不属于程序中不可或缺的部分，即当所有的非后台线程结束时，程序也就终止了，同时会杀死进程中的所有后台线程（只要有任何非后台线程还在运行，程序就不会终止）。
+```
+Thread daemonThread = new Thread(new SimpleDaemons());
+daemonThread.setDaemon(true);
+daemonThread.start();
+```
+可以通过调用isDaemon()来确定线程是否是一个后台线程，如果是一个后台线程，那么它创建的任何线程将被自动设置为后台线程。
+
+当最后一个非后台线程终止时，后台线程会“突然”终止，即JVM会立即关闭所有的后台线程（这可能会造成finally子句不会被执行）。最好是使用Executor，因为它控制的所有任务可以有序关闭。
+
+## 直接执行Thread
+可以不借助Runnable接口，直接执行Thread：
+```
+public class SimpleThread extends Thread {
+  private int countDown = 5;
+  private static int threadCount = 0;
+  public SimpleThread() {
+    // Store the thread name:
+    super(Integer.toString(++threadCount));
+    start();  // 直接启动
+  }
+  public String toString() {
+    return "#" + getName() + "(" + countDown + "), ";
+  }
+  public void run() {
+    while(true) {
+      System.out.print(this);
+      if(--countDown == 0)
+        return;
+    }
+  }
+  public static void main(String[] args) {
+    for(int i = 0; i < 5; i++)
+      new SimpleThread();   // 直接启动
+  }
+}
+```
+在构造器中启动线程可能会有问题：另一个任务可能会在构造器结束之前开始执行，这意味着该任务能够访问处于不稳定状态的对象，这是优选Executor而不是显式地创建Thread对象的另一个原因。
+
+## join()
+如果某个线程在另一个线程t上调用t.join()，此线程将被挂起，直到目标线程t结束（t.isAlive() == false）才恢复。
+对join()方法的调用可以被终止：在调用线程上调用interrupt()方法（需要在try-catch中执行）。
+
+## 线程组
+Java中的线程组是一次失败的尝试，直接忽略。
+
+## UncaughtExceptionHandler
+将main()方法的主体放到try-catch语句块中并不能捕获在其中创建的新线程所抛出的异常。
+可以在Thread对象上设置一个UncaughtExceptionHandler，它的uncaughException()方法会在线程因未捕获的异常而临近死亡时被调用。
+```
+class MyUncaughtExceptionHandler implements
+Thread.UncaughtExceptionHandler {
+  public void uncaughtException(Thread t, Throwable e) {
+    System.out.println("caught " + e);
+  }
+}
+
+...
+
+Thread t = new Thread(r);
+t.setUncaughtExceptionHandler(new MyUncaughtExceptionHandler());
+```
+
+## synchronized
+如果某个任务处于一个被标记为synchronized的方法的调用中，那么在这个线程从该方法返回之前，其他所有要调用类中任何标记为synchronized方法的线程都会被阻塞。所以，对于某个特定对象来说，其所有synchronized方法共享同一个锁。
+```
+public class SynchronizedEvenGenerator extends IntGenerator {
+  private int currentEvenValue = 0;
+  public synchronized int next() {
+    ++currentEvenValue;
+    Thread.yield(); // Cause failure faster
+    ++currentEvenValue;
+    return currentEvenValue;
+  }
+}
+```
+
+将域设置为private非常重要，否则synchronized关键字就不能防止其他任务直接访问域（从而产生冲突）。
+
+`一个任务可以多次获得对象的锁`（一个方法在同一个对象上调用了第二个方法）：只有首先获得了锁的任务才能继续获得多个锁，JVM负责跟踪对象被加锁的次数。
+
+针对每个类也有一个锁（属于Class对象的一部分），synchronized static方法可以在类的范围内防止对static数据的并发访问。
+
+## Lock
+Lock对象必须被显式地创建、锁定和释放。
+```
+public class MutexEvenGenerator extends IntGenerator {
+  private int currentEvenValue = 0;
+  private Lock lock = new ReentrantLock();  // 创建Lock对象
+  public int next() {
+    lock.lock();   // 上锁
+    try {
+      ++currentEvenValue;
+      Thread.yield(); // Cause failure faster
+      ++currentEvenValue;
+      return currentEvenValue;
+    } finally {
+      lock.unlock();  // 解锁
+    }
+  }
+}
+```
+注意return语句的顺序，必须在try子句中，这样才能确保unlock()不会过早发生从而将数据暴露给第二个任务。
+在使用synchronized时，如果发生失败，就会抛出一个异常，但是没有机会去做清理工作以维护系统使其处于良好状态。使用Lock可以在finall子句中将系统维护在正确的状态。
+
+## ReentranLock
+可以使用ReentranLock实现`尝试获取锁`。
+```
+private ReentrantLock lock = new ReentrantLock();
+boolean captured = false;
+try {
+  // 尝试2秒
+  captured = lock.tryLock(2, TimeUnit.SECONDS);
+} catch(InterruptedException e) {
+  throw new RuntimeException(e);
+}
+try {
+  System.out.println("tryLock(2, TimeUnit.SECONDS): " + captured);
+} finally {
+  if(captured){
+    lock.unlock();
+  }
+}
+```
+
+## volatile
+`原子操作`是不能被线程调度机制中断的操作（会在切换到其他线程之前执行完毕）。
+
+原子性可以应用于除long、double之外的所有基本数据类型之上的简单操作。JVM会将64位（long、double）的读取和写入当做两个分离的32位操作来执行，在这个过程中可能发生上下文切换。可以使用volatile关键字来避免这种情况。
+
+在多处理器系统中可视性问题也很常见：一个任务做出的修改，即使在不中断的意义上是原子性的，对其他任务也可能是不可视的，比如修改只是暂时性地存储在本地的处理器缓存中。如果将一个域声明为volatile，那么只要对这个域产生了写操作，其值就会立即被写入到主存中。
+
+如果多个任务在同时访问某个域，那么这个域应该是volatile的，否则这个域应该只能通过同步访问（同步必然导致向主存中刷新，因此如果一个域完全由synchronized方法或语句块来防护，就不必设置它为volatile）。
+
+一个任务所作的任何写入操作对这个任务来说都是可视的，因此如果某个域只需要在这个任务内部可视，那么就无需将其设置为volatile。
+
+## 原子类
+Java提供了AtomicInteger、AtomicLong、AtomicReference等特殊的原子性变量类，它们提供如下形式的原子性条件更新操作：
+```
+boolean compareAndSet(expectedValue, updateValue);
+```
+
+## 临界区
+临界区用于防止多个线程同时访问方法内部的部分代码，而不是防止访问整个方法。
+```
+synchronized(syncObject){  // 此对象的锁被用来对花括号内的代码进行同步控制
+  // ...
+}
+```
+synchronized块必须给定一个在其上进行同步的对象，通常比较合理的方式是使用方法正在被调用的当前对象synchronized(this);
+
+## ThreadLocal
+防止任务在共享资源上产生冲突的第二种方式是根除对变量的共享。`线程本地存储`是一种自动化机制，可以为使用相同变量的每个不同线程都创建不同的存储。
 
 
 
