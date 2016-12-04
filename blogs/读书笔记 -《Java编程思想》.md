@@ -1927,7 +1927,31 @@ public class SynchronizedEvenGenerator extends IntGenerator {
 
 将域设置为private非常重要，否则synchronized关键字就不能防止其他任务直接访问域（从而产生冲突）。
 
-`一个任务可以多次获得对象的锁`（一个方法在同一个对象上调用了第二个方法）：只有首先获得了锁的任务才能继续获得多个锁，JVM负责跟踪对象被加锁的次数。
+`一个任务可以多次获得对象的锁`（一个方法在同一个对象上调用了第二个方法）：只有首先获得了锁的任务才能继续获得多个锁，JVM负责跟踪对象被加锁的次数：
+```
+public class MultiLock {
+  public synchronized void f1(int count) {
+    if(count-- > 0) {
+      print("f1() calling f2() with count " + count);
+      f2(count);
+    }
+  }
+  public synchronized void f2(int count) {
+    if(count-- > 0) {
+      print("f2() calling f1() with count " + count);
+      f1(count);
+    }
+  }
+  public static void main(String[] args) throws Exception {
+    final MultiLock multiLock = new MultiLock();
+    new Thread() {
+      public void run() {
+        multiLock.f1(10);
+      }
+    }.start();
+  }
+}
+```
 
 针对每个类也有一个锁（属于Class对象的一部分），synchronized static方法可以在类的范围内防止对static数据的并发访问。
 
@@ -1972,6 +1996,8 @@ try {
   }
 }
 ```
+在ReentrantLock上阻塞的任务具备可以被中断的能力。
+
 
 ## volatile
 `原子操作`是不能被线程调度机制中断的操作（会在切换到其他线程之前执行完毕）。
@@ -2000,27 +2026,166 @@ synchronized(syncObject){  // 此对象的锁被用来对花括号内的代码�
 synchronized块必须给定一个在其上进行同步的对象，通常比较合理的方式是使用方法正在被调用的当前对象synchronized(this);
 
 ## ThreadLocal
-防止任务在共享资源上产生冲突的第二种方式是根除对变量的共享。`线程本地存储`是一种自动化机制，可以为使用相同变量的每个不同线程都创建不同的存储。
+防止任务在共享资源上产生冲突的第二种方式是根除对变量的共享。`线程本地存储`是一种自动化机制，可以为使用相同变量的每个不同线程都创建不同的存储。ThreadLocal<T>保证不会出现竞争条件。在ThreadLocal类中有一个Map，用于存储每一个线程的变量副本，Map中元素的键为线程对象，而值对应线程的变量副本。
+概括起来说，对于多线程资源共享的问题，同步机制采用了“以时间换空间”的方式，而ThreadLocal采用了“以空间换时间”的方式。前者仅提供一份变量，让不同的线程排队访问，而后者为每一个线程都提供了一份变量，因此可以同时访问而互不影响。
 
+## 线程的状态
+1.新建（new）：当线程被创建时会短暂地处于这种状态，此时已被分配了必需的系统资源，并执行了初始化，之后调度器将其转变为可运行或阻塞状态。
+2.就绪（runnable）：在这种状态下只要调度器把时间片分配给线程，线程就可以运行（不等于一直在运行，线程可能在运行也可能不在运行，只要有时间片分配给它，就运行）。
+3.阻塞（blocked）：有某个条件阻止了线程的运行，这种状态下调度器将忽略线程（不会分配时间片），直到线程重新进入就绪状态。
+4.死亡（dead）：线程不再是可调度的，并且也不会得到CPU时间。
 
+## 线程阻塞的原因
+1.调用sleep()
+2.通过调用wait()使线程挂起
+3.任务在等待I/O操作
+4.任务试图在某个对象上调用其同步控制方法，但是对象锁不可用
 
+旧有的用来阻塞和唤醒线程的suspend()和resume()方法，以及stop()已经被废弃，因为会造成死锁。
 
+## 中断
+Thread类的interrupt()方法可以终止被阻塞的任务（设置线程的中断状态），如果一个线程已经被阻塞，或者试图执行一个阻塞操作，那么该操作将抛出InterruptedException。抛出该异常后，中断状态将被复位。
+当调用Thread.interrupted()方法时，中断状态也将被复位（提供了离开run()循环而不抛出异常的方式）。
 
+如果在Executor上调用shutdownNow()，那么它将发送一个interrupt()调用给它启动的所有线程。如果对单个线程进行操作，那么应该通过调用submit()而不是executor()来启动任务，submit()将返回一个Future，可以通过它调用cancel()从而中断某个特定任务。
 
+可以中断对sleep()的调用，但是`不能中断正在试图获取synchronize锁或试图执行I/O操作的线程`。对于这类问题有一个比较挫但是有效的解决方案：关闭任务在其上发生阻塞的底层资源。
+```
+class SleepBlocked implements Runnable {
+  public void run() {
+    try {
+      TimeUnit.SECONDS.sleep(100);
+    } catch(InterruptedException e) {   // 可中断
+      print("InterruptedException");
+    }
+    print("Exiting SleepBlocked.run()");
+  }
+}
 
+class IOBlocked implements Runnable {
+  private InputStream in;
+  public IOBlocked(InputStream is) { in = is; }
+  public void run() {
+    try {
+      print("Waiting for read():");
+      in.read();
+    } catch(IOException e) {
+      if(Thread.currentThread().isInterrupted()) {  // isInterrupted()
+        print("Interrupted from blocked I/O");
+      } else {
+        throw new RuntimeException(e);
+      }
+    }
+    print("Exiting IOBlocked.run()");
+  }
+}
 
+class SynchronizedBlocked implements Runnable {
+  public synchronized void f() {
+    while(true) // Never releases lock
+      Thread.yield();
+  }
+  public SynchronizedBlocked() {
+    new Thread() {
+      public void run() {
+        f(); // Lock acquired by this thread
+      }
+    }.start();
+  }
+  public void run() {
+    print("Trying to call f()");
+    f();
+    print("Exiting SynchronizedBlocked.run()");
+  }
+}
 
+public class Interrupting {
+  private static ExecutorService exec =
+    Executors.newCachedThreadPool();
+  static void test(Runnable r) throws InterruptedException{
+    Future<?> f = exec.submit(r);
+    TimeUnit.MILLISECONDS.sleep(100);
+    print("Interrupting " + r.getClass().getName());
+    f.cancel(true); // 中断
+    print("Interrupt sent to " + r.getClass().getName());
+  }
+  public static void main(String[] args) throws Exception {
+    test(new SleepBlocked());  // 可以中断
+    test(new IOBlocked(System.in));  // 无法中断
+    test(new SynchronizedBlocked()); // 无法中断
+    TimeUnit.SECONDS.sleep(3);
+    print("Aborting with System.exit(0)");
+    System.exit(0); // ... since last 2 interrupts failed
+  }
+}
+```
 
+如果想中断被互斥阻塞的任务，应该使用ReentrantLock（synchronize不可中断）。
 
+nio类提供了更加人性化的I/O中断，被阻塞的nio通道会自动地响应中断。
 
+可以通过调用interrupted()来检查中断状态，这个方法同时会清除中断状态以确保并发结构不会就某个任务被中断这个问题通知多次
 
+## 检查中断
+```
+class NeedsCleanup {
+  private final int id;
+  public NeedsCleanup(int ident) {
+    id = ident;
+    print("NeedsCleanup " + id);
+  }
 
+  // 发生异常时必须执行的清理操作
+  public void cleanup() {
+    print("Cleaning up " + id);
+  }
+}
 
+class Blocked3 implements Runnable {
+  private volatile double d = 0.0;
+  public void run() {
+    try {
+      while(!Thread.interrupted()) {
+        // 如果在从这里到sleep()之前或调用过程中interrupt()被调用（即在阻塞操作之前或者阻塞过程中），那么这个任务就会在第一次试图调用阻塞操作之前经由InterruptedException退出
+        NeedsCleanup n1 = new NeedsCleanup(1);
+        try {  // 在定义了“发生异常需要清理”的对象之后，要紧接着就写try语句，以此来保证该对象可以被正常清理
+          print("Sleeping");
+          TimeUnit.SECONDS.sleep(1);  // ！阻塞操作
+          // 如果interrupt()在这里被调用（在非阻塞的操作过程中），那么interrupted()会检测到，while循环会退出
+          NeedsCleanup n2 = new NeedsCleanup(2);
+          try { // 紧跟着定义语句，道理同上
+            print("Calculating");
+            // A time-consuming, non-blocking operation:
+            for(int i = 1; i < 2500000; i++)
+              d = d + (Math.PI + Math.E) / d;
+            print("Finished time-consuming operation");
+          } finally {
+            n2.cleanup();
+          }
+        } finally {
+          n1.cleanup();
+        }
+      }
+      print("Exiting via while() test");
+    } catch(InterruptedException e) {
+      print("Exiting via InterruptedException");
+    }
+  }
+}
 
-
-
-
-
+public class InterruptingIdiom {
+  public static void main(String[] args) throws Exception {
+    if(args.length != 1) {
+      print("usage: java InterruptingIdiom delay-in-mS");
+      System.exit(1);
+    }
+    Thread t = new Thread(new Blocked3());
+    t.start();
+    TimeUnit.MILLISECONDS.sleep(new Integer(args[0]));
+    t.interrupt();
+  }
+}
+```
 
 
 
