@@ -2187,30 +2187,181 @@ public class InterruptingIdiom {
 }
 ```
 
+## wait()与notifyAll()
+wait()提供了一种在任务间对活动进行同步的方式，会将任务挂起，然后在notify()或notifyAll()发生时被唤醒并去检查所发生的变化。
+
+当调用sleep()或yield()的时候，锁并没有被释放，而调用wait()时线程的执行将被挂起，对象上的锁会被释放。
+
+wait()、notify()、notifyAll()都是Object类的一部分，而不是Thread的一部分。`只能在同步控制块或者同步控制方法里调用它们`。如果在非同步控制方法里调用，程序可以编译通过，但是在运行时将抛出IllegalMonitorStateException。（即这些方法能够被调用的前提是拥有对象的锁）
+
+如果要向一个对象发送notifyAll()，必须在能够取得该对象的锁的同步控制块中这么做：
+```
+synchronized(x){
+  x.notifyAll();
+}
+```
+（详略）
+
+## Condition
+可以通过在Condition对象上调用await()来挂起一个任务，并通过signal()或signalAll()来唤醒任务，与使用notifyAll()相比，signalAll()是更安全的方式。
+```
+Lock lock = new ReentrantLock();
+Condition condition = lock.newCondition();
+...
+condition.await();
+...
+condition.signalAll();
+```
+
+## BlockingQueue
+使用wait()和notifyAll()解决任务同步问题是一种非常低级的方式，更高级的方式是使用同步队列。同步队列在任何时刻都只允许一个任务插入或移除元素。BlockingQueue接口提供这个队列，Java中具体的实现有ArrayBlockingQueue、LinkedBlockQueue。
+当消费者任务试图从队列中获取对象，而队列为空时，这些队列还可以挂起消费者任务，并且当有更多的元素可用时恢复消费者任务。
+（详略）
 
 
+## PipedWriter、PipedReader
+管道基本上是一个阻塞队列，存在于引入BlockingQueue之前的Java版本中。
+```
+// 一个写入任务
+class Sender implements Runnable{
+  public void run(){
+    PipedWriter out = new PipedWriter();
+    out.write(c);
+    ...
+  }
+  ...
+}
+
+// 一个读入任务
+class Receiver implements Runnable{
+  ...
+  PipedReader in = new PipedReader(sender.getPipedWriter());  // 连接管道
+  char c =（char）in.read();
+}
+
+// 执行
+Sender sender = new Sender();
+Receiver reveiver = new Receiver(sender);
+exec.execute(sender);
+exec.execute(receiver);
+```
+
+## 死锁
+（略）
 
 
+## 新类库中的构建
+### CountDownLatch
+（略）
 
+### CyclicBarrier
+（略）
 
+### DelayQueue
+（略）
 
+### PriorityBlockingQueue
+（略）
 
+### ScheduledThreadPoolExecutor
+（略）
 
+### Semaphore
+（略）
 
+### Exchanger
+（略）
 
+## 仿真*
+（模拟各种并发场景，银行出纳、饭店仿真、分发工作。不方便记笔记，略）
 
+## 性能调优
+各种数据结构在并发情况下的性能比较最终应该基于实际的测试进行判断。
 
+## 免锁容器
+免锁容器背后的策略是：对容器的修改可以与读取操作同时发生，只要读取者只能看到完成修改的结果即可。修改是在容器数据结构的某个部分的一个单独的副本（也可能是整个数据结构的副本）上执行的，并且这个副本在修改过程中是不可视的，只有当修改完成时被修改的结构才会自动地与主数据结构进行交换（原子性的操作），之后读取者就可以看到这个修改了。
+Java提供的免锁容器包括：
+CopyOnWriteArrayList、CopyOnWriteArraySet、ConcurrentHashMap、ConcurrentLinkedQueue
 
+如果主要操作是读取，那么使用免锁容器将比使用基于synchroized实现同步的普通容器快许多，因为获取和释放锁的开销被省掉了。
 
+## 乐观锁
+某些Atomic类允许执行“乐观加锁”，当执行某项计算时实际上并没有使用互斥，但是在计算完成，准备更新这个Atomic对象时，需要使用一个compareAndSet()方法，并将旧值和新值一起提交给这个方法，如果旧值与它在Atomic对象中发现的值不一样，那么这个操作就失败（意味着某个其他的任务已经于此操作期间修改了这个对象）。
 
+## ReadWriteLock
+ReadWriteLock对相对不频繁的写入，但是有多个任务要频繁地读取的情况作了优化。如果写锁已经被其他任务持有，那么任何读取者都不能访问，直至这个写锁被释放。
 
+## 活动对象
+每个活动对象都维护着它自己的工作器线程和消息队列，并且所有对这种对象的请求都将进入队列排队，任何时刻都只能运行其中一个。有了活动对象就可以串行化消息而不是方法，意味着不需要再防备一个任务在其循环的中间被中断这种问题。
 
+当向一个活动对象发送消息时，这条消息会被转变为一个任务，该任务会被插入到这个对象的队列中，等待在以后的某个时刻运行。
+```
+public class ActiveObjectDemo {
+  private ExecutorService ex =
+    Executors.newSingleThreadExecutor();  // 单线程执行器
+  private Random rand = new Random(47);
+  // Insert a random delay to produce the effect
+  // of a calculation time:
+  private void pause(int factor) {
+    try {
+      TimeUnit.MILLISECONDS.sleep(
+        100 + rand.nextInt(factor));
+    } catch(InterruptedException e) {
+      print("sleep() interrupted");
+    }
+  }
 
+  // 返回一个Future对象以响应调用（意味着把方法调用转变为消息，方法调用可以立即返回，调用者可以使用Feture来发现任务何时完成并收集返回值）
+  public Future<Integer>
+  calculateInt(final int x, final int y) {
+    return ex.submit(new Callable<Integer>() {
+      public Integer call() {
+        print("starting " + x + " + " + y);
+        pause(500);
+        return x + y;
+      }
+    });
+  }
+  public Future<Float>
+  calculateFloat(final float x, final float y) {
+    return ex.submit(new Callable<Float>() {
+      public Float call() {
+        print("starting " + x + " + " + y);
+        pause(2000);
+        return x + y;
+      }
+    });
+  }
+  public void shutdown() { ex.shutdown(); }
+  public static void main(String[] args) {
+    ActiveObjectDemo d1 = new ActiveObjectDemo();
+    // Prevents ConcurrentModificationException:
+    List<Future<?>> results =
+      new CopyOnWriteArrayList<Future<?>>();
+    for(float f = 0.0f; f < 1.0f; f += 0.2f)
+      results.add(d1.calculateFloat(f, f));
+    for(int i = 0; i < 5; i++)
+      results.add(d1.calculateInt(i, i));
+    print("All asynch calls made");
+    while(results.size() > 0) {
+      for(Future<?> f : results)
+        if(f.isDone()) {
+          try {
+            print(f.get());
+          } catch(Exception e) {
+            throw new RuntimeException(e);
+          }
+          results.remove(f);
+        }
+    }
+    d1.shutdown();
+  }
+}
+```
+因为从一个活动对象到另一个活动对象的消息只能被排队时的延迟所阻塞，并且因为这个延迟总是非常短且独立于任何其他对象，所以发送消息实际上是不可阻塞的。由于一个活动对象系统只是经由消息来通信，所以两个对象在竞争调用另一个对象上的方法时，是不会被阻塞的，这意味着不会发生死锁。因为在活动对象中的工作器线程在任意时刻只执行一个消息，所以就不存在任何资源竞争，因而也不用操心如何同步方法。（实际上同步仍然发生，但是它是通过将方法调用排队，使得任意时刻都只能发生一个调用，从而将同步控制在消息级别上发生）
 
-
-
-
-
+# 第22章 图形化用户界面
+（略）
 
 
 
