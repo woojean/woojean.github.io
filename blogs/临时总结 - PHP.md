@@ -1519,3 +1519,47 @@ $demo = new Demo();
 $arr = $demo->test();
 var_dump($arr);   // 1 3 5 7 9
 var_dump($demo->delList); // 2 4 6 8 10
+
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
