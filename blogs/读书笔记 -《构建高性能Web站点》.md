@@ -250,8 +250,300 @@ SSI语法略。
 
 # 第5章 动态脚本加速
 
+## opcode
+脚本语言的解释器会事先经过词法分析、语法分析、语义分析等一系列步骤将源代码编译为操作码（Operate Code），然后再执行。PHP解释器的核心引擎为Zend Engine。
+
+PHP的parsekit扩展提供运行时API来查看PHP代码的opcode。
+```
+var_dump( parsekit_compile_string('print 1+1;') );
+```
+opcode的格式类似于汇编代码（都是三地址码的格式），因此可以方便地翻译为不同平台的本地代码。
+
+## APC
+开启：
+```
+apc.cache_by_default = on
+```
+也可以配置apc.filters让APC只对特定范围的动态程序进行opcode缓存。
+APC同时提供跳过过期检查的机制，如果动态程序长期不会变化，那么可以跳过过期检查以获得更好的性能：
+```
+apc.stat = off
+```
+
+## XCache
+和APC差不多，详略。
+
+## 解释器扩展模块
+（略）
+
+## Xdebug
+xdebug_time_index();  // 返回从脚本开始处执行到当前位置所花费的时间
+xdebug_call_line();   // 当前函数在哪一行被调用
+xdebug_call_function();  // 当前函数在哪个函数中被调用
+
+// 代码覆盖率
+xdebug_start_code_coverage();
+...
+var_dump(xdebug_get_code_coverage());
+
+## 函数跟踪
+根据程序在实际运行时的执行顺序跟踪记录所有函数的执行时间，以及函数调用时的上下文，包括实际参数和返回值。
+
+在php.ini中配置记录文件的存储目录和文件名前缀：
+```
+xdebug.trace_output_dir = /tmp/xdebug
+xdebug.trace_output_name trace.%c
+```
+%c代表函数调用。
+
+输出示例：
+```
+0.0167  1009988  -> MarkerInfo->getMarkerInfo()
+0.0167  1009988    -> DataAccess->selectDb(string(11))
+0.0168  1010040      -> DataAccess->connect()
+...
+0.0170  1010288      -> mysql_connect(string(9), string(4), string(0))
+0.0207  1011320      -> ...
+```
+通过以上片段可以分析出代码执行的时间主要消耗在mysql_connect()处。
+
+## 瓶颈分析
+Xdebug提供性能跟踪器：
+```
+xdebug.profiler_output_dir = /tmp/xdebug
+xdebug.profiler_output_name = cachegrind.out.%p
+```
+其中%p是运行时PHP解释器所在进程的PID。
+可以使用图形界面工具CacheGrind分析日志。
 
 
+# 第6章 浏览器缓存
+浏览器会为缓存的每个文件打上一些标记，比如过期时间，上次修改时间、上次检查时间等。
+
+## 缓存协商
+缓存协商基于HTTP头信息进行，动态内容本身并不受浏览器缓存机制的排斥，只要HTTP头信息中包含相应的缓存协商信息，动态内容一样可以被浏览器缓存。不过对于POST类型的请求，浏览器一般不启用本地缓存。
+
+## Last-Modified
+```
+<?php
+  header('Last-Modified:' . gmdate('D, d M Y H:i:s') . ' GMT');
+  echo time();
+?>
+```
+
+此时再通过浏览器请求该动态文件，HTTP响应中将会添加一个头信息：
+```
+Last-Modified:Fri, 20 Mar 2009 07:53:02 GMT
+```
+
+对于带有`Last-Modified`的响应，浏览器会对文件进行缓存，并打上一些标记，下次再发出请求时会带上如下的HTTP头信息：
+```
+If-Modified-Since:Fri, 20 Mar 2009 07:53:02 GMT
+```
+
+如果没有修改，服务器会返回304信息：
+```
+HTTP/1.1 304 Not Modified
+...
+```
+意味着浏览器可以直接使用本地缓存的内容。
+
+使用基于最后修改时间的缓存协商存在一些缺点：
+1.很可能文件内容没有变化，而只是时间被更新，此时浏览器仍然会获取全部内容。
+2.当使用多台机器实现负载均衡时，用户请求会在多台机器之间轮询，而不同机器上的相同文件最后修改时间很难保持一致，可能导致用户的请求每次切换到新的服务器时就需要重新获取所有内容。
+
+## ETag
+比如服务器返回如下带ETag的响应：
+```
+ETag:"74123-b-938fny4nfi8"
+```
+
+浏览器在下次请求该内容时会在HTTP头中添加如下信息：
+```
+If-None-Match:"74123-b-938fny4nfi8"
+```
+如果相同的话，服务器返回304。
+Web服务器可以自由定义ETag的格式和计算方法。
+
+## Expires
+Expires告诉浏览器该内容在何时过期，暗示浏览器在该内容过期之前`不需要再询问服务器`（彻底消灭请求），而是直接使用本地缓存即可。
+```
+...
+header('Last-Modified:' . gmdate('D, d M Y H:i:s') . ' GMT');
+header('Expires:' . gmdate('D, d M Y H:i:s', time() + 3600) . ' GMT');
+```
+
+## 请求页面的不同方式
+1.Ctrl+F5：强制刷新，使网页中所有组件都直接向Web服务器发送请求，并且不使用缓存协商。
+2.F5：等同于浏览器的刷新按钮，允许浏览器在请求中附加必要的缓存协商，但不允许浏览器直接使用本地缓存，即可以使用Last-Modified，但Expires无效。
+3.在浏览器地址栏输入URL后回车，或者通过超链接跳转到该页面
+浏览器会对所有没有过期的内容直接使用本地缓存。
+
+## Cache-Control
+Expire使用的是绝对过期时间，存在一些不足之处，比如浏览器和服务器的时间不一致。
+HTTP/1.1提供Cache-Control，使用相对时间来弥补Expires的不足，格式如下：
+```
+Cache-Control:max-age=<second>
+```
+目前主流的浏览器都将HTTP/1.1作为首选，所以当HTTP响应头中同时含有Expires和Cache-Control时，浏览器会优先考虑Cache-Control。
+
+# 第7章 Web服务器缓存
+
+## 缓存响应内容
+一个URL在一段较长的时间内对应一个唯一的响应内容，主流的Web服务器软件都提供对URL映射内容的缓存，比如Apache的mod_cache，在URL映射开始时检查缓存，如果缓存有效就直接取出作为响应内容返回给浏览器。
+Web服务器的缓存机制实质上是以URL为主键的key-value结构缓存。
+```
+LoadModule cache_module modules/mod_cache.so
+LoadModule disk_cache_module modules/mod_disk_cache.so
+CacheRoot /data/apache_cache
+CacheEnable disk /
+CacheDirLevels 5
+CacheDirLength 3
+
+CacheMaxExpire 3600
+CacheIgnoreHeaders Set-Cookie
+```
+Apache将缓存的HTTP头信息和正文信息独立存储，这样为缓存过期检查提供了方便：只要检查HTTP头信息的文件即可。
+
+Web服务器的缓存仍然基于HTTP的缓存协商进行控制。
+（详略）
+
+## 缓存文件描述符
+Apache提供了mod_file_cache模块来将已打开的文件描述符缓存在Web服务器内存中。需要指定希望缓存的文件列表：
+```
+CacheFile /data/www/htdocs/test.htm
+```
+Apache在启动时会打开这些文件，并持续到Apache关闭为止。
+缓存文件描述符只适合小的静态文件，因为处理较大的静态文件所花费的主要时间在传送数据上，而不是打开文件。
+
+
+# 第8章 反向代理缓存
+目前更多使用的是NAT技术而不是代理服务器，代理服务器工作在应用层，需要能够支持应用层的协议，NAT工作在应用层以下，可以透明地转发应用层协议的数据。
+
+反向代理的主要作用在于屏蔽后端服务器（安全性）和基于缓存的加速（性能）。
+
+和Web服务器缓存、浏览器缓存一样，反向代理服务器缓存也可以基于HTTP/1.1，只要站点是面向HTTP缓存友好的内容，就可以直接放在代理服务器的后端达到反向代理缓存的目的。
+
+通常会将Web服务器和应用服务器分离，即前端的Web服务器处理一些静态内容，同时又作为反向代理将动态内容的请求转发给后端的应用服务器处理，比如如下配置Nginx，当处理静态文件时，直接由Nginx返回（基于epoll，快），如果是动态内容，则交由启在80端口的Apache处理：
+```
+location ~ \.php$ {
+  proxy_pass location:80;
+}
+```
+反向代理只是Nginx的一个扩展模块，并且其缓存机制目前还不算完善，更专业的工具是Squid、Varnish等。
+
+（Varnish实例，亮点是有脚本语言，可以实现逻辑控制，略）
+
+## 缓存命中率和后端吞吐率的理想计算模型
+假设反向代理服务器向后端服务器请求内容的次数为“活跃内容数”（缓存不命中），那么：
+缓存命中率 = （ 活跃内容数/(实际吞吐率 * 平均缓存有效期) ） * 100%
+同样的：
+缓存命中率 = (1 - (后端吞吐率 / 实际吞吐率)） * 100%
+（详细分析，略）
+
+## ESI
+反向代理服务器可以支持部分内容更新，但是前提是网页必须实现ESI（Edge Side Includes），ESI是W3C指定的标准，语法非常类似SSI，不同的是SSI在Web服务器上组装内容，而ESI在HTTP代理服务器上组装内容：
+```
+<HTML>
+<BODY>
+...
+新闻内容
+...
+推荐新闻：<esi:include src="/recommand.php" />
+</BODY>
+</HTML>
+```
+（显然ajax更好，详略）
+
+
+## 穿过代理
+有些时候需要穿过代理，比如获取用户的实际IP，这一般是通过自定义一些服务器变量（反向代理服务器请求后端服务器时会设置）来实现，如Nginx：
+```
+location / {
+  proxy_pass http://location:8001;
+  proxy_set_header X-Real-IP $remote_addr;
+}
+```
+这样，后端程序可以通过访问服务器变量$_SERVER['HTTP_X_REAL_IP']来获得用户的实际IP。
+
+同样的，如果后端服务器想要透过反向代理来告诉浏览器一些额外信息（比如当存在多个后端服务器时），也可以通过在响应HTTP头信息中携带一定的自定义信息来实现：
+```
+header('X-Real-Server-IP:10.0.0.1');
+```
+这样，最终反向代理返回的HTTP头信息中有如下内容：
+```
+X-Real-Server-IP:10.0.0.1
+```
+
+# 第9章 Web组件分离
+不同的Web组件使用不同的域名、服务器：
+www.xxx.com
+img.xxx.com
+js.xxx.com
+等。
+
+需要注意的是，当使用站点的二级域名作为组件服务器地址，并且将站点的cookies作用域设置为顶级域名时，每次对图片、js文件等组件的请求都会带上本地的cookies，这将增加HTTP头信息的长度。一个常见的解决方案是为Web组件启用新的域名。
+
+对组件进行分离的好处：
+1.实现了服务器端的负载均衡；
+2.提高浏览器在下载Web组件时的并发数；
+
+（详略）
+
+
+# 第10章 分布式缓存
+（memcached，用Redis，略）
+
+
+# 第11章 数据库性能优化
+
+## 查看数据库状态
+第三方MySQL状态报告工具mysqlreport，略。
+
+## 正确使用索引
+索引的代价是更大的存储依赖，以及写操作的性能降低。
+（看《高性能MySQL》，略）
+
+## 慢查询分析
+```
+long_query_time = 1
+log-slow-queries = /data/var/mysql_slow.log
+```
+
+log-queries-not-using-indexes选项用于控制记录所有没有使用索引的查询。
+
+使用mysqlsla分析慢查询日志，略。
+
+## 锁
+show processlist;查看当前所有查询的状态，当查询被锁阻塞时，State字段为Locked。
+
+## 事务
+innodb_flush_log_at_txr_commit选项用于控制事务日志何时写入磁盘。
+
+## 查询缓存
+```
+query_cache_size = 5678765456
+query_cache_type = 1
+query_cache_limit = 134567
+```
+MySQL的缓存过期策略是，当数据表有更新操作时，缓存即失效。
+
+## 临时表
+explain中出现Using temporary表示查询过程中需要创建临时表来存储中间数据（应该通过合理的索引来避免）。当临时表难以避免时，应该尽量减少临时表本身的开销。可以配置tmp_table_size来设置存储临时表的内存空间大小，一旦不够，MySQL将会启用磁盘来保存数据。
+
+## 线程池
+```
+thread_cache_size = 100
+```
+
+## 反范式化设计
+（略）
+
+## 非关系型数据库
+（略）
+
+
+# 第12章 负载均衡
 
 
 
