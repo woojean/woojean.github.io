@@ -31,12 +31,13 @@ Code School学习，略
 ### GitLab Basics - Article
 Delete all changes in the Git repository, but leave unstaged things :
 ```
-git checkout .
+git checkout .     # 会修改本地文件
 ```
 Delete all changes in the Git repository, including untracked files :
 ```
 git clean -f
 ```
+reset只影响被track过的文件, 所以需要clean来删除没有track过的文件. 结合使用这两个命令能让工作目录完全回到一个指定的commit的状态.
 
 
 
