@@ -36,7 +36,7 @@ git checkout -b NAME-OF-BRANCH
 
 Delete all changes in the Git repository, but leave unstaged things :
 ```
-git checkout .     # 会修改本地文件
+git checkout .     # 放弃修改（会修改本地文件）
 ```
 
 Delete all changes in the Git repository, including untracked files :
@@ -52,54 +52,144 @@ git clean -n
 ```
 
 ### Create and add your SSH Keys
+略。
+
+### Create a project
+略。
+
+### Create a group
+Projects in GitLab can be organized in 2 different ways: under your own namespace for single projects, such as your-name/project-1 or under groups.
+略。
+
+## Create a branch
+略。
+
+### Fork a project
+略。
+
+### Add a file
+略。
+
+### Add an image
+略。
+
+### Create an issue
+略。
+
+### Create a merge request
+可以指定Source branch和Target branch。
+详略。
+
+## 1.3. Your GitLab Account
+### Create a GitLab Account
+在线视频教程，略。
+
+### Create and Add your SSH key to GitLab
+略。
+
+## 1.4. GitLab Projects
+### Repositories, Projects and Groups
+略。
+
+### Creating a Project in GitLab
+略。
+
+### How to Create Files and Directories
+略。
+
+### GitLab Todos
+gitlab中的评论可以@用户，被@的用户将会受到通知，在Todos列表中可以看到所有的@。
+详略。
+
+### GitLab's Work in Progress (WIP) Flag
+Work In Progress, is what you prepend to a merge request in GitLab, preventing your work from being merged. 
+方便进行Code Review，以免大量修改后Code Review不方便。
+Push something out early to receive feedback and to be steered in the right direction early on.
+
+以WIP或[WIP]为前缀的commit将会当做是WIP处理，即不会被合并（不会被GitLab CI合并）。
 
 
+## 1.5. Migrating from other Source Control
+略。
+
+## 1.6. GitLab Inc.
+略。
+
+## 1.7 Community and Support
+略。
+
+## 1.8 GitLab Training Material
 
 
+# 2. GitLab Intermediate
+
+## 2.1 GitLab Pages
+pages服务，略。
+
+## 2.2. GitLab Issues
+### Markdown in GitLab
+GitLab uses "GitLab Flavored Markdown" (GFM). It extends the standard Markdown in a few significant ways to add some useful functionality. 
+You can use GFM in the following areas:
+1.comments
+2.issues
+3.merge requests
+4.milestones
+5.snippets (the snippet must be named with a .md extension)
+6.wiki pages
+7.markdown documents inside the repository
+
+功能不是很稳定，已有的MarkDown语法也够用了，亮点是有一些简写方式可以调到issue、merge request、milestone等等，用到再看，略。
+
+### Issues and Merge Requests
+视频，略。
+
+### Due Dates and Milestones for GitLab Issues
+Using milestones `across multiple projects` can help you manage all of the work your team and other teams are doing.
+Once the milestone is created, you can add issues to it from any project.
+
+### How to Use GitLab Labels
+Labels provide an easy way to categorize the issues or merge requests based on `descriptive titles` like bug, documentation or any other text you feel like. They can have `different colors`, a description, and are visible throughout the issue tracker or inside each issue individually.
+
+可以设置标签的优先级排序，用于issues的排序、过滤等。
+
+可以订阅label，这样每当label被应用时就会收到通知。
+
+### Applying GitLab Labels Automatically
+webhook server，需要编程写回调函数实现，略。
+
+### GitLab Issue Board
+介绍gitlab issue操作面板的短视频，略。
+
+### An Overview of GitLab Issue Board
+gitlab的工作流理念与实现简介。
+
+### Designing GitLab Issue Board
+organize issues，略。
+
+### From Idea to Production with GitLab
+视频，略。
+
+## 2.3. Continuous Integration
+略。
+
+## 2.4. Workflow
+### GitLab Flow
+略。
+
+### GitLab Flow vs Forking in GitLab
+略。
+
+### GitLab Flow Overview
+The GitLab flow that integrates the git workflow with an issue tracking system.It offers a simple, transparent and effective way to work with git.
+Git Flow , GitHub Flow , GitLab Flow.
+详略。
+
+## 2.5. GitLab Comparisons
+略。
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# 3. GitLab Advanced 
+略，
 
 
 
