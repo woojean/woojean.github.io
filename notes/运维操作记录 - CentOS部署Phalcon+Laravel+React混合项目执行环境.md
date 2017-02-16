@@ -63,6 +63,9 @@ deploy_switch_online_01
 用户数据：略；
 安全设置：略；
 
+## 安全组设置出入规则限制
+略。
+
 ## 输出
 106.14.26.249 root ******
 
@@ -91,20 +94,20 @@ sudo yum remove php55w.x86_64 php55w-bcmath.x86_64 php55w-cli.x86_64 php55w-comm
 ```
 
 ## 安装PHP5.6及常用扩展
+
+添加解析路径：vi /etc/resolv.conf，添加：
+nameserver 8.8.8.8
+
 ```
 rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
 
 sudo yum install -y php56w  php56w-bcmath php56w-cli php56w-common  php56w-devel php56w-fpm    php56w-gd php56w-imap  php56w-ldap php56w-mbstring php56w-mcrypt php56w-mysql   php56w-odbc   php56w-pdo   php56w-pear  php56w-pecl-igbinary  php56w-xml php56w-xmlrpc php56w-opcache php56w-intl
 ```
 
-若报server无法解析：
+如果yum变成僵尸进程，kill -9杀不掉，则需要找到并杀死它的父进程：
 ```
-https://us-east.repo.webtatic.cpractiveom/yum/el6/x86_64/repodata/repomd.xml: [Errno 12] Timeout on https://us-east.repo.webtatic.com/yum/el6/x86_64/repodata/repomd.xml: (28, 'Connection time-out')
-Trying other mirror.
-webtatic
+ps -ef | grep defunct_process_pid
 ```
-则vi /etc/resolv.conf，添加：
-nameserver 8.8.8.8
 
 ## 输出
 ```
@@ -113,7 +116,6 @@ PHP 5.6.29 (cli) (built: Dec 10 2016 13:02:08)
 Copyright (c) 1997-2016 The PHP Group
 Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
     with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2016, by Zend Technologies
-[root@iZuf6cbroi7rj1zjydjruoZ data]#
 ```
 
 # Tengine
@@ -131,8 +133,7 @@ tar -xvf tengine-2.2.0.tar.gz
 mv tengine-tengine-2.2.0/ tengine
 cd tengine
 ./configure
-make
-sudo make install
+make & make install
 ```
 
 ## 输出
@@ -149,7 +150,13 @@ ln -s /usr/local/nginx/sbin/nginx /usr/bin/nginx
 
 # MySQL
 <span id="MySQL">==================================================================</span>
-@todo
+
+# 设置白名单
+略。
+
+# 创建高权限账号
+略。
+
 
 @temp
 ## 输出
@@ -179,12 +186,12 @@ php-fpm: /usr/sbin/php-fpm /etc/php-fpm.d /etc/php-fpm.conf /usr/share/man/man8/
 @temp 实际应该使用集群
 ```
 cd /data/extend/
-wget http://download.redis.io/releases/redis-3.2.6.tar.gz
-tar -xvf redis-3.2.6.tar.gz
-mv redis-3.2.6 redis
+wget http://download.redis.io/releases/redis-3.2.8.tar.gz
+tar -xvf redis-3.2.8.tar.gz
+mv redis-3.2.8 redis
 cd redis
-make
-sudo make install
+make MALLOC=libc  # 否则默认使用jemalloc，因为没有安装，会报错
+make install
 ```
 
 ## 输出
@@ -259,8 +266,7 @@ tar -xvf v3.0.0.tar.gz
 cd /data/extend/cphalcon-3.0.0/build/php5/64bits
 sudo phpize
 sudo ./configure
-sudo make
-sudo make install
+sudo make & make install
 ```
 
 编译生成的phalcon.so文件位置：/usr/lib64/php/modules
@@ -272,13 +278,13 @@ php -i | grep phalcon
 
 ## seaslog
 ```
+cd /data/extend/
 wget https://github.com/Neeke/SeasLog/archive/SeasLog-1.6.8.tar.gz
 tar -xvf SeasLog-1.6.8.tar.gz
 cd SeasLog-SeasLog-1.6.8/
 sudo phpize
 sudo ./configure
-sudo make
-sudo make install
+sudo make & make install
 
 vi /etc/php.d/seaslog.ini
 extension=seaslog.so
@@ -287,6 +293,7 @@ php -i | grep seaslog
 
 ## phpredis
 ```
+cd /data/extend/
 wget https://github.com/phpredis/phpredis/archive/3.1.0.tar.gz
 tar -xvf 3.1.0.tar.gz
 cd phpredis-3.1.0/
@@ -301,17 +308,18 @@ extension=redis.so
 # node
 <span id="node">==================================================================</span>
 ## 安装
+node的编译安装依赖巨多,甚至依赖python版本,所以直接使用二进制文件.
 ```
+cd /data/extend/
 wget https://nodejs.org/dist/v4.2.2/node-v4.2.2-linux-x64.tar.gz
 tar -xvf node-v4.2.2-linux-x64.tar.gz
 
 ln -s /data/extend/node-v4.2.2-linux-x64/bin/node /usr/bin/node
 ln -s /data/extend/node-v4.2.2-linux-x64/bin/npm /usr/bin/npm
-npm config set registry https://registry.npm.taobao.org  # https://r.cnpmjs.org
+npm config set registry https://registry.npm.taobao.org  
 ```
 
 ## 输出
-node的编译安装依赖巨多,甚至依赖python版本,所以直接使用二进制文件.
 ```
 [root@iZuf6cbroi7rj1zjydjruoZ extend]# node -v
 v4.2.2
@@ -375,15 +383,24 @@ Settings/Collaborators/Add
 
 ## 配置公钥
 ```
-ssh-keygen -t rsa -C "floodwu@qq.com"
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
+root@iZuf6a6ydemt9fvgy22rcqZ ~]# ssh-keygen -t rsa -C "floodwu@qq.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 【回车】
+Created directory '/root/.ssh'.
+Enter passphrase (empty for no passphrase): 【回车】
+Enter same passphrase again: 【回车】
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+16:d2:ed:a3:3e:65:48:fe:cc:dc:1e:e9:3f:92:3e:47 floodwu@qq.com
 ```
+
 拷贝公钥内容,添加到git部署账号的ssh key设置中:
 ```
 cat ~/.ssh/id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAplElkn+tOaO4rVYq7UhnL4Hx9x+G/M5PJX6DLM6f5J/zpJizcEC3KMcJPX8AjcjSrciNYg1DCHucqgxyvAGCOS8THIJQfhrvyG+Xx4935OIrXU5oSPaxW65vKGtFRHgq8AA/wTxim3av+db/uV/WRDV+hbZ1wui4IWfrcp1rfTUszMM3uB1qLCJMOMLYIAK3Sod7QPjGCTob9mn1i7N5cBQEdIDNcI/yIjJEt/cqSWMgF4LSDn3rn8+YnZPkAo9j8D3f8F1AxzYTwbJ4JXg+xLWCSD4hvNGhNus8N/5kBoe8oKzdCBbNw3DqY7aeYxLLIb+zw8nUlQrm3Mia9qHKgQ== floodwu@qq.com
 
+测试：
 [root@iZuf6cbroi7rj1zjydjruoZ ~]# ssh -T git@github.com
 Hi deploy2017! You've successfully authenticated, but GitHub does not provide shell access.
 ```
@@ -401,8 +418,6 @@ git config --global github.token ******  # Personal access tokens
 cd /data/www
 git clone git@github.com:woojean/deploy.git
 
-chmod -R 777 /data
-chown -R nginx:nginx /data  // @failed
 ```
 
 ## 初始化数据库
@@ -468,6 +483,7 @@ npm update
 npm install --cache-min Infinity  # 从cache安装 cache位置: ~/.npm
 ```
 @todo 修改webpack生成asset.ini的路径
+
 
 ## 修改前端环境变量
 ```
@@ -618,7 +634,7 @@ mkdir /usr/local/nginx/conf/conf.d
 mkdir /data/log/laravel-react
 ```
 
-vi /usr/local/nginx/conf.d/laravel-react.conf
+vi /usr/local/nginx/conf/conf.d/laravel-react.conf
 ```
 server {
     listen  80;
@@ -657,7 +673,7 @@ server {
 mkdir /data/log/phalcon
 ```
 
-vi /usr/local/nginx/conf.d/phalcon.conf
+vi /usr/local/nginx/conf/conf.d/phalcon.conf
 ```
 server {
     listen  80;
@@ -691,12 +707,17 @@ server {
 }
 ```
 
-### react:
+初始化一个asset.ini文件，否则di注册时会报异常，网站无法访问。
+```
+touch /data/www/deploy/DemoProjects/phalcon/assets.ini
+```
+
+### react: 
 ```
 mkdir /data/log/react
 ```
 
-vi /usr/local/nginx/conf.d/react.conf
+vi /usr/local/nginx/conf/conf.d/react.conf
 ```
 server {
     listen  80;
@@ -766,10 +787,14 @@ nohup redis-server /etc/redis.conf &
 
 redis-cli -h 127.0.0.1 -p 6379 -a ******
 flushdb
+
 /var/log/php-fpm/www-error.log
 
 chmod -R 777 /data
 chown -R www:www /data
+
+chmod -R 777 /var/log/www
+chown -R www:www /var/log/www
 
 echo 1 > /proc/sys/vm/drop_caches
 
