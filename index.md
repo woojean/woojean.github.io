@@ -9,8 +9,8 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 # [](#header-2)临时总结
 
-[Link to another page](another-page).
-[Link to another page](another-page).
+[/notes/test.md](/notes/test.md).
+[notes/test.md](notes/test.md).
 
 
 
