@@ -26,5 +26,5 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 ## [](#header-3)临时总结
 <span id="linshizongjie"></span>
 [/notes/test.md](/notes/test.md).
-[notes/test.md](notes/test.md).
+[/notes/读书笔记-专业技术-《ECMAScript 6入门》.md](/notes/读书笔记-专业技术-《ECMAScript 6入门》.md).
 
