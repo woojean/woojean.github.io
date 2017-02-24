@@ -492,7 +492,7 @@ C 风格字符串与 C++ 的标准库类型 string 的比较：通常，由于 C
          {8, 9, 10, 11}   /*  initializers for row indexed by 2 */
      };
      int ia[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11};//与前面的声明完全等价
-     int ia[3][4] = {{ 0 } , { 4 } , { 8 } };//只初始化了每行的第一个元素
+     int ia[3][4] = { { 0 } , { 4 } , { 8 } };//只初始化了每行的第一个元素
      int ia[3][4] = {0, 3, 6, 9};//初始化了第一行的元素，其余元素都被初始化为 0
 指针和多维数组：
 		int ia[3][4];      // array of size 3, each element is an array of ints of size 4
