@@ -22,10 +22,10 @@ if __name__ == '__main__':
           filePath= ca[2]+'/'+file
           size = str(os.path.getsize(filePath) / 1000)
           contents += '[' + file.replace('.md','') + '](' + filePath +')'
-          contents += '<span class="size"> '+ size +'k </span>'
+          contents += '<span class="size">'+ size +' k </span>'
           contents += '<span class="split"> / </span>'
-          if( 0 == index % 3 ):
-              contents += '\n\n'
+          #if( 0 == index % 3 ):
+          #    contents += '\n\n'
           index += 1
         contents += '\n\n'
 
