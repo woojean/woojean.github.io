@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
         for file in os.listdir(ca[2]):
           filePath= ca[2]+'/'+file
-          contents += '[' + ca[2] + '](' + filePath +').'
+          contents += '[' + ca[1] + '](' + filePath +').'
 
         contents += '\n\n'
 
