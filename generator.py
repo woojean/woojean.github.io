@@ -14,13 +14,16 @@ if __name__ == '__main__':
 
     for ca in config:
         count = str(len(os.listdir(ca[2])))
-        contents += '## [ ](#header-4)' + ca[1] + ' ['+ count +'] \n'
+        contents += '## ['+ ca[1] +'](#header-4)' + ' ['+ count +'] \n'
         contents += '<span id="'+ ca[0] +'"></span>' + '\n'
 
         index = 1
         for file in os.listdir(ca[2]):
           filePath= ca[2]+'/'+file
-          contents += '[' + file.replace('.md','') + '](' + filePath +') <span class="split"> / </span> '
+          size = str(os.path.getsize(filePath) / 1000.0)
+          contents += '[' + file.replace('.md','') + '](' + filePath +')'
+          contents += '<span class="size"> '+ size +' </span>'
+          contents += '<span class="split"> / </span>'
           if( 0 == index % 3 ):
               contents += '\n\n'
           index += 1
