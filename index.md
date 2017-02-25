@@ -1,10 +1,3 @@
-[专业技术](#zhuanyejishu)
-[方法论](#fangfalun)
-[文档](#wendang)
-[运维操作](#yunweicaozuo)
-[临时总结](#linshizongjie)
-
-
 ## [](#header-3)专业技术
 <span id="zhuanyejishu"></span>
 [《Android编程权威指南》](notes/专业技术/《Android编程权威指南》.md) 

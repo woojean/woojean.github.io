@@ -25,5 +25,6 @@ if __name__ == '__main__':
         contents += '\n\n'
 
     f = open('index.md','w')
-    f.write(directory + '\n\n' + contents)
+    #f.write(directory + '\n\n' + contents)
+    f.write(contents)
     f.close()
