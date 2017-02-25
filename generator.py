@@ -20,9 +20,9 @@ if __name__ == '__main__':
         index = 1
         for file in os.listdir(ca[2]):
           filePath= ca[2]+'/'+file
-          size = str(os.path.getsize(filePath) / 1000.0)
+          size = str(os.path.getsize(filePath) / 1000)
           contents += '[' + file.replace('.md','') + '](' + filePath +')'
-          contents += '<span class="size"> '+ size +' </span>'
+          contents += '<span class="size"> '+ size +'k </span>'
           contents += '<span class="split"> / </span>'
           if( 0 == index % 3 ):
               contents += '\n\n'
