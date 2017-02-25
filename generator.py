@@ -10,8 +10,12 @@ config = [
 ]
 
 if __name__ == '__main__':
-    directory = ''  # [专业技术](#zhuanyejishu)
-    contents = ''   # 页面内容
+    directory = '''
+---
+layout: default
+---
+'''  
+    contents = ''   
 
     for ca in config:
         directory += '[' + ca[1] + '](#' + ca[0] + ')' + '\n'
@@ -20,10 +24,10 @@ if __name__ == '__main__':
 
         for file in os.listdir(ca[2]):
           filePath= ca[2]+'/'+file
-          contents += '[' + file + '](' + filePath +').'
+          contents += '[' + file.replace('.md','') + '](' + filePath +').'
 
         contents += '\n\n'
 
-    f = open('test.html','w')
+    f = open('index.md','w')
     f.write(directory + '\n\n' + contents)
     f.close()
