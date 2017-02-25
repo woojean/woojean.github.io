@@ -24,7 +24,7 @@ layout: default
 
         for file in os.listdir(ca[2]):
           filePath= ca[2]+'/'+file
-          contents += '<p>[' + file.replace('.md','') + '](' + filePath +')</p>'
+          contents += '[' + file.replace('.md','') + '](' + filePath +')'
 
         contents += '\n\n'
 
