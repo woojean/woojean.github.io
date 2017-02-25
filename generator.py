@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
         for file in os.listdir(ca[2]):
           filePath= ca[2]+'/'+file
-          contents += '[' + file.replace('.md','') + '](' + filePath +') \n '
+          contents += '[' + file.replace('.md','') + '](' + filePath +') / \n '
 
         contents += '\n\n'
 
