@@ -18,6 +18,8 @@ if __name__ == '__main__':
         contents += '## [](#header-4)' + ca[1] + '\n'
         contents += '<span id="'+ ca[0] +'"></span>' + '\n'
 
+        count = str(len(os.listdir(ca[2])))
+        directory += '('+ count +')'
         for file in os.listdir(ca[2]):
           filePath= ca[2]+'/'+file
           contents += '[' + file.replace('.md','') + '](' + filePath +') <span class="split"> / </span> '
