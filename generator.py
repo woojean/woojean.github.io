@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     for ca in config:
         count = str(len(os.listdir(ca[2])))
-        contents += '## [ ](#header-4)' + ca[1] + ' ('+ count +')\n'
+        contents += '## [ ](#header-4)' + ca[1] + ' ['+ count +'] \n'
         contents += '<span id="'+ ca[0] +'"></span>' + '\n'
 
         for file in os.listdir(ca[2]):
