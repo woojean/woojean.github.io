@@ -17,10 +17,13 @@ if __name__ == '__main__':
         contents += '## [ ](#header-4)' + ca[1] + ' ['+ count +'] \n'
         contents += '<span id="'+ ca[0] +'"></span>' + '\n'
 
+        index = 1
         for file in os.listdir(ca[2]):
           filePath= ca[2]+'/'+file
           contents += '[' + file.replace('.md','') + '](' + filePath +') <span class="split"> / </span> '
-
+          if( 0 == index % 3 ):
+              contents += '\n\n'
+          index += 1
         contents += '\n\n'
 
     f = open('index.md','w')
