@@ -15,12 +15,12 @@ if __name__ == '__main__':
 
     for ca in config:
         directory += '[' + ca[1] + '](#' + ca[0] + ')' + '\n'
-        contents += '## [](#header-3)' + ca[1] + '\n'
+        contents += '## [](#header-4)' + ca[1] + '\n'
         contents += '<span id="'+ ca[0] +'"></span>' + '\n'
 
         for file in os.listdir(ca[2]):
           filePath= ca[2]+'/'+file
-          contents += '[' + file.replace('.md','') + '](' + filePath +') / \n '
+          contents += '[' + file.replace('.md','') + '](' + filePath +') \n\n '
 
         contents += '\n\n'
 
