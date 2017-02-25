@@ -10,16 +10,13 @@ config = [
 ]
 
 if __name__ == '__main__':
-    directory = ''
     contents = ''   
 
     for ca in config:
-        directory += '[' + ca[1] + '](#' + ca[0] + ')' + '\n'
-        contents += '## [](#header-4)' + ca[1] + '\n'
+        count = str(len(os.listdir(ca[2])))
+        contents += '## [](#header-4)' + ca[1] + ' ('+ count +')\n'
         contents += '<span id="'+ ca[0] +'"></span>' + '\n'
 
-        count = str(len(os.listdir(ca[2])))
-        directory += '('+ count +')'
         for file in os.listdir(ca[2]):
           filePath= ca[2]+'/'+file
           contents += '[' + file.replace('.md','') + '](' + filePath +') <span class="split"> / </span> '
@@ -27,6 +24,5 @@ if __name__ == '__main__':
         contents += '\n\n'
 
     f = open('index.md','w')
-    #f.write(directory + '\n\n' + contents)
     f.write(contents)
     f.close()
