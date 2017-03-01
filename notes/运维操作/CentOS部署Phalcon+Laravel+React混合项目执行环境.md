@@ -433,7 +433,9 @@ cp webpack.config.js.example webpack.config.js
 
 composer install
 sudo bower install --allow-root  # npm run build时会copy
-npm install --verbose  # 不能用sudo,否则不会安装在当前目录下
+
+npm install --verbose # 不能用sudo,否则不会安装在当前目录下
+npm install --verbose --dev # 否则babel不可用
 ```
 
 vi .env
@@ -478,9 +480,11 @@ cp package.json.example package.json
 cp webpack.config.js.example webpack.config.js
 
 npm cache clean
-npm install --save --verbose
+npm install --verbose
 npm update
 npm install --cache-min Infinity  # 从cache安装 cache位置: ~/.npm
+
+npm install --dev --verbose # 否则babel不可用
 ```
 @todo 修改webpack生成asset.ini的路径
 
