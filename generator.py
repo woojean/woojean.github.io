@@ -7,7 +7,6 @@ config = [
     ['wendang',      '文档',     'notes/文档'],
     ['yunweicaozuo', '运维操作', 'notes/运维操作'],
     ['linshizongjie','临时总结', 'notes/临时总结'],
-    ['zhongguogudaizhexue','中国古代哲学', 'notes/中国古代哲学'],
 ]
 
 if __name__ == '__main__':
