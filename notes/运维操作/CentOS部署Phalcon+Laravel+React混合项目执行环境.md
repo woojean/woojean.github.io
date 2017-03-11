@@ -417,7 +417,6 @@ git config --global github.token ******  # Personal access tokens
 ```
 cd /data/www
 git clone git@github.com:woojean/deploy.git
-
 ```
 
 ## 初始化数据库
