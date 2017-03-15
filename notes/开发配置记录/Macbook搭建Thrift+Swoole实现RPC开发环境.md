@@ -1,4 +1,4 @@
-# Macbook搭建Thrift（PHP）开发环境
+# Macbook搭建Thrift+Swoole实现RPC开发环境
 
 ## 安装thrift
 

@@ -2,9 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9eb694c0-95d4-4cd6-9b3a-7e05ebac3cd8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/notes/运维操作/CentOS环境常用操作.md" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/方法论/《运营之光》.md" afterPath="$PROJECT_DIR$/notes/其他/《运营之光》.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/方法论/《黑客与画家》.md" afterPath="$PROJECT_DIR$/notes/其他/《黑客与画家》.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/notes/文档/《GitLab University》.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/notes/运维操作/Macbook搭建Thrift（PHP）开发环境.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/notes/运维操作/MangoDB统一日志系统.md" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《Android编程权威指南》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《Android编程权威指南》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《C++ Primer 4 Answer Book》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《C++ Primer 4 Answer Book》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《C++ Primer》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《C++ Primer》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《ECMAScript 6入门》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《ECMAScript 6入门》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《JavaScript高级程序设计》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《JavaScript高级程序设计》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《Javascript DOM编程艺术》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《Javascript DOM编程艺术》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《Java核心技术：卷1》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《Java核心技术：卷1》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《Java编程思想》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《Java编程思想》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《Linux内核设计与实现》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《Linux内核设计与实现》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《MySql必知必会》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《MySql必知必会》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《PHP和MySQL Web开发》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《PHP和MySQL Web开发》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《Python核心编程》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《Python核心编程》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《Redis设计与实现》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《Redis设计与实现》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《图解HTTP协议》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《图解HTTP协议》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《大型网站技术架构：核心原理与案例分析》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《大型网站技术架构：核心原理与案例分析》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《大话设计模式》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《大话设计模式》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《推荐系统实践》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《推荐系统实践》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《构建高性能Web站点》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《构建高性能Web站点》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《深入PHP——面向对象、模式与实践》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《深入PHP——面向对象、模式与实践》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《深入理解计算机系统》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《深入理解计算机系统》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《白帽子讲Web安全》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《白帽子讲Web安全》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《算法》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《算法》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《精通CSS高级Web标准解决方案》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《精通CSS高级Web标准解决方案》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《编程之美》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《编程之美》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《计算机网络原理》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《计算机网络原理》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《重构——改善即有代码的设计》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《重构——改善即有代码的设计》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《高性能MySQL》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《高性能MySQL》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/专业技术/《鸟哥的Linux私房菜——基础学习篇》.md" afterPath="$PROJECT_DIR$/notes/技术书籍笔记/《鸟哥的Linux私房菜——基础学习篇》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/临时总结/C&amp;C++.md" afterPath="$PROJECT_DIR$/notes/知识点临时总结/C&amp;C++.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/临时总结/Coding.md" afterPath="$PROJECT_DIR$/notes/知识点临时总结/Coding.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/临时总结/Extend.md" afterPath="$PROJECT_DIR$/notes/知识点临时总结/Extend.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/临时总结/Java&amp;Android.md" afterPath="$PROJECT_DIR$/notes/知识点临时总结/Java&amp;Android.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/临时总结/JavaScript.md" afterPath="$PROJECT_DIR$/notes/知识点临时总结/JavaScript.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/临时总结/Linux.md" afterPath="$PROJECT_DIR$/notes/知识点临时总结/Linux.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/临时总结/MySQL.md" afterPath="$PROJECT_DIR$/notes/知识点临时总结/MySQL.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/临时总结/Nginx.md" afterPath="$PROJECT_DIR$/notes/知识点临时总结/Nginx.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/临时总结/PHP.md" afterPath="$PROJECT_DIR$/notes/知识点临时总结/PHP.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/临时总结/Redis.md" afterPath="$PROJECT_DIR$/notes/知识点临时总结/Redis.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/临时总结/TCP&amp;IP.md" afterPath="$PROJECT_DIR$/notes/知识点临时总结/TCP&amp;IP.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《中庸》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《中庸》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《二程粹言》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《二程粹言》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《傳習錄》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《傳習錄》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《周易》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《周易》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《商君書》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《商君書》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《壇經》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《壇經》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《大學》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《大學》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《孟子》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《孟子》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《少室六門集》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《少室六門集》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《老子》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《老子》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《莊子》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《莊子》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《論語》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《論語》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《象山語要》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《象山語要》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《运营之光》.md" afterPath="$PROJECT_DIR$/notes/互联网方法论笔记/《运营之光》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《金剛經》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《金剛經》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《韓非子》.md" afterPath="$PROJECT_DIR$/notes/其他书籍笔记/《韓非子》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/其他/《黑客与画家》.md" afterPath="$PROJECT_DIR$/notes/互联网方法论笔记/《黑客与画家》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/文档/《PHP手册-函数参考部分》.md" afterPath="$PROJECT_DIR$/notes/技术文档笔记/《PHP手册-函数参考部分》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/文档/《PHP手册-语言参考部分》.md" afterPath="$PROJECT_DIR$/notes/技术文档笔记/《PHP手册-语言参考部分》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/文档/《React Router文档》.md" afterPath="$PROJECT_DIR$/notes/技术文档笔记/《React Router文档》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/文档/《React文档》.md" afterPath="$PROJECT_DIR$/notes/技术文档笔记/《React文档》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/文档/《Redux文档》.md" afterPath="$PROJECT_DIR$/notes/技术文档笔记/《Redux文档》.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/notes/运维操作/CentOS部署Phalcon+Laravel+React混合项目执行环境.md" afterPath="$PROJECT_DIR$/notes/开发配置记录/CentOS部署Phalcon+Laravel+React混合项目执行环境.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generator.py" afterPath="$PROJECT_DIR$/generator.py" />
     </list>
@@ -19,7 +82,7 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,7 +92,9 @@
       <list>
         <option value="$PROJECT_DIR$/notes/专业技术/《PHP扩展开发及内核应用》.md" />
         <option value="$PROJECT_DIR$/notes/临时总结/PHP.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/generator.py" />
+        <option value="$PROJECT_DIR$/notes/开发配置记录/Macbook搭建Thrift开发环境.md" />
       </list>
     </option>
   </component>
@@ -59,6 +124,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -85,10 +152,62 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woojean.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woojean.github.io" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="开发配置记录" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woojean.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woojean.github.io" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="其他书籍笔记" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woojean.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woojean.github.io" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="互联网方法论笔记" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -104,6 +223,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/notes/互联网方法论笔记" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -176,17 +300,18 @@
       <workItem from="1488858905663" duration="48000" />
       <workItem from="1489304925107" duration="75000" />
       <workItem from="1489307876309" duration="318000" />
+      <workItem from="1489545465035" duration="1895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="441000" />
+    <option name="totallyTimeSpent" value="2336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25581396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25887394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -208,6 +333,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.gitignore" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -224,12 +352,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notes/临时总结/PHP.md">
+    <entry file="file://$PROJECT_DIR$/notes/知识点临时总结/PHP.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -244,22 +371,62 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/专业技术/《PHP扩展开发及内核应用》.md" />
-    <entry file="file://$PROJECT_DIR$/generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notes/临时总结/PHP.md">
+    <entry file="file://$PROJECT_DIR$/notes/知识点临时总结/PHP.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="24">
             <caret line="1522" column="2" lean-forward="false" selection-start-line="1522" selection-start-column="2" selection-end-line="1522" selection-end-column="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes/技术书籍笔记/《Android编程权威指南》.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="16" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes/开发配置记录/MangoDB统一日志系统.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes/开发配置记录/Macbook搭建Thrift+Swoole实现RPC开发环境.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="528">
+            <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

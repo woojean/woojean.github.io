@@ -2,11 +2,12 @@
 import os
 
 config = [
-    ['zhuanyejishu', '专业技术', 'notes/专业技术'],
-    ['wendang',      '文档',     'notes/文档'],
-    ['yunweicaozuo', '运维操作', 'notes/运维操作'],
-    ['linshizongjie','临时总结', 'notes/临时总结'],
-    ['qita',    '其他',   'notes/其他'],
+    ['jishushujibiji', '技术书籍笔记', 'notes/技术书籍笔记'],
+    ['jishuwendangbiji',      '技术文档笔记',     'notes/技术文档笔记'],
+    ['zhishidianlinshizongjie','知识点临时总结', 'notes/知识点临时总结'],
+    ['hulianwangfangfalunbiji',      '互联网方法论笔记',     'notes/互联网方法论笔记'],
+    ['kaifapeizhijilu', '开发配置记录', 'notes/开发配置记录'],
+    ['qitashujibiji',    '其他书籍笔记',   'notes/其他书籍笔记'],
 ]
 
 if __name__ == '__main__':
