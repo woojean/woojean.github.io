@@ -405,7 +405,10 @@ ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAplElkn+tOaO4rVYq7UhnL4Hx9x+G/M5PJX6DLM6f5J/z
 Hi deploy2017! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
+chmod 0600 ~/.ssh/id_rsa
+
 ## 设置git用户和token
+
 ```
 git config --global user.name "deploy2017"
 git config --global user.email "floodwu@qq.com"

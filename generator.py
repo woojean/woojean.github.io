@@ -3,10 +3,10 @@ import os
 
 config = [
     ['zhuanyejishu', '专业技术', 'notes/专业技术'],
-    ['fangfalun',    '方法论',   'notes/方法论'],
     ['wendang',      '文档',     'notes/文档'],
     ['yunweicaozuo', '运维操作', 'notes/运维操作'],
     ['linshizongjie','临时总结', 'notes/临时总结'],
+    ['qita',    '其他',   'notes/其他'],
 ]
 
 if __name__ == '__main__':

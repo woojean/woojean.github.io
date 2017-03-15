@@ -78,9 +78,9 @@ function loadprint( $class ) {
   		require_once($file);  
  	} 
 } 
- 
+
 spl_autoload_register( 'loadprint' ); 
- 
+
 $obj = new PRINTIT();
 $obj->doPrint();
 将__autoload换成loadprint函数。但是loadprint不会像__autoload自动触发，这时spl_autoload_register()就起作用了，它告诉PHP碰到没有定义的类就执行loadprint()。 
@@ -95,10 +95,10 @@ class test {
   		} 
  	}
 } 
- 
+
 spl_autoload_register(array('test','loadprint'));
 // 另一种写法：spl_autoload_register("test::loadprint"); 
- 
+
 $obj = new PRINTIT();
 $obj->doPrint();
 
@@ -785,11 +785,11 @@ class myData implements IteratorAggregate {
     public $property1 = "Public property one";
     public $property2 = "Public property two";
     public $property3 = "Public property three";
-
+    
     public function __construct() {
         $this->property4 = "last property";
     }
-
+    
     public function getIterator() {
         return new ArrayIterator($this);
     }
@@ -1537,21 +1537,21 @@ var_dump($demo->delList); // 2 4 6 8 10
  
  walu.c
  
- ```
+```
  int time_of_minit;  // 每次请求都不变
  PHP_MINIT_FUNCTION(walu)
  {
      time_of_minit=time(NULL);
      return SUCCESS;
  }
-  
+
  int time_of_rinit;  // 每次请求都改变
  PHP_RINIT_FUNCTION(walu)
  {
      time_of_rinit=time(NULL);
      return SUCCESS;
  }
-  
+
  // 每次页面请求都会往time_rshutdown.txt中写入数据
  PHP_RSHUTDOWN_FUNCTION(walu)
  {
@@ -1560,7 +1560,7 @@ var_dump($demo->delList); // 2 4 6 8 10
      fclose(fp);
      return SUCCESS;
  }
-  
+
  // 只有在apache结束后time_mshutdown.txt才写入有数据
  PHP_MSHUTDOWN_FUNCTION(walu)
  {
@@ -1568,7 +1568,7 @@ var_dump($demo->delList); // 2 4 6 8 10
      fprintf(fp,"%d\n",time(NULL));
      return SUCCESS;
  }
-  
+
  PHP_FUNCTION(walu_test)
  {
      php_printf("%d&lt;br /&gt;",time_of_minit);
@@ -1663,3 +1663,131 @@ var_dump($demo->delList); // 2 4 6 8 10
 
 
 
+ ```
+
+
+
+## 使用Swoole执行php与普通方式的不同之处
+
+使用swoole拓展的PHP脚本与传统的PHP脚步不同，前者是需要预先在服务端执行的，而后者是每次访问时才会执行。
+
+比如你的程序中定义了一个类A，那么在每次有用户访问时，类A都需要提前编译到内存中，1万次访问就要编译1万次。而用swoole拓展则只需要在服务端编译一次，无论多少次访问都不需要再次编译了，只要swoole的进程存在，类A就会一直存在于内存中。
+
+因此，使用swoole来编写常规项目时，需要将自己置身于第三方上帝的角色，而非访问者的角色来编写并阅读自己的代码。
+比如：PHP入门时就必须要掌握的session，对于运用了swoole扩展的PHP程序而言，完全可以用一个变量来替换。
+再比如：平时写PHP代码，完全不必担心内存使用，全局变量/函数/对象等，可以随便使用，因为PHP脚本执行结束后，内存自然会自行释放掉。但用swoole扩展的PHP程序，则必然要手动注销全局的变量/函数/对象等
+
+php在fork子进程的时候，父进程的资源连接会被子进程获得，父进程本身会断掉。要解决这个问题只能在fork之后重新建连接。
+
+`一定不可以多进程或多线程共同一个mysql或redis连接，否则消息会串`。每个进程或线程创建一个mysql的连接。连接断掉也就是mysql gone away之后进行重连。子进程退出后php引擎回清理回收所有的内存，关闭所有的连接。然后由于子进程和父进程共享内存，所以父进程里建立的连接等等也会被顺带关闭掉。
+
+fpm本身是leader follower同步阻塞模型，同一时间只能处理一个请求，支持不了异步。
+
+
+
+## Swoole工作原理与优势
+
+swoole的出现使phper可以从web开发跳出，进入了更大的服务器网络编程领域。
+
+swoole运行有个前提条件：必需在cli模式下执行。
+
+cli下执行一个php文件时的关键步骤：
+
+1.调用每个扩展的MINIT；
+
+2.调用每个扩展的RINIT；
+
+3.执行test.php；
+
+4.调用每个扩展的RSHUTDOWN；
+
+5.调用每个扩展的MSHUTDOWN；
+
+fpm每个请求都是在执行2~4步。opcode cache是把第3步的词法分析、语法分析、生成opcode代码这几个操作给缓存起来了，从而达到加速的作用。
+
+Swoole在第3步接管了php，进入swoole的生命周期，以多进程模式为例：
+
+（1）.onStart
+
+在回调此函数之前Swoole Server已进行了如下操作
+
+- 创建了manager进程
+- 创建了worker子进程
+- 监听所有TCP/UDP端口
+- 监听了定时器
+
+`此函数是在主进程回调的`，和worker进程的onWorkStart是并行的没有先后之分，在此回调里强烈要求只做log记录，设置进程名操作，不做业务逻辑,否则业务逻辑代码的错误导致master进程crash,让整个swoole server不对对外提供服务了。
+
+（2）.onWorkStart
+
+每个worker或task进程在启动之后，会回调此函数，由于此回调类似于fpm里的MINIT，所以可以在这里做一个全局的资源加载，框架初始化之类的操作，这样可以对每个请求做全局共享，而达到提升性能的目的。
+
+（3）.onReceive
+
+每个请求（也称数据到达），会回调此函数，然后进行业务逻辑处理，输出结果
+
+（4）.onWorkerStop
+
+worker退出时，会回调此函数。
+
+（5）.onShutDown
+
+swoole服务停止回调此函数,然后继续fpm的第4、5步，进而退出php生命周期。
+
+
+
+Apache处理一个请求是**同步阻塞**的模式：每到达一个请求，Apache都会去fork一个子进程去处理这个请求，直到这个请求处理完毕。
+
+epoll代理的原理是这样的：当连接有I/O流事件产生的时候，epoll就会去告诉进程哪个连接有I/O流事件产生，然后进程就去处理这个进程。
+
+有了epoll，理论上1个进程就可以无限数量的连接，而且无需轮询，真正解决了c10k的问题。Nginx是基于epoll的，异步非阻塞的服务器程序。自然，Nginx能够轻松处理百万级的并发连接，也就无可厚非了。
+
+
+
+## swoole如何处理高并发
+
+Reactor模型：IO多路复用异步非阻塞程序使用经典的Reactor模型，它本身不处理任何数据收发，只是可以监视一个socket(也可以是管道、eventfd、信号)句柄的事件变化比如：
+
+1.Add:添加一个Socket到Reactor；
+
+2.Set:修改Socket对应的事件，如可读可写；
+
+3.Del：从Reactor中移除；
+
+4.Callback：事件发生后，回调的函数；
+
+Reactor只是一个事件发生器，实际对socket句柄的操作，如connect/accept、send/recv、close是在callback中完成的。
+
+
+
+swoole采用`多线程Reactor+多进程Worker`：
+
+1.Master进程启动一个Main Reactor线程和多个普通Reactor线程；
+
+2.请求到达 Main Reactor；
+
+3.Main Reactor根据Reactor的情况，将请求注册给对应的Reactor(每个Reactor都有epoll。用来监听客户端的变化)
+
+4.客户端有变化时，交给worker来处理；
+
+5.worker处理完毕，通过进程间通信(比如管道、共享内存、消息队列)发给对应的reactor。
+
+6.reactor将响应结果发给相应的连接。
+
+7.请求处理完成；
+
+因为reactor基于epoll，所以每个reactor可以处理无数个连接请求。 如此，swoole就轻松的处理了高并发。
+
+
+
+swoole的worker进程有2种类型：
+**一种是 普通的worker进程，一种是 task worker进程。**worker进程是用来处理普通的耗时不是太长的请求；task worker进程用来处理耗时较长的请求，比如数据库的I/O操作。以异步Mysql举例：
+
+1.耗时较长的Mysql查询进入worker；
+2.worker通过管道将这个请求交给task worker来处理；
+3.worker再去处理其他请求；
+4.task worker处理完毕后，处理结果通过管道返回给worker；
+5.worker 将结果返回给reactor；
+6.reactor将结果返回给请求方；
+
+如此，通过worker、task worker结合的方式，我们就实现了异步I/O。
