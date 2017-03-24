@@ -7,6 +7,7 @@ config = [
     ['zhishidianlinshizongjie','知识点临时总结', 'notes/知识点临时总结'],
     ['fangfalun',      '方法论',     'notes/方法论'],
     ['kaifapeizhijilu', '开发配置记录', 'notes/开发配置记录'],
+    ['zhuantizongjie',      '专题总结',     'notes/专题总结'],
 ]
 
 if __name__ == '__main__':

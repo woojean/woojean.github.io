@@ -114,6 +114,8 @@ jenkins ALL = NOPASSWD:ALL
 
 
 
+# 添加项目
+
 ## 源码管理
 
 Git git@git.gegolab.com:backend/sms.git
@@ -126,6 +128,8 @@ wsnbackend@gegolab.com
 private key 直接输入：
 cat ~/.ssh/id_rsa  # gitlab用户wsnbackend@gegolab.com的私钥
 ```
+
+**submodule**
 
 Additional Behaviours -> 勾选Recursively update submodules
 
