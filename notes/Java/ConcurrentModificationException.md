@@ -1,3 +1,0 @@
-# ConcurrentModificationException
-
-ConcurrentHashMap、CopyOnWriteArrayList、CopyOnWriteArraySet都使用了可以避免ConcurrentModificationException的技术。
