@@ -1,5 +1,0 @@
-# Reader和Writer
-
-InputStream和OutputStream的优势在于处理面向字节的I/O，Reader和Writer则提供兼容Unicode与面向字符的I/O功能。
-
-当需要把来自字节层次结构中的类和字符层次结构中的类结合起来使用时，需要使用适配器类，如InputStreamReader可以把InputStream转换为Reader，OutputStreamWriter可以把OutputStream转换为Writer。
