@@ -1,0 +1,3 @@
+# 优化SQL_CALC_FOUND_ROWS
+
+使用LIMIT语句时，如果加上SQL_CALC_FOUND_ROWS提示，就可以获得去掉LIMIT以后满足条件的总的行数。但是，加上这个提示后MySQL将扫描所有满足条件的行，然后再抛弃掉不需要的行，而不是在满足LIMIT的行数后就终止扫描。
