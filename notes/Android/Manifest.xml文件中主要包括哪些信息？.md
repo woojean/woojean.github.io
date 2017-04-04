@@ -1,0 +1,11 @@
+# Manifest.xml文件中主要包括哪些信息？
+
+manifest：根节点，描述了package中所有的内容。
+uses-permission：为了保证application的正常运行，需要系统授予app的权限声明，如android.permission.CAMERA。
+permission：通常情况下我们不需要为自己的应用程序声明某个权限，除非你提供了供其他应用程序调用的代码或者数据。这个时候你才需要使用<permission> 这个标签。很显然这个标签可以让我们声明自己的权限。当然你千万不要以为你自己声明的permission你就可以随意使用，你还是需要使用<uses-permission>来声明你需要该权限，这时你的应用才能正常工作。
+instrumentation：声明了用来测试此package或其他package指令组件的代码。
+application：包含package中application级别组件声明的根节点。
+activity：Activity是用来与用户交互的主要工具。
+receiver：IntentReceiver能使的application获得数据的改变或者发生的操作，即使它当前不在运行。
+service：Service是能在后台运行任意时间的组件。
+provider：ContentProvider是用来管理持久化数据并发布给其他应用程序使用的组件。

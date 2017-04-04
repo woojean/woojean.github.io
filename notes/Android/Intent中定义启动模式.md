@@ -1,0 +1,21 @@
+# Intent中定义启动模式
+
+Android浏览器应用声明网页浏览activity必须在它自己的任务中打开—通过在<activity>元素中指定singleTask启动模式．这表示如果你的应用发出一个intent来打开Android浏览器，它的activity不会放到你的应用所在的任务中．代替的是，可能一个新的任务为浏览器启动，或者，如果浏览器已经运行于后台，它所在的任务就被弄到前台并接受这个intent．
+　不论一个从一个新任务启动activity还是在一个已存在这种activity的任务中启动，后退键总是能后退到前一个activity．然而，如果你在任务Ａ中启动一个声明为singleTask模式的activity，而这个activity可能在后台已有一个属于一个任务（任务Ｂ）的实例．任务Ｂ于是被弄到前台并处理这个新的intent．那么此时后退键会先一层层返回任务ＢActivity，然后再返回到任务Ａ的顶端activity．图 4演示了这种情形．
+
+![image](https://github.com/woojean/woojean.github.io/blob/master/images/java_17.png)
+
+
+上图演示一个"singleTask"启动模式的acitvity如何被添加到一个后退栈中．如果这个activity已经是一个后台任务(任务B)自己的栈的一部分，那么整个后退栈被弄到前台，位于当前任务 (任务A)的上面．
+注：你使用launchMode属性的指定的actvitiy的行为可以被intent的flag覆盖．
+
+使用 Intentflags：当启动一个activity时，你可以在给startActivity()的intent中包含flag以改变activity与任务的默认关联方式．你可以用来改变默认行为的flag有：
+•FLAG_ACTIVITY_NEW_TASK
+在新的任务中启动activity－即不在本任务中启动．如果一个包含这个activity的任务已经在运行，那个任务就被弄到前台并恢复其UI状态，然后这个已存在的activity在onNewIntent()中接收新的intent．这个标志产生与"singleTask"相同的行为．
+•FLAG_ACTIVITY_SINGLE_TOP
+如果正启动的activity就是当前的activity(位于后退栈的顶端)，那么这个已存在的实例就接收到onNewIntent()的调用，而不是创建一个新的实例．这产生与"singleTop"模式相同的行为．
+•FLAG_ACTIVITY_CLEAR_TOP
+如果要启动的activity已经在当前任务中运行，那么在它之上的所有其它的activity都被销毁掉，然后这个activity被恢复，而且通过onNewIntent()，initent被发送到这个activity（现在位于顶部了）
+没有launchMode属性值对应这种行为．
+FLAG_ACTIVITY_CLEAR_TOP多数时候与FLAG_ACTIVITY_NEW_TASK联用．当一起使用时，会在其它任务中寻找一个已存在的activity实例并其把它放到一个可以响应intent的位置．
+注：如果Activity的启动模式是"standard"，FLAG_ACTIVITY_CLEAR_TOP会导致已存在的activity被从栈中移除然后在这个位置创建一个新的实例来处理到来的intent．这是因为"standard"模式会导致总是为新的intent创建新的实例．
