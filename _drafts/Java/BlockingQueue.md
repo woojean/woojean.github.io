@@ -1,0 +1,5 @@
+# BlockingQueue
+
+使用wait()和notifyAll()解决任务同步问题是一种非常低级的方式，更高级的方式是使用同步队列。同步队列在任何时刻都只允许一个任务插入或移除元素。BlockingQueue接口提供这个队列，Java中具体的实现有ArrayBlockingQueue、LinkedBlockQueue。
+当消费者任务试图从队列中获取对象，而队列为空时，这些队列还可以挂起消费者任务，并且当有更多的元素可用时恢复消费者任务。
+（详略）
