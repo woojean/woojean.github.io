@@ -24,7 +24,7 @@ foreach ($data['dirs'] as $dir => $value) {
     foreach ($value['files'] as $note) {
         $url = 'http://127.0.0.1:4000/'.urlencode($note['path']);
         $ret = doGet($url);
-        //var_dump($ret);
+        var_dump($ret);
 
         if( false == $ret || 400==$ret ){
             $errorFiles[] = $note['path'];
