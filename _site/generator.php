@@ -25,6 +25,27 @@
     return $result;
 }
 
-$ret = scan('notes');
+$data = scan('notes');
 
-file_put_contents('notes.json', json_encode($ret));
+$html = '<html>
+<head>
+<title></title>
+</head>
+
+<body>
+$BODY$
+</body>
+</html>';
+
+$body = '<ul>';
+foreach ($data['dirs'] as $dir => $value) {
+    foreach ($value['files'] as $note) {
+        $body .= '<li><a href="'.urlencode($note['path']).'">'.$note['name'].'</a></li>';
+    }
+}
+$body .= '</ul>';
+$html = str_replace('$BODY$', $body, $html);
+
+file_put_contents('index.html', $html);
+
+//file_put_contents('notes.json', json_encode($data));

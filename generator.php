@@ -40,7 +40,7 @@ $BODY$
 $body = '<ul>';
 foreach ($data['dirs'] as $dir => $value) {
     foreach ($value['files'] as $note) {
-        $body .= '<li><a href="'.$note['path'].'>'.$note['name'].'</a></li>';
+        $body .= '<li><a href="'.urlencode($note['path']).'">'.$note['name'].'</a></li>';
     }
 }
 $body .= '</ul>';
