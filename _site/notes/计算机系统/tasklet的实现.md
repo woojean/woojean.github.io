@@ -1,0 +1,7 @@
+# tasklet的实现
+
+tasklet由两类软中断代表：HI_SOFTIRQ和TASKLET_SOFTIRQ，这两者之间唯一的实际区别在于HI_SOFTIRQ类型的软中断先执行。
+
+tasklet由tasklet_struct结构表示，结构成员中有一个名为func的函数指针，代表tasklet的处理程序。state字段用来表明tasklet的状态，比如已调度、正在运行等。已调度的tasklet（等同于被触发的软中断）存放在两个单独处理器数据结构tasklet_vec（普通）和tasklet_hi_vec（高优先级）中，分别由tasklet_schedule()、tasklet_hi_schedule()这两个函数进行调度。
+
+所有的tasklet都通过重复运用HI_SOFTIRQ和TASKLET_SOFTIRQ这两个软中断实现，当一个tasklet被调度时，内核就会唤起这两个软中断中的一个，随后该软中断会被特定的函数处理，执行所有已调度的tasklet，这个函数保证同一时间内只有一个给定类别的tasklet会被执行。

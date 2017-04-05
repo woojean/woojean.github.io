@@ -1,0 +1,5 @@
+# ListView的优化方案
+
+1.如果自定义适配器，那么在getView方法中要考虑方法传进来的参数contentView是否为null，如果为null就创建contentView并返回，如果不为null则直接使用(即重新赋值后返回)。在这个方法中，尽可能少创建view。
+2.给contentView设置tag(setTag()),传入一个viewHolder对象，用于缓存要显示的数据，可以达到图像数据异步加载的效果
+3.如果listview需要显示的item很多，就要考虑分页加载。比如一共要显示100条或者更多的时候，我们可以考虑先加载20条，等用户拉到列表底部的时候，再去加载接下来的20条。

@@ -1,0 +1,8 @@
+# ECMAScript就是JavaScript吗？ECMAScript与Web浏览器有什么关系？
+
+虽然JavaScript和ECMAScript通常都被人们用来表达相同的含义，但JavaScript的含义却比ECMA-262中规定的
+要多得多，一个完整的JavaScript实现应该由下列三个不同的部分组成：
+核心（ECMAScript）
+文档对象模型（DOM）
+浏览器对象模型（BOM）
+Web浏览器只是ECMAScript实现可能的宿主环境之一。宿主环境不仅提供基本的ECMAScript实现，同时也会提供该语言的扩展，以便语言与环境之间对接交互。而这些扩展，如DOM，则利用 ECMAScript的核心类型和语法提供更多更具体的功能，以便实现针对环境的操作。其他宿主环境包括 Node和Adobe Flash。
