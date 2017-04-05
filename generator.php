@@ -1,5 +1,7 @@
 <?php
 
+
+
  function scan($dir){
     $result = [];
     $handle = opendir($dir);
@@ -12,20 +14,32 @@
                 }
                 else{
                     $result['files'][] = [
-                        'name' => explode('.', $file)[0],
+                        'name' => str_replace('.md', '', $file),
                         'path' => $absPath,
                         'size' => filesize($absPath)
 
                     ];
+
+                    // record errorfile
+                    if( strpos($file, ' ') 
+                        || strpos($file, '+')
+                        || strpos($file, '<')
+                        || strpos($file, '>')
+                        || strpos($file, '#')){
+
+                    }
                 }
             }
         }
         closedir($handle);
     }
+    
     return $result;
 }
 
+//$data = scan('notes');
 $data = scan('notes');
+
 
 $html = '<html>
 <head>
@@ -48,4 +62,4 @@ $html = str_replace('$BODY$', $body, $html);
 
 file_put_contents('index.html', $html);
 
-//file_put_contents('notes.json', json_encode($data));
+file_put_contents('notes.json', json_encode($data));
