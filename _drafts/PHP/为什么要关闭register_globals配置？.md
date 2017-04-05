@@ -1,0 +1,4 @@
+# 为什么要关闭register_globals配置？
+
+register_globals是php.ini里的一个配置，这个配置影响到php如何接收传递过来的参数。
+register_globals的意思就是注册为全局变量，所以当On的时候，`传递过来的值会被直接的注册为（与控件的name属性同名的）全局变量直接使用`，而Off的时候，我们需要到特定的数组里去得到它。
