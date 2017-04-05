@@ -1,0 +1,3 @@
+# Back键与Home键区别
+
+back键默认行为是finish处于前台的Activity的即Activity的状态为Destroy状态为止，再次启动该Activity是从onCreate开始的(不会调用onSaveInstanceState方法)。Home键默认是stop前台的Activity即状态为onStop为止而不是destroy,若再次启动它，会调用onSaveInstanceState方法，保持上次Activity的状态则是从OnRestart开始的---->onStart()--->onResume()。
