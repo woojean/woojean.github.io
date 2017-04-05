@@ -1,0 +1,28 @@
+# C++创建动态数组
+
+每一个程序在执行时都占用一块可用的内存空间，用于存放动态分配的对象，此内存空间称为程序的自由存储区或堆。C语言程序使用一对标准库函数 malloc 和 free 在自由存储区中分配存储空间，而 C++ 语言则使用 new 和 delete 表达式实现相同的功能。
+动态分配数组时，只需指定类型和数组长度，不必为数组对象命名，new 表达式返回指向新分配数组的第一个元素的指针：
+
+	int *pia = new int[10]; // array of 10 uninitialized ints
+
+动态分配数组时，如果数组元素具有类类型，将使用该类的默认构造函数实现初始化；如果数组元素是内置类型，则无初始化：
+  string *psa = new string[10]; // array of 10 empty strings
+  int *pia = new int[10];       // array of 10 uninitialized ints
+
+圆括号要求编译器对数组做值初始化：也可使用跟在数组长度后面的一对空圆括号，对数组元素做值初始化， int *pia2 = new int[10] (); // array of 10 uninitialized ints
+​	
+对于动态分配的数组，其元素只能初始化为元素类型的默认值，而不能像数组变量一样，用初始化列表为数组元素提供各不相同的初值。
+
+const 对象的动态数组（这样的数组实际上用处不大）：如果我们在自由存储区中创建的数组存储了内置类型的 const 对象，则必须为这个数组提供初始化：因为数组元素都是 const 对象，无法赋值。实现这个要求的唯一方法是对数组做值初始化：          
+	const int *pci_bad = new const int[100]; // error: uninitialized const array
+  const int *pci_ok = new const int[100](); // ok: value-initialized const array
+
+C++ 允许定义类类型的 const 数组，但该类类型必须提供默认构造函数：
+  const string *pcs = new const string[100];  // ok: array of 100 empty strings
+
+C++ 虽然不允许定义长度为 0 的数组变量，但明确指出，调用 new 动态创建长度为 0 的数组是合法的：
+	char arr[0];            // error: cannot define zero-length array
+  char *cp = new char[0]; // ok: but cp can't be dereferenced
+
+用 new 动态创建长度为 0 的数组时，new 返回有效的非零指针。该指针与 new 返回的其他指针不同，不能进行解引用操作，因为它毕竟没有指向任何元素。而允许的操作包括：比较运算，因此该指针能在循环中使用；在该指针上加（减）0；或者减去本身，得 0 值。
+如果不再需要使用动态创建的数组，程序员必须显式地将其占用的存储空间返还给程序的自由存储区。C++ 语言为指针提供 delete [] 表达式释放指针所指向的数组空间：delete [] pia; 该语句回收了 pia 所指向的数组，把相应的内存返还给自由存储区。在关键字 delete 和指针之间的空方括号对是必不可少的：它告诉编译器该指针指向的是自由存储区中的数组，而并非单个对象。

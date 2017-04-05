@@ -1,0 +1,3 @@
+# 优化UNION查询
+
+MySQL总是通过创建并填充临时表的方式来执行UNION查询。一般会将WHERE、LIMIT、ORDER BY等子句下放到UNION的各个子查询中以便优化器可以充分利用这些条件进行优化。

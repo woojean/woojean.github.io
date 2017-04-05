@@ -1,0 +1,4 @@
+# android:gravity与android:layout_gravity的区别
+
+LinearLayout有两个非常相似的属性：android:gravity与android:layout_gravity。他们的区别在于：android:gravity用于设置View组件的对齐方式，而android:layout_gravity用于设置Container组件的对齐方式。
+举个例子，我们可以通过设置android:gravity="center"来让EditText中的文字在EditText组件中居中显示；同时我们设置EditText的android:layout_gravity="right"来让EditText组件在LinearLayout中居右显示。
