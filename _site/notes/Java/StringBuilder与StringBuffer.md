@@ -1,7 +1,0 @@
-# StringBuilder与StringBuffer
-
-String对象是不可变的，String类中每一个看起来会修改String值的方法实际上都是创建了一个全新的String对象，并返回指向新的对象的引用。
-
-Java不允许程序员重载操作符，但是自身重载了两个用于连接String对象的操作符`=`和`+=`，当使用这两个操作符连接字符串时，编译器会自动地进行优化，最终使用StringBuilder的append()方法来构建新的字符串对象。但是当在循环体中使用+连接字符串时，实际优化出来的代码会在循环体内创建StringBuilder，意味着每循环一次就会创建一个StringBuilder对象。所以，当为一个类编写toString()方法时，如果字符串的操作比较简单，可以信赖编译器，但是如果要在toString()方法中使用循环，则最好自己创建一个StringBuilder对象。
-
-与StringBuilder对应的线程安全的工具类是StringBuffer。
