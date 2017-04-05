@@ -16,7 +16,7 @@ function doGet($url){
 }
 
 
-$jsonData = file_get_contents('notes.json');
+$jsonData = file_get_contents('_drafts.json');
 $data = json_decode($jsonData,true);
 $errorFiles = [];
 
@@ -36,7 +36,7 @@ file_put_contents('errorFiles.txt', json_encode($errorFiles));
 
 
 
-// $code = doGet('http://127.0.0.1:4000/'.urlencode('notes/数据库/MySQL复制的工作过程.md'));
+// $code = doGet('http://127.0.0.1:4000/'.urlencode('_drafts/数据库/MySQL复制的工作过程.md'));
 // var_dump($code);
 
 

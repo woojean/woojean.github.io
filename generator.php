@@ -37,8 +37,8 @@
     return $result;
 }
 
-//$data = scan('notes');
-$data = scan('notes');
+//$data = scan('_drafts');
+$data = scan('_drafts');
 
 
 $html = '<html>
@@ -62,4 +62,9 @@ $html = str_replace('$BODY$', $body, $html);
 
 file_put_contents('index.html', $html);
 
-file_put_contents('notes.json', json_encode($data));
+file_put_contents('_drafts.json', json_encode($data));
+
+
+
+
+
