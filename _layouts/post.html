@@ -42,7 +42,7 @@ layout: default
                 {% for thisTag in page.tags %}
                     {% if postHasSimilar == false and hasSimilar.size < 6 and post != page and tag == thisTag %}
                         {% if hasSimilar.size == 0 %}
-                        <h2 id="similar_posts">Similar Posts</h2>
+                        <h2 id="similar_posts">相似文章</h2>
                         <ul>
                         {% endif %}
                         <li class="relatedPost">
@@ -69,24 +69,10 @@ layout: default
     <button class="anchor"><i class="fa fa-anchor"></i></button>
     <div class="right">
         <div class="wrap">
-            <div class="side ">
-                <div>
-                    <i class="fa" aria-hidden="true"></i>
-                    文章分类
-                </div>
-                <ul id="content-side" class="content-ul" recent>
-                    {% for category in site.categories%}
-                        <li>
-                            <a data-scroll href="#{{ category | first }}">
-                                {{ category | first }} ({{ category | last | size }})
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
+            <!-- <div class="side ">
 
-            </div>
-            
-</div>
+            </div> -->
+        </div>
 <script>
 /**
  * target _blank
