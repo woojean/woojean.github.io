@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "new、delete与malloc、free之间的联系和区别"
-date: 2017-04-06 00:00:00
+date: 2017-04-06 00:00:02
 categories: 编程语言
 tags: C C++ 内存分配
 excerpt: C&C++内存分配基础知识
