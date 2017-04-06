@@ -30,7 +30,7 @@ layout: default
 
         </div>
         <hr>
-        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <article itemscope itemtype="">
         {{content}}
         </article>
         <hr>
@@ -64,29 +64,28 @@ layout: default
 
         {% include previousAndNext.html %}
 
-        <h2 id="comments">Comments</h2>
-        {% include comments.html %}
-
 
     </div>
     <button class="anchor"><i class="fa fa-anchor"></i></button>
     <div class="right">
         <div class="wrap">
-
-            <!-- Content -->
-            <div class="side content">
+            <div class="side ">
                 <div>
-                    内容
+                    <i class="fa" aria-hidden="true"></i>
+                    文章分类
                 </div>
-                <ul id="content-side" class="content-ul">
-                    <li><a href="#similar_posts">Similar Posts</a></li>
-                    <li><a href="#comments">Comments</a></li>
+                <ul id="content-side" class="content-ul" recent>
+                    {% for category in site.categories%}
+                        <li>
+                            <a data-scroll href="#{{ category | first }}">
+                                {{ category | first }} ({{ category | last | size }})
+                            </a>
+                        </li>
+                    {% endfor %}
                 </ul>
+
             </div>
-            <!-- 其他div框放到这里 -->
-            <!-- <div class="side">bbbb</div> -->
-        </div>
-    </div>
+            
 </div>
 <script>
 /**

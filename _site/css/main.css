@@ -112,7 +112,7 @@ header {
   background: white;
   height: 50px;
   color: #666;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 10px rgba(10, 10, 0, 0.1) inset;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 3px rgba(2, 2, 0, 0.1) inset;
   margin-bottom: 20px; }
   header a {
     color: #666;
@@ -149,12 +149,12 @@ header {
             height: 52px;
             text-align: center; }
             header .wrapper nav ul li a:hover {
-              background-color: #eee; }
+              background-color: #dfdfdf; }
             header .wrapper nav ul li a i {
               margin-right: 6px; }
           header .wrapper nav ul li > .active {
             color: black;
-            background-color: #ddd;
+            background-color: #eee;
             box-shadow: 0 25px 25px -15px rgba(255, 255, 255, 0.93); }
 
 @media screen and (max-width: 1200px) and (min-width: 770px) {
@@ -299,9 +299,10 @@ header {
     float: left;
     padding: 20px 30px;
     line-height: 1.6;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: normal;
     background-color: #fff;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 10px rgba(10, 10, 0, 0.1) inset; }
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 3px rgba(2, 2, 0, 0.1) inset; }
     .page .left > h1 {
       margin-bottom: -10px; }
     .page .left a:not([title]) {
@@ -362,7 +363,7 @@ header {
     .page .right .side {
       box-sizing: border-box;
       background-color: white;
-      box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1), 0 0 10px rgba(10, 10, 0, 0.1) inset;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 3px rgba(2, 2, 0, 0.1) inset;
       padding-bottom: 1px;
       -ms-word-break: break-all;
       word-break: break-all;
@@ -373,12 +374,13 @@ header {
       -ms-hyphens: auto;
       hyphens: auto; }
       .page .right .side > div {
-        padding: 12px 15px;
-        border-bottom: 1px solid #c0c0c0;
-        font-size: 16px;
-        font-weight: bold; }
+        padding: 10px 10px;
+        border-bottom: 1px solid #eee;
+        font-size: 13px;
+        font-weight: normal; }
       .page .right .side a {
-        color: #4d6dad;
+        color: black;
+        font-size: 13px;
         transition: 0.5s ease; }
         .page .right .side a:hover {
           color: #223253; }
@@ -400,7 +402,7 @@ header {
       width: 100%;
       float: left;
       padding: 10px 14px;
-      font-size: 14px; }
+      font-size: 13px; }
       .page .left > h1 {
         font-size: 25px;
         margin-bottom: -10px; }
@@ -419,6 +421,7 @@ header {
             font-size: 16px; }
           .page .left ul li .categories {
             font-size: 10px;
+            background-color: #eee;
             padding-left: 0;
             padding-right: 10px;
             border-radius: 1px; }
@@ -705,9 +708,10 @@ pre {
         .page[index] .left > ul li .label .label-card i {
           padding-right: 0;
           margin-right: 3px;
-          color: #6b6a6a; }
+          color: #6b6a6a;
+          font-size: 10px; }
       .page[index] .left > ul li .label .categories {
-        padding: 0; }
+        padding: 12px 15px; }
     .page[index] .left > ul li .excerpt h2 {
       font-size: 20px; }
     .page[index] .left > ul li .excerpt h3 {
@@ -716,7 +720,7 @@ pre {
       font-size: 20px; }
     .page[index] .left > ul li .read-all {
       text-align: right;
-      font-size: 14px; }
+      font-size: 12px; }
       .page[index] .left > ul li .read-all a {
         color: #778ab0;
         transition: 0.2s ease; }
@@ -731,6 +735,7 @@ pre {
     font-size: 20px;
     padding: 0 5px; }
   .page[index] .left .pagination .page_number {
+    font-size: 16px;
     padding: 0 5px; }
   .page[index] .left .pagination .disable {
     color: #cbcbcb; }
@@ -745,7 +750,7 @@ pre {
     margin: 0;
     padding: 0; }
     .page[index] .right .wrap .side .content-ul[cate] li {
-      font-size: 14px; }
+      font-size: 16px; }
       .page[index] .right .wrap .side .content-ul[cate] li a {
         display: block;
         width: 100%;
@@ -797,57 +802,6 @@ pre {
     font-size: 16px; }
   .page[index] .left > ul li .excerpt li {
     margin: 0; } }
-.page[demo] .left {
-  width: 100%; }
-  .page[demo] .left a {
-    color: #4d6dad;
-    transition: 0.5s ease; }
-    .page[demo] .left a:hover {
-      color: #223253;
-      background-color: #f4efeb; }
-  .page[demo] .left .grid {
-    margin: 0 auto;
-    /* clearfix */ }
-    .page[demo] .left .grid:after {
-      content: '';
-      display: block;
-      clear: both; }
-    .page[demo] .left .grid .grid-item {
-      width: 250px;
-      background-color: #fff;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      float: left;
-      transition: 0.5s ease;
-      -webkit-transition: 0.5s ease;
-      -moz-transition: 0.5s ease;
-      -o-transition: 0.5s ease;
-      -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
-      .page[demo] .left .grid .grid-item:hover {
-        -webkit-box-shadow: 0 2px 30px -1px rgba(0, 0, 0, 0.6), inset 0 0 87px 0 rgba(184, 184, 184, 0.13);
-        -moz-box-shadow: 0 2px 30px -1px rgba(0, 0, 0, 0.6), inset 0 0 87px 0 rgba(184, 184, 184, 0.13);
-        box-shadow: 0 2px 30px -1px rgba(0, 0, 0, 0.6), inset 0 0 87px 0 rgba(184, 184, 184, 0.13); }
-      .page[demo] .left .grid .grid-item .a-img {
-        color: #fff; }
-        .page[demo] .left .grid .grid-item .a-img:hover {
-          color: #fff;
-          background-color: #fff; }
-      .page[demo] .left .grid .grid-item .demo-title {
-        font-size: 18px;
-        font-weight: bold;
-        margin: 0 8px; }
-      .page[demo] .left .grid .grid-item p {
-        margin: 0;
-        padding: 0 8px;
-        font-size: 14px; }
-
-.deep {
-  transition: 0.32s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  transform-style: preserve-3d;
-  transform: perspective(1600px) rotateX(14deg) translateZ(-200px); }
-
 .site-footer {
   position: absolute;
   right: 0;
@@ -855,7 +809,7 @@ pre {
   left: 0;
   text-align: center;
   background-color: #eee;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 10px rgba(10, 10, 0, 0.1) inset;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 3px rgba(2, 2, 0, 0.1) inset;
   color: black; }
   .site-footer .wrapper {
     width: 1140px;
@@ -923,7 +877,7 @@ pre {
   visibility: hidden;
   opacity: 0;
   transition: 0.4s ease;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 10px rgba(10, 10, 0, 0.1) inset; }
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 3px rgba(2, 2, 0, 0.1) inset; }
   .back-to-top a {
     display: block;
     background-color: #eee;

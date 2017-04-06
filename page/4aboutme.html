@@ -1,30 +1,34 @@
 ---
 layout: default
+title: 关于
+permalink: /aboutme/
+icon: about
+type: page
 ---
 
-<div class="page clearfix" post>
+<div class="page clearfix">
     <div class="left">
         <h1>{{page.title}}</h1>
         <hr>
-        {{content}}
+        
+        <p>这是woojean的个人博客。</p>
+
     </div>
+    
     <button class="anchor"><i class="fa fa-anchor"></i></button>
     <div class="right">
         <div class="wrap">
 
             <!-- Content -->
-            
             <div class="side content">
                 <div>
-                    内容
+                    联系我
                 </div>
-                <ul id="content-side" class="content-ul">
-                </ul>
+                <div>
+                    <label>QQ</label>: <span>168056828</span>
+                </div>
             </div>
-
-            <!-- 其他div框放到这里 -->
-            <!-- <div class="side">bbbb</div> -->
+            
         </div>
     </div>
 </div>
-<script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>

@@ -29,10 +29,11 @@
                             padding-right: 0;
                             margin-right: 3px;
                             color: #6b6a6a;
+                            font-size: 10px;
                         }
                     }
                     .categories {
-                        padding: 0;
+                        padding: 12px 15px;
                     }
                 }
                 .excerpt {
@@ -48,7 +49,7 @@
                 }
                 .read-all {
                     text-align: right;
-                    font-size: 14px;
+                    font-size: 12px;
                     a {
                         color: #778ab0;
                         transition: 0.2s ease;
@@ -70,6 +71,7 @@
                 padding: 0 5px;
             }
             .page_number {
+                font-size: 16px;
                 padding: 0 5px;
             }
             .disable {
@@ -91,7 +93,7 @@
                     margin: 0;
                     padding: 0;
                     li {
-                        font-size: 14px;
+                        font-size: 16px;
                         a {
                             display: block;
                             width: 100%;

@@ -4,9 +4,11 @@ layout: default
 
 <div class="page clearfix" index>
     <div class="left">
-        <h1>Welcome to Woojean's Blog!</h1>
+    
+        <!-- <h1>Welcome to Woojean's Blog!</h1>
         <small>todo</small>
-        <hr>
+        <hr> -->
+
         <ul>
             {% for post in paginator.posts %}
               <li>
@@ -83,10 +85,20 @@ layout: default
             <!-- Content -->
             <div class="side ">
                 <div>
-                    <i class="fa"></i>
+                    <i class="fa" aria-hidden="true"></i>
                     文章分类
                 </div>
-                <ul class="content-ul" cate>
+                <ul id="content-side" class="content-ul" recent>
+                    {% for category in site.categories%}
+                        <li>
+                            <a data-scroll href="#{{ category | first }}">
+                                {{ category | first }} ({{ category | last | size }})
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                <!-- <ul class="content-ul" cate>
                     {% for category in site.categories %}
                     <li>
                         <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
@@ -97,8 +109,9 @@ layout: default
                         </a>
                     </li>
                     {% endfor %}
-                </ul>
+                </ul> -->
             </div>
+            
             <!-- 其他div框放到这里 -->
             <div class="side">
                 <div>

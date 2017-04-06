@@ -17,9 +17,10 @@
         float: left;
         padding: 20px 30px;
         line-height: 1.6;
-        font-size: 16px;
+        font-size: 14px;
+        font-weight:normal;
         background-color: #fff;
-        box-shadow: 0 1px 1px rgba(0,0,0,0.2),0 0 10px rgba(10,10,0,0.1) inset;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.1),0 0 3px rgba(2,2,0,0.1) inset;
         >h1 {
             margin-bottom: -10px;
         }
@@ -105,7 +106,7 @@
         .side {
             box-sizing: border-box;
             background-color: white;
-            box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1), 0 0 10px rgba(10, 10, 0, 0.1) inset;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1),0 0 3px rgba(2,2,0,0.1) inset;
             padding-bottom: 1px;
             -ms-word-break: break-all;
             word-break: break-all;
@@ -116,15 +117,17 @@
             -ms-hyphens: auto;
             hyphens: auto;
             >div {
-                padding: 12px 15px;
+                padding: 10px 10px;
 
                 // margin-right: -10px;
-                border-bottom: 1px solid #c0c0c0;
-                font-size: 16px;
-                font-weight: bold;
+                border-bottom: 1px solid #eee;
+                
+                font-size: 13px;
+                font-weight: normal;
             }
             a {
-                color: #4d6dad;
+                color: black;
+                font-size: 13px;
                 transition: 0.5s ease;
                 &:hover {
                     color: #223253;
@@ -154,7 +157,7 @@
             width: 100%;
             float: left;
             padding: 10px 14px;
-            font-size: 14px;
+            font-size: 13px;
             >h1 {
                 font-size: 25px;
                 margin-bottom: -10px;
@@ -179,6 +182,7 @@
                     }
                     .categories {
                         font-size: 10px;
+                        background-color: #eee;
                         padding-left: 0;
                         padding-right: 10px;
                         border-radius: 1px;
