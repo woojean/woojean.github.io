@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello World !"
-date: 2017-04-06 00:00:00
+date: 2017-04-05 00:00:00
 categories: 〇
 tags: 〇
 excerpt: 〇
