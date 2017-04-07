@@ -25,13 +25,18 @@ function scan($dir){
 $drafts = scan('../_drafts');
 $posts = scan('../_posts');
 
+$num = 0;
 foreach ($drafts as $key => $draftPath) {
 	$draftContent = file_get_contents($draftPath);
-	$keyword = substr($draftContent, 50,65);
+	//$keyword = substr($draftContent, 50,65);
+	$keyword = substr($draftContent, 47,57);
 
 	foreach ($posts as $key => $postPath) {
 		$postContent = file_get_contents($postPath);
-		if(strpos($postContent, $keyword)){
+		if(strpos($postContent, $keyword)
+			&& !strpos($keyword, 'image')
+			&& !strpos($keyword, 'github')
+			&& !strpos($keyword, 'woojean')){
 			echo $draftPath;
 			echo " -> ";
 			echo $postPath;
@@ -39,11 +44,13 @@ foreach ($drafts as $key => $draftPath) {
 			echo $keyword;
 			echo "\n\n";
 
+			$num += 1;
+			
 			unlink($draftPath);
 			break;
 		}
 	}
 }
 
-//file_put_contents('draft', $s);
+var_dump($num);
 

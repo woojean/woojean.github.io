@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "《ECMAScript 6入门》读书笔记"
-date: 2017-04-07 00:00:08
+date: 2017-04-07 00:00:09
 categories: 编程语言
 tags: 笔记 JavaScript
 excerpt: ""
@@ -665,8 +665,8 @@ ES7新增了一个指数运算符（**）
 
 ### Array.from()
 用于将两类对象转为真正的数组：
-1.类似数组的对象（array-like object）
-2.可遍历（iterable）的对象（包括ES6新增的数据结构Set和Map，只要是部署了Iterator接口的数据结构，Array.from都能将其转为数组）
+1. 类似数组的对象（array-like object）
+2. 可遍历（iterable）的对象（包括ES6新增的数据结构Set和Map，只要是部署了Iterator接口的数据结构，Array.from都能将其转为数组）
 ```javascript
 let arrayLike = {
     '0': 'a',
@@ -959,7 +959,7 @@ var getTempItem = id => ({ id: id, name: "Temp" });
 ```
 
 箭头函数有几个使用注意点：
-1.函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
+1. 函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
 ```javascript
 function foo() {
   setTimeout(() => {
@@ -972,9 +972,9 @@ var id = 21;
 foo.call({ id: 42 });
 // id: 42
 ```
-2.不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。
-3.不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用Rest参数代替。
-4.不可以使用yield命令，因此箭头函数不能用作Generator函数。
+2. 不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。
+3. 不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用Rest参数代替。
+4. 不可以使用yield命令，因此箭头函数不能用作Generator函数。
 
 箭头函数中this指向的固定化，并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this，导致内部的this就是外层代码块的this。正是因为它没有this，所以也就不能用作构造函数。箭头函数转成ES5的代码如下：
 ```javascript
@@ -1247,9 +1247,9 @@ Object.getOwnPropertyDescriptor(obj, 'foo')
 //  }
 ```
 ES5有三个操作会忽略enumerable为false的属性。
-1.for...in循环：只遍历对象自身的和继承的可枚举的属性
-2.Object.keys()：返回对象自身的所有可枚举的属性的键名
-3.JSON.stringify()：只串行化对象自身的可枚举的属性
+1. for...in循环：只遍历对象自身的和继承的可枚举的属性
+2. Object.keys()：返回对象自身的所有可枚举的属性的键名
+3. JSON.stringify()：只串行化对象自身的可枚举的属性
 ES6新增了一个操作Object.assign()，会忽略enumerable为false的属性，只拷贝对象自身的可枚举的属性。
 这四个操作之中，只有for...in会返回继承的属性。
 另外，ES6规定，所有Class的原型的方法都是不可枚举的。
@@ -1260,19 +1260,19 @@ Object.getOwnPropertyDescriptor(class {foo() {}}.prototype, 'foo').enumerable
 
 ### 属性的遍历
 ES6一共有5种方法可以遍历对象的属性。
-1.`for...in`
+1. `for...in`
 for...in循环遍历对象自身的和继承的可枚举属性（不含Symbol属性）。
 
-2.`Object.keys(obj)`
+2. `Object.keys(obj)`
 Object.keys返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含Symbol属性）。
 
-3.`Object.getOwnPropertyNames(obj)`
+3. `Object.getOwnPropertyNames(obj)`
 Object.getOwnPropertyNames返回一个数组，包含对象自身的所有属性（不含Symbol属性，但是包括不可枚举属性）。
 
-4.`Object.getOwnPropertySymbols(obj)`
+4. `Object.getOwnPropertySymbols(obj)`
 Object.getOwnPropertySymbols返回一个数组，包含对象自身的所有Symbol属性。
 
-5.`Reflect.ownKeys(obj)`
+5. `Reflect.ownKeys(obj)`
 Reflect.ownKeys返回一个数组，包含对象自身的所有属性，不管是属性名是Symbol或字符串，也不管是否可枚举。
 
 以上的5种方法遍历对象的属性，都遵守同样的属性遍历的次序规则：
@@ -1517,9 +1517,9 @@ module.exports = global[FOO_KEY];
 
 ### 内置的Symbol值
 ES6还提供了11个内置的Symbol值，指向语言内部使用的方法：
-1.Symbol.hasInstance：foo instanceof Foo在语言内部，实际调用的是Foo[Symbol.hasInstance](foo)
+1. Symbol.hasInstance：foo instanceof Foo在语言内部，实际调用的是Foo[Symbol.hasInstance](foo)
 
-2.Symbol.isConcatSpreadable：表示该对象使用Array.prototype.concat()时，是否可以展开
+2. Symbol.isConcatSpreadable：表示该对象使用Array.prototype.concat()时，是否可以展开
 ```javascript
 let arr1 = ['c', 'd'];
 ['a', 'b'].concat(arr1, 'e') // ['a', 'b', 'c', 'd', 'e']
@@ -1530,17 +1530,17 @@ arr2[Symbol.isConcatSpreadable] = false;
 ['a', 'b'].concat(arr2, 'e') // ['a', 'b', ['c','d'], 'e']
 ```
 
-3.Symbol.species:指向一个方法。该对象作为构造函数创造实例时，会调用这个方法。即如果this.constructor[Symbol.species]存在，就会使用这个属性作为构造函数，来创造新的实例对象。
+3. Symbol.species:指向一个方法。该对象作为构造函数创造实例时，会调用这个方法。即如果this.constructor[Symbol.species]存在，就会使用这个属性作为构造函数，来创造新的实例对象。
 
-4.Symbol.match :指向一个函数。当执行str.match(myObject)时，如果该属性存在，会调用它，返回该方法的返回值
+4. Symbol.match :指向一个函数。当执行str.match(myObject)时，如果该属性存在，会调用它，返回该方法的返回值
 
-5.Symbol.replace:指向一个方法，当该对象被String.prototype.replace方法调用时，会返回该方法的返回值。
+5. Symbol.replace:指向一个方法，当该对象被String.prototype.replace方法调用时，会返回该方法的返回值。
 
-6.Symbol.search:指向一个方法，当该对象被String.prototype.search方法调用时，会返回该方法的返回值。
+6. Symbol.search:指向一个方法，当该对象被String.prototype.search方法调用时，会返回该方法的返回值。
 
-7.Symbol.split:指向一个方法，当该对象被String.prototype.split方法调用时，会返回该方法的返回值。
+7. Symbol.split:指向一个方法，当该对象被String.prototype.split方法调用时，会返回该方法的返回值。
 
-8.Symbol.iterator:指向该对象的默认遍历器方法
+8. Symbol.iterator:指向该对象的默认遍历器方法
 ```javascript
 var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
@@ -1552,9 +1552,9 @@ myIterable[Symbol.iterator] = function* () {
 [...myIterable] // [1, 2, 3]
 ```
 
-9.Symbol.toPrimitive：指向一个方法。该对象被转为原始类型的值时，会调用这个方法，返回该对象对应的原始类型值。
+9. Symbol.toPrimitive：指向一个方法。该对象被转为原始类型的值时，会调用这个方法，返回该对象对应的原始类型值。
 
-10.Symbol.toStringTag：指向一个方法。在该对象上面调用Object.prototype.toString方法时，如果这个属性存在，它的返回值会出现在toString方法返回的字符串之中，表示对象的类型。也就是说，这个属性可以用来定制[object Object]或[object Array]中object后面的那个字符串。ES6新增内置对象的Symbol.toStringTag属性值如下：
+10. Symbol.toStringTag：指向一个方法。在该对象上面调用Object.prototype.toString方法时，如果这个属性存在，它的返回值会出现在toString方法返回的字符串之中，表示对象的类型。也就是说，这个属性可以用来定制[object Object]或[object Array]中object后面的那个字符串。ES6新增内置对象的Symbol.toStringTag属性值如下：
 JSON[Symbol.toStringTag]：'JSON'
 Math[Symbol.toStringTag]：'Math'
 Module对象M[Symbol.toStringTag]：'Module'
@@ -1573,7 +1573,7 @@ Symbol.prototype[Symbol.toStringTag]：'Symbol'
 Generator.prototype[Symbol.toStringTag]：'Generator'
 GeneratorFunction.prototype[Symbol.toStringTag]：'GeneratorFunction'
 
-11.Symbol.unscopables：指向一个对象。该对象指定了使用with关键字时，哪些属性会被with环境排除。
+11. Symbol.unscopables：指向一个对象。该对象指定了使用with关键字时，哪些属性会被with环境排除。
 
 
 ## 第11章 Proxy和Reflect
@@ -1603,45 +1603,45 @@ obj.count = 1
 
 ### Proxy支持的拦截操作
 对于可以设置、但没有设置拦截的操作，则直接落在目标对象上，按照原先的方式产生结果。
-1.get(target, propKey, receiver)
+1. get(target, propKey, receiver)
 拦截对象属性的读取，比如proxy.foo和proxy['foo']。
 参数receiver是一个对象，可选。
 
-2.set(target, propKey, value, receiver)
+2. set(target, propKey, value, receiver)
 拦截对象属性的设置，比如proxy.foo = v或proxy['foo'] = v，返回一个布尔值。
 
-3.has(target, propKey)
+3. has(target, propKey)
 拦截propKey in proxy的操作，以及对象的hasOwnProperty方法，返回一个布尔值。
 
-4.deleteProperty(target, propKey)
+4. deleteProperty(target, propKey)
 拦截delete proxy[propKey]的操作，返回一个布尔值。
 
-5.ownKeys(target)
+5. ownKeys(target)
 拦截Object.getOwnPropertyNames(proxy)、Object.getOwnPropertySymbols(proxy)、Object.keys(proxy)，返回一个数组。该方法返回对象所有自身的属性，而Object.keys()仅返回对象可遍历的属性。
 
-6.getOwnPropertyDescriptor(target, propKey)
+6. getOwnPropertyDescriptor(target, propKey)
 拦截Object.getOwnPropertyDescriptor(proxy, propKey)，返回属性的描述对象。
 
-7.defineProperty(target, propKey, propDesc)
+7. defineProperty(target, propKey, propDesc)
 拦截Object.defineProperty(proxy, propKey, propDesc）、Object.defineProperties(proxy, propDescs)，返回一个布尔值。
 
-8.preventExtensions(target)
+8. preventExtensions(target)
 拦截Object.preventExtensions(proxy)，返回一个布尔值。
 
-9.getPrototypeOf(target)
+9. getPrototypeOf(target)
 拦截Object.getPrototypeOf(proxy)，返回一个对象。
 
-10.isExtensible(target)
+10. isExtensible(target)
 拦截Object.isExtensible(proxy)，返回一个布尔值。
 
-11.setPrototypeOf(target, proto)
+11. setPrototypeOf(target, proto)
 拦截Object.setPrototypeOf(proxy, proto)，返回一个布尔值。
 如果目标对象是函数，那么还有两种额外操作可以拦截。
 
-12.apply(target, object, args)
+12. apply(target, object, args)
 拦截Proxy实例作为函数调用的操作，比如proxy(...args)、proxy.call(object, ...args)、proxy.apply(...)。
 
-13.construct(target, args)
+13. construct(target, args)
 拦截Proxy实例作为构造函数调用的操作，比如new proxy(...args)。
 
 ### Proxy.revocable()
@@ -1661,13 +1661,13 @@ proxy.foo // TypeError: Revoked
 
 ### Reflect
 Reflect对象的设计目的有这样几个：
-1.将Object对象的一些明显属于语言内部的方法（比如Object.defineProperty），放到Reflect对象上。现阶段，某些方法同时在Object和Reflect对象上部署，未来的新方法将只部署在Reflect对象上。
+1. 将Object对象的一些明显属于语言内部的方法（比如Object.defineProperty），放到Reflect对象上。现阶段，某些方法同时在Object和Reflect对象上部署，未来的新方法将只部署在Reflect对象上。
 
-2.修改某些Object方法的返回结果，让其变得更合理。比如，Object.defineProperty(obj, name, desc)在无法定义属性时，会抛出一个错误，而Reflect.defineProperty(obj, name, desc)则会返回false。
+2. 修改某些Object方法的返回结果，让其变得更合理。比如，Object.defineProperty(obj, name, desc)在无法定义属性时，会抛出一个错误，而Reflect.defineProperty(obj, name, desc)则会返回false。
 
-3.让Object操作都变成函数行为。某些Object操作是命令式，比如name in obj和delete obj[name]，而Reflect.has(obj, name)和Reflect.deleteProperty(obj, name)让它们变成了函数行为。
+3. 让Object操作都变成函数行为。某些Object操作是命令式，比如name in obj和delete obj[name]，而Reflect.has(obj, name)和Reflect.deleteProperty(obj, name)让它们变成了函数行为。
 
-4.Reflect对象的方法与Proxy对象的方法一一对应，只要是Proxy对象的方法，就能在Reflect对象上找到对应的方法。这就`让Proxy对象可以方便地调用对应的Reflect方法，完成默认行为，作为修改行为的基础`。也就是说，`不管Proxy怎么修改默认行为，总可以在Reflect上获取默认行为`：
+4. Reflect对象的方法与Proxy对象的方法一一对应，只要是Proxy对象的方法，就能在Reflect对象上找到对应的方法。这就`让Proxy对象可以方便地调用对应的Reflect方法，完成默认行为，作为修改行为的基础`。也就是说，`不管Proxy怎么修改默认行为，总可以在Reflect上获取默认行为`：
 ```javascript
 var loggedObj = new Proxy(obj, {
   get(target, name) {
@@ -1726,11 +1726,11 @@ Reflect.setPrototypeOf(target, prototype)
 二进制数组允许开发者`以数组下标的形式，直接操作内存`，`使得开发者有可能通过JavaScript与操作系统的原生接口进行二进制通信`。
 
 ### 二进制数组由三类对象组成
-1.`ArrayBuffer`对象：代表内存之中的一段二进制数据，可以通过“视图”进行操作。“视图”部署了数组接口，这意味着，可以用数组的方法操作内存。
+1. `ArrayBuffer`对象：代表内存之中的一段二进制数据，可以通过“视图”进行操作。“视图”部署了数组接口，这意味着，可以用数组的方法操作内存。
 
-2.`TypedArray`视图：是一组不同类型视图的统称，共包括9种类型的视图，比如Uint8Array（无符号8位整数）数组视图, Int16Array（16位整数）数组视图, Float32Array（32位浮点数）数组视图等等。
+2. `TypedArray`视图：是一组不同类型视图的统称，共包括9种类型的视图，比如Uint8Array（无符号8位整数）数组视图, Int16Array（16位整数）数组视图, Float32Array（32位浮点数）数组视图等等。
 
-3.`DataView`视图：可以自定义复合格式的视图，比如第一个字节是Uint8（无符号8位整数）、第二、三个字节是Int16（16位整数）、第四个字节开始是Float32（32位浮点数）等等，此外还可以自定义字节序。
+3. `DataView`视图：可以自定义复合格式的视图，比如第一个字节是Uint8（无符号8位整数）、第二、三个字节是Int16（16位整数）、第四个字节开始是Float32（32位浮点数）等等，此外还可以自定义字节序。
 
 即，ArrayBuffer对象代表原始的二进制数据，TypedArray视图用来读写简单类型的二进制数据，DataView视图用来读写复杂类型的二进制数据。
 
@@ -1779,10 +1779,10 @@ ArrayBuffer.isView(v) // true
 
 ### TypedArray视图
 普通数组与TypedArray数组的差异主要在以下方面：
-1.TypedArray数组的所有成员，都是同一种类型。
-2.TypedArray数组的成员是连续的，不会有空位。
-3.TypedArray数组成员的默认值为0。比如，new Array(10)返回一个普通数组，里面没有任何成员，只是10个空位；new Uint8Array(10)返回一个TypedArray数组，里面10个成员都是0。
-4.TypedArray数组只是一层视图，`本身不储存数据`，它的数据都储存在底层的ArrayBuffer对象之中，要获取底层对象必须使用buffer属性。
+1. TypedArray数组的所有成员，都是同一种类型。
+2. TypedArray数组的成员是连续的，不会有空位。
+3. TypedArray数组成员的默认值为0。比如，new Array(10)返回一个普通数组，里面没有任何成员，只是10个空位；new Uint8Array(10)返回一个TypedArray数组，里面10个成员都是0。
+4. TypedArray数组只是一层视图，`本身不储存数据`，它的数据都储存在底层的ArrayBuffer对象之中，要获取底层对象必须使用buffer属性。
 
 视图可以不通过ArrayBuffer对象，直接分配内存而生成：
 ```javascript
@@ -1880,8 +1880,8 @@ let difference = new Set([...a].filter(x => !b.has(x)));
 
 ### WeakSet
 WeakSet与Set有两个区别：
-1.WeakSet的成员只能是对象，而不能是其他类型的值。
-2.WeakSet中的对象都是弱引用，即垃圾回收机制不考虑WeakSet对该对象的引用，也就是说，如果其他对象都不再引用该对象，那么垃圾回收机制会自动回收该对象所占用的内存，不考虑该对象还存在于WeakSet之中。这个特点意味着，无法引用WeakSet的成员（WeakSet没有size属性），因此WeakSet是不可遍历的。
+1. WeakSet的成员只能是对象，而不能是其他类型的值。
+2. WeakSet中的对象都是弱引用，即垃圾回收机制不考虑WeakSet对该对象的引用，也就是说，如果其他对象都不再引用该对象，那么垃圾回收机制会自动回收该对象所占用的内存，不考虑该对象还存在于WeakSet之中。这个特点意味着，无法引用WeakSet的成员（WeakSet没有size属性），因此WeakSet是不可遍历的。
 WeakSet的一个用处，是储存DOM节点，而不用担心这些节点从文档移除时，会引发内存泄漏。
 
 ### Map
@@ -1959,15 +1959,15 @@ myElement.addEventListener('click', function() {
 ## 第14章 Iterator和for...of循环
 
 Iterator的作用有三个：
-1.为各种数据结构，提供一个统一的、简便的访问接口；
-2.使得数据结构的成员能够按某种次序排列；
-3.ES6创造了一种新的遍历命令for...of循环，Iterator接口主要供for...of消费。
+1. 为各种数据结构，提供一个统一的、简便的访问接口；
+2. 使得数据结构的成员能够按某种次序排列；
+3. ES6创造了一种新的遍历命令for...of循环，Iterator接口主要供for...of消费。
 
 Iterator的遍历过程：
-1.创建一个指针对象，指向当前数据结构的起始位置。也就是说，遍历器对象本质上，就是一个指针对象。
-2.第一次调用指针对象的next方法，可以将指针指向数据结构的第一个成员。
-3.第二次调用指针对象的next方法，指针就指向数据结构的第二个成员。
-4.不断调用指针对象的next方法，直到它指向数据结构的结束位置。
+1. 创建一个指针对象，指向当前数据结构的起始位置。也就是说，遍历器对象本质上，就是一个指针对象。
+2. 第一次调用指针对象的next方法，可以将指针指向数据结构的第一个成员。
+3. 第二次调用指针对象的next方法，指针就指向数据结构的第二个成员。
+4. 不断调用指针对象的next方法，直到它指向数据结构的结束位置。
 每一次调用next方法，都会返回数据结构的当前成员的信息。具体来说，就是返回一个包含value和done两个属性的对象。其中，value属性是当前成员的值，done属性是一个布尔值，表示遍历是否结束。
 
 由于Iterator只是把接口规格加到数据结构之上，所以，遍历器与它所遍历的那个数据结构，实际上是分开的，完全可以写出没有对应数据结构的遍历器对象，或者说用遍历器对象模拟出数据结构：
@@ -2053,10 +2053,10 @@ for (let item of iterable) {
 ```
 
 ### 默认调用Iterator接口（即Symbol.iterator方法）的场合
-1.解构赋值
-2.扩展运算符
-3.yield*
-4.由于数组的遍历会调用遍历器接口，所以任何接受数组作为参数的场合，其实都调用了遍历器接口，如：
+1. 解构赋值
+2. 扩展运算符
+3. yield*
+4. 由于数组的遍历会调用遍历器接口，所以任何接受数组作为参数的场合，其实都调用了遍历器接口，如：
 for...of
 Array.from()
 Map(), Set(), WeakMap(), WeakSet()（比如new Map([['a',1],['b',2]])）
@@ -2150,10 +2150,10 @@ hw.next()
 
 ### yield语句
 遍历器对象的next方法的运行逻辑如下：
-1.遇到yield语句，就暂停执行后面的操作，并将紧跟在yield后面的那个表达式的值，作为返回的对象的value属性值。
-2.下一次调用next方法时，再继续往下执行，直到遇到下一个yield语句。
-3.如果没有再遇到新的yield语句，就一直运行到函数结束，直到return语句为止，并将return语句后面的表达式的值，作为返回的对象的value属性值。
-4.如果该函数没有return语句，则返回的对象的value属性值为undefined。
+1. 遇到yield语句，就暂停执行后面的操作，并将紧跟在yield后面的那个表达式的值，作为返回的对象的value属性值。
+2. 下一次调用next方法时，再继续往下执行，直到遇到下一个yield语句。
+3. 如果没有再遇到新的yield语句，就一直运行到函数结束，直到return语句为止，并将return语句后面的表达式的值，作为返回的对象的value属性值。
+4. 如果该函数没有return语句，则返回的对象的value属性值为undefined。
 
 yield语句与return语句既有相似之处，也有区别。相似之处在于，都能返回紧跟在语句后面的那个表达式的值。区别在于每次遇到yield，函数暂停执行，`下一次再从该位置继续向后执行`，而return语句不具备位置记忆的功能。一个函数里面，只能执行一次（或者说一个）return语句，但是可以执行多次（或者说多个）yield语句。正常函数只能返回一个值，因为只能执行一次return；Generator函数可以返回一系列的值，因为可以有任意多个yield。从另一个角度看，也可以说Generator生成了一系列的值。
 
@@ -2373,8 +2373,8 @@ Generator函数是ECMAScript 6对协程的实现，但属于不完全实现。Ge
 ## 第16章 Promise对象
 ES6原生提供了Promise对象。
 Promise对象有以下两个特点。
-1.对象的状态不受外界影响。Promise对象代表一个异步操作，有三种状态：Pending（进行中）、Resolved（已完成，又称Fulfilled）和Rejected（已失败）。只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。这也是Promise这个名字的由来，它的英语意思就是“承诺”，表示其他手段无法改变。
-2.一旦状态改变，就不会再变，任何时候都可以得到这个结果。Promise对象的状态改变，只有两种可能：从Pending变为Resolved和从Pending变为Rejected。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果。就算改变已经发生了，你再对Promise对象添加回调函数，也会立即得到这个结果。这与事件（Event）完全不同，事件的特点是，如果你错过了它，再去监听，是得不到结果的。
+1. 对象的状态不受外界影响。Promise对象代表一个异步操作，有三种状态：Pending（进行中）、Resolved（已完成，又称Fulfilled）和Rejected（已失败）。只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。这也是Promise这个名字的由来，它的英语意思就是“承诺”，表示其他手段无法改变。
+2. 一旦状态改变，就不会再变，任何时候都可以得到这个结果。Promise对象的状态改变，只有两种可能：从Pending变为Resolved和从Pending变为Rejected。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果。就算改变已经发生了，你再对Promise对象添加回调函数，也会立即得到这个结果。这与事件（Event）完全不同，事件的特点是，如果你错过了它，再去监听，是得不到结果的。
 有了Promise对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。此外，Promise对象提供统一的接口，使得控制异步操作更加容易。
 Promise也有一些缺点。首先，无法取消Promise，一旦新建它就会立即执行，无法中途取消。其次，如果不设置回调函数，Promise内部抛出的错误，不会反应到外部。第三，当处于Pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。
 Promise构造函数接受一个函数作为参数，该函数的两个参数分别是resolve和reject：
@@ -2449,8 +2449,8 @@ Promise.all方法用于将多个Promise实例，包装成一个新的Promise实�
 var p = Promise.all([p1, p2, p3]);  // p1、p2、p3都是Promise对象的实例，如果不是，就会先调用Promise.resolve方法，将参数转为Promise实例，再进一步处理
 
 p的状态由p1、p2、p3决定，分成两种情况:
-1.只有p1、p2、p3的状态都变成fulfilled，p的状态才会变成fulfilled，此时p1、p2、p3的返回值组成一个数组，传递给p的回调函数。
-2.只要p1、p2、p3之中有一个被rejected，p的状态就变成rejected，此时第一个被reject的实例的返回值，会传递给p的回调函数。
+1. 只有p1、p2、p3的状态都变成fulfilled，p的状态才会变成fulfilled，此时p1、p2、p3的返回值组成一个数组，传递给p的回调函数。
+2. 只要p1、p2、p3之中有一个被rejected，p的状态就变成rejected，此时第一个被reject的实例的返回值，会传递给p的回调函数。
 ```javascript
 // 生成一个Promise对象的数组
 var promises = [2, 3, 5, 7, 11, 13].map(function (id) {
@@ -2482,16 +2482,16 @@ p.catch(error => console.log(error))
 
 ### Promise.resolve()
 将现有对象转为Promise对象。参数分成四种情况：
-1.参数是一个Promise实例
+1. 参数是一个Promise实例
 如果参数是Promise实例，那么Promise.resolve将不做任何修改、原封不动地返回这个实例。
 
-2.参数是一个thenable对象
+2. 参数是一个thenable对象
 thenable对象指的是具有then方法的对象，Promise.resolve会将这个对象转为Promise对象，然后就立即执行thenable对象的then方法。
 
-3.参数不是具有then方法的对象，或根本就不是对象
+3. 参数不是具有then方法的对象，或根本就不是对象
 Promise.resolve返回一个新的Promise对象，状态为Resolved。
 
-4.不带有任何参数
+4. 不带有任何参数
 直接返回一个Resolved状态的Promise对象。所以，如果希望得到一个Promise对象，比较方便的方法就是直接调用Promise.resolve方法。
 
 需要注意的是，立即resolve的Promise对象，是在本轮“事件循环”（event loop）的结束时，而不是在下一轮“事件循环”的开始时：
@@ -2690,20 +2690,20 @@ var asyncReadFile = async function (){
 };
 ```
 async函数对 Generator 函数的改进，体现在以下四点。
-1.内置执行器。Generator函数的执行必须靠执行器，所以才有了co模块，而async函数自带执行器。也就是说，async函数的执行，与普通函数一模一样，只要一行。
+1. 内置执行器。Generator函数的执行必须靠执行器，所以才有了co模块，而async函数自带执行器。也就是说，async函数的执行，与普通函数一模一样，只要一行。
   var result = asyncReadFile();
 上面的代码调用了asyncReadFile函数，然后它就会自动执行，输出最后结果。这完全不像Generator函数，需要调用next方法，或者用co模块，才能得到真正执行，得到最后结果。
 
-2.更好的语义。async和await，比起星号和yield，语义更清楚了。async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果。
+2. 更好的语义。async和await，比起星号和yield，语义更清楚了。async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果。
 
-3.更广的适用性。 co模块约定，yield命令后面只能是Thunk函数或Promise对象，而async函数的await命令后面，可以是Promise对象和原始类型的值（数值、字符串和布尔值，但这时等同于同步操作）。
+3. 更广的适用性。 co模块约定，yield命令后面只能是Thunk函数或Promise对象，而async函数的await命令后面，可以是Promise对象和原始类型的值（数值、字符串和布尔值，但这时等同于同步操作）。
 
-4.返回值是Promise。async函数的返回值是Promise对象，这比Generator函数的返回值是Iterator对象方便多了。可以用then方法指定下一步的操作。
+4. 返回值是Promise。async函数的返回值是Promise对象，这比Generator函数的返回值是Iterator对象方便多了。可以用then方法指定下一步的操作。
 
 进一步说，async函数完全可以看作多个异步操作，包装成的一个Promise对象，而await命令就是内部then命令的语法糖。
 
 ### async函数语法
-1.async函数返回一个Promise对象
+1. async函数返回一个Promise对象
 async函数内部return语句返回的值，会成为then方法回调函数的参数:
 ```javascript
 async function f() {
@@ -2715,11 +2715,11 @@ f().then(v => console.log(v))
 ```
 async函数内部抛出错误，会导致返回的Promise对象变为reject状态。抛出的错误对象会被catch方法回调函数接收到。
 
-2.async函数返回的Promise对象，必须等到内部所有await命令的Promise对象执行完，才会发生状态改变。也就是说，只有async函数内部的异步操作执行完，才会执行then方法指定的回调函数。
+2. async函数返回的Promise对象，必须等到内部所有await命令的Promise对象执行完，才会发生状态改变。也就是说，只有async函数内部的异步操作执行完，才会执行then方法指定的回调函数。
 
-3.正常情况下，await命令后面是一个Promise对象。如果不是，会被转成一个立即resolve的Promise对象。
+3. 正常情况下，await命令后面是一个Promise对象。如果不是，会被转成一个立即resolve的Promise对象。
 
-4.如果await后面的异步操作出错，那么等同于async函数返回的Promise对象被reject。
+4. 如果await后面的异步操作出错，那么等同于async函数返回的Promise对象被reject。
 
 ### async函数的实现
 async 函数的实现，就是将 Generator 函数和自动执行器，包装在一个函数里：
@@ -2948,8 +2948,8 @@ ES5的继承，实质是先创造子类的实例对象this，然后再将父类�
 
 ### 类的prototype属性和__proto__属性
 Class作为构造函数的语法糖，同时有prototype属性和__proto__属性，因此同时存在两条继承链。
-1.子类的__proto__属性，表示`构造函数的继承`，总是指向父类。
-2.子类prototype属性的__proto__属性，表示`方法的继承`，总是指向父类的prototype属性。
+1. 子类的__proto__属性，表示`构造函数的继承`，总是指向父类。
+2. 子类prototype属性的__proto__属性，表示`方法的继承`，总是指向父类的prototype属性。
 ```javascript
 class A {
 }
@@ -3019,8 +3019,8 @@ Object.getPrototypeOf(ColorPoint) === Point
 
 ### super关键字
 super这个关键字，有两种用法，含义不同。
-1.作为函数调用时（即super(...args)），super代表父类的构造函数。
-2.作为对象调用时（即super.prop或super.method()），super代表父类。注意，此时super即可以引用父类实例的属性和方法，也可以引用父类的静态方法。
+1. 作为函数调用时（即super(...args)），super代表父类的构造函数。
+2. 作为对象调用时（即super.prop或super.method()），super代表父类。注意，此时super即可以引用父类实例的属性和方法，也可以引用父类的静态方法。
 
 ### 实例的__proto__属性
 子类实例的__proto__属性的__proto__属性，指向父类实例的__proto__属性。也就是说，子类的原型的原型，是父类的原型。

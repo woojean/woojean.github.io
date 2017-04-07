@@ -1,4 +1,4 @@
-# 求最大的子序列和的联机算法（C）
+# 求最大的子序 列和的联机算法（C）
 
 ```c++
 int  MaxSubSequenceSum(const int arr[],int len){
