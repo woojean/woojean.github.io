@@ -9,7 +9,7 @@
 title: woojean的博客
 brief-intro: 纸上谈兵
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://github.com/woojean" # the base hostname & protocol for your site
+url: "http://woojean.com" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
