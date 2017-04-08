@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "在Macbook上搭建Thrift+Swoole实现的RPC执行环境"
-date: 2017-04-08 00:00:01
-categories: 配置记录
-tags: Mac Thrift Swoole RPC
+date: 2017-04-05 00:00:01
+categories: 配置开发环境
+tags: Thrift Swoole
 excerpt: ""
 ---
 

@@ -1,70 +1,37 @@
 <?php
 
 
+$aboutme = '../page/4aboutme.html';
 
- function scan($dir){
-    $result = [];
-    $handle = opendir($dir);
-    if ( $handle ){
-        while ( ( $file = readdir ( $handle ) ) !== false ){
-            if ( $file != '.' && $file != '..' && $file != '.DS_Store'){
-                $absPath = $dir . DIRECTORY_SEPARATOR . $file;
-                if ( is_dir ( $absPath ) ){
-                    $result['dirs'][$absPath] = scan( $absPath );
-                }
-                else{
-                    $result['files'][] = [
-                        'name' => str_replace('.md', '', $file),
-                        'path' => $absPath,
-                        'size' => filesize($absPath)
+$content = '---
+layout: default
+title: 关于
+permalink: /aboutme/
+icon: about
+type: page
+---
 
-                    ];
+<div class="page clearfix">
+    <div class="left">
+        <h1>{{page.title}}</h1>
+        <hr>
+        
+        <p>这是woojean的个人博客。</p>
+        <p>2017年4月5日将个人之前的读书笔记、日常遇到问题的总结等搬家到该博客。</p>
+        <p></p>
 
-                    // record errorfile
-                    if( strpos($file, ' ') 
-                        || strpos($file, '+')
-                        || strpos($file, '<')
-                        || strpos($file, '>')
-                        || strpos($file, '#')){
-
-                    }
-                }
-            }
-        }
-        closedir($handle);
-    }
+        <p>最后更新时间：$updatedat$</p>
+    </div>
     
-    return $result;
-}
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+</div>
+';
 
-//$data = scan('_drafts');
-$data = scan('_drafts');
+$updatedat = date('Y-m-d H:i:s',time());
 
+$content = str_replace('$updatedat$', $updatedat, $content);
 
-$html = '<html>
-<head>
-<title></title>
-</head>
-
-<body>
-$BODY$
-</body>
-</html>';
-
-$body = '<ul>';
-foreach ($data['dirs'] as $dir => $value) {
-    foreach ($value['files'] as $note) {
-        $body .= '<li><a href="'.urlencode($note['path']).'">'.$note['name'].'</a></li>';
-    }
-}
-$body .= '</ul>';
-$html = str_replace('$BODY$', $body, $html);
-
-file_put_contents('index.html', $html);
-
-file_put_contents('_drafts.json', json_encode($data));
-
-
+file_put_contents($aboutme, $content);
 
 
 

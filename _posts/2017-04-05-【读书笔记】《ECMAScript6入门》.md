@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "《ECMAScript 6入门》读书笔记"
-date: 2017-04-07 00:00:09
-categories: 编程语言
-tags: 笔记 JavaScript
+date: 2017-04-05 00:00:01
+categories: 读书笔记
+tags: JavaScript
 excerpt: ""
 ---
 

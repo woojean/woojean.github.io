@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "更新CentOS的gcc版本"
-date: 2017-04-08 00:00:04
-categories: 配置记录
+date: 2017-04-05 00:00:01
+categories: 配置开发环境
 tags: CentOS gcc
 excerpt: ""
 ---

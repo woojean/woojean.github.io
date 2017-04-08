@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "《C++ Primer 4 Answer Book》读书笔记"
-date: 2017-04-08 00:00:04
-categories: 编程语言
-tags: 笔记 C++
+date: 2017-04-05 00:00:01
+categories: 读书笔记
+tags: C++
 excerpt: ""
 ---
 
