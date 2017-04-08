@@ -7,5 +7,5 @@ tags: 未分类
 excerpt: 〇
 ---
 
-First day,nothing to say.
+准备把博客搬到这里（GitHub Pages）。
 
