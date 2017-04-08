@@ -26,28 +26,36 @@ $drafts = scan('../_drafts');
 $posts = scan('../_posts');
 
 $num = 0;
-foreach ($drafts as $key => $draftPath) {
-	$draftContent = file_get_contents($draftPath);
-	//$keyword = substr($draftContent, 50,65);
-	$keyword = substr($draftContent, 47,57);
 
-	foreach ($posts as $key => $postPath) {
-		$postContent = file_get_contents($postPath);
-		if(strpos($postContent, $keyword)
-			&& !strpos($keyword, 'image')
-			&& !strpos($keyword, 'github')
-			&& !strpos($keyword, 'woojean')){
-			echo $draftPath;
-			echo " -> ";
-			echo $postPath;
-			echo ' -> ';
-			echo $keyword;
-			echo "\n\n";
+for($i = 17; $i <= 200; $i += 7){
+	$begin = $i;
+	$end = $i + 10;
+	echo $begin.' -> '.$end.' ';
 
-			$num += 1;
-			
-			unlink($draftPath);
-			break;
+	foreach ($drafts as $key => $draftPath) {
+		$draftContent = file_get_contents($draftPath);
+		//$keyword = substr($draftContent, 50,65);
+		$keyword = substr($draftContent, $begin,$end);
+
+		foreach ($posts as $key => $postPath) {
+			$postContent = file_get_contents($postPath);
+			if(strpos($postContent, $keyword)
+				&& !strpos($keyword, 'image')
+				&& !strpos($keyword, 'github')
+				&& !strpos($keyword, 'woojean')
+				&& strlen($keyword) > 8 ){
+				echo $draftPath;
+				//echo " -> ";
+				//echo $postPath;
+				//echo ' ===> ';
+				echo $keyword;
+				echo "\n\n";
+
+				$num += 1;
+				
+				//unlink($draftPath);
+				break;
+			}
 		}
 	}
 }
