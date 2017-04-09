@@ -13,7 +13,7 @@ layout: default
             {% for post in paginator.posts %}
               <li>
                 <h2>
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  <a class="post-link" target="_blank" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
@@ -70,17 +70,7 @@ layout: default
     <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
     <div class="right">
         <div class="wrap">
-            <div class="side">
-                <div>
-                    <i class="fa" aria-hidden="true"></i>
-                    最近更新
-                </div>
-                <ul class="content-ul" recent>
-                    {% for post in site.posts offset: 0 limit: 10  %}
-                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
+            
 
             <!-- Content -->
             <div class="side ">
@@ -156,6 +146,18 @@ layout: default
                     {% endfor %}
                 </div>
             </div>
+
+            <!-- <div class="side">
+                <div>
+                    <i class="fa" aria-hidden="true"></i>
+                    最近更新
+                </div>
+                <ul class="content-ul" recent>
+                    {% for post in site.posts offset: 0 limit: 10  %}
+                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div> -->
 
             <!-- <div class="side">
                 <div>
