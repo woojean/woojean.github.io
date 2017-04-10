@@ -745,7 +745,7 @@ friend.sayName(); //"Nicholas" 除了使用 sayName() 方法之外，没有其�
 
 
 ## 构造函数、构造函数的原型对象以及构造函数的实例，相互之间是什么关系？
- ![image](http://woojean.com/images/js_1.png)
+ ![image](/images/js_1.png)
 无论什么时候，只要创建了一个新函数，就会根据一组特定的规则为该函数创建一个 prototype属性，这个属性指向函数的原型对象。
 在默认情况下，所有原型对象都会自动获得一个 constructor属性，这个属性包含一个指向 prototype 属性所在函数的指针。
 当调用构造函数创建一个新实例后，该实例的内部将包含一个指针，指向构造函数的原型对象。ECMA-262 第 5 版中管这个指针叫 [[Prototype]] ，Firefox、Safari 和 Chrome 在每个对象上都支持一个属性__proto__用来访问这个指针。可以通过 isPrototypeOf() 方法来确定对象之间是否存在这种关系：
