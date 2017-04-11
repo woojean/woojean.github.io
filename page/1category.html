@@ -45,7 +45,7 @@ type: page
                     {% for category in site.categories%}
                         <li>
                             <a data-scroll href="#{{ category | first }}">
-                                {{ category | first }} ({{ category | last | size }})
+                                {{ category | first }} &nbsp; ( {{ category | last | size }} )
                             </a>
                         </li>
                     {% endfor %}
