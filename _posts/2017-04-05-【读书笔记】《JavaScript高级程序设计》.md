@@ -7,6 +7,9 @@ tags: JavaScript
 excerpt: ""
 ---
 
+* content
+{:toc}
+
 ## ECMAScript
 虽然JavaScript和ECMAScript通常都被人们用来表达相同的含义，但JavaScript的含义却比ECMA-262中规定的
 要多得多，一个完整的JavaScript实现应该由下列三个不同的部分组成：

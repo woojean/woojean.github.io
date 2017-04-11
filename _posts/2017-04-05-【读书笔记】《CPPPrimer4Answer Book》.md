@@ -7,6 +7,9 @@ tags: C++
 excerpt: ""
 ---
 
+* content
+{:toc}
+
 第1章	快速入门
 	【1】1.17 编写程序，要求用户输入一组数，输出信息说明其中有多少个负数
 	答：#include<iostream>

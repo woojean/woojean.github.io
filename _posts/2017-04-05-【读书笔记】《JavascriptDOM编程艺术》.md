@@ -7,6 +7,9 @@ tags: JavaScript
 excerpt: ""
 ---
 
+* content
+{:toc}
+
 ## 第1章 JavaScript简史
 Web标准：HTML、CSS、DOM
 

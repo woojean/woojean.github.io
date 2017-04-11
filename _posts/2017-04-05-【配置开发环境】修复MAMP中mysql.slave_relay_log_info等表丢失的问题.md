@@ -7,6 +7,9 @@ tags: MySQL
 excerpt: ""
 ---
 
+* content
+{:toc}
+
 
 ```
 drop table innodb_index_stats;

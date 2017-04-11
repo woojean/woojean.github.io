@@ -7,5 +7,8 @@ tags: ""
 excerpt: 〇
 ---
 
+* content
+{:toc}
+
 准备把博客搬到这里（GitHub Pages）。
 

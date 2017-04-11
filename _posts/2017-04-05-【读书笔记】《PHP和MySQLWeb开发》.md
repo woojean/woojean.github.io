@@ -7,6 +7,9 @@ tags: PHP MySQL
 excerpt: ""
 ---
 
+* content
+{:toc}
+
 ## 基本语法
 ### HTML标签的id属性和name属性有什么区别？
 

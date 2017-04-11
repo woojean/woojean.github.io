@@ -7,6 +7,8 @@ tags: Thrift Swoole
 excerpt: ""
 ---
 
+* content
+{:toc}
 
 ## 使用brew安装thrift
 

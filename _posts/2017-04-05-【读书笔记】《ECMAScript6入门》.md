@@ -7,6 +7,9 @@ tags: JavaScript
 excerpt: ""
 ---
 
+* content
+{:toc}
+
 ## 第1章 ECMAScript 6简介
 
 ### Babel转码器

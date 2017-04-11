@@ -7,6 +7,9 @@ tags: CentOS node
 excerpt: ""
 ---
 
+* content
+{:toc}
+
 # CentOS部署最新Node前端执行环境
 
 ## 前置信息

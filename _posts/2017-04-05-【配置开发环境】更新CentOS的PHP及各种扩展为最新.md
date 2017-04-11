@@ -7,6 +7,8 @@ tags: CentOS PHP
 excerpt: ""
 ---
 
+* content
+{:toc}
 
 ## 安装PHP7
 
