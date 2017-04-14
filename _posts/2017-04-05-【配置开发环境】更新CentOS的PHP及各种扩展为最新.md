@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "更新CentOS的PHP及各种扩展为最新"
-date: 2017-04-05 00:00:01
+date: 2017-04-05 00:00:04
 categories: 配置开发环境
 tags: CentOS PHP
 excerpt: ""
