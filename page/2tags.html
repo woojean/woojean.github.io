@@ -28,7 +28,6 @@ type: page
                 <a class="title"  target="_blank" href="{{ post.url }}">{{ post.title }}</a>
 
                 {% include category.html %}
-                {% include tag.html %}
             </li>
           {% endfor %}
         {% endfor %}
@@ -42,7 +41,7 @@ type: page
             <!-- Content -->
             <div class="side content">
                 <div>
-                    文章标签
+                    博客标签
                 </div>
                 <ul id="content-side" class="content-ul">
                     {% for tag in sortedtags %}

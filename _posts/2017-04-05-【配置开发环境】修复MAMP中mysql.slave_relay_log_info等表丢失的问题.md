@@ -3,7 +3,7 @@ layout: post
 title:  "修复MAMP中mysql.slave_relay_log_info等表丢失的问题"
 date: 2017-04-05 00:00:01
 categories: 配置开发环境
-tags: MySQL
+tags: MySQL MAMP
 excerpt: ""
 ---
 
