@@ -30,28 +30,6 @@ H5前端项目基于React框架实现，UI库使用微信提供的WeiUI。
 
 
 
-## 目录
-
-[VPC](#VPC)
-[SLB](#SLB)
-[ECS](#ECS)
-[PHP](#PHP)
-[Tengine](#Tengine)
-[MySQL](#MySQL)
-[PHP-FPM](#PHP-FPM)
-[Redis](#Redis)
-[OSS](#OSS)
-[PHP-Extention](#PHP-Extention)
-[node](#node)
-[webpack](#webpack)
-[bower](#bower)
-[composer](#composer)
-[git](#git)
-[vhost](#vhost)
-[domain](#domain)
-
-
-
 # VPC
 <span id="VPC">==================================================================</span>
 ## 创建

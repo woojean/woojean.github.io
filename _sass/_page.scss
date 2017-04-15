@@ -44,7 +44,7 @@
                     color: #223253;
                     transition: 0.3s ease;
                     &:hover {
-                        color: #259;
+                        color: #045bb2;
                     }
                 }
                 i {
@@ -57,12 +57,12 @@
                     }
                     a {
                         padding: 0 5px;
-                        background-color: #eee;
-                        color: black;
+                        background-color: #eef4fa;
+                        color: #3e7ac2;
                         font-size: 90%;
                         transition: 0.3s ease;
                         &:hover {
-                            background-color: #ddd;
+                            text-decoration:underline;
                         }
                     }
                 }
@@ -74,13 +74,13 @@
 
                         // border: 1px solid #aaa;
                         padding: 0 5px;
-                        background-color: #eee;
-                        border-radius: 1px;
-                        color: #666;
+                        background-color: #eef4fa;
+                        border-radius: 3px;
+                        color: #3e7ac2;
                         font-size: 80%;
                         transition: 0.1s ease;
                         &:hover {
-                            background-color: #ddd;
+                            text-decoration:underline;
                         }
                     }
                 }
@@ -122,7 +122,7 @@
                 // margin-right: -10px;
                 border-bottom: 1px solid #eee;
                 
-                font-size: 13px;
+                font-size: 15px;
                 font-weight: normal;
             }
             a {
@@ -133,16 +133,40 @@
                     color: #223253;
                 }
             }
+            i {
+                 margin-right: 5px;
+            }
+
         }
         .content-ul {
+            overflow: scroll;
             overflow-y: auto;
-            padding-right: 10px;
+            overflow-x: auto;
             line-height: 1.8;
+            padding-right: 10px;
             padding-left: 35px;
             ul {
                 padding-left: 20px;
             }
+            li {
+                color:#aaa;
+                font-size: 14px;
+                a {
+                    display: block;
+                    width: 100%;
+                    padding: 2px 0;
+                    color:black;
+                    border-bottom: 1px dashed #eee;
+                    &:hover {
+                        background-color: white;
+                    }
+                }
+                &:last-of-type a {
+                    border: none;
+                }
+            }
         }
+
     }
 }
 @media screen and (max-width:1200px) and (min-width: 770px) {
@@ -157,7 +181,7 @@
             width: 100%;
             float: left;
             padding: 10px 14px;
-            font-size: 13px;
+            font-size: 14px;
             >h1 {
                 font-size: 25px;
                 margin-bottom: -10px;

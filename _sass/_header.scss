@@ -1,15 +1,15 @@
 header {
-    background: white;
+    background: #045bb2;
     height: 50px;
-    color: #666;
-    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 0 10px rgba(2, 2, 0, 0.1) inset;
+    color: white;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1), 0 0 10px rgba(2, 2, 0, 0.1) inset;
     margin-bottom: 20px;
     a {
-        color: #666;
+        color: white;
         -webkit-transition: 0.2s ease;
         transition: 0.1s ease;
         &:hover {
-            color: black;
+            color: #eee;
         }
     }
     .wrapper {
@@ -17,7 +17,8 @@ header {
         margin: 0 auto;
         line-height: 52px;
         .brand {
-            font-size: 18px;
+            color:white;
+            font-size: 20px;
         }
         small {
             margin-left: 26px;
@@ -34,26 +35,26 @@ header {
                 padding: 0;
                 li {
                     list-style: none;
-                    font-size: 14px;
+                    font-size: 15px;
                     display: inline-block;
                     -webkit-transition: 0.2s ease;
                     transition: 0.2s ease;
                     a {
                         display: inline-block;
                         padding: 0 30px;
-                        height: 52px;
+                        height: 50px;
                         text-align:center;
                         &:hover {
-                            background-color: #dfdfdf;
+                            color:#eee;
                         }
                         i {
                             margin-right: 6px;
                         }
                     }
                     >.active {
-                        color: black;
-                        background-color: #eee;
-                        box-shadow: 0 25px 25px -15px rgba(255,255,255,0.93);
+                        color: #eee;
+                        background-color: #0d73da;
+                        box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1), 0 0 10px rgba(2, 2, 0, 0.1) inset;
                     }
                 }
             }
@@ -67,7 +68,8 @@ header {
             width: 90%;
             line-height: 50px;
             .brand {
-                font-size: 18px;
+                color:white;
+                font-size: 20px;
             }
             small {
                 margin-left: 15px;
@@ -103,7 +105,8 @@ header {
             position: relative;
             z-index: 101;
             .brand {
-                font-size: 16px;
+                color:white;
+                font-size: 20px;
             }
             small {
                 margin-left: 10px;
