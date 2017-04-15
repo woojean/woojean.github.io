@@ -5,39 +5,22 @@ layout: default
 <div class="page clearfix" index>
     <div class="left">
     
-        <!-- <h1>Welcome to Woojean's Blog!</h1>
-        <small>todo</small>
-        <hr> -->
-
         <ul>
             {% for post in paginator.posts %}
               <li>
                 <h2>
-                  <a class="post-link" target="_blank" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  <a class="post-link" target="_blank" href="{{ post.url | prepend: site.baseurl }}">
+                    {{ post.title }}
+                  </a>
                 </h2>
+
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa"></i>{{ post.date | date: "%F" }}
-                    </div>
-                    <div class="label-card">
-                        {% if post.author %}<i class="fa"></i>{{ post.author }}
-                        {% endif %}
-                    </div>
-                    <div class="label-card">
-                        {% if page.meta %}<i class="fa"></i>{{ page.meta }}  {% endif %}
-                    </div>
-
-                    <div class="label-card">
-                    {% include category.html %}
-                    </div>
-
-                    <div class="label-card">
-                    {% include tag.html %}
+                        {{ post.date | date: "%F" }}
+                        {% include tag.html %}
                     </div>
                 </div>
-                <div class="excerpt">
-                    {{post.excerpt}}
-                </div>
+
                 <div class="read-all">
                     <a  href="{{ post.url | prepend: site.baseurl }}"><i class="fa fa-newspaper-o"></i>阅读全文</a>
                 </div>
