@@ -1,3 +1,8 @@
+## ES6与ES5，this的变化比较（参考typescript文档 类类型）
+
+# js 类静态部分与实例部分的区别（参考typescript文档 类类型）
+
+
 ## 使用Swoole后PHP开发的一些变化理解
 
 使用Swoole扩展执行的PHP脚本需要预先在服务端执行（而不是每次访问时才会执行）。
