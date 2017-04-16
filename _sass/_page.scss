@@ -28,6 +28,7 @@
             word-break: break-all;
         }
         ul {
+            background-color: white;
             >h2 {
                 margin-left: -40px;
                 color: #6a6b6b;
@@ -73,7 +74,7 @@
                     a {
 
                         // border: 1px solid #aaa;
-                        padding: 0 5px;
+                        padding: 2px 5px;
                         background-color: #eef4fa;
                         border-radius: 3px;
                         color: #3e7ac2;

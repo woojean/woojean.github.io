@@ -2,6 +2,9 @@
     display: none;
 }
 .page[post] {
+    ul a{
+        background-color: white;
+    }
     .label {
         margin-top: 16px;
         overflow: hidden;
@@ -19,11 +22,14 @@
         }
     }
     a {
-        color: #045bb2;
-        transition: 0.5s ease;
+        padding: 2px 5px;
+        background-color: #eef4fa;
+        border-radius: 3px;
+        color: #3e7ac2;
+        font-size: 80%;
+        transition: 0.1s ease;
         &:hover {
-            color: #223253;
-            background-color: #f4efeb;
+            text-decoration:underline;
         }
     }
     .left {
