@@ -1,9 +1,15 @@
 <?php
 $urls = array(
-    'http://www.example.com/1.html',
-    'http://www.example.com/2.html',
+    'http://www.woojean.com/index.html',
+    'http://www.woojean.com/archive/index.html',
+    'http://www.woojean.com/category/index.html',
+    'http://www.woojean.com/tag/index.html',
+    'http://www.woojean.com/aboutme/index.html',
+
 );
-$api = 'http://data.zz.baidu.com/urls?site=www.woojean.com&token=hklIUyCHYI68LH9G';
+
+$api = 'http://data.zz.baidu.com/urls?site=www.woojean.com&token=hfiWXkUWNFzBB2Ef';
+
 $ch = curl_init();
 $options =  array(
     CURLOPT_URL => $api,
@@ -15,3 +21,4 @@ $options =  array(
 curl_setopt_array($ch, $options);
 $result = curl_exec($ch);
 echo $result;
+
