@@ -1,8 +1,57 @@
 <?php
 
-/*
-访问所有文件，查看jekyll的后端报错
-*/
+function scan($dir){
+    $result = [];
+    $handle = opendir($dir);
+    if ( $handle ){
+        while ( ( $file = readdir ( $handle ) ) !== false ){
+            if ( $file != '.' && $file != '..' && $file != '.DS_Store'){
+                $absPath = $dir . DIRECTORY_SEPARATOR . $file;
+                if ( is_dir ( $absPath ) ){
+                    $result = array_merge($result,scan($absPath));
+                }
+                else{
+                    $result[] = $absPath;
+                }
+            }
+        }
+        closedir($handle);
+    }
+    
+    return $result;
+}
+
+$host = 'http://blog.woojean.com';
+$urls = [];
+$posts = scan('../_posts');
+
+
+foreach ($posts as $key => $postPath) {
+    $postPath = str_replace('.md', '', $postPath);
+    $postPath = str_replace('【', '', $postPath);
+    $postPath = str_replace('】', '-', $postPath);
+    $postPath = str_replace('《', '', $postPath);
+    $postPath = str_replace('——', '', $postPath);
+    $postPath = str_replace('》', '', $postPath);
+    $postPath = str_replace('（', '', $postPath);
+    $postPath = str_replace('）', '', $postPath);
+    $postPath = str_replace('，', '-', $postPath);
+    $postPath = str_replace('、', '-', $postPath);
+    //$postPath = str_replace('-', '/', $postPath);
+    $postPath = str_replace('../_posts', '', $postPath);
+    $date = substr($postPath, 0,12);
+    $postPath = str_replace($date, '', $postPath);
+    $date = str_replace('-', '/', $date);
+    $postPath = $date.$postPath;
+
+
+    $postPath .= '/index.html';
+    $postPath = $host . $postPath;
+
+    $urls[] = $postPath;
+}
+
+
 
 function doGet($url){
     $curl = curl_init();
@@ -16,28 +65,8 @@ function doGet($url){
 }
 
 
-$jsonData = file_get_contents('_drafts.json');
-$data = json_decode($jsonData,true);
-$errorFiles = [];
-
-foreach ($data['dirs'] as $dir => $value) {
-    foreach ($value['files'] as $note) {
-        $url = 'http://127.0.0.1:4000/'.urlencode($note['path']);
-        $ret = doGet($url);
-        var_dump($ret);
-
-        if( false == $ret || 400==$ret ){
-            $errorFiles[] = $note['path'];
-        }
-    }
+foreach ($urls as $key => $value) {
+    # code...
 }
 
-file_put_contents('errorFiles.txt', json_encode($errorFiles));
-
-
-
-// $code = doGet('http://127.0.0.1:4000/'.urlencode('_drafts/数据库/MySQL复制的工作过程.md'));
-// var_dump($code);
-
-
-
+ 
