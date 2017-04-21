@@ -89,11 +89,7 @@ file_put_contents('data_urls', json_encode($dataUrls));
 
 
 
-blog.woojean.com/index.html
-blog.woojean.com/archive/index.html
-blog.woojean.com/category/index.html
-blog.woojean.com/tag/index.html
-blog.woojean.com/aboutme/index.html
+
 
 
 

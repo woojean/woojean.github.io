@@ -69,6 +69,8 @@ cat /var/lib/jenkins/secrets/initialAdminPassword
 
 第一次访问，通过Web页面登录后，修改Administrator的密码。
 
+rm /var/log/jenkins/jenkins.log
+service jenkins restart
 
 
 ## 配置Git账户
