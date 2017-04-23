@@ -3,7 +3,7 @@ layout: post
 title:  "《JavaScript高级程序设计》读书笔记"
 date: 2017-04-05 00:00:02
 categories: 读书笔记-技术
-tags: JavaScript 前端开发
+tags: JavaScript
 excerpt: ""
 ---
 

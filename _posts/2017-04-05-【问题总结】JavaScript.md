@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "问题总结：前端开发"
+title:  "问题总结：JavaScript"
 date: 2017-04-05 00:00:05
 categories: 问题总结
-tags: 前端开发
+tags: JavaScript
 excerpt: "前端开发相关的面试题，包括JavaScript、CSS、HTML5、React技术栈等等"
 ---
 
