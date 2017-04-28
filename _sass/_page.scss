@@ -66,6 +66,7 @@
                         padding: 0 5px;
                         background-color: #eef4fa;
                         color: #3e7ac2;
+                        font-weight:bold;
                         font-size: 90%;
                         transition: 0.3s ease;
                         &:hover {
@@ -83,7 +84,6 @@
                         padding: 2px 5px;
                         background-color: #eef4fa;
                         border-radius: 3px;
-                        color: #3e7ac2;
                         font-size: 80%;
                         transition: 0.1s ease;
                         &:hover {
@@ -214,10 +214,11 @@
                     }
                     .categories {
                         font-size: 10px;
-                        background-color: #eee;
+                        background-color: white;
                         padding-left: 0;
                         padding-right: 10px;
                         border-radius: 1px;
+                        font-weight:bold;
                     }
                 }
             }
