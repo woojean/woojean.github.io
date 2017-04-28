@@ -48,6 +48,12 @@
                         color: #045bb2;
                     }
                 }
+                a {
+                        &:hover {
+                            color:#045bb2;
+                            text-decoration:underline;
+                        }
+                    }
                 i {
                     margin-right: 5px;
                 }
@@ -159,7 +165,8 @@
                     color:black;
                     border-bottom: 1px dashed #eee;
                     &:hover {
-                        background-color: white;
+                        color:#045bb2;
+                        text-decoration:underline;
                     }
                 }
                 &:last-of-type a {

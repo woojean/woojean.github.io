@@ -18,7 +18,13 @@
                     border: none;
                     font-size: 20px;
                     margin: 0;
-                    font-weight:normal
+                    font-weight:normal;
+                    a {
+                        &:hover {
+                            color:#045bb2;
+                            text-decoration:underline;
+                        }
+                    }
                 }
                 .label {
                     margin-bottom: 15px;
@@ -136,6 +142,13 @@
                     li{
                         color:#aaa;
                         font-size: 14px;
+                        a {
+                            &:hover {
+                                color:#045bb2;
+                                text-decoration:underline;
+                            }
+                        }
+
                     }
                 }
                 .tags-cloud {
@@ -144,8 +157,9 @@
                         padding: 0 3px;
                         border-radius: 5px;
                         &:hover {
+                            color:#045bb2;
+                            background-color:#eef4fa;
                             text-decoration:underline;
-                            transform: scale(1) rotate(360deg);
                         }
                     }
                 }
