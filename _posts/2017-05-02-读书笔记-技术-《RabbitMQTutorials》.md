@@ -21,6 +21,10 @@ cd /Users/wujian/projects/demo/rabbitmq
 composer require php-amqplib/php-amqplib
 ```
 
+
+
+
+
 # 例：Hello World !
 
 **a producer that sends a single message, and a consumer that receives messages and prints them out.**
@@ -90,6 +94,10 @@ while(count($channel->callbacks)){
 php receive.php
 php send.php
 ```
+
+
+
+
 
 
 # 例：Work Queues
@@ -178,6 +186,10 @@ $connection->close();
 ```
 
 
+
+
+
+
 # 例：Publish/Subscribe
 deliver a message to multiple consumers.（we're going to build a simple logging system.）
 
@@ -262,7 +274,11 @@ $channel->close();
 $connection->close();
 ```
 
-# Routing
+
+
+
+
+# 例：Routing
 subscribe only to a subset of the messages.（For example, we will be able to direct only critical error messages to the log file (to save disk space), while still being able to print all of the log messages on the console.）
 
 The meaning of a binding key depends on the exchange type. The fanout exchanges simply ignored its value.
@@ -357,7 +373,11 @@ php receive_logs_direct.php info error
 php emit_log_direct.php error
 ```
 
-# Topics
+
+
+
+
+# 例：Topics
 Using the direct exchange still has limitations - **it can't do routing based on multiple criteria**.
 (In our logging system we might want to subscribe to not only logs based on severity, but also based on the source which emitted the log. )
 
@@ -458,7 +478,11 @@ php emit_log_topic.php "kern.critical" "A critical kernel error" // emit a log w
 ```
 
 
-# Remote procedure call (RPC)
+
+
+
+
+# 例：Remote procedure call (RPC)
 run a function on a remote computer and wait for the result.
 
 A client sends a request message and a server replies with a response message. In order to receive a response we need to **send a 'callback' queue address with the request**. 
