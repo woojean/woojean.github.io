@@ -40,19 +40,20 @@ header {
                     -webkit-transition: 0.2s ease;
                     transition: 0.2s ease;
                     a {
+                        color: #ccc;
                         display: inline-block;
                         padding: 0 30px;
                         height: 50px;
                         text-align:center;
                         &:hover {
-                            color:#eee;
+                            color:white;
                         }
                         i {
                             margin-right: 6px;
                         }
                     }
                     >.active {
-                        color: #eee;
+                        color: white;
                         background-color: #0d73da;
                         box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1), 0 0 10px rgba(2, 2, 0, 0.1) inset;
                     }
