@@ -41,3 +41,12 @@ function get_include_contents($filename) {
 
 $string = get_include_contents('somefile.php');
 ```
+
+
+专业书籍可以看看《组织行为学》，人大出版社的， 
+以及人大劳人院的系列教材。这些是科普性质 系统化的讲解 
+另外推荐彼得德鲁克的《卓有成效的管理者》管理学经典，总会有一个点触动你 
+以及google的《work rules重新定义团队》打开管理思路 
+  
+
+  焦虑 = 未来的不确定性 x 事情的重要性 x 自己无能为力的程度。
