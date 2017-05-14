@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "《TypeScript官方文档》读书笔记"
+title:  "《TypeScript官方文档》"
 date: 2017-04-15 00:00:01
 categories: 技术书籍文档
 tags: TypeScript JavaScript

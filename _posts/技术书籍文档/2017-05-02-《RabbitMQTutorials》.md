@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "《RabbitMQ Tutorials》读书笔记"
+title:  "《RabbitMQ Tutorials》"
 date: 2017-05-02 00:00:01
 categories: 技术书籍文档
 tags: RabbitMQ PHP

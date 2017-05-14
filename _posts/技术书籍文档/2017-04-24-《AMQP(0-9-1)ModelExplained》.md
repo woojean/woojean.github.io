@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "《AMQP 0-9-1 Model Explained》读书笔记"
+title:  "《AMQP 0-9-1 Model Explained》"
 date: 2017-04-24 00:00:01
 categories: 技术书籍文档
 tags: AMQP 网络协议

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "《PHP和MySQL Web开发》读书笔记"
+title:  "《PHP和MySQL Web开发》"
 date: 2017-04-05 00:00:02
 categories: 技术书籍文档
 tags: PHP MySQL

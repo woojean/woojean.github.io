@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "《JavaScript DOM编程艺术》读书笔记"
+title:  "《JavaScript DOM编程艺术》"
 date: 2017-04-05 00:00:02
 categories: 技术书籍文档
 tags: JavaScript

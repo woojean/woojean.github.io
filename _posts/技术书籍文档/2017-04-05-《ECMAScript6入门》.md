@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "《ECMAScript 6入门》读书笔记"
+title:  "《ECMAScript 6入门》"
 date: 2017-04-05 00:00:02
 categories: 技术书籍文档
 tags: JavaScript
