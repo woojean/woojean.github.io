@@ -30,6 +30,8 @@ export PATH=$M2:$PATH
 ```
 mvn --version
 
+ln -s /usr/local/apache-maven-3.5.0/bin/mvn /usr/local/bin/mvn
+
 
 ## 新建项目
 cd /Users/wujian/projects/mvntest
