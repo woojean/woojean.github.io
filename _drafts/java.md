@@ -46,9 +46,10 @@ java -classpath demoProject-1.0-SNAPSHOT.jar woojean.demo.App
 java -classpath demo.jar woojean.demo.App
 
 
+java -cp aid-1.0.jar com.wsn.aid.AidServer
 
-
-
+java -cp aid-1.0.jar;/Users/wujian/.m2/repository/org/apache/thrift/libthrift/0.10.0/libthrift-0.10.0.jar com.wsn.aid.AidServer
+/Users/wujian/.m2/repository/org/apache/thrift/libthrift/0.10.0/libthrift-0.10.0.jar
 
 
 
