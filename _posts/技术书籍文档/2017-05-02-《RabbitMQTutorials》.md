@@ -10,7 +10,7 @@ excerpt: "RabbitMQ官方入门教程（PHP版）阅读笔记"
 * content
 {:toc}
 
-[下载代码:https://github.com/woojean/demos/tree/master/rabbitmq](https://github.com/woojean/demos/tree/master/rabbitmq)
+[下载代码:https://github.com/woojean/demos/tree/master/rabbitmq-tutorials](https://github.com/woojean/demos/tree/master/rabbitmq-tutorials)
 
 
 # 准备
