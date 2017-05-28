@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "对Nginx Vhost进行配置，使其支持Phalcon注解路由"
-date: 2017-04-05 00:00:04
+date: 2017-04-05 00:02:00
 categories: 开发配置
 tags: Nginx Phalcon
 excerpt: ""

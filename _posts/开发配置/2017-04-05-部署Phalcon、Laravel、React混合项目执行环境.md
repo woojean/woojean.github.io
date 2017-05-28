@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "部署Phalcon+Laravel+React混合项目执行环境"
-date: 2017-04-05 00:00:04
+date: 2017-04-05 00:02:00
 categories: 开发配置
 tags: Phalcon Laravel React
 excerpt: ""
