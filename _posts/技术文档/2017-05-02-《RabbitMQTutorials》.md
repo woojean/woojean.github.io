@@ -3,7 +3,7 @@ layout: post
 title:  "《RabbitMQ Tutorials》"
 date: 2017-05-02 00:00:01
 categories: 技术文档
-tags: RabbitMQ PHP
+tags: RabbitMQ 消息队列 PHP
 excerpt: "RabbitMQ官方入门教程（PHP版）阅读笔记"
 ---
 

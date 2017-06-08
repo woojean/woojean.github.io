@@ -3,7 +3,7 @@ layout: post
 title:  "《AMQP 0-9-1 Model Explained》"
 date: 2017-04-24 00:00:01
 categories: 技术文档
-tags: AMQP 网络协议
+tags: AMQP 消息队列 网络协议
 excerpt: "AMQP协议基本概念理解"
 ---
 

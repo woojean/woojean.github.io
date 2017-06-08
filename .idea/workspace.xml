@@ -2,150 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d48fb44-ee45-45ba-9a46-d783c22f8261" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/algo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/android_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/android_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/android_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/android_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/android_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/android_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/android_7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/android_8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/basic_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/basic_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/basic_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/basic_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/basic_13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/basic_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/basic_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/basic_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/basic_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/basic_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/basic_7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/basic_8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/basic_9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/css_9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/dm_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/dm_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/hr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/img_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/img_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/img_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/img_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/img_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/java_9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/js_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/linux_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/linux_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/linux_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/linux_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/linux_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/me.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/net_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/net_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/net_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/net_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/net_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/net_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/net_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/net_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/net_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/net_7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/net_8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/net_9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/skiplist_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/skiplist_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/socket_apis.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/test_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/test_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/test_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/test_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo20.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo21.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo22.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo23.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo24.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo25.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo26.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo27.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo28.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo29.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo30.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo31.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo33.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo34.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo35.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo36.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo37.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo38.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo39.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo40.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo41.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo42.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo43.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo44.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo45.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo46.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo47.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wangluo9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spider/7Mall-SKU.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spider/YunJI-SKU.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_drafts/2017-05-25-《MongoDB-Manual》.md" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dump.rdb" afterPath="$PROJECT_DIR$/dump.rdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2017-04-15-读书笔记-非技术-《齊物論》.md" afterPath="$PROJECT_DIR$/_posts/2017-04-15-读书笔记-非技术-《齊物論》.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/woojean.github.io.iml" afterPath="$PROJECT_DIR$/.idea/woojean.github.io.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/开发配置/2017-04-24-Mac安装RabbitMQ服务.md" afterPath="$PROJECT_DIR$/_posts/开发配置/2017-04-24-Mac安装RabbitMQ服务.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/技术文档/2017-04-24-《AMQP(0-9-1)ModelExplained》.md" afterPath="$PROJECT_DIR$/_posts/技术文档/2017-04-24-《AMQP(0-9-1)ModelExplained》.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/技术文档/2017-05-02-《RabbitMQTutorials》.md" afterPath="$PROJECT_DIR$/_posts/技术文档/2017-05-02-《RabbitMQTutorials》.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/读书/2017-04-05-《答橫渠張子厚先生書》.md" afterPath="$PROJECT_DIR$/_posts/读书/2017-04-05-《答橫渠張子厚先生書》.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/读书/2017-04-05-《老子》.md" afterPath="$PROJECT_DIR$/_posts/读书/2017-04-05-《老子》.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/读书/2017-04-15-《齊物論》.md" afterPath="$PROJECT_DIR$/_posts/读书/2017-04-15-《齊物論》.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/读书/2017-05-29-《大宗師》.md" afterPath="$PROJECT_DIR$/_posts/读书/2017-05-29-《大宗師》.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -157,35 +24,9 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="2017-04-05-读书笔记-技术-《Android编程权威指南》.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/2017-04-05-读书笔记-技术-《Android编程权威指南》.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="439">
-                <caret line="2648" column="30" lean-forward="true" selection-start-line="2648" selection-start-column="30" selection-end-line="2648" selection-end-column="30" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017-04-05-读书笔记-技术-《算法》.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/2017-04-05-读书笔记-技术-《算法》.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="151">
-                <caret line="517" column="29" lean-forward="false" selection-start-line="517" selection-start-column="29" selection-end-line="517" selection-end-column="29" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -201,6 +42,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/_posts/读书/2017-04-05-《老子》.md" />
+        <option value="$PROJECT_DIR$/_posts/读书/2017-04-05-《答橫渠張子厚先生書》.md" />
+        <option value="$PROJECT_DIR$/_posts/读书/2017-04-15-《齊物論》.md" />
+        <option value="$PROJECT_DIR$/_posts/读书/2017-05-29-《大宗師》.md" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -209,7 +65,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="756" />
+    <option name="y" value="52" />
     <option name="width" value="1440" />
     <option name="height" value="828" />
   </component>
@@ -228,8 +85,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -239,7 +95,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="woojean.github.io" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -249,15 +105,35 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="woojean.github.io" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="_posts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woojean.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woojean.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="读书" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,6 +148,20 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -283,25 +173,20 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -309,19 +194,6 @@
       <scripts />
       <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
       <method />
     </configuration>
   </component>
@@ -336,33 +208,44 @@
       <option name="presentableId" value="Default" />
       <updated>1494065765986</updated>
       <workItem from="1494065767568" duration="537000" />
+      <workItem from="1496890765691" duration="44000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="537000" />
+    <option name="totallyTimeSpent" value="581000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="828" extended-state="6" />
-    <editor active="true" />
+    <frame x="756" y="52" width="1440" height="828" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964131" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24930556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,22 +259,46 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/2017-04-05-读书笔记-技术-《Android编程权威指南》.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2017-04-05-读书笔记-技术-《Android编程权威指南》.md" />
+    <entry file="file://$PROJECT_DIR$/_posts/2017-04-05-读书笔记-技术-《算法》.md" />
+    <entry file="file://$PROJECT_DIR$/_posts/读书/2017-04-15-《齊物論》.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="439">
-            <caret line="2648" column="30" lean-forward="true" selection-start-line="2648" selection-start-column="30" selection-end-line="2648" selection-end-column="30" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2017-04-05-读书笔记-技术-《算法》.md">
+    <entry file="file://$PROJECT_DIR$/_posts/读书/2017-05-29-《大宗師》.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="151">
-            <caret line="517" column="29" lean-forward="false" selection-start-line="517" selection-start-column="29" selection-end-line="517" selection-end-column="29" />
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/读书/2017-04-05-《老子》.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/读书/2017-04-05-《答橫渠張子厚先生書》.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
             <folding />
           </first_editor>
           <second_editor />
