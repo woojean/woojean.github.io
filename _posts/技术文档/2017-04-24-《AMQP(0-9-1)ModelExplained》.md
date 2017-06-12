@@ -9,145 +9,184 @@ excerpt: "AMQP协议基本概念理解"
 
 * content
 {:toc}
+本文翻译自：[http://www.rabbitmq.com/tutorials/amqp-concepts.html](http://www.rabbitmq.com/tutorials/amqp-concepts.html)
 
-# High-level Overview of AMQP 0-9-1 and the AMQP Model
-AMQP:Advanced Message Queuing Protocol,a messaging protocol that enables conforming client applications to communicate with conforming **messaging middleware brokers**.
+# AMQP 0-9-1协议及AMQP Model 概览
+
+**AMQP**:Advanced Message Queuing Protocol，是一个用于特定客户端与特定**消息代理**通信的协议。因为**AMQP的“实体”（即Exchange、message、queue等）和路由架构是由应用程序自己定义的**（而不是代理管理员），所以AMQP是一个支持编程扩展的协议。
 
 ```
 publisher --publish--> exchange --routes--> queue --consumers--> consumer
 ```
 
-AMQP 0-9-1 is a programmable protocol in the sense that AMQP entities and routing schemes are defined by applications themselves, not a broker administrator. 
 
 
-# Exchanges and Exchange Types
+# Exchanges及其类型
+
 ## Default Exchange
-a direct exchange with no name (empty string) pre-declared by the broker.every queue that is created is automatically bound to it with a routing key which is **the same as the queue name**:when you declare a queue with the name of "search-indexing-online", the AMQP broker will bind it to the default exchange using "search-indexing-online" as the routing key. Therefore, a message published to the default exchange with the routing key "search-indexing-online" will be routed to the queue "search-indexing-online".
+由消息代理（broker）预先定义的，未命名的exchange。每一个被创建的queue都使用queue的名称自动绑定到该exchange。比如定义一个名为“search-indexing-online”的queue，那么AMQP broker将会使用“search-indexing-online”为routing key将该队列绑定到默认的exchange，当一个带有该routing key的消息被发布时，将会被路由到"search-indexing-online"这个队列。
+
+
 
 ## Direct Exchange
-delivers messages to queues based on the **message routing key**. 
-When a new message with routing key R arrives at the direct exchange, the exchange routes it to the queue if K = R.(注意，这里的queue也可能是多个，即它们要处理的routing key相同)
-Direct exchanges are often used to distribute tasks between multiple workers (instances of the same application) in a round robin manner. in AMQP 0-9-1, messages are load balanced between consumers and not between queues.
+直接Exchange基于消息的路由键（message routing key）来分发消息。当一个带有routing key的消息到来时，Direct Exchange将会把该消息分发给所有使用该key进行绑定的queue（注意，这里的queue也可能是多个，即它们要处理的routing key相同）。
+
+**当有多个队列匹配时，时轮询还是全部发送？** 全部发送
+
+
 
 ## Fanout Exchange
-routes messages to all of the queues that are bound to it and the routing key is ignored. ideal for the broadcast routing of messages.
+Fanout Exchange会把收到的消息分发给所有绑定的queue（即忽略routing key），适用于广播的场景。
+
+
 
 ## Topic Exchange
-route messages to one or many queues based on matching between a **message routing key and the pattern** that was used to bind a queue to an exchange. often used to implement various publish/subscribe pattern variations. 
+基于消息的routing key和匹配模式（pattern）来分发消息。
 
-Whenever a problem involves multiple consumers/applications that **selectively choose which type of messages they want to receive**, the use of topic exchanges should be considered.
+
 
 ## Headers Exchange
-designed for routing on **multiple attributes** that are more easily expressed as message headers than a routing key. Headers exchanges ignore the routing key attribute. 
-When the "x-match" argument is set to "any", just one matching header value is sufficient. Alternatively, setting "x-match" to "all" mandates that all the values must match.
+忽略routing key，而是基于message headers来分发消息。
+
+当其x-match参数设为any时，只要有一个header值满足条件，则消息会被分发。当设为all时，所有headers都必须满足才会被分发。
 
 # Queues
-store messages that are consumed by applications. Queues share some properties with exchanges(but also have some additional properties):
+queue用来保存消息，主要有以下这些属性：
 * Name
-* Durable (the queue will survive a broker restart)
-* Exclusive (used by only one connection and the queue will be deleted when that connection closes)
-* Auto-delete (queue is deleted when last consumer unsubscribes)
-* Arguments (some brokers use it to implement additional features like message TTL)
+* Durable：broker重启后消息不会丢失
+* Exclusive：该queue只能用于一个连接，且当连接关闭时queue将会被删除
+* Auto-delete：当最后一个消费者解除订阅时，queue将被删除
+* Arguments：一些broker使用它来实现重要的属性，比如message的TTL
 
-Before a queue can be used it has to be declared. Declaring a queue will cause it to be created if it does not already exist. The declaration will have no effect if the queue does already exist and its attributes are the same as those in the declaration. When the existing queue attributes are not the same as those in the declaration a channel-level exception with code 406 (PRECONDITION_FAILED) will be raised.
+
 
 ## Queue Names
-Queue names may be up to 255 bytes of UTF-8 characters. 
-Queue names starting with "amq." are reserved for internal use by the broker. Attempts to declare a queue with a name that violates this rule will result in a channel-level exception with reply code 403 (ACCESS_REFUSED).
+Queue names不能超过255个字符。以"amq."开头的名称被保留为broker内部使用。
+
+
 
 ## Queue Durability
-Durable queues are **persisted to disk** and thus survive broker restarts. Queues that are not durable are called **transient**. 
+持久队列会被辞旧化到磁盘上，所以broker重启后，队列不会丢失。非持久化的队列也称为transient。
 
-**Durability of a queue does not make messages that are routed to that queue durable**. If broker is taken down and then brought back up, durable queue will be re-declared during broker startup, however, **only persistent messages will be recovered.**
+持久化队列并不保证队列中的消息也被持久化。当broker重启时，持久化的队列会被重新定义，但是只有持久化的消息（persistent messages）才会被恢复。
+
+
 
 # Bindings
-rules that exchanges use to route messages to queues. 
 
-If AMQP message cannot be routed to any queue (for example, because there are no bindings for the exchange it was published to) it is either dropped or returned to the publisher, depending on message attributes the publisher has set.
+Binding用来指定exchanges与queue之间的路由关系。
+
+如果一个消息无法被路由（比如消息发布到的exchange没有绑定任何queue），那么这个消息将会被丢弃或者返回给消息的发布者（取决于消息发布者的设置）。
+
+
 
 # Consumers
-In the AMQP 0-9-1 Model, there are two ways for applications to do consume:
-* Have messages delivered to them ("push API")(register a consumer or, simply put, subscribe to a queue.)
-* Fetch messages as needed ("pull API")
+应用程序有2种消费消息的方式：
+
+* push方式：注册一个消费者，并**订阅**一个队里。
+
+* pull方式：主动去队列获取消息。
+
+  ​
 
 ## Message Acknowledgements
-when should the AMQP broker remove messages from queues? The AMQP 0-9-1 specification proposes two choices:
-* the automatic acknowledgement mode:After broker sends a message to an application (using either basic.deliver or basic.get-ok AMQP methods).
-* the explicit acknowledgement model:After the application sends back an acknowledgement (using basic.ack AMQP method).
+AMQP定义了2种从队列中确认并删除消息的选择：
+* 自动确认：在broker将消息发送到应用程序后，自动删除。
+* 明确确认：在应用程序发回确认信息后删除。
 
-If a consumer dies without sending an acknowledgement the AMQP broker will redeliver it to another consumer or, if none are available at the time, the broker will wait until at least one consumer is registered for the same queue before attempting redelivery.
+当消费者（consumer）崩溃因而未能返回确认信息，broker将会尝试把消息分发到其他的消费者。如果没有任何可用的消费者，broker将会等待直到有一个新的消费者注册。
 
 ## Rejecting Messages
-An application can indicate to the broker that message processing has failed (or cannot be accomplished at the time) by rejecting a message. When rejecting a message, an application can ask the broker to discard or requeue it.
+应用程序可以拒绝消息以此来通知broker消息处理失败，并且可以告诉broker丢弃该消息或者重新入队。
 
 ## Negative Acknowledgements
-there is no way to reject multiple messages as you can do with acknowledgements. However, if you are using RabbitMQ, then there is a solution.
+AMQP没有定义拒绝复合消息（multiple messages）的方法，不过如果使用RabbitMQ，则可以。
 
 ## Prefetching Messages
-For cases when multiple consumers share a queue, it is useful to be able to specify how many messages each consumer can be sent at once before sending the next acknowledgement. This can be used as **a simple load balancing technique** or to improve throughput if messages tend to be published in batches. 
+Prefetching Messages是一种负载均衡技术，应用于有多个消费者消费同一个队列的场景。它定义了在消费者返回下一个确认信息之前可以发送的消息的数量。
 
-**RabbitMQ only supports channel-level prefetch-count, not connection or size based prefetching.**
+RabbitMQ只支持渠道级别（channel-level）的prefetch-count，而不是连接级别或者基于传输大小（not connection or size based prefetching）。
+
+
 
 # Message Attributes and Payload
-Messages in the AMQP model have attributes,Some examples are:
+Message的一些属性：
 * Content type
-* Content encoding
-* Routing key
-* Delivery mode (persistent or not)
-* Message priority
-* Message publishing timestamp
-* Expiration period
-* Publisher application id
-Some attributes are used by AMQP brokers, but most are open to interpretation by applications that receive them. 
-Message attributes are set when a message is published.
-AMQP messages also have a payload (the data that they carry), which **AMQP brokers treat as an opaque byte array**(will not inspect or modify the payload). 
 
-Messages may be published as persistent, which makes the AMQP broker persist them to disk. (affects performance)
+* Content encoding
+
+* Routing key
+
+* Delivery mode (persistent or not)
+
+* Message priority
+
+* Message publishing timestamp
+
+* Expiration period
+
+* Publisher application id
+
+AMQP messages支持携带负载信息（payload），**AMQP brokers会把这些信息当做字节数组**进行透明传输，而不会去修改它们。
+
+在发布消息时可以指定消息为持久消息，如果这样，队列将会持久化这些消息（影响性能）。
 
 # Message Acknowledgements
-AMQP 0-9-1 has a built-in feature called message acknowledgements (sometimes referred to as acks) that consumers use to confirm message delivery and/or processing. If an application crashes (the AMQP broker notices this when the connection is closed), if an acknowledgement for a message was expected but not received by the AMQP broker, the message is re-queued (and possibly immediately delivered to another consumer, if any exists).
+AMQP内建了消息确认机制，当应用程序崩溃时（broker通过发现连接断开来判断），对于未收到确认的消息，broker将会被重新入队或者等待有可用的队列后重新入队。
+
+
 
 # AMQP 0-9-1 Methods
-AMQP 0-9-1 is **structured as a number of methods**. Methods are operations (like HTTP methods) and have nothing in common with methods in object-oriented programming languages. **AMQP methods are grouped into classes**. 
+AMQP定义了一系列的方法（类似HTTP的方法，而不是程序语言的方法），方法使用类（classes）来组织。
 
 ## exchange class
-a group of methods related to operations on exchanges. It includes the following operations:
+一组与exchange操作相关的方法:
 * exchange.declare
 * exchange.declare-ok
 * exchange.delete
 * exchange.delete-ok
-These operations are "requests" (sent by clients) and "responses" (sent by brokers in response to the aforementioned "requests").
 
-the client asks the broker to declare a new exchange:
+比如一个客户端请求broker来定义一个新的exchange：
 ```
 Client(Publisher/Consumer) --exchange.declare--> AMQP broker
               [name="xxx",type="direct",durable=true,...]
 ```
-If the operation succeeds, the broker responds with the exchange.declare-ok method:
+如果创建成功，broker将会通过exchange.declare-ok方法返回信息：
 ```
 Client(Publisher/Consumer) <--exchange.declare-ok-- AMQP broker
 ```
 
-Not all AMQP methods have counterparts. Some (basic.publish being the most widely used one) do not have corresponding "response" methods and some others (basic.get, for example) have more than one possible "response".
+并非所有的AMQP方法都有对应的response方法，比如basic.publish。
+
+
 
 # Connections
 AMQP connections are typically long-lived. 
 AMQP is an **application level protocol** that uses TCP for reliable delivery. 
 AMQP connections use authentication and can be protected using TLS (SSL). 
 
+AMQP连接是典型的长连接。
+
+AMQP是一个应用层协议，使用TCP来实现可靠传输。
+
+AMQP可以使用认证，也可以使用TLS（SSL）来实现安全传输。
+
+
+
 # Channels
-Some applications need multiple connections to an AMQP broker. However, it is undesirable to keep many TCP connections open at the same time.
+有些应用程序可能同时需要多个连接连接到AMQP broker，但是同时保持多个打开的TCP连接是不可取的。
 
-AMQP 0-9-1 connections are multiplexed with channels that can be thought of as "lightweight connections that share a single TCP connection".
+AMQP 0-9-1连接使用channel来实现并发连接的功能。多个channel共享同一个TCP连接。常用的场景是在每一个进程或线程中打开一个channel，不同channel之间的数据是不共享的（因而所有的AMQP方法都同时带有一个channel number以便于客户端判断操作对应的channel）。
 
-it is very common to open a new channel per thread/process and not share channels between them.
 
-Communication on a particular channel is completely separate from communication on another channel, therefore **every AMQP method also carries a channel number** that clients use to figure out which channel the method is for.
 
 # Virtual Hosts
-To make it possible for a single broker to host multiple isolated "environments" (groups of users, exchanges, queues and so on), AMQP includes the concept of virtual hosts (vhosts). They are similar to virtual hosts used by many popular Web servers and provide completely isolated environments in which AMQP entities live. **AMQP clients specify what vhosts they want to use during AMQP connection negotiation.**
+AMQP提供类似Web Server的vhosts的概念，用于提供独立的broker运行环境。AMQP客户端在连接阶段可以指定想要连接的vhost。
+
+
 
 # AMQP is Extensible
+
 AMQP 0-9-1 has several extension points:略.
 
 # AMQP 0-9-1 Clients Ecosystem

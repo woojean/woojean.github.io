@@ -25,13 +25,12 @@ composer require php-amqplib/php-amqplib
 
 
 
-
-
 # 例：Hello World !
 
-**a producer that sends a single message, and a consumer that receives messages and prints them out.**
+一个生产者发送一个消息，一个消费者收到该消息并打印。
 
 ## 生产者：send.php
+
 ```php
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
@@ -39,7 +38,7 @@ use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
 $queueName = 'queue_hello';
-$connection = new AMQPStreamConnection('localhost',5672,'guest','guest');
+$connection = new AMQPStreamConnection('localhost',5672,'guest','guest');  // vhost
 
 // AMQP 0-9-1 connections are multiplexed with channels that can be thought of as “lightweight connections that share a single TCP connection”.
 $channel = $connection->channel();
@@ -100,24 +99,20 @@ php send.php
 
 
 
-
-
 # 例：Work Queues
-The main idea behind Work Queues is to **avoid doing a resource-intensive task immediately and having to wait for it to complete**. Instead schedule the task to be done later. We **encapsulate a task as a message and send it to a queue. A worker process (or many workers) running in the background will pop the tasks and eventually execute the job.** 
+轮询地分发消息。<u>启动2个worker，之后执行多次new_task，消息将会在2个worker之间交替进行处理。</u>
 
-One of the advantages of using a Task Queue is the ability to easily parallelise work. If we are building up a backlog of work, we can just add more workers and that way, **scale easily**.By default, RabbitMQ will send each message to the next consumer, in sequence. On average every consumer will get the same number of messages(Round-robin dispatching). 
+工作队列的方式非常便于并发扩展（通过添加更多的队列）。RabbitMQ会按序发送每一个消息至下一个消费者，所以从平均来讲，每个消费者将会收到相同数量的消息。
 
-An ack(nowledgement) is sent back from the consumer to tell RabbitMQ that a particular message has been received, processed and that RabbitMQ is free to delete it.If a consumer dies (its channel is closed, connection is closed, or TCP connection is lost) without sending an ack, RabbitMQ will understand that a message wasn't processed fully and will re-queue it. If there are other consumers online at the same time, it will then quickly redeliver it to another consumer. 
+消息没有超时的概念，所以处理消息的时间可以很长。RabbitMQ通过判断连接是否断开来判断消费者是否崩溃。
 
-**There aren't any message timeouts**; RabbitMQ will redeliver the message when the consumer dies. It's fine even if processing a message takes a very, very long time.
+消息确认（Message acknowledgments）默认是关闭的。
 
-Message acknowledgments are turned off by default. 
-
-When RabbitMQ quits or crashes it will forget the queues and messages unless you tell it not to. Two things are required to make sure that messages aren't lost: we need to **mark both the queue and messages as durable**.
+为了确保消息不会丢失，要将队列和消息都设置为持久化（durable）。
 
 Marking messages as persistent doesn't fully guarantee that a message won't be lost. Although it tells RabbitMQ to save the message to disk, **there is still a short time window when RabbitMQ has accepted a message and hasn't saved it yet**. Also, RabbitMQ doesn't do fsync(2) for every message -- it may be just saved to cache and not really written to the disk. The persistence guarantees aren't strong, but it's more than enough for our simple task queue. If you need a stronger guarantee then you can use publisher confirms.
 
-RabbitMQ just dispatches a message when the message enters the queue. **It doesn't look at the number of unacknowledged messages for a consumer. It just blindly dispatches every n-th message to the n-th consumer**.
+RabbitMQ在收到消息时就直接分发，而不会去检查当前某个消费者未确认的消息的数量，它只是盲目地分发下一个消息去往下一个消费者。
 
 
 ## 添加新任务：new_task.php
@@ -133,16 +128,14 @@ $channel = $connection->channel();
 // 第3个参数为true，代表队列的durable为true，此处要与worker中的定义一致
 $channel->queue_declare('task_queue',false,true,false,false);
 
-// 根据用户输入拼装消息参数
-$data = implode(' ',array_slice($argv,1));
-if(empty($data)){
-    $data = "Hello World!";
-}
+// 拼装消息参数
+$data = "Hello World!";
 $msg = new AMQPMessage($data,[
     'delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT  // 代表持久化消息
 ]);
 
-//  发布消息
+// 发布消息
+// exchange为空字符串，即使用default exchange，那么队列名就是routing key
 $channel->basic_publish($msg,'','task_queue');
 echo " [x] Sent ", $data, "\n";
 
@@ -193,27 +186,16 @@ $connection->close();
 
 
 # 例：Publish/Subscribe
-deliver a message to multiple consumers.（we're going to build a simple logging system.）
+分发一个消息给多个消费者。
 
-**The core idea in the messaging model in RabbitMQ is that the producer never sends any messages directly to a queue. **Instead, the producer can only send messages to an exchange. An exchange is a very simple thing. On one side it receives messages from producers and the other side it pushes them to queues. The exchange must know exactly what to do with a message it receives：
-* Should it be appended to a particular queue? 
-* Should it be appended to many queues?
-* Should it get discarded？ 
-The rules for that are defined by the **exchange type**：direct, topic, headers , fanout.
+RabbitMQ的核心思想是：生产者从不直接将消息发送给队列，而是将消息发送给exchange，exchange在接收到消息后需要知道如何进行分发：分发给特定的某个队列、分发给多个队列、丢弃消息等，取决于exchange的类型：direct, topic, headers , fanout。
 
-The fanout exchange is very simple,it just broadcasts all the messages it receives to all the queues it knows.
+如果使用空字符串定义队列，将会创一个非持久化的队列，该队列的名字自动生成（以amq.开头）。
 
-**The default exchange**
-identify by the empty string ("").
-
-**Temporary queues**
-In the php-amqplib client, when we supply queue name as an empty string, we create a **non-durable queue** with a generated name:
 ```
 list($queue_name, ,) = $channel->queue_declare(""); // amq.gen-JzTY20BRgKO-HjmUJj0wLg
 ```
-the $queue_name variable contains a random queue name generated by RabbitMQ.
-
-relationship between exchange and a queue is called a binding.
+exchange和队列之间的关系称为binding.
 
 
 ## log接收者
@@ -226,13 +208,13 @@ use PhpAmqpLib\Connection\AMQPStreamConnection;
 $connection = new AMQPStreamConnection('localhost', 5672, 'guest', 'guest');
 $channel = $connection->channel();
 
-// 定义exchange
+// 定义fanout exchange
 $channel->exchange_declare('logs','fanout', FALSE, FALSE, FALSE);
 
 // 生成一个临时queue，并保存queue的名字
 list($queue_name,,) = $channel->queue_declare('', FALSE, FALSE,TRUE, FALSE);
 
-// 将queue绑定到exchange
+// 将queue绑定到exchange，因为该exchange是一个fanout类型的，所以绑定的每个queue将被广播
 $channel->queue_bind($queue_name,'logs');  // queue -> exchange
 echo ' [*] Waiting for logs. To exit press CTRL+C', "\n";
 
@@ -264,8 +246,7 @@ $channel = $connection->channel();
 $channel->exchange_declare('logs','fanout',false,FALSE,FALSE);
 
 // 拼装消息
-$data = implode(' ', array_slice($argv, 1));
-if (empty($data)) $data = "info: Hello World!";
+$data = "info: Hello World!";
 $msg = new AMQPMessage($data);
 
 // 将消息发布到exchange
@@ -281,16 +262,10 @@ $connection->close();
 
 
 # 例：Routing
-subscribe only to a subset of the messages.（For example, we will be able to direct only critical error messages to the log file (to save disk space), while still being able to print all of the log messages on the console.）
+只处理全部消息的子集。比如在能够打印所有日志的同时，将错误日志保存到磁盘。
 
-The meaning of a binding key depends on the exchange type. The fanout exchanges simply ignored its value.
-
-The routing algorithm behind a direct exchange is simple - a message goes to the queues whose binding key exactly matches the routing key of the message.
-
-It is perfectly legal to bind multiple queues with the same binding key.
-
-多个queue可以使用同一个key绑定到同一个exchange。
-同一个queue和同一个exchange之间可以绑定多个不同的key。
+多个queue可以使用同一个routing key绑定到同一个exchange。
+同一个queue和同一个exchange之间也可以绑定多个不同的key。
 
 ## 发出日志：emit_log_direct.php
 ```php
@@ -314,6 +289,7 @@ if (empty($data)) {
 $msg = new AMQPMessage($data);
 
 // 发出信息，其中$severity为route key
+// 即发布一个routing key为$severity的消息到direct_logs这个exchange中
 $channel->basic_publish($msg, 'direct_logs', $severity);
 
 echo " [x] Sent ", $severity, ':', $data, " \n";
@@ -345,6 +321,7 @@ if (empty($severities)) {
 
 // 每一种级别的日志都进行一次绑定
 foreach ($severities as $severity) {
+    // 将$queue_name这个queue使用routing key $severity绑定到exchange direct_logs
     $channel->queue_bind($queue_name, 'direct_logs', $severity);
 }
 
@@ -375,33 +352,29 @@ php receive_logs_direct.php info error
 php emit_log_direct.php error
 ```
 
-
+<u>如果发布error消息，2个receiver都会收到，如果发布info消息，则只有第2个receiver会收到消息。</u>
 
 
 
 # 例：Topics
-Using the direct exchange still has limitations - **it can't do routing based on multiple criteria**.
-(In our logging system we might want to subscribe to not only logs based on severity, but also based on the source which emitted the log. )
+direct exchange的不足在于它不能基于多个纬度来分发消息。比如要同时基于日志的错误级别和来源进行处理。
 
-Messages sent to a topic exchange can't have an arbitrary routing_key - it must be a list of words, delimited by dots(up to the limit of 255 bytes).
+发送往topic exchange的消息需要带有一个由.号分隔的多个单词组成的binding key，且有2个字符比较特殊：
 
-there are two important special cases for binding keys:
-* \* (star) can substitute for exactly one word.
-* \# (hash) can substitute for zero or more words.
+* \* (star) 代表1个单词；
+* \# (hash) 代表0或多个单词；
 
-比如：`<speed>.<colour>.<species>`:
+比如：`<speed>.<colour>.<species>`，声明如下的绑定：
 ```
 Q1: *.orange.*  // all the orange animals
 Q2: *.*.rabbit  // everything about rabbits
 Q3: lazy.#      // everything about lazy animals
 ```
-"quick.brown.fox" doesn't match any binding so it will be discarded.
-"orange" or "quick.orange.male.rabbit"? Well, these messages won't match any bindings and will be lost.
-"lazy.orange.male.rabbit", even though it has four words, will match the last binding.
+"quick.brown.fox"不能匹配任何绑定，所以该消息将被丢弃。
+"orange"或"quick.orange.male.rabbit"也不能匹配任何绑定。
+"lazy.orange.male.rabbit", 将匹配最后一个绑定。
 
-When a queue is bound with "#" (hash) binding key - it will receive all the messages, regardless of the routing key - like in fanout exchange.
-
-When special characters "*" (star) and "#" (hash) aren't used in bindings, the topic exchange will behave just like a direct one.
+如果仅使用"#"作为binding key，那么将会匹配所有接收到的消息而忽略routing key，就像fanout exchange一样。对于topic exchange，如果没有使用 "*" 和"#"，那么其行为将和direct exchange一样。
 
 样例代码几乎和Routing部分的一样。
 
@@ -485,15 +458,14 @@ php emit_log_topic.php "kern.critical" "A critical kernel error" // emit a log w
 
 
 # 例：Remote procedure call (RPC)
-run a function on a remote computer and wait for the result.
 
-A client sends a request message and a server replies with a response message. In order to receive a response we need to **send a 'callback' queue address with the request**. 
+基于回调方式的RPC调用。
 
-The AMQP 0-9-1 protocol predefines a set of 14 properties that go with a message. Most of the properties are rarely used, with the exception of the following:
-* delivery_mode: Marks a message as persistent (with a value of 2) or transient (1). You may remember this property from the second tutorial.
-* content_type: Used to describe the mime-type of the encoding. For example for the often used JSON encoding it is a good practice to set this property to: application/json.
-* reply_to: Commonly used to name a callback queue.
-* correlation_id: Useful to correlate RPC responses with requests.
+涉及的Message属性：
+* delivery_mode: 指定消息为是否为持久化的；
+* content_type: 比如application/json；
+* reply_to: 用于指定回调队列；
+* correlation_id: 用于关联RPC Response和请求；
 
 ## rpc_server.php 
 ```php
