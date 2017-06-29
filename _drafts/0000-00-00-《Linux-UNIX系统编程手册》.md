@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "《Linux/UNIX系统编程手册（The Linux Programming Interfac）)》"
-date: 0000-00-00 00:00:00
+date: 2017-00-00 00:00:00
 categories: 技术书籍与文档
 tags: Linux Unix C 计算机系统
 excerpt: ""
@@ -12,7 +12,7 @@ excerpt: ""
 
 
 
-
+2017-06-26 开始读第一遍，不懂先跳过
 
 
 
