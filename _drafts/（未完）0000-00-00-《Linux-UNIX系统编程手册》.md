@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "《Linux/UNIX系统编程手册（The Linux Programming Interfac）)》"
+title:  "《Linux/UNIX系统编程手册（The Linux Programming Interface）)》"
 date: 2017-00-00 00:00:00
 categories: 技术书籍与文档
 tags: Linux Unix C 计算机系统
