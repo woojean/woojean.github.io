@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "《Linux/UNIX系统编程手册（The Linux Programming Interface）)》"
-date: 2017-00-00 00:00:00
+date: 2017-06-26 00:00:00
 categories: 技术书籍与文档
 tags: Linux Unix C 计算机系统
 excerpt: ""
@@ -10,13 +10,17 @@ excerpt: ""
 * content
 {:toc}
 
+# 第1章 历史和标准
 
 
-2017-06-26 开始读第一遍，不懂先跳过
 
-所有系统调用使用高亮标识
 
-2017-07-06 至第23章，需要暂停休息一下
+
+
+
+
+
+
 
 
 
