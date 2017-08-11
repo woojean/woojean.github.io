@@ -476,4 +476,8 @@ ZEND引擎维护了一个栈zval，每个创建的变量和资源都会压入这
 
 6、画一个tcp三次握手图
 
-目前还在找工作中，在我看来8年的程序员怎么也不应该是这样子的，温水煮青蛙的教训非常惨痛，好在现在认识到问题还不晚，等到了35岁这个年纪，可能就真的晚了。
+
+
+
+
+curl -A "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)" https://github.com
