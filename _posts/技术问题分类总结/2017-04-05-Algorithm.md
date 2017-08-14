@@ -13,7 +13,7 @@ excerpt: ""
 ## 选择排序（C）
 
 首先找到最小元素置于起始位置，再从剩余元素中继续寻找最小者放到已排序序列末尾，依次类推（不稳定排序）
-```c++
+```c
 void SelectionSort(int arr[],int len){
   
   int i,j,min,tmp;
@@ -36,7 +36,7 @@ void SelectionSort(int arr[],int len){
 
 对于未排序数据在已排序序列中从后向前扫描，找到相应位置并插入（稳定排序）
 
-```c++
+```c
 void InsertionSort(int arr[],int len){
   
   int i,j,tmp;
@@ -76,7 +76,7 @@ void BubbleSort(int arr[],int len){
 
 先取一个正整数d1 < N，把所有相隔d1的元素放一组，共d1组，组内进行直接插入排序，再取d2 < d1，重复上述步骤，直至d=1.`只要最终步长为1，任何步长序列都可以`，当步长为1时，算法即为插入排序。（不稳定排序）
 
-```c++
+```c
 void ShellSort(int arr[],int len){
   
   int i,j,incr,tmp;
@@ -103,7 +103,7 @@ void ShellSort(int arr[],int len){
 
 （不稳定排序）
 
-```c++
+```c
 void QuickSort(int a[],int low,int high){
   
   int i = low;
@@ -134,7 +134,7 @@ void QuickSort(int a[],int low,int high){
 
 （稳定排序）
 
-```c++
+```c
 void  Merge( int arr[], int tmpArray[], int lBegin, int rBegin, int rEnd )
 {
   int i, lEnd, len, tmpPos;
@@ -196,7 +196,7 @@ void  MergeSort( int arr[ ], int len )
 
 （不稳定排序）
 
-```c++
+```c
 #define LeftChild(i)  (2*(i) + 1)
 
 //对数组A中以下标为i的元素作为根，大小为len的元素序列构成的堆进行堆调整，使该根节点放到合适的位置
@@ -241,7 +241,7 @@ void HeapSort(int arr[],int len){
 
 （稳定排序）
 
-```c++
+```c
 void CountingSort(int arr[],int len){
   
   int i, min, max;
@@ -323,7 +323,7 @@ void PreorderTraverse(BTNode  *T){
 ⑵ q=p->Rchild ，若q不为空，则q进栈；
 ⑶ p=p->Lchild ，若p不为空，转(1)，否则转(4)；
 ⑷ 退栈到p ，转(1)，直到栈空为止。
-```c++
+```c
 #define  MAX_NODE  50
 void PreorderTraverse( BTNode  *T){  
   BTNode *Stack[MAX_NODE] , *p=T,  *q ;
@@ -399,7 +399,7 @@ void  InorderTraverse( BTNode  *T){
 
 递归算法
 
-```c++
+```c
 void  PostorderTraverse(BTNode  *T){  
   if (T!=NULL) {  
     PostorderTraverse(T->Lchild) ;
@@ -418,7 +418,7 @@ void  PostorderTraverse(BTNode  *T){
 
 ## 层序遍历二叉树（C）
 
-```c++
+```c
 #define MAX_NODE  50
 void LevelorderTraverse( BTNode  *T){  
   BTNode  *Queue[MAX_NODE] ,*p=T ;
@@ -443,7 +443,7 @@ void LevelorderTraverse( BTNode  *T){
 
 ## 判断二叉树是否相等（C）
 
-```c++
+```c
 typedef struct _TreeNode{
   char c;
   TreeNode *leftchild;
@@ -476,7 +476,7 @@ int CompTree(TreeNode* tree1,TreeNode* tree2){
 
 ## 求二叉树的叶子节点数（C）
 
-```c++
+```c
 #define  MAX_NODE  50
 int search_leaves( BTNode  *T){  
   BTNode  *Stack[MAX_NODE] ,*p=T;
@@ -502,7 +502,7 @@ int search_leaves( BTNode  *T){
 
 ## 求二叉树的深度（C）
 
-```c++
+```c
 #define MAX_NODE 50
 int search_depth( BTNode  *T){  
   BTNode  *Stack[MAX_NODE] ,*p=T;
@@ -532,7 +532,7 @@ int search_depth( BTNode  *T){
 
 ## 求最大的子序 列和的联机算法（C）
 
-```c++
+```c
 int  MaxSubSequenceSum(const int arr[],int len){
   int  tmpSum, maxSum, j;
   tmpSum = maxSum = 0;
@@ -556,7 +556,7 @@ int  MaxSubSequenceSum(const int arr[],int len){
 
 ## 写内存拷贝
 
-```c++
+```c
 void * memcpy (void * dst, const void * src, size_t count){
   
   void * ret = dst;
@@ -574,7 +574,7 @@ void * memcpy (void * dst, const void * src, size_t count){
 
 (1)邻接表表示图的广度优先搜索算法
 
-```c++
+```c
 // 以vk为源点对用邻接表表示的图G进行广度优先搜索
 void BFS(ALGraph*G，int k){
   int i;
@@ -600,7 +600,7 @@ void BFS(ALGraph*G，int k){
 ```
 
 （2）邻接矩阵表示的图的广度优先搜索算法
-```c++
+```c
 // 以vk为源点对用邻接矩阵表示的图G进行广度优先搜索
 void BFSM(MGraph *G，int k){
   int i,j;
@@ -629,7 +629,7 @@ void BFSM(MGraph *G，int k){
 
 （1）深度优先遍历算法
 
-```c++
+```c
 typedef enum{FALSE，TRUE} Boolean;  // FALSE为0，TRUE为1
 Boolean visited[MaxVertexNum]; // 访问标志向量是全局量
     
@@ -649,7 +649,7 @@ void DFSTraverse(ALGraph *G){
 ```
 
 （2）邻接表表示的深度优先搜索算法
-```c++
+```c
 void DFS(ALGraph *G，int i){ 
   // 以vi为出发点对邻接表表示的图G进行深度优先搜索
   EdgeNode *p;
@@ -666,7 +666,7 @@ void DFS(ALGraph *G，int i){
 ```
 
 （3）邻接矩阵表示的深度优先搜索算法
-```c++
+```c
 void DFSM(MGraph *G，int i){ 
   // 以vi为出发点对邻接矩阵表示的图G进行DFS搜索，设邻接矩阵是0,l矩阵
   int j;
@@ -685,7 +685,7 @@ void DFSM(MGraph *G，int i){
 
 ## 图的邻接矩阵存储结构形式说明（C）
 
-```c++
+```c
 #define MaxVertexNum l00
 typedef struct{
   char vexs[MaxVertexNum];   // 顶点表
@@ -699,7 +699,7 @@ typedef struct{
 对图的每个顶点建立一个单链表（n个顶点建立n个单链表），第i个单链表中的结点包含顶点Vi的所有邻接顶点。又称链接表。
 （1）邻接表的形式说明  
 
-```c++
+```c
 // 边表结点
 typedef struct node{ 
   int adjvex; // 邻接点域
@@ -717,7 +717,7 @@ typedef VertexNode AdjList[MaxVertexNum]; //AdjList是邻接表类型
 ```
 
 （2）建立无向图的邻接表算法
-```c++
+```c
 // 建立无向图的邻接表表示
 void CreateALGraPh(ALGrahp *G){
   int i,j,k;
@@ -775,7 +775,7 @@ void CreateALGraPh(ALGrahp *G){
 
 ## 链表反转（C）
 
-```c++
+```c
 struct Item{
     char c;
     Item *next;

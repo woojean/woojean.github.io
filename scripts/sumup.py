@@ -10,7 +10,7 @@ if sys.getdefaultencoding() != default_encoding:
 
 if __name__ == '__main__':
   pass
-  root = 'questions'
+  root = '../_posts/技术问题分类总结/'
   ret = {}
   
   print '-----------------------------------'
@@ -33,7 +33,7 @@ if __name__ == '__main__':
   total = 0
   
   for fileName,itemList in ret.items() :
-    category = fileName.replace('.md','')
+    category = fileName.replace('.md','').replace('2017-04-05-','')
     s += '# '+ category + '\n'
     
     totalOfCategory = 0
