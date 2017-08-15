@@ -2,7 +2,7 @@
 layout: post
 title:  "Nginx rewrite与Location的比较"
 date: 2017-08-08 00:00:03
-categories: 开发配置
+categories: 开发配置记录
 tags: Nginx
 excerpt: ""
 ---

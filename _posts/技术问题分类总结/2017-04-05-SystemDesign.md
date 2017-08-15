@@ -662,6 +662,108 @@ Web Server对HTTP包头都有长度限制，比如Apache默认为8192字节，�
 * 2. 让客户端解析一段JavaScript，并给出正确的运行结果；
 * 3. 优化Web Server的配置，比如调小Timeout、KeepAliveTimeout的值、增加MaxClients的值等。
 
+## 基准测试有性能剖析概念理解
+基准测试是针对系统设计的一种压力测试，通常的目标是为了掌握系统的行为。通常的测试指标包括：吞吐量、响应时间（延迟）、并发性、可扩展性。
+性能剖析（profiling）：测量服务器的时间花费在哪里。
+
+性能剖析的代码会导致服务器变慢，可以采用随机采样：
+```
+<?php
+$profiling_enabled = rand(0,100) > 99;
+...
+```
+
+
+## AMQP的工作模型
+**AMQP**:Advanced Message Queuing Protocol，是一个用于特定客户端与特定**消息代理**通信的协议。因为**AMQP的“实体”（即Exchange、message、queue等）和路由架构是由应用程序自己定义的**（而不是代理管理员），所以AMQP是一个支持编程扩展的协议。
+
+```
+publisher --publish--> exchange --routes--> queue --consumers--> consumer
+```
+
+## AMQP的Exchanges及其类型
+* Default Exchange
+由消息代理（broker）预先定义的，未命名的exchange。每一个被创建的queue都使用queue的名称自动绑定到该exchange。比如定义一个名为“search-indexing-online”的queue，那么AMQP broker将会使用“search-indexing-online”为routing key将该队列绑定到默认的exchange，当一个带有该routing key的消息被发布时，将会被路由到"search-indexing-online"这个队列。
+
+* Direct Exchange
+直接Exchange基于消息的路由键（message routing key）来分发消息。当一个带有routing key的消息到来时，Direct Exchange将会把该消息分发给所有使用该key进行绑定的queue（注意，这里的queue也可能是多个，即它们要处理的routing key相同）。
+
+**当有多个队列匹配时，时轮询还是全部发送？** 全部发送
+
+* Fanout Exchange
+Fanout Exchange会把收到的消息分发给所有绑定的queue（即忽略routing key），适用于广播的场景。
+
+* Topic Exchange
+基于消息的routing key和匹配模式（pattern）来分发消息。
+
+* Headers Exchange
+忽略routing key，而是基于message headers来分发消息。
+
+当其x-match参数设为any时，只要有一个header值满足条件，则消息会被分发。当设为all时，所有headers都必须满足才会被分发。
+
+
+## AMQP Queue的主要属性
+queue用来保存消息，主要有以下这些属性：
+* Name
+* Durable：broker重启后消息不会丢失
+* Exclusive：该queue只能用于一个连接，且当连接关闭时queue将会被删除
+* Auto-delete：当最后一个消费者解除订阅时，queue将被删除
+* Arguments：一些broker使用它来实现重要的属性，比如message的TTL
+
+
+## AMQP的Binding绑定的是哪两者之间的关系？
+Binding用来指定exchanges与queue之间的路由关系。
+如果一个消息无法被路由（比如消息发布到的exchange没有绑定任何queue），那么这个消息将会被丢弃或者返回给消息的发布者（取决于消息发布者的设置）。
+
+## AMQP Message的主要属性
+* Content type
+* Content encoding
+* Routing key
+* Delivery mode (persistent or not)
+* Message priority
+* Message publishing timestamp
+* Expiration period
+* Publisher application id
+AMQP messages支持携带负载信息（payload），**AMQP brokers会把这些信息当做字节数组**进行透明传输，而不会去修改它们。
+在发布消息时可以指定消息为持久消息，如果这样，队列将会持久化这些消息（影响性能）。
+
+# AMQP Methods
+AMQP定义了一系列的方法（类似HTTP的方法，而不是程序语言的方法），方法使用类（classes）来组织。
+**exchange class**
+一组与exchange操作相关的方法:
+* exchange.declare
+* exchange.declare-ok
+* exchange.delete
+* exchange.delete-ok
+
+比如一个客户端请求broker来定义一个新的exchange：
+```
+Client(Publisher/Consumer) --exchange.declare--> AMQP broker
+              [name="xxx",type="direct",durable=true,...]
+```
+如果创建成功，broker将会通过exchange.declare-ok方法返回信息：
+```
+Client(Publisher/Consumer) <--exchange.declare-ok-- AMQP broker
+```
+
+并非所有的AMQP方法都有对应的response方法，比如basic.publish。
+
+
+## AMQP Channels
+有些应用程序可能同时需要多个连接连接到AMQP broker，但是同时保持多个打开的TCP连接是不可取的。
+AMQP 0-9-1连接使用channel来实现并发连接的功能。多个channel共享同一个TCP连接。常用的场景是在每一个进程或线程中打开一个channel，不同channel之间的数据是不共享的（因而所有的AMQP方法都同时带有一个channel number以便于客户端判断操作对应的channel）。
+
+## AMQP Virtual Hosts
+AMQP提供类似Web Server的vhosts的概念，用于提供独立的broker运行环境。AMQP客户端在连接阶段可以指定想要连接的vhost。
+
+
+
+
+
+
+
+
+
 
 
 

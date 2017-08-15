@@ -2,7 +2,7 @@
 layout: post
 title:  "CentOS部署最新Node前端执行环境"
 date: 2017-04-05 00:02:00
-categories: 开发配置
+categories: 开发配置记录
 tags: CentOS Node
 excerpt: ""
 ---

@@ -2,7 +2,7 @@
 layout: post
 title:  "基于Jenkins实现PHP项目的部署"
 date: 2017-04-05 00:02:00
-categories: 开发配置
+categories: 开发配置记录
 tags: Jenkins PHP
 excerpt: ""
 ---

@@ -2,7 +2,7 @@
 layout: post
 title:  "Mac安装RabbitMQ服务"
 date: 2017-04-24 00:00:01
-categories: 开发配置
+categories: 开发配置记录
 tags: RabbitMQ 消息队列
 excerpt: "在Mac上安装RabbitMQ，用于本地开发、学习"
 ---

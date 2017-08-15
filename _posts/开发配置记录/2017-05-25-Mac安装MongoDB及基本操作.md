@@ -2,7 +2,7 @@
 layout: post
 title:  "Mac安装MongoDB及基本操作"
 date: 2017-05-25 00:00:01
-categories: 开发配置
+categories: 开发配置记录
 tags: MongoDB Mac
 excerpt: ""
 ---
