@@ -216,6 +216,65 @@ Apache不适合用作通用Web服务器（既处理动态脚本也处理静态�
 
 
 
+## 配置通过Web页面实时查看php-fpm的状态
+在nginx里面加一个location：
+```
+location ~ ^/status$ {
+  include fastcgi_params;
+  fastcgi_pass 127.0.0.1:9000;
+  fastcgi_param SCRIPT_FILENAME $fastcgi_script_name;
+}
+```
+然后在php-fpm.conf里面打开选项：
+```
+pm.status_path = /status
+```
+过http://域名/status就可以看到当前的php情况。
+
+
+## 配置Nginx和Apache的Url重写使其支持Phalcon项目的路由
+对于Phalcon项目，以下访问路径是等价的：
+```
+http://phalcon.w-blog.cn/phalcon/index/test
+http://phalcon.w-blog.cn/phalcon/public/?_url=/index/test
+```
+
+**Nginx配置**
+```
+# 当URL中包含/phalcon/时进入到下面的url重写
+location  /phalcon/ { 
+  # 把/phalcon/后面的内容放到了public/index.php?_url=/后面
+  rewrite ^/phalcon/(.*)$ /phalcon/public/index.php?_url=/$1;
+}
+```
+
+**Apache配置**
+* 在Phalcon目录下创建.htaccess文件加入如下语句，主要作用是指向到public
+```
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule  ^$ public/    [L]
+    RewriteRule  ((?s).*) public/$1 [L]
+</IfModule>
+```
+
+* 在public加入如下语句主要作用是定向赋值给_url
+```
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^((?s).*)$ index.php?_url=/$1 [QSA,L]
+</IfModule>
+```
+
+
+
+
+
+
+
+
 
 
 

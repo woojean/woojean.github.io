@@ -3154,7 +3154,7 @@ module MyModule {
 }
 ```
 这个模块公开了一个名为 myobject 的对象和一个名为 hello() 的函数。可以在页面或其他模块中使用这个模块，也可以只导入模块中的一个成员或者两个成员。导入模块要使用 import 命令：
-```javascript
+```js
 //只导入 myobject
 import myobject from MyModule;
 console.log(myobject);
@@ -3177,14 +3177,14 @@ console.log(MyModule.hello);
 
 外部模块
 通过提供模块所在外部文件的 URL，也可以动态加载和导入模块。为此，首先要在模块声明后面加上外部文件的 URL，然后再导入模块成员：
-```javascript
+```js
 module MyModule from "mymodule.js";
 import myobject from MyModule;
 ```
 以上声明会通知 JavaScript 引擎下载 mymodule.js 文件，然后从中加载名为 MyModule 的模块。
 请读者注意，这个调用会阻塞进程。换句话说，JavaScript 引擎在下载完外部文件并对其求值之前，不会处理后面的代码。
 如果你只想包含模块中对外公开的某些成员，不想把整个模块都加载进来，可以像下面这样使用import 指令：
-```javascript
+```js
 import myobject from "mymodule.js";
 ```
 
@@ -3193,13 +3193,169 @@ ECMAScript 5 最早引入了“严格模式”（strict mode）的概念。通�
 要选择进入严格模式，可以使用严格模式的编译指示（pragma），实际上就是一个不会赋给任何变量的字符串：
 "use strict";
 如果是在全局作用域中（函数外部）给出这个编译指示，则整个脚本都将使用严格模式。换句话说，如果把带有这个编译指示的脚本放到其他文件中，则该文件中的 JavaScript 代码也将处于严格模式下。也可以只在函数中打开严格模式，就像下面这样：
-```javascript
+```js
 function doSomething(){
   "use strict";
   //其他代码
 }
 ```
 一般来说，非严格模式下会静默失败的情形，在严格模式下就会抛出错误。
+
+
+## ES6与ES5，this的变化比较
+参考typescript文档 类类型
+
+## js类静态部分与实例部分的区别（参考typescript文档 类类型）
+
+
+## js内存泄漏是怎么产生的？
+内存泄漏是因为一块被分配内存既不能被使用，也不能被回收，直到浏览器进程结束。
+产生泄漏的原因是闭包维持函数内局部变量，不能被释放，尤其是使用闭包并存在外部引用还setInterval的时候危害很大。
+产生泄漏的原因有好几种：
+(1) 页面元素被删除，但是绑定在该元素上的事件未被删除；
+(2) 闭包维持函数内局部变量（外部不可控），使其得不到释放；
+(3) 意外的全局变量；
+(4) 引用被删除，但是引用内的引用，还存在内存中。
+从上述原因上看，内存泄漏产生的根本原因是引用无法正确回收，值类型并不能引发内存泄漏。
+对于每个引用，都有自己的引用计数，当引用计数归零或被标记清除时，js垃圾回收器会认为该引用可以回收了。
+
+## 什么是闭包，跟原型链、作用域链有什么关联
+闭包是指存在于一个作用域链分支的函数域内的函数，该函数可以向上逐级访问作用域链上的变量，直到找到为止。当闭包存在外部引用时，js会维持闭包自身以及所在函数作用域链的内存状态。
+跟原型链没有什么关联，函数的原型（prototype）主要用于实现继承，原型链可用于追溯继承关系，与作用域链类似，都是向上逐级访问属性，直到被找到，原型链的顶层是null，可以理解为所有的object都继承至null，所以null的类型是object。
+作用域链可以看作是一个树形结构，由根节点window向下扩散，下层节点可以访问上层节点，但是上层节点无法访问下层节点，产生闭包的函数作用域属于节点中的一个，向下扩散后闭包函数产生叶子节点，叶子节点之间可以互相访问，当访问的变量在叶子节点中无法找到时，向上层节点查找，直到被找到为止，这个概念有点类似原型链上的属性查找。
+
+
+## npm模块安装机制
+安装模块到node_modules目录：
+```
+$ npm install <packageName>
+```
+
+更新已安装模块：
+```
+$ npm update <packageName>
+```
+
+npm 模块仓库提供了一个查询服务，叫做 registry ，以 npmjs.org 提供的仓库为例，它的查询服务网址是 https://registry.npmjs.org/，
+在仓库查询地址后面加上模块名称就可以看到仓库中模块的版本信息：
+```
+https://registry.npmjs.org/react
+```
+其效果等同于以下命令：
+```
+$ npm view react
+$ npm info react
+$ npm show react
+$ npm v react
+```
+
+也可以查询模块的指定版本信息：
+```
+https://registry.npmjs.org/react/v0.14.6
+```
+该版本的压缩包在如下片段中指定：
+```
+dist: {
+  shasum: '2a57c2cf8747b483759ad8de0fa47fb0c5cf5c6a',
+  tarball: 'http://registry.npmjs.org/react/-/react-0.14.6.tgz' 
+},
+```
+npm install或npm update命令，从 registry 下载压缩包之后，都存放在本地的缓存目录。在 Linux 或 Mac 默认是用户主目录下的.npm目录，在 Windows 默认是%AppData%/npm-cache，可以通过配置查询：
+```
+$ npm config get cache
+$HOME/.npm
+```
+每个模块的每个版本，都有一个自己的子目录，里面是代码的压缩包package.tgz文件，以及一个描述文件package/package.json。
+除此之外，还会生成一个{cache}/{hostname}/{path}/.cache.json文件。比如，从 npm 官方仓库下载 react 模块的时候，就会生成registry.npmjs.org/react/.cache.json文件。这个文件保存的是，所有版本的信息，以及该模块最近修改的时间和最新一次请求时服务器返回的 ETag 。对于一些不是很关键的操作（比如npm search或npm view），npm会先查看.cache.json里面的模块最近更新时间，跟当前时间的差距，是不是在可接受的范围之内。如果是的，就不再向远程仓库发出请求，而是直接返回.cache.json的数据。
+
+清空缓存的命令：
+```
+$ rm -rf ~/.npm/*
+$ npm cache clean
+```
+
+Node模块的安装过程：
+* 发出npm install命令
+* npm 向 registry 查询模块压缩包的网址
+* 下载压缩包，存放在~/.npm目录
+* 解压压缩包到当前项目的node_modules目录
+一个模块安装以后，本地其实保存了两份。一份是~/.npm目录下的压缩包，另一份是node_modules目录下解压后的代码。但是，运行npm install的时候，默认只会检查node_modules目录，而不会检查~/.npm目录。也就是说，如果一个模块在～/.npm下有压缩包，但是没有安装在node_modules目录中，npm 依然会从远程仓库下载一次新的压缩包。npm 提供了一个--cache-min参数，用于从缓存目录安装模块。
+
+
+## 容器的水平居中
+```css
+div#container {
+ width:760px;
+ margin:0 auto;
+}
+```
+
+## 文字的垂直居中
+单行文字的垂直居中，只要将行高与容器高设为相等即可。比如，容器中有一行数字。
+```
+div#container {
+  height: 35px; 
+  line-height: 35px;
+}
+
+<div id="container">1234567890</div>
+```
+如果有n行文字，那么将行高设为容器高度的n分之一即可。
+
+
+## 容器的垂直居中
+将大容器的定位为relative。将小容器定位为absolute，再将它的左上角沿y轴下移50%，最后将它margin-top上移本身高度的50%即可。
+```css
+div#big{
+  position:relative;
+  height:480px;
+}
+
+div#small {
+  position: absolute;
+  top: 50%;
+  height: 240px;
+  margin-top: -120px;
+}
+
+<div id="big">
+  <div id="small">
+  </div>
+</div>
+```
+使用同样的思路，也可以做出水平居中的效果。
+
+
+## 图片宽度的自适应
+如何使得较大的图片，能够自动适应小容器的宽度：
+```css
+img {max-width: 100%}
+```
+
+
+## link状态的设置顺序
+link的四种状态，需要按照下面的前后顺序进行设置：
+```css
+a:link 
+a:visited 
+a:hover 
+a:active
+```
+
+## 用图片充当列表标志
+默认情况下，浏览器使用一个黑圆圈作为列表标志，可以用图片取代它：
+```css
+ul {list-style: none}
+ul li { 
+  background-image: url("path-to-your-image"); 
+  background-repeat: none; 
+  background-position: 0 0.5em; 
+}
+```
+
+
+
+
 
 
 

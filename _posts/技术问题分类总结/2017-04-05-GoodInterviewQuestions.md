@@ -2037,16 +2037,32 @@ public class FindGreater
 
 
 
+## 将一个链表的奇数项和偶数项调换
+```c
+struct *linkList trans(linkList *l)
+{
+    linkList i = l->next;
+    linkList j = i->next;
+    while (i && j) {
+        linkList k = j->next;
+        j->next = i;
+        i->next = k;
+        i = k;
+        j = k->next;
+    }
+    return l;
+}
+```
 
+## 一台电脑配置无限好，可以同时打开多少个网页
+65535-1000 = 64535（端口数）
 
+## ip地址能被伪造吗？
+http头部可以被篡改，但是只能修改X_FORWARDED_FOR，真实ip地址（REMOTE_ADDR）很难修改（除非是路由器去修改），因为真实ip是底层会话ip地址，而且因为TCP 3次握手的存在，连接无法建立，伪造的意义不大，至于UDP的话，一般是内网才使用UDP通信。
 
-
-
-
-
-
-
-
+## Linux文件权限0600是什么意思？
+0600表示分配给文件的权限。
+一共四位数，第一位数表示gid/uid一般不用，剩下三位分别表示owner,group,other的权限每个数可以转换为三位二进制数，分别表示rwx(读，写，执行)权限，为1表示有权限，0无权限。如6是上面第二个数，可以表示为二进制数110,表示owner有读，写权限，无执行权限。
 
 
 
