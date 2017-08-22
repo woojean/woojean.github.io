@@ -61,13 +61,29 @@
 -----------------------------------
                          total  738
 -----------------------------------
-[Finished in 0.1s]
 
 
 
 
-# 清空浏览器标签及积压待总结问题
-
+# 2017-08-22 清空浏览器标签及积压待总结问题
+-----------------------------------
+                   categoryNum  12
+-----------------------------------
+               NetworkProtocol  27
+                     WebServer  20
+                           PHP  76
+                  SystemDesign  71
+                         Redis  46
+                   WebFrontend  126
+                         Linux  132
+                             C  48
+               ProgrammingMode  6
+                     Algorithm  26
+        GoodInterviewQuestions  108
+                         MySQL  106
+-----------------------------------
+                         total  792
+-----------------------------------
 
 
 
