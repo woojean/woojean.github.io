@@ -2,7 +2,7 @@
 layout: post
 title:  "使用Thrift实现PHP调用Java程序"
 date: 2017-05-18 00:00:01
-categories: 开发总结
+categories: 开发实践总结
 tags: PHP Java Thrift
 excerpt: ""
 ---
