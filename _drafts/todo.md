@@ -1,5 +1,7 @@
+# Learn
+==============================================================================================
 C
-《C程序设计语言》
+08-23 《C程序设计语言》
 
 
 Makefile
@@ -8,15 +10,20 @@ Makefile
 PHP Extension
 
 
-Seaslog
+Seaslog Src
 
 
+Real Oriented Question Supplement (1 month +)
 
 
+Optimize all Question
 
 
+Prepare CV
 
 
+# Read
+==============================================================================================
 
 
 

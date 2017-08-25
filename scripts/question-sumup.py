@@ -48,7 +48,7 @@ if __name__ == '__main__':
   print 'total  '.rjust(32)+str(total)
   print '-----------------------------------'
   
-  f = open('sumup.md','w')
+  f = open('question-sumup.md','w')
   f.write(s)
   f.close()
 
