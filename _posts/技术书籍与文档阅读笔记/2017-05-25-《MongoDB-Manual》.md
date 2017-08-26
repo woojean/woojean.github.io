@@ -2,7 +2,7 @@
 layout: post
 title:  "《MongoDB Manual》(未完)"
 date: 2017-05-25 00:00:02
-categories: 技术书籍文档
+categories: 技术书籍与文档阅读笔记
 tags: MongoDB
 excerpt: ""
 ---
