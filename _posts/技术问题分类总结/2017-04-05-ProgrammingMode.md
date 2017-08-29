@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Programming Mode"
-date: 2017-04-05 00:03:00
+date: 2017-04-05 00:00:03
 categories: 技术问题分类总结
 tags: 设计模式
 excerpt: ""
