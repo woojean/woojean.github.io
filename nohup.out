@@ -212,3 +212,15 @@
 9715:M 08 Sep 21:23:05.066 * Background saving started by pid 29253
 29253:C 08 Sep 21:23:05.084 * DB saved on disk
 9715:M 08 Sep 21:23:05.174 * Background saving terminated with success
+9715:M 11 Sep 15:34:54.191 * 1 changes in 3600 seconds. Saving...
+9715:M 11 Sep 15:34:54.192 * Background saving started by pid 37969
+37969:C 11 Sep 15:34:54.194 * DB saved on disk
+9715:M 11 Sep 15:34:54.297 * Background saving terminated with success
+9715:M 11 Sep 16:05:00.178 * 100 changes in 300 seconds. Saving...
+9715:M 11 Sep 16:05:00.178 * Background saving started by pid 38217
+38217:C 11 Sep 16:05:00.180 * DB saved on disk
+9715:M 11 Sep 16:05:00.281 * Background saving terminated with success
+9715:M 11 Sep 17:05:01.015 * 1 changes in 3600 seconds. Saving...
+9715:M 11 Sep 17:05:01.015 * Background saving started by pid 38957
+38957:C 11 Sep 17:05:01.018 * DB saved on disk
+9715:M 11 Sep 17:05:01.120 * Background saving terminated with success
