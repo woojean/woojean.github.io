@@ -11,69 +11,16 @@ excerpt: ""
 {:toc}
 
 
-## 浏览器缓存控制及HTTP缓存协商机制相关概念
-浏览器会为缓存的每个文件打上一些标记，比如过期时间，上次修改时间、上次检查时间等。
-
-* 缓存协商
-缓存协商基于HTTP头信息进行，动态内容本身并不受浏览器缓存机制的排斥，只要HTTP头信息中包含相应的缓存协商信息，动态内容一样可以被浏览器缓存。不过对于POST类型的请求，浏览器一般不启用本地缓存。
-
-* Last-Modified
-```php
-<?php
-  header('Last-Modified:' . gmdate('D, d M Y H:i:s') . ' GMT');
-  echo time();
-?>
-```
-
-此时再通过浏览器请求该动态文件，HTTP响应中将会添加一个头信息：
-```
-Last-Modified:Fri, 20 Mar 2009 07:53:02 GMT
-```
-
-对于带有`Last-Modified`的响应，浏览器会对文件进行缓存，并打上一些标记，下次再发出请求时会带上如下的HTTP头信息：
-```
-If-Modified-Since:Fri, 20 Mar 2009 07:53:02 GMT
-```
-
-如果没有修改，服务器会返回304信息：
-```
-HTTP/1.1 304 Not Modified
-...
-```
-意味着浏览器可以直接使用本地缓存的内容。
-
-使用基于最后修改时间的缓存协商存在一些缺点：
-1. 很可能文件内容没有变化，而只是时间被更新，此时浏览器仍然会获取全部内容。
-2. 当使用多台机器实现负载均衡时，用户请求会在多台机器之间轮询，而不同机器上的相同文件最后修改时间很难保持一致，可能导致用户的请求每次切换到新的服务器时就需要重新获取所有内容。
-
-* ETag
-比如服务器返回如下带ETag的响应：
-```
-ETag:"74123-b-938fny4nfi8"
-```
-
-浏览器在下次请求该内容时会在HTTP头中添加如下信息：
-```
-If-None-Match:"74123-b-938fny4nfi8"
-```
-如果相同的话，服务器返回304。
-Web服务器可以自由定义ETag的格式和计算方法。
-
-* Expires
-Expires告诉浏览器该内容在何时过期，暗示浏览器在该内容过期之前`不需要再询问服务器`（彻底消灭请求），而是直接使用本地缓存即可。
-```php
-...
-header('Last-Modified:' . gmdate('D, d M Y H:i:s') . ' GMT');
-header('Expires:' . gmdate('D, d M Y H:i:s', time() + 3600) . ' GMT');
-```
-
 ## 浏览器请求页面的不同方式
 * Ctrl+F5：强制刷新，使网页中所有组件都直接向Web服务器发送请求，并且不使用缓存协商。
 * F5：等同于浏览器的刷新按钮，允许浏览器在请求中附加必要的缓存协商，但不允许浏览器直接使用本地缓存，即可以使用Last-Modified，但Expires无效。
 * 在浏览器地址栏输入URL后回车，或者通过超链接跳转到该页面
-浏览器会对所有没有过期的内容直接使用本地缓存。
+  浏览器会对所有没有过期的内容直接使用本地缓存。
+
+
 
 ## Cache-Control与Expire比较
+
 Expire使用的是绝对过期时间，存在一些不足之处，比如浏览器和服务器的时间不一致。
 HTTP/1.1提供Cache-Control，使用相对时间来弥补Expires的不足，格式如下：
 ```
@@ -85,13 +32,15 @@ Cache-Control:max-age=<second>
 
 
 ## DOCTYPE
-`<!DOCTYPE>` 声明`不是HTML标签`；它是指示web浏览器关于页面使用哪个HTML版本进行编写的指令。必须是HTML文档的第一行，位于`<html>`标签之前。没有结束标签。对大小写不敏感。
+`<!DOCTYPE>` 声明不是HTML标签；它是指示web浏览器关于<u>页面使用哪个HTML版本进行编写的</u>指令。必须是HTML文档的第一行，位于`<html>`标签之前。没有结束标签。对大小写不敏感。
 在HTML 4.01中有三种`<!DOCTYPE>`声明。在HTML5中只有一种：`<!DOCTYPE html>`
 应该始终向HTML文档添加`<!DOCTYPE>`声明，这样浏览器才能获知文档类型。
 
 
+
 ## meat标签的http-equiv属性
-http-equiv属性可用于模拟一个HTTP响应头。
+
+http-equiv属性可用于<u>模拟一个HTTP响应头</u>。
 ```
 // 设定网页的到期时间（一旦网页过期，必须到服务器上重新传输）
 ＜meta http-equiv="expires" content="Wed, 20 Jun 2007 22:33:00 GMT"＞
@@ -156,7 +105,7 @@ blockquote p{color:black;}
 ```
 
 * 伪类
-根据文档结构之外的其他条件对元素应用样式，例如表单元素或链接的状态
+  根据文档结构之外的其他条件对元素应用样式，例如表单元素或链接的状态
 ```css
 tr:hover{background-color:red;}
 input:focus{background-color:red;}
@@ -169,7 +118,7 @@ a:visited:hover{color:red;}
 ```
 
 * 通用选择器
-匹配所有可用元素
+  匹配所有可用元素
 ```css
 *{
 padding:0;
@@ -179,7 +128,7 @@ margin:0;
 通用选择器与其他选择器结合使用时，可以用来对某个元素的所有后代应用样式。
 
 * 子选择器
-只选择元素的直接后代，而不是像后代选择器一样选择元素的所有后代。
+  只选择元素的<u>直接后代</u>，而不是像后代选择器一样选择元素的所有后代。
 ```css
 #nav>li{
 padding-left:20px;
@@ -188,7 +137,7 @@ color:red;
 ```
 
 * 相邻同胞选择器
-用于定位同一个父元素下与某个元素相邻的下一个元素。
+  用于定位同一个父元素下与某个元素相邻的下一个元素。
 ```css
 h2 + p{
 font-size:1.4em;
@@ -196,7 +145,7 @@ font-size:1.4em;
 ```
 
 * 属性选择器
-根据某个属性是否存在或者属性的值来寻找元素。
+  根据某个属性是否存在或者属性的值来寻找元素。
 ```css
 abbr[title]{
 border-bottom:1px dotted #999;
@@ -217,8 +166,11 @@ color:red;
 .blogroll a[rel~=’co-worker’]{...}
 ```
 
+
+
 ## self=this
-This question is not specific to jQuery, but specific to JavaScript in general. The core problem is how to "channel" a variable in embedded functions. This is the example:
+
+This question is not specific to jQuery, but specific to JavaScript in general. <u>The core problem is how to "channel" a variable in embedded functions</u>. This is the example:
 
 ```javascript
 var abc = 1; // we want to use this variable in embedded functions
@@ -262,7 +214,9 @@ function xyz(){
 this is not unique in this respect: arguments is the other pseudo variable that should be treated the same way — by aliasing.
 
 
+
 ## 使用 [].slice.call将对象转换为数组的局限性
+
 ```javascript
 var arrayLike = {
     '0': 'a',
@@ -274,7 +228,7 @@ var arrayLike = {
 var arr = [].slice.call(arrayLike); 
 console.log(arr);  // ["a", "b", "c"]
 ```
-被转换为数组的对象必须有length属性，所谓类似数组的对象，本质特征只有一点，即必须有length属性。
+被转换为数组的对象必须有length属性，所谓<u>类似数组的对象</u>，本质特征只有一点，即必须有length属性。
 
 ```javascript
 var arrayLike = {
@@ -288,7 +242,10 @@ var arr = [].slice.call(arrayLike);
 console.log(arr);  // []
 ```
 
+
+
 ## 解决jQuery不同版本之间、与其他js库之间的冲突
+
 * 同一页面jQuery多个版本或冲突解决方法
 
 ```javascript
@@ -322,7 +279,7 @@ console.log(arr);  // []
 ```
 
 * 同一页面jQuery和其他js库冲突解决方法
-1）jQuery在其他js库之前
+  1）jQuery在其他js库之前
 ```javascript
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
  <head>
@@ -378,21 +335,25 @@ console.log(arr);  // []
 ```
 
 
-## JavaScript中__proto__与prototype的关系
-__proto__ 对象的内部原型
-prototype 构造函数的原型
 
-* 所有函数/构造函数（包括内置的、自定义的）的__proto__都指向Function.prototype，它是一个空函数（Empty function）
+## JavaScript中__proto__与prototype的关系
+
+`__proto__` 对象的内部原型
+`prototype` 构造函数的原型
+
+* 所有函数/构造函数（包括内置的、自定义的）的`__proto__`都指向Function.prototype，它是一个空函数（Empty function）
 ```javascript
 Number.__proto__ === Function.prototype  // true
 ```
 
-Global对象的__proto__不能直接访问；
+Global对象的`__proto__`不能直接访问；
 Arguments对象仅在函数调用时由JS引擎创建；
-Math，JSON是以对象形式存在的，无需new，它们的__proto__是Object.prototype：
+Math，JSON是以对象形式存在的，无需new，它们的`__proto__`是Object.prototype：
+```js
 JSON.__proto__ === Object.prototype  // true
+```
 
-* 构造函数都来自于Function.prototype，包括Object及Function自身，因此都继承了Function.prototype的属性及方法。如length、call、apply、bind等
+* 构造函数都来自于Function.prototype，包括Object及Function自身，因此都继承了Function.prototype的属性及方法。如length、call、apply、bind等。
 
 * Function.prototype也是唯一一个typeof XXX.prototype为 “function”的prototype。其它的构造器的prototype都是一个对象：
 ```javascript
@@ -402,7 +363,7 @@ console.log(typeof Number.prototype)   // object
 ```
 
 * Function.prototype的__proto__等于Object的prototype：
-console.log(Function.prototype.__proto__ === Object.prototype) // true  体现了在Javascript中`函数也是一等公民`
+  console.log(Function.prototype.__proto__ === Object.prototype) // true  体现了在Javascript中`函数也是一等公民`
 
 * Object.prototype的__proto__为null
 ```javascript
@@ -424,10 +385,10 @@ function Person(name) {
 }
 var p = new Person('jack')
 console.log(p.__proto__ === Person.prototype) // true
-```javascript
+​```javascript
 
 * 每个对象都有一个`constructor属性`，可以获取它的构造器
-```javascript
+​```javascript
 function Person(name) {
   this.name = name
 }
@@ -453,18 +414,25 @@ console.log(p.__proto__ === Person.prototype) // true
 console.log(p.__proto__ === p.constructor.prototype) // false
 ```
 
+
+
 ## JS中{}+[]和[]+{}的返回值
+
 [] + {} 。一个数组加一个对象。
-加法会进行隐式类型转换，规则是调用其 valueOf() 或 toString() 以取得一个非对象的值（primitive value）。如果两个值中的任何一个是字符串，则进行字符串串接，否则进行数字加法。
+加法会进行隐式类型转换，规则是<u>调用其 valueOf() 或 toString() 以取得一个非对象的值（primitive value）</u>。<u>如果两个值中的任何一个是字符串，则进行字符串串接，否则进行数字加法</u>。
 [] 和 {} 的 valueOf() 都返回对象自身，所以都会调用 toString()，最后的结果是字符串串接。[].toString() 返回空字符串，({}).toString() 返回“[object Object]”。最后的结果就是“[object Object]”。
 
 {} + [] 。看上去应该和上面一样。但是 {} 除了表示一个对象之外，也可以表示一个空的 block。在 [] + {} 中，[] 被解析为数组，因此后续的 + 被解析为加法运算符，而 {} 就解析为对象。但在 {} + [] 中，{} 被解析为空的 block，随后的 + 被解析为正号运算符。即实际上成了：
+```
 { // empty block }
 +[]
+```
 即对一个空数组执行正号运算，实际上就是把数组转型为数字。首先调用 [].valueOf() 。返回数组自身，不是primitive value，因此继续调用 [].toString() ，返回空字符串。空字符串转型为数字，返回0，即最后的结果。
 
 
+
 ## js对象遍历顺序问题
+
 ```javascript
 var a = {
   b:'a',
@@ -481,10 +449,13 @@ Object:
  a:""
  b:"a"
 
+
+
 ## JSONP的原理理解
+
 JSONP是一种解决跨域传输JSON数据的问题的解决方案，是一种非官方跨域数据交互协议。
-Ajax（或者说js）直接请求普通文件存在跨域无权限访问的问题，但是`Web页面上凡是拥有"src"属性的标签引用文件时则不受是否跨域的影响`。如果想通过纯web端（ActiveX控件、服务端代理、Websocket等方式不算）跨域访问数据就只有一种可能：在远程服务器上设法把数据装进js格式的文件里，供客户端调用和进一步处理。
-为了便于客户端使用数据，逐渐形成了一种非正式传输协议:JSONP，该协议的一个要点就是`允许用户传递一个callback参数给服务端，然后服务端返回数据时会将这个callback参数作为函数名来包裹住JSON数据`，这样客户端就可以随意定制自己的函数来自动处理返回数据了。
+Ajax（或者说js）直接请求普通文件存在跨域无权限访问的问题，但是<u>Web页面上凡是拥有"src"属性的标签引用文件时则不受是否跨域的影响</u>。如果想通过纯web端（ActiveX控件、服务端代理、Websocket等方式不算）跨域访问数据就只有一种可能：在远程服务器上设法把数据装进js格式的文件里，供客户端调用和进一步处理。
+为了便于客户端使用数据，逐渐形成了一种非正式传输协议:JSONP，该协议的一个要点就是<u>允许用户传递一个callback参数给服务端，然后服务端返回数据时会将这个callback参数作为函数名来包裹住JSON数据</u>，这样客户端就可以随意定制自己的函数来自动处理返回数据了。
 
 例：使用Javascript实现JSONP
 ```html
@@ -548,15 +519,15 @@ jquery在处理jsonp类型的ajax时自动生成回调函数并把数据（即�
 
 
 ## AMD规范、requireJS理解
-因为JavaScript本身的灵活性：框架没办法绝对的约束你的行为，一件事情总可以用多种途径去实现，所以我们只能在方法学上去引导正确的实施方法。
-AMD规范：Asynchronous Module Definition，即异步模块加载机制。AMD规范简单到只有一个API，即define函数：
-　　define([module-name?], [array-of-dependencies?], [module-factory-or-object]);
-module-name: 模块标识，可以省略。
-array-of-dependencies: 所依赖的模块，可以省略。
-module-factory-or-object: 模块的实现，或者一个JavaScript对象。
-当define函数执行时，它首先会异步地去调用第二个参数中列出的依赖模块，当所有的模块被载入完成之后，如果第三个参数是一个回调函数则执行，然后告诉系统模块可用，也就通知了依赖于自己的模块自己已经可用。
-实例：
-
+AMD规范：Asynchronous Module Definition，即<u>异步模块加载机制</u>。AMD规范简单到<u>只有一个API</u>，即define函数：
+```javascript
+define([module-name?], [array-of-dependencies?], [module-factory-or-object]);
+```
+* module-name: 模块标识，可以省略。
+* array-of-dependencies: 所依赖的模块，可以省略。
+* module-factory-or-object: 模块的实现，或者一个JavaScript对象。
+  当define函数执行时，它首先会异步地去调用第二个参数中列出的依赖模块，当所有的模块被载入完成之后，如果第三个参数是一个回调函数则执行，然后告诉系统模块可用，也就通知了依赖于自己的模块自己已经可用。
+  实例：
 ```javascript
 	define("alpha", ["require", "exports", "beta"], function (require, exports, beta) {	// 依赖的模块做参数传入
 　　	exports.verb = function() {	
@@ -566,12 +537,13 @@ module-factory-or-object: 模块的实现，或者一个JavaScript对象。
 ```
 requireJS例一：使用requirejs动态加载jquery
 目录结构：
+```
 /web
 /index.html				# 页面文件
 /jquery-1.7.2.js			# jquery模块
 /main.js					# js加载主入口，在引用require.js文件时通过data-main属性指定
 /require.js				# requireJS文件
-
+```
 index.html文件内容：
 ```html
 <!doctype html>
@@ -603,6 +575,7 @@ jQuery从1.7以后支持AMD规范，所以当jQuery作为一个AMD模块运行�
 
 requireJS例二：使用自定义模块
 目录结构：
+```
 /web
 /js
 /cache.js				# 自定义模块
@@ -611,6 +584,7 @@ requireJS例二：使用自定义模块
 /selector.js			# 自定义模块
 /index.html
 /require.js
+```
 
 index.html文件内容：
 ```html
@@ -681,67 +655,86 @@ require(['selector', 'event'], function($, E) {		# 函数两个形参一一对�
 });
 ```
 
+
+
 ## call()、apply()
-call和apply都是为了改变某个函数运行时的context即上下文而存在的，换句话说，就是为了改变函数体内部this的指向。因为JavaScript 的函数存在`定义时上下文`和`运行时上下文`以及`上下文是可以改变的`这样的概念。
+
+call和apply都是为了改变某个函数运行时的context即上下文而存在的，换句话说，就是为了改变函数体内部this的指向。因为JavaScript的函数存在<u>定义时上下文</u>和<u>运行时上下文</u>以及<u>上下文是可以改变的</u>这样的概念。
 
 二者的作用完全一样，只是接受参数的方式不太一样。例如，有一个函数 func1 定义如下：
+
+```
 var func1 = function(arg1, arg2) {};
-就可以通过 func1.call(this, arg1, arg2); 或者 func1.apply(this, [arg1, arg2]); 来调用。其中 this 是你想指定的上下文，他可以任何一个 JavaScript 对象(JavaScript 中一切皆对象)，call 需要把参数按顺序传递进去，而 apply 则是把参数放在数组里。
+```
+
+就可以通过 func1.call(this, arg1, arg2); 或者 func1.apply(this, [arg1, arg2]); 来调用。其中 this 是你想指定的上下文，他可以任何一个 JavaScript 对象(JavaScript 中一切皆对象)，<u>call 需要把参数按顺序传递进去，而 apply 则是把参数放在数组里</u>。
 
 JavaScript 中，某个函数的参数数量是不固定的，因此要说适用条件的话，当你的参数是明确知道数量时，用 call，而不确定的时候，用 apply，然后把参数 push 进数组传递进去。当参数数量不确定时，函数内部也可以通过 arguments 这个数组来便利所有的参数。
 
 call和apply是为了动态改变this而出现的，当一个object没有某个方法，但是其他的有，我们可以借助call或apply用其它对象的方法来操作。
 
 
+
 ## 同源策略
-同源策略是浏览器最核心、最基本的安全功能。影响源的因素包括：host（或IP）、子域名、端口、协议；
-注意：对于当前页面，页面内JavaScript文件自身的域并不重要，重要的是加载JavaScript的页面所在的域。
+
+同源策略是<u>浏览器最核心、最基本的安全功能</u>。影响源的因素包括：host（或IP）、子域名、端口、协议；
+注意：对于当前页面，页面内JavaScript文件自身的域并不重要，重要的是<u>加载JavaScript的页面所在的域</u>。
 
 `<script>、<img>、<iframe>、<link>`等带src属性的标签可以跨域加载资源，每次加载实际上是由浏览器发起了一次GET请求。不同于XMLHttpRequest的是，通过src属性加载的资源被JavaScript限制了权限：不能读、写返回的内容。XMLHttpRequest可以访问来自同源对象的内容。W3C同时也制定了XMLHttpRequest跨域访问的标准：通过目标域返回的HTTP头来授权是否允许跨域访问（Access-Control-Allow-Origin）。这个跨域访问方案的安全基础基于“JavaScript无法控制该HTTP头”。
 
+
+
 ## 浏览器沙箱
+
 现代的浏览器采用多进程架构来将各个功能模块分开，渲染引擎由Sandbox隔离，网页代码要与浏览器内核进程通信、与操作系统通信都需要经过IPC channel，而在其中会进行一些安全检查。Sandbox的设计目的就是为了让不可信任的代码运行在一定的环境中，限制不可信任的代码访问隔离区之外的资源，要跨越Sandbox边界产生数据交换只能经由指定的数据通道（封装的API）。
 
 
+
 ## 点击劫持（ClickJacking）
+
 点击劫持是一种视觉上的欺骗手段，比如使用一个透明的iframe覆盖在一个网页上，然后诱使用户在该网页上进行操作，通过调整iframe页面的位置，可以使得用户恰好点击在iframe页面的一些功能性按钮上。
 图片覆盖是另一种类似的视觉欺骗的方法。
 
 **防御ClickJacking**
 * 1.frame busting：通过写一段JavaScript代码禁止iframe的嵌套；（由于使用JavaScript，因此控制能力并不是特别强，有很多方法可以绕过它）
 * 2.X-Frame-Options
-当值为DENY时浏览器会拒绝当前页面加载任何frame页面，为SAMEORIGIN时可以加载同源下的页面，当值为ALLOW-FROM，可以定义运行的页面。
+  当值为DENY时浏览器会拒绝当前页面加载任何frame页面，为SAMEORIGIN时可以加载同源下的页面，当值为ALLOW-FROM，可以定义运行的页面。
+
+
 
 
 ## HTML5带来的安全问题
+
 * 新标签的XSS
-`<video>、<audio>`等，可能绕过站点现有的XSS Filter。
+  `<video>、<audio>`等，可能绕过站点现有的XSS Filter。
 
 * iframe的sandbox属性
-iframe被新增一个sandbox属性，使用这个属性后加载的内容将被视为一个独立的源，其中的脚本将被禁止执行，表单被禁止提交，插件被禁止加载，指向其他浏览器对象的链接也会被禁止。
+  iframe被新增一个sandbox属性，使用这个属性后加载的内容将被视为一个独立的源，其中的脚本将被禁止执行，表单被禁止提交，插件被禁止加载，指向其他浏览器对象的链接也会被禁止。
 ```
 <iframe sandbox="allow-same-origin allow-forms allow-scripts" src="..." ></iframe>
 ```
 
 * noreferrer
-`<a>和<area>`标签定义了新的名为noreferrer的Link Types，标签指定该值后，浏览器在请求该标签指定的地址时将不再发送Referer：
+  `<a>和<area>`标签定义了新的名为noreferrer的Link Types，标签指定该值后，浏览器在请求该标签指定的地址时将不再发送Referer：
 ```
 <a href="xxx" rel="noreferrer">test</a>
 ```
 
 * Canvas
-利用Canvas可以识别简单的图片验证码。
+  利用Canvas可以识别简单的图片验证码。
 
 * postMessage
-HTML5中新的API，运行每一个window对象往其他的窗口发送文本消息，从而实现跨窗口的消息传递，且这个功能不受同源策略限制，因此需要自己做安全判断。
+  HTML5中新的API，运行每一个window对象往其他的窗口发送文本消息，从而实现跨窗口的消息传递，且这个功能不受同源策略限制，因此需要自己做安全判断。
 
 * Web Storage
-Web Storage分为Session Storage和Local Storage，前者在关闭浏览器时就会失效，后者会一直存在。Web Storage也受到同源策略的约束。
-当Web Storage中保存敏感信息时，也会成为XSS的攻击目标。
+  Web Storage分为Session Storage和Local Storage，前者在关闭浏览器时就会失效，后者会一直存在。Web Storage也受到同源策略的约束。
+  当Web Storage中保存敏感信息时，也会成为XSS的攻击目标。
+
 
 
 
 ## CSS盒模型
+
 ![image](/images/tech/css_1.png)
 * 1.由内到外为：内容-内边距-边框-外边距。
 * 2.如果在元素上添加背景，那么背景会被应用于由内容和内边距组成的区域。外边距是透明的，一般用来控制元素之间的间隔。
@@ -757,23 +750,32 @@ padding:0;
 * 6.width和height指的是内容区域的宽度和高度，增加内边距、边框和外边距不会影响内容区域的尺寸，但是会增加元素框的总尺寸。
 * 7.内边距、边框、外边距可以应用于一个元素的所有边，也可以应用于单独的边。外边距还可以是负值。
 
+
+
 ## 外边距叠加
-* 1.当两个或更多个垂直外边距相遇时，它们将合并为一个外边距，这个新外边距的高度等于两个发生叠加的外边距的高度中的较大者。
+
+* 1.<u>当两个或更多个垂直外边距相遇时，它们将合并为一个外边距</u>，这个新外边距的高度等于两个发生叠加的外边距的高度中的较大者。
 * 2.当一个元素包含在另一个元素中时，如果没有内边距或者边框将外边距分隔开，那么它们的顶、底外边距也会发生叠加。
 * 3.甚至同一个元素，如果没有内边距、边框以及内容，此时它的顶外边距与底外边距碰在一起，也会发生叠加。而且如果这个新的外边距碰到了另一个元素的外边距，它还会发生叠加。
-注意：只有普通文档流中块框的垂直外边距才会发生外边距叠加。行内框、浮动框或者绝对定位框之间的外边距不会叠加。
+  注意：只有普通文档流中块框的垂直外边距才会发生外边距叠加。行内框、浮动框或者绝对定位框之间的外边距不会叠加。
+
+
 
 
 ## CSS可视化格式模型
+
 * 1.块级元素：显示为一块内容，即块框，如p、h1、div等。
 * 2.行内元素：内容显示在行中，即行内框，如strong、span等。
 * 3.可以使用display属性来改变生成的框的类型，如将a标签的display设置为block，从而让其表现的像块级元素一样；还可以设置display属性为none，让生成的元素根本没有框，不占用文档中的空间。
-* 4.CSS中有3种基本的定位机制：普通流、浮动、绝对定位。
+* 4.CSS中有<u>3种基本的定位机制：普通流、浮动、绝对定位</u>。
 * 5.块级框从上到下一个接一个地垂直排列，框之间的垂直距离由框的垂直外边距计算出来。
 * 6.行内框在一行中水平排列。可以使用水平内边距、边框、外边距来调整它们的水平间距，但是行内框的垂直内边距、边框和外边距不会增加行高，设置显式的高度或宽度也不行。由一行形成的水平框称为行框，行框高度等于本行内所有元素中行高最大的值，可以通过设置行高（line-height）来修改这个高度。CSS2.1支持将display属性设置为inline-block，这将使元素像行内元素一样水平地依次排列，但是框的内容仍然符合块级框的行为，如能够显式地设置宽度、高度、垂直外边距和内边距。
 
 
+
+
 ## 匿名块框和匿名行框
+
 * 匿名块框：当将文本添加到一个块级元素的开头时，即使没有把这些文本定义为块级元素，它也会被当成块级元素对待：
 ```html
 <div>
@@ -785,15 +787,21 @@ padding:0;
 * 匿名行框：块级元素内的文本，每一行都会形成匿名行框。无法直接对匿名块或者行框应用样式，除非使用:first-line伪元素。
 
 
+
+
 ## 相对定位、绝对定位、固定定位
-* 相对定位：如果对一个元素进行相对定位，它将出现在它所在的位置上，然后可以通过设置top、left等属性让这个元素相对于它的起点移动。无论是否移动，元素仍然占据原来的空间，因此移动元素会导致它覆盖其他框。相对定位实际上是普通流定位模型的一部分。
-![image](/images/tech/css_2.png)
-* 绝对定位：绝对定位的元素的位置是相对于距离它最近的那个已定位的祖先元素确定的，如果没有已定位的祖先元素，那么它的位置是相对于初始包含块的。元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。绝对定位使元素的位置与文档流无关。
-![image](/images/tech/css_3.png)
+
+* 相对定位：如果对一个元素进行相对定位，它将出现在它所在的位置上，然后可以通过设置top、left等属性让这个元素<u>相对于它的起点移动</u>。无论是否移动，元素仍然占据原来的空间，因此移动元素会导致它覆盖其他框。相对定位实际上是普通流定位模型的一部分。
+  ![image](/images/tech/css_2.png)
+* 绝对定位：绝对定位的元素的位置是<u>相对于距离它最近的那个已定位的祖先元素</u>确定的，如果没有已定位的祖先元素，那么它的位置是相对于初始包含块的。元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。绝对定位使元素的位置与文档流无关。
+  ![image](/images/tech/css_3.png)
 * 固定定位：相对于viewport进行定位。
 
+
+
 ## 浮动
-浮动的框可以左右移动，直到它的外边缘碰到包含框或另一个浮动框的边缘。浮动框不在文档的普通流中。
+
+浮动的框可以左右移动，<u>直到它的外边缘碰到包含框或另一个浮动框的边缘</u>。浮动框不在文档的普通流中。
 ![image](/images/tech/css_4.png)
 当框 1 向左浮动时，它脱离文档流并且向左移动，直到它的左边缘碰到包含框的左边缘。因为它不再处于文档流中，所以它不占据空间，实际上覆盖住了框 2，使框 2 从视图中消失：
 ![image](/images/tech/css_5.png)
@@ -801,7 +809,9 @@ padding:0;
 ![image](/images/tech/css_6.png)
 
 
+
 ## 行框和清理
+
 浮动框旁边的行框被缩短，从而给浮动框留出空间，行框围绕浮动框。
 因此，创建浮动框可以使文本围绕图像：
 ![image](/images/tech/css_7.png)
@@ -809,7 +819,9 @@ padding:0;
 ![image](/images/tech/css_8.png)
 
 
+
 ## CSS链接伪类定义的顺序
+
 选择器的次序很重要，如果定义顺序反过来：
 ```css
 a:hover,a:focus,a:active{text-decoration:underline;}
@@ -820,7 +832,10 @@ a:link, a:visited {text-decoration:none;}
 a:link、a:visited、a:hover、a:focus、a:active
 ```
 
+
+
 ## 为链接目标（同一页面的锚点）设置样式
+
 ```css
 :target
 {
@@ -842,7 +857,10 @@ padding-right:0;
 }
 ```
 
+
+
 ## 为站点的所有下载.pdf文档的链接加上图标
+
 ```css
 a[href$=’.pdf’]{
 background:url(img/pdf.gif) no-repeat right top;
@@ -851,16 +869,21 @@ padding-right:10px;
 ```
 
 
+
 ## 3种CSS布局方式
+
 所有CSS布局技术的根本都是3个基本概念：定位、浮动、外边距操作。
 * 固定布局：
-![image](/images/tech/css_15.png)
+  ![image](/images/tech/css_15.png)
 * 流式布局：
-![image](/images/tech/css_16.png)
+  ![image](/images/tech/css_16.png)
 * 弹性布局：相当于以上两者的结合。其要点就在于使用单位em来定义元素宽度。em是相对长度单位。相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。任意浏览器的默认字体高都是16px，所有未经调整的浏览器都符合: 1em=16px。
 
 
+
+
 ## let定义变量的特性总结
+
 * 使用let声明的变量只在let命令所在的代码块内有效；
 * 使用let声明的变量不会“变量提升”，变量一定要在声明后使用；
 * 只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响（const同理）；
@@ -868,7 +891,10 @@ padding-right:10px;
 * let为JavaScript新增了块级作用域，使得获得广泛应用的立即执行匿名函数（IIFE）不再必要了；
 
 
+
+
 ## ES6一共有6种声明变量的方法
+
 * var
 * function
 * let
@@ -876,7 +902,10 @@ padding-right:10px;
 * import
 * class
 
+
+
 ## 全局对象的属性
+
 全局对象是最顶层的对象，在浏览器环境指的是window对象，在Node.js指的是global对象。
 ES5之中，全局对象的属性与全局变量是等价的，未声明的全局变量，自动成为全局对象window的属性。
 从ES6开始，全局变量将逐步与全局对象的属性脱钩，let命令、const命令、class命令声明的全局变量，不属于全局对象的属性：
@@ -890,7 +919,10 @@ let b = 1;
 window.b // undefined
 ```
 
+
+
 ## 解构赋值
+
 解构赋值的规则是，只要等号右边的值不是对象，就先将其转为对象。由于undefined和null无法转为对象，所以对它们进行解构赋值，都会报错。
 * 数组的解构赋值；
 ```js
@@ -925,7 +957,10 @@ add([1, 2]); // 3
 // [ 3, 7 ]
 ```
 
+
+
 ## 模板字符串
+
 模板字符串（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。
 ```javascript
 // 普通字符串
@@ -943,7 +978,10 @@ var name = "Bob", time = "today";
 `Hello ${name}, how are you ${time}?`
 ```
 
+
+
 ## 箭头函数
+
 ```javascript
 var f = v => v;
 var f = () => 5;
@@ -974,8 +1012,11 @@ foo.call({ id: 42 });
 * 3. 不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用Rest参数代替。
 * 4. 不可以使用yield命令，因此箭头函数不能用作Generator函数。
 
+
+
 ## 箭头函数没有自己的this
-箭头函数中this指向的固定化，并不是因为箭头函数内部有绑定this的机制，实际原因是箭头函数根本没有自己的this，导致内部的this就是外层代码块的this。正是因为它没有this，所以也就不能用作构造函数。箭头函数转成ES5的代码如下：
+
+箭头函数中this指向的固定化，并不是因为箭头函数内部有绑定this的机制，实际原因是<u>箭头函数根本没有自己的this，导致内部的this就是外层代码块的this</u>。正是因为它没有this，所以也就不能用作构造函数。箭头函数转成ES5的代码如下：
 ```javascript
 // ES6
 function foo() {
@@ -1008,7 +1049,9 @@ foo(2, 4, 6, 8)
 由于箭头函数没有自己的this，所以当然也就不能用call()、apply()、bind()这些方法去改变this的指向。
 
 
+
 ## 尾调用优化与尾递归
+
 尾调用（Tail Call）指某个函数的最后一步操作是返回另一个函数的调用。
 ```javascript
 function f(x){
@@ -1081,22 +1124,25 @@ factorial(5, 1) // 120
 
 ES6的尾调用优化只在严格模式下开启，正常模式是无效的。这是因为在正常模式下，函数内部有两个变量，可以跟踪函数的调用栈:func.arguments、func.caller尾调用优化发生时，函数的调用栈会改写，因此上面两个变量就会失真。严格模式禁用这两个变量，所以尾调用模式仅在严格模式下生效。
 
+
+
 ## 属性的遍历
+
 ES6一共有5种方法可以遍历对象的属性。
 * 1. `for...in`
-for...in循环遍历对象自身的和继承的可枚举属性（不含Symbol属性）。
+    for...in循环遍历对象自身的和继承的可枚举属性（不含Symbol属性）。
 
 * 2. `Object.keys(obj)`
-Object.keys返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含Symbol属性）。
+    Object.keys返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含Symbol属性）。
 
 * 3. `Object.getOwnPropertyNames(obj)`
-Object.getOwnPropertyNames返回一个数组，包含对象自身的所有属性（不含Symbol属性，但是包括不可枚举属性）。
+    Object.getOwnPropertyNames返回一个数组，包含对象自身的所有属性（不含Symbol属性，但是包括不可枚举属性）。
 
 * 4. `Object.getOwnPropertySymbols(obj)`
-Object.getOwnPropertySymbols返回一个数组，包含对象自身的所有Symbol属性。
+    Object.getOwnPropertySymbols返回一个数组，包含对象自身的所有Symbol属性。
 
 * 5. `Reflect.ownKeys(obj)`
-Reflect.ownKeys返回一个数组，包含对象自身的所有属性，不管是属性名是Symbol或字符串，也不管是否可枚举。
+    Reflect.ownKeys返回一个数组，包含对象自身的所有属性，不管是属性名是Symbol或字符串，也不管是否可枚举。
 
 以上的5种方法遍历对象的属性，都遵守同样的属性遍历的次序规则：
 首先遍历所有属性名为`数值`的属性，按照数字排序。
@@ -1108,10 +1154,10 @@ Reflect.ownKeys({ [Symbol()]:0, b:0, 10:0, 2:0, a:0 })
 ```
 
 ## Symbol
-ES6引入了一种新的原始数据类型Symbol，表示独一无二的值。它是`JavaScript语言的第七种数据类型`，前六种是：Undefined、Null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。
-Symbol值通过Symbol函数生成。这就是说，`对象的属性名现在可以有两种类型`，一种是原来就有的字符串，另一种就是新增的Symbol类型。凡是属性名属于Symbol类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。
+ES6引入了一种新的原始数据类型Symbol，表示独一无二的值。它是JavaScript语言的第七种数据类型，前六种是：Undefined、Null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。
+Symbol值通过Symbol函数生成。这就是说，对象的属性名现在可以有两种类型，一种是原来就有的字符串，另一种就是新增的Symbol类型。凡是属性名属于Symbol类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。
 
-Symbol函数前不能使用new命令，否则会报错。这是因为生成的Symbol是一个原始类型的值，不是对象。也就是说，由于Symbol值不是对象，所以不能添加属性。`基本上，它是一种类似于字符串的数据类型`。
+Symbol函数前不能使用new命令，否则会报错。这是因为生成的Symbol是一个原始类型的值，不是对象。也就是说，由于Symbol值不是对象，所以不能添加属性。基本上，它是一种类似于字符串的数据类型。
 Symbol函数可以接受一个字符串作为参数，表示对Symbol实例的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分。
 
 ```javascript
@@ -1142,7 +1188,10 @@ var s2 = Symbol("foo");
 s1 === s2 // false
 ```
 
+
+
 ## 二进制数组
+
 二进制数组允许开发者以数组下标的形式，直接操作内存，使得开发者有可能通过JavaScript与操作系统的原生接口进行二进制通信。
 **二进制数组由三类对象组成**
 * 1.ArrayBuffer`对象：代表内存之中的一段二进制数据，可以通过“视图”进行操作。“视图”部署了数组接口，这意味着，可以用数组的方法操作内存。
@@ -1155,22 +1204,31 @@ s1 === s2 // false
 
 注意，二进制数组并不是真正的数组，而是类似数组的对象。
 
+
+
 ## WeakSet与Set的区别
+
 * 1. WeakSet的成员只能是对象，而不能是其他类型的值。
 * 2. WeakSet中的对象都是弱引用，即垃圾回收机制不考虑WeakSet对该对象的引用，也就是说，如果其他对象都不再引用该对象，那么垃圾回收机制会自动回收该对象所占用的内存，不考虑该对象还存在于WeakSet之中。这个特点意味着，无法引用WeakSet的成员（WeakSet没有size属性），因此WeakSet是不可遍历的。
-WeakSet的一个用处，是储存DOM节点，而不用担心这些节点从文档移除时，会引发内存泄漏。
+    WeakSet的一个用处，是储存DOM节点，而不用担心这些节点从文档移除时，会引发内存泄漏。
+
+
 
 ## WeakMap与Map的区别
+
 WeakMap结构与Map结构基本类似，唯一的区别是它只接受对象作为键名（null除外），不接受其他类型的值作为键名，而且键名所指向的对象，不计入垃圾回收机制。
 WeakMap的设计目的在于，键名是对象的弱引用（垃圾回收机制不将该引用考虑在内），所以其所对应的对象可能会被自动回收。当对象被回收后，WeakMap自动移除对应的键值对。典型应用是，一个对应DOM元素的WeakMap结构，当某个DOM元素被清除，其所对应的WeakMap记录就会自动被移除。基本上，WeakMap的专用场合就是，它的键所对应的对象，可能会在将来消失。WeakMap结构有助于防止内存泄漏。
 WeakMap与Map在API上的区别主要是两个，一是没有遍历操作（即没有key()、values()和entries()方法），也没有size属性；二是无法清空，即不支持clear方法。这与WeakMap的键不被计入引用、被垃圾回收机制忽略有关。因此，WeakMap只有四个方法可用：get()、set()、has()、delete()。
 
+
+
 ## Iterator的遍历过程
+
 * 1. 创建一个指针对象，指向当前数据结构的起始位置。也就是说，遍历器对象本质上，就是一个指针对象。
 * 2. 第一次调用指针对象的next方法，可以将指针指向数据结构的第一个成员。
 * 3. 第二次调用指针对象的next方法，指针就指向数据结构的第二个成员。
 * 4. 不断调用指针对象的next方法，直到它指向数据结构的结束位置。
-每一次调用next方法，都会返回数据结构的当前成员的信息。具体来说，就是返回一个包含value和done两个属性的对象。其中，value属性是当前成员的值，done属性是一个布尔值，表示遍历是否结束。
+    每一次调用next方法，都会返回数据结构的当前成员的信息。具体来说，就是返回一个包含value和done两个属性的对象。其中，value属性是当前成员的值，done属性是一个布尔值，表示遍历是否结束。
 
 **Iterator的作用有三个：**
 1. 为各种数据结构，提供一个统一的、简便的访问接口；
@@ -1198,7 +1256,10 @@ function idMaker() {
 }
 ```
 
+
+
 ## Generator函数与yield语句
+
 调用Generator函数后，该函数并不执行，返回的也不是函数运行结果，而是一个指向内部状态的指针对象，也就是遍历器对象（Iterator Object）。必须调用遍历器对象的next方法，使得指针移向下一个状态，每次调用next方法，内部指针就从函数头部或上一次停下来的地方开始执行，直到遇到下一个yield语句（或return语句）为止。换言之，Generator函数是分段执行的，yield语句是暂停执行的标记，而next方法可以恢复执行。
 ```javascript
 function* helloWorldGenerator() {
@@ -1229,22 +1290,31 @@ hw.next()
 
 yield语句与return语句既有相似之处，也有区别。相似之处在于，都能返回紧跟在语句后面的那个表达式的值。区别在于每次遇到yield，函数暂停执行，`下一次再从该位置继续向后执行`，而return语句不具备位置记忆的功能。一个函数里面，只能执行一次（或者说一个）return语句，但是可以执行多次（或者说多个）yield语句。正常函数只能返回一个值，因为只能执行一次return；Generator函数可以返回一系列的值，因为可以有任意多个yield。从另一个角度看，也可以说Generator生成了一系列的值。
 
+
+
 ## Generator与协程
-一个线程（或函数）执行到一半，可以暂停执行，将执行权交给另一个线程（或函数），等到稍后收回执行权的时候，再恢复执行。这种可以并行执行、交换执行权的线程（或函数），就称为协程。它与普通的线程很相似，都有自己的执行上下文、可以分享全局变量。它们的不同之处在于，同一时间可以有多个线程处于运行状态，但是运行的协程只能有一个，其他协程都处于暂停状态。此外，普通的线程是抢先式的，到底哪个线程优先得到资源，必须由运行环境决定，但是协程是合作式的，执行权由协程自己分配。
+
+一个线程（或函数）执行到一半，可以暂停执行，将执行权交给另一个线程（或函数），等到稍后收回执行权的时候，再恢复执行。这种可以并行执行、交换执行权的线程（或函数），就称为协程。它与普通的线程很相似，都有自己的执行上下文、可以分享全局变量。它们的不同之处在于，<u>同一时间可以有多个线程处于运行状态，但是运行的协程只能有一个，其他协程都处于暂停状态</u>。此外，普通的线程是抢先式的，到底哪个线程优先得到资源，必须由运行环境决定，但是协程是合作式的，执行权由协程自己分配。
 从实现上看，在内存中，子例程只使用一个栈（stack），而协程是同时存在多个栈，但只有一个栈是在运行状态，也就是说，协程是以多占用内存为代价，实现多任务的并行。
 
 Generator函数是ECMAScript 6对协程的实现，但属于不完全实现。Generator函数被称为“半协程”（semi-coroutine），意思是只有Generator函数的调用者，才能将程序的执行权还给Generator函数。如果是完全执行的协程，任何函数都可以让暂停的协程继续执行。
 如果将Generator函数当作协程，完全可以将多个需要互相协作的任务写成Generator函数，它们之间使用yield语句交换控制权。
 
+
+
 ## Promise对象
+
 ES6原生提供了Promise对象。
 Promise对象有以下两个特点。
 * 1. 对象的状态不受外界影响。Promise对象代表一个异步操作，有三种状态：Pending（进行中）、Resolved（已完成，又称Fulfilled）和Rejected（已失败）。只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。这也是Promise这个名字的由来，它的英语意思就是“承诺”，表示其他手段无法改变。
 * 2. 一旦状态改变，就不会再变，任何时候都可以得到这个结果。Promise对象的状态改变，只有两种可能：从Pending变为Resolved和从Pending变为Rejected。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果。就算改变已经发生了，你再对Promise对象添加回调函数，也会立即得到这个结果。这与事件（Event）完全不同，事件的特点是，如果你错过了它，再去监听，是得不到结果的。
-有了Promise对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。此外，Promise对象提供统一的接口，使得控制异步操作更加容易。
-Promise也有一些缺点。首先，无法取消Promise，一旦新建它就会立即执行，无法中途取消。其次，如果不设置回调函数，Promise内部抛出的错误，不会反应到外部。第三，当处于Pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。
+    有了Promise对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。此外，Promise对象提供统一的接口，使得控制异步操作更加容易。
+    Promise也有一些缺点。首先，无法取消Promise，一旦新建它就会立即执行，无法中途取消。其次，如果不设置回调函数，Promise内部抛出的错误，不会反应到外部。第三，当处于Pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。
+
+
 
 ## 传值调用与传名调用
+
 ```javascript
 var x = 1;
 
@@ -1290,9 +1360,12 @@ function f(thunk){
 ```
 凡是用到原参数的地方，对Thunk函数求值即可。这就是Thunk函数的定义，它是"传名调用"的一种实现策略，用来替换某个表达式。
 
+
+
 ## async函数语法
+
 * 1.async函数返回一个Promise对象
-async函数内部return语句返回的值，会成为then方法回调函数的参数:
+  async函数内部return语句返回的值，会成为then方法回调函数的参数:
 ```javascript
 async function f() {
   return 'hello world';
@@ -1310,17 +1383,23 @@ async函数内部抛出错误，会导致返回的Promise对象变为reject状�
 * 4.如果await后面的异步操作出错，那么等同于async函数返回的Promise对象被reject。
 
 
+
+
 ## async函数对Generator函数的改进
+
 * 1.内置执行器。Generator函数的执行必须靠执行器，所以才有了co模块，而async函数自带执行器。也就是说，async函数的执行，与普通函数一模一样，只要一行。
   var result = asyncReadFile();
-上面的代码调用了asyncReadFile函数，然后它就会自动执行，输出最后结果。这完全不像Generator函数，需要调用next方法，或者用co模块，才能得到真正执行，得到最后结果。
+  上面的代码调用了asyncReadFile函数，然后它就会自动执行，输出最后结果。这完全不像Generator函数，需要调用next方法，或者用co模块，才能得到真正执行，得到最后结果。
 * 2.更好的语义。async和await，比起星号和yield，语义更清楚了。async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果。
 * 3.更广的适用性。 co模块约定，yield命令后面只能是Thunk函数或Promise对象，而async函数的await命令后面，可以是Promise对象和原始类型的值（数值、字符串和布尔值，但这时等同于同步操作）。
 * 4.返回值是Promise。async函数的返回值是Promise对象，这比Generator函数的返回值是Iterator对象方便多了。可以用then方法指定下一步的操作。
-进一步说，async函数完全可以看作多个异步操作，包装成的一个Promise对象，而await命令就是内部then命令的语法糖。
+  进一步说，async函数完全可以看作多个异步操作，包装成的一个Promise对象，而await命令就是内部then命令的语法糖。
+
+
 
 
 ## Class
+
 基本上，ES6的class可以看作只是一个语法糖，它的绝大部分功能，ES5都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。ES6的类，完全可以看作构造函数的另一种写法：
 ```javascript
 class Point {
@@ -1333,7 +1412,9 @@ Point === Point.prototype.constructor // true
 使用的时候，也是直接对类使用new命令，跟构造函数的用法完全一致。
 
 
+
 ## 类的prototype属性和__proto__属性
+
 Class作为构造函数的语法糖，同时有prototype属性和__proto__属性，因此同时存在两条继承链。
 * 1. 子类的__proto__属性，表示`构造函数的继承`，总是指向父类。
 * 2. 子类prototype属性的__proto__属性，表示`方法的继承`，总是指向父类的prototype属性。
@@ -1363,7 +1444,10 @@ Object.setPrototypeOf(B, A);
 ```
 这两条继承链，可以这样理解：作为一个对象，子类（B）的原型（__proto__属性）是父类（A）；作为一个构造函数，子类（B）的原型（prototype属性）是父类的实例。
 
+
+
 ## Module
+
 在ES6之前，社区制定了一些模块加载方案，最主要的有CommonJS和AMD两种。前者用于服务器，后者用于浏览器。ES6在语言规格的层面上，实现了模块功能，而且实现得相当简单，完全可以取代现有的CommonJS和AMD规范，成为浏览器和服务器通用的模块解决方案。
 
 ES6模块的设计思想，是尽量的静态化，使得编译时就能确定模块的依赖关系，以及输入和输出的变量。`CommonJS和AMD模块，都只能在运行时确定这些东西`。比如，CommonJS模块就是对象，输入时必须查找对象属性。
@@ -1391,7 +1475,9 @@ import { stat, exists, readFile } from 'fs';
 ```
 
 
+
 ## 严格模式的限制
+
 * 变量必须声明后再使用；
 * 函数的参数不能有同名属性，否则报错；
 * 不能使用with语句；
@@ -1410,8 +1496,10 @@ import { stat, exists, readFile } from 'fs';
 
 
 
+
 ## ES6模块加载与CommonJS模块加载的区别
-CommonJS模块输出的是一个值的拷贝，而ES6模块输出的是值的引用。
+
+<u>CommonJS模块输出的是一个值的拷贝，而ES6模块输出的是值的引用</u>。
 ES6模块的运行机制与CommonJS不一样，它遇到模块加载命令import时，不会去执行模块，而是只生成一个动态的只读引用。等到真的需要用到时，再到模块里面去取值，换句话说，ES6的输入有点像Unix系统的“符号连接”，原始值变了，import输入的值也会跟着变。因此，ES6模块是动态引用，并且不会缓存值，模块里面的变量绑定其所在的模块。
 
 CommonJS模块的重要特性是加载时执行，即脚本代码在require的时候，就会全部执行。一旦出现某个模块被"循环加载"，就只输出已经执行的部分，还未执行的部分不会输出。
@@ -1419,7 +1507,9 @@ CommonJS模块的重要特性是加载时执行，即脚本代码在require的�
 ES6处理“循环加载”与CommonJS有本质的不同。ES6模块是动态引用，如果使用import从一个模块加载变量（即import foo from 'foo'），那些变量不会被缓存，而是成为一个指向被加载模块的引用，需要开发者自己保证，真正取值的时候能够取到值。(即，可能会由于循环加载导致取到的值为undefined)
 
 
+
 ## 不同DOM级别的内容
+
 实际上，DOM0 级标准是不存在的；所谓 DOM0 级只是 DOM 历史坐标中的一个参照点而已。具体说来，DOM0 级指的是 Internet Explorer 4.0 和 Netscape Navigator 4.0最初支持的 DHTML。
 **DOM1级**由两个模块组成：DOM核心（DOM Core）和 DOM HTML。其中，DOM 核心规定的是如何映射基于 XML 的文档结构，以便简化对文档中任意部分的访问和操作。DOM HTML 模块则在 DOM 核心的基础上加以扩展，添加了针对HTML的对象和方法。
 **DOM2级**在原来 DOM 的基础上又扩充了（DHTML 一直都支持的）鼠标和用户界面事件、范围、遍历（迭代 DOM
@@ -1427,7 +1517,9 @@ ES6处理“循环加载”与CommonJS有本质的不同。ES6模块是动态引
 **DOM3级**则进一步扩展了 DOM，引入了以统一方式加载和保存文档的方法——在 DOM 加载和保存（DOM Load and Save）模块中定义；新增了验证文档的方法——在 DOM 验证（DOM Validation）模块中定义。DOM3 级也对 DOM 核心进行了扩展，开始支持 XML 1.0 规范，涉及 XML Infoset、XPath和 XML Base。
 
 
+
 ## undefined值是派生自null值的
+
 实际上，undefined值是派生自null值的，因此ECMA-262规定对它们的相等性测试要返回true：
 ```js
 alert(null == undefined); //true
@@ -1436,9 +1528,11 @@ alert(null == undefined); //true
 尽管null和undefined有这样的关系，但它们的用途完全不同。如前所述，无论在什么情况下都没有必要把一个变量的值显式地设置为undefined ，可是同样的规则对null却不适用。换句话说，只要意在保存对象的变量还没有真正保存对象，就应该明确地让该变量保存null值。这样做不仅可以体现null作为空对象指针的惯例，而且也有助于进一步区分null和undefined 。
 
 
+
 ## 直接使用浮点数相等性比较的问题
-浮点数值的最高精度是 17 位小数，但在进行算术计算时其精确度远远不如整数。例如，0.1 加 0.2
-的结果不是 0.3，而是 0.30000000000000004。这个小小的舍入误差会导致无法测试特定的浮点数值。
+
+浮点数值的最高精度是 17 位小数，但在进行算术计算时其精确度远远不如整数。例如，<u>0.1 加 0.2</u>
+<u>的结果不是 0.3</u>，而是 0.30000000000000004。这个小小的舍入误差会导致无法测试特定的浮点数值。
 例如：
 ```javascript
 if (a + b == 0.3){ // 不要做这样的测试！
@@ -1446,7 +1540,10 @@ if (a + b == 0.3){ // 不要做这样的测试！
 }
 ```
 
+
+
 ## NaN、Infinity
+
 Number类型的取值范围是Number.MIN_VALUE~Number.MAX_VALUE
 如果某次计算的结果得到了一个超出 JavaScript 数值范围的值，那么这个数值将被自动转换成特殊的 Infinity 值
 要想确定一个数值是不是有穷的（换句话说，是不是位于最小和最大的数值之间），可以使用 `isFinite()` 函数。
@@ -1465,17 +1562,21 @@ alert(isNaN("10")); //false（可以被转换成数值 10）
 isNaN() 也适用于对象。在基于对象调用 isNaN()函数时，会首先调用对象的 valueOf() 方法，然后确定该方法返回的值是否可以转换为数值。如果不能，则基于这个返回值再调用 toString() 方法，再测试返回值。
 
 
+
 ## 是否所有类型的对象都可以通过调用toString()来将其转换为字符串？
-数值、布尔值、对象和字符串值都有 toString() 方法。但 null 和 undefined 值没有这个方法。在不知道要转换的值是不是 null 或 undefined 的情况下，还可以使用转型函数 String() ，这个函数能够将任何类型的值转换为字符串。 String() 函数遵循下列转换规则：
+
+数值、布尔值、对象和字符串值都有 toString() 方法。但 <u>null 和 undefined 值没有这个方法</u>。在不知道要转换的值是不是 null 或 undefined 的情况下，还可以使用转型函数 String() ，这个函数能够将任何类型的值转换为字符串。 String() 函数遵循下列转换规则：
 如果值有 toString() 方法，则调用该方法（没有参数）并返回相应的结果；
 如果值是 null ，则返回 "null" ；
 如果值是 undefined ，则返回 "undefined" 。
 
 
+
 ## Object实例具有的属性和方法
+
 Object 的每个实例都具有下列属性和方法。
 constructor ：保存着用于创建当前对象的构造函数
-hasOwnProperty(propertyName) ：用于检查给定的属性在当前对象实例中（而不是在实例的原型中）是否存在。其中，作为参数的属性名（ propertyName ）必须以字符串形式指定（例如： o.hasOwnProperty("name") ）。
+hasOwnProperty(propertyName) ：用于检查给定的属性在<u>当前对象实例中（而不是在实例的原型中）</u>是否存在。其中，作为参数的属性名（ propertyName ）必须以字符串形式指定（例如： o.hasOwnProperty("name") ）。
 isPrototypeOf(object) ：用于检查传入的对象是否是传入对象的原型。
 propertyIsEnumerable(propertyName) ：用于检查给定的属性是否能够使用 for-in 语句来枚举
 toLocaleString() ：返回对象的字符串表示，该字符串与执行环境的地区对应。
@@ -1483,7 +1584,9 @@ toString() ：返回对象的字符串表示。
 valueOf() ：返回对象的字符串、数值或布尔值表示。通常与 toString() 方法的返回值相同。
 
 
+
 ## 使用for-in语句来枚举对象的属性
+
 ```javascript
 for (var propName in window) {
   document.write(propName);
@@ -1495,7 +1598,9 @@ ECMAScript 5 更正了这一行为；对这种情况不再抛出错误，而只�
 兼容性，建议在使用 for-in 循环之前，先检测确认该对象的值不是 null 或 undefined
 
 
+
 ## label语句
+
 使用 label 语句可以在代码中添加标签，以便将来使用。以下是 label 语句的语法：
 label: statement
 下面是一个示例：
@@ -1508,8 +1613,10 @@ start: for (var i=0; i < count; i++) {
 要与 for 语句等循环语句配合使用。
 
 
+
 ## with语句
-with 语句的作用是将代码的作用域设置到一个特定的对象中。 with 语句的语法如下：
+
+with 语句的作用是<u>将代码的作用域设置到一个特定的对象中</u>。 with 语句的语法如下：
 with (expression) statement;
 定义 with 语句的目的主要是为了简化多次编写同一个对象的工作，如下面的例子所示：
 ```javascript
@@ -1529,8 +1636,10 @@ with(location){
 这意味着在 with 语句的代码块内部，每个变量首先被认为是一个局部变量，而如果在局部环境中找不到该变量的定义，就会查询location 对象中是否有同名的属性。如果发现了同名属性，则以 location 对象属性的值作为变量的值。
 
 
+
+
 ## arguments对象
-ECMAScript 函数的参数与大多数其他语言中函数的参数有所不同。ECMAScript 函数不介意传递进来多少个参数，也不在乎传进来参数是什么数据类型。也就是说，即便你定义的函数只接收两个参数，在调用这个函数时也未必一定要传递两个参数。可以传递一个、三个甚至不传递参数，而解析器永远不会有什么怨言。之所以会这样，原因是 ECMAScript 中的参数在内部是用一个数组来表示的。函数接收到的始终都是这个数组，而不关心数组中包含哪些参数（如果有参数的话）。如果这个数组中不包含任何元素，无所谓；如果包含多个元素，也没有问题。实际上，在函数体内可以通过 arguments 对象来访问这个参数数组，从而获取传递给函数的每一个参数。
+ECMAScript 函数的参数与大多数其他语言中函数的参数有所不同。ECMAScript 函数不介意传递进来多少个参数，也不在乎传进来参数是什么数据类型。也就是说，即便你定义的函数只接收两个参数，在调用这个函数时也未必一定要传递两个参数。可以传递一个、三个甚至不传递参数，而解析器永远不会有什么怨言。之所以会这样，原因是 <u>ECMAScript 中的参数在内部是用一个数组来表示的</u>。函数接收到的始终都是这个数组，而不关心数组中包含哪些参数（如果有参数的话）。如果这个数组中不包含任何元素，无所谓；如果包含多个元素，也没有问题。实际上，在函数体内可以通过 arguments 对象来访问这个参数数组，从而获取传递给函数的每一个参数。
 ```javascript
 function sayHi() {
   alert("Hello " + arguments[0] + "," + arguments[1]);
@@ -1543,7 +1652,9 @@ arguments 对象可以与命名参数一起使用，且它的值永远与对应�
 ECMAScript 中的所有参数传递的都是值，不可能通过引用传递参数。
 
 
+
 ## ECMAScript中支持函数重载吗？如果定义了同名的函数会怎样？
+
 ECMAScript 函数不能像传统意义上那样实现重载，如果在 ECMAScript中定义了两个名字相同的函数，则该名字只属于后定义的函数：
 ```javascript
 function addSomeNumber(num){
@@ -1557,25 +1668,33 @@ var result = addSomeNumber(100); //300
 ```
 
 
+
 ## 执行环境
-执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个执行环境都有一个与之关联的变量对象（variable object），环境中定义的所有变量和函数都保存在这个对象中。虽然我们编写的代码无法访问这个对象，但解析器在处理数据时会在后台使用它。
+
+执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。<u>每个执行环境都有一个与之关联的变量对象（variable object）</u>，<u>环境中定义的所有变量和函数都保存在这个对象中</u>。虽然我们编写的代码无法访问这个对象，但解析器在处理数据时会在后台使用它。
 
 全局执行环境是最外围的一个执行环境。根据 ECMAScript 实现所在的宿主环境不同，表示执行环境的对象也不一样。在 Web 浏览器中，全局执行环境被认为是 window 对象，因此所有全局变量和函数都是作为 window 对象的属性和方法创建的。某个执行环境中的所有代码执行完毕后，该环境被销毁，保存在其中的所有变量和函数定义也随之销毁（全局执行环境直到应用程序退出——例如关闭网页或浏览器——时才会被销毁）。
 
-每个函数都有自己的执行环境。当执行流进入一个函数时，函数的环境就会被推入一个环境栈中。而在函数执行之后，栈将其环境弹出，把控制权返回给之前的执行环境。ECMAScript 程序中的执行流正是由这个方便的机制控制着。
+<u>每个函数都有自己的执行环境</u>。当执行流进入一个函数时，函数的环境就会被推入一个环境栈中。而在函数执行之后，栈将其环境弹出，把控制权返回给之前的执行环境。ECMAScript 程序中的执行流正是由这个方便的机制控制着。
+
 
 
 ## 作用域链
+
 当代码在一个环境中执行时，会创建变量对象的一个作用域链（scope chain）。作用域链的用途，是保证对执行环境有权访问的所有变量和函数的有序访问。作用域链的前端，始终都是当前执行的代码所在环境的变量对象。如果这个环境是函数，则将其活动对象（activation object）作为变量对象。活动对象在最开始时只包含一个变量，即 arguments 对象（这个对象在全局环境中是不存在的）。作用域链中的下一个变量对象来自包含（外部）环境，而再下一个变量对象则来自下一个包含环境。这样，一直延续到全局执行环境；全局执行环境的变量对象始终都是作用域链中的最后一个对象。
 标识符解析是沿着作用域链一级一级地搜索标识符的过程。搜索过程始终从作用域链的前端开始，然后逐级地向后回溯。
 
 内部环境可以通过作用域链访问所有的外部环境，但外部环境不能访问内部环境中的任何变量和函数。这些环境之间的联系是线性、有次序的。每个环境都可以向上搜索作用域链，以查询变量和函数名；但任何环境都不能通过向下搜索作用域链而进入另一个执行环境。
 
 
+
 ## 延长作用域链
+
 有些语句可以在作用域链的前端临时增加一个变量对象，该变量对象会在代码执行后被移除。在两种情况下会发生这种现象。具体来说，就是当执行流进入下列任何一个语句时，作用域链就会得到加长：
 try-catch 语句的 catch 块；
 with 语句。
+
+
 
 
 ## JavaScript是否有块级作用域？
@@ -1589,18 +1708,22 @@ alert(color); //"blue"
 使用 var 声明的变量会自动被添加到最接近的环境中。在函数内部，最接近的环境就是函数的局部环境；在 with 语句中，最接近的环境是函数环境。如果初始化变量时没有使用 var 声明，该变量会自动被添加到全局环境。
 
 
+
 ## JavaScript的垃圾回收机制有哪些方式？如何优化JavaScript的内存占用？
+
 JavaScript具有自动垃圾收集机制，执行环境会负责管理代码执行过程中使用的内存。这种垃圾收集机制的原理其实很简单：找出那些不再继续使用的变量，然后释放其占用的内存。为此，垃圾收集器会按照固定的时间间隔（或代码执行中预定的收集时间），周期性地执行这一操作。具体到浏览器中的实现，则通常有两个策略：标记清除、引用计数。
-`标记清除`
+
+* 标记清除
+
 当变量进入环境（例如，在函数中声明一个变量）时，就将这个变量标记为“进入环境”。从逻辑上讲，永远不能释放进入环境的变量所占用的内存，因为只要执行流进入相应的环境，就可能会用到它们。而当变量离开环境时，则将其标记为“离开环境”。
 
-`引用计数`
-跟踪记录每个值被引用的次数。当声明了一个变量并将一个引用类型值赋给该变量时，则这个值的引用次数就是 1。
-如果同一个值又被赋给另一个变量，则该值的引用次数加 1。相反，如果包含对这个值引用的变量又取得了另外一个值，则这个值的引用次数减 1。当这个值的引用次数变成 0 时，则说明没有办法再访问这个值了，因而就可以将其占用的内存空间回收回来。
-Netscape Navigator 3.0是最早使用引用计数策略的浏览器，但很快它就遇到了一个严重的问题：循环引用。循环引用指的是对象 A 中包含一个指向对象 B 的指针，而对象 B 中也包含一个指向对象 A 的引用。为此，Netscape 在 Navigator 4.0 中放弃了引用计数方式，转而采用标记清除来实现其垃圾收集机制。
+* 引用计数
+
+跟踪记录每个值被引用的次数。当声明了一个变量并将一个引用类型值赋给该变量时，则这个值的引用次数就是 1。如果同一个值又被赋给另一个变量，则该值的引用次数加 1。相反，如果包含对这个值引用的变量又取得了另外一个值，则这个值的引用次数减 1。当这个值的引用次数变成 0 时，则说明没有办法再访问这个值了，因而就可以将其占用的内存空间回收回来。
+Netscape Navigator 3.0是最早使用引用计数策略的浏览器，但很快它就遇到了一个严重的问题：<u>循环引用</u>。循环引用指的是对象 A 中包含一个指向对象 B 的指针，而对象 B 中也包含一个指向对象 A 的引用。为此，Netscape 在 Navigator 4.0 中放弃了引用计数方式，转而采用标记清除来实现其垃圾收集机制。
 
 
-优化内存占用的最佳方式，就是为执行中的代码只保存必要的数据。一旦数据不再有用，最好通过将其值设置为 null 来释放其引用——这个做法叫做解除引用（dereferencing）。这一做法适用于大多数全局变量和全局对象的属性。局部变量会在它们离开执行环境时自动被解除引用
+优化内存占用的最佳方式，就是为执行中的代码只保存必要的数据。一旦数据不再有用，最好通过将其值设置为 null 来释放其引用——这个做法叫做<u>解除引用</u>（dereferencing）。这一做法适用于大多数全局变量和全局对象的属性。局部变量会在它们离开执行环境时自动被解除引用
 ```javascript
 function createPerson(name){
   var localPerson = new Object();
@@ -1611,11 +1734,13 @@ var globalPerson = createPerson("Nicholas");
 // 手工解除 globalPerson 的引用
 globalPerson = null;
 ```
-解除一个值的引用并不意味着自动回收该值所占用的内存。解除引用的真正作用是让值脱离执行环境，以便垃圾收集器下次运行时将其回收。
+<u>解除一个值的引用并不意味着自动回收该值所占用的内存</u>。解除引用的真正作用是让值脱离执行环境，以便垃圾收集器下次运行时将其回收。
 基本类型值在内存中占据固定大小的空间，因此被保存在栈内存中；引用类型的值是对象，保存在堆内存中；
 
 
+
 ## 在JavaScript中通过对象字面量方式定义对象与通过构造函数方式定义对象有什么不同？
+
 普通的创建引用实例的方式：
 ```javascript
 var person = new Object();
@@ -1639,10 +1764,12 @@ var person = {
   5 : true  // 数值属性名会自动转换为字符串
 };
 ```
-在通过对象字面量定义对象时，实际上不会调用 Object 构造函数。
+<u>在通过对象字面量定义对象时，实际上不会调用 Object 构造函数。</u>
+
 
 
 ## 在JavaScript中使用方括号表示法访问对象属性与使用点表示法访问对象属性有什么不同？
+
 方括号语法的主要优点是可以通过变量
 来访问属性，例如：
 ```javascript
@@ -1656,8 +1783,11 @@ alert(person[propertyName]); //"Nicholas"
 person["first name"] = "Nicholas";
 ```
 
+
+
 ## 数组的length属性
-数组的项数保存在其 length 属性中。如果设置某个值的索引超过了数组现有项数，数组就会自动增加到该索引值加 1 的长度：
+
+<u>数组的项数保存在其 length 属性中</u>。如果设置某个值的索引超过了数组现有项数，数组就会自动增加到该索引值加 1 的长度：
 ```javascript
 var colors = ["red", "blue", "green"]; // 定义一个字符串数组
 alert(colors[0]); // 显示第一项
@@ -1676,7 +1806,10 @@ colors.length = 4;
 alert(colors[3]); //undefined
 ```
 
+
+
 ## 使用instanceof操作符来判断一个变量是否是数组类型存在什么问题？如何解决？
+
 对于一个网页，或者一个全局作用域而言，使用 instanceof 操作符就能得到满意的结果：
 ```javascript
 if (value instanceof Array){
@@ -1692,7 +1825,10 @@ if (Array.isArray(value)){
 }
 ```
 
+
+
 ## JavaScript原生的操作数组的方法
+
 ```javascript
 join()
 push()      // 接收任意数量的参数，把它们逐个添加到数组末尾，并返回修改后数组的长度
@@ -1726,7 +1862,10 @@ alert(sum); //15
 reduceRight()
 ```
 
+
+
 ## 定义JavaScript函数的方式
+
 函数实际上是对象。每个函数都是 Function 类型的实例，而且都与其他引用类型一样具有属性和方法。由于函
 数是对象，因此函数名实际上也是一个指向函数对象的指针，不会与某个函数绑定：
 ```javascript
@@ -2472,11 +2611,11 @@ btn.onclick = function(){
 };
 btn.onclick = null; //删除事件处理程序
 
-```javascript
+​```javascript
 以这种方式添加的事件处理程序会在事件流的冒泡阶段被处理。
 
 DOM2 级事件处理程序：
-```javascript
+​```javascript
 var btn = document.getElementById("myBtn");
 btn.addEventListener("click", function(){
   alert(this.id);
@@ -3280,7 +3419,7 @@ Node模块的安装过程：
 * npm 向 registry 查询模块压缩包的网址
 * 下载压缩包，存放在~/.npm目录
 * 解压压缩包到当前项目的node_modules目录
-一个模块安装以后，本地其实保存了两份。一份是~/.npm目录下的压缩包，另一份是node_modules目录下解压后的代码。但是，运行npm install的时候，默认只会检查node_modules目录，而不会检查~/.npm目录。也就是说，如果一个模块在～/.npm下有压缩包，但是没有安装在node_modules目录中，npm 依然会从远程仓库下载一次新的压缩包。npm 提供了一个--cache-min参数，用于从缓存目录安装模块。
+  一个模块安装以后，本地其实保存了两份。一份是~/.npm目录下的压缩包，另一份是node_modules目录下解压后的代码。但是，运行npm install的时候，默认只会检查node_modules目录，而不会检查~/.npm目录。也就是说，如果一个模块在～/.npm下有压缩包，但是没有安装在node_modules目录中，npm 依然会从远程仓库下载一次新的压缩包。npm 提供了一个--cache-min参数，用于从缓存目录安装模块。
 
 
 ## 容器的水平居中
