@@ -44,7 +44,6 @@ gcc -c sub/sub_int.c -o sub/sub_int.o -ggdb
 
 # -I表示将指定目录作为第一个寻找头文件的目录（即优先级高于/usr/include和/usr/local/include）
 gcc -c main.c -o main.o -Iadd -Isub -ggdb
-
 gcc -o cacu add/add_int.o add/add_float.o sub/sub_int.o sub/sub_float.o main.o -ggdb
 ```
 
@@ -67,7 +66,7 @@ TARGET... : DEPENDEDS...
 ```
 
 据此，编写如下Makefile文件：
-Makefile_1
+<u>Makefile_1</u>
 ```
 # 最终的编译目标是生成一个名为cacu的文件
 cacu:add_int.o add_float.o sub_int.o sub_float.o main.o
@@ -108,7 +107,7 @@ make clean -f Makefile_1
 
 # 使用自定义变量
 
-Makefile_2
+<u>Makefile_2</u>
 ```
 CC = gcc
 CFLAGS = -Iadd -Isub -O2
@@ -131,7 +130,7 @@ clean:
 
 # 使用预定义变量
 
-Makefile_3
+<u>Makefile_3</u>
 ```
 CFLAGS = -Iadd -Isub -O2
 OBJS = add/add_int.o add/add_float.o \
@@ -155,16 +154,14 @@ clean:
 # 使用自动变量
 
 常见的自动变量及其含义：
-```
-* 表示目标文件的名称，不包含目标文件的扩展名
-+ 表示所有的依赖文件，这些依赖文件之间以空格分开，按照出现的先后为顺序，其中可能包含重复的依赖文件
-< 表示依赖项中第一个依赖文件的名称
-? 依赖项中，所有比目标文件时间戳晚的依赖文件，依赖文件之间以空格分开
-@ 目标项中目标文件的名称
-^ 依赖项中，所有不重复的依赖文件，这些文件之间以空格分开
-```
+`*` 表示目标文件的名称，不包含目标文件的扩展名
+`+` 表示所有的依赖文件，这些依赖文件之间以空格分开，按照出现的先后为顺序，其中可能包含重复的依赖文件
+`<` 表示依赖项中第一个依赖文件的名称
+`?` 依赖项中，所有比目标文件时间戳晚的依赖文件，依赖文件之间以空格分开
+`@` 目标项中目标文件的名称
+`^` 依赖项中，所有不重复的依赖文件，这些文件之间以空格分开
 
-Makefile_4
+<u>Makefile_4</u>
 ```
 CFLAGS = -Iadd -Isub -O2
 OBJS = add/add_int.o add/add_float.o \
@@ -186,7 +183,7 @@ clean:
 # 设置搜索路径
 
 指定需要搜索的目录， make会自动找到指定文件的目录并添加到文件上，VPATH变量可以实现此目的。
-Makefile_5
+<u>Makefile_5</u>
 ```
 CFLAGS = -Iadd -Isub -O2
 OBJDIR = objs
@@ -215,7 +212,7 @@ clean:
 在书写 Makefile 时，就可以省略掉描述 .c 文件和 .o 依赖关系的规则，而只需要给出那些特定的规则描述（.o 目标所需要的 .h 文件）。
 对一个目标文件是“文件名.o“，依赖文件是”文件名.c“的规则，可以省略其编译规则的命令行，由make命令决定如何使用编译命令和选项。此默认规则称为make的隐含规则。
 
-Makefile_6
+<u>Makefile_6</u>
 ```
 CC = gcc
 CFLAGS = -O2 -Iadd -Isub
@@ -235,13 +232,14 @@ clean:
 
 # 使用递归
 
-Makefile_7
+<u>Makefile_7</u>
 ```
 CC = gcc
 CFLAGS = -O2
 TARGET = cacu
 export OBJSDIR = $(shell pwd)/objs
 
+# make -C 切换到指定目录再执行make
 $(TARGET):$(OBJSDIR) main.o
 	$(MAKE) -C add
 	$(MAKE) -C sub
@@ -299,7 +297,7 @@ $(patsubst pattern, replacement, text)
 $(foreach VAR, LIST, TEXT)
 ```
 
-Makefile_8
+<u>Makefile_8</u>
 ```
 CC = gcc
 CFLAGS = -O2 -Iadd -Isub
