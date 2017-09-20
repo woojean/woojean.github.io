@@ -3376,7 +3376,7 @@ $ npm install <packageName>
 $ npm update <packageName>
 ```
 
-npm 模块仓库提供了一个查询服务，叫做 registry ，以 npmjs.org 提供的仓库为例，它的查询服务网址是 https://registry.npmjs.org/，
+npm模块仓库提供了一个查询服务，叫做 registry ，以 npmjs.org 提供的仓库为例，它的查询服务网址是 https://registry.npmjs.org/，
 在仓库查询地址后面加上模块名称就可以看到仓库中模块的版本信息：
 ```
 https://registry.npmjs.org/react
@@ -3422,7 +3422,10 @@ Node模块的安装过程：
   一个模块安装以后，本地其实保存了两份。一份是~/.npm目录下的压缩包，另一份是node_modules目录下解压后的代码。但是，运行npm install的时候，默认只会检查node_modules目录，而不会检查~/.npm目录。也就是说，如果一个模块在～/.npm下有压缩包，但是没有安装在node_modules目录中，npm 依然会从远程仓库下载一次新的压缩包。npm 提供了一个--cache-min参数，用于从缓存目录安装模块。
 
 
+
+
 ## 容器的水平居中
+
 ```css
 div#container {
  width:760px;
