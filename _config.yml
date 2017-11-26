@@ -7,7 +7,7 @@
 
 # Site settings
 title: woojean的博客
-brief-intro: Have fun .
+brief-intro: have fun .
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://woojean.com" # the base hostname & protocol for your site
 
