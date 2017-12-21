@@ -3,7 +3,7 @@ layout: post
 title:  "《ECMAScript 6入门》读书笔记"
 date: 2017-04-05 00:03:00
 categories: 编程
-tags: JavaScript
+tags: ES6
 excerpt: ""
 ---
 

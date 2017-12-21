@@ -3,7 +3,7 @@ layout: post
 title:  "《TypeScript官方文档》读书笔记"
 date: 2017-04-15 00:00:01
 categories: 编程
-tags: TypeScript JavaScript
+tags: TypeScript
 excerpt: "完整地过一遍TypeScript文档"
 ---
 
