@@ -3,7 +3,7 @@ layout: post
 title:  "Programming Mode"
 date: 2017-04-05 00:00:03
 categories: 编程
-tags: 设计模式
+tags: 设计模式 编程问题总结
 excerpt: ""
 ---
 
