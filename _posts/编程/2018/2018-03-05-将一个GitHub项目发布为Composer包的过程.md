@@ -18,7 +18,28 @@ excerpt: ""
 
 在项目中创建一个文件composer.json，内容如下：
 ```
-
+{
+    "name": "woojean/php-redis-queue",
+    "description": "a redis queue of php",
+    "license": "MIT",
+    "keywords": ["redis queue php"],
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "woojean",
+            "email": "168056828@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0"
+    },
+ 
+    "autoload": {
+        "psr-0": {
+            "Woojean\\RedisQueue": "src/"
+        }
+    }
+}
 ```
 
 
@@ -36,9 +57,9 @@ excerpt: ""
 
 To do so you can:
 * Go to your GitHub repository
-* Click the "Settings" button  （是项目的setting，而不是Github的setting）
+* Click the "Settings" button  **（是项目的setting，而不是Github的setting）**
 * Click "Integrations & services"
-* Add a "Packagist" service, and configure it with your API token, plus your Packagist username (API token随便写)
+* Add a "Packagist" service, and configure it with your API token, plus your Packagist username **(API token随便写)**
 * Check the "Active" box and submit the form
 
 You can then hit the "Test Service" button to trigger it and check if Packagist removes the warning about the package not being auto-updated.
@@ -46,4 +67,6 @@ You can then hit the "Test Service" button to trigger it and check if Packagist 
 ![image](/images/tech/composer_3.png)
 
 
+# 发布项目
+在Github中将项目pull release.
 
