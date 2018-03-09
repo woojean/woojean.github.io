@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Algorithm"
+title:  "编程问题总结-Algorithm"
 date: 2017-04-05 00:00:03
 categories: 编程
 tags: 算法 编程问题总结
