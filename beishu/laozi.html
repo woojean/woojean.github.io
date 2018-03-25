@@ -8,6 +8,13 @@ h4{
   	font-weight: bold;
 }
 
+a{
+	text-decoration:none;
+	color: #aaa;
+	font-size: 1.5em;
+}
+
+
 .content{
 	width: 80%;
 	margin: auto;
@@ -22,6 +29,13 @@ h4{
 	margin-right: 10%;
 	font-size: 3em;
 }
+
+.footer{
+	position:absolute;
+	right:10px;
+	bottom:10px;
+	align:center;
+}
 </style>
 
 <script type="text/javascript">
@@ -31,6 +45,25 @@ function getRandom1(start, end) {
 	// num =1;
 	return num;
 }
+
+function hideAll() {
+	var arr = document.getElementsByClassName("chapter");
+	var i;
+	for (i = 0; i < arr.length; i++) {
+    	arr[i].style.visibility="hidden";
+	}
+}
+
+function showOne() {
+	var id = "chapter_" + getRandom1(1,38);
+	document.getElementById(id).style.visibility="visible";
+}
+
+function refresh() {
+	hideAll();
+	showOne();
+}
+
 </script>
 	
 </head>
@@ -394,10 +427,13 @@ function getRandom1(start, end) {
 不欲以静，天地将自正。
 	</div>
 </div>
+
+<div width="100%" class="footer">
+ 	<a href ="#" onclick="refresh();">刷新</a>
+</div>
 </body>
 
 <script type="text/javascript">
-    var id = "chapter_" + getRandom1(1,38);
-	document.getElementById(id).style.visibility="visible";
+	showOne();
 </script>
 <html>
