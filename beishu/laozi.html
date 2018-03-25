@@ -435,5 +435,12 @@ function refresh() {
 
 <script type="text/javascript">
 	showOne();
+
+	document.onkeyup = function (e) {
+    var code = e.charCode || e.keyCode;
+    if (code == 13) {  
+        refresh(); 
+    }  
+}  
 </script>
 <html>
