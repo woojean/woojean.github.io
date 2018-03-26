@@ -15,6 +15,33 @@ a{
 }
 
 
+p{
+	font-size: 0.3em;
+	margin: 0px;
+	padding: 1px;
+	color: #bbb;
+	width: 100%;
+}
+/*
+p a{
+	font-size: 1em;
+	color: #000;
+}
+*/
+
+table{
+	width: 100%;
+	color: #FFF;
+	font-size: 0.3em;
+}
+
+
+td{
+	width: 11.11%;
+	padding: 8px;
+	text-align: center;
+}
+
 .content{
 	width: 80%;
 	margin: auto;
@@ -30,6 +57,13 @@ a{
 	font-size: 3em;
 }
 
+.header{
+	position:absolute;
+	top:10px;
+	left:10px;
+	align:center;
+}
+
 .footer{
 	position:absolute;
 	right:10px;
@@ -39,7 +73,18 @@ a{
 </style>
 
 <script type="text/javascript">
-function getRandom1(start, end) {
+
+function getQueryString(name) {
+	var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null) {
+		return unescape(r[2]);
+	}
+	return null;
+}
+
+
+function getRandom(start, end) {
 	var length = end - start;
 	var num = parseInt(Math.random() * (length) + start);
 	// num =1;
@@ -55,13 +100,24 @@ function hideAll() {
 }
 
 function showOne() {
-	var id = "chapter_" + getRandom1(1,38);
+	var id = "chapter_";
+	var chapter = getQueryString("chapter");
+	if(null == chapter){
+		id += getRandom(1,38);
+	}
+	else{
+		id += chapter;
+	}
+
 	document.getElementById(id).style.visibility="visible";
 }
 
 function refresh() {
 	hideAll();
-	showOne();
+	
+	// show 
+	var id = "chapter_" + getRandom(1,38);
+	document.getElementById(id).style.visibility="visible";
 }
 
 </script>
@@ -69,7 +125,63 @@ function refresh() {
 </head>
 
 <body>
+<div width="100%" class="header">
+ 	<a href="/beishu/laozi.html?chapter=0">目录</a>
+</div>
+
 <div class="content">
+	<div id="chapter_0" class="chapter">
+		<table>
+			<tr>
+				<td><p>一</p><a href="/beishu/laozi.html?chapter=1">道可道</a></td>
+				<td><p>二</p><a href="/beishu/laozi.html?chapter=2">天下皆知美</a></td>
+				<td><p>三</p><a href="/beishu/laozi.html?chapter=3">不尚贤</a></td>
+				<td><p>四</p><a href="/beishu/laozi.html?chapter=4">道冲</a></td>
+				<td><p>五</p><a href="/beishu/laozi.html?chapter=5">天地不仁</a></td>
+				<td><p>六</p><a href="/beishu/laozi.html?chapter=6">谷神不死</a></td>
+				<td><p>七</p><a href="/beishu/laozi.html?chapter=7">天长地久</a></td>
+				<td><p>八</p><a href="/beishu/laozi.html?chapter=8">上善若水</a></td>
+				<td><p>九</p><a href="/beishu/laozi.html?chapter=9">持而盈之</a></td>
+			</tr>	
+			<tr>
+				<td><p>十</p><a href="/beishu/laozi.html?chapter=10">营魄抱一</a></td>
+				<td><p>十一</p><a href="/beishu/laozi.html?chapter=11">三十辐</a></td>
+				<td><p>十二</p><a href="/beishu/laozi.html?chapter=12">五色令人目盲</a></td>
+				<td><p>十三</p><a href="/beishu/laozi.html?chapter=13">宠辱若惊</a></td>
+				<td><p>十四</p><a href="/beishu/laozi.html?chapter=14">视之不见</a></td>
+				<td><p>十五</p><a href="/beishu/laozi.html?chapter=15">古之善为道者</a></td>
+				<td><p>十六</p><a href="/beishu/laozi.html?chapter=16">致虚极</a></td>
+				<td><p>十七</p><a href="/beishu/laozi.html?chapter=17">太上</a></td>
+				<td><p>十八</p><a href="/beishu/laozi.html?chapter=18">大道废</a></td>
+			</tr>	
+			<tr>
+				<td><p>十九</p><a href="/beishu/laozi.html?chapter=19">绝圣弃智</a></td>
+				<td><p>二十</p><a href="/beishu/laozi.html?chapter=20">唯之与阿</a></td>
+				<td><p>二十一</p><a href="/beishu/laozi.html?chapter=21">孔德之容</a></td>
+				<td><p>二十二</p><a href="/beishu/laozi.html?chapter=22">曲则全</a></td>
+				<td><p>二十三</p><a href="/beishu/laozi.html?chapter=23">希言自然</a></td>
+				<td><p>二十四</p><a href="/beishu/laozi.html?chapter=24">跂者不立</a></td>
+				<td><p>二十五</p><a href="/beishu/laozi.html?chapter=25">有物混成</a></td>
+				<td><p>二十六</p><a href="/beishu/laozi.html?chapter=26">重为轻根</a></td>
+				<td><p>二十七</p><a href="/beishu/laozi.html?chapter=27">善行无辙迹</a></td>
+			</tr>	
+			<tr>
+				<td><p>二十八</p><a href="/beishu/laozi.html?chapter=28">知其雄</a></td>
+				<td><p>二十九</p><a href="/beishu/laozi.html?chapter=29">将欲取天下而为之</a></td>
+				<td><p>三十</p><a href="/beishu/laozi.html?chapter=30">以道佐人主者</a></td>
+				<td><p>三十一</p><a href="/beishu/laozi.html?chapter=31">夫佳兵者</a></td>
+				<td><p>三十二</p><a href="/beishu/laozi.html?chapter=32">道常无名</a></td>
+				<td><p>三十三</p><a href="/beishu/laozi.html?chapter=33">知人者智</a></td>
+				<td><p>三十四</p><a href="/beishu/laozi.html?chapter=34">大道泛兮</a></td>
+				<td><p>三十五</p><a href="/beishu/laozi.html?chapter=35">执大象</a></td>
+				<td><p>三十六</p><a href="/beishu/laozi.html?chapter=36">将欲歙之</a></td>
+			</tr>	
+			<tr>
+				<td><p>三十七</p><a href="/beishu/laozi.html?chapter=37">道常无为而无不为</a></td>
+			</tr>	
+		</table>
+	</div>
+
 	<div id="chapter_1" class="chapter">
 <h4>一</h4>
 道可道，非常道；名可名，非常名。
@@ -366,7 +478,7 @@ function refresh() {
 
 	<div id="chapter_31" class="chapter">
 <h4>三十一</h4>
-夫兵者，不祥之器，物或恶之，故有道者不处。
+夫佳兵者，不祥之器，物或恶之，故有道者不处。
 君子居则贵左，用兵则贵右。
 兵者不祥之器，非君子之器，不得已而用之，恬淡为上。
 胜而不美，而美之者，是乐杀人，夫乐杀人者，则不可以得志于天下矣。
