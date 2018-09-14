@@ -3,7 +3,7 @@ layout: post
 title:  "Mac下使用sshpass实现ssh登录快捷命令"
 date: 2017-08-21 00:00:01
 categories: 编程
-tags: 编程问题
+tags: 运维
 excerpt: ""
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "CentOS部署最新Node前端执行环境"
 date: 2017-04-05 00:02:00
 categories: 编程
-tags: 编程问题
+tags: 运维
 excerpt: ""
 ---
 
