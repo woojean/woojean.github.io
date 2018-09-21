@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "编程问题总结-SystemDesign"
+title:  "编程问题总结-System Design"
 date: 2017-04-05 00:00:03
 categories: 编程
 tags: 编程问题
