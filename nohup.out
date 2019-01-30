@@ -113,3 +113,139 @@
 10854:M 16 Jan 19:09:30.016 * Background saving started by pid 26440
 26440:C 16 Jan 19:09:30.019 * DB saved on disk
 10854:M 16 Jan 19:09:30.118 * Background saving terminated with success
+10854:M 18 Jan 14:05:15.737 * 1 changes in 3600 seconds. Saving...
+10854:M 18 Jan 14:05:15.739 * Background saving started by pid 31464
+31464:C 18 Jan 14:05:15.742 * DB saved on disk
+10854:M 18 Jan 14:05:15.841 * Background saving terminated with success
+10854:M 18 Jan 15:05:16.068 * 1 changes in 3600 seconds. Saving...
+10854:M 18 Jan 15:05:16.068 * Background saving started by pid 31579
+31579:C 18 Jan 15:05:16.072 * DB saved on disk
+10854:M 18 Jan 15:05:16.177 * Background saving terminated with success
+10854:M 18 Jan 16:05:17.051 * 1 changes in 3600 seconds. Saving...
+10854:M 18 Jan 16:05:17.051 * Background saving started by pid 31846
+31846:C 18 Jan 16:05:17.054 * DB saved on disk
+10854:M 18 Jan 16:05:17.156 * Background saving terminated with success
+10854:M 21 Jan 11:45:08.545 * 1 changes in 3600 seconds. Saving...
+10854:M 21 Jan 11:45:08.547 * Background saving started by pid 39707
+39707:C 21 Jan 11:45:08.552 * DB saved on disk
+10854:M 21 Jan 11:45:08.650 * Background saving terminated with success
+10854:M 21 Jan 12:45:09.037 * 1 changes in 3600 seconds. Saving...
+10854:M 21 Jan 12:45:09.037 * Background saving started by pid 39876
+39876:C 21 Jan 12:45:09.040 * DB saved on disk
+10854:M 21 Jan 12:45:09.139 * Background saving terminated with success
+10854:M 21 Jan 13:59:44.214 * 1 changes in 3600 seconds. Saving...
+10854:M 21 Jan 13:59:44.215 * Background saving started by pid 40009
+40009:C 21 Jan 13:59:44.218 * DB saved on disk
+10854:M 21 Jan 13:59:44.320 * Background saving terminated with success
+10854:M 21 Jan 14:59:45.083 * 1 changes in 3600 seconds. Saving...
+10854:M 21 Jan 14:59:45.084 * Background saving started by pid 40277
+40277:C 21 Jan 14:59:45.087 * DB saved on disk
+10854:M 21 Jan 14:59:45.185 * Background saving terminated with success
+10854:M 21 Jan 15:59:46.078 * 1 changes in 3600 seconds. Saving...
+10854:M 21 Jan 15:59:46.079 * Background saving started by pid 40508
+40508:C 21 Jan 15:59:46.092 * DB saved on disk
+10854:M 21 Jan 15:59:46.181 * Background saving terminated with success
+10854:M 21 Jan 19:32:43.540 * 1 changes in 3600 seconds. Saving...
+10854:M 21 Jan 19:32:43.540 * Background saving started by pid 41082
+41082:C 21 Jan 19:32:43.553 * DB saved on disk
+10854:M 21 Jan 19:32:43.646 * Background saving terminated with success
+10854:M 22 Jan 12:23:16.290 * 1 changes in 3600 seconds. Saving...
+10854:M 22 Jan 12:23:16.292 * Background saving started by pid 44770
+44770:C 22 Jan 12:23:16.308 * DB saved on disk
+10854:M 22 Jan 12:23:16.393 * Background saving terminated with success
+10854:M 22 Jan 13:23:17.013 * 1 changes in 3600 seconds. Saving...
+10854:M 22 Jan 13:23:17.014 * Background saving started by pid 44988
+44988:C 22 Jan 13:23:17.027 * DB saved on disk
+10854:M 22 Jan 13:23:17.116 * Background saving terminated with success
+10854:M 22 Jan 14:23:18.067 * 1 changes in 3600 seconds. Saving...
+10854:M 22 Jan 14:23:18.068 * Background saving started by pid 45219
+45219:C 22 Jan 14:23:18.071 * DB saved on disk
+10854:M 22 Jan 14:23:18.173 * Background saving terminated with success
+10854:M 22 Jan 15:23:19.000 * 1 changes in 3600 seconds. Saving...
+10854:M 22 Jan 15:23:19.001 * Background saving started by pid 45607
+45607:C 22 Jan 15:23:19.004 * DB saved on disk
+10854:M 22 Jan 15:23:19.102 * Background saving terminated with success
+10854:M 24 Jan 15:17:15.908 * 1 changes in 3600 seconds. Saving...
+10854:M 24 Jan 15:17:15.910 * Background saving started by pid 48820
+48820:C 24 Jan 15:17:15.916 * DB saved on disk
+10854:M 24 Jan 15:17:16.014 * Background saving terminated with success
+10854:M 24 Jan 16:17:17.097 * 1 changes in 3600 seconds. Saving...
+10854:M 24 Jan 16:17:17.099 * Background saving started by pid 49191
+49191:C 24 Jan 16:17:17.102 * DB saved on disk
+10854:M 24 Jan 16:17:17.201 * Background saving terminated with success
+10854:M 24 Jan 19:43:54.434 * 1 changes in 3600 seconds. Saving...
+10854:M 24 Jan 19:43:54.437 * Background saving started by pid 49429
+49429:C 24 Jan 19:43:54.440 * DB saved on disk
+10854:M 24 Jan 19:43:54.540 * Background saving terminated with success
+10854:M 24 Jan 20:43:55.054 * 1 changes in 3600 seconds. Saving...
+10854:M 24 Jan 20:43:55.057 * Background saving started by pid 49646
+49646:C 24 Jan 20:43:55.060 * DB saved on disk
+10854:M 24 Jan 20:43:55.161 * Background saving terminated with success
+10854:M 28 Jan 11:19:57.039 * 1 changes in 3600 seconds. Saving...
+10854:M 28 Jan 11:19:57.040 * Background saving started by pid 59236
+59236:C 28 Jan 11:19:57.043 * DB saved on disk
+10854:M 28 Jan 11:19:57.144 * Background saving terminated with success
+10854:M 28 Jan 12:19:58.047 * 1 changes in 3600 seconds. Saving...
+10854:M 28 Jan 12:19:58.048 * Background saving started by pid 59443
+59443:C 28 Jan 12:19:58.051 * DB saved on disk
+10854:M 28 Jan 12:19:58.158 * Background saving terminated with success
+10854:M 28 Jan 14:18:40.508 * 1 changes in 3600 seconds. Saving...
+10854:M 28 Jan 14:18:40.509 * Background saving started by pid 59736
+59736:C 28 Jan 14:18:40.511 * DB saved on disk
+10854:M 28 Jan 14:18:40.611 * Background saving terminated with success
+10854:M 28 Jan 15:18:41.057 * 1 changes in 3600 seconds. Saving...
+10854:M 28 Jan 15:18:41.058 * Background saving started by pid 60117
+60117:C 28 Jan 15:18:41.061 * DB saved on disk
+10854:M 28 Jan 15:18:41.163 * Background saving terminated with success
+10854:M 28 Jan 16:18:42.007 * 1 changes in 3600 seconds. Saving...
+10854:M 28 Jan 16:18:42.008 * Background saving started by pid 60392
+60392:C 28 Jan 16:18:42.011 * DB saved on disk
+10854:M 28 Jan 16:18:42.112 * Background saving terminated with success
+10854:M 28 Jan 17:18:43.016 * 1 changes in 3600 seconds. Saving...
+10854:M 28 Jan 17:18:43.017 * Background saving started by pid 60620
+60620:C 28 Jan 17:18:43.020 * DB saved on disk
+10854:M 28 Jan 17:18:43.121 * Background saving terminated with success
+10854:M 28 Jan 19:09:43.618 * 1 changes in 3600 seconds. Saving...
+10854:M 28 Jan 19:09:43.619 * Background saving started by pid 61100
+61100:C 28 Jan 19:09:43.621 * DB saved on disk
+10854:M 28 Jan 19:09:43.721 * Background saving terminated with success
+10854:M 28 Jan 20:10:11.016 * 1 changes in 3600 seconds. Saving...
+10854:M 28 Jan 20:10:11.020 * Background saving started by pid 61372
+61372:C 28 Jan 20:10:11.083 * DB saved on disk
+10854:M 28 Jan 20:10:11.126 * Background saving terminated with success
+10854:M 29 Jan 14:38:34.970 * 1 changes in 3600 seconds. Saving...
+10854:M 29 Jan 14:38:34.971 * Background saving started by pid 64185
+64185:C 29 Jan 14:38:34.973 * DB saved on disk
+10854:M 29 Jan 14:38:35.076 * Background saving terminated with success
+10854:M 29 Jan 15:38:36.034 * 1 changes in 3600 seconds. Saving...
+10854:M 29 Jan 15:38:36.034 * Background saving started by pid 64552
+64552:C 29 Jan 15:38:36.038 * DB saved on disk
+10854:M 29 Jan 15:38:36.138 * Background saving terminated with success
+10854:M 29 Jan 16:38:37.031 * 1 changes in 3600 seconds. Saving...
+10854:M 29 Jan 16:38:37.032 * Background saving started by pid 65191
+65191:C 29 Jan 16:38:37.035 * DB saved on disk
+10854:M 29 Jan 16:38:37.132 * Background saving terminated with success
+10854:M 29 Jan 17:38:38.080 * 1 changes in 3600 seconds. Saving...
+10854:M 29 Jan 17:38:38.081 * Background saving started by pid 65540
+65540:C 29 Jan 17:38:38.084 * DB saved on disk
+10854:M 29 Jan 17:38:38.186 * Background saving terminated with success
+10854:M 29 Jan 19:42:24.694 * 1 changes in 3600 seconds. Saving...
+10854:M 29 Jan 19:42:24.694 * Background saving started by pid 66768
+66768:C 29 Jan 19:42:24.697 * DB saved on disk
+10854:M 29 Jan 19:42:24.798 * Background saving terminated with success
+10854:M 29 Jan 20:42:25.047 * 1 changes in 3600 seconds. Saving...
+10854:M 29 Jan 20:42:25.048 * Background saving started by pid 67190
+67190:C 29 Jan 20:42:25.051 * DB saved on disk
+10854:M 29 Jan 20:42:25.151 * Background saving terminated with success
+10854:M 30 Jan 11:24:03.726 * 1 changes in 3600 seconds. Saving...
+10854:M 30 Jan 11:24:03.728 * Background saving started by pid 68278
+68278:C 30 Jan 11:24:03.734 * DB saved on disk
+10854:M 30 Jan 11:24:03.833 * Background saving terminated with success
+10854:M 30 Jan 12:28:51.514 * 1 changes in 3600 seconds. Saving...
+10854:M 30 Jan 12:28:51.515 * Background saving started by pid 68524
+68524:C 30 Jan 12:28:51.517 * DB saved on disk
+10854:M 30 Jan 12:28:51.620 * Background saving terminated with success
+10854:M 30 Jan 13:28:52.089 * 1 changes in 3600 seconds. Saving...
+10854:M 30 Jan 13:28:52.089 * Background saving started by pid 68741
+68741:C 30 Jan 13:28:52.092 * DB saved on disk
+10854:M 30 Jan 13:28:52.197 * Background saving terminated with success
