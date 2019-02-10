@@ -7,7 +7,7 @@
 
 # Site settings
 title: woojean的博客
-brief-intro: 无为而无不为
+brief-intro: 简单行事才能抓住核心
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://woojean.com" # the base hostname & protocol for your site
 
