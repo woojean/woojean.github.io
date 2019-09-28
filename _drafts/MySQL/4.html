@@ -1,0 +1,759 @@
+<!DOCTYPE html><html lang="en"><title>MySQL 中锁的面试题总结</title><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, user-scalable=no"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover,minimum-scale=1.0, maximum-scale=1"><title>老王/张建的专栏</title><meta name="description" content="GitChat 是一款基于微信平台的知识分享产品。通过这款产品我们希望改变IT知识的学习方式。"><meta name="robots" content="index,follow"><meta name="keywords" content="GitChat,机器学习,大数据,程序员,用户体验,软件开发,知识付费,技术分享"><meta http-equiv="cache-control" content="max-age=0"><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="expires" content="0"><meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"><meta http-equiv="pragma" content="no-cache"><meta name="baidu-site-verification" content="BRkuL6TTfM"><script src="/dist/site/gitchat/js1.js"></script><link href="/dist/css/bootstrap-toggle.min.css" rel="stylesheet"><link href="/dist/site/gitchat/bundle2.css" rel="stylesheet"><link rel="stylesheet" href="/css/gitchat/common/common.css"><script src="/dist/gitchat/js/common.js"></script><link rel="icon" type="image/png" href="https://images.gitbook.cn/FrfR1mB39xM-U6iSAmDCpxWVxvoa?imageslim" sizes="16x16"><link rel="icon" type="image/png" href="https://images.gitbook.cn/FrfR1mB39xM-U6iSAmDCpxWVxvoa?imageslim" sizes="32x32"></head><meta name="viewport" content="width=device-width, user-scalable=yes"><link href="/dist/gitchat/css/rpi.css" rel="stylesheet"><link href="/dist/gitchat/css/katex.min.css" rel="stylesheet"><script src="/dist/site/gitchat/js3.js"></script><script src="/dist/gitchat/js/columnRpi.js"></script><link href="/dist/site/gitchat/bundle1.css" rel="stylesheet"><link href="/css/gitchat/columnTopicDetail.css" rel="stylesheet"><link href="/dist/gitchat/css/columnListTemplate.css" rel="stylesheet"><link href="/dist/gitchat/css/readerGroupTemplate.css" rel="stylesheet"><body><input style="display:none;" id="refreshed" value="no"><script>var e = document.getElementById("refreshed");
+if (e.value == "no") e.value = "yes";
+else {
+    e.value = "no";
+    location.reload();
+}</script><link rel="stylesheet" href="/css/gitchat/appBanner.css"><div class="app_banner"><div class="inner_banner"><img src="https://images.gitbook.cn/FiemqiGW5K9uxM-cSQWlrpiRP8Ua?imageslim" class="app_bg"><img id="downApp" src="https://images.gitbook.cn/Fg1FfEczUbS2nF4p2LT_erPD6d9I" class="app_btn"><span id="closeApp" class="app_close">×</span></div></div><script>var showStatus = true;
+$('#downApp').on('click',function(){
+    window.location.href = 'http://app.gitbook.cn/page/download?M_courcebanner';
+    return false;
+})
+$('#closeApp').on('click',function(){
+    $('.app_banner').fadeOut();
+    showStatus = false;
+    return false;
+})
+window.onscroll=function(){
+    if(showStatus && $(document).scrollTop()>$('.app_banner').height()){
+        $('.app_banner').fadeIn();
+    }else{
+        $('.app_banner').fadeOut();
+    }
+}</script><progress value="0" id="progressBar"><div class="progress-container"><span class="progress-bar"></span></div></progress><div id="topicContainer" class="topicContainer"><div class="no-mathjax topicTitle">MySQL 中锁的面试题总结</div><article id="articleDiv" style="overflow: hidden;padding-bottom:15px;text-align: justify;"><div class="mazi-article-content dont-break-out"><h3 id="mysql">什么是锁？MySQL 中提供了几类锁？</h3>
+<p>锁是实现数据库并发控制的重要手段，可以保证数据库在多人同时操作时能够正常运行。MySQL 提供了全局锁、行级锁、表级锁。其中 InnoDB 支持表级锁和行级锁，MyISAM 只支持表级锁。</p>
+<h3 id="">什么是死锁？</h3>
+<p>是指两个或两个以上的进程在执行过程中，因争夺资源而造成的一种互相等待的现象,若无外力作用,它们都将无法推进下去。此时称系统处于死锁状态或系统产生了死锁，这些永远在互相等待的过程称为死锁。</p>
+<p>死锁是指两个或两个以上的进程在执行过程中，因争夺资源而造成的一种互相等待的现象,若无外力作用,它们都将无法推进下去。此时称系统处于死锁状态或系统产生了死锁，这些永远在互相等待的过程称为死锁。</p>
+<h3 id="-1">常见的死锁案例有哪些？</h3>
+<ul>
+<li>将投资的钱拆封几份借给借款人，这时处理业务逻辑就要把若干个借款人一起锁住 select * from xxx where id in (xx,xx,xx) for update。</li>
+<li>批量入库，存在则更新，不存在则插入。解决方法 insert into tab(xx,xx) on duplicate key update <code>xx</code>='xx'。</li>
+</ul>
+<h3 id="-2">如何处理死锁？</h3>
+<p>对待死锁常见的两种策略：</p>
+<ul>
+<li>通过 innodb<em>lock</em>wait_timeout 来设置超时时间，一直等待直到超时；</li>
+<li>发起死锁检测，发现死锁之后，主动回滚死锁中的某一个事务，让其它事务继续执行。</li>
+</ul>
+<h3 id="-3">如何查看死锁？</h3>
+<ul>
+<li>使用命令 <code>show engine innodb status</code> 查看最近的一次死锁。</li>
+<li>InnoDB Lock Monitor 打开锁监控，每 15s 输出一次日志。使用完毕后建议关闭，否则会影响数据库性能。</li>
+</ul>
+<h3 id="-4">如何避免死锁？</h3>
+<ul>
+<li>为了在单个 InnoDB 表上执行多个并发写入操作时避免死锁，可以在事务开始时通过为预期要修改的每个元祖（行）使用 SELECT ... FOR UPDATE 语句来获取必要的锁，即使这些行的更改语句是在之后才执行的。</li>
+<li>在事务中，如果要更新记录，应该直接申请足够级别的锁，即排他锁，而不应先申请共享锁、更新时再申请排他锁，因为这时候当用户再申请排他锁时，其他事务可能又已经获得了相同记录的共享锁，从而造成锁冲突，甚至死锁</li>
+<li>如果事务需要修改或锁定多个表，则应在每个事务中以相同的顺序使用加锁语句。在应用中，如果不同的程序会并发存取多个表，应尽量约定以相同的顺序来访问表，这样可以大大降低产生死锁的机会</li>
+<li>通过 SELECT ... LOCK IN SHARE MODE 获取行的读锁后，如果当前事务再需要对该记录进行更新操作，则很有可能造成死锁。</li>
+<li>改变事务隔离级别。</li>
+</ul>
+<h3 id="innodb">InnoDB 默认是如何对待死锁的？</h3>
+<p>InnoDB 默认是使用设置死锁时间来让死锁超时的策略，默认 innodb<em>lock</em>wait_timeout 设置的时长是 50s。</p>
+<h3 id="-5">如何开启死锁检测？</h3>
+<p>设置 innodb<em>deadlock</em>detect 设置为 on 可以主动检测死锁，在 Innodb 中这个值默认就是 on 开启的状态。</p>
+<h3 id="-6">什么是全局锁？它的应用场景有哪些？</h3>
+<p>全局锁就是对整个数据库实例加锁，它的典型使用场景就是做全库逻辑备份。
+这个命令可以使整个库处于只读状态。使用该命令之后，数据更新语句、数据定义语句、更新类事务的提交语句等操作都会被阻塞。</p>
+<h3 id="-7">什么是共享锁？</h3>
+<p>共享锁又称读锁 (read lock)，是读取操作创建的锁。其他用户可以并发读取数据，但任何事务都不能对数据进行修改（获取数据上的排他锁），直到已释放所有共享锁。当如果事务对读锁进行修改操作，很可能会造成死锁。</p>
+<h3 id="-8">什么是排它锁？</h3>
+<p>排他锁 exclusive lock（也叫 writer lock）又称写锁。</p>
+<p>若某个事物对某一行加上了排他锁，只能这个事务对其进行读写，在此事务结束之前，其他事务不能对其进行加任何锁，其他进程可以读取,不能进行写操作，需等待其释放。</p>
+<p>排它锁是悲观锁的一种实现，在上面悲观锁也介绍过。</p>
+<p>若事务 1 对数据对象 A 加上 X 锁，事务 1 可以读 A 也可以修改 A，其他事务不能再对 A 加任何锁，直到事物 1 释放 A 上的锁。这保证了其他事务在事物 1 释放 A 上的锁之前不能再读取和修改 A。排它锁会阻塞所有的排它锁和共享锁。</p>
+<h3 id="-9">使用全局锁会导致什么问题？</h3>
+<p>如果在主库备份，在备份期间不能更新，业务停摆，所以更新业务会处于等待状态。</p>
+<p>如果在从库备份，在备份期间不能执行主库同步的 binlog，导致主从延迟。</p>
+<h3 id="-10">如何处理逻辑备份时，整个数据库不能插入的情况？</h3>
+<p>如果使用全局锁进行逻辑备份就会让整个库成为只读状态，幸好官方推出了一个逻辑备份工具 MySQLdump 来解决了这个问题，只需要在使用 MySQLdump 时，使用参数 -single-transaction 就会在导入数据之前启动一个事务来保证数据的一致性，并且这个过程是支持数据更新操作的。</p>
+<h3 id="-11">如何设置数据库为全局只读锁？</h3>
+<p>使用命令 <code>flush tables with read lock</code>（简称 FTWRL）就可以实现设置数据库为全局只读锁。</p>
+<h3 id="ftwrl">除了 FTWRL 可以设置数据库只读外，还有什么别的方法？</h3>
+<p>除了使用 FTWRL 外，还可以使用命令 set global readonly=true 设置数据库为只读。</p>
+<h3 id="ftwrlsetglobalreadonlytrue">FTWRL 和 set global readonly=true 有什么区别？</h3>
+<p>FTWRL 和 set global readonly=true 都是设置整个数据库为只读状态，但他们最大的区别就是，当执行 FTWRL 的客户端断开之后，整个数据库会取消只读，而 set global readonly=true 会一直让数据处于只读状态。</p>
+<h3 id="-12">如何实现表锁？</h3>
+<p>MySQL 里标记锁有两种：表级锁、元数据锁（meta data lock）简称 MDL。表锁的语法是 lock tables t read/write。</p>
+<p>可以用 unlock tables 主动释放锁，也可以在客户端断开的时候自动释放。lock tables 语法除了会限制别的线程的读写外，也限定了本线程接下来的操作对象。</p>
+<p>对于 InnoDB 这种支持行锁的引擎，一般不使用 lock tables 命令来控制并发，毕竟锁住整个表的影响面还是太大。</p>
+<p>MDL：不需要显式使用，在访问一个表的时候会被自动加上。</p>
+<p>MDL 的作用：保证读写的正确性。</p>
+<p>在对一个表做增删改查操作的时候，加 MDL 读锁；当要对表做结构变更操作的时候，加 MDL 写锁。</p>
+<p>读锁之间不互斥，读写锁之间，写锁之间是互斥的，用来保证变更表结构操作的安全性。</p>
+<p>MDL 会直到事务提交才会释放，在做表结构变更的时候，一定要小心不要导致锁住线上查询和更新。</p>
+<h3 id="-13">悲观锁和乐观锁有什么区别？</h3>
+<p>顾名思义，就是很悲观，每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁，这样别人想拿这个数据就会 block 直到它拿到锁。正因为如此，悲观锁需要耗费较多的时间，另外与乐观锁相对应的，悲观锁是由数据库自己实现了的，要用的时候，我们直接调用数据库的相关语句就可以了。</p>
+<p>说到这里，由悲观锁涉及到的另外两个锁概念就出来了，它们就是共享锁与排它锁。共享锁和排它锁是悲观锁的不同的实现，它俩都属于悲观锁的范畴。</p>
+<p>乐观锁是用数据版本（Version）记录机制实现，这是乐观锁最常用的一种实现方式。何谓数据版本？即为数据增加一个版本标识，一般是通过为数据库表增加一个数字类型的 version 字段来实现。当读取数据时，将 version 字段的值一同读出，数据每更新一次，对此 version 值加 1。当我们提交更新的时候，判断数据库表对应记录的当前版本信息与第一次取出来的version值进行比对，如果数据库表当前版本号与第一次取出来的 version 值相等，则予以更新，否则认为是过期数据。</p>
+<p><strong>比如：</strong>
+1、数据库表三个字段，分别是id、value、version
+<code>select id,value,version from t where id=#{id}</code>
+2、每次更新表中的value字段时，为了防止发生冲突，需要这样操作</p>
+<pre><code class="sql language-sql">update t
+set value=2,version=version+1
+where id=#{id} and version=#{version}
+</code></pre>
+<h3 id="-14">乐观锁有什么优点和缺点？</h3>
+<p>因为没有加锁所以乐观锁的优点就是执行性能高。它的缺点就是有可能产生 ABA 的问题，ABA 问题指的是有一个变量 V 初次读取的时候是 A 值，并且在准备赋值的时候检查到它仍然是 A 值，会误以为没有被修改会正常的执行修改操作，实际上这段时间它的值可能被改了其他值，之后又改回为 A 值，这个问题被称为 ABA 问题。</p>
+<h3 id="innodb-1">InnoDB 存储引擎有几种锁算法？</h3>
+<ul>
+<li>Record Lock — 单个行记录上的锁；</li>
+<li>Gap Lock — 间隙锁，锁定一个范围，不包括记录本身；</li>
+<li>Next-Key Lock — 锁定一个范围，包括记录本身。</li>
+</ul>
+<h3 id="innodb-2">InnoDB 如何实现行锁？</h3>
+<p>行级锁是 MySQL 中粒度最小的一种锁，他能大大减少数据库操作的冲突。</p>
+<p>INNODB 的行级锁有共享锁（S LOCK）和排他锁（X LOCK）两种。共享锁允许事物读一行记录，不允许任何线程对该行记录进行修改。排他锁允许当前事物删除或更新一行记录，其他线程不能操作该记录。</p>
+<p>共享锁：SELECT ... LOCK IN SHARE MODE，MySQL 会对查询结果集中每行都添加共享锁，前提是当前线程没有对该结果集中的任何行使用排他锁，否则申请会阻塞。</p>
+<p>排他锁：select * from t where id=1 for update，其中 id 字段必须有索引，MySQL 会对查询结果集中每行都添加排他锁，在事物操作中，任何对记录的更新与删除操作会自动加上排他锁。前提是当前没有线程对该结果集中的任何行使用排他锁或共享锁，否则申请会阻塞。</p>
+<h3 id="-15">优化锁方面你有什么建议？</h3>
+<ul>
+<li>尽量使用较低的隔离级别。</li>
+<li>精心设计索引， 并尽量使用索引访问数据， 使加锁更精确， 从而减少锁冲突的机会。</li>
+<li>选择合理的事务大小，小事务发生锁冲突的几率也更小。</li>
+<li>给记录集显示加锁时，最好一次性请求足够级别的锁。比如要修改数据的话，最好直接申请排他锁，而不是先申请共享锁，修改时再请求排他锁，这样容易产生死锁。</li>
+<li>不同的程序访问一组表时，应尽量约定以相同的顺序访问各表，对一个表而言，尽可能以固定的顺序存取表中的行。这样可以大大减少死锁的机会。</li>
+<li>尽量用相等条件访问数据，这样可以避免间隙锁对并发插入的影响。</li>
+<li>不要申请超过实际需要的锁级别。</li>
+<li>除非必须，查询时不要显示加锁。 MySQL 的 MVCC 可以实现事务中的查询不用加锁，优化事务性能；MVCC 只在 COMMITTED READ（读提交）和 REPEATABLE READ（可重复读）两种隔离级别下工作。</li>
+<li>对于一些特定的事务，可以使用表锁来提高处理速度或减少死锁的可能。</li>
+</ul></div></article><div id="writeCommentDiv" style="margin-top: 10px;display:none;"><div class="col-xs-12 comment-btn-div"><button onclick="redirectSubmitPage(&quot;null&quot;,&quot;true&quot;)" class="mazi-comment-btn">写评论</button></div></div><div style="display:none;" class="topicComments"><div id="topicComments" topicid="5d80b32a49b2b1063b52995b" comment-num="0" columnId="5d80aea449b2b1063b52990f"></div></div><div id="hasSubscription"></div><div id="commentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 style="text-align:center;margin:0;">文章评论</h4></div><div style="padding-bottom:10;" class="modal-body"><div class="row"><div style="text-align:right" class="col-xs-12"><textarea id="topicComment" rows="7" style="width:100%;border:1px solid #cccccc;-webkit-appearance:none;"></textarea><span id="tip">0/200</span></div></div></div><div class="modal-footer"><button id="topicSubmitBtn" disabled="disabled" style="width:100%" class="btn btn-primary">提交</button></div></div></div></div><script>function showTip() {
+    $('#pdfTips').modal('show')
+}
+function openPdf(){
+    window.location.href = '';
+}</script><div class="split_line"></div><div class="topic_item"><div class="topic-cell"><div class="wrapper"><div class="userInfo"><div class="avatorWrapper"><img src="https://images.gitbook.cn/663e5710-b748-11e8-b809-d915783fbfe8?imageView2/2/h/50" width="20" height="20" class="header_img"></div><div class="feedInfo"><div class="userName">torres</div></div><div class="feedTime">2019-09-28 13:50</div></div><div class="feedContent"><div class="talkContent"><div class="text talk_detail"><span style="display: block;overflow: hidden" class="topic_text">赞，深度好文</span><div class="clearfix"></div></div></div></div></div></div><div class="topic-cell"><div class="wrapper"><div class="userInfo"><div class="avatorWrapper"><img src="https://images.gitbook.cn/98b860c0-952c-11e8-b8b3-690dce6077c1?imageView2/2/h/50" width="20" height="20" class="header_img"><img src="http://images.gitbook.cn/cvip.png" height="30" width="30" class="vIcon"></div><div class="feedInfo"><div class="userName">老王</div></div><div class="feedTime">2019-09-26 23:19</div></div><div class="feedContent"><div class="qaContent"><div class="answerText">group by 在满足条件的情况下会走索引，比如，select tid from t where tid&amp;gt;10 group by tid，当 where 和 group by 都是同样的字段时，就会走索引。</div><div class="text question_view"><span class="questioner">______Wm提问：</span><span>请问group by走索引吗</span></div></div><div class="comment"><ul><li class="contentWrapper"><div><span class="userName">______Wm</span><div class="commentContent">谢谢</div></div></li></ul></div></div></div></div></div><a style="" href="/chatGroup.html#/groups/5b55849bc28306099b47ae7d" data-toggle="modal" data-target="" class="reader_btn">查看更多</a><div class="detail_bottom"><div class="detail_bottom_menu"><a href="/m/mazi/comp/column?columnId=5d80aea449b2b1063b52990f&amp;tag=2#catalog" class="detail_catalog_2"><img src="https://images.gitbook.cn/FoNYstI_LM90qvSH1CcqIPRPXi93"></a><a href="/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b26c49b2b1063b529959" class="detail_bottom_left"><img src="https://images.gitbook.cn/FtV6I5EsuprXLmIzsQ89j-7QfsNa" class="arrow_image"></a><a href="/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b35b49b2b1063b52995c" class="detail_bottom_right"><img src="https://images.gitbook.cn/FuV9gG3eLhk3WBTFebaE7Y3fo7ns" class="arrow_image"></a><a href="/chatGroup.html#/groups/5b55849bc28306099b47ae7d" style="" class="detail_readers"><img src="https://images.gitbook.cn/FjM1UjGTLGkqf-VqNqnGWuQUZo-H"></a></div></div></div><div id="inviteCardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" style="margin:0 auto;padding:10px 10px 0;" class="modal-dialog"><div style="background:#fcfcfc" class="modal-content"><div style="text-align:center;padding:10px;background:#fff;border:none;" class="modal-header"><h4 id="inviteCardModalLabel" style="font-size:16px;font-weight:700;color: #3f3f3f;text-align: center;" class="modal-title">长按图片分享或保存</h4></div><div style="padding:0;line-height:30px;overflow:auto;-webkit-overflow-scrolling: touch;" class="modal-body"><div id="inviteCardLoader" style="text-align:center;height:200px;"><div style="margin-top:140px;"><img style="width:50px;" src="https://images.gitbook.cn/loading_spinner.gif"></div><div style="color:#ccc;">正在生成图片...</div></div><div id="inviteCardbody" style="text-align:center;display:none;height:320px;min-height:320px;"><img id="inviteCardImg" style="width:100%"></div></div><div style="text-align:center;padding:10px;background:rgba(255,255,255,0.9);" class="modal-footer"><div style="font-size:12px;color:#333;">用专属海报每邀请一位好友购买，即可获得原价的 1/4 作为奖励。上不封顶，立即提现。您可以在「我-我的邀请奖励」中查看邀请详情并进行提现。</div><a style="font-size:14px;color:#FF700A;background:#FDF2E0;border-radius:20px;margin:10px auto 0;display:inline-block;text-align:center;padding:6px 15px;" href="/m/mazi/statistic/invites/column/5d80aea449b2b1063b52990f">查看分享达人排行        </a></div></div><div style="background:rgba(0,0,0,0);text-align:center;" class="modal-colse"><img data-dismiss="modal" aria-label="Close" style="width:50px;" src="https://images.gitbook.cn/FvFDp80XHoLkvq8pNhBm3CWUWW4r"></div></div></div><div id="showInviteCardTipsModal" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 style="text-align:center;" class="modal-title">提 示</h4></div><div style="padding:10px 20px 5px 20px;line-height:30px;" class="modal-body"><div style="text-align:center;">成功购买本专栏，即可获得专属返利海报！</div></div><div style="text-align:center;" class="modal-footer"><div data-dismiss="modal" class="btn btn-primary">知道了</div></div></div></div></div><div id="showTipsModal" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div style="text-align:center;" class="modal-header"><h4 class="modal-title">提 示</h4></div><div style="padding:10px 20px 5px 20px;line-height:30px;" class="modal-body"><div style="text-align:center;">快去预订吧！</div></div><div style="text-align:center;" class="modal-footer"><div data-dismiss="modal" class="btn btn-primary">知道了</div></div></div></div></div><div id="showVIPBuyModal" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 style="text-align:center;" class="modal-title">提 示</h4></div><div style="padding:10px 20px 5px 20px;line-height:30px;" class="modal-body"><div id="showVIPBuyText" style="text-align:center;"></div></div><div style="margin-top: 10px;text-align:center;" class="modal-footer"><a href="/m/mazi/comp/column?columnId=5d80aea449b2b1063b52990f" class="btn btn-primary">知道了</a></div></div></div></div><div id="showNotFinishedTipsModal" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div style="text-align:center;" class="modal-header"><h4 class="modal-title">提 示</h4></div><div style="padding:10px 20px 5px 20px;line-height:30px;" class="modal-body"><div style="text-align:center;">作者正在写作中，请耐心等待！</div></div><div style="text-align:center;" class="modal-footer"><div data-dismiss="modal" class="btn btn-primary">知道了</div></div></div></div></div><div id="showNeedBuyTipsModal" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" data-dismiss="modal" class="modal-dialog"><div class="modal-content"><div style="text-align:center;" class="modal-header"><h4 class="modal-title">提 示</h4></div><div style="padding:10px 20px 5px 20px;line-height:30px;" class="modal-body"><div style="text-align:center;">购买本专栏，即可继续阅读文章！</div></div><div style="text-align:center;" class="modal-footer"><div data-dismiss="modal" class="btn btn-primary">知道了</div></div></div></div></div><div id="appClick" style="display:none" data-toggle="modal" data-target="#appModal"></div><div id="appModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div class="modal-body"><img src="https://images.gitbook.cn/FmmfLbTAH8_vkKHDDvzCOXFGxTa_"><div class="app_btns"><a href="http://app.gitbook.cn/page/download" class="download_btn"></a><div data-dismiss="modal" class="close_btn">果断拒绝</div></div></div></div></div></div></body><script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script><script>$.ajax ({
+    url: "/weixin/signature",
+    type: "POST",
+    data: JSON.stringify({url:window.location.href}),
+    dataType: "json",
+    contentType: "application/json; charset=utf-8",
+    success: function(data,status){
+        if(data.code == 0){
+            wx.config({
+            debug: false,
+            appId: 'wx7ba47eadabd9ddde',
+            timestamp: data.timestamp,
+            nonceStr: data.nonce,
+            signature: data.sha1,
+            jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone','chooseWXPay']
+            });
+            wx.ready(function(){
+                //alert('config check successfully.');
+                wx.onMenuShareTimeline({
+                title: 'MySQL 中锁的面试题总结 | 老王/张建', // 分享标题
+                link: 'https://gitbook.cn/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b32a49b2b1063b52995b?utm_source=columnweixinshare&utm_campaign=%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%20MySQL%20%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8', // 分享链接
+                imgUrl: 'https://images.gitbook.cn/Ftb77Lsip5yvRhhPYgDO1aBxNVjl?imageView2/0/h/500/', // 分享图标
+                success: function () {
+                // 用户确认分享后执行的回调函数
+                    $.ajax({
+                        url: "/m/mazi/share/event",
+                        type: "POST",
+                        data: JSON.stringify({
+                            shareItemType:'', // activity, article, author, others
+                            shareItemId:'',
+                            shareToken:'',
+                            shareChanel:'weixinTimeline',
+                            shareItemUrl:window.location.href
+                        }),
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data, status) {
+
+                        }
+                    });
+                },
+                cancel: function () {
+                // 用户取消分享后执行的回调函数
+                }
+                });
+                wx.onMenuShareAppMessage({
+                title: 'MySQL 中锁的面试题总结 | 老王/张建', // 分享标题
+                desc: '获得高薪的关键：就是高效的准备面试', // 分享描述
+                link: 'https://gitbook.cn/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b32a49b2b1063b52995b?utm_source=columnweixinshare&utm_campaign=%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%20MySQL%20%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8', // 分享链接
+                imgUrl: 'https://images.gitbook.cn/Ftb77Lsip5yvRhhPYgDO1aBxNVjl?imageView2/0/h/500/', // 分享图标
+                type: 'link', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    $.ajax({
+                        url: "/m/mazi/share/event",
+                        type: "POST",
+                        data: JSON.stringify({
+                            shareItemType: '', // activity, article, author, others
+                            shareItemId: '',
+                            shareToken: '',
+                            shareChanel: 'weixinMessage',
+                            shareItemUrl: window.location.href
+                        }),
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data, status) {
+
+                        }
+                    });
+                },
+                cancel: function () {
+                // 用户取消分享后执行的回调函数
+                }
+                });
+                wx.onMenuShareQQ({
+                title: 'MySQL 中锁的面试题总结 | 老王/张建', // 分享标题
+                desc: '获得高薪的关键：就是高效的准备面试', // 分享描述
+                link: 'https://gitbook.cn/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b32a49b2b1063b52995b?utm_source=columnweixinshare&utm_campaign=%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%20MySQL%20%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8', // 分享链接
+                imgUrl: 'https://images.gitbook.cn/Ftb77Lsip5yvRhhPYgDO1aBxNVjl?imageView2/0/h/500/', // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    $.ajax({
+                        url: "/m/mazi/share/event",
+                        type: "POST",
+                        data: JSON.stringify({
+                            shareItemType: '', // activity, article, author, others
+                            shareItemId: '',
+                            shareToken: '',
+                            shareChanel: 'qq',
+                            shareItemUrl: window.location.href
+                        }),
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data, status) {
+
+                        }
+                    });
+                },
+                cancel: function () {
+                // 用户取消分享后执行的回调函数
+                }
+                });
+                wx.onMenuShareWeibo({
+                title: 'MySQL 中锁的面试题总结 | 老王/张建', // 分享标题
+                desc: '获得高薪的关键：就是高效的准备面试', // 分享描述
+                link: 'https://gitbook.cn/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b32a49b2b1063b52995b?utm_source=columnweixinshare&utm_campaign=%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%20MySQL%20%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8', // 分享链接
+                imgUrl: 'https://images.gitbook.cn/Ftb77Lsip5yvRhhPYgDO1aBxNVjl?imageView2/0/h/500/', // 分享图标
+                success: function () {
+                // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                // 用户取消分享后执行的回调函数
+                }
+                });
+                wx.onMenuShareQZone({
+                title: 'MySQL 中锁的面试题总结 | 老王/张建', // 分享标题
+                desc: '获得高薪的关键：就是高效的准备面试', // 分享描述
+                link: 'https://gitbook.cn/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b32a49b2b1063b52995b?utm_source=columnweixinshare&utm_campaign=%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%20MySQL%20%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8', // 分享链接
+                imgUrl: 'https://images.gitbook.cn/Ftb77Lsip5yvRhhPYgDO1aBxNVjl?imageView2/0/h/500/', // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    $.ajax({
+                        url: "/m/mazi/share/event",
+                        type: "POST",
+                        data: JSON.stringify({
+                            shareItemType: '', // activity, article, author, others
+                            shareItemId: '',
+                            shareToken: '',
+                            shareChanel: 'QZone',
+                            shareItemUrl: window.location.href
+                        }),
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data, status) {
+
+                        }
+                    });
+                },
+                cancel: function () {
+                // 用户取消分享后执行的回调函数
+                }
+                });
+            });
+            wx.error(function (res) {
+            });
+        }
+    }
+});</script><script type="text/x-mathjax-config">MathJax.Hub.Config({messageStyle: "none",CommonHTML: {linebreaks: {automatic: true}},tex2jax: {inlineMath: [['$$','$$'],['$','$'], ['\\(','\\)']], processClass: "mathjax",ignoreClass: "no-mathjax"}});</script><script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script>hljs.initHighlightingOnLoad();
+$(function(){
+    var columnId = '5d80aea449b2b1063b52990f';
+})
+wx.ready(function() {
+    var audio = document.getElementById("audio");
+    if (audio) {
+        audioConfig()
+    }
+
+});
+function backToDetail(id){
+    window.location.href=`/m/mazi/comp/column?columnId=${id}`;
+}
+$("#control").click(function() {
+    var audio = document.getElementById("audio");
+    if ($("#control").hasClass("play")) {
+        $("#control").addClass("pause").removeClass("play");
+        audio.play();//开始播放
+    } else {
+        $("#control").addClass("play").removeClass("pause");
+        audio.pause();
+    }
+})
+function getColumnInviteCard(columnId){
+    $('#inviteCardModal').modal('show');
+    var requestUrl = encodeURI(window.location.href);
+    $.ajax({
+        url: "/m/mazi/columnInviteCard/" + columnId,
+        type: "POST",
+        data: JSON.stringify({requestUrl: requestUrl}),
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function (data, status) {
+            if (status == 'success' && data.code == 0) {
+                $('#inviteCardLoader').hide();
+                $('#inviteCardbody').show();
+                $('#inviteCardImg').attr('src', data.imgUrl);
+            } else if (data.code == -1 && data.redirectUrl && data.redirectUrl != '') {
+                $('#inviteCardModal').modal('hide');
+                window.location.href = data.redirectUrl + '?err=' + data.message;
+            } else {
+                $('#inviteCardModal').modal('hide');
+                alert(JSON.stringify(data.message));
+            }
+        }
+    });
+}
+
+function getColumnInviteCardTip(columnId){
+    $('#showInviteCardTipsModal').modal('show');
+}
+function audioConfig() {
+    var audio = document.getElementById("audio");
+    $("#control").addClass("play")
+    audio.loop = true; //歌曲循环
+    console.log('audio.duration', audio.duration)
+    if (audio.duration) {
+        var minute =  parseInt(audio.duration/60) 
+        var second = parseInt(Math.round(audio.duration%60))
+        if (second < 10) second = `0${second}` 
+        if (minute < 10) minute = `0${minute}` 
+        $("#allTime").html(`${minute}′${second}′′`);
+    }
+    audio.addEventListener("loadeddata", //歌曲一经完整的加载完毕( 也可以写成上面提到的那些事件类型)
+    function() {
+        var minute =  parseInt(audio.duration/60) 
+        var second = parseInt(Math.round(audio.duration%60))
+        if (second < 10) second = `0${second}` 
+        if (minute < 10) minute = `0${minute}` 
+        $("#allTime").html(`${minute}′${second}′′`);
+        // 按钮
+    }, false);
+
+    audio.addEventListener("pause",
+        function() { //监听暂停
+            $("#control").addClass("play").removeClass("pause");
+            if (audio.currentTime == audio.duration) {
+                audio.stop();
+                audio.currentTime = 0;
+            }
+        }, false);
+    audio.addEventListener("play",
+        function() { //监听暂停
+            $("#control").addClass("pause").removeClass("play");
+        }, false);
+    audio.addEventListener("ended", function() {
+        alert(0)
+    }, false)
+}</script><!--script.$(document).ready(function () {
+    // 专题提交按钮
+    $('#topicSubmitBtn').click(function () {
+        var comment = $('#topicComment').val();
+        var commentId = $('#topicComments').attr('commentId');
+        var length = getWordLength(comment);
+
+        if (length > 500) {
+            alert('请不要超过500字哟^_^');
+        } else if (comment.length <= 0) {
+            alert('评论不能为空哟^_^');
+        } else {
+            $('#topicSubmitBtn').html('正在提交...');
+            $('#topicSubmitBtn').attr('disabled', true);
+            postTopicComment(comment, commentId);
+        }
+    });
+    // 专题检测输入字数
+    $('#topicComment').keyup(function () {
+        var content = $('#topicComment').val();
+        var length = getWordLength(content);
+        var content = length + '/500';
+        $('#tip').html(content);
+        $('#topicSubmitBtn').attr('disabled', false);
+        if (length > 500) {
+            $('#topicComment').css('color', 'red');
+            $('#tip').css('color', 'red');
+            $('#topicSubmitBtn').attr('disabled', true);
+        } else if (length == 0) {
+            $('#topicSubmitBtn').attr('disabled', true);
+        } else {
+            $('#topicComment').css('color', '');
+            $('#tip').css('color', '');
+            $('#topicSubmitBtn').attr('disabled', false);
+        }
+    });
+    // 专题下拉加载
+    $('.topicComments').dropload({
+        scrollArea: window,
+        domDown: {
+            domClass: 'dropload-down',
+            domRefresh: '<div class="dropload-refresh"></div>',
+            domLoad: '<div class="dropload-load"><span class="loading"></span></div>',
+            domNoData: '<div class="dropload-noData"></div>'
+            //            domRefresh : '<div class="dropload-refresh">加载更多</div>',
+            //            domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中</div>',
+            //            domNoData  : '<div class="dropload-noData">没有更多</div>'
+        },
+        loadDownFn: function (me) {
+            var topicId = $('#topicComments').attr('topicid');
+            var startnum = $('#topicComments').attr('comment-num');
+            var url = '/m/mazi/topicComment/' + topicId + "/" + startnum;
+            $.ajax({
+                url: url,
+                type: 'get',
+                dataType: 'json',
+                success: function (data, status) {
+                    if (data.length === 0) {
+                        //锁住下拉刷新
+                        me.lock();
+                        me.noData();
+                    } else {
+                        var html = insertToHtml(data);
+                        $('#topicComments').append(html);
+                        var commentNum = $('#topicComments').attr('comment-num');
+                        $('#topicComments').attr('comment-num', data.length + parseInt(commentNum));
+                    }
+                    me.resetload();
+                }
+            });
+        }
+    });
+});
+
+/**
+ * 提交评论界面
+ * @param id
+ */
+function redirectSubmitPage(id) {
+    var hasSubscription = $('.payColumn').length
+    if (hasSubscription === 0){
+        $('#topicComments').attr('commentId', id);
+        $('#commentModal').modal('show');
+    }else {
+        $('#showTipsModal').modal('show');
+    }
+
+}
+
+/**
+ * 获取当前评论内容的字数长度
+ * @param s
+ * @returns {*}
+ */
+function getWordLength(s) {
+    if (!s) return 0;
+    var s1 = s.replace(/([^\x00-\xff])/g, ' | ');
+    var s2 = s1.replace(/\s+/ig, ' ');
+    var s2 = s2.replace(/ +/ig, ' ');
+    var s2 = s2.replace(/^ */, '').replace(/ *$/, '');
+    var curLength = s2.split(' ').length;
+    return curLength;
+}
+
+/**
+ * 专题提交评论的方法
+ * @param sendData 发送数据
+ * @param commentId
+ */
+function postTopicComment(sendData, commentId) {
+    var topicId = $('#topicComments').attr('topicid');
+    var requestUrl = encodeURI(window.location.href);
+    var data = {
+        content: sendData,
+        topicId: topicId,
+        requestUrl: requestUrl
+    };
+    if (commentId != 'null') {
+        data.commentId = commentId;
+    }
+
+    var url = '/m/mazi/columnTopicComment';
+    $.ajax({
+        url: url,
+        type: 'POST',
+        data: JSON.stringify(data),
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function (data, status) {
+            if (data.code === 0) {
+                var redirectUrl = window.location.href;
+                var p = redirectUrl.indexOf('#writeCommentDiv');
+                if (p != -1) {
+                    redirectUrl = redirectUrl.substring(0, p) + redirectUrl.substring((p + '#writeCommentDiv'.length), redirectUrl.length);
+                }
+
+                window.location.href = redirectUrl + "#writeCommentDiv";
+                location.reload();
+            } else {
+                alert('服务忙，稍后再试：）');
+                $('#topicSubmitBtn').html('提交');
+                $('#topicSubmitBtn').attr('disabled', false);
+            }
+        }
+    });
+}
+
+/**
+ * 点赞触发的时间
+ * @param that
+ */
+function praiseComment(that) {
+    var hasSubscription = $('.payColumn').length
+    if (hasSubscription != 0) {
+        $('#showTipsModal').modal('show');
+        return
+    }
+    var isPraise = $(that).attr('ispraise');
+    var commentId = $(that).attr('comment-id');
+    var type;
+    if (isPraise === 'false') {
+        //点赞
+        type = 'post';
+    } else {
+        //取消点赞
+        type = 'delete';
+    }
+    var url = '/m/mazi/topicComment/Fav';
+    $.ajax({
+        url: url,
+        type: type,
+        contentType: 'application/json; charset=utf-8',
+        data: JSON.stringify({
+            commentId: commentId
+        }),
+        dataType: 'json',
+        success: function (data, status) {
+            if (data.code == 0 && type == 'post') {
+                //点赞后
+                $(that).attr('ispraise', true);
+                $(that).toggleClass('comment-unpraise comment-praise');
+                var num = parseInt($(that).next().html());
+                $(that).next().html(num + 1);
+            }
+            if (data.code == 0 && type == 'delete') {
+                //取消点赞后
+                $(that).attr('ispraise', false);
+                $(that).toggleClass('comment-unpraise comment-praise');
+                var num = parseInt($(that).next().html());
+                $(that).next().html(num - 1);
+            }
+        }
+    });
+}
+/**
+ * 将返回的加载评论数据转化成Html
+ */
+
+function insertToHtml(data) {
+    var html = '';
+    data.forEach(function (commentObject) {
+        if (commentObject.status == 0) {
+            html += parseObjectToHtml(commentObject);
+        }
+    });
+    return html;
+}
+
+/**
+ * 将Object类型的Comment转化成Html
+ */
+function parseObjectToHtml(commentObject) {
+    if (!commentObject)
+        return;
+    var html = '';
+    html += "<div class='col-xs-12 comment-item-div'>" +
+        "<div class='comment-item'>" +
+        "<div class='col-xs-2' style='padding:10px'>" +
+        "<div class='comment-author-image' >" +
+        "<img class='comment-author-thumb' src='" + commentObject.customerId.thumbImage + "'/>" +
+        "</div>" +
+        "</div>" +
+        "<div class='col-xs-10' style='padding: 0px'>" +
+        "<div class='comment-author-name'>" + commentObject.customerId.customerName + "</div>" +
+        "<div class='comment-content-desc'>" + decodeURIComponent(commentObject.content) + "</div>" +
+        "<div class='comment-footer'>" +
+        "<div class='comment-time'>" + commentObject.dateString + "</div>" +
+        parsePraiseObject(commentObject) +
+        "<div class='comment-like-num'>" + commentObject.favNum + "</div>" +
+        "<div onclick='redirectSubmitPage(\"" + commentObject._id + "\")' class='sub-comment'></div>" +
+        "<div class='sub-comment-num'>" + commentObject.subComment.length + "</div>" +
+        "</div>" +
+        parseSubObjectToHtml(commentObject.subComment) +
+        "</div>" +
+        "</div>" +
+        "</div>";
+    return html;
+}
+
+/**
+ * 将子评论数组转化成相应的HTML
+ */
+function parseSubObjectToHtml(subCommentArray) {
+    var html = '';
+    subCommentArray.forEach(function (subComment) {
+        if (subComment.status === 0) {
+            html +=
+                "<div class='comment-comment'>" +
+                "<span class='sub-comment-name'>" + subComment.customerId.customerName + "</span>" +
+                "<span class='sub-comment-desc'>:" + decodeURIComponent(subComment.content) + "</span>" +
+                "</div>"
+        }
+    });
+    return html;
+}
+
+/**
+ * 将对象转化成点赞显示的html
+ */
+function parsePraiseObject(commentObject) {
+    var html = '';
+    if (!commentObject.isPraise) {
+        html += "<div class='comment-unpraise' ispraise='false' comment-id='" + commentObject._id + "' onclick='praiseComment(this)' ></div>";
+    } else {
+        html += "<div class='comment-praise' ispraise='true' comment-id='" + commentObject._id + "' onclick='praiseComment(this)' ></div>";
+    }
+    return html;
+}
+
+function removeURLParameter(url, parameter) {
+    //prefer to use l.search if you have a location/link object
+    var urlparts = url.split('?');
+    if (urlparts.length >= 2) {
+
+        var prefix = encodeURIComponent(parameter) + '=';
+        var pars = urlparts[1].split(/[&;]/g);
+
+        //reverse iteration as may be destructive
+        for (var i = pars.length; i-- > 0;) {
+            //idiom for string.startsWith
+            if (pars[i].lastIndexOf(prefix, 0) !== -1) {
+                pars.splice(i, 1);
+            }
+        }
+
+        url = urlparts[0] + (pars.length > 0 ? '?' + pars.join('&') : "");
+        return url;
+    } else {
+        return url;
+    }
+}
+function topicFavBtnFun(topicId) {
+
+    $.ajax({
+        url: "/m/mazi/columnTopicFav",
+        type: "POST",
+        data: JSON.stringify({
+            topicId: topicId
+        }),
+        contentType: "application/json; charset=utf-8",
+        success: function (data, status) {
+            if (status === 'success' && data.code === 0) {
+                if (data.message === 'added') {
+                    $('#favLink').css('color', '#c9a063');
+                    $('#favLinkText').html('已赞');
+                } else if (data.message === 'cancelled') {
+                    $('#favLink').css('color', '#777777');
+                    $('#favLinkText').html('点赞');
+                }
+            }
+        }
+    });
+}--><script async src="https://www.googletagmanager.com/gtag/js?id=UA-96766334-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+var userId = '59237e7017e5f267938a788a';
+if(userId && userId != '' && userId != 'do_not_exist'){
+    gtag('set', {'user_id': userId});
+}
+gtag('config', 'UA-96766334-1');
+var gEvent = ''
+if (gEvent && gEvent != '') {
+    gtag('event', gEvent);
+}</script><script>var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?5667c6d502e51ebd8bd9e9be6790fb5d";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();</script><script>var readerCustomerId = '59237e7017e5f267938a788a';
+var readingChatId = '';
+var readingColumnId = '5d80aea449b2b1063b52990f';
+var readingGeekbookId = '';
+function getReferrer() {
+    var referrer = "";
+    try {
+        referrer = window.top.document.referrer
+    } catch (e) {
+        if (window.parent) {
+            try {
+                referrer = window.parent.document.referrer
+            } catch (e2) {
+                referrer = ""
+            }
+        }
+    }
+    if (referrer === "") {
+        referrer = document.referrer
+    }
+    return referrer
+}
+
+var tjSecond = 0;
+var tjRandom = 0;
+window.setInterval(function () {
+    tjSecond++
+}, 1000);
+tjRandom = (new Date()).valueOf();
+window.onbeforeunload = function () {
+    if (
+        readerCustomerId && readerCustomerId != ''
+        &&
+        (
+            (readingChatId && readingChatId != '')||
+            (readingColumnId && readingColumnId !='')||
+            (readingGeekbookId && readingGeekbookId != '')
+        )
+    ) {
+        var params = {};
+        params.tjRd = tjRandom;
+        params.url = location.href;
+        params.time = tjSecond;
+        params.timeIn = Date.parse(new Date()) - (tjSecond * 1000);
+        params.timeOut = Date.parse(new Date());
+        params.title = document.title;
+        params.domain = document.domain;
+        params.sh = window.screen.height;
+        params.sw = window.screen.width;
+        params.language = navigator.language;
+        params.refer = getReferrer();
+        params.readerCustomerId = readerCustomerId;
+        params.readingChatId = readingChatId;
+        params.readingColumnId = readingColumnId;
+        params.readingGeekbookId = readingGeekbookId;
+        $.ajax({
+            url: "/m/track/reading/time",
+            type: "POST",
+            data: JSON.stringify(params),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (data, status) {
+
+            }
+        });
+    }
+
+};</script></html>

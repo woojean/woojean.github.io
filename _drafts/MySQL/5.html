@@ -1,0 +1,782 @@
+<!DOCTYPE html><html lang="en"><title>MySQL 中日志的面试题总结</title><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, user-scalable=no"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover,minimum-scale=1.0, maximum-scale=1"><title>老王/张建的专栏</title><meta name="description" content="GitChat 是一款基于微信平台的知识分享产品。通过这款产品我们希望改变IT知识的学习方式。"><meta name="robots" content="index,follow"><meta name="keywords" content="GitChat,机器学习,大数据,程序员,用户体验,软件开发,知识付费,技术分享"><meta http-equiv="cache-control" content="max-age=0"><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="expires" content="0"><meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"><meta http-equiv="pragma" content="no-cache"><meta name="baidu-site-verification" content="BRkuL6TTfM"><script src="/dist/site/gitchat/js1.js"></script><link href="/dist/css/bootstrap-toggle.min.css" rel="stylesheet"><link href="/dist/site/gitchat/bundle2.css" rel="stylesheet"><link rel="stylesheet" href="/css/gitchat/common/common.css"><script src="/dist/gitchat/js/common.js"></script><link rel="icon" type="image/png" href="https://images.gitbook.cn/FrfR1mB39xM-U6iSAmDCpxWVxvoa?imageslim" sizes="16x16"><link rel="icon" type="image/png" href="https://images.gitbook.cn/FrfR1mB39xM-U6iSAmDCpxWVxvoa?imageslim" sizes="32x32"></head><meta name="viewport" content="width=device-width, user-scalable=yes"><link href="/dist/gitchat/css/rpi.css" rel="stylesheet"><link href="/dist/gitchat/css/katex.min.css" rel="stylesheet"><script src="/dist/site/gitchat/js3.js"></script><script src="/dist/gitchat/js/columnRpi.js"></script><link href="/dist/site/gitchat/bundle1.css" rel="stylesheet"><link href="/css/gitchat/columnTopicDetail.css" rel="stylesheet"><link href="/dist/gitchat/css/columnListTemplate.css" rel="stylesheet"><link href="/dist/gitchat/css/readerGroupTemplate.css" rel="stylesheet"><body><input style="display:none;" id="refreshed" value="no"><script>var e = document.getElementById("refreshed");
+if (e.value == "no") e.value = "yes";
+else {
+    e.value = "no";
+    location.reload();
+}</script><link rel="stylesheet" href="/css/gitchat/appBanner.css"><div class="app_banner"><div class="inner_banner"><img src="https://images.gitbook.cn/FiemqiGW5K9uxM-cSQWlrpiRP8Ua?imageslim" class="app_bg"><img id="downApp" src="https://images.gitbook.cn/Fg1FfEczUbS2nF4p2LT_erPD6d9I" class="app_btn"><span id="closeApp" class="app_close">×</span></div></div><script>var showStatus = true;
+$('#downApp').on('click',function(){
+    window.location.href = 'http://app.gitbook.cn/page/download?M_courcebanner';
+    return false;
+})
+$('#closeApp').on('click',function(){
+    $('.app_banner').fadeOut();
+    showStatus = false;
+    return false;
+})
+window.onscroll=function(){
+    if(showStatus && $(document).scrollTop()>$('.app_banner').height()){
+        $('.app_banner').fadeIn();
+    }else{
+        $('.app_banner').fadeOut();
+    }
+}</script><progress value="0" id="progressBar"><div class="progress-container"><span class="progress-bar"></span></div></progress><div id="topicContainer" class="topicContainer"><div class="no-mathjax topicTitle">MySQL 中日志的面试题总结</div><article id="articleDiv" style="overflow: hidden;padding-bottom:15px;text-align: justify;"><div class="mazi-article-content dont-break-out"><h3 id="mysql">MySQL 有哪些重要的日志文件？</h3>
+<p>MySQL 中的重要日志分为以下几个：
+<strong>① 错误日志</strong>：用来记录 MySQL 服务器运行过程中的错误信息，比如，无法加载 MySQL 数据库的数据文件，或权限不正确等都会被记录在此，还有复制环境下，从服务器进程的信息也会被记录进错误日志。默认情况下，错误日志是开启的，且无法被禁止。默认情况下，错误日志是存储在数据库的数据文件目录中，名称为 hostname.err，其中 hostname 为服务器主机名。在 MySQL 5.5.7 之前，数据库管理员可以删除很长时间之前的错误日志，以节省服务器上的硬盘空间， MySQL 5.5.7 之后，服务器将关闭此项功能，只能使用重命名原来的错误日志文件，手动冲洗日志创建一个新的，命令为：</p>
+<blockquote>
+  <p>mv hostname.err  hostname.err.old
+  mysqladmin flush-logs</p>
+</blockquote>
+<p><strong>② 查询日志</strong>：查询日志在 MySQL 中被称为 general log(通用日志)，查询日志里的内容不要被“查询日志”误导，认为里面只存储 select 语句，其实不然，查询日志里面记录了数据库执行的所有命令，不管语句是否正确，都会被记录，具体原因如下:</p>
+<ul>
+<li>insert 查询为了避免数据冲突，如果此前插入过数据，当前插入的数据如果跟主键或唯一键的数据重复那肯定会报错；</li>
+<li>update 时也会查询因为更新的时候很可能会更新某一块数据；</li>
+<li>delete 查询，只删除符合条件的数据；</li>
+</ul>
+<p>因此都会产生日志，在并发操作非常多的场景下，查询信息会非常多，那么如果都记录下来会导致 IO 非常大，影响 MySQL 性能，因此如果不是在调试环境下，是不建议开启查询日志功能的。</p>
+<p>查询日志的开启有助于帮助我们分析哪些语句执行密集，执行密集的 select 语句对应的数据是否能够被缓存，同时也可以帮助我们分析问题，所以，我们可以根据自己的实际情况来决定是否开启查询日志。</p>
+<p>查询日志模式是关闭的，可以通过以下命令开启查询日志：</p>
+<blockquote>
+  <p>set global general<em>log=1
+set global log</em>output='table';</p>
+</blockquote>
+<p>general_log=1 为开启查询日志，0 为关闭查询日志，这个设置命令即时生效，不用重启 MySQL 服务器。</p>
+<p><strong>③ 慢日志</strong>：慢查询会导致 CPU、IOPS、内存消耗过高，当数据库遇到性能瓶颈时，大部分时间都是由于慢查询导致的。开启慢查询日志，可以让 MySQL 记录下查询超过指定时间的语句，之后运维人员通过定位分析，能够很好的优化数据库性能。默认情况下，慢查询日志是不开启的，只有手动开启了，慢查询才会被记录到慢查询日志中。使用如下命令记录当前数据库的慢查询语句：</p>
+<blockquote>
+  <p>set global slow<em>query</em>log='ON';</p>
+</blockquote>
+<p>使用 set global slow<em>query</em>log='ON' 开启慢查询日志，只是对当前数据库有效，如果 MySQL 数据库重启后就会失效。所以如果要永久生效，就要修改配置文件 my.cnf，设置 slow<em>query</em>log=1 并重启 MySQL 服务器。</p>
+<p><strong>④ redo log（重做日志）</strong>：为了最大程度的避免数据写入时，因为 IO 瓶颈造成的性能问题，MySQL 采用了这样一种缓存机制，先将数据写入内存中，再批量把内存中的数据统一刷回磁盘。为了避免将数据刷回磁盘过程中，因为掉电或系统故障带来的数据丢失问题，InnoDB 采用 redo log 来解决此问题。</p>
+<p><strong>⑤ undo log（回滚日志）</strong>：用于存储日志被修改前的值，从而保证如果修改出现异常，可以使用 undo log 日志来实现回滚操作。
+undo log 和 redo log 记录物理日志不一样，它是逻辑日志，可以认为当 delete 一条记录时，undo log 中会记录一条对应的 insert 记录，反之亦然，当 update 一条记录时，它记录一条对应相反的 update 记录，当执行 rollback 时，就可以从 undo log 中的逻辑记录读取到相应的内容并进行回滚。undo log 默认存放在共享表空间中，在 ySQL 5.6 中，undo log 的存放位置还可以通过变量 innodb<em>undo</em>directory 来自定义存放目录，默认值为“.”表示 datadir 目录。</p>
+<p><strong>⑥ bin log（二进制日志）</strong>：是一个二进制文件，主要记录所有数据库表结构变更，比如，CREATE、ALTER TABLE 等，以及表数据修改，比如，INSERT、UPDATE、DELETE 的所有操作，bin log 中记录了对 MySQL 数据库执行更改的所有操作，并且记录了语句发生时间、执行时长、操作数据等其它额外信息，但是它不记录 SELECT、SHOW 等那些不修改数据的 SQL 语句。</p>
+<p>binlog 的作用如下：</p>
+<ul>
+<li>恢复（recovery）：某些数据的恢复需要二进制日志。比如，在一个数据库全备文件恢复后，用户可以通过二进制日志进行 point-in-time 的恢复；</li>
+<li>复制（replication）：其原理与恢复类似，通过复制和执行二进制日志使一台远程的MySQL数据库（一般称为 slave 或者 standby）与一台 MySQL 数据库（一般称为 master 或者 primary）进行实时同步；</li>
+<li>审计（audit）：用户可以通过二进制日志中的信息来进行审计，判断是否有对数据库进行注入攻击。</li>
+</ul>
+<p>除了上面介绍的几个作用外，binlog 对于事务存储引擎的崩溃恢复也有非常重要的作用，在开启 binlog 的情况下，为了保证 binlog 与 redo 的一致性，MySQL 将采用事务的两阶段提交协议。当 MySQL 系统发生崩溃时，事务在存储引擎内部的状态可能为 prepared（准备状态）和 commit（提交状态）两种，对于 prepared 状态的事务，是进行提交操作还是进行回滚操作，这时需要参考 binlog，如果事务在 binlog 中存在，那么将其提交；如果不在 binlog 中存在，那么将其回滚，这样就保证了数据在主库和从库之间的一致性。</p>
+<p>binlog 默认是关闭状态，可以在 MySQL 配置文件（my.cnf）中通过配置参数 log-bin = [base-name] 开启记录 binlog 日志，如果不指定 base-name，则默认二进制日志文件名为主机名，并以自增的数字作为后缀，比如：mysql-bin.000001，所在目录为数据库所在目录（datadir）。</p>
+<p>通过以下命令来查询 binlog 是否开启：</p>
+<blockquote>
+  <p>show variables like 'log_%';</p>
+</blockquote>
+<p><img src="https://images.gitbook.cn/FgEYSjP2dZUfV5KmKHmQUbUqpbqS" alt="avatar" /></p>
+<p>binlog 格式分为: STATEMENT、ROW 和 MIXED 三种：</p>
+<ul>
+<li><p>STATEMENT 格式的 binlog 记录的是数据库上执行的原生 SQL 语句。这种格式的优点是简单，简单地记录和执行这些语句，能够让主备保持同步，在主服务器上执行的 SQL 语句，在从服务器上执行同样的语句。另一个好处是二进制日志里的时间更加紧凑，所以相对而言，基于语句的复制模式不会使用太多带宽，同时也节约磁盘空间。并且通过 mysqlbinlog 工具容易读懂其中的内容。缺点就是同一条 SQL 在主库和从库上执行的时间可能稍微或很大不相同，因此在传输的二进制日志中，除了查询语句，还包括了一些元数据信息，如当前的时间戳。即便如此，还存在着一些无法被正确复制的 SQL。比如，使用 INSERT INTO TB1 VALUE(CUURENT_DATE()) 这一条使用函数的语句插入的数据复制到当前从服务器上来就会发生变化，存储过程和触发器在使用基于语句的复制模式时也可能存在问题；另外一个问题就是基于语句的复制必须是串行化的，比如：InnoDB 的 next-key 锁等，并不是所有的存储引擎都支持基于语句的复制；</p></li>
+<li><p>ROW 格式是从 MySQL 5.1 开始支持基于行的复制，也就是基于数据的复制，基于行的更改。这种方式会将实际数据记录在二进制日志中，它有其自身的一些优点和缺点，最大的好处是可以正确地复制每一行数据，一些语句可以被更加有效地复制，另外就是几乎没有基于行的复制模式无法处理的场景，对于所有的 SQL 构造、触发器、存储过程等都能正确执行；它的缺点就是二进制日志可能会很大，而且不直观，所以，你不能使用 mysqlbinlog 来查看二进制日志，也无法通过看二进制日志判断当前执行到那一条 SQL 语句。现在对于 ROW 格式的二进制日志基本是标配了，主要是因为它的优势远远大于缺点，并且由于 ROW 格式记录行数据，所以可以基于这种模式做一些 DBA 工具，比如数据恢复，不同数据库之间数据同步等；</p></li>
+<li><p>MIXED 也是 MySQL 默认使用的二进制日志记录方式，但 MIXED 格式默认采用基于语句的复制，一旦发现基于语句的无法精确的复制时，就会采用基于行的复制。比如用到 UUID()、USER()、CURRENT<em>USER()、ROW</em>COUNT() 等无法确定的函数。</p></li>
+</ul>
+<h3 id="redologbinlog">redo log 和 binlog 有什么区别？</h3>
+<p>redo log（重做日志）和 binlog（归档日志）都是 MySQL 的重要的日志，它们的区别如下：</p>
+<ul>
+<li>redo log 是物理日志，记录的是“在某个数据页上做了什么修改”。</li>
+<li>binlog 是逻辑日志，记录的是这个语句的原始逻辑，比如“给 ID=2 这一行的 c 字段加 1 ”。</li>
+<li>redo log 是 InnoDB 引擎特有的；binlog 是 MySQL 的 Server 层实现的，所有引擎都可以使用。</li>
+<li>redo log 是循环写的，空间固定会用完；binlog 是可以追加写入的。“追加写”是指 binlog 文件写到一定大小后会切换到下一个，并不会覆盖以前的日志。</li>
+</ul>
+<p>最开始 MySQL 里并没有 InnoDB 引擎，MySQL 自带的引擎是 MyISAM，但是 MyISAM 没有 crash-safe 的能力，binlog 日志只能用于归档。而 InnoDB 是另一个公司以插件形式引入 MySQL 的，既然只依靠 binlog 是没有 crash-safe 能力的，所以 InnoDB 使用另外一套日志系统，也就是 redo log 来实现 crash-safe 能力。</p>
+<h3 id="crashsafe">什么是 crash-safe？</h3>
+<p>crash-safe 是指发生宕机等意外情况下，服务器重启后数据依然不会丢失的情况。</p>
+<h3 id="">什么是脏页和干净页？</h3>
+<p>MySQL 为了操作的性能优化，会把数据更新先放入内存中，之后再统一更新到磁盘。当内存数据和磁盘数据内容不一致的时候，我们称这个内存页为脏页；内存数据写到磁盘后，内存的数据和磁盘上的内容就一致了，我们称为“干净页”。</p>
+<h3 id="mysqlflush">什么情况下会引发 MySQL 刷脏页（flush）的操作？</h3>
+<ul>
+<li>内存写满了，这个时候就会引发 flush 操作，对应到 InnoDB 就是 redo log 写满了；</li>
+<li>系统的内存不足了，当需要新的内存页的时候，就会淘汰一些内存页，如果淘汰的是脏页这个时候就会触发 flush 操作；</li>
+<li>系统空闲的时候，MySQL 会同步内存中的数据到磁盘也会触发 flush 操作；</li>
+<li>MySQL 服务关闭的时候也会刷脏页，触发 flush 操作。</li>
+</ul>
+<h3 id="mysql-1">MySQL 刷脏页的速度很慢可能是什么原因？</h3>
+<p>在 MySQL 中单独刷一个脏页的速度是很快的，如果发现刷脏页的速度很慢，说明触发了 MySQL 刷脏页的“连坐”机制，MySQL 的“连坐”机制是指当 MySQL 刷脏页的时候如果发现相邻的数据页也是脏页也会一起刷掉，而这个动作可以一直蔓延下去，这就是导致 MySQL 刷脏页慢的原因了。</p>
+<h3 id="mysql-2">如何控制 MySQL 只刷新当前脏页？</h3>
+<p>在 InnoDB 中设置 innodb<em>flush</em>neighbors 这个参数的值为 0，来规定 MySQL 只刷当前脏页，MySQL 8 这个值默认是 0。</p>
+<h3 id="mysqlwal">MySQL 的 WAL 技术是解决什么问题的？</h3>
+<p>A.防止误删除，找回数据用的
+B.容灾恢复，为了还原异常数据用的
+C.事务处理，为了数据库的稳定性
+D.为了降低 IO 成本
+答：D
+题目解析：WAL 技术的全称是 Write Ahead Logging（中文：预写式日志），是先写日志，再写磁盘的方式，因为每次更新都写磁盘的话 IO 成本很高，所以才有了 WAL 技术。</p>
+<h3 id="mysql-3">为什么有时候会感觉 MySQL 偶尔卡一下？</h3>
+<p>如果偶尔感觉 MySQL 卡一下，可能是 MySQL 正在刷脏页，正在把内存中的更新操作刷到磁盘中。</p>
+<h3 id="redologbinlog-1">redo log 和 binlog 是怎么关联的?</h3>
+<p>它们有一个共同的数据字段，叫 XID。崩溃恢复的时候，会按顺序扫描 redo log：</p>
+<ul>
+<li>如果碰到既有 prepare、又有 commit 的 redo log，就直接提交；</li>
+<li>如果碰到只有 parepare、而没有 commit 的 redo log，就拿着 XID 去 binlog 找对应的事务。</li>
+</ul>
+<h3 id="mysqlbinlog">MySQL 怎么知道 binlog 是完整的?</h3>
+<ul>
+<li>statement 格式的 binlog，完整的标识是最后有 COMMIT 关键字。</li>
+<li>row 格式的 binlog，完整的标识是最后会有一个 XID event 关键字。</li>
+</ul>
+<h3 id="mysqlbinlogredolog">MySQL 中可不可以只要 binlog，不要 redo log？</h3>
+<p>不可以，binlog 没有崩溃恢复的能力。</p>
+<h3 id="mysqlredologbinlog">MySQL 中可不可以只要 redo log，不要 binlog？</h3>
+<p>不可以，原因有以下两个：</p>
+<ul>
+<li>redo log 是循环写不能保证所有的历史数据，这些历史数据只能在 binlog 中找到；</li>
+<li>binlog 是高可用的基础，高可用的实现原理就是 binlog 复制。</li>
+</ul>
+<h3 id="binlogcacheredologbuffer">为什么 binlog cache 是每个线程自己维护的，而 redo log buffer 是全局共用的？</h3>
+<p>因为 binlog 是不能“被打断的”，一个事务的 binlog 必须连续写，因此要整个事务完成后，再一起写到文件里。而 redo log 并没有这个要求，中间有生成的日志可以写到 redo log buffer 中，redo log buffer 中的内容还能“搭便车”，其他事务提交的时候可以被一起写到磁盘中。</p>
+<h3 id="crashredolog">事务执行期间，还未提交，如果发生 crash，redo log 丢失，会导致主备不一致呢？</h3>
+<p>不会，因为这时候 binlog 也还在 binlog cache 里，没发给备库，crash 以后 redo log 和 binlog 都没有了，从业务角度看这个事务也没有提交，所以数据是一致的。</p>
+<h3 id="mysqlio">在 MySQL 中用什么机制来优化随机读/写磁盘对 IO 的消耗？</h3>
+<p>redo log 是用来节省随机写磁盘的 IO 消耗，而 change buffer 主要是节省随机读磁盘的 IO 消耗。redo log 会把 MySQL 的更新操作先记录到内存中，之后再统一更新到磁盘，而 change buffer 也是把关键查询数据先加载到内存中，以便优化 MySQL 的查询。</p>
+<h3 id="-1">以下说法错误的是？</h3>
+<p>A.redo log 是 InnoDB 引擎特有的，它的固定大小的
+B.redo log 日志是不全的，只有最新的一些日志，这和它的内存大小有关
+C.redo log 可以保证数据库异常重启之后，数据不丢失
+D.binlog 是 MySQL 自带的日志，它能保证数据库异常重启之后，数据不丢失
+答：D
+题目解析：binlog 是 MySQL 自带的日志，但它并不能保证数据库异常重启之后数据不丢失。</p>
+<h3 id="-2">以下说法正确的是？</h3>
+<p>A.redo log 日志是追加写的，后面的日志并不会覆盖前面的日志
+B.binlog 日志是追加写的，后面的日志并不会覆盖前面的日志
+C.redo log 和 binlog 日志都是追加写的，后面的日志并不会覆盖前面的日志
+D.以上说法都正确
+答：B
+题目解析：binlog 日志是追加写的，后面的日志并不会覆盖前面的日志，redo log 日志是固定大小的，后面的日志会覆盖前面的日志。</p>
+<h3 id="mysql-4">有没有办法把 MySQL 的数据恢复到过去某个指定的时间节点？怎么恢复？</h3>
+<p>可以恢复，只要你备份了这段时间的所有 binlog，同时做了全量数据库的定期备份，比如，一天一备，或者三天一备，这取决于你们的备份策略，这个时候你就可以把之前备份的数据库先还原到测试库，从备份的时间点开始，将备份的 binlog 依次取出来，重放到你要恢复数据的那个时刻，这个时候就完成了数据到指定节点的恢复。比如，今天早上 9 点的时候，你想把数据恢复成今天早上 6:00:00 的状态，这个时候你可以先取出今天凌晨（00:01:59）备份的数据库文件，还原到测试库，再从 binlog 文件中依次取出 00:01:59 之后的操作信息，重放到 6:00:00 这个时刻，这就完成了数据库的还原。</p></div></article><div id="writeCommentDiv" style="margin-top: 10px;display:none;"><div class="col-xs-12 comment-btn-div"><button onclick="redirectSubmitPage(&quot;null&quot;,&quot;true&quot;)" class="mazi-comment-btn">写评论</button></div></div><div style="display:none;" class="topicComments"><div id="topicComments" topicid="5d80b35b49b2b1063b52995c" comment-num="0" columnId="5d80aea449b2b1063b52990f"></div></div><div id="hasSubscription"></div><div id="commentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 style="text-align:center;margin:0;">文章评论</h4></div><div style="padding-bottom:10;" class="modal-body"><div class="row"><div style="text-align:right" class="col-xs-12"><textarea id="topicComment" rows="7" style="width:100%;border:1px solid #cccccc;-webkit-appearance:none;"></textarea><span id="tip">0/200</span></div></div></div><div class="modal-footer"><button id="topicSubmitBtn" disabled="disabled" style="width:100%" class="btn btn-primary">提交</button></div></div></div></div><script>function showTip() {
+    $('#pdfTips').modal('show')
+}
+function openPdf(){
+    window.location.href = '';
+}</script><div class="split_line"></div><div class="topic_item"><div class="topic-cell"><div class="wrapper"><div class="userInfo"><div class="avatorWrapper"><img src="https://images.gitbook.cn/663e5710-b748-11e8-b809-d915783fbfe8?imageView2/2/h/50" width="20" height="20" class="header_img"></div><div class="feedInfo"><div class="userName">torres</div></div><div class="feedTime">2019-09-28 13:50</div></div><div class="feedContent"><div class="talkContent"><div class="text talk_detail"><span style="display: block;overflow: hidden" class="topic_text">赞，深度好文</span><div class="clearfix"></div></div></div></div></div></div><div class="topic-cell"><div class="wrapper"><div class="userInfo"><div class="avatorWrapper"><img src="https://images.gitbook.cn/98b860c0-952c-11e8-b8b3-690dce6077c1?imageView2/2/h/50" width="20" height="20" class="header_img"><img src="http://images.gitbook.cn/cvip.png" height="30" width="30" class="vIcon"></div><div class="feedInfo"><div class="userName">老王</div></div><div class="feedTime">2019-09-26 23:19</div></div><div class="feedContent"><div class="qaContent"><div class="answerText">group by 在满足条件的情况下会走索引，比如，select tid from t where tid&amp;gt;10 group by tid，当 where 和 group by 都是同样的字段时，就会走索引。</div><div class="text question_view"><span class="questioner">______Wm提问：</span><span>请问group by走索引吗</span></div></div><div class="comment"><ul><li class="contentWrapper"><div><span class="userName">______Wm</span><div class="commentContent">谢谢</div></div></li></ul></div></div></div></div></div><a style="" href="/chatGroup.html#/groups/5b55849bc28306099b47ae7d" data-toggle="modal" data-target="" class="reader_btn">查看更多</a><div class="detail_bottom"><div class="detail_bottom_menu"><a href="/m/mazi/comp/column?columnId=5d80aea449b2b1063b52990f&amp;tag=2#catalog" class="detail_catalog_2"><img src="https://images.gitbook.cn/FoNYstI_LM90qvSH1CcqIPRPXi93"></a><a href="/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b32a49b2b1063b52995b" class="detail_bottom_left"><img src="https://images.gitbook.cn/FtV6I5EsuprXLmIzsQ89j-7QfsNa" class="arrow_image"></a><a href="/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b3ec49b2b1063b52995e" class="detail_bottom_right"><img src="https://images.gitbook.cn/FuV9gG3eLhk3WBTFebaE7Y3fo7ns" class="arrow_image"></a><a href="/chatGroup.html#/groups/5b55849bc28306099b47ae7d" style="" class="detail_readers"><img src="https://images.gitbook.cn/FjM1UjGTLGkqf-VqNqnGWuQUZo-H"></a></div></div></div><div id="inviteCardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" style="margin:0 auto;padding:10px 10px 0;" class="modal-dialog"><div style="background:#fcfcfc" class="modal-content"><div style="text-align:center;padding:10px;background:#fff;border:none;" class="modal-header"><h4 id="inviteCardModalLabel" style="font-size:16px;font-weight:700;color: #3f3f3f;text-align: center;" class="modal-title">长按图片分享或保存</h4></div><div style="padding:0;line-height:30px;overflow:auto;-webkit-overflow-scrolling: touch;" class="modal-body"><div id="inviteCardLoader" style="text-align:center;height:200px;"><div style="margin-top:140px;"><img style="width:50px;" src="https://images.gitbook.cn/loading_spinner.gif"></div><div style="color:#ccc;">正在生成图片...</div></div><div id="inviteCardbody" style="text-align:center;display:none;height:320px;min-height:320px;"><img id="inviteCardImg" style="width:100%"></div></div><div style="text-align:center;padding:10px;background:rgba(255,255,255,0.9);" class="modal-footer"><div style="font-size:12px;color:#333;">用专属海报每邀请一位好友购买，即可获得原价的 1/4 作为奖励。上不封顶，立即提现。您可以在「我-我的邀请奖励」中查看邀请详情并进行提现。</div><a style="font-size:14px;color:#FF700A;background:#FDF2E0;border-radius:20px;margin:10px auto 0;display:inline-block;text-align:center;padding:6px 15px;" href="/m/mazi/statistic/invites/column/5d80aea449b2b1063b52990f">查看分享达人排行        </a></div></div><div style="background:rgba(0,0,0,0);text-align:center;" class="modal-colse"><img data-dismiss="modal" aria-label="Close" style="width:50px;" src="https://images.gitbook.cn/FvFDp80XHoLkvq8pNhBm3CWUWW4r"></div></div></div><div id="showInviteCardTipsModal" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 style="text-align:center;" class="modal-title">提 示</h4></div><div style="padding:10px 20px 5px 20px;line-height:30px;" class="modal-body"><div style="text-align:center;">成功购买本专栏，即可获得专属返利海报！</div></div><div style="text-align:center;" class="modal-footer"><div data-dismiss="modal" class="btn btn-primary">知道了</div></div></div></div></div><div id="showTipsModal" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div style="text-align:center;" class="modal-header"><h4 class="modal-title">提 示</h4></div><div style="padding:10px 20px 5px 20px;line-height:30px;" class="modal-body"><div style="text-align:center;">快去预订吧！</div></div><div style="text-align:center;" class="modal-footer"><div data-dismiss="modal" class="btn btn-primary">知道了</div></div></div></div></div><div id="showVIPBuyModal" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div class="modal-header"><h4 style="text-align:center;" class="modal-title">提 示</h4></div><div style="padding:10px 20px 5px 20px;line-height:30px;" class="modal-body"><div id="showVIPBuyText" style="text-align:center;"></div></div><div style="margin-top: 10px;text-align:center;" class="modal-footer"><a href="/m/mazi/comp/column?columnId=5d80aea449b2b1063b52990f" class="btn btn-primary">知道了</a></div></div></div></div><div id="showNotFinishedTipsModal" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div style="text-align:center;" class="modal-header"><h4 class="modal-title">提 示</h4></div><div style="padding:10px 20px 5px 20px;line-height:30px;" class="modal-body"><div style="text-align:center;">作者正在写作中，请耐心等待！</div></div><div style="text-align:center;" class="modal-footer"><div data-dismiss="modal" class="btn btn-primary">知道了</div></div></div></div></div><div id="showNeedBuyTipsModal" style="margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" data-dismiss="modal" class="modal-dialog"><div class="modal-content"><div style="text-align:center;" class="modal-header"><h4 class="modal-title">提 示</h4></div><div style="padding:10px 20px 5px 20px;line-height:30px;" class="modal-body"><div style="text-align:center;">购买本专栏，即可继续阅读文章！</div></div><div style="text-align:center;" class="modal-footer"><div data-dismiss="modal" class="btn btn-primary">知道了</div></div></div></div></div><div id="appClick" style="display:none" data-toggle="modal" data-target="#appModal"></div><div id="appModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade"><div role="document" class="modal-dialog"><div class="modal-content"><div class="modal-body"><img src="https://images.gitbook.cn/FmmfLbTAH8_vkKHDDvzCOXFGxTa_"><div class="app_btns"><a href="http://app.gitbook.cn/page/download" class="download_btn"></a><div data-dismiss="modal" class="close_btn">果断拒绝</div></div></div></div></div></div></body><script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script><script>$.ajax ({
+    url: "/weixin/signature",
+    type: "POST",
+    data: JSON.stringify({url:window.location.href}),
+    dataType: "json",
+    contentType: "application/json; charset=utf-8",
+    success: function(data,status){
+        if(data.code == 0){
+            wx.config({
+            debug: false,
+            appId: 'wx7ba47eadabd9ddde',
+            timestamp: data.timestamp,
+            nonceStr: data.nonce,
+            signature: data.sha1,
+            jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone','chooseWXPay']
+            });
+            wx.ready(function(){
+                //alert('config check successfully.');
+                wx.onMenuShareTimeline({
+                title: 'MySQL 中日志的面试题总结 | 老王/张建', // 分享标题
+                link: 'https://gitbook.cn/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b35b49b2b1063b52995c?utm_source=columnweixinshare&utm_campaign=%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%20MySQL%20%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8', // 分享链接
+                imgUrl: 'https://images.gitbook.cn/Ftb77Lsip5yvRhhPYgDO1aBxNVjl?imageView2/0/h/500/', // 分享图标
+                success: function () {
+                // 用户确认分享后执行的回调函数
+                    $.ajax({
+                        url: "/m/mazi/share/event",
+                        type: "POST",
+                        data: JSON.stringify({
+                            shareItemType:'', // activity, article, author, others
+                            shareItemId:'',
+                            shareToken:'',
+                            shareChanel:'weixinTimeline',
+                            shareItemUrl:window.location.href
+                        }),
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data, status) {
+
+                        }
+                    });
+                },
+                cancel: function () {
+                // 用户取消分享后执行的回调函数
+                }
+                });
+                wx.onMenuShareAppMessage({
+                title: 'MySQL 中日志的面试题总结 | 老王/张建', // 分享标题
+                desc: '获得高薪的关键：就是高效的准备面试', // 分享描述
+                link: 'https://gitbook.cn/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b35b49b2b1063b52995c?utm_source=columnweixinshare&utm_campaign=%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%20MySQL%20%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8', // 分享链接
+                imgUrl: 'https://images.gitbook.cn/Ftb77Lsip5yvRhhPYgDO1aBxNVjl?imageView2/0/h/500/', // 分享图标
+                type: 'link', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    $.ajax({
+                        url: "/m/mazi/share/event",
+                        type: "POST",
+                        data: JSON.stringify({
+                            shareItemType: '', // activity, article, author, others
+                            shareItemId: '',
+                            shareToken: '',
+                            shareChanel: 'weixinMessage',
+                            shareItemUrl: window.location.href
+                        }),
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data, status) {
+
+                        }
+                    });
+                },
+                cancel: function () {
+                // 用户取消分享后执行的回调函数
+                }
+                });
+                wx.onMenuShareQQ({
+                title: 'MySQL 中日志的面试题总结 | 老王/张建', // 分享标题
+                desc: '获得高薪的关键：就是高效的准备面试', // 分享描述
+                link: 'https://gitbook.cn/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b35b49b2b1063b52995c?utm_source=columnweixinshare&utm_campaign=%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%20MySQL%20%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8', // 分享链接
+                imgUrl: 'https://images.gitbook.cn/Ftb77Lsip5yvRhhPYgDO1aBxNVjl?imageView2/0/h/500/', // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    $.ajax({
+                        url: "/m/mazi/share/event",
+                        type: "POST",
+                        data: JSON.stringify({
+                            shareItemType: '', // activity, article, author, others
+                            shareItemId: '',
+                            shareToken: '',
+                            shareChanel: 'qq',
+                            shareItemUrl: window.location.href
+                        }),
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data, status) {
+
+                        }
+                    });
+                },
+                cancel: function () {
+                // 用户取消分享后执行的回调函数
+                }
+                });
+                wx.onMenuShareWeibo({
+                title: 'MySQL 中日志的面试题总结 | 老王/张建', // 分享标题
+                desc: '获得高薪的关键：就是高效的准备面试', // 分享描述
+                link: 'https://gitbook.cn/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b35b49b2b1063b52995c?utm_source=columnweixinshare&utm_campaign=%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%20MySQL%20%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8', // 分享链接
+                imgUrl: 'https://images.gitbook.cn/Ftb77Lsip5yvRhhPYgDO1aBxNVjl?imageView2/0/h/500/', // 分享图标
+                success: function () {
+                // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                // 用户取消分享后执行的回调函数
+                }
+                });
+                wx.onMenuShareQZone({
+                title: 'MySQL 中日志的面试题总结 | 老王/张建', // 分享标题
+                desc: '获得高薪的关键：就是高效的准备面试', // 分享描述
+                link: 'https://gitbook.cn/m/mazi/columns/5d80aea449b2b1063b52990f/topics/5d80b35b49b2b1063b52995c?utm_source=columnweixinshare&utm_campaign=%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%20MySQL%20%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8', // 分享链接
+                imgUrl: 'https://images.gitbook.cn/Ftb77Lsip5yvRhhPYgDO1aBxNVjl?imageView2/0/h/500/', // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    $.ajax({
+                        url: "/m/mazi/share/event",
+                        type: "POST",
+                        data: JSON.stringify({
+                            shareItemType: '', // activity, article, author, others
+                            shareItemId: '',
+                            shareToken: '',
+                            shareChanel: 'QZone',
+                            shareItemUrl: window.location.href
+                        }),
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data, status) {
+
+                        }
+                    });
+                },
+                cancel: function () {
+                // 用户取消分享后执行的回调函数
+                }
+                });
+            });
+            wx.error(function (res) {
+            });
+        }
+    }
+});</script><script type="text/x-mathjax-config">MathJax.Hub.Config({messageStyle: "none",CommonHTML: {linebreaks: {automatic: true}},tex2jax: {inlineMath: [['$$','$$'],['$','$'], ['\\(','\\)']], processClass: "mathjax",ignoreClass: "no-mathjax"}});</script><script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script><script>hljs.initHighlightingOnLoad();
+$(function(){
+    var columnId = '5d80aea449b2b1063b52990f';
+})
+wx.ready(function() {
+    var audio = document.getElementById("audio");
+    if (audio) {
+        audioConfig()
+    }
+
+});
+function backToDetail(id){
+    window.location.href=`/m/mazi/comp/column?columnId=${id}`;
+}
+$("#control").click(function() {
+    var audio = document.getElementById("audio");
+    if ($("#control").hasClass("play")) {
+        $("#control").addClass("pause").removeClass("play");
+        audio.play();//开始播放
+    } else {
+        $("#control").addClass("play").removeClass("pause");
+        audio.pause();
+    }
+})
+function getColumnInviteCard(columnId){
+    $('#inviteCardModal').modal('show');
+    var requestUrl = encodeURI(window.location.href);
+    $.ajax({
+        url: "/m/mazi/columnInviteCard/" + columnId,
+        type: "POST",
+        data: JSON.stringify({requestUrl: requestUrl}),
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function (data, status) {
+            if (status == 'success' && data.code == 0) {
+                $('#inviteCardLoader').hide();
+                $('#inviteCardbody').show();
+                $('#inviteCardImg').attr('src', data.imgUrl);
+            } else if (data.code == -1 && data.redirectUrl && data.redirectUrl != '') {
+                $('#inviteCardModal').modal('hide');
+                window.location.href = data.redirectUrl + '?err=' + data.message;
+            } else {
+                $('#inviteCardModal').modal('hide');
+                alert(JSON.stringify(data.message));
+            }
+        }
+    });
+}
+
+function getColumnInviteCardTip(columnId){
+    $('#showInviteCardTipsModal').modal('show');
+}
+function audioConfig() {
+    var audio = document.getElementById("audio");
+    $("#control").addClass("play")
+    audio.loop = true; //歌曲循环
+    console.log('audio.duration', audio.duration)
+    if (audio.duration) {
+        var minute =  parseInt(audio.duration/60) 
+        var second = parseInt(Math.round(audio.duration%60))
+        if (second < 10) second = `0${second}` 
+        if (minute < 10) minute = `0${minute}` 
+        $("#allTime").html(`${minute}′${second}′′`);
+    }
+    audio.addEventListener("loadeddata", //歌曲一经完整的加载完毕( 也可以写成上面提到的那些事件类型)
+    function() {
+        var minute =  parseInt(audio.duration/60) 
+        var second = parseInt(Math.round(audio.duration%60))
+        if (second < 10) second = `0${second}` 
+        if (minute < 10) minute = `0${minute}` 
+        $("#allTime").html(`${minute}′${second}′′`);
+        // 按钮
+    }, false);
+
+    audio.addEventListener("pause",
+        function() { //监听暂停
+            $("#control").addClass("play").removeClass("pause");
+            if (audio.currentTime == audio.duration) {
+                audio.stop();
+                audio.currentTime = 0;
+            }
+        }, false);
+    audio.addEventListener("play",
+        function() { //监听暂停
+            $("#control").addClass("pause").removeClass("play");
+        }, false);
+    audio.addEventListener("ended", function() {
+        alert(0)
+    }, false)
+}</script><!--script.$(document).ready(function () {
+    // 专题提交按钮
+    $('#topicSubmitBtn').click(function () {
+        var comment = $('#topicComment').val();
+        var commentId = $('#topicComments').attr('commentId');
+        var length = getWordLength(comment);
+
+        if (length > 500) {
+            alert('请不要超过500字哟^_^');
+        } else if (comment.length <= 0) {
+            alert('评论不能为空哟^_^');
+        } else {
+            $('#topicSubmitBtn').html('正在提交...');
+            $('#topicSubmitBtn').attr('disabled', true);
+            postTopicComment(comment, commentId);
+        }
+    });
+    // 专题检测输入字数
+    $('#topicComment').keyup(function () {
+        var content = $('#topicComment').val();
+        var length = getWordLength(content);
+        var content = length + '/500';
+        $('#tip').html(content);
+        $('#topicSubmitBtn').attr('disabled', false);
+        if (length > 500) {
+            $('#topicComment').css('color', 'red');
+            $('#tip').css('color', 'red');
+            $('#topicSubmitBtn').attr('disabled', true);
+        } else if (length == 0) {
+            $('#topicSubmitBtn').attr('disabled', true);
+        } else {
+            $('#topicComment').css('color', '');
+            $('#tip').css('color', '');
+            $('#topicSubmitBtn').attr('disabled', false);
+        }
+    });
+    // 专题下拉加载
+    $('.topicComments').dropload({
+        scrollArea: window,
+        domDown: {
+            domClass: 'dropload-down',
+            domRefresh: '<div class="dropload-refresh"></div>',
+            domLoad: '<div class="dropload-load"><span class="loading"></span></div>',
+            domNoData: '<div class="dropload-noData"></div>'
+            //            domRefresh : '<div class="dropload-refresh">加载更多</div>',
+            //            domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中</div>',
+            //            domNoData  : '<div class="dropload-noData">没有更多</div>'
+        },
+        loadDownFn: function (me) {
+            var topicId = $('#topicComments').attr('topicid');
+            var startnum = $('#topicComments').attr('comment-num');
+            var url = '/m/mazi/topicComment/' + topicId + "/" + startnum;
+            $.ajax({
+                url: url,
+                type: 'get',
+                dataType: 'json',
+                success: function (data, status) {
+                    if (data.length === 0) {
+                        //锁住下拉刷新
+                        me.lock();
+                        me.noData();
+                    } else {
+                        var html = insertToHtml(data);
+                        $('#topicComments').append(html);
+                        var commentNum = $('#topicComments').attr('comment-num');
+                        $('#topicComments').attr('comment-num', data.length + parseInt(commentNum));
+                    }
+                    me.resetload();
+                }
+            });
+        }
+    });
+});
+
+/**
+ * 提交评论界面
+ * @param id
+ */
+function redirectSubmitPage(id) {
+    var hasSubscription = $('.payColumn').length
+    if (hasSubscription === 0){
+        $('#topicComments').attr('commentId', id);
+        $('#commentModal').modal('show');
+    }else {
+        $('#showTipsModal').modal('show');
+    }
+
+}
+
+/**
+ * 获取当前评论内容的字数长度
+ * @param s
+ * @returns {*}
+ */
+function getWordLength(s) {
+    if (!s) return 0;
+    var s1 = s.replace(/([^\x00-\xff])/g, ' | ');
+    var s2 = s1.replace(/\s+/ig, ' ');
+    var s2 = s2.replace(/ +/ig, ' ');
+    var s2 = s2.replace(/^ */, '').replace(/ *$/, '');
+    var curLength = s2.split(' ').length;
+    return curLength;
+}
+
+/**
+ * 专题提交评论的方法
+ * @param sendData 发送数据
+ * @param commentId
+ */
+function postTopicComment(sendData, commentId) {
+    var topicId = $('#topicComments').attr('topicid');
+    var requestUrl = encodeURI(window.location.href);
+    var data = {
+        content: sendData,
+        topicId: topicId,
+        requestUrl: requestUrl
+    };
+    if (commentId != 'null') {
+        data.commentId = commentId;
+    }
+
+    var url = '/m/mazi/columnTopicComment';
+    $.ajax({
+        url: url,
+        type: 'POST',
+        data: JSON.stringify(data),
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function (data, status) {
+            if (data.code === 0) {
+                var redirectUrl = window.location.href;
+                var p = redirectUrl.indexOf('#writeCommentDiv');
+                if (p != -1) {
+                    redirectUrl = redirectUrl.substring(0, p) + redirectUrl.substring((p + '#writeCommentDiv'.length), redirectUrl.length);
+                }
+
+                window.location.href = redirectUrl + "#writeCommentDiv";
+                location.reload();
+            } else {
+                alert('服务忙，稍后再试：）');
+                $('#topicSubmitBtn').html('提交');
+                $('#topicSubmitBtn').attr('disabled', false);
+            }
+        }
+    });
+}
+
+/**
+ * 点赞触发的时间
+ * @param that
+ */
+function praiseComment(that) {
+    var hasSubscription = $('.payColumn').length
+    if (hasSubscription != 0) {
+        $('#showTipsModal').modal('show');
+        return
+    }
+    var isPraise = $(that).attr('ispraise');
+    var commentId = $(that).attr('comment-id');
+    var type;
+    if (isPraise === 'false') {
+        //点赞
+        type = 'post';
+    } else {
+        //取消点赞
+        type = 'delete';
+    }
+    var url = '/m/mazi/topicComment/Fav';
+    $.ajax({
+        url: url,
+        type: type,
+        contentType: 'application/json; charset=utf-8',
+        data: JSON.stringify({
+            commentId: commentId
+        }),
+        dataType: 'json',
+        success: function (data, status) {
+            if (data.code == 0 && type == 'post') {
+                //点赞后
+                $(that).attr('ispraise', true);
+                $(that).toggleClass('comment-unpraise comment-praise');
+                var num = parseInt($(that).next().html());
+                $(that).next().html(num + 1);
+            }
+            if (data.code == 0 && type == 'delete') {
+                //取消点赞后
+                $(that).attr('ispraise', false);
+                $(that).toggleClass('comment-unpraise comment-praise');
+                var num = parseInt($(that).next().html());
+                $(that).next().html(num - 1);
+            }
+        }
+    });
+}
+/**
+ * 将返回的加载评论数据转化成Html
+ */
+
+function insertToHtml(data) {
+    var html = '';
+    data.forEach(function (commentObject) {
+        if (commentObject.status == 0) {
+            html += parseObjectToHtml(commentObject);
+        }
+    });
+    return html;
+}
+
+/**
+ * 将Object类型的Comment转化成Html
+ */
+function parseObjectToHtml(commentObject) {
+    if (!commentObject)
+        return;
+    var html = '';
+    html += "<div class='col-xs-12 comment-item-div'>" +
+        "<div class='comment-item'>" +
+        "<div class='col-xs-2' style='padding:10px'>" +
+        "<div class='comment-author-image' >" +
+        "<img class='comment-author-thumb' src='" + commentObject.customerId.thumbImage + "'/>" +
+        "</div>" +
+        "</div>" +
+        "<div class='col-xs-10' style='padding: 0px'>" +
+        "<div class='comment-author-name'>" + commentObject.customerId.customerName + "</div>" +
+        "<div class='comment-content-desc'>" + decodeURIComponent(commentObject.content) + "</div>" +
+        "<div class='comment-footer'>" +
+        "<div class='comment-time'>" + commentObject.dateString + "</div>" +
+        parsePraiseObject(commentObject) +
+        "<div class='comment-like-num'>" + commentObject.favNum + "</div>" +
+        "<div onclick='redirectSubmitPage(\"" + commentObject._id + "\")' class='sub-comment'></div>" +
+        "<div class='sub-comment-num'>" + commentObject.subComment.length + "</div>" +
+        "</div>" +
+        parseSubObjectToHtml(commentObject.subComment) +
+        "</div>" +
+        "</div>" +
+        "</div>";
+    return html;
+}
+
+/**
+ * 将子评论数组转化成相应的HTML
+ */
+function parseSubObjectToHtml(subCommentArray) {
+    var html = '';
+    subCommentArray.forEach(function (subComment) {
+        if (subComment.status === 0) {
+            html +=
+                "<div class='comment-comment'>" +
+                "<span class='sub-comment-name'>" + subComment.customerId.customerName + "</span>" +
+                "<span class='sub-comment-desc'>:" + decodeURIComponent(subComment.content) + "</span>" +
+                "</div>"
+        }
+    });
+    return html;
+}
+
+/**
+ * 将对象转化成点赞显示的html
+ */
+function parsePraiseObject(commentObject) {
+    var html = '';
+    if (!commentObject.isPraise) {
+        html += "<div class='comment-unpraise' ispraise='false' comment-id='" + commentObject._id + "' onclick='praiseComment(this)' ></div>";
+    } else {
+        html += "<div class='comment-praise' ispraise='true' comment-id='" + commentObject._id + "' onclick='praiseComment(this)' ></div>";
+    }
+    return html;
+}
+
+function removeURLParameter(url, parameter) {
+    //prefer to use l.search if you have a location/link object
+    var urlparts = url.split('?');
+    if (urlparts.length >= 2) {
+
+        var prefix = encodeURIComponent(parameter) + '=';
+        var pars = urlparts[1].split(/[&;]/g);
+
+        //reverse iteration as may be destructive
+        for (var i = pars.length; i-- > 0;) {
+            //idiom for string.startsWith
+            if (pars[i].lastIndexOf(prefix, 0) !== -1) {
+                pars.splice(i, 1);
+            }
+        }
+
+        url = urlparts[0] + (pars.length > 0 ? '?' + pars.join('&') : "");
+        return url;
+    } else {
+        return url;
+    }
+}
+function topicFavBtnFun(topicId) {
+
+    $.ajax({
+        url: "/m/mazi/columnTopicFav",
+        type: "POST",
+        data: JSON.stringify({
+            topicId: topicId
+        }),
+        contentType: "application/json; charset=utf-8",
+        success: function (data, status) {
+            if (status === 'success' && data.code === 0) {
+                if (data.message === 'added') {
+                    $('#favLink').css('color', '#c9a063');
+                    $('#favLinkText').html('已赞');
+                } else if (data.message === 'cancelled') {
+                    $('#favLink').css('color', '#777777');
+                    $('#favLinkText').html('点赞');
+                }
+            }
+        }
+    });
+}--><script async src="https://www.googletagmanager.com/gtag/js?id=UA-96766334-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+var userId = '59237e7017e5f267938a788a';
+if(userId && userId != '' && userId != 'do_not_exist'){
+    gtag('set', {'user_id': userId});
+}
+gtag('config', 'UA-96766334-1');
+var gEvent = ''
+if (gEvent && gEvent != '') {
+    gtag('event', gEvent);
+}</script><script>var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?5667c6d502e51ebd8bd9e9be6790fb5d";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();</script><script>var readerCustomerId = '59237e7017e5f267938a788a';
+var readingChatId = '';
+var readingColumnId = '5d80aea449b2b1063b52990f';
+var readingGeekbookId = '';
+function getReferrer() {
+    var referrer = "";
+    try {
+        referrer = window.top.document.referrer
+    } catch (e) {
+        if (window.parent) {
+            try {
+                referrer = window.parent.document.referrer
+            } catch (e2) {
+                referrer = ""
+            }
+        }
+    }
+    if (referrer === "") {
+        referrer = document.referrer
+    }
+    return referrer
+}
+
+var tjSecond = 0;
+var tjRandom = 0;
+window.setInterval(function () {
+    tjSecond++
+}, 1000);
+tjRandom = (new Date()).valueOf();
+window.onbeforeunload = function () {
+    if (
+        readerCustomerId && readerCustomerId != ''
+        &&
+        (
+            (readingChatId && readingChatId != '')||
+            (readingColumnId && readingColumnId !='')||
+            (readingGeekbookId && readingGeekbookId != '')
+        )
+    ) {
+        var params = {};
+        params.tjRd = tjRandom;
+        params.url = location.href;
+        params.time = tjSecond;
+        params.timeIn = Date.parse(new Date()) - (tjSecond * 1000);
+        params.timeOut = Date.parse(new Date());
+        params.title = document.title;
+        params.domain = document.domain;
+        params.sh = window.screen.height;
+        params.sw = window.screen.width;
+        params.language = navigator.language;
+        params.refer = getReferrer();
+        params.readerCustomerId = readerCustomerId;
+        params.readingChatId = readingChatId;
+        params.readingColumnId = readingColumnId;
+        params.readingGeekbookId = readingGeekbookId;
+        $.ajax({
+            url: "/m/track/reading/time",
+            type: "POST",
+            data: JSON.stringify(params),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (data, status) {
+
+            }
+        });
+    }
+
+};</script></html>
