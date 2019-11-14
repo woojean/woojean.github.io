@@ -145,7 +145,8 @@ font-size:1.4em;
 ```
 
 * 属性选择器
-  根据某个属性是否存在或者属性的值来寻找元素。
+根据某个属性是否存在或者属性的值来寻找元素。
+
 ```css
 abbr[title]{
 border-bottom:1px dotted #999;
@@ -159,9 +160,11 @@ a[rel=’nofollow’]{
 color:red;
 }
 ```
+
 注意：属性名无引号，属性值有引号。
 
 对于属性可以有多个值的情况（空格分割），属性选择器允许根据属性值之一来寻找元素：
+
 ```css
 .blogroll a[rel~=’co-worker’]{...}
 ```
@@ -363,7 +366,9 @@ console.log(typeof Number.prototype)   // object
 ```
 
 * Function.prototype的__proto__等于Object的prototype：
-  console.log(Function.prototype.__proto__ === Object.prototype) // true  体现了在Javascript中`函数也是一等公民`
+```javascript
+console.log(Function.prototype.__proto__ === Object.prototype) // true  体现了在Javascript中`函数也是一等公民`
+```
 
 * Object.prototype的__proto__为null
 ```javascript
@@ -371,6 +376,7 @@ Object.prototype.__proto__ === null  // true  到顶了
 ```
 
 * 所有对象的__proto__都指向其构造器的prototype
+
 ```javascript
 var obj = {name: 'jack'}
 var arr = [1,2,3]
@@ -385,10 +391,12 @@ function Person(name) {
 }
 var p = new Person('jack')
 console.log(p.__proto__ === Person.prototype) // true
-​```javascript
+​```
+
 
 * 每个对象都有一个`constructor属性`，可以获取它的构造器
-​```javascript
+
+​```
 function Person(name) {
   this.name = name
 }
@@ -400,6 +408,7 @@ console.log(p.__proto__ === p.constructor.prototype) // true
 ```
 
 * 使用对象字面量方式定义对象的构造函数，则对象的constructor的prototype可能不等于对象的__proto__
+
 ```javascript
 function Person(name) {
   this.name = name
@@ -710,12 +719,14 @@ call和apply是为了动态改变this而出现的，当一个object没有某个�
 
 * iframe的sandbox属性
   iframe被新增一个sandbox属性，使用这个属性后加载的内容将被视为一个独立的源，其中的脚本将被禁止执行，表单被禁止提交，插件被禁止加载，指向其他浏览器对象的链接也会被禁止。
+
 ```
 <iframe sandbox="allow-same-origin allow-forms allow-scripts" src="..." ></iframe>
 ```
 
 * noreferrer
   `<a>和<area>`标签定义了新的名为noreferrer的Link Types，标签指定该值后，浏览器在请求该标签指定的地址时将不再发送Referer：
+
 ```
 <a href="xxx" rel="noreferrer">test</a>
 ```
@@ -777,6 +788,7 @@ padding:0;
 ## 匿名块框和匿名行框
 
 * 匿名块框：当将文本添加到一个块级元素的开头时，即使没有把这些文本定义为块级元素，它也会被当成块级元素对待：
+
 ```html
 <div>
   some text
@@ -937,6 +949,7 @@ var { bar, foo } = { foo: "aaa", bar: "bbb" }; // 对象的属性没有次序，
 const [a, b, c, d, e] = 'hello';
 ```
 * 数值和布尔值的解构赋值;
+
 ```javascript
 let {toString: s} = 123;
 s === Number.prototype.toString // true
@@ -945,7 +958,9 @@ let {toString: s} = true;
 s === Boolean.prototype.toString // true
 
 ```
+
 * 函数参数的解构赋值;
+
 ```javascript
 function add([x, y]){
   return x + y;
