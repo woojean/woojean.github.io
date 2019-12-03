@@ -1003,14 +1003,15 @@ var f = () => 5;
 var sum = (num1, num2) => num1 + num2;
 var sum = (num1, num2) => { return num1 + num2; }
 ```
-
 由于大括号被解释为代码块，所以如果箭头函数直接返回一个对象，必须在对象外面加上括号：
 ```javascript
 var getTempItem = id => ({ id: id, name: "Temp" });
 ```
 
 **箭头函数有几个使用注意点：**
-* 1. 函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
+
+* 函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
+
 ```javascript
 function foo() {
   setTimeout(() => {
@@ -1023,9 +1024,9 @@ var id = 21;
 foo.call({ id: 42 });
 // id: 42
 ```
-* 2. 不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。
-* 3. 不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用Rest参数代替。
-* 4. 不可以使用yield命令，因此箭头函数不能用作Generator函数。
+* 不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。
+* 不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用Rest参数代替。
+* 不可以使用yield命令，因此箭头函数不能用作Generator函数。
 
 
 
@@ -1380,7 +1381,8 @@ function f(thunk){
 ## async函数语法
 
 * 1.async函数返回一个Promise对象
-  async函数内部return语句返回的值，会成为then方法回调函数的参数:
+async函数内部return语句返回的值，会成为then方法回调函数的参数:
+
 ```javascript
 async function f() {
   return 'hello world';
@@ -1433,6 +1435,7 @@ Point === Point.prototype.constructor // true
 Class作为构造函数的语法糖，同时有prototype属性和__proto__属性，因此同时存在两条继承链。
 * 1. 子类的__proto__属性，表示`构造函数的继承`，总是指向父类。
 * 2. 子类prototype属性的__proto__属性，表示`方法的继承`，总是指向父类的prototype属性。
+
 ```javascript
 class A {
 }
@@ -1444,6 +1447,7 @@ B.__proto__ === A // true
 B.prototype.__proto__ === A.prototype // true
 ```
 这样的结果是因为，类的继承是按照下面的模式实现的:
+
 ```javascript
 class A {
 }
