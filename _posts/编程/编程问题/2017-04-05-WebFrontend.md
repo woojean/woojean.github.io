@@ -2630,10 +2630,13 @@ btn.onclick = function(){
 };
 btn.onclick = null; //删除事件处理程序
 
-​```javascript
+​```javascript 
+
 以这种方式添加的事件处理程序会在事件流的冒泡阶段被处理。
 
-DOM2 级事件处理程序：
+
+DOM2 级事件处理程序： 
+
 ​```javascript
 var btn = document.getElementById("myBtn");
 btn.addEventListener("click", function(){
@@ -2645,6 +2648,7 @@ btn.addEventListener("click", function(){
   alert("Hello world!");
 }, false);
 ```
+
 通过 addEventListener() 添加的事件处理程序只能使用 removeEventListener() 来移除；移除时传入的参数与添加处理程序时使用的参数相同。这也意味着通过 addEventListener() 添加的匿名函数将无法移除。
 
 大多数情况下，都是将事件处理程序添加到事件流的冒泡阶段，这样可以最大限度地兼容各种浏览器。最好只在需要在事件到达目标之前截获它的时候将事件处理程序添加到捕获阶段。如果不是特别需要，不建议在事件捕获阶段注册事件处理程序。
@@ -2740,9 +2744,10 @@ if (document.implementation.hasFeature("CustomEvents", "3.0")){
 ```
 
 ## 有哪些提交表单、重置表单的方式？
-用户单击提交按钮时，就会提交表单。使用 <input> 或 <button> 都可以定义提交按钮，只要将其 type 特性的值设置为 "submit" 即可。以这种方式提交表单时，浏览器会在将请求发送给服务器之前触发 submit 事件。这样就有机会验证表单数据，并据以决定是否允许表单提交。
+用户单击提交按钮时，就会提交表单。使用 `<input> `或 `<button>` 都可以定义提交按钮，只要将其 type 特性的值设置为 "submit" 即可。以这种方式提交表单时，浏览器会在将请求发送给服务器之前触发 submit 事件。这样就有机会验证表单数据，并据以决定是否允许表单提交。
 在 JavaScript 中，以编程方式调用 submit() 方法也可以提交表单。而且，这种方式无需表单包含
-提交按钮，任何时候都可以正常提交表单：
+
+
 ```javascript
 var form = document.getElementById("myForm");
 // 提交表单
@@ -2751,7 +2756,7 @@ form.submit();
 在以调用 submit() 方法的形式提交表单时，不会触发 submit 事件，因此要记得在调用此方法之前先验证表单数据。
 
 重置与提交类似：
-使用 type 特性值为 "reset" 的 <input> 或 <button> 都可以创建重置按钮。
+使用 type 特性值为 "reset" 的 `<input>` 或 `<button>` 都可以创建重置按钮。
 也可以通过 JavaScript 来重置表单：
 ```javascript
 var form = document.getElementById("myForm");
@@ -2767,18 +2772,19 @@ form.reset();
 只发送勾选的复选框和单选按钮。
 不发送 type 为 "reset" 和 "button" 的按钮。
 多选选择框中的每个选中的值单独一个条目。
-在单击提交按钮提交表单的情况下，也会发送提交按钮；否则，不发送提交按钮。也包括 type为 "image" 的 <input> 元素。
-<select> 元素的值，就是选中的 <option> 元素的 value 特性的值。如果 <option> 元素没有value 特性，则是 <option> 元素的文本值。
+在单击提交按钮提交表单的情况下，也会发送提交按钮；否则，不发送提交按钮。也包括 type为 "image" 的 `<input>` 元素。
+`<select>` 元素的值，就是选中的 `<option>` 元素的 value 特性的值。如果 `<option>` 元素没有value 特性，则是 `<option>` 元素的文本值。
 
 
 ## 富文本编辑的原理是什么？
-在页面中嵌入一个包含空 HTML 页面的 iframe 。通过设置`designMode` 属性，这个空白的 HTML 页面可以被编辑，而编辑对象则是该页面 <body> 元素的 HTML 代码。 designMode 属性有两个可能的值： "off" （默认值）和 "on" 。在设置为 "on" 时，整个文档都会变得可以编辑（显示插入符号），然后就可以像使用字处理软件一样，通过键盘将文本内容加粗、变成斜体，等等。
+在页面中嵌入一个包含空 HTML 页面的 iframe 。通过设置`designMode` 属性，这个空白的 HTML 页面可以被编辑，而编辑对象则是该页面 `<body>` 元素的 HTML 代码。 designMode 属性有两个可能的值： "off" （默认值）和 "on" 。在设置为 "on" 时，整个文档都会变得可以编辑（显示插入符号），然后就可以像使用字处理软件一样，通过键盘将文本内容加粗、变成斜体，等等。
 
 另一种编辑富文本内容的方式是使用名为 `contenteditable` 的特殊属性，这个属性也是由 IE 最早实现的。可以把 contenteditable 属性应用给页面中的任何元素，然后用户立即就可以编辑该元素。这种方法之所以受到欢迎，是因为它不需要 iframe 、空白页和 JavaScript，只要为元素设置contenteditable 属性即可。
+
 ```html
 <div class="editable" id="richedit" contenteditable></div>
 ```
-这样，元素中包含的任何文本内容就都可以编辑了，就好像这个元素变成了 <textarea> 元素一样。
+这样，元素中包含的任何文本内容就都可以编辑了，就好像这个元素变成了 `<textarea>` 元素一样。
 
 与富文本编辑器交互的主要方式，就是使用 document.execCommand() 。这个方法可以对文档执行预定义的命令（加粗、拷贝、剪切、缩进等等），而且可以应用大多数格式。
 
@@ -3000,6 +3006,8 @@ processor.process();
 ```
 时间间隔设为了 100ms，这表示最后一次调用 process() 之后至少 100ms 后才会调用 performProcessing() 。所以如果 100ms之内调用了 process() 共 20 次， performanceProcessing() 仍只会被调用一次。
 这个模式可以使用 throttle() 函数来简化，这个函数可以自动进行定时器的设置和清除，如下例所示：
+
+实现1：
 ```javascript
 function throttle(method, context) {
   clearTimeout(method.tId);
@@ -3008,6 +3016,30 @@ function throttle(method, context) {
   }, 100);
 }
 ```
+
+实现2：
+
+```javascript
+// 限频，每delay的时间执行一次 
+function throttle(fn, delay, ctx) {
+    let isAvail = true
+    return function() {
+        let args = arguments
+        
+        // 开关打开时，执行任务
+        if (isAvail) {
+            fn.apply(ctx, args)
+            isAvail = false
+            
+            // delay时间之后，任务开关打开
+            setTimeout(function() {
+                isAvail = true
+            }, delay)
+        }
+    }
+}
+```
+
 节流在 resize 事件中是最常用的。
 例如，假设有一个 <div/> 元素需要保持它的高度始终等同于宽度。那么实现这一功能的 JavaScript 可以如下编写：
 ```javascript
