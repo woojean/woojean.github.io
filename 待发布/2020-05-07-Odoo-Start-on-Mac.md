@@ -39,8 +39,6 @@ python --version
 ```
 
 
-
-
 # Mac安装PostgreSQL
 -----------------------------------------------------------------
 ## 下载Mac安装包并安装
@@ -84,6 +82,39 @@ git clone https://github.com/odoo/odoo.git
 pip install setuptools wheel
 pip install -r requirements.txt
 ```
+
+
+
+# 配置文件
+-----------------------------------------------------------------
+```
+mkdir config
+vi config/odoo.conf
+```
+
+
+
+# 启动odoo
+-----------------------------------------------------------------
+## 指定启动文件启动
+```
+cd ~/odoo
+./odoo-bin --config=config/odoo.conf -i base
+```
+
+初始账户名和密码都是admin
+
+之后启动只需要：
+```
+./odoo-bin --config=config/odoo.conf
+```
+
+
+
+
+
+
+
 
 
 ## 报错
@@ -132,24 +163,13 @@ kill -9 xxx
 
 
 
-# 配置文件
------------------------------------------------------------------
-```
-mkdir config
-vi config/odoo.conf
-```
 
 
 
 
-# 启动odoo
------------------------------------------------------------------
-## 指定启动文件启动
-```
-cd ~/odoo
-./odoo-bin --config=config/odoo.conf -i base
-```
 
-初始账户名和密码都是admin
+
+
+
 
 
