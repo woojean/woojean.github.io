@@ -50,7 +50,7 @@ locale：zh_CN.UTF-8
 
 ## 启动PostgreSQL
 ```
-/Library/PostgreSQL/12/scripts/runpsql.sh ;exit
+/Library/PostgreSQL/12/scripts/runpsql.sh;exit
 ```
 
 使用pgAdmin管理。
@@ -65,6 +65,8 @@ CREATE USER odoo WITH PASSWORD '888888';
 ```
 CREATE DATABASE odoo_db OWNER odoo;
 ```
+
+
 
 
 
@@ -90,6 +92,16 @@ pip install -r requirements.txt
 ```
 mkdir config
 vi config/odoo.conf
+```
+
+config内容：
+```
+[options]
+db_host=127.0.0.1
+db_port=5432
+db_user=odoo
+db_password=888888
+db_name=odoo_db
 ```
 
 
