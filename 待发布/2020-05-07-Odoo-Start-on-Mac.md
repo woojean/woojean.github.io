@@ -125,10 +125,6 @@ cd ~/odoo
 
 
 
-
-
-
-
 ## 报错
 * pip版本过旧
 ```
@@ -174,6 +170,14 @@ kill -9 xxx
 ```
 
 
+
+# Intellj Python改为版本
+```
+File / Project Structure  / SDK
+
+选择：
+/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7
+```
 
 
 
