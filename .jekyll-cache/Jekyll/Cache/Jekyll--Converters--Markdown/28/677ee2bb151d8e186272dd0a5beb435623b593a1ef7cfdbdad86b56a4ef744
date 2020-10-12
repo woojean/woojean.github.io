@@ -1,0 +1,9 @@
+I"5
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://sourceforge.net/projects/sshpass/files/sshpass/1.05/sshpass-1.05.tar.gz
+./configure
+sudo make&amp;make install
+
+alias ts='sshpass -p "WED&amp;****$" ssh root@120.21.53.21'
+</code></pre></div></div>
+
+:ET

@@ -1,0 +1,348 @@
+I"�-<ul id="markdown-toc">
+  <li><a href="#nginx-rewrite与location的比较" id="markdown-toc-nginx-rewrite与location的比较">Nginx rewrite与Location的比较</a></li>
+</ul>
+
+<p>nginx配置文件主要分为六个区域：</p>
+<ul>
+  <li>
+    <p>main
+控制子进程的所属用户/用户组、派生子进程数、错误日志位置/级别、pid位置、子进程优先级、进程对应cpu、进程能够打开的文件描述符数目等</p>
+  </li>
+  <li>
+    <p>events
+控制nginx处理连接的方式</p>
+  </li>
+  <li>http</li>
+  <li>sever</li>
+  <li>location</li>
+  <li>upstream</li>
+</ul>
+
+<p><strong>实例：</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 运行用户
+user www-data;
+
+# 启动进程数,通常设置成和cpu的数量相等
+worker_processes 1;
+
+# 全局错误日志
+error_log /var/log/nginx/error.log;
+
+# PID文件
+pid /var/run/nginx.pid;
+
+events {
+  # 使用epoll多路复用模式
+  use epoll;   
+
+  # 单个后台worker process进程的最大并发链接数
+  worker_connections  1024;
+  # multi_accept on; 
+}
+
+http {
+  # 设定mime类型,类型由mime.type文件定义
+  include       /etc/nginx/mime.types;
+
+  # 1 octet = 8 bit
+  default_type  application/octet-stream;
+
+  # 设定访问日志
+  access_log    /var/log/nginx/access.log;
+
+  # sendfile指令指定nginx是否调用sendfile函数（zero copy方式）来输出文件，对于普通应用，必须设为on,如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I/O处理速度，降低系统的uptime.
+  sendfile        on;
+
+  # 在一个数据包里发送所有头文件，而不一个接一个的发送
+  #tcp_nopush     on;
+
+  # 连接超时时间
+  keepalive_timeout  65;
+
+  # 作用于socket参数TCP_NODELAY，禁用nagle算法，也即不缓存数据
+  tcp_nodelay        on;
+    
+  # 开启gzip压缩
+  gzip  on;
+  gzip_disable "MSIE [1-6]\.(?!.*SV1)";
+ 
+  # 设定请求缓冲
+  client_header_buffer_size    1k;
+  large_client_header_buffers  44k;
+
+  include /etc/nginx/conf.d/*.conf;
+  include /etc/nginx/sites-enabled/*;
+
+  # 设定负载均衡的服务器列表
+  upstream mysvr {
+    # weigth参数表示权值，权值越高被分配到的几率越大
+    # 本机上的Squid开启3128端口
+    server 192.168.8.1:3128 weight=5;
+    server 192.168.8.2:80 weight=1;
+    server 192.168.8.3:80 weight=6;
+  }
+ 
+server {
+  # 侦听80端口
+  listen 80;
+
+  # 定义使用www.xx.com访问
+  server_name  www.xx.com;
+
+  # 设定本虚拟主机的访问日志
+  access_log  logs/www.xx.com.access.log  main;
+
+  # 默认请求
+  location / {
+    # 定义服务器的默认网站根目录位置
+    root   /root;      	
+
+    # 定义首页索引文件的名称
+    index index.php index.html index.htm;  
+
+    fastcgi_pass  localhost:9000;
+      fastcgi_param  SCRIPT_FILENAME  $document_root/$fastcgi_script_name; 
+      include /etc/nginx/fastcgi_params;  
+    }
+
+    # 定义错误提示页面
+    error_page   500 502 503 504 /50x.html;  
+      location = /50x.html {
+      root   /root;
+    }
+
+    # 静态文件，nginx自己处理
+    location ~ ^/(images|javascript|js|css|flash|media|static)/ {
+      root /var/www/virtual/htdocs;
+      
+      # 过期时间30天
+      expires 30d;
+    }
+
+    # PHP脚本请求全部转发到FastCGI处理，使用FastCGI默认配置
+    location ~ \.php$ {
+      root /root;
+      fastcgi_pass 127.0.0.1:9000;
+      fastcgi_index index.php;
+      fastcgi_param SCRIPT_FILENAME /home/www/www$fastcgi_script_name;
+      include fastcgi_params;
+    }
+
+    # 设定查看Nginx状态的地址
+    location /NginxStatus {
+      stub_status on;
+      access_log on;
+      auth_basic "NginxStatus";
+      auth_basic_user_file conf/htpasswd;
+    }
+
+    # 禁止访问 .htxxx 文件
+    location ~ /\.ht {
+      deny all;
+    }
+  }
+}
+</code></pre></div></div>
+
+<h2 id="nginx-rewrite与location的比较">Nginx rewrite与Location的比较</h2>
+<p><strong>rewrite</strong>
+使用Nginx提供的全局变量或自己设置的变量，结合正则表达式和标志位<strong>实现url重写以及重定向</strong>。rewrite只能放在server{},location{},if{}中，并且<strong>只能对域名后边的除去传递的参数外的字符串起作用</strong>。如，<code class="language-plaintext highlighter-rouge">http://demo.com/a/we/index.php?id=1&amp;u=str</code> 只对<code class="language-plaintext highlighter-rouge">/a/we/index.php</code>重写。
+如果想对域名或参数字符串起作用，可以使用全局变量匹配，也可以使用proxy_pass反向代理。</p>
+
+<p><strong>Rewrite标志位</strong></p>
+<ul>
+  <li>last  相当于Apache的[L]标记，表示完成rewrite</li>
+  <li>break  停止执行当前虚拟主机的后续rewrite指令集</li>
+  <li>redirect 返回302临时重定向，地址栏会显示跳转后的地址</li>
+  <li>permanent 返回301永久重定向，地址栏会显示跳转后的地址</li>
+</ul>
+
+<p><strong>Rewrite实例</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 应用于Server
+server {
+  listen 80;
+  server_name demo.com;
+  index index.html index.php;
+  root html;
+  if ($http_host !~ “^star\.igrow\.cn$&amp;quot {
+    rewrite ^(.*) http://star.igrow.cn$1 redirect;
+  }
+}
+
+// 防盗链
+location ~* \.(gif|jpg|swf)$ {
+  valid_referers none blocked start.igrow.cn sta.igrow.cn;
+  if ($invalid_referer) {
+    rewrite ^/ http://$host/logo.png;
+  }
+}
+
+// 根据文件类型设置过期时间
+location ~* \.(js|css|jpg|jpeg|gif|png|swf)$ {
+  if (-f $request_filename) {
+    expires 1h;
+    break;
+  }
+}
+
+// 禁止访问某个目录
+location ~* \.(txt|doc)${
+root /data/www/wwwroot/linuxtone/test;
+deny all;
+}
+</code></pre></div></div>
+
+<p><strong>rewrite和location的比较</strong>
+rewrite和location都能实现跳转，主要区别在于<strong>rewrite是在同一域名内更改获取资源的路径，而location是对一类路径做控制访问或反向代理，可以proxy_pass到其他机器</strong>。很多情况下rewrite也会写在location里，它们的执行顺序是：</p>
+
+<ul>
+  <li>（1）执行server块的rewrite指令</li>
+  <li>（2）执行location匹配</li>
+  <li>（3）执行选定的location中的rewrite指令</li>
+</ul>
+
+<p>如果其中某步URI被重写，则重新循环执行（1）~（3），直到找到真实存在的文件；循环超过10次，则返回500 Internal Server Error错误。</p>
+
+<p>正则匹配会覆盖普通匹配，<strong>location的执行逻辑跟location的编辑顺序无关</strong>。</p>
+
+<p><strong>location语法格式</strong>：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>location [=|~|~*|^~|@] /uri/ { … }
+</code></pre></div></div>
+
+<ul>
+  <li>= 表示精确匹配</li>
+  <li>~  区分大小写匹配</li>
+  <li>~* 不区分大小写匹配</li>
+  <li>!~ 区分大小写不匹配</li>
+  <li>!~* 不区分大小写不匹配</li>
+  <li>^ 以什么开头的匹配</li>
+  <li>$ 以什么结尾的匹配</li>
+  <li>^~ 表示uri以某个常规字符串开头，不是正则匹配，优先级高于正则</li>
+  <li>/ 通用匹配,如果没有其它匹配,任何请求都会匹配到</li>
+  <li>代表任意字符</li>
+  <li>. 匹配除换行符以外的任意字符</li>
+  <li>? 重复0次或1次</li>
+  <li>+ 重复1次或更多次</li>
+  <li>* 重复0次或更多次</li>
+  <li>\d 匹配数字</li>
+  <li>{n}重复n次</li>
+  <li>{n,}重复n次或更多次</li>
+  <li>[c]匹配单个字符c</li>
+  <li>[a-z]匹配a-z小写字母的任意一个</li>
+  <li>\转义字符</li>
+  <li>-f和!-f判断是否存在文件</li>
+  <li>-d和!-d判断是否存在目录</li>
+  <li>-e和!-e判断是否存在文件或目录</li>
+  <li>-x和!-x判断文件是否可执行</li>
+</ul>
+
+<p><strong>实际使用中一般至少有三个匹配规则定义：</strong></p>
+<ul>
+  <li>直接匹配网站根，通过域名访问网站首页比较频繁，使用这个会加速处理。这里是直接转发给后端应用服务器了，也可以是一个静态首页。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>location = / {
+proxy_pass http://tomcat:8080/index
+}
+</code></pre></div>    </div>
+  </li>
+  <li>处理静态文件的请求，这是nginx作为http服务器的强项。有两种配置模式，目录匹配或后缀匹配,任选其一或搭配使用。
+```
+location ^~ /static/ {
+root /webroot/static/;
+}</li>
+</ul>
+
+<p>location ~* .(gif|jpg|jpeg|png|css|js|ico)$ {<br />
+  root /webroot/res/;
+}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 通用规则，用来转发动态请求到后端应用服务器非静态文件请求就默认是动态请求
+</code></pre></div></div>
+<p>location / {
+  proxy_pass http://tomcat:8080/
+}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+### 如何使用Nginx实现负载均衡和反向代理？
+设定http服务器，利用它的反向代理功能提供负载均衡支持
+
+</code></pre></div></div>
+<p>http {
+  # 设定mime类型,类型由mime.type文件定义
+  include       /etc/nginx/mime.types;
+  default_type  application/octet-stream;</p>
+
+<p># 设定日志格式
+  access_log    /var/log/nginx/access.log;</p>
+
+<p># 其他配置，略</p>
+
+<p># 设定负载均衡的服务器列表
+  upstream mysvr {
+    # weigth参数表示权值，权值越高被分配到的几率越大
+    # 本机上的Squid开启3128端口
+    server 192.168.8.1x:3128 weight=5;
+      server 192.168.8.2x:80 weight=1;
+      server 192.168.8.3x:80 weight=6;
+    }</p>
+
+<p>upstream mysvr2 {
+    # weigth参数表示权值，权值越高被分配到的几率越大
+    server 192.168.8.x:80  weight=1;
+    server 192.168.8.x:80  weight=6;
+  }</p>
+
+<p># 第一个虚拟服务器
+  server {
+     # 侦听192.168.8.x的80端口
+    listen 80;
+    server_name  192.168.8.x;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 对aspx后缀的进行负载均衡请求
+# 定义服务器的默认网站根目录位置
+location ~ .*\.aspx$ {
+  # 定义服务器的默认网站根目录位置
+  root   /root;
+
+  # 定义首页索引文件的名称
+  index index.php index.html index.htm;   
+
+  # 请求转向mysvr定义的服务器列表
+  proxy_pass  http://mysvr ;
+
+  # 反向代理的配置
+  proxy_redirect off;
+
+  # 后端的Web服务器可以通过X-Forwarded-For获取用户真实IP
+  proxy_set_header Host $host;
+  proxy_set_header X-Real-IP $remote_addr;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+  # 允许客户端请求的最大单文件字节数
+  client_max_body_size 10m;
+
+  # 缓冲区代理缓冲用户端请求的最大字节数
+  client_body_buffer_size 128k;
+
+  # nginx跟后端服务器连接超时时间(代理连接超时)
+  proxy_connect_timeout 90;
+
+  # 后端服务器数据回传时间(代理发送超时)
+  proxy_send_timeout 90;
+
+  # 连接成功后，后端服务器响应时间(代理接收超时)
+  proxy_read_timeout 90;
+
+  # 设置代理服务器（nginx）保存用户头信息的缓冲区大小
+  proxy_buffer_size 4k;    
+
+  # proxy_buffers缓冲区，网页平均在32k以下的话，这样设置
+  proxy_buffers 4 32k;    
+
+  # 高负荷下缓冲大小（proxy_buffers*2）
+  proxy_busy_buffers_size 64k;    
+
+  # 设定缓存文件夹大小，大于这个值，将从upstream服务器传
+  proxy_temp_file_write_size 64k;  
+}   } } ```
+</code></pre></div></div>
+
+:ET

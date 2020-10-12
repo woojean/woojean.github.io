@@ -1,0 +1,350 @@
+I"�\<ul id="markdown-toc">
+  <li><a href="#编译执行单个不带包名的java文件" id="markdown-toc-编译执行单个不带包名的java文件">编译执行单个不带包名的Java文件</a>    <ul>
+      <li><a href="#使用默认编译行为" id="markdown-toc-使用默认编译行为">使用默认编译行为</a></li>
+      <li><a href="#在运行时添加classpath" id="markdown-toc-在运行时添加classpath">在运行时添加CLASSPATH</a></li>
+    </ul>
+  </li>
+  <li><a href="#编译执行单个带包名的java文件" id="markdown-toc-编译执行单个带包名的java文件">编译执行单个带包名的Java文件</a>    <ul>
+      <li><a href="#寻找字节码时依赖字节码文件的名称" id="markdown-toc-寻找字节码时依赖字节码文件的名称">寻找字节码时依赖字节码文件的名称</a></li>
+    </ul>
+  </li>
+  <li><a href="#指定编译生成字节码文件的位置" id="markdown-toc-指定编译生成字节码文件的位置">指定编译生成字节码文件的位置</a></li>
+  <li><a href="#编译执行多个java文件" id="markdown-toc-编译执行多个java文件">编译执行多个Java文件</a></li>
+  <li><a href="#打包无manifest的jar文件" id="markdown-toc-打包无manifest的jar文件">打包无MANIFEST的jar文件</a></li>
+  <li><a href="#打包多个文件并指定manifest" id="markdown-toc-打包多个文件并指定manifest">打包多个文件并指定MANIFEST</a></li>
+  <li><a href="#编译引用了第三方jar文件的项目" id="markdown-toc-编译引用了第三方jar文件的项目">编译引用了第三方jar文件的项目</a>    <ul>
+      <li><a href="#创建第三方jar文件" id="markdown-toc-创建第三方jar文件">创建第三方jar文件</a></li>
+      <li><a href="#在项目中引用第三方jar包" id="markdown-toc-在项目中引用第三方jar包">在项目中引用第三方jar包</a></li>
+    </ul>
+  </li>
+  <li><a href="#打包引用了第三方jar文件的项目为jar文件" id="markdown-toc-打包引用了第三方jar文件的项目为jar文件">打包引用了第三方jar文件的项目为jar文件</a></li>
+</ul>
+
+<p><a href="https://github.com/woojean/demos/tree/master/java-cmd-compile">下载代码:https://github.com/woojean/demos/tree/master/java-cmd-compile</a></p>
+
+<p>不使用Maven、Gradle等构件工具，直接使用命令行来构建Java项目，加深对Java编译打包过程的理解。</p>
+
+<h1 id="编译执行单个不带包名的java文件">编译执行单个不带包名的Java文件</h1>
+<p>如果没有指定包名，所有的示例都属于一个默认的无名包。</p>
+
+<h2 id="使用默认编译行为">使用默认编译行为</h2>
+<p>javademo/src/First.java</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">First</span><span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="n">args</span><span class="o">[]){</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"First"</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>注意：package声明不是必须的。</p>
+
+<p>编译：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac src/First.java  // 将在src目录下（源代码相同目录下）生产字节码文件First.class
+</code></pre></div></div>
+
+<p>运行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd src
+java First  // 之所以这样可以运行，是因为在CLASSPAHT中配置了.，这样java在执行时会在当前目录下寻找字节码文件
+</code></pre></div></div>
+
+<p>输出：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>First
+</code></pre></div></div>
+
+<h2 id="在运行时添加classpath">在运行时添加CLASSPATH</h2>
+<p>如果这样执行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java src/First
+</code></pre></div></div>
+<p>将会报错：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>错误: 找不到或无法加载主类 src.First
+</code></pre></div></div>
+
+<p>当然也可以在执行Java时临时指定CLASSPATH：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -cp src/ First  // 将src目录临时添加到CLASSPATH中
+</code></pre></div></div>
+
+<p>输出：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>First
+</code></pre></div></div>
+
+<h1 id="编译执行单个带包名的java文件">编译执行单个带包名的Java文件</h1>
+<p>javademo/src/First.java</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.javademo</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">First</span><span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="n">args</span><span class="o">[]){</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"First"</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>编译：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac src/First.java 
+</code></pre></div></div>
+
+<p>无法执行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -cp src/ First  // 错误: 找不到或无法加载主类 First
+java -cp src/ com.javademo.First // 错误: 找不到或无法加载主类 First
+
+cd src
+java First // 错误: 找不到或无法加载主类 First
+java com.javademo.First // 错误: 找不到或无法加载主类 First
+</code></pre></div></div>
+<p><strong>Java包名必须是文件所在实际物理路径（将文件分隔符替换为.后）的一部分</strong>。
+而为了保证编译后的Java字节码能够被执行（能够被Java虚拟机找到），该物理路径的前缀部分必须添加到CLASSPATH中（可以写配置文件，也可以在运行时指定，IDE就是在运行时添加）。</p>
+
+<p>因此修改目录结构为：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>src/com/javademo/First.java
+</code></pre></div></div>
+
+<p>编译：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac src/com/javademo/First.java
+</code></pre></div></div>
+
+<p>执行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java com.javademo.First  // OK!
+java com/javademo/First  // OK!
+</code></pre></div></div>
+
+<p>注意如下执行是错误的：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java src/com/javademo/First  // 错误: 找不到或无法加载主类 src.com.javademo.First，因为src并不属于包名的一部分
+java -cp src/com/javademo com.javademo.First  // 错误: 找不到或无法加载主类 com.javademo.First
+</code></pre></div></div>
+<p>即，使用java执行带包名的类时，会在当前路径下，以包名结构为路径结构来寻找待执行的字节码文件。
+因此在src目录下执行如下命令：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java com.javademo.First  // OK!
+</code></pre></div></div>
+<p>因为当前目录（.）被添加到系统的CLASSPATH中，所以可以在当前目录（<code class="language-plaintext highlighter-rouge">/Users/wujian/projects/javademo/src</code>）下寻找字节码文件。
+又因为com.javademo.First指定了包名，对应解析出来的类字节码位置为<code class="language-plaintext highlighter-rouge">com/javademo/First</code>，所以最终定位字节码文件的路径为：
+<code class="language-plaintext highlighter-rouge">/Users/wujian/projects/javademo/src/com/javademo/First</code>。</p>
+
+<p>因此，在src父目录执行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java src/com/javademo/First
+</code></pre></div></div>
+<p>实际拼凑的字节码定位路径为：<code class="language-plaintext highlighter-rouge">/Users/wujian/projects/javademo/src/com/javademo/First</code>，路劲虽然是正确的，但是指定的类（<code class="language-plaintext highlighter-rouge">src.com.javademo.First</code>）却是不存在的。</p>
+
+<p>而如下的执行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -cp src/com/javademo com.javademo.First
+</code></pre></div></div>
+<p>根据该指定CLASSPATH实际拼凑的字节码定位路径为：<code class="language-plaintext highlighter-rouge">/Users/wujian/projects/javademo/src/com/javademo/com/javademo/First</code>，显然错误。</p>
+
+<p>总结一下寻找字节码的行为就是：
+对于要运行的带包名的类，先按包名转换得到一段相对路径，再结合所有的CLASSPATH，拼凑CLASSPATH和包名相对路径得到要查找类的定位位置，然后再在该位置处查找与所需带包名的类（完全限定名）匹配的字节码。</p>
+
+<h2 id="寻找字节码时依赖字节码文件的名称">寻找字节码时依赖字节码文件的名称</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv com/javademo/First.class com/javademo/Second.class
+java com.javademo.First  // 错误: 找不到或无法加载主类 com.javademo.First
+</code></pre></div></div>
+
+<h1 id="指定编译生成字节码文件的位置">指定编译生成字节码文件的位置</h1>
+
+<p>编译</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac src/com/javademo/First.java -d target/
+</code></pre></div></div>
+
+<p>执行</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd target/
+java com.javademo.First   // OK!
+</code></pre></div></div>
+
+<h1 id="编译执行多个java文件">编译执行多个Java文件</h1>
+<p>javademo/src/First.java</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.javademo</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">First</span><span class="o">{</span>
+
+	<span class="kd">public</span> <span class="nc">String</span> <span class="nf">output</span><span class="o">(){</span>
+		<span class="k">return</span> <span class="s">"First"</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="n">args</span><span class="o">[]){</span>
+
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"First"</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>javademo/src/Second.java</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.javademo</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Second</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="nf">output</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">First</span> <span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">First</span><span class="o">();</span>
+        <span class="nc">String</span> <span class="n">firstOutput</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="na">output</span><span class="o">();</span>
+        <span class="k">return</span> <span class="n">firstOutput</span> <span class="o">+</span> <span class="s">"-&gt;"</span> <span class="o">+</span> <span class="s">"Second"</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="n">args</span><span class="o">[])</span> <span class="o">{</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Second</span><span class="o">.</span><span class="na">output</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>编译</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac src/com/javademo/First.java src/com/javademo/Second.java -d target/
+</code></pre></div></div>
+
+<p>执行</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd target/
+java com.javademo.Second   // First-&gt;Second
+</code></pre></div></div>
+
+<p>如果分别单独编译将报错：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac src/com/javademo/First.java -d target/    // OK!
+javac src/com/javademo/Second.java -d target/ 
+</code></pre></div></div>
+<p>编译Second.java时报错：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>src/com/javademo/Second.java:6: 错误: 找不到符号
+        First first = new First();
+        ^
+  符号:   类 First
+  位置: 类 Second
+</code></pre></div></div>
+
+<p>不过，一起编译时，文件列出的顺序并不依赖于类之间的引用关系：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac src/com/javademo/Second.java src/com/javademo/First.java -d target/    // Second写在First前面 OK!
+</code></pre></div></div>
+
+<h1 id="打包无manifest的jar文件">打包无MANIFEST的jar文件</h1>
+<p>将First类打包为一个jar文件。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd target/
+jar cvf First.jar com/javademo/First.class
+</code></pre></div></div>
+
+<p>输出：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>已添加清单
+正在添加: com/javademo/First.class(输入 = 495) (输出 = 314)(压缩了 36%)
+</code></pre></div></div>
+
+<p>执行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -cp First.jar com.javademo.First   // OK! 注意-cp选项
+</code></pre></div></div>
+
+<p>MANIFEST.MF的内容</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Manifest-Version: 1.0
+Created-By: 1.8.0_121 (Oracle Corporation)
+</code></pre></div></div>
+
+<h1 id="打包多个文件并指定manifest">打包多个文件并指定MANIFEST</h1>
+<p>vi mymanifest</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Manifest-Version: 1.0
+Created-By: 1.8.0_121 (Oracle Corporation)
+Main-Class: com.javademo.Second
+</code></pre></div></div>
+
+<p>打包：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jar cvfm Second.jar mymanifest com/javademo/First.class com/javademo/Second.class
+</code></pre></div></div>
+
+<p>执行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar Second.jar  // OK! 无需指定要执行的类
+</code></pre></div></div>
+
+<h1 id="编译引用了第三方jar文件的项目">编译引用了第三方jar文件的项目</h1>
+<h2 id="创建第三方jar文件">创建第三方jar文件</h2>
+<p>src/com/thirdparty/Third.java</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.thirdparty</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Third</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">output</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="s">"Third"</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="n">args</span><span class="o">[])</span> <span class="o">{</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Third"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac src/com/thirdparty/Third.java -d target/
+cd target/
+jar cvf Third.jar com/thirdparty/Third.class
+</code></pre></div></div>
+
+<h2 id="在项目中引用第三方jar包">在项目中引用第三方jar包</h2>
+<p>jar包位置：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lib/Third.jar
+</code></pre></div></div>
+
+<p>代码中的引用：</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.javademo</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.thirdparty.Third</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Fourth</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="nf">output</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">Third</span> <span class="n">third</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Third</span><span class="o">();</span>
+        <span class="nc">String</span> <span class="n">thirdOutput</span> <span class="o">=</span> <span class="n">third</span><span class="o">.</span><span class="na">output</span><span class="o">();</span>
+        <span class="k">return</span> <span class="n">thirdOutput</span> <span class="o">+</span> <span class="s">"-&gt;"</span> <span class="o">+</span> <span class="s">"Fourth"</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="n">args</span><span class="o">[])</span> <span class="o">{</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Fourth</span><span class="o">.</span><span class="na">output</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>编译</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac -cp lib/Third.jar -d target/ src/com/javademo/Fourth.java 
+</code></pre></div></div>
+
+<p>运行</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java com.javademo.Fourth  // Third-&gt;Fourth
+</code></pre></div></div>
+
+<h1 id="打包引用了第三方jar文件的项目为jar文件">打包引用了第三方jar文件的项目为jar文件</h1>
+<p>创建lib目录，并将要引用的jar文件放到lib目录中：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir lib
+cp Third.jar lib/Third.jar
+</code></pre></div></div>
+
+<p>vi mymanifest</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Manifest-Version: 1.0
+Created-By: 1.8.0_121 (Oracle Corporation)
+Main-Class: com.javademo.Fourth
+Class-Path: lib/Third.jar
+</code></pre></div></div>
+
+<p>Class-Path可以有多个，用空格分割：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Class-Path: lib/commons-codec.jar lib/commons-httpclient-3.1.jar lib/commons-logging-1.1.jar
+</code></pre></div></div>
+<p>java执行程序只会到目录下寻找.class文件，而不会解压目录下的jar文件然后再在解压后的内容中寻找.class文件。所以，对于jar包的引用要指定路径。
+所以这里Class-Path的行为和CLASSPATH的行为是不一样的。</p>
+
+<p>打包：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd target/
+jar cvfm Fourth.jar mymanifest com/javademo/Fourth.class
+</code></pre></div></div>
+
+<p>运行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar Fourth.jar
+</code></pre></div></div>
+<p>输出：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Exception in thread "main" java.lang.NoClassDefFoundError: com/thirdparty/Third
+	at com.javademo.Fourth.output(Fourth.java:8)
+	at com.javademo.Fourth.main(Fourth.java:15)
+Caused by: java.lang.ClassNotFoundException: com.thirdparty.Third
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 2 more
+</code></pre></div></div>
+
+<p>原因在于在当前执行路径下没有<code class="language-plaintext highlighter-rouge">lib/First.jar</code>.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd target/
+mkdir lib
+cp Third.jar lib/Third.jar
+</code></pre></div></div>
+
+<p>运行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar Fourth.jar -cp lib/   // Third-&gt;Fourth
+</code></pre></div></div>
+
+:ET

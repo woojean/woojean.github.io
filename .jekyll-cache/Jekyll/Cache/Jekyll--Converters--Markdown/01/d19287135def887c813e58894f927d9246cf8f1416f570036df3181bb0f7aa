@@ -1,0 +1,59 @@
+I"�<ul id="markdown-toc">
+  <li><a href="#atr指标理解" id="markdown-toc-atr指标理解">ATR指标理解</a></li>
+  <li><a href="#仓位控制的重要性" id="markdown-toc-仓位控制的重要性">仓位控制的重要性</a></li>
+  <li><a href="#参考" id="markdown-toc-参考">参考</a></li>
+</ul>
+
+<h1 id="atr指标理解">ATR指标理解</h1>
+
+<p>《海龟交易法则》中的仓位管理方法，是以ATR指标为核心的。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* TR = [最高价-最低价]、[最高价-昨收]、[昨收-最低价]的最大值；
+* 真实波幅（ATR）=TR的N日简单移动平均；
+</code></pre></div></div>
+
+<p>威尔德发现较高的ATR值常发生在市场底部，并伴随恐慌性抛盘。当其值较低时，则往往发生在合并以后的市场顶部。</p>
+
+<p>ATR大概的意思就是这个产品平均每天波动多少个点。</p>
+
+<p>《海龟》一书建议，如果你们不知道止损该放哪，那么统一放2ATR的地方。</p>
+
+<p>《海龟》建议开一个头寸的大小，应该使1ATR=你总资金1%的波动。</p>
+
+<p>《海龟》建议，单一一种产品，最多只允许自己买4个单位（即4个1%）。高度相关产品，最多只允许自己买6个单位单一方向的头寸。单一方向的所有仓位，最多不超过12单位。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>总资金为C，总资金的1%即C/100，为1个单位。
+* 假如当前ATR为1，亏光为0，则最多亏1个单位，即1%的总资金；
+* 假如当前ATR为0.5，投入0.5个单位，亏光为0，即损失1%的总资金；
+所以，对于同样的风险（亏损1%的总资金），ATR为0.5，头寸可以是ATR为1头寸的两倍。
+
+原理是根据风险下注，ATR大意味着波动大，即不确定性大，应该少下注，ATR小意味着波动小，同样的风险可以多下注。
+通过ATR来控制不同交易的头寸大小，最终将同样的价格波动造成的资金变化一致化。
+</code></pre></div></div>
+
+<h1 id="仓位控制的重要性">仓位控制的重要性</h1>
+<p>海龟交易法则的有效性关键点在与头寸规模的控制而不是买卖点的把握。</p>
+
+<p>仓位管理不涉及选股选时技术，甚至有仓位管理专家试验过，通过抛硬币决定做多还是做空，在这样的随机决策下，依托好的仓位管理技术依旧可以赚到钱。</p>
+
+<p>海龟交易法则的买卖依据”唐奇安通道突破“，实测发现唐奇安通道突破的有效性（夏普系数）不如MACD金叉买、死叉卖，至少，和其它趋势策略相比，并没有明显的优势。</p>
+
+<p>同样使用唐奇安通道突破（20天最高价、最低价形成的通道），使用”相等头寸规模“（每个头寸占总资金1/10）与”基于ATR确定头寸规模“相比，前者不仅夏普值大幅增加，而且最大回撤也大幅缩小。
+<a href="https://www.zhihu.com/question/24676242/answer/55153535">海龟交易法则有用吗？</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>绝对波动幅度 = ATR * 合约每一点所代表的价值；（对于股票来说，每一点所代表的价值就是1元）
+头寸规模 = 总资金的1%/绝对波动幅度；
+</code></pre></div></div>
+
+<p>海龟是草根交易者能接触到的最完整的交易系统，虽然已经有点旧了。
+海龟的最大缺点是回撤太大，50%的回撤在海龟里面出现的频率不低。
+由于海龟的加仓方式（在盈利的头寸上不断加仓，加仓规模基于ATR计算），浮盈回吐的程度要远强于其他趋势跟踪系统。</p>
+
+<h1 id="参考">参考</h1>
+<ul>
+  <li><a href="http://blog.sina.com.cn/s/blog_1481e71360102wjc5.html">http://blog.sina.com.cn/s/blog_1481e71360102wjc5.html</a></li>
+  <li><a href="http://www.360doc.com/content/17/0124/01/37789800_624454393.shtml">http://www.360doc.com/content/17/0124/01/37789800_624454393.shtml</a></li>
+  <li><a href="https://www.zhihu.com/question/24676242/answer/55153535">https://www.zhihu.com/question/24676242/answer/55153535</a></li>
+</ul>
+
+:ET

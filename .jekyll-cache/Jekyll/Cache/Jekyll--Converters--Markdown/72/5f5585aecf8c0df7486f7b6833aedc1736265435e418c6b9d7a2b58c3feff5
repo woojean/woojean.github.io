@@ -1,0 +1,32 @@
+I"X<ul id="markdown-toc">
+  <li><a href="#代码" id="markdown-toc-代码">代码</a></li>
+</ul>
+
+<h1 id="代码">代码</h1>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$lower</span> <span class="o">=</span> <span class="mi">95</span><span class="p">;</span>    <span class="c1">// 单月最大亏损</span>
+<span class="nv">$higher</span> <span class="o">=</span> <span class="mi">110</span><span class="p">;</span>  <span class="c1">// 单月最大盈利</span>
+
+<span class="nv">$times</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>  <span class="c1">// 测试轮回数（年数）</span>
+<span class="nv">$sum</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nv">$times</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> 
+
+	<span class="nv">$init</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>  <span class="c1">// 初始值</span>
+	<span class="nv">$num</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>  <span class="c1">// 12个月</span>
+
+	<span class="k">for</span><span class="p">(</span><span class="nv">$j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nv">$j</span> <span class="o">&lt;=</span> <span class="nv">$num</span><span class="p">;</span> <span class="nv">$j</span><span class="o">++</span><span class="p">){</span>
+  		<span class="nv">$r</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">mt_rand</span><span class="p">(</span><span class="nv">$lower</span><span class="p">,</span><span class="nv">$higher</span><span class="p">)</span><span class="o">/</span><span class="mf">100.0</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+  		<span class="nv">$init</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nv">$init</span> <span class="o">*</span> <span class="nv">$r</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="nv">$sum</span> <span class="o">+=</span> <span class="nv">$init</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nv">$r</span> <span class="o">=</span> <span class="p">(</span><span class="nv">$sum</span><span class="o">/</span><span class="nv">$times</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="mf">100.0</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">平均收益率：</span><span class="nv">$r</span><span class="s2">%</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><strong><u>如果控制单月最大亏损5%以内，在单月盈利上限为10%的情况下，年（12个月）预期收益大约为35%左右。</u></strong></p>
+:ET

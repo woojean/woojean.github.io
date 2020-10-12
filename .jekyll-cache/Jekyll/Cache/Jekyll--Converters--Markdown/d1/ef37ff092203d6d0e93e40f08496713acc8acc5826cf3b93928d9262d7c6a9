@@ -1,0 +1,512 @@
+I"��<ul id="markdown-toc">
+  <li><a href="#1-部署后端服务代码" id="markdown-toc-1-部署后端服务代码">1. 部署后端服务代码</a></li>
+  <li><a href="#2-绑定域名" id="markdown-toc-2-绑定域名">2. 绑定域名</a></li>
+  <li><a href="#3-登录微信公众号后台设置服务器配置" id="markdown-toc-3-登录微信公众号后台设置服务器配置">3. 登录微信公众号后台，设置服务器配置</a></li>
+  <li><a href="#4-后台代码配置" id="markdown-toc-4-后台代码配置">4. 后台代码配置</a>    <ul>
+      <li><a href="#1配置文件" id="markdown-toc-1配置文件">（1）配置文件</a></li>
+      <li><a href="#2注册di服务" id="markdown-toc-2注册di服务">（2）注册DI服务</a></li>
+    </ul>
+  </li>
+  <li><a href="#5-开发获取jssdk配置的接口" id="markdown-toc-5-开发获取jssdk配置的接口">5. 开发获取jsSDK配置的接口</a></li>
+  <li><a href="#6-登录微信公众号管理后台设置各种域名" id="markdown-toc-6-登录微信公众号管理后台设置各种域名">6. 登录微信公众号管理后台设置各种域名</a></li>
+  <li><a href="#7-开发获取用户open_id的接口" id="markdown-toc-7-开发获取用户open_id的接口">7. 开发获取用户open_id的接口</a>    <ul>
+      <li><a href="#1开发获取用户信息的中间页路由" id="markdown-toc-1开发获取用户信息的中间页路由">（1）开发获取用户信息的中间页路由</a></li>
+      <li><a href="#2处理微信获取用户信息后的回调" id="markdown-toc-2处理微信获取用户信息后的回调">（2）处理微信获取用户信息后的回调</a></li>
+    </ul>
+  </li>
+  <li><a href="#8-开发获取支付配置的接口" id="markdown-toc-8-开发获取支付配置的接口">8. 开发获取支付配置的接口</a></li>
+  <li><a href="#9-开发微信支付前端页面" id="markdown-toc-9-开发微信支付前端页面">9. 开发微信支付前端页面</a></li>
+  <li><a href="#10-处理微信支付成功的回调" id="markdown-toc-10-处理微信支付成功的回调">10. 处理微信支付成功的回调</a></li>
+</ul>
+
+<p>本文总结了项目中开发微信公众号支付功能的核心流程，主要包括：</p>
+<ul>
+  <li>开发微信支付的各种账号、域名的配置;</li>
+  <li>获取微信用户信息（open_id）;</li>
+  <li>下发微信jsSDK配置的接口;</li>
+  <li>下发微信支付配置的接口;</li>
+  <li>一个js调用微信支付的前端页面demo;</li>
+  <li>处理微信支付结果回调;</li>
+</ul>
+
+<h1 id="1-部署后端服务代码">1. 部署后端服务代码</h1>
+<p>登录服务器（比如阿里云ecs）：</p>
+<ul>
+  <li>拉代码</li>
+  <li>新增nginx vhost配置
+mobile.conf
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server {
+listen  80;
+server_name mobile.demo.com;
+// ... 详略
+</code></pre></div>    </div>
+  </li>
+  <li>绑定host：
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.0.0.0 mobile.demo.com
+</code></pre></div>    </div>
+  </li>
+  <li>reload nginx:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nginx -s reload
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="2-绑定域名">2. 绑定域名</h1>
+<p>demo.com A记录：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mobile 106.14.**.**
+</code></pre></div></div>
+
+<h1 id="3-登录微信公众号后台设置服务器配置">3. 登录微信公众号后台，设置服务器配置</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>url: http://mobile.demo.com/wechat/callback  // 主要用于处理微信事件回调，比如用户关注、发消息等，本例用不到
+token: ***
+EncodingAESKey : 随机
+</code></pre></div></div>
+
+<h1 id="4-后台代码配置">4. 后台代码配置</h1>
+<p>后台项目使用Phalcon框架实现，以下为config.ini文件的配置。
+其他语言、框架的配置类似，只要能够被后端代码读取就行，这里只是用来说明需要哪些配置项。</p>
+<h2 id="1配置文件">（1）配置文件</h2>
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[wechat]</span>
+<span class="py">DEBUG</span> <span class="p">=</span> <span class="c">; 为true时，可以打印一些log 
+</span><span class="s">WECHAT_APPID = ; 微信公众号的APPID</span>
+<span class="py">WECHAT_SECRET</span> <span class="p">=</span> <span class="c">; 微信公众号的SECRET
+</span><span class="s">WECHAT_TOKEN = ; 微信公众号的TOKEN</span>
+<span class="py">WECHAT_AES_KEY</span> <span class="p">=</span> <span class="c">; 微信公众号的AES_KEY
+</span><span class="s">MERCHAT_ID = ; 商户平台ID</span>
+<span class="py">MERCHAT_KEY</span> <span class="p">=</span> <span class="c">; 商户平台API密钥
+</span><span class="s">CERT_PATH = ; 商户平台apiclient_cert.pem证书位置（绝对路径）</span>
+<span class="py">KEY_PATH</span> <span class="p">=</span> <span class="c">; 商户平台apiclient_key.pem证书位置（绝对路径）
+</span><span class="s">NOTIFY_URL = ; 默认的支付成功回调URL，可以在实际调用时覆盖</span>
+</code></pre></div></div>
+
+<h2 id="2注册di服务">（2）注册DI服务</h2>
+<p>后台项目使用Phalcon框架实现，以下为\Phalcon\Mvc\Micro的DI配置，其他语言、框架的配置类似。</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="c1">// ...</span>
+
+<span class="nv">$di</span><span class="o">-&gt;</span><span class="nf">setShared</span><span class="p">(</span><span class="s1">'wechat'</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$di</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$options</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">'debug'</span>  <span class="o">=&gt;</span> <span class="nv">$di</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'config'</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="p">[</span><span class="s1">'DEBUG'</span><span class="p">],</span>
+    <span class="s1">'app_id'</span> <span class="o">=&gt;</span> <span class="nv">$di</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'config'</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="p">[</span><span class="s1">'WECHAT_APPID'</span><span class="p">],</span>
+    <span class="s1">'secret'</span> <span class="o">=&gt;</span> <span class="nv">$di</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'config'</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="p">[</span><span class="s1">'WECHAT_SECRET'</span><span class="p">],</span>
+    <span class="s1">'token'</span>  <span class="o">=&gt;</span> <span class="nv">$di</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'config'</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="p">[</span><span class="s1">'WECHAT_TOKEN'</span><span class="p">],</span>
+    <span class="c1">// 'aes_key' =&gt; null, // 可选</span>
+  
+    <span class="s1">'log'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+      <span class="s1">'level'</span> <span class="o">=&gt;</span> <span class="s1">'debug'</span><span class="p">,</span>
+      <span class="s1">'file'</span>  <span class="o">=&gt;</span> <span class="no">DIR_LOG</span> <span class="mf">.</span> <span class="s1">'/easywechat.log'</span><span class="p">,</span>
+    <span class="p">],</span>
+
+    <span class="s1">'oauth'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+      <span class="s1">'scopes'</span>   <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'snsapi_userinfo'</span><span class="p">],</span>    <span class="c1">// 公众平台网页授权获取用户信息</span>
+      <span class="s1">'callback'</span> <span class="o">=&gt;</span> <span class="s1">'/wechat/authcallback'</span><span class="p">,</span> <span class="c1">// 获取用户信息后的回调页面</span>
+    <span class="p">],</span>
+
+    <span class="s1">'payment'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+      <span class="s1">'merchant_id'</span> <span class="o">=&gt;</span> <span class="nv">$di</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'config'</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="p">[</span><span class="s1">'MERCHAT_ID'</span><span class="p">],</span>
+      <span class="s1">'key'</span>         <span class="o">=&gt;</span> <span class="nv">$di</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'config'</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="p">[</span><span class="s1">'MERCHAT_KEY'</span><span class="p">],</span>
+      <span class="s1">'cert_path'</span>   <span class="o">=&gt;</span> <span class="nv">$di</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'config'</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="p">[</span><span class="s1">'CERT_PATH'</span><span class="p">],</span>
+      <span class="s1">'key_path'</span>    <span class="o">=&gt;</span> <span class="nv">$di</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'config'</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="p">[</span><span class="s1">'KEY_PATH'</span><span class="p">],</span>
+      <span class="s1">'notify_url'</span>  <span class="o">=&gt;</span> <span class="nv">$di</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'config'</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="p">[</span><span class="s1">'NOTIFY_URL'</span><span class="p">],</span> 
+    <span class="p">],</span>
+<span class="p">];</span>
+
+  <span class="nv">$wechatApplication</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Application</span><span class="p">(</span><span class="nv">$options</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nv">$wechatApplication</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h1 id="5-开发获取jssdk配置的接口">5. 开发获取jsSDK配置的接口</h1>
+<p>使用的easyWechat开源库，在phalcon DI中注册实例为wechat（读取配置，返回实例对象，详细代码略）。</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="c1">// ...</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="n">jsSdkAction</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="o">-&gt;</span><span class="n">js</span><span class="o">-&gt;</span><span class="nf">setUrl</span><span class="p">(</span><span class="nb">urldecode</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">input</span><span class="p">[</span><span class="s1">'url'</span><span class="p">]));</span>
+
+  <span class="c1">// getBrandWCPayRequest为需要调用的wx js接口</span>
+  <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">responseData</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="o">-&gt;</span><span class="n">js</span><span class="o">-&gt;</span><span class="nf">config</span><span class="p">(</span>
+    <span class="nv">$apiArray</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'getBrandWCPayRequest'</span><span class="p">,]</span>
+  <span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>测试：
+http://mobile.demo.com/wechat/jsSdk
+返回：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "success": true,
+  "data": "{\"debug\":false,\"beta\":false,\"appId\":\"wx2dbfcf8d32f00e22\",\"nonceStr\":\"H1Tz1QW9xi\",\"timestamp\":1491669904,\"url\":\"http:\\/\\/mobile.demo.com\\/wechat\\/jsSdk\",\"signature\":\"250eb980e3326bc502384193a224af969965cfbf\",\"jsApiList\":[\"getBrandWCPayRequest\"]}",
+  "code": 1,
+  "message": "成功"
+}
+</code></pre></div></div>
+<p>猜测前端拿到数据后，通过wxJsBridge唤起微信支付时，微信会通过nonceStr加其他数据生成签名后与signature进行比较来判断真实性。</p>
+
+<h1 id="6-登录微信公众号管理后台设置各种域名">6. 登录微信公众号管理后台设置各种域名</h1>
+<ul>
+  <li>设置<code class="language-plaintext highlighter-rouge">js接口安全域名</code> mobile.demo.com</li>
+  <li>设置<code class="language-plaintext highlighter-rouge">业务域名</code> mobile.demo.com  // 这样微信在访问该域名时就不会弹出警告信息，影响排版</li>
+  <li><code class="language-plaintext highlighter-rouge">授权回调页面域名</code> mobile.demo.com  // 用户在网页授权页同意授权给公众号后，微信会将授权数据传给一个回调页面，回调页面需在此域名下，以确保安全可靠。</li>
+  <li>公众号支付-<code class="language-plaintext highlighter-rouge">支付授权目录</code> http://mobile.demo.com/</li>
+</ul>
+
+<h1 id="7-开发获取用户open_id的接口">7. 开发获取用户open_id的接口</h1>
+<p>因为调用微信支付统一下单接口需要open_id，所以需要获取用户的open_id。大体步骤如下：</p>
+<h2 id="1开发获取用户信息的中间页路由">（1）开发获取用户信息的中间页路由</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="c1">// ...</span>
+
+<span class="c1">// wechat/authpage</span>
+<span class="k">public</span> <span class="k">function</span> <span class="n">authpageAction</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="cm">/* 
+    用户将实际需要访问的页面的路由作为参数来访问该路由
+    比如需要访问http://mobile.demo.com/jsWxPayDemo.html，而该页面需要用到open_id，那么实际的访问地址为：
+    http://mobile.demo.com/wechat/authpage?redirect=jsWxPayDemo.html
+  */</span>
+  
+  <span class="nv">$page</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">input</span><span class="p">[</span><span class="k">self</span><span class="o">::</span><span class="no">REDIRECT_PAGE</span><span class="p">];</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nb">empty</span><span class="p">(</span><span class="nv">$page</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$page</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// 判断open_id是否已存在，只有在不存在的情况下才需要获取</span>
+  <span class="nv">$openId</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">cookieData</span><span class="p">[</span><span class="s1">'open_id'</span><span class="p">];</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">empty</span><span class="p">(</span><span class="nv">$openId</span><span class="p">))</span> <span class="p">{</span>
+    <span class="c1">// open_id已存在，则直接跳转相应的页面</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">redirectPage</span><span class="p">(</span><span class="nv">$page</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// open_id不存在，需要走获取open_id的流程：</span>
+    <span class="c1">// 将当期用户需要访问的页面路由存入session中；</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">session</span><span class="o">-&gt;</span><span class="nf">set</span><span class="p">(</span><span class="k">self</span><span class="o">::</span><span class="no">REDIRECT_PAGE</span><span class="p">,</span> <span class="nv">$page</span><span class="p">);</span>
+
+    <span class="c1">// 重定向至微信OAuth认证页面</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="o">-&gt;</span><span class="n">oauth</span><span class="o">-&gt;</span><span class="nf">redirect</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">send</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="2处理微信获取用户信息后的回调">（2）处理微信获取用户信息后的回调</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="c1">// ...</span>
+
+<span class="c1">// wechat/authcallback</span>
+<span class="k">public</span> <span class="k">function</span> <span class="n">authcallbackAction</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="nv">$openId</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$oauth</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="o">-&gt;</span><span class="n">oauth</span><span class="p">;</span>
+    <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$oauth</span><span class="o">-&gt;</span><span class="nf">user</span><span class="p">();</span>
+    <span class="nv">$openId</span> <span class="o">=</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="nf">getId</span><span class="p">();</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="err">\</span><span class="nc">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">log</span><span class="o">-&gt;</span><span class="nf">error</span><span class="p">(</span><span class="s1">'openId获取失败！'</span><span class="p">);</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">log</span><span class="o">-&gt;</span><span class="nf">error</span><span class="p">(</span><span class="nb">json_encode</span><span class="p">(</span><span class="nv">$e</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="c1">// 将获取到的微信用户信息存入cookie中</span>
+  <span class="nc">CommonBusiness</span><span class="o">::</span><span class="nf">instance</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">updateCookies</span><span class="p">(</span><span class="nc">CookieKeys</span><span class="o">::</span><span class="no">COOKIES_USER_INFO</span><span class="p">,</span> <span class="p">[</span>
+    <span class="s1">'open_id'</span> <span class="o">=&gt;</span> <span class="nv">$openId</span><span class="p">,</span>
+  <span class="p">]);</span>
+
+  <span class="c1">// 从session中获取用户的实际访问路由</span>
+  <span class="nv">$page</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">session</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="k">self</span><span class="o">::</span><span class="no">REDIRECT_PAGE</span><span class="p">);</span>
+
+  <span class="c1">// 重定向至用户路由</span>
+  <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">redirectPage</span><span class="p">(</span><span class="nv">$page</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="8-开发获取支付配置的接口">8. 开发获取支付配置的接口</h1>
+<p>本例是通过微信支付充值平台点数。</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="c1">// ...</span>
+
+<span class="c1">// wechat/chargePayConfig</span>
+<span class="k">public</span> <span class="k">function</span> <span class="n">chargePayConfigAction</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="c1">// 判断登录态 &amp; 获取当前用户信息</span>
+  <span class="nv">$userInfo</span> <span class="o">=</span> <span class="nc">UserBusiness</span><span class="o">::</span><span class="nf">instance</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">getCurrentUser</span><span class="p">();</span>
+  <span class="k">if</span><span class="p">(</span><span class="nb">empty</span><span class="p">(</span><span class="nv">$userInfo</span><span class="p">)){</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">responseError</span><span class="p">(</span><span class="s1">'请登录！'</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// 获取充值点数</span>
+  <span class="nv">$chance</span> <span class="o">=</span> <span class="nb">intval</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">input</span><span class="p">[</span><span class="s1">'chance'</span><span class="p">]);</span>
+  <span class="k">if</span><span class="p">(</span><span class="nv">$chance</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">responseError</span><span class="p">(</span><span class="s1">'充值点数非法！'</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// 新建充值记录信息（充值记录类似订单）</span>
+  <span class="nv">$chargeInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ChanceChargeInfo</span><span class="p">();</span>
+  <span class="nv">$chargeInfo</span><span class="o">-&gt;</span><span class="n">chance</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">input</span><span class="p">[</span><span class="s1">'chance'</span><span class="p">];</span>
+  <span class="nv">$chargeInfo</span><span class="o">-&gt;</span><span class="n">userId</span> <span class="o">=</span> <span class="nv">$userInfo</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">;</span>
+  <span class="nv">$chargeInfo</span><span class="o">-&gt;</span><span class="n">paidAmount</span> <span class="o">=</span> <span class="nv">$chance</span> <span class="o">*</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// 1个充值点数 = 1分钱人民币</span>
+  <span class="nv">$chargeInfo</span><span class="o">-&gt;</span><span class="n">status</span> <span class="o">=</span> <span class="nc">ChanceChargeStatus</span><span class="o">::</span><span class="no">UNPAID</span><span class="p">;</span> <span class="c1">// 充值记录的状态为待付款</span>
+
+  <span class="nv">$service</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ChanceChargeInfoService</span><span class="p">();</span>
+  <span class="nv">$ret</span> <span class="o">=</span> <span class="nv">$service</span><span class="o">-&gt;</span><span class="nf">add</span><span class="p">(</span><span class="nv">$chargeInfo</span><span class="p">);</span>
+  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nv">$ret</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">responseError</span><span class="p">(</span><span class="s1">'充值记录创建失败！'</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// 获取本次充值记录的微信支付配置（最终通过调用微信支付统一下单接口得到）</span>
+  <span class="nv">$ret</span> <span class="o">=</span>  <span class="nc">WechatBusiness</span><span class="o">::</span><span class="nf">instance</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">getChargePayConfig</span><span class="p">(</span><span class="nv">$chargeInfo</span><span class="p">);</span>
+  <span class="k">if</span><span class="p">(</span><span class="kc">false</span> <span class="o">===</span> <span class="nv">$ret</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">responseError</span><span class="p">(</span><span class="s1">'充值订单创建失败！'</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="nf">responseData</span><span class="p">(</span><span class="nv">$ret</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>实际获取微信支付配置的代码如下：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="c1">// ...</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="n">getChargePayConfig</span><span class="p">(</span><span class="kt">ChanceChargeInfo</span> <span class="nv">$info</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">// 设置参数</span>
+  <span class="nv">$attributes</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">'trade_type'</span>   <span class="o">=&gt;</span> <span class="s1">'JSAPI'</span><span class="p">,</span>      <span class="c1">// 通过jsSDK拉起微信支付</span>
+    <span class="s1">'body'</span>         <span class="o">=&gt;</span> <span class="s1">'充值测试'</span><span class="p">,</span>  
+    <span class="s1">'detail'</span>       <span class="o">=&gt;</span> <span class="s1">'充值支付详情'</span><span class="p">,</span> 
+    <span class="s1">'out_trade_no'</span> <span class="o">=&gt;</span> <span class="nv">$info</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">,</span> <span class="c1">// 重要！用于支付成功后回调时判断是哪个订单</span>
+    <span class="s1">'total_fee'</span>    <span class="o">=&gt;</span> <span class="nv">$info</span><span class="o">-&gt;</span><span class="n">paidAmount</span><span class="p">,</span> <span class="c1">// 单位：分</span>
+    <span class="s1">'notify_url'</span>   <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">config</span><span class="o">-&gt;</span><span class="n">env</span><span class="p">[</span><span class="s1">'host'</span><span class="p">]</span><span class="mf">.</span><span class="s1">'/callback/chargePaid'</span><span class="p">,</span> <span class="c1">// 重要！用于告诉微信，支付成功后的回调</span>
+    <span class="s1">'openid'</span>       <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">cookieData</span><span class="p">[</span><span class="s1">'open_id'</span><span class="p">],</span> <span class="c1">// 用户的open_id</span>
+  <span class="p">];</span>
+
+  <span class="c1">// 创建微信支付订单</span>
+  <span class="nv">$order</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Order</span><span class="p">(</span><span class="nv">$attributes</span><span class="p">);</span>
+
+  <span class="c1">// 获取支付配置</span>
+  <span class="nv">$ret</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="o">-&gt;</span><span class="n">payment</span><span class="o">-&gt;</span><span class="nf">prepare</span><span class="p">(</span><span class="nv">$order</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nv">$ret</span><span class="o">-&gt;</span><span class="n">return_code</span> <span class="o">==</span> <span class="s1">'SUCCESS'</span> <span class="o">&amp;&amp;</span> <span class="nv">$ret</span><span class="o">-&gt;</span><span class="n">result_code</span> <span class="o">==</span> <span class="s1">'SUCCESS'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="o">-&gt;</span><span class="n">payment</span><span class="o">-&gt;</span><span class="nf">configForJSSDKPayment</span><span class="p">(</span><span class="nv">$ret</span><span class="o">-&gt;</span><span class="n">prepay_id</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">FALSE</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="9-开发微信支付前端页面">9. 开发微信支付前端页面</h1>
+<p>本节参考微信官方文档写了一个最基本的微信支付前端页面：<code class="language-plaintext highlighter-rouge">/jsWxPayDemo.html</code>
+因为微信支付需要获取微信用户信息（open_id），所以不能直接跳转相应的支付页面，而是应该先跳转获取微信用户信息的中间页，根据前文，实际的跳转地址为：http://mobile.demo.com/wechat/authpage?redirect=jsWxPayDemo.html，可以将该地址配置为微信公众号的菜单。</p>
+
+<p>大体的工作流程分为两步：</p>
+<ul>
+  <li>（1）调用jsSDK配置下发接口，获取到微信jsSDK配置后，配置wx对象；</li>
+  <li>（2）提供一个触发支付的方式（点击按钮），在事件触发后，调用下发微信支付配置的接口，用获取到的数据拉起微信支付；
+全文如下：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;script src="https://code.jquery.com/jquery-3.2.1.min.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;script&gt;
+    $(document).ready(function () {
+        console.log(wx);
+        var wxPayConfig = null;
+        var wxJsConfig = null;
+
+        // ====================== jsSDK Config ======================
+        //var currUrl = 'http://mobile.bz.com/jsWxPayDemo.html';
+        var currUrl = 'http://mobile.demo.com/jsWxPayDemo.html';
+
+        // 先请求后端接口，获取jsSDK的配置信息
+        // url为当前页面的url，在使用了react router的情况下，可能是根url，而不是前端的url
+        $.post("/wechat/jsSdkConfig",
+            {url: currUrl},
+            function (ret, status) {
+                // todo 错误处理
+                wxJsConfig = JSON.parse(ret.data);
+
+                // debug
+                alert(JSON.stringify(wxJsConfig));
+
+                // 配置wx对象，这样才能使用wxJsBridge的接口，包括支付、定位、扫码等等
+                wx.config({
+                    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                    appId: wxJsConfig.appId, // 必填，公众号的唯一标识
+                    timestamp: wxJsConfig.timestamp, // 必填，生成签名的时间戳
+                    nonceStr: wxJsConfig.nonceStr, // 必填，生成签名的随机串
+                    signature: wxJsConfig.signature,// 必填，签名，见附录1
+                    jsApiList: wxJsConfig.jsApiList // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                });
+            }
+        );
+
+        // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+        wx.ready(function () {
+            alert('config ready!');
+            // todo
+        });
+
+        // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+        wx.error(function (res) {
+            alert('config error!');
+            // todo
+        });
+
+
+        $("#btn").click(function () {
+
+            // ====================== wxpay Config ======================
+            // 获取支付配置（后台会创建预支付订单，微信支付成功后回调处理订单状态）
+            $.post("/wechat/chargePayConfig",
+                {chance: 1},
+                function (ret, status) {
+                    // todo 错误处理
+                    wxPayConfig = ret.data;
+
+                    // debug
+                    alert(JSON.stringify(wxPayConfig));
+
+                    // 发起支付
+                    wx.chooseWXPay({
+                        timestamp: wxPayConfig.timestamp, // 支付签名时间戳，注意微信jssdk中的所有使用timestamp字段均为小写。但最新版的支付后台生成签名使用的timeStamp字段名需大写其中的S字符
+                        nonceStr: wxPayConfig.nonceStr, // 支付签名随机串，不长于 32 位
+                        package: wxPayConfig.package, // 统一支付接口返回的prepay_id参数值，提交格式如：prepay_id=***）
+                        signType: wxPayConfig.signType, // 签名方式，默认为'SHA1'，使用新版支付需传入'MD5'
+                        paySign: wxPayConfig.paySign, // 支付签名
+                        success: function (res) {
+                            // 支付成功后的回调函数，比如展示支付成功
+                            // todo
+                            alert('支付成功！');
+                        }
+                    });
+
+                }
+            );
+
+        });
+    });
+&lt;/script&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+
+&lt;button id="btn"&gt;支付测试&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h1 id="10-处理微信支付成功的回调">10. 处理微信支付成功的回调</h1>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="c1">// ...</span>
+
+<span class="c1">// callback/chargePaid</span>
+<span class="k">public</span> <span class="k">function</span> <span class="n">chargePaidAction</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="c1">// $this-&gt;log-&gt;info($this-&gt;request-&gt;get());</span>
+  <span class="nv">$response</span> <span class="o">=</span>  <span class="nc">ChanceBusiness</span><span class="o">::</span><span class="nf">instance</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">paidCallback</span><span class="p">();</span>
+  <span class="nv">$response</span><span class="o">-&gt;</span><span class="nf">send</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>实际的处理逻辑：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="c1">// ...</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="n">paidCallback</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">wechat</span><span class="o">-&gt;</span><span class="n">payment</span><span class="o">-&gt;</span><span class="nf">handleNotify</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nv">$notify</span><span class="p">,</span> <span class="nv">$successful</span><span class="p">)</span> <span class="p">{</span>
+            
+  <span class="c1">// 获取充值订单</span>
+  <span class="nv">$chanceChargeInfoService</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ChanceChargeInfoService</span><span class="p">();</span>
+  <span class="nv">$chanceChargeInfo</span> <span class="o">=</span> <span class="nv">$chanceChargeInfoService</span><span class="o">-&gt;</span><span class="nf">findById</span><span class="p">(</span><span class="nv">$notify</span><span class="o">-&gt;</span><span class="n">out_trade_no</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$chanceChargeInfo</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="kc">FALSE</span><span class="p">;</span>  <span class="c1">// 通知微信,充值订单不存在</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 如果已支付,或者已取消,则跳过(因为可能多次通知)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$chanceChargeInfo</span><span class="o">-&gt;</span><span class="n">status</span> <span class="o">!=</span> <span class="nc">ChanceChargeStatus</span><span class="o">::</span><span class="no">UNPAID</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="kc">TRUE</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 更新用户充值信息</span>
+    <span class="nv">$chanceInfoService</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ChanceInfoService</span><span class="p">();</span>
+    <span class="nv">$chanceInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ChanceInfo</span><span class="p">();</span>
+    <span class="nv">$chanceInfo</span><span class="o">-&gt;</span><span class="n">userId</span> <span class="o">=</span> <span class="nv">$chanceChargeInfo</span><span class="o">-&gt;</span><span class="n">userId</span><span class="p">;</span>
+    <span class="nv">$chanceInfo</span> <span class="o">=</span> <span class="nv">$chanceInfoService</span><span class="o">-&gt;</span><span class="nf">findUnique</span><span class="p">(</span><span class="nv">$chanceInfo</span><span class="p">);</span>
+  
+    <span class="k">if</span> <span class="p">(</span><span class="nb">empty</span><span class="p">(</span><span class="nv">$chanceInfo</span><span class="p">))</span> <span class="p">{</span>
+      <span class="c1">// 出错</span>
+      <span class="k">if</span> <span class="p">(</span><span class="kc">FALSE</span> <span class="o">===</span> <span class="nv">$chanceInfo</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">FALSE</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="c1">// 尚无记录,新建一条</span>
+      <span class="nv">$chanceInfo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ChanceInfo</span><span class="p">();</span>
+      <span class="nv">$chanceInfo</span><span class="o">-&gt;</span><span class="n">userId</span> <span class="o">=</span> <span class="nv">$chanceChargeInfo</span><span class="o">-&gt;</span><span class="n">userId</span><span class="p">;</span>
+      <span class="nv">$chanceInfo</span><span class="o">-&gt;</span><span class="n">chance</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="nv">$chanceInfo</span> <span class="o">=</span> <span class="nv">$chanceInfoService</span><span class="o">-&gt;</span><span class="nf">add</span><span class="p">(</span><span class="nv">$chanceInfo</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$chanceInfo</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">FALSE</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 使用事务更新相关订单</span>
+    <span class="nv">$transactionConn</span> <span class="o">=</span> <span class="nc">TransactionManager</span><span class="o">::</span><span class="nf">start</span><span class="p">(</span><span class="nv">$chanceChargeInfoService</span><span class="p">,</span> <span class="nv">$chanceInfoService</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$successful</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 支付成功</span>
+      <span class="nv">$chanceChargeInfo</span><span class="o">-&gt;</span><span class="n">status</span> <span class="o">=</span> <span class="nc">ChanceChargeStatus</span><span class="o">::</span><span class="no">PAID</span><span class="p">;</span>
+      <span class="nv">$chanceChargeInfo</span><span class="o">-&gt;</span><span class="n">transactionId</span> <span class="o">=</span> <span class="nv">$notify</span><span class="o">-&gt;</span><span class="n">transaction_id</span><span class="p">;</span>
+      <span class="nv">$chanceChargeInfo</span><span class="o">-&gt;</span><span class="n">remark</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$notify</span><span class="p">);</span>
+      <span class="nv">$chanceInfo</span><span class="o">-&gt;</span><span class="n">chance</span> <span class="o">+=</span> <span class="nv">$chanceChargeInfo</span><span class="o">-&gt;</span><span class="n">chance</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// 支付失败</span>
+      <span class="nv">$chanceChargeInfo</span><span class="o">-&gt;</span><span class="n">status</span> <span class="o">=</span> <span class="nc">ChanceChargeStatus</span><span class="o">::</span><span class="no">CANCELED</span><span class="p">;</span>
+      <span class="nv">$chanceChargeInfo</span><span class="o">-&gt;</span><span class="n">remark</span> <span class="o">=</span> <span class="s1">'支付失败'</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// 修改充值订单状态</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$chanceChargeInfoService</span><span class="o">-&gt;</span><span class="nf">update</span><span class="p">(</span><span class="nv">$chanceChargeInfo</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nc">TransactionManager</span><span class="o">::</span><span class="nf">rollback</span><span class="p">(</span><span class="nv">$transactionConn</span><span class="p">);</span>
+      <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">log</span><span class="o">-&gt;</span><span class="nf">error</span><span class="p">(</span><span class="s1">'充值记录付款回调失败: '</span> <span class="mf">.</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$chanceChargeInfo</span><span class="p">));</span>
+      <span class="k">return</span> <span class="kc">FALSE</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// 修改用户当前点数</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$chanceInfoService</span><span class="o">-&gt;</span><span class="nf">update</span><span class="p">(</span><span class="nv">$chanceInfo</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nc">TransactionManager</span><span class="o">::</span><span class="nf">rollback</span><span class="p">(</span><span class="nv">$transactionConn</span><span class="p">);</span>
+      <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">log</span><span class="o">-&gt;</span><span class="nf">error</span><span class="p">(</span><span class="s1">'用户充值点数更新失败: '</span> <span class="mf">.</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$chanceInfo</span><span class="p">));</span>
+      <span class="k">return</span> <span class="kc">FALSE</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nc">TransactionManager</span><span class="o">::</span><span class="nf">commit</span><span class="p">(</span><span class="nv">$transactionConn</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="kc">TRUE</span><span class="p">;</span>
+  <span class="p">});</span>
+
+  <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>$notify的内容：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "appid": "wx2dbfcf8d32f00e22",
+    "bank_type": "CFT",
+    "cash_fee": "1",
+    "fee_type": "CNY",
+    "is_subscribe": "Y",
+    "mch_id": "**",
+    "nonce_str": "58e9dd0b356e4",
+    "openid": "omSPewKRJuP0oIpJFVGdB-ntnOJo",
+    "out_trade_no": "60",
+    "result_code": "SUCCESS",
+    "return_code": "SUCCESS",
+    "sign": "7A5B833C1645D0A7BBBD1E84F7950FB0",
+    "time_end": "20170409150452",
+    "total_fee": "1",
+    "trade_type": "JSAPI",
+    "transaction_id": "4008012001201704096413270224"
+}
+</code></pre></div></div>
+
+:ET

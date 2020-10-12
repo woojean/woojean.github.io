@@ -1,0 +1,941 @@
+I">�<ul id="markdown-toc">
+  <li><a href="#getting-started-with-mongodb-mongodb-shell-edition" id="markdown-toc-getting-started-with-mongodb-mongodb-shell-edition">Getting Started with MongoDB (MongoDB Shell Edition)</a>    <ul>
+      <li><a href="#introduction-to-mongodb" id="markdown-toc-introduction-to-mongodb">Introduction to MongoDB</a></li>
+      <li><a href="#install-mongodb" id="markdown-toc-install-mongodb">Install MongoDB</a></li>
+      <li><a href="#mongodb-shell-mongo" id="markdown-toc-mongodb-shell-mongo">MongoDB Shell (mongo)</a></li>
+      <li><a href="#insert-data-with-the-mongo-shell" id="markdown-toc-insert-data-with-the-mongo-shell">Insert Data with the mongo Shell</a></li>
+      <li><a href="#find-or-query-data-with-the-mongo-shell" id="markdown-toc-find-or-query-data-with-the-mongo-shell">Find or Query Data with the mongo Shell</a></li>
+      <li><a href="#update-data-with-the-mongo-shell" id="markdown-toc-update-data-with-the-mongo-shell">Update Data with the mongo Shell</a></li>
+      <li><a href="#remove-data-with-the-mongo-shell" id="markdown-toc-remove-data-with-the-mongo-shell">Remove Data with the mongo Shell</a></li>
+      <li><a href="#data-aggregation-with-the-mongo-shell" id="markdown-toc-data-aggregation-with-the-mongo-shell">Data Aggregation with the mongo Shell</a></li>
+      <li><a href="#indexes-with-the-mongo-shell" id="markdown-toc-indexes-with-the-mongo-shell">Indexes with the mongo Shell</a></li>
+      <li><a href="#drivers" id="markdown-toc-drivers">Drivers</a></li>
+    </ul>
+  </li>
+  <li><a href="#introduction-to-mongodb-1" id="markdown-toc-introduction-to-mongodb-1">Introduction to MongoDB</a>    <ul>
+      <li><a href="#databases-and-collections" id="markdown-toc-databases-and-collections">Databases and Collections</a>        <ul>
+          <li><a href="#views" id="markdown-toc-views">Views</a></li>
+          <li><a href="#capped-collections" id="markdown-toc-capped-collections">Capped Collections</a></li>
+        </ul>
+      </li>
+      <li><a href="#documents" id="markdown-toc-documents">Documents</a></li>
+      <li><a href="#bson-types" id="markdown-toc-bson-types">BSON Types</a></li>
+      <li><a href="#comparisonsort-order" id="markdown-toc-comparisonsort-order">Comparison/Sort Order</a></li>
+      <li><a href="#mongodb-extended-json" id="markdown-toc-mongodb-extended-json">MongoDB Extended JSON</a></li>
+    </ul>
+  </li>
+  <li><a href="#install-mongodb-1" id="markdown-toc-install-mongodb-1">Install MongoDB</a></li>
+  <li><a href="#the-mongo-shell" id="markdown-toc-the-mongo-shell">The Mongo Shell</a>    <ul>
+      <li><a href="#configure-the-mongo-shell" id="markdown-toc-configure-the-mongo-shell">Configure the mongo Shell</a></li>
+      <li><a href="#access-the-mongo-shell-help" id="markdown-toc-access-the-mongo-shell-help">Access the mongo Shell Help</a></li>
+      <li><a href="#write-scripts-for-the-mongo-shell" id="markdown-toc-write-scripts-for-the-mongo-shell">Write Scripts for the mongo Shell</a></li>
+      <li><a href="#data-types-in-the-mongo-shell" id="markdown-toc-data-types-in-the-mongo-shell">Data Types in the mongo Shell</a></li>
+      <li><a href="#mongo-shell-quick-reference" id="markdown-toc-mongo-shell-quick-reference">mongo Shell Quick Reference</a></li>
+    </ul>
+  </li>
+  <li><a href="#mongodb-crud-operations" id="markdown-toc-mongodb-crud-operations">MongoDB CRUD Operations</a>    <ul>
+      <li><a href="#insert-documents" id="markdown-toc-insert-documents">Insert Documents</a></li>
+      <li><a href="#query-documents" id="markdown-toc-query-documents">Query Documents</a>        <ul>
+          <li><a href="#query-on-embeddednested-documents" id="markdown-toc-query-on-embeddednested-documents">Query on Embedded/Nested Documents</a></li>
+          <li><a href="#query-an-array" id="markdown-toc-query-an-array">Query an Array</a></li>
+          <li><a href="#query-an-array-of-embedded-documents" id="markdown-toc-query-an-array-of-embedded-documents">Query an Array of Embedded Documents</a></li>
+          <li><a href="#project-fields-to-return-from-query" id="markdown-toc-project-fields-to-return-from-query">Project Fields to Return from Query</a></li>
+          <li><a href="#query-for-null-or-missing-fields" id="markdown-toc-query-for-null-or-missing-fields">Query for Null or Missing Fields</a></li>
+          <li><a href="#iterate-a-cursor-in-the-mongo-shell" id="markdown-toc-iterate-a-cursor-in-the-mongo-shell">Iterate a Cursor in the mongo Shell</a></li>
+        </ul>
+      </li>
+      <li><a href="#update-documents" id="markdown-toc-update-documents">Update Documents</a>        <ul>
+          <li><a href="#update-methods" id="markdown-toc-update-methods">Update Methods</a></li>
+        </ul>
+      </li>
+      <li><a href="#delete-documents" id="markdown-toc-delete-documents">Delete Documents</a></li>
+      <li><a href="#bulk-write-operations" id="markdown-toc-bulk-write-operations">Bulk Write Operations</a></li>
+      <li><a href="#sql-to-mongodb-mapping-chart" id="markdown-toc-sql-to-mongodb-mapping-chart">SQL to MongoDB Mapping Chart</a></li>
+      <li><a href="#read-concern" id="markdown-toc-read-concern">Read Concern*</a></li>
+      <li><a href="#write-concern" id="markdown-toc-write-concern">Write Concern*</a></li>
+      <li><a href="#mongodb-crud-concepts" id="markdown-toc-mongodb-crud-concepts">MongoDB CRUD Concepts</a>        <ul>
+          <li><a href="#atomicity-and-transactions" id="markdown-toc-atomicity-and-transactions">Atomicity and Transactions</a></li>
+          <li><a href="#read-isolation-consistency-and-recency" id="markdown-toc-read-isolation-consistency-and-recency">Read Isolation, Consistency, and Recency</a></li>
+          <li><a href="#distributed-queries" id="markdown-toc-distributed-queries">Distributed Queries</a></li>
+          <li><a href="#distributed-write-operations" id="markdown-toc-distributed-write-operations">Distributed Write Operations</a></li>
+          <li><a href="#perform-two-phase-commits" id="markdown-toc-perform-two-phase-commits">Perform Two Phase Commits</a></li>
+          <li><a href="#linearizable-reads-via-findandmodify" id="markdown-toc-linearizable-reads-via-findandmodify">Linearizable Reads via findAndModify*</a></li>
+          <li><a href="#query-plans" id="markdown-toc-query-plans">Query Plans</a></li>
+          <li><a href="#query-optimization" id="markdown-toc-query-optimization">Query Optimization</a>            <ul>
+              <li><a href="#创建索引" id="markdown-toc-创建索引">创建索引</a></li>
+              <li><a href="#覆盖索引" id="markdown-toc-覆盖索引">覆盖索引</a></li>
+              <li><a href="#evaluate-performance-of-current-operations" id="markdown-toc-evaluate-performance-of-current-operations">Evaluate Performance of Current Operations</a></li>
+              <li><a href="#optimize-query-performance" id="markdown-toc-optimize-query-performance">Optimize Query Performance</a></li>
+              <li><a href="#write-operation-performance" id="markdown-toc-write-operation-performance">Write Operation Performance</a></li>
+              <li><a href="#explain-results" id="markdown-toc-explain-results">Explain Results*</a></li>
+            </ul>
+          </li>
+          <li><a href="#analyze-query-performance" id="markdown-toc-analyze-query-performance">Analyze Query Performance</a>            <ul>
+              <li><a href="#compare-performance-of-indexes" id="markdown-toc-compare-performance-of-indexes">Compare Performance of Indexes</a></li>
+            </ul>
+          </li>
+          <li><a href="#tailable-cursors" id="markdown-toc-tailable-cursors">Tailable Cursors</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#aggregation" id="markdown-toc-aggregation">Aggregation</a></li>
+</ul>
+
+<p><a href="https://docs.mongodb.com/manual/">MongoDB Manual</a></p>
+
+<h1 id="getting-started-with-mongodb-mongodb-shell-edition">Getting Started with MongoDB (MongoDB Shell Edition)</h1>
+<h2 id="introduction-to-mongodb">Introduction to MongoDB</h2>
+<p>MongoDB是一种基于文档（Document）的数据库，Document的结构类似JSON对象（实际使用BSON对象，具有比JSON更好的查找性能，且能直接存储二进制数据）。
+Document保存在集合（Collections）中，Document对应关系数据库中的一行记录，Collections对应关系数据库中的表。区别在于，关系数据库表中的每一行记录都是同构的，而同一个Collections的不同Document可以异构。
+每一个Document都必须包含一个名为<code class="language-plaintext highlighter-rouge">_id</code>的字段，其作用类似关系数据库的主键。</p>
+
+<h2 id="install-mongodb">Install MongoDB</h2>
+<p>略</p>
+
+<h2 id="mongodb-shell-mongo">MongoDB Shell (mongo)</h2>
+<p>略</p>
+
+<h2 id="insert-data-with-the-mongo-shell">Insert Data with the mongo Shell</h2>
+<p>如果往一个不存在的Collection中添加新的Document，MongoDB会自动创建该Collection。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>use test
+
+db.restaurants.insert(
+   {
+      "address" : {
+         "street" : "2 Avenue",
+         "zipcode" : "10075",
+         "building" : "1480",
+         "coord" : [ -73.9557413, 40.7720266 ]
+      },
+      "borough" : "Manhattan",
+      "cuisine" : "Italian",
+      "grades" : [
+         {
+            "date" : ISODate("2014-10-01T00:00:00Z"),
+            "grade" : "A",
+            "score" : 11
+         },
+         {
+            "date" : ISODate("2014-01-16T00:00:00Z"),
+            "grade" : "B",
+            "score" : 17
+         }
+      ],
+      "name" : "Vella",
+      "restaurant_id" : "41704620"
+   }
+)
+</code></pre></div></div>
+<p>输出：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WriteResult({ "nInserted" : 1 })
+</code></pre></div></div>
+<p>如果通过insert插入的记录中没有指明_id字段，Mongo Shell会自动生成并添加该字段。</p>
+
+<h2 id="find-or-query-data-with-the-mongo-shell">Find or Query Data with the mongo Shell</h2>
+<p>在MongoDB中，所有的查询的作用域都限制为单个的Collection。
+查询返回的是一个游标（cursor）形式的结果，游标可以用来获取实际的Document。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.restaurants.find()  // 查询集合中的所有文档
+db.restaurants.find( { "borough": "Manhattan" } )        // 使用文档的一级字段进行过滤查询
+db.restaurants.find( { "address.zipcode": "10075" } )    // 使用文档的嵌套（二级）字段进行过滤查询
+db.restaurants.find( { "grades.grade": "B" } )           // 使用文档的数组字段进行过滤查询
+db.restaurants.find( { "grades.score": { $gt: 30 } } )   // Greater Than
+db.restaurants.find( { "grades.score": { $lt: 10 } } )   // Less Than
+db.restaurants.find( { "cuisine": "Italian", "address.zipcode": "10075" } ) // AND
+
+// OR
+db.restaurants.find(
+   { $or: [ { "cuisine": "Italian" }, { "address.zipcode": "10075" } ] }
+)
+
+db.restaurants.find().sort( { "borough": 1, "address.zipcode": 1 } )   // 1是正序，2是倒序
+</code></pre></div></div>
+<p>条件字段和条件值都需要使用引号。</p>
+
+<h2 id="update-data-with-the-mongo-shell">Update Data with the mongo Shell</h2>
+<p>不能更新_id字段。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 更新文档的一级字段
+db.restaurants.update(
+    { "name" : "Juni" },
+    {
+      $set: { "cuisine": "American (New)" },      // $set操作符，设置字段的值，如果字段不存在则新建
+      $currentDate: { "lastModified": true }      // $currentDate操作符，将字段的值设为当前的日期
+    }
+)
+
+// 更新文档的嵌套字段
+db.restaurants.update(
+  { "restaurant_id" : "41156888" },
+  { $set: { "address.street": "East 31st Street" } }
+)
+
+// 更新多个文档
+// update()方法默认只更新单个文档，可以使用multi选项来指定更新所有符合过滤条件的文档
+db.restaurants.update(
+  { "address.zipcode": "10016", cuisine: "Other" },
+  {
+    $set: { cuisine: "Category To Be Determined" },
+    $currentDate: { "lastModified": true }
+  },
+  { multi: true}
+)
+
+// 更新整个文档
+// 新的文档可以和旧文档结构不一样
+// 可以不传_id字段，如果传了，必须保证_id和旧文档的_id一样
+db.restaurants.update(
+   { "restaurant_id" : "41704620" },
+   {
+     "name" : "Vella 2",
+     "address" : {
+              "coord" : [ -73.9557413, 40.7720266 ],
+              "building" : "1480",
+              "street" : "2 Avenue",
+              "zipcode" : "10075"
+     }
+   }
+)
+</code></pre></div></div>
+
+<p>使用upsert选项可以实现如果被更新的记录不存在，则新增一条记录。</p>
+
+<p>MongoDB中在同一个文档上的写操作都是原子性的。如果一个更新操作将修改多个文档，该更新操作可以和其他的写操作交错进行。</p>
+
+<h2 id="remove-data-with-the-mongo-shell">Remove Data with the mongo Shell</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.restaurants.remove( { "borough": "Manhattan" } )  // 删除所有符合条件的文档 
+db.restaurants.remove( { "borough": "Queens" }, { justOne: true } )  // 只删除1个文档
+db.restaurants.remove( { } )  // 删除condition中的所有文档
+db.restaurants.drop()  // 删除condition
+</code></pre></div></div>
+
+<h2 id="data-aggregation-with-the-mongo-shell">Data Aggregation with the mongo Shell</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 使用文档的borough字段作为分组的键
+// 使用累加器$sum来计算每个分组的计数
+db.restaurants.aggregate(
+   [
+     { $group: { "_id": "$borough", "count": { $sum: 1 } } }
+   ]
+);
+</code></pre></div></div>
+<p>输出：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The output documents only contain the identifier field and, if specified, accumulated fields.
+{ "_id" : "Staten Island", "count" : 969 }
+{ "_id" : "Brooklyn", "count" : 6086 }
+{ "_id" : "Manhattan", "count" : 10259 }
+{ "_id" : "Queens", "count" : 5656 }
+{ "_id" : "Bronx", "count" : 2338 }
+{ "_id" : "Missing", "count" : 51 }
+</code></pre></div></div>
+
+<p>在进行聚合操作时，也可以指定过滤条件：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.restaurants.aggregate(
+   [
+     { $match: { "borough": "Queens", "cuisine": "Brazilian" } },
+     { $group: { "_id": "$address.zipcode" , "count": { $sum: 1 } } }
+   ]
+);
+</code></pre></div></div>
+
+<h2 id="indexes-with-the-mongo-shell">Indexes with the mongo Shell</h2>
+<p>在创建Collection时，MongoDB会自动在_id字段上创建一个索引。
+只有当索引不存在时，才会创建成功。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.restaurants.createIndex( { "cuisine": 1 } )  // 创建一个单列索引
+db.restaurants.createIndex( { "cuisine": 1, "address.zipcode": -1 } )  // 创建一个多列索引
+</code></pre></div></div>
+<p>创建索引后的返回类似：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "createdCollectionAutomatically" : false,
+  "numIndexesBefore" : 1,
+  "numIndexesAfter" : 2,
+  "ok" : 1
+}
+</code></pre></div></div>
+
+<h2 id="drivers">Drivers</h2>
+<p>略</p>
+
+<h1 id="introduction-to-mongodb-1">Introduction to MongoDB</h1>
+<p>基于文档、高性能、富查询语言、高可用、原生水平扩展、支持多种存储引擎。</p>
+
+<h2 id="databases-and-collections">Databases and Collections</h2>
+<p>MongoDB用BSON保存文档，档保存在集合中，集合保存在数据库中。</p>
+
+<p>在保存数据时，如果数据库和集合不存在，MongoDB会自动创建数据库和集合：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>use myNewDB   // 尚不存在的新的数据库
+db.myNewCollection1.insertOne( { x: 1 } )
+</code></pre></div></div>
+<p>也可以使用db.createCollection()来显式地创建集合，使用这种方式创建可以指定更多的选项，比如文档数量的上限。</p>
+
+<p>默认情况下集合的文档可以异构，从3.2版本开始，可以在更新和插入操作时进行文档规则校验。</p>
+
+<h3 id="views">Views</h3>
+<p>从3.4版本开始，可以为已存在的集合或视图创建只读的视图。
+详略。</p>
+
+<h3 id="capped-collections">Capped Collections</h3>
+<p>封顶集合是尺寸固定的集合，能够有效提高对集合的读写吞吐率。其工作方式类似循环缓冲区，当集合满时，新的文档将覆盖最旧的文档。</p>
+
+<p>通过在调用db.createCollection()时指定capped为true来创建封顶集合：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.createCollection("log", { capped : true, size : 5242880, max : 5000 } )
+</code></pre></div></div>
+<p>插入一个没有索引的capped collection速度非常接近存储在文件系统。为了最大化性能，如果只有读操作，建议不要在capped collection上创建索引。当然如果有更新capped collection的需要，最好创建索引以避免对collection的遍历。</p>
+
+<p>不能删除capped collection的文档，但是可以drop capped collection。</p>
+
+<p>对capped collection的查询操作默认按插入顺序返回记录。使用自然排序（natural ordering）可以快速地查询最新插入的记录（类似tail操作）:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.cappedCollection.find().sort( { $natural: -1 } )
+</code></pre></div></div>
+
+<p>其他操作：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 判断一个collection是否是capped collection
+db.collection.isCapped()
+
+// 将一个普通collection转换为capped collection（会造成全局写锁）
+db.runCommand({"convertToCapped": "mycoll", size: 100000});
+</code></pre></div></div>
+
+<p><strong>MongoDB的操作日志文件oplog.rs就是利用Capped Collection来实现的。</strong></p>
+
+<h2 id="documents">Documents</h2>
+<p>文档字段的类型可以是任意BSON Type，比如：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var mydoc = {
+  _id: ObjectId("5099803df3f4948bd2f98391"),
+  name: { first: "Alan", last: "Turing" },
+  birth: new Date('Jun 23, 1912'),
+  death: new Date('Jun 07, 1954'),
+  contribs: [ "Turing machine", "Turing test", "Turingery" ],
+  views : NumberLong(1250000)
+}
+</code></pre></div></div>
+
+<p>字段名的约束：</p>
+<ul>
+  <li>_id被保留作为主键使用，不能为array</li>
+  <li>不能以$开始</li>
+  <li>不能包含.</li>
+  <li>不能包含null</li>
+</ul>
+
+<p>尽管BSON本身支持同名字段，但是MongoDB的Driver实现大多不支持。</p>
+
+<p>可以以索引值的方式访问数组的元素，如对于：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+   ...
+   contribs: [ "Turing machine", "Turing test", "Turingery" ],
+   ...
+}
+</code></pre></div></div>
+<p>可以这样访问其第3个元素：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>contribs.2
+</code></pre></div></div>
+
+<p>BSON文档的最大尺寸为16M字节</p>
+
+<p>_id的值的约束，略。</p>
+
+<h2 id="bson-types">BSON Types</h2>
+<p>略。</p>
+
+<h2 id="comparisonsort-order">Comparison/Sort Order</h2>
+<p>当对不同的BSON类型的数据进行比较时，会遵循一定的顺序，比如Object在Array之前，详略。</p>
+
+<h2 id="mongodb-extended-json">MongoDB Extended JSON</h2>
+<p>JSON只能表示BSON类型的子集，为了保留类型信息，MongoDB对JSON格式进行了如下扩展：</p>
+<ul>
+  <li>严格模式（Strict mode）：将一些BSON类型转换为JSON形式，任何JSON解析器都可以解析该形式，但是只有MongoDB内置的JSON解析器才可以识别出这些类型信息。</li>
+  <li>mongo shell mode；</li>
+</ul>
+
+<p>例如Binary类型在两种模式下分别如下表示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 严格模式
+{ "$binary": "&lt;bindata&gt;", "$type": "&lt;t&gt;" }
+
+// Shell Mode
+BinData ( &lt;t&gt;, &lt;bindata&gt; )
+</code></pre></div></div>
+<p>其中：</p>
+<ul>
+  <li>
+    <bindata>是二进制字符串的base64编码表示；
+</bindata>
+  </li>
+  <li>
+    <t>是一个字节的数据，用来表示数据的类型；
+
+</t>
+  </li>
+</ul>
+<p>详略。</p>
+
+<h1 id="install-mongodb-1">Install MongoDB</h1>
+<p>略。</p>
+
+<h1 id="the-mongo-shell">The Mongo Shell</h1>
+<p><strong>.mongorc.js文件</strong>
+可以把自己写的js代码保存在某个地方，让MongoDB加载它，然后就可以在Mongo Shell的命令行里使用它们。
+Mongodb Shell默认会尝试加载~/.mongorc.js文件。</p>
+
+<p>如果collection的命名包含特殊字符，比如空格或者以数字开始，可以使用一些变通的方法来引用collection：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.3test.find()    // SyntaxError
+db["3test"].find()
+db.getCollection("3test").find()
+</code></pre></div></div>
+
+<p>find()方法返回指向文档集合的路由，但是当在Shell中执行时，在没有将返回路由复制给变量的情况下（通过var关键字赋值），MongoDB Shell将会自动迭代并展示前20个文档信息。</p>
+
+<p><strong>格式化输出</strong></p>
+<ul>
+  <li>db.myCollection.find().pretty()  // json格式化输出</li>
+  <li>print()  // 不带格式输出</li>
+  <li>print(tojson(<obj>))  // json格式化输出</obj></li>
+  <li>printjson() // json格式化输出</li>
+</ul>
+
+<p><strong>跨行操作</strong>
+当某一行以括号((、[、{)结尾时，可以跨行操作：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; var x = 1;
+&gt; if(x&gt;0){
+... print(x);
+... }
+
+1
+</code></pre></div></div>
+<p>如果连续输入两个空行，将会结束跨行操作模式。
+Mongo Shell是一个JavaScript接口，所以可以直接执行JavaScript代码。</p>
+
+<h2 id="configure-the-mongo-shell">Configure the mongo Shell</h2>
+<p>可以通过设置prompt变量来自定义Mongo Shell的提示符。可以将设置prompt变量的逻辑放在.mongorc.js文件中。
+举例：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1&gt;
+test@myHost1$
+Uptime:5897 Documents:6 &gt;
+</code></pre></div></div>
+
+<p>可以设置当在Mongo Shell中要编辑代码时的编辑器：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export EDITOR=vim
+mongo
+</code></pre></div></div>
+<p>详略。</p>
+
+<p>可以设置Mongo Shell自动解析find()结果的数量（默认为20条）：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DBQuery.shellBatchSize = 10;
+</code></pre></div></div>
+
+<h2 id="access-the-mongo-shell-help">Access the mongo Shell Help</h2>
+<p>略</p>
+
+<h2 id="write-scripts-for-the-mongo-shell">Write Scripts for the mongo Shell</h2>
+<p>就是在mongo Shell中编写并执行JavaScript代码。略。</p>
+
+<h2 id="data-types-in-the-mongo-shell">Data Types in the mongo Shell</h2>
+<p>Mongo Shell对BSON扩展类型的支持。略。</p>
+
+<h2 id="mongo-shell-quick-reference">mongo Shell Quick Reference</h2>
+<p>在Mongo Shell中可以打开并使用另一个db：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db = connect("&lt;host&gt;&lt;:port&gt;/&lt;dbname&gt;")
+db....
+</code></pre></div></div>
+<p>详略。</p>
+
+<h1 id="mongodb-crud-operations">MongoDB CRUD Operations</h1>
+<h2 id="insert-documents">Insert Documents</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.collection.insertOne()
+db.collection.insertMany()
+db.collection.insert()
+db.collection.save()
+db.collection.bulkWrite()
+</code></pre></div></div>
+<p>当使用<code class="language-plaintext highlighter-rouge">upsert:true</code>选项时，如下的方法也会插入新的文档：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.collection.update()
+db.collection.updateOne()
+db.collection.updateMany()
+db.collection.findAndModify()
+db.collection.findOneAndUpdate()
+db.collection.findOneAndReplace()
+</code></pre></div></div>
+
+<h2 id="query-documents">Query Documents</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.inventory.find( {} )  // 查找所有文档（传一个空的过滤条件）
+db.inventory.find( { status: "D" } )  // 按条件查询
+db.inventory.find( { status: { $in: [ "A", "D" ] } } )  // 使用查询操作符
+db.inventory.find( { status: "A", qty: { $lt: 30 } } )  // AND
+db.inventory.find( { $or: [ { status: "A" }, { qty: { $lt: 30 } } ] } )  // OR
+
+// AND OR
+db.inventory.find( {
+     status: "A",
+     $or: [ { qty: { $lt: 30 } }, { item: /^p/ } ]
+} )
+</code></pre></div></div>
+
+<h3 id="query-on-embeddednested-documents">Query on Embedded/Nested Documents</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.inventory.find( { size: { h: 14, w: 21, uom: "cm" } } )  // 注意这种方式查询，字段的顺序也要与字段被插入时一致
+
+db.inventory.find( { "size.uom": "in" } )  // 使用.操作符
+
+db.inventory.find( { "size.h": { $lt: 15 } } )  // 使用运算符
+</code></pre></div></div>
+
+<h3 id="query-an-array">Query an Array</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.inventory.find( { tags: ["red", "blank"] } )  // tags字段必须是一个数组，且该数组的字段顺序要与查询条件一致
+
+db.inventory.find( { tags: { $all: ["red", "blank"] } } )  // 数组元素的顺序可以不一致，只要都有就行
+
+db.inventory.find( { tags: "red" } )  // 数组中必须包含red元素
+
+db.inventory.find( { dim_cm: { $gt: 25 } } )  // 数组中必须包含大于等于25的元素
+
+db.inventory.find( { dim_cm: { $gt: 15, $lt: 20 } } )  // dim_cm数组必须存在满足2个条件的元素，比如1个元素满足条件1，另一个满足条件2
+
+db.inventory.find( { dim_cm: { $elemMatch: { $gt: 22, $lt: 30 } } } )  // 必须存在同时满足2个条件的元素
+
+db.inventory.find( { "dim_cm.1": { $gt: 25 } } )  // 根据数组指定位置元素进行查询
+
+db.inventory.find( { "tags": { $size: 3 } } )  // 根据数组大小进行查询
+</code></pre></div></div>
+
+<h3 id="query-an-array-of-embedded-documents">Query an Array of Embedded Documents</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// { item: "journal", instock: [ { warehouse: "A", qty: 5 }, { warehouse: "C", qty: 15 } ] },
+
+db.inventory.find( { "instock": { warehouse: "A", qty: 5 } } )    // 顺序要一致
+db.inventory.find( { 'instock.0.qty': { $lte: 20 } } )  // 同时使用数组索引和嵌套字段 
+db.inventory.find( { "instock.qty": { $gt: 10,  $lte: 20 } } )  // 存在满足条件1的元素，且存在满足条件2的元素
+db.inventory.find( { "instock": { $elemMatch: { qty: { $gt: 10, $lte: 20 } } } } )  // 存在同时满足条件1和2的元素
+</code></pre></div></div>
+<p>总之，当对数组字段继续过滤查询时，不使用$elemMatch操作符，则意味着只要每个查询条件都能够在数组中找到至少一个满足条件的元素即可。如果使用$elemMatch操作符，则意味着数组中至少存在一个同时满足所有条件的元素。</p>
+
+<h3 id="project-fields-to-return-from-query">Project Fields to Return from Query</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// { item: "journal", status: "A", size: { h: 14, w: 21, uom: "cm" }, instock: [ { warehouse: "A", qty: 5 } ] },
+
+db.inventory.find( { status: "A" }, { item: 1, status: 1 } )  // 只返回_id，item和status字段
+db.inventory.find( { status: "A" }, { item: 1, status: 1, _id: 0 } )   // 只返回item和status字段
+db.inventory.find( { status: "A" }, { status: 0, instock: 0 } )  // 返回除了status和instock之外的所有字段
+
+// 指定嵌套文档中应该返回的字段
+db.inventory.find(
+   { status: "A" },
+   { item: 1, status: 1, "size.uom": 1 }
+)
+
+// 排除嵌套文档中指定的字段
+db.inventory.find(
+   { status: "A" },
+   { "size.uom": 0 }
+)
+
+db.inventory.find( { status: "A" }, { item: 1, status: 1, "instock.qty": 1 } )  // instock数组中的元素只返回qty字段
+
+db.inventory.find( { status: "A" }, { name: 1, status: 1, instock: { $slice: -1 } } )  // 只返回instock数组的最后一个元素
+</code></pre></div></div>
+
+<h3 id="query-for-null-or-missing-fields">Query for Null or Missing Fields</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/*
+{ _id: 1, item: null },
+{ _id: 2 }
+*/
+
+db.inventory.find( { item: null } )  // item字段为null或者不存在item字段
+db.inventory.find( { item : { $type: 10 } } )  // item字段为null（BSON Type Null (i.e. 10) ）
+db.inventory.find( { item : { $exists: false } } )  // item字段不存在
+</code></pre></div></div>
+
+<h3 id="iterate-a-cursor-in-the-mongo-shell">Iterate a Cursor in the mongo Shell</h3>
+<p>在Mongo Shell中，当把find()的返回结果（游标）通过var赋值给一个变量时，find()返回的结果不会自动迭代。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var myCursor = db.users.find( { type: 2 } );
+
+// 自动遍历20次
+myCursor  
+
+// 手动遍历
+while (myCursor.hasNext()) {
+   print(tojson(myCursor.next()));
+}
+
+// 通过forEach遍历
+myCursor.forEach(printjson);
+
+// 转成数组后进行操作
+var documentArray = myCursor.toArray();
+var myDocument = documentArray[3];
+</code></pre></div></div>
+
+<p>游标的其他操作，比如设置不过期，多个查询的游标隔离，统计当前打开的游标数量及状态等等，详略。</p>
+
+<h2 id="update-documents">Update Documents</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// { item: "canvas", qty: 100, size: { h: 28, w: 35.5, uom: "cm" }, status: "A" },
+
+db.inventory.updateOne(
+   { item: "paper" },  // 过滤条件
+   {
+     $set: { "size.uom": "cm", status: "P" },
+     $currentDate: { lastModified: true }   // 将lastModified字段设为当前时间，如果字段不存在则新建
+   }
+)
+
+db.inventory.updateMany(
+   ...
+)
+
+
+// 当使用replace操作时，不能带update操作符
+db.inventory.replaceOne(
+   { item: "paper" },
+   { item: "paper", instock: [ { warehouse: "A", qty: 60 }, { warehouse: "B", qty: 40 } ] }
+)
+</code></pre></div></div>
+
+<p>一旦值被设置，_id字段的值就不可改变，也不能通过带有新的_id值的文档来覆盖旧的文档。</p>
+
+<h3 id="update-methods">Update Methods</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.collection.updateOne()
+db.collection.updateMany()
+db.collection.replaceOne()
+db.collection.update()
+</code></pre></div></div>
+
+<h2 id="delete-documents">Delete Documents</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.collection.deleteMany()
+db.collection.deleteOne()
+db.collection.remove()  // When talking about node.js drivers, remove has been deprecated
+</code></pre></div></div>
+
+<h2 id="bulk-write-operations">Bulk Write Operations</h2>
+<p>db.collection.bulkWrite()方法支持批量地插入、更新、删除操作。在进行批量操作时，支持排序行为。默认采用排序方式，当采用排序方式操作时，所有操作要逐个进行，发生错误时，后续操作终止。当采用非排序方式操作时，所有操作可并发进行，失败的操作不影响其他并行操作。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>try {
+   db.characters.bulkWrite(
+      [
+         { insertOne :
+            {
+               "document" :
+               {
+                  "_id" : 4, "char" : "Dithras", "class" : "barbarian", "lvl" : 4
+               }
+            }
+         },
+         { insertOne :
+            {
+               "document" :
+               {
+                  "_id" : 5, "char" : "Taeln", "class" : "fighter", "lvl" : 3
+               }
+            }
+         },
+         { updateOne :
+            {
+               "filter" : { "char" : "Eldon" },
+               "update" : { $set : { "status" : "Critical Injury" } }
+            }
+         },
+         { deleteOne :
+            { "filter" : { "char" : "Brisbane"} }
+         },
+         { replaceOne :
+            {
+               "filter" : { "char" : "Meldane" },
+               "replacement" : { "char" : "Tanys", "class" : "oracle", "lvl" : 4 }
+            }
+         }
+      ]
+   );
+}
+catch (e) {
+   print(e);
+}
+</code></pre></div></div>
+
+<p><strong>Strategies for Bulk Inserts to a Sharded Collection</strong>
+略。</p>
+
+<h2 id="sql-to-mongodb-mapping-chart">SQL to MongoDB Mapping Chart</h2>
+<p>略。</p>
+
+<h2 id="read-concern">Read Concern*</h2>
+<p>readConcern选项用于控制从查询中返回的数据。有以下几个等级：</p>
+<ul>
+  <li>local 默认值，所读的数据不保证会被最终写入（可能被回滚）</li>
+  <li>majority 返回最新的，已确认写入的数据</li>
+  <li>linearizable 返回不可能被回滚的数据</li>
+</ul>
+
+<p>可用于find、aggregate、distinct、count、parallelCollectionScan、geoNear、geoSearch等操作。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.restaurants.find( { _id: 5 } ).readConcern("linearizable").maxTimeMS(10000)
+</code></pre></div></div>
+
+<p>详略。</p>
+
+<h2 id="write-concern">Write Concern*</h2>
+<p>略。</p>
+
+<h2 id="mongodb-crud-concepts">MongoDB CRUD Concepts</h2>
+<h3 id="atomicity-and-transactions">Atomicity and Transactions</h3>
+<p>当同时更新多个文档时，可以使用$isolated操作符来将多个写操作组合在一起，并与其它的写操作隔离。在这些写操作执行期间，其它的对相同文档的写操作请求将被阻止。
+不过，当被隔离的请求中发生错误时，错误之前的操作并不会回滚，即隔离操作仅起到对一组资源进行写锁的功能，并不提供回滚功能。</p>
+
+<h3 id="read-isolation-consistency-and-recency">Read Isolation, Consistency, and Recency</h3>
+<ul>
+  <li>Read Uncommitted
+使用local级别的readConcern的客户端可以读取其他客户端的尚未被持久化的写操作的结果（可能会被回滚）。</li>
+  <li>Read Uncommitted And Single Document Atomicity
+写操作在单个文档上是原子的，即不可能读取到只有部分更新的单一文档。</li>
+  <li>Read Uncommitted And Multiple Document Write
+$isolated operator，略。</li>
+  <li>Cursor Snapshot
+略。</li>
+</ul>
+
+<h3 id="distributed-queries">Distributed Queries</h3>
+<p>sharded clusters，分片集群可以实现以对应用程序透明的方式将数据集分散存储到不同的Mongo Server（集群）中。
+指向分片数据集（被分片处理的Collection的其中一个分片）的查询需要带上一个分片键（shard key），mongoDB会通过Config Database中配置的集群元数据（cluster metadata）来将查询定向到指定的分片数据集。
+如果查询中没有带上shard key，那么Mango会将查询定向到集群中所有的分片，这是一种低效行为。</p>
+
+<p>Read Operations to Replica Sets，略。</p>
+
+<h3 id="distributed-write-operations">Distributed Write Operations</h3>
+<p>略。</p>
+
+<h3 id="perform-two-phase-commits">Perform Two Phase Commits</h3>
+<p>因为MongoDB的文档支持嵌套，所以单文档可以解决大多数的关系型数据库所面临的跨表操作事务问题。
+因为MongoDB对于单文档的操作都是原子性的，所以two-phase commits只能提供类似事务的操作，而非真正的事务操作。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.accounts.insert(
+   [
+     { _id: "A", balance: 1000, pendingTransactions: [] },
+     { _id: "B", balance: 1000, pendingTransactions: [] }
+   ]
+)
+
+// 每一笔账户变动都需要插入一条记录
+db.transactions.insert(
+    { _id: 1, source: "A", destination: "B", value: 100, state: "initial", lastModified: new Date() }
+)
+
+
+var t = db.transactions.findOne( { state: "initial" } )
+db.transactions.update(
+    { _id: t._id, state: "initial" },
+    {
+      $set: { state: "pending" },   // 更新转账记录的状态为处理中
+      $currentDate: { lastModified: true }
+    }
+)
+
+// 扣减转出账户
+db.accounts.update(
+   { _id: t.source, pendingTransactions: { $ne: t._id } },  // 防止重复执行
+   { $inc: { balance: -t.value }, $push: { pendingTransactions: t._id } }
+)
+
+// 增加转入账户
+db.accounts.update(
+   { _id: t.destination, pendingTransactions: { $ne: t._id } },
+   { $inc: { balance: t.value }, $push: { pendingTransactions: t._id } }
+)
+
+// 更新转账记录
+db.transactions.update(
+   { _id: t._id, state: "pending" },
+   {
+     $set: { state: "applied" },   // 更新转账记录状态为已执行
+     $currentDate: { lastModified: true }
+   }
+)
+
+
+// 删除转出账户中的待处理操作
+db.accounts.update(
+   { _id: t.source, pendingTransactions: t._id },
+   { $pull: { pendingTransactions: t._id } }
+)
+
+// 删除转入账户中的待处理操作
+db.accounts.update(
+   { _id: t.destination, pendingTransactions: t._id },
+   { $pull: { pendingTransactions: t._id } }
+)
+
+// 更新转账操作为已完成
+db.transactions.update(
+   { _id: t._id, state: "applied" },
+   {
+     $set: { state: "done" },
+     $currentDate: { lastModified: true }
+   }
+)
+</code></pre></div></div>
+
+<p>根据lastModified来判断操作是否超时，进而判断操作失败，并进行回滚操作:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var dateThreshold = new Date();
+dateThreshold.setMinutes(dateThreshold.getMinutes() - 30);
+
+var t = db.transactions.findOne( { state: "pending", lastModified: { $lt: dateThreshold } } );
+</code></pre></div></div>
+
+<p>总之就是自己维护一致性的逻辑，具体的恢复操作，略。</p>
+
+<h3 id="linearizable-reads-via-findandmodify">Linearizable Reads via findAndModify*</h3>
+<p>略。</p>
+
+<h3 id="query-plans">Query Plans</h3>
+<p>查询优化器生成查询计划，并缓存。</p>
+
+<p>可以使用db.collection.explain()或cursor.explain()来查看指定查询所生成的查询计划。</p>
+
+<p>详略。</p>
+
+<h3 id="query-optimization">Query Optimization</h3>
+<h4 id="创建索引">创建索引</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.inventory.createIndex( { type: 1 } )
+</code></pre></div></div>
+
+<h4 id="覆盖索引">覆盖索引</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.inventory.createIndex( { type: 1, item: 1 } )
+db.inventory.find(
+   { type: "food", item:/^c/ },
+   { item: 1, _id: 0 }   // 必须要排除_id，因为它没有包含在组合索引中
+)
+</code></pre></div></div>
+
+<p>如果一个用于创建索引的字段是数组，则该索引将会转化为一个多键数组，而且不能支持覆盖索引查询。
+如果一个用于创建索引的字段属于嵌套文档，则不能支持覆盖索引：
+数据结构：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ _id: 1, user: { login: "tester" } }
+</code></pre></div></div>
+<p>索引：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ "user.login": 1 }
+</code></pre></div></div>
+<p>如下的查询将不能使用覆盖索引（不过仍然可以使用该索引来匹配查询）：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.users.find( { "user.login": "tester" }, { "user.login": 1, _id: 0 } )
+</code></pre></div></div>
+
+<p>对于sharded collection，当查询未包含shard key时，将不能使用覆盖索引。_id除外，当查询条件中仅仅设置了根据_id查询，且查询结果也仅返回_id字段时，_id索引将可以覆盖此查询。</p>
+
+<h4 id="evaluate-performance-of-current-operations">Evaluate Performance of Current Operations</h4>
+<p>db.currentOp()可以用来评估当前连接的客户端的操作的性能。</p>
+
+<h4 id="optimize-query-performance">Optimize Query Performance</h4>
+<p>如果索引是BinData类型，且满足以下条件时，效率将更高：</p>
+<ul>
+  <li>值在0~7或者128~135之间；</li>
+  <li>数组的长度为：0，1，2，3，4，5，6，7，8，10，12，14，16，20，24，32</li>
+</ul>
+
+<p><em>限制返回的数量</em></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.posts.find().sort( { timestamp : -1 } ).limit(10)
+</code></pre></div></div>
+
+<p><em>只返回需要的字段</em></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.posts.find( {}, { timestamp : 1 , title : 1 , author : 1 , abstract : 1} ).sort( { timestamp : -1 } )
+</code></pre></div></div>
+
+<p><em>使用$hint来设置想要使用的索引</em>
+<em>使用$inc操作符来执行数字增加操作</em></p>
+
+<h4 id="write-operation-performance">Write Operation Performance</h4>
+<p>索引会增加写操作的开销。</p>
+
+<p>MMAPv1存储引擎，略。</p>
+
+<p>为了提供高可用性而对写操作做的日志也会增加开销，详略。</p>
+
+<h4 id="explain-results">Explain Results*</h4>
+<p>略，用到再看。</p>
+
+<h3 id="analyze-query-performance">Analyze Query Performance</h3>
+<p>分析查询：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// { "_id" : 1, "item" : "f1", type: "food", quantity: 500 }
+
+db.inventory.find(
+   { quantity: { $gte: 100, $lte: 200 } }
+).explain("executionStats")
+</code></pre></div></div>
+<p>输出：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+   "queryPlanner" : {
+         "plannerVersion" : 1,
+         ...
+         "winningPlan" : {
+            "stage" : "COLLSCAN",  // COLLSCAN说明执行了collection scan
+            ...
+         }
+   },
+   "executionStats" : {
+      "executionSuccess" : true,
+      "nReturned" : 3,  // 匹配到并返回了3条记录
+      "executionTimeMillis" : 0,
+      "totalKeysExamined" : 0,
+      "totalDocsExamined" : 10,  // scan了10条记录
+      "executionStages" : {
+         "stage" : "COLLSCAN",   
+         ...
+      },
+      ...
+   },
+   ...
+}
+</code></pre></div></div>
+
+<p>创建索引：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.inventory.createIndex( { quantity: 1 } )
+</code></pre></div></div>
+<p>winningPlan的stage变为IXSCAN（Index Scan），totalDocsExamined变为3。</p>
+
+<h4 id="compare-performance-of-indexes">Compare Performance of Indexes</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.inventory.createIndex( { quantity: 1, type: 1 } )
+db.inventory.createIndex( { type: 1, quantity: 1 } )
+
+// 使用hint设置要使用的索引
+db.inventory.find(
+   { quantity: { $gte: 100, $lte: 300 }, type: "food" }
+).hint({ quantity: 1, type: 1 }).explain("executionStats")
+</code></pre></div></div>
+<p>输出：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+   "queryPlanner" : {
+      ...
+      "winningPlan" : {
+         "stage" : "FETCH",
+         "inputStage" : {
+            "stage" : "IXSCAN",
+            "keyPattern" : {
+               "quantity" : 1,
+               "type" : 1
+            },
+            ...
+            }
+         }
+      },
+      "rejectedPlans" : [ ]
+   },
+   "executionStats" : {
+      "executionSuccess" : true,
+      "nReturned" : 2,
+      "executionTimeMillis" : 0,
+      "totalKeysExamined" : 5,   // 共扫描了5个索引
+      "totalDocsExamined" : 2,
+      "executionStages" : {
+      ...
+      }
+   },
+   ...
+}
+</code></pre></div></div>
+<p>换个索引：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.inventory.find(
+   { quantity: { $gte: 100, $lte: 300 }, type: "food" }
+).hint({ type: 1, quantity: 1 }).explain("executionStats")
+</code></pre></div></div>
+<p>totalKeysExamined的值变为2。说明对于该查询，显然第2个索引效率更高。</p>
+
+<h3 id="tailable-cursors">Tailable Cursors</h3>
+<p>当写操作量比较大时，通过建索引来提高查询效率的做法是不实际的。对于Capped Collection，可以使用tailable cursors来实现tail最新插入的记录。MongoDB的操作日志同步就是采用这种方式。</p>
+
+<p>对于建有索引的collection，应该使用常规的coursor，并记录每次查询得到的最新的索引的值以便以后查询使用：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>db.&lt;collection&gt;.find( { indexedField: { $gt: &lt;lastvalue&gt; } } )
+</code></pre></div></div>
+
+<h1 id="aggregation">Aggregation</h1>
+
+<p>To be continue…</p>
+
+:ET

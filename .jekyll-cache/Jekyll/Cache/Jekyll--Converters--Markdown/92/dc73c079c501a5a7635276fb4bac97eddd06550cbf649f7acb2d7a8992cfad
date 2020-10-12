@@ -1,0 +1,351 @@
+I"�c<ul id="markdown-toc">
+  <li><a href="#安装thrift" id="markdown-toc-安装thrift">安装Thrift</a></li>
+  <li><a href="#定义idl文件" id="markdown-toc-定义idl文件">定义IDL文件</a></li>
+  <li><a href="#生成文件" id="markdown-toc-生成文件">生成文件</a></li>
+  <li><a href="#生成php文件" id="markdown-toc-生成php文件">生成PHP文件</a></li>
+  <li><a href="#生成java文件" id="markdown-toc-生成java文件">生成Java文件</a></li>
+  <li><a href="#编写java服务端项目" id="markdown-toc-编写java服务端项目">编写Java服务端项目</a>    <ul>
+      <li><a href="#服务端项目文件结构" id="markdown-toc-服务端项目文件结构">服务端项目文件结构</a>        <ul>
+          <li><a href="#pomxml" id="markdown-toc-pomxml">pom.xml</a></li>
+          <li><a href="#manifestmf" id="markdown-toc-manifestmf">MANIFEST.MF</a></li>
+          <li><a href="#rpchandlerjava" id="markdown-toc-rpchandlerjava">RpcHandler.java</a></li>
+          <li><a href="#rpcserverjava" id="markdown-toc-rpcserverjava">RpcServer.java</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#编写php客户端项目" id="markdown-toc-编写php客户端项目">编写PHP客户端项目</a>    <ul>
+      <li><a href="#客户端项目文件结构" id="markdown-toc-客户端项目文件结构">客户端项目文件结构</a></li>
+      <li><a href="#democlientphp" id="markdown-toc-democlientphp">DemoClient.php</a></li>
+    </ul>
+  </li>
+  <li><a href="#运行" id="markdown-toc-运行">运行</a>    <ul>
+      <li><a href="#启动服务端" id="markdown-toc-启动服务端">启动服务端</a></li>
+      <li><a href="#运行客户端" id="markdown-toc-运行客户端">运行客户端</a></li>
+    </ul>
+  </li>
+  <li><a href="#thrift生成文件简析" id="markdown-toc-thrift生成文件简析">Thrift生成文件简析</a>    <ul>
+      <li><a href="#php" id="markdown-toc-php">PHP</a>        <ul>
+          <li><a href="#typesphp的内容" id="markdown-toc-typesphp的内容">Types.php的内容</a></li>
+          <li><a href="#demoservicephp的内容" id="markdown-toc-demoservicephp的内容">DemoService.php的内容</a></li>
+        </ul>
+      </li>
+      <li><a href="#java" id="markdown-toc-java">Java</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>本文总结了Thrift的最基本应用。
+<a href="https://github.com/woojean/demos/tree/master/thrift-php-java">下载代码:https://github.com/woojean/demos/tree/master/thrift-php-java</a></p>
+
+<h1 id="安装thrift">安装Thrift</h1>
+<p>略。</p>
+
+<h1 id="定义idl文件">定义IDL文件</h1>
+<p>DemoService.thrift</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>namespace php Woojean.Rpc.Demo  // PHP项目的命名空间
+namespace java com.woojean.rpc.demo  // Java项目的命名空间
+
+// 异常定义
+exception RequestException {
+}
+
+// 参数定义
+struct Param
+{
+    1:required string s1,
+    2:required string s2,
+}
+
+
+// 服务定义
+service DemoService
+{
+	// 定义一个连接字符串的方法，用一个指定的分隔符连接Param的所有属性，并返回一个完整的字符串
+    string joinString(1:required Param p, 2:required string sep) 
+        throws (1:RequestException e);
+}
+</code></pre></div></div>
+
+<h1 id="生成文件">生成文件</h1>
+<h1 id="生成php文件">生成PHP文件</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>thrift -gen php:server DemoService.thrift
+</code></pre></div></div>
+<p>将会生成以下文件：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gen-php/Woojean/Rpc/Demo/DemoService.php  // 存放Rpc接口约定interface DemoServiceIf，以及PHP版的服务端处理程序、客户端class DemoServiceProcessor、class DemoServiceClient
+gen-php/Woojean/Rpc/Demo/Types.php        // 存放自定的类型，本例是class RequestException和class Param 
+</code></pre></div></div>
+
+<h1 id="生成java文件">生成Java文件</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>thrift --gen java DemoService.thrift
+</code></pre></div></div>
+<p>将会生成以下文件：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gen-java/com/woojean/rpc/demo/DemoService.java
+gen-java/com/woojean/rpc/demo/Param.java
+gen-java/com/woojean/rpc/demo/RequestException.java
+</code></pre></div></div>
+
+<h1 id="编写java服务端项目">编写Java服务端项目</h1>
+<h2 id="服务端项目文件结构">服务端项目文件结构</h2>
+<p>服务端用maven构建，项目结构如下：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Service/
+  lib/
+    ... // thrift、log4j等jar包
+  src/
+    /main
+      /java
+        /com
+          /woojean
+            /rpc
+              /demo
+                DemoService.java
+                Param.java
+                RequestException.java
+                RpcHandler.java  // 定义实际被调用的方法
+                RpcServer.java   // 实现了一个简单的Server
+      /resources
+        /META-INF
+          MANIFEST.MF  // 打包后使用的MANIFEST信息
+  /target
+  pom.xml
+</code></pre></div></div>
+
+<h3 id="pomxml">pom.xml</h3>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.woojean.rpc<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>demo<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;packaging&gt;</span>jar<span class="nt">&lt;/packaging&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.0<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;name&gt;</span>aid<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;url&gt;</span>http://maven.apache.org<span class="nt">&lt;/url&gt;</span>
+
+    <span class="nt">&lt;build&gt;</span>
+        <span class="nt">&lt;plugins&gt;</span>
+            <span class="nt">&lt;plugin&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>maven-jar-plugin<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;configuration&gt;</span>
+                    <span class="nt">&lt;archive&gt;</span>
+                        <span class="nt">&lt;manifestFile&gt;</span>
+                            src/main/resources/META-INF/MANIFEST.MF
+                        <span class="nt">&lt;/manifestFile&gt;</span>
+                        <span class="nt">&lt;manifest&gt;</span>
+                            <span class="nt">&lt;addClasspath&gt;</span>true<span class="nt">&lt;/addClasspath&gt;</span>
+                        <span class="nt">&lt;/manifest&gt;</span>
+                    <span class="nt">&lt;/archive&gt;</span>
+                <span class="nt">&lt;/configuration&gt;</span>
+            <span class="nt">&lt;/plugin&gt;</span>
+        <span class="nt">&lt;/plugins&gt;</span>
+    <span class="nt">&lt;/build&gt;</span>
+    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>junit<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>junit<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>3.8.1<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.apache.thrift<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>libthrift<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>0.10.0<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.slf4j<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>slf4j-log4j12<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>1.7.5<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;/dependencies&gt;</span>
+
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
+
+<h3 id="manifestmf">MANIFEST.MF</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Manifest-Version: 1.0
+Created-By: 1.8.0_121 (Oracle Corporation)
+Main-Class: com.woojean.rpc.demo.RpcServer
+Class-Path: lib/libthrift-0.10.0.jar lib/log4j-1.2.14.jar lib/slf4j-api-1.5.11.jar lib/slf4j-log4j12-1.5.11.jar
+</code></pre></div></div>
+
+<h3 id="rpchandlerjava">RpcHandler.java</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.woojean.rpc.demo</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.apache.thrift.TException</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RpcHandler</span> <span class="kd">implements</span> <span class="nc">DemoService</span><span class="o">.</span><span class="na">Iface</span><span class="o">{</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">joinString</span><span class="o">(</span><span class="nc">Param</span> <span class="n">p</span><span class="o">,</span><span class="nc">String</span> <span class="n">sep</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">TException</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">p</span><span class="o">.</span><span class="na">getS1</span><span class="o">()</span> <span class="o">+</span> <span class="n">sep</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="na">getS2</span><span class="o">();</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="rpcserverjava">RpcServer.java</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">com.woojean.rpc.demo</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.apache.thrift.TMultiplexedProcessor</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.thrift.server.TThreadPoolServer</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.thrift.transport.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.thrift.server.TServer</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RpcServer</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="nc">TServerSocket</span> <span class="n">serverTransport</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TServerSocket</span><span class="o">(</span><span class="mi">9524</span><span class="o">);</span>
+
+            <span class="nc">DemoService</span><span class="o">.</span><span class="na">Processor</span> <span class="n">demoProcessor</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DemoService</span><span class="o">.</span><span class="na">Processor</span><span class="o">(</span><span class="k">new</span> <span class="nc">RpcHandler</span><span class="o">());</span>
+
+            <span class="nc">TMultiplexedProcessor</span> <span class="n">processor</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TMultiplexedProcessor</span><span class="o">();</span>
+
+            <span class="n">processor</span><span class="o">.</span><span class="na">registerProcessor</span><span class="o">(</span><span class="s">"DemoService"</span><span class="o">,</span> <span class="n">demoProcessor</span><span class="o">);</span>
+
+            <span class="nc">TServer</span> <span class="n">server</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TThreadPoolServer</span><span class="o">(</span><span class="k">new</span> <span class="nc">TThreadPoolServer</span><span class="o">.</span><span class="na">Args</span><span class="o">(</span>
+                    <span class="n">serverTransport</span><span class="o">).</span><span class="na">processor</span><span class="o">(</span><span class="n">processor</span><span class="o">));</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Starting server on port 9524 ..."</span><span class="o">);</span>
+            <span class="n">server</span><span class="o">.</span><span class="na">serve</span><span class="o">();</span>
+
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">TTransportException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span> <span class="n">args</span><span class="o">[])</span> <span class="o">{</span>
+        <span class="nc">RpcServer</span> <span class="n">srv</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RpcServer</span><span class="o">();</span>
+        <span class="n">srv</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h1 id="编写php客户端项目">编写PHP客户端项目</h1>
+<h2 id="客户端项目文件结构">客户端项目文件结构</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Client/
+  /Library
+    /Thrift  // Thrift的PHP版库 
+      ...
+  /Woojean
+    /Rpc
+      /Demo
+        DemoSevice.php
+        Types.php
+  DemoClient.php  // 实际的客户端代码
+</code></pre></div></div>
+
+<h2 id="democlientphp">DemoClient.php</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nb">define</span><span class="p">(</span><span class="s1">'DIR_BACKEND'</span><span class="p">,</span> <span class="nb">dirname</span><span class="p">(</span><span class="k">__DIR__</span><span class="p">)</span> <span class="mf">.</span> <span class="s1">'/Client'</span><span class="p">);</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="no">DIR_BACKEND</span><span class="p">);</span>
+
+<span class="c1">// 用于自动寻找并加载Thrift库中的类</span>
+<span class="nb">spl_autoload_register</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nv">$clientClass</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="nv">$class</span> <span class="o">=</span> <span class="nb">str_replace</span><span class="p">(</span><span class="s1">'\\'</span><span class="p">,</span> <span class="s1">'/'</span><span class="p">,</span> <span class="nv">$clientClass</span><span class="p">);</span>
+        <span class="nv">$filePath</span> <span class="o">=</span> <span class="no">DIR_BACKEND</span><span class="mf">.</span><span class="s1">'/Library/'</span> <span class="mf">.</span> <span class="nv">$class</span> <span class="mf">.</span> <span class="s1">'.php'</span><span class="p">;</span>
+        <span class="k">require_once</span> <span class="nv">$filePath</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="err">\</span><span class="nc">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="nf">getMessage</span><span class="p">();</span>
+        <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$clientClass</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// 引用Thrift生成的文件</span>
+<span class="k">require_once</span> <span class="no">DIR_BACKEND</span> <span class="mf">.</span><span class="s1">'/Woojean/Rpc/Demo/DemoService.php'</span><span class="p">;</span>
+<span class="k">require_once</span> <span class="no">DIR_BACKEND</span> <span class="mf">.</span><span class="s1">'/Woojean/Rpc/Demo/Types.php'</span><span class="p">;</span>
+
+
+<span class="c1">// Demo</span>
+<span class="kn">use</span> <span class="err">\</span><span class="nc">Thrift\Transport\TSocket</span><span class="p">;</span>
+<span class="kn">use</span> <span class="err">\</span><span class="nc">Thrift\Transport\TBufferedTransport</span><span class="p">;</span>
+<span class="kn">use</span> <span class="err">\</span><span class="nc">Thrift\Protocol\TBinaryProtocol</span><span class="p">;</span>
+<span class="kn">use</span> <span class="err">\</span><span class="nc">Thrift\Protocol\TMultiplexedProtocol</span><span class="p">;</span>
+<span class="kn">use</span> <span class="err">\</span><span class="nc">Thrift\Exception\TException</span><span class="p">;</span>
+
+<span class="kn">use</span> <span class="err">\</span><span class="nc">Woojean\Rpc\Demo\DemoServiceClient</span><span class="p">;</span>
+<span class="kn">use</span> <span class="err">\</span><span class="nc">Woojean\Rpc\Demo\Param</span><span class="p">;</span>
+<span class="kn">use</span> <span class="err">\</span><span class="nc">Woojean\Rpc\Demo\RequestException</span><span class="p">;</span>
+
+<span class="k">try</span> <span class="p">{</span>
+    <span class="c1">// 注意端口号与服务端一致</span>
+    <span class="nv">$socket</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TSocket</span><span class="p">(</span><span class="s1">'0.0.0.0'</span><span class="p">,</span> <span class="s1">'9524'</span><span class="p">,</span> <span class="kc">TRUE</span><span class="p">);</span>  
+
+    <span class="c1">// 注意传输协议与服务端一致</span>
+    <span class="nv">$transport</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TBufferedTransport</span><span class="p">(</span><span class="nv">$socket</span><span class="p">,</span> <span class="mi">1024</span><span class="p">,</span> <span class="mi">1024</span><span class="p">);</span>
+    <span class="nv">$protocol</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TBinaryProtocol</span><span class="p">(</span><span class="nv">$transport</span><span class="p">);</span>
+    <span class="nv">$protocol</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TMultiplexedProtocol</span><span class="p">(</span><span class="nv">$protocol</span><span class="p">,</span> <span class="s2">"DemoService"</span><span class="p">);</span>  <span class="c1">// 注意服务名与服务端注册的一致</span>
+    
+    <span class="c1">// 构造参数</span>
+    <span class="nv">$params</span> <span class="o">=</span> <span class="k">new</span> <span class="err">\</span><span class="nf">Woojean\Rpc\Demo\Param</span><span class="p">();</span>
+    <span class="nv">$params</span><span class="o">-&gt;</span><span class="n">s1</span> <span class="o">=</span> <span class="s1">'Hello'</span><span class="p">;</span>
+    <span class="nv">$params</span><span class="o">-&gt;</span><span class="n">s2</span> <span class="o">=</span> <span class="s1">'World!'</span><span class="p">;</span>
+    <span class="nv">$sep</span> <span class="o">=</span> <span class="s1">'+'</span><span class="p">;</span>
+
+    <span class="c1">// 构造客户端</span>
+    <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DemoServiceClient</span><span class="p">(</span><span class="nv">$protocol</span><span class="p">);</span>
+    <span class="nv">$transport</span><span class="o">-&gt;</span><span class="nf">open</span><span class="p">();</span>
+
+    <span class="c1">// 调用Rpc方法</span>
+    <span class="nv">$ret</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="nf">joinString</span><span class="p">(</span><span class="nv">$params</span><span class="p">,</span> <span class="nv">$sep</span><span class="p">);</span>
+
+    <span class="c1">// 打印调用结果</span>
+    <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$ret</span><span class="p">);</span>  <span class="c1">// Hello+World!</span>
+    <span class="nv">$transport</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nc">RequestException</span> <span class="nv">$ex</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">print</span> <span class="s1">'RequestException: '</span> <span class="mf">.</span> <span class="nv">$ex</span><span class="o">-&gt;</span><span class="nf">getMessage</span><span class="p">()</span> <span class="mf">.</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h1 id="运行">运行</h1>
+<h2 id="启动服务端">启动服务端</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd Service/target/
+java -jar demo-1.0.jar
+</code></pre></div></div>
+
+<h2 id="运行客户端">运行客户端</h2>
+<p>输出：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello+World!
+</code></pre></div></div>
+
+<h1 id="thrift生成文件简析">Thrift生成文件简析</h1>
+<p>根据本例生成的文件，简单解析Thrift生成的文件及其作用。</p>
+
+<h2 id="php">PHP</h2>
+<p>PHP共生成2个文件：DemoService.php和Types.php，路径与在IDL中定义的命名空间一致（Woojean\Rpc\Demo）。其中DemoService.php的命名是由于在IDL文件中定义了：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 服务定义
+service DemoService
+{
+  // ...
+</code></pre></div></div>
+<p>而Types.php的命名是统一的，用于存放在IDL文件中自定义的各种类型。</p>
+
+<h3 id="typesphp的内容">Types.php的内容</h3>
+<ul>
+  <li>class RequestException extends TException</li>
+  <li>class Param  // 含s1和s2两个属性
+Types.php中定义的每个类都实现了以下方法：getName()、read($input)、write($output)。</li>
+</ul>
+
+<h3 id="demoservicephp的内容">DemoService.php的内容</h3>
+<ul>
+  <li>interface DemoServiceIf  // 定义了方法joinString(\Woojean\Rpc\Demo\Param $p, $sep)</li>
+  <li>class DemoServiceClient implements \Woojean\Rpc\Demo\DemoServiceIf</li>
+  <li>class DemoService_joinString_args  // Rpc方法joinString的参数（面向传输的封装：参数也需要传输）</li>
+  <li>class DemoService_joinString_result // Rpc方法joinString的返回值（面向传输的封装：返回值也需要传输）</li>
+  <li>class DemoServiceProcessor // PHP版的服务端处理类</li>
+</ul>
+
+<h2 id="java">Java</h2>
+<p>Java共生成3个文件：
+DemoService.java
+Param.java
+RequestException.java
+因为Java中公共类必须与文件同名，所以每个自定义类型都单独是一个文件。
+详略。</p>
+
+:ET

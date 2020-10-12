@@ -1,0 +1,311 @@
+I"k
+<table>
+  <thead>
+    <tr>
+      <th>60%胜率</th>
+      <th>先连输4笔，再连赢6笔</th>
+      <th> </th>
+      <th>先连赢6笔，再连输4笔</th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td><strong>全仓</strong></td>
+      <td><strong>分仓</strong></td>
+      <td> </td>
+      <td><strong>全仓</strong></td>
+      <td><strong>分仓</strong></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>90</td>
+      <td>99</td>
+      <td> </td>
+      <td>110</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>81</td>
+      <td>98</td>
+      <td> </td>
+      <td>121</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>72.9</td>
+      <td>97</td>
+      <td> </td>
+      <td>133.1</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>65.61</td>
+      <td>96</td>
+      <td> </td>
+      <td>146.41</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>72.171</td>
+      <td>97</td>
+      <td> </td>
+      <td>161.051</td>
+      <td>105</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>79.3881</td>
+      <td>98</td>
+      <td> </td>
+      <td>177.1561</td>
+      <td>106</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>87.32691</td>
+      <td>99</td>
+      <td> </td>
+      <td>159.44049</td>
+      <td>105</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>96.059601</td>
+      <td>100</td>
+      <td> </td>
+      <td>143.496441</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>105.6655611</td>
+      <td>101</td>
+      <td> </td>
+      <td>129.1467969</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>116.2321172</td>
+      <td>102</td>
+      <td> </td>
+      <td>116.2321172</td>
+      <td>102</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>50%胜率</th>
+      <th>先连输5笔，再连赢5笔</th>
+      <th> </th>
+      <th>先连赢5笔，再连输5笔</th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td><strong>全仓</strong></td>
+      <td><strong>分仓</strong></td>
+      <td> </td>
+      <td><strong>全仓</strong></td>
+      <td><strong>分仓</strong></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>90</td>
+      <td>99</td>
+      <td> </td>
+      <td>110</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>81</td>
+      <td>98</td>
+      <td> </td>
+      <td>121</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>72.9</td>
+      <td>97</td>
+      <td> </td>
+      <td>133.1</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>65.61</td>
+      <td>96</td>
+      <td> </td>
+      <td>146.41</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>59.049</td>
+      <td>95</td>
+      <td> </td>
+      <td>161.051</td>
+      <td>105</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>64.9539</td>
+      <td>96</td>
+      <td> </td>
+      <td>144.9459</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>71.44929</td>
+      <td>97</td>
+      <td> </td>
+      <td>130.45131</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>78.594219</td>
+      <td>98</td>
+      <td> </td>
+      <td>117.406179</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>86.4536409</td>
+      <td>99</td>
+      <td> </td>
+      <td>105.6655611</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>95.09900499</td>
+      <td>100</td>
+      <td> </td>
+      <td>95.09900499</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>40%胜率</th>
+      <th>先连输6笔，再连赢4笔</th>
+      <th> </th>
+      <th>先连赢4笔，再连输6笔</th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td><strong>全仓</strong></td>
+      <td><strong>分仓</strong></td>
+      <td> </td>
+      <td><strong>全仓</strong></td>
+      <td><strong>分仓</strong></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>90</td>
+      <td>99</td>
+      <td> </td>
+      <td>110</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>81</td>
+      <td>98</td>
+      <td> </td>
+      <td>121</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>72.9</td>
+      <td>97</td>
+      <td> </td>
+      <td>133.1</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>65.61</td>
+      <td>96</td>
+      <td> </td>
+      <td>146.41</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>59.049</td>
+      <td>95</td>
+      <td> </td>
+      <td>131.769</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>53.1441</td>
+      <td>94</td>
+      <td> </td>
+      <td>118.5921</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>58.45851</td>
+      <td>95</td>
+      <td> </td>
+      <td>106.73289</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>64.304361</td>
+      <td>96</td>
+      <td> </td>
+      <td>96.059601</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>70.7347971</td>
+      <td>97</td>
+      <td> </td>
+      <td>86.4536409</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>77.80827681</td>
+      <td>98</td>
+      <td> </td>
+      <td>77.80827681</td>
+      <td>98</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

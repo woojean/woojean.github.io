@@ -1,0 +1,880 @@
+I"�<ul id="markdown-toc">
+  <li><a href="#array" id="markdown-toc-array">array</a></li>
+  <li><a href="#destructuring" id="markdown-toc-destructuring">destructuring</a></li>
+  <li><a href="#function" id="markdown-toc-function">function</a></li>
+  <li><a href="#generator" id="markdown-toc-generator">Generator</a></li>
+  <li><a href="#iterator" id="markdown-toc-iterator">Iterator</a></li>
+  <li><a href="#let" id="markdown-toc-let">let</a></li>
+  <li><a href="#map" id="markdown-toc-map">map</a></li>
+  <li><a href="#module" id="markdown-toc-module">module</a></li>
+  <li><a href="#number" id="markdown-toc-number">number</a></li>
+  <li><a href="#object" id="markdown-toc-object">object</a></li>
+  <li><a href="#promise" id="markdown-toc-promise">promise</a></li>
+  <li><a href="#set" id="markdown-toc-set">set</a></li>
+  <li><a href="#string" id="markdown-toc-string">string</a></li>
+</ul>
+
+<p><a href="https://github.com/woojean/es6-practice">下载代码:https://github.com/woojean/es6-practice</a></p>
+
+<h1 id="array">array</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 扩展运算符：将一个数组转为参数序列（用逗号分隔）</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">...[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">5</span><span class="p">);</span>  <span class="c1">// 1 2 3 4 5</span>
+
+<span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">38</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(...</span><span class="nx">numbers</span><span class="p">));</span> <span class="c1">// 42  即add(...[x,y])相当于add(x,y)</span>
+
+<span class="c1">// 如果扩展运算符后面是一个空数组，则不产生任何效果</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([...[],</span> <span class="mi">1</span><span class="p">]);</span> <span class="c1">// [1]</span>
+
+<span class="c1">// 与解构赋值结合使用</span>
+<span class="kd">const</span> <span class="p">[</span><span class="nx">first</span><span class="p">,</span> <span class="p">...</span><span class="nx">rest</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">first</span><span class="p">);</span> <span class="c1">// 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rest</span><span class="p">);</span>  <span class="c1">// [2, 3, 4, 5]</span>
+
+<span class="c1">// 如果将扩展运算符用于数组赋值，只能放在参数的最后一位，否则会报错。</span>
+
+
+<span class="c1">// 任何 Iterator 接口的对象，都可以用扩展运算符转为真正的数组。</span>
+<span class="kd">let</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="p">([</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="dl">'</span><span class="s1">one</span><span class="dl">'</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="dl">'</span><span class="s1">two</span><span class="dl">'</span><span class="p">],</span>
+  <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="dl">'</span><span class="s1">three</span><span class="dl">'</span><span class="p">],</span>
+<span class="p">]);</span>
+
+<span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">map</span><span class="p">.</span><span class="nx">keys</span><span class="p">()];</span> <span class="c1">// [1, 2, 3]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">go</span> <span class="o">=</span> <span class="kd">function</span><span class="o">*</span><span class="p">(){</span>
+  <span class="k">yield</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">yield</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="k">yield</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([...</span><span class="nx">go</span><span class="p">()]);</span> <span class="c1">// [1, 2, 3]</span>
+
+
+<span class="c1">// Array.from()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// Array.from方法用于将两类对象转为真正的数组：类似数组的对象和可遍历的对象</span>
+<span class="c1">// 所谓类似数组的对象，本质特征只有一点，即必须有length属性。因此，任何有length属性的对象，都可以通过Array.from方法转为数组</span>
+<span class="kd">let</span> <span class="nx">arrayLike</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">0</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">1</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">2</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">c</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">length</span><span class="p">:</span> <span class="mi">3</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="nx">arrayLike</span><span class="p">);</span> 
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span>  <span class="c1">// ['a', 'b', 'c']</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">));</span>  <span class="c1">// ['h', 'e', 'l', 'l', 'o']</span>
+
+<span class="kd">let</span> <span class="nx">namesSet</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">([</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">])</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="k">from</span><span class="p">(</span><span class="nx">namesSet</span><span class="p">));</span>  <span class="c1">// ['a', 'b']</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="k">from</span><span class="p">({</span> <span class="na">length</span><span class="p">:</span> <span class="mi">3</span> <span class="p">}));</span>  <span class="c1">// [ undefined, undefined, undefined ]</span>
+
+<span class="c1">// Array.from还可以接受第二个参数，用来对每个元素进行处理，将处理后的值放入返回的数组</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="k">from</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">x</span><span class="p">));</span>  <span class="c1">// [1, 4, 9]</span>
+
+
+<span class="c1">// Array.of()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// Array.of方法用于将一组值，转换为数组</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="k">of</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">8</span><span class="p">));</span> <span class="c1">// [3,11,8]</span>
+
+
+<span class="c1">// copyWithin()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 数组实例的copyWithin方法，在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组。</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">].</span><span class="nx">copyWithin</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>  <span class="c1">// [4, 5, 3, 4, 5]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">].</span><span class="nx">copyWithin</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="c1">// [4, 2, 3, 4, 5]</span>
+
+
+<span class="c1">// find()和findIndex()</span>
+<span class="c1">// 用于找出第一个符合条件的数组成员。它的参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为true的成员，然后返回该成员。</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">].</span><span class="nx">find</span><span class="p">((</span><span class="nx">n</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">));</span>  <span class="c1">// -5</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">].</span><span class="nx">find</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">value</span> <span class="o">&gt;</span> <span class="mi">9</span><span class="p">;</span>
+<span class="p">}));</span>  <span class="c1">// 10</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">].</span><span class="nx">findIndex</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">value</span> <span class="o">&gt;</span> <span class="mi">9</span><span class="p">;</span>
+<span class="p">}));</span>  <span class="c1">// 2</span>
+
+
+<span class="c1">// fill()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">c</span><span class="dl">'</span><span class="p">].</span><span class="nx">fill</span><span class="p">(</span><span class="mi">7</span><span class="p">));</span>  <span class="c1">// [7, 7, 7]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">c</span><span class="dl">'</span><span class="p">].</span><span class="nx">fill</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>  <span class="c1">// ['a', 7, 'c']</span>
+
+
+<span class="c1">// entries()，keys() 和 values()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 它们都返回一个遍历器对象，可以用for...of循环进行遍历，唯一的区别是keys()是对键名的遍历、values()是对键值的遍历，entries()是对键值对的遍历。</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">index</span> <span class="k">of</span> <span class="p">[</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">].</span><span class="nx">keys</span><span class="p">())</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">index</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// 0</span>
+<span class="c1">// 1</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="p">[</span><span class="nx">index</span><span class="p">,</span> <span class="nx">elem</span><span class="p">]</span> <span class="k">of</span> <span class="p">[</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">].</span><span class="nx">entries</span><span class="p">())</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">elem</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// 0 "a"</span>
+<span class="c1">// 1 "b"</span>
+
+
+<span class="c1">// includes()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// includes()方法返回一个布尔值，表示某个数组是否包含给定的值</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span><span class="nx">includes</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>  <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span><span class="nx">includes</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">));</span>  <span class="c1">// true</span>
+
+
+<span class="c1">// 数组的空位</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 数组的空位指，数组的某一个位置没有任何值。</span>
+<span class="p">[,</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">].</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">x</span><span class="p">,</span><span class="nx">i</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">));</span> <span class="c1">// 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([,</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">].</span><span class="nx">every</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">x</span><span class="o">===</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">));</span> <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="k">from</span><span class="p">([</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,,</span><span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">]));</span>  <span class="c1">// [ "a", undefined, "b" ]</span>
+
+<span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[,</span> <span class="p">,];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">of</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// 1</span>
+<span class="c1">// 1</span>
+
+<span class="c1">// 由于空位的处理规则非常不统一，所以建议避免出现空位。</span>
+
+</code></pre></div></div>
+
+<h1 id="destructuring">destructuring</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 解构数组</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">let</span> <span class="p">[</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="p">...</span><span class="nx">z</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">abc</span><span class="dl">'</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// "abc"</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">y</span><span class="p">);</span> <span class="c1">// undefined</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">z</span><span class="p">);</span> <span class="c1">// []</span>
+
+<span class="kd">let</span> <span class="p">[...</span><span class="nx">a</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">abc</span><span class="dl">'</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// [ 'abc' ]</span>
+
+<span class="kd">let</span> <span class="p">[</span><span class="nx">b</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// undefined</span>
+
+<span class="kd">let</span> <span class="p">[</span><span class="nx">c</span> <span class="o">=</span> <span class="kc">true</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span> <span class="c1">// true</span>
+
+<span class="kd">let</span> <span class="p">[</span><span class="nx">d</span> <span class="o">=</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kc">undefined</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">);</span> <span class="c1">// 1</span>
+
+<span class="kd">let</span> <span class="p">[</span><span class="nx">e</span> <span class="o">=</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kc">null</span><span class="p">];</span>  <span class="c1">// 默认值生效的条件是，对象的属性值严格等于（===）undefined</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span> <span class="c1">// null</span>
+
+
+<span class="c1">// 解构生成器</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">function</span><span class="o">*</span> <span class="nx">fibs</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">yield</span> <span class="nx">a</span><span class="p">;</span>
+    <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nx">b</span><span class="p">,</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">];</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="p">[</span><span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">,</span> <span class="nx">third</span><span class="p">]</span> <span class="o">=</span> <span class="nx">fibs</span><span class="p">();</span>
+<span class="kd">let</span> <span class="p">[</span><span class="nx">fourth</span><span class="p">,</span> <span class="nx">fifth</span><span class="p">,</span> <span class="nx">sixth</span><span class="p">,</span> <span class="nx">seven</span><span class="p">]</span> <span class="o">=</span> <span class="nx">fibs</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">first</span><span class="p">);</span> <span class="c1">// 0</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">second</span><span class="p">);</span> <span class="c1">// 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">third</span><span class="p">);</span> <span class="c1">// 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fourth</span><span class="p">);</span> <span class="c1">// 0</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fifth</span><span class="p">);</span> <span class="c1">// 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sixth</span><span class="p">);</span> <span class="c1">// 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">seven</span><span class="p">);</span> <span class="c1">// 2</span>
+
+
+
+<span class="c1">// 解构对象</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 对象的属性没有次序，变量必须与属性同名，才能取到正确的值</span>
+<span class="kd">let</span> <span class="p">{</span> <span class="nx">bar</span><span class="p">,</span> <span class="nx">foo</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{</span> <span class="na">foo</span><span class="p">:</span> <span class="dl">"</span><span class="s2">aaa</span><span class="dl">"</span><span class="p">,</span> <span class="na">bar</span><span class="p">:</span> <span class="dl">"</span><span class="s2">bbb</span><span class="dl">"</span> <span class="p">};</span>  <span class="c1">// 相当于 let { foo: foo, bar: bar } = { foo: "aaa", bar: "bbb" };</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foo</span><span class="p">);</span> <span class="c1">// "aaa"</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bar</span><span class="p">);</span> <span class="c1">// "bbb"</span>
+
+<span class="kd">let</span> <span class="p">{</span> <span class="nx">baz</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{</span> <span class="na">foo</span><span class="p">:</span> <span class="dl">"</span><span class="s2">aaa</span><span class="dl">"</span><span class="p">,</span> <span class="na">bar</span><span class="p">:</span> <span class="dl">"</span><span class="s2">bbb</span><span class="dl">"</span> <span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">baz</span><span class="p">);</span> <span class="c1">// undefined</span>
+
+<span class="c1">// 如果变量名与属性名不一致，必须写成下面这样</span>
+<span class="kd">let</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{</span> <span class="na">first</span><span class="p">:</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">,</span> <span class="na">last</span><span class="p">:</span> <span class="dl">'</span><span class="s1">world</span><span class="dl">'</span> <span class="p">};</span>
+<span class="kd">let</span> <span class="p">{</span> <span class="na">first</span><span class="p">:</span> <span class="nx">f</span><span class="p">,</span> <span class="na">last</span><span class="p">:</span> <span class="nx">l</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">obj1</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span> <span class="c1">// 'hello'</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">l</span><span class="p">);</span> <span class="c1">// 'world'</span>
+
+<span class="c1">// 用于嵌套结构的对象</span>
+<span class="kd">let</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">p</span><span class="p">:</span> <span class="p">[</span>
+    <span class="dl">'</span><span class="s1">Hello</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">{</span> <span class="na">y2</span><span class="p">:</span> <span class="dl">'</span><span class="s1">World</span><span class="dl">'</span> <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="p">{</span> <span class="na">p</span><span class="p">:</span> <span class="p">[</span><span class="nx">x2</span><span class="p">,</span> <span class="p">{</span> <span class="nx">y2</span> <span class="p">}]</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">obj2</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x2</span><span class="p">);</span> <span class="c1">// "Hello"</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">y2</span><span class="p">);</span> <span class="c1">// "World"</span>
+
+<span class="c1">// 由于数组本质是特殊的对象，因此可以对数组进行对象属性的解构</span>
+<span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="kd">let</span> <span class="p">{</span><span class="mi">0</span> <span class="p">:</span> <span class="nx">firstItem</span><span class="p">,</span> <span class="p">[</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="p">:</span> <span class="nx">lastItem</span><span class="p">}</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstItem</span><span class="p">);</span> <span class="c1">// 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">lastItem</span><span class="p">);</span>  <span class="c1">// 3</span>
+
+
+<span class="c1">// 解构字符串</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">let</span> <span class="p">{</span><span class="na">length</span> <span class="p">:</span> <span class="nx">len</span><span class="p">}</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">len</span><span class="p">);</span> <span class="c1">// 5</span>
+
+
+<span class="c1">// 解构函数参数</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">let</span> <span class="nx">ret</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]].</span><span class="nx">map</span><span class="p">(([</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">])</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ret</span><span class="p">);</span> <span class="c1">// [ 3, 7 ]</span>
+
+</code></pre></div></div>
+
+<h1 id="function">function</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 函数参数的默认值</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 参数变量是默认声明的，所以不能用let或const再次声明</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// SyntaxError: Identifier 'x' has already been declared</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="c1">// 参数默认值是惰性求值的</span>
+<span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">99</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">p</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">p</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">foo</span><span class="p">()</span> <span class="c1">// 100</span>
+
+<span class="nx">x</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="nx">foo</span><span class="p">()</span> <span class="c1">// 101</span>
+
+
+<span class="c1">// 参数默认值与结构赋值同时使用</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">({</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">})</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">foo</span><span class="p">({})</span> <span class="c1">// undefined 5</span>
+<span class="nx">foo</span><span class="p">({</span><span class="na">x</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span> <span class="c1">// 1 5</span>
+<span class="nx">foo</span><span class="p">({</span><span class="na">x</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span> <span class="c1">// 1 2</span>
+<span class="nx">foo</span><span class="p">()</span> <span class="c1">// TypeError: Cannot read property 'x' of undefined</span>
+
+
+<span class="c1">// 指定了默认值以后，函数的length属性，将返回没有指定默认值的参数个数</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">((</span><span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="p">{}).</span><span class="nx">length</span><span class="p">);</span> <span class="c1">// 1</span>
+
+
+<span class="c1">// 一旦设置了参数的默认值，函数进行声明初始化时，参数会形成一个单独的作用域</span>
+<span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">y</span> <span class="o">=</span> <span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">y</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">f</span><span class="p">()</span> <span class="c1">// 1</span>
+
+<span class="cm">/*
+函数f调用时，参数y = x形成一个单独的作用域。这个作用域里面，变量x本身没有定义，所以指向外层的全局变量x。函数调用时，函数体内部的局部变量x影响不到默认值变量x。
+如果此时，全局变量x不存在，就会报错。
+*/</span>
+
+
+<span class="c1">// rest参数（用于获取函数的多余参数）</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">function</span> <span class="nx">add</span><span class="p">(...</span><span class="nx">values</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">val</span> <span class="k">of</span> <span class="nx">values</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">val</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">sum</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="c1">// 10</span>
+
+
+<span class="c1">// 函数的length属性，不包括rest参数</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">((</span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="p">...</span><span class="nx">b</span><span class="p">)</span> <span class="p">{}).</span><span class="nx">length</span><span class="p">)</span>  <span class="c1">// 1</span>
+
+<span class="cm">/*
+ES6规定只要函数参数使用了默认值、解构赋值、或者扩展运算符，那么函数内部就不能显式设定为严格模式
+*/</span>
+
+<span class="c1">// 箭头函数</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 由于大括号被解释为代码块，所以如果箭头函数直接返回一个对象，必须在对象外面加上括号，否则会报错</span>
+<span class="kd">let</span> <span class="nx">getTempItem</span> <span class="o">=</span> <span class="nx">id</span> <span class="o">=&gt;</span> <span class="p">({</span> <span class="na">id</span><span class="p">:</span> <span class="nx">id</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Temp</span><span class="dl">"</span> <span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getTempItem</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+
+<span class="c1">// 箭头函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">id:</span><span class="dl">'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+  <span class="p">},</span> <span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="mi">21</span><span class="p">;</span>
+
+<span class="nx">foo</span><span class="p">.</span><span class="nx">call</span><span class="p">({</span> <span class="na">id</span><span class="p">:</span> <span class="mi">42</span> <span class="p">});</span>
+<span class="c1">// id: 42</span>
+
+<span class="c1">// 尾调用优化与尾递归</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 略。</span>
+</code></pre></div></div>
+
+<h1 id="generator">Generator</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 基本概念</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 执行Generator函数会返回一个遍历器对象</span>
+<span class="kd">function</span><span class="o">*</span> <span class="nx">helloWorldGenerator</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">yield</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">;</span>
+  <span class="k">yield</span> <span class="dl">'</span><span class="s1">world</span><span class="dl">'</span><span class="p">;</span>
+  <span class="k">return</span> <span class="dl">'</span><span class="s1">ending</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">hw</span> <span class="o">=</span> <span class="nx">helloWorldGenerator</span><span class="p">();</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hw</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span>  <span class="c1">// { value: 'hello', done: false }</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hw</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span>  <span class="c1">// { value: 'world', done: false }</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hw</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span>  <span class="c1">// { value: 'ending', done: true }</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hw</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span>  <span class="c1">// { value: undefined, done: true }</span>
+
+
+<span class="c1">// next方法的参数</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// next方法可以带一个参数，该参数就会被当作"上一个yield表达式的"返回值</span>
+<span class="kd">function</span><span class="o">*</span> <span class="nx">f</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="kc">true</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">reset</span> <span class="o">=</span> <span class="k">yield</span> <span class="nx">i</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">reset</span><span class="p">)</span> <span class="p">{</span> <span class="nx">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">f</span><span class="p">();</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="c1">// { value: 0, done: false }</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="c1">// { value: 1, done: false }</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">next</span><span class="p">(</span><span class="kc">true</span><span class="p">))</span> <span class="c1">// { value: 0, done: false }</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">next</span><span class="p">())</span> <span class="c1">// { value: 1, done: false }</span>
+
+
+<span class="c1">// Generator.prototype.throw()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 遍历器对象有一个throw方法，可以在函数体外抛出错误，然后在Generator函数体内捕获</span>
+<span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="kd">function</span><span class="o">*</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="k">yield</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">内部捕获</span><span class="dl">'</span><span class="p">,</span> <span class="nx">e</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">g</span><span class="p">();</span>
+<span class="nx">i</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+
+<span class="k">try</span> <span class="p">{</span>
+  <span class="nx">i</span><span class="p">.</span><span class="k">throw</span><span class="p">(</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">i</span><span class="p">.</span><span class="k">throw</span><span class="p">(</span><span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">外部捕获</span><span class="dl">'</span><span class="p">,</span> <span class="nx">e</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// 内部捕获 a</span>
+<span class="c1">// 外部捕获 b</span>
+
+
+<span class="c1">// Generator.prototype.return()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 遍历器对象有一个return方法，可以返回给定的值，并且终结遍历Generator函数。</span>
+<span class="kd">function</span><span class="o">*</span> <span class="nx">gen</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">yield</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">yield</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="k">yield</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">gen</span><span class="p">();</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span>        <span class="c1">// { value: 1, done: false }</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="k">return</span><span class="p">(</span><span class="dl">'</span><span class="s1">foo</span><span class="dl">'</span><span class="p">));</span> <span class="c1">// { value: "foo", done: true }</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span>        <span class="c1">// { value: undefined, done: true }</span>
+</code></pre></div></div>
+
+<h1 id="iterator">Iterator</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 基本概念</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 遍历器对象本质上，就是一个指针对象。</span>
+<span class="c1">// 每一次调用next方法，都会返回一个包含value和done两个属性的对象。其中，value属性是当前成员的值，done属性是一个布尔值，表示遍历是否结束。</span>
+
+<span class="c1">// Iterator对象的next()方法的模拟实现</span>
+<span class="kd">var</span> <span class="nx">it</span> <span class="o">=</span> <span class="nx">makeIterator</span><span class="p">([</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">]);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">it</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span> <span class="c1">// { value: "a", done: false }</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">it</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span> <span class="c1">// { value: "b", done: false }</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">it</span><span class="p">.</span><span class="nx">next</span><span class="p">());</span> <span class="c1">// { value: undefined, done: true }</span>
+
+<span class="kd">function</span> <span class="nx">makeIterator</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">nextIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">next</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">nextIndex</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="p">?</span>
+        <span class="p">{</span><span class="na">value</span><span class="p">:</span> <span class="nx">array</span><span class="p">[</span><span class="nx">nextIndex</span><span class="o">++</span><span class="p">],</span> <span class="na">done</span><span class="p">:</span> <span class="kc">false</span><span class="p">}</span> <span class="p">:</span>
+        <span class="p">{</span><span class="na">value</span><span class="p">:</span> <span class="kc">undefined</span><span class="p">,</span> <span class="na">done</span><span class="p">:</span> <span class="kc">true</span><span class="p">};</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="cm">/*
+{ value: 'a', done: false }
+{ value: 'b', done: false }
+{ value: undefined, done: true }
+*/</span>
+
+</code></pre></div></div>
+
+<h1 id="let">let</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 基本使用</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+  <span class="p">};</span>
+
+  <span class="kd">let</span> <span class="nx">v</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="nx">b</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">v</span> <span class="o">+</span> <span class="mi">10</span><span class="p">);</span>
+  <span class="p">};</span>
+  <span class="nx">v</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+  <span class="nx">b</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  	<span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">v</span><span class="p">;</span>
+  	<span class="nx">x</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">((()</span><span class="o">=&gt;</span><span class="p">{</span><span class="k">return</span> <span class="nx">x</span><span class="p">})());</span>
+  <span class="p">};</span>
+
+<span class="p">}</span>
+
+<span class="nx">a</span><span class="p">[</span><span class="mi">6</span><span class="p">]();</span> <span class="c1">// 6</span>
+<span class="nx">b</span><span class="p">[</span><span class="mi">6</span><span class="p">]();</span> <span class="c1">// 12</span>
+<span class="nx">b</span><span class="p">[</span><span class="mi">100</span><span class="p">]();</span> <span class="c1">// 3</span>
+<span class="c1">//console.log(v);  // ReferenceError: v is not defined</span>
+
+
+<span class="c1">// for循环设置循环变量的那部分是一个父作用域，而循环体内部是一个单独的子作用域</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">abc</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// abc</span>
+<span class="c1">// abc</span>
+<span class="c1">// abc</span>
+
+
+<span class="c1">// “暂时性死区”（temporal dead zone，简称 TDZ）</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">var</span> <span class="nx">tmp</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">//console.log(tmp); // ReferenceError: tmp is not defined</span>
+  <span class="c1">//typeof tmp;  // ReferenceError: tmp is not defined。注意这里不是返回undefined</span>
+  <span class="kd">let</span> <span class="nx">tmp</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cm">/*
+暂时性死区的本质就是，只要一进入当前作用域，所要使用的变量就已经存在了，但是不可获取，只有等到声明变量的那一行代码出现，才可以获取和使用该变量。
+*/</span>
+
+<span class="c1">// const注意点</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="nx">foo</span><span class="p">.</span><span class="nx">prop</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foo</span><span class="p">.</span><span class="nx">prop</span><span class="p">);</span>  <span class="c1">// 123</span>
+
+<span class="nx">foo</span> <span class="o">=</span> <span class="p">{};</span> <span class="c1">// TypeError: "foo" is read-only</span>
+</code></pre></div></div>
+
+<h1 id="map">map</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 基本用法</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// map的键可以是对象</span>
+<span class="kd">const</span> <span class="nx">m1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="p">();</span>
+<span class="kd">const</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span><span class="na">p</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Hello World</span><span class="dl">'</span><span class="p">};</span>
+
+<span class="nx">m1</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">o</span><span class="p">,</span> <span class="dl">'</span><span class="s1">content</span><span class="dl">'</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">m1</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">o</span><span class="p">));</span> <span class="c1">// content</span>
+
+<span class="c1">// 任何具有Iterator接口、且每个成员都是一个双元素的数组的数据结构都可以当作Map构造函数的参数</span>
+<span class="kd">const</span> <span class="nx">m2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="p">([</span>
+  <span class="p">[</span><span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">张三</span><span class="dl">'</span><span class="p">],</span>
+  <span class="p">[</span><span class="dl">'</span><span class="s1">title</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Author</span><span class="dl">'</span><span class="p">]</span>
+<span class="p">]);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">m2</span><span class="p">);</span>  <span class="c1">// Map { 'name' =&gt; '张三', 'title' =&gt; 'Author' }</span>
+
+
+<span class="c1">// WeakMap</span>
+<span class="c1">// 略。</span>
+</code></pre></div></div>
+
+<h1 id="module">module</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 基本概念</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// ES6模块的设计思想，是尽量的静态化，使得编译时就能确定模块的依赖关系，以及输入和输出的变量。CommonJS和AMD模块，都只能在运行时确定这些东西（需要在运行时新建对象，再使用对象的属性或方法）。</span>
+<span class="c1">// 一个模块就是一个独立的文件，该文件内部的所有变量，外部无法获取。如果希望外部能够读取模块内部的某个变量，就必须使用export关键字输出该变量。</span>
+<span class="c1">// ES6的模块自动采用严格模式。</span>
+
+<span class="c1">// 详略。</span>
+</code></pre></div></div>
+
+<h1 id="number">number</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Number对象的方法</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// Number.isFinite(...)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isFinite</span><span class="p">(</span><span class="mi">15</span><span class="p">));</span>  <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isFinite</span><span class="p">(</span><span class="mf">0.8</span><span class="p">));</span>  <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isFinite</span><span class="p">(</span><span class="kc">NaN</span><span class="p">));</span>  <span class="c1">// false</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isFinite</span><span class="p">(</span><span class="kc">Infinity</span><span class="p">));</span>  <span class="c1">// false</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isFinite</span><span class="p">(</span><span class="o">-</span><span class="kc">Infinity</span><span class="p">));</span>  <span class="c1">// false</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isFinite</span><span class="p">(</span><span class="dl">'</span><span class="s1">foo</span><span class="dl">'</span><span class="p">));</span>  <span class="c1">// false</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isFinite</span><span class="p">(</span><span class="dl">'</span><span class="s1">15</span><span class="dl">'</span><span class="p">));</span>  <span class="c1">// false</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isFinite</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  <span class="c1">// false</span>
+
+<span class="c1">// Number.isNaN(...)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="kc">NaN</span><span class="p">));</span>  <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="mi">15</span><span class="p">));</span>  <span class="c1">// false</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="dl">'</span><span class="s1">15</span><span class="dl">'</span><span class="p">));</span>  <span class="c1">// false   !!!</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  <span class="c1">// false   !!!</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="mi">9</span><span class="o">/</span><span class="kc">NaN</span><span class="p">));</span>  <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="dl">'</span><span class="s1">true</span><span class="dl">'</span><span class="o">/</span><span class="mi">0</span><span class="p">));</span>  <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="dl">'</span><span class="s1">true</span><span class="dl">'</span><span class="o">/</span><span class="dl">'</span><span class="s1">true</span><span class="dl">'</span><span class="p">));</span>  <span class="c1">// true</span>
+
+<span class="c1">// Number.isFinite()对于非数值一律返回false, Number.isNaN()只有对于NaN才返回true，非NaN一律返回false。</span>
+
+<span class="c1">// Number.parseInt(...), Number.parseFloat(...)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">parseInt</span><span class="p">(</span><span class="dl">'</span><span class="s1">12.34</span><span class="dl">'</span><span class="p">));</span>  <span class="c1">// 12</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">parseFloat</span><span class="p">(</span><span class="dl">'</span><span class="s1">123.45#</span><span class="dl">'</span><span class="p">));</span>  <span class="c1">// 123.45</span>
+
+<span class="c1">// Number.isInteger(...)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="mi">25</span><span class="p">));</span>  <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="mf">25.0</span><span class="p">));</span>  <span class="c1">// true  在JavaScript内部，整数和浮点数是同样的储存方法，所以25和25.0被视为同一个值。</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="mf">25.1</span><span class="p">));</span>  <span class="c1">// false</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="dl">"</span><span class="s2">15</span><span class="dl">"</span><span class="p">));</span>  <span class="c1">// false</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  <span class="c1">// false</span>
+
+
+<span class="c1">// Number.EPSILON</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">EPSILON</span><span class="p">);</span>  <span class="c1">// 2.220446049250313e-16</span>
+
+<span class="c1">// Number.isSafeInteger()</span>
+<span class="c1">// JavaScript能够准确表示的整数范围在-2^53到2^53之间（不含两个端点），超过这个范围，无法精确表示这个值。Number.isSafeInteger()则是用来判断一个整数是否落在这个范围之内。</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">9007199254740993</span><span class="p">);</span>  <span class="c1">// 9007199254740992</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">53</span><span class="p">)</span> <span class="o">===</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">53</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>  <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">MIN_SAFE_INTEGER</span><span class="p">);</span>  <span class="c1">// -9007199254740991</span>
+
+
+<span class="c1">// Math.trunc(),Math.fround()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">trunc</span><span class="p">(</span><span class="mf">4.9</span><span class="p">));</span>  <span class="c1">// 4  去掉一个数的小数部分</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">fround</span><span class="p">(</span><span class="mf">1.337</span><span class="p">));</span>  <span class="c1">// 1.3370000123977661  返回一个数的单精度浮点数形式</span>
+
+<span class="c1">// 指数运算符 **</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span><span class="p">);</span>  <span class="c1">// 8</span>
+
+
+<span class="cm">/*
+JavaScript所有数字都保存成64位浮点数，这决定了整数的精确程度只能到53个二进制位。大于这个范围的整数，JavaScript 是无法精确表示的，这使得 JavaScript 不适合进行科学和金融方面的精确计算。
+现在有一个提案，引入了新的数据类型 Integer（整数），来解决这个问题。
+*/</span> 
+</code></pre></div></div>
+
+<h1 id="object">object</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 属性的简洁表示法</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// ES6允许在对象之中直接写变量。这时，属性名为变量名, 属性值为变量的值</span>
+<span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">};</span>  <span class="c1">// 等同于{x: x, y: y }</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">));</span>  <span class="c1">// { x: 1, y: 2 }</span>
+
+
+<span class="c1">// 方法也可以简写</span>
+<span class="kd">const</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">method</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="dl">"</span><span class="s2">Hello!</span><span class="dl">"</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">method</span><span class="p">());</span>  <span class="c1">//  Hello!</span>
+
+<span class="c1">// 属性名表达式</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">let</span> <span class="nx">propKey</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">foo</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">[</span><span class="nx">propKey</span><span class="p">]:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="p">[</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">bc</span><span class="dl">'</span><span class="p">]:</span> <span class="mi">123</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>  <span class="c1">// { foo: true, abc: 123 }</span>
+
+<span class="c1">// Object.is()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 用来比较两个值是否严格相等，与严格比较运算符（===）的行为基本一致</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="dl">'</span><span class="s1">foo</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">foo</span><span class="dl">'</span><span class="p">));</span>  <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">is</span><span class="p">({},</span> <span class="p">{}));</span>  <span class="c1">// false</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="kc">NaN</span><span class="p">,</span> <span class="kc">NaN</span><span class="p">));</span>  <span class="c1">// true，使用===则为false</span>
+
+<span class="c1">// Object.assign()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 用于对象的合并，将源对象的所有可枚举属性，复制到目标对象，对于同名属性，后面的值会覆盖前面的</span>
+<span class="kd">const</span> <span class="nx">target</span> <span class="o">=</span> <span class="p">{</span> <span class="na">a</span><span class="p">:</span> <span class="mi">1</span> <span class="p">};</span>
+<span class="kd">const</span> <span class="nx">source1</span> <span class="o">=</span> <span class="p">{</span> <span class="na">b</span><span class="p">:</span> <span class="mi">2</span> <span class="p">};</span>
+<span class="kd">const</span> <span class="nx">source2</span> <span class="o">=</span> <span class="p">{</span> <span class="na">c</span><span class="p">:</span> <span class="mi">3</span> <span class="p">};</span>
+<span class="kd">const</span> <span class="nx">source3</span> <span class="o">=</span> <span class="p">{</span> <span class="na">c</span><span class="p">:</span> <span class="mi">4</span><span class="p">};</span>
+<span class="kd">const</span> <span class="nx">source4</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// 无可枚举属性</span>
+
+<span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">source1</span><span class="p">,</span> <span class="nx">source2</span><span class="p">,</span> <span class="nx">source3</span><span class="p">,</span> <span class="nx">source4</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span> <span class="c1">// {a:1, b:2, c:4}</span>
+
+<span class="c1">// Object.assign方法实行的是浅拷贝，而不是深拷贝</span>
+<span class="kd">const</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{</span><span class="na">a</span><span class="p">:</span> <span class="p">{</span><span class="na">b</span><span class="p">:</span> <span class="mi">1</span><span class="p">}};</span>
+<span class="kd">const</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},</span> <span class="nx">obj1</span><span class="p">);</span>
+<span class="nx">obj1</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj2</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// 2</span>
+
+
+<span class="c1">// Object.getOwnPropertyDescriptor</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="na">foo</span><span class="p">:</span> <span class="mi">123</span> <span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">getOwnPropertyDescriptor</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="dl">'</span><span class="s1">foo</span><span class="dl">'</span><span class="p">));</span>
+<span class="cm">/*
+{ 
+  value: 123,
+  writable: true,
+  enumerable: true,
+  configurable: true 
+}
+*/</span>
+<span class="cm">/* enumerable属性用于标识属性是否可枚举。如下操作会忽略不可枚举的属性：
+* for ... in
+* Object.keys()
+* JSON.stringify()
+* Object.assign()
+*/</span>
+<span class="c1">// Object.getOwnPropertyDescriptors()返回指定对象所有自身属性（非继承属性）的描述对象。</span>
+
+
+<span class="c1">// 属性的遍历</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 略。</span>
+
+<span class="c1">// Object.setPrototypeOf()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 作用与设置__proto__属性相同，用来设置一个对象的prototype对象。</span>
+<span class="kd">let</span> <span class="nx">proto</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="na">x</span><span class="p">:</span><span class="mi">10</span> <span class="p">};</span>
+<span class="nb">Object</span><span class="p">.</span><span class="nx">setPrototypeOf</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">proto</span><span class="p">);</span>
+
+<span class="nx">proto</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+<span class="nx">proto</span><span class="p">.</span><span class="nx">z</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// 10</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span> <span class="c1">// 20</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">z</span><span class="p">);</span> <span class="c1">// 40</span>
+<span class="c1">// Object.setPrototypeOf()用于读取一个对象的原型对象。</span>
+
+<span class="c1">// Object.keys()，Object.values()，Object.entries()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 略。</span>
+
+
+<span class="c1">// 对象的扩展运算符</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 结构运算符、扩展运算符，略。</span>
+
+</code></pre></div></div>
+
+<h1 id="promise">promise</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 基本用法</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// Promise对象就是一个保存着某个未来才会结束的事件的结果</span>
+<span class="c1">// Promise构造函数中的参数resolve和reject是两个函数，由JavaScript引擎提供，不用自己部署</span>
+<span class="c1">// Promise新建后会立即执行</span>
+<span class="kd">let</span> <span class="nx">promise</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>  
+
+  <span class="c1">// ...异步操作等</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Promise</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">resolve</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="c1">// then方法指定的回调函数，将在当前脚本所有同步任务执行完才会执行</span>
+<span class="c1">// then方法的作用是为Promise实例添加状态改变时的回调函数（第一个参数是resolved状态的回调函数，第二个参数（可选）是rejected状态的回调函数）</span>
+<span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">resolved.</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hi!</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="cm">/*
+Promise
+Hi!
+resolved.
+*/</span>
+
+
+<span class="c1">// Promise.prototype.catch()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// Promise.prototype.catch方法是.then(null, rejection)的别名。</span>
+
+
+<span class="c1">// Promise.all()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// Promise.all()用于将多个Promise实例（如果传入的对象不是Promise实例，则会通过调用Promise.resolve方法将其转换为Promise实例后再做进一步处理），包装成一个新的Promise实例</span>
+<span class="kd">var</span> <span class="nx">promises</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">].</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">id</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">promises</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">posts</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">posts</span><span class="p">);</span>  <span class="c1">// [ 2, 3, 5, 7, 11, 13 ]</span>
+<span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">reason</span><span class="p">){</span>
+  <span class="c1">// ...</span>
+<span class="p">});</span>
+
+
+<span class="c1">// Promise.resolve()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="c1">// 将现有对象转为Promise对象</span>
+<span class="cm">/*
+Promise.resolve('foo')
+等价于
+new Promise(resolve =&gt; resolve('foo'))
+*/</span>
+
+</code></pre></div></div>
+
+<h1 id="set">set</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 基本用法</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">const</span> <span class="nx">s1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">();</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">].</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">s1</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">of</span> <span class="nx">s1</span><span class="p">){</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>  <span class="c1">// 1 2 3 4 5 </span>
+<span class="p">}</span>
+
+<span class="c1">// 可用于数组去重</span>
+<span class="kd">const</span> <span class="nx">s2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="dl">'</span><span class="s1">4</span><span class="dl">'</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,{},{},</span><span class="kc">NaN</span><span class="p">,</span><span class="kc">NaN</span><span class="p">]);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([...</span><span class="nx">s2</span><span class="p">]);</span>  <span class="c1">// [ 1, 2, 3, 4, '4', 5, {}, {}, NaN ]</span>
+
+<span class="c1">// add(),delete(),has(),clear()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">const</span> <span class="nx">s3</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">();</span>
+<span class="nx">s3</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s3</span><span class="p">.</span><span class="nx">size</span><span class="p">);</span>  <span class="c1">// 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s3</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>  <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s3</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>  <span class="c1">// true</span>
+<span class="nx">s3</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s3</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>  <span class="c1">// false</span>
+
+
+<span class="c1">// keys(),values(),entries(),forEach()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">let</span> <span class="nx">s4</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">([</span><span class="dl">'</span><span class="s1">red</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">green</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">blue</span><span class="dl">'</span><span class="p">]);</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">item</span> <span class="k">of</span> <span class="nx">s4</span><span class="p">.</span><span class="nx">entries</span><span class="p">())</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>  
+<span class="p">}</span>
+<span class="c1">// [ 'red', 'red' ]</span>
+<span class="c1">// [ 'green', 'green' ]</span>
+<span class="c1">// [ 'blue', 'blue' ]</span>
+
+
+<span class="c1">// 交、并、差运算</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span>
+<span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]);</span>
+
+<span class="c1">// 并集</span>
+<span class="kd">let</span> <span class="nx">union</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">([...</span><span class="nx">a</span><span class="p">,</span> <span class="p">...</span><span class="nx">b</span><span class="p">]);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">union</span><span class="p">);</span>  
+<span class="c1">// Set {1, 2, 3, 4}</span>
+
+<span class="c1">// 交集</span>
+<span class="kd">let</span> <span class="nx">intersect</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">([...</span><span class="nx">a</span><span class="p">].</span><span class="nx">filter</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">b</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">x</span><span class="p">)));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">intersect</span><span class="p">);</span>  
+<span class="c1">// set {2, 3}</span>
+
+<span class="c1">// 差集</span>
+<span class="kd">let</span> <span class="nx">difference</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Set</span><span class="p">([...</span><span class="nx">a</span><span class="p">].</span><span class="nx">filter</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="o">!</span><span class="nx">b</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">x</span><span class="p">)));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">difference</span><span class="p">);</span>  
+<span class="c1">// Set {1}</span>
+
+
+<span class="c1">// WeakSet</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="cm">/*
+关键点：
+1. WeakSet中只能存放对象；
+2. WeakSet中的对象都是弱引用，即垃圾回收机制不考虑WeakSet对该对象的引用；
+3. WeakSet没有size属性，没有办法遍历它的成员；（因为成员都是弱引用，随时可能消失）
+详略。
+*/</span>
+</code></pre></div></div>
+
+<h1 id="string">string</h1>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// includes(), startsWith(), endsWith()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">let</span> <span class="nx">s</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Hello world!</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello</span><span class="dl">'</span><span class="p">))</span> <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="dl">'</span><span class="s1">!</span><span class="dl">'</span><span class="p">))</span> <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="dl">'</span><span class="s1">o</span><span class="dl">'</span><span class="p">))</span> <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="dl">'</span><span class="s1">world</span><span class="dl">'</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span> <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello</span><span class="dl">'</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello</span><span class="dl">'</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span> <span class="c1">// false</span>
+
+
+<span class="c1">// repeat()</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1">// "hellohello"</span>
+
+
+<span class="c1">// 模板字符串</span>
+<span class="c1">// ====================================================================================================</span>
+<span class="kd">let</span> <span class="nx">basket</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="na">count</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+	<span class="na">onSale</span><span class="p">:</span><span class="dl">"</span><span class="s2">item</span><span class="dl">"</span>
+<span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`
+  There are &lt;b&gt;</span><span class="p">${</span><span class="nx">basket</span><span class="p">.</span><span class="nx">count</span><span class="p">}</span><span class="s2">&lt;/b&gt; items
+    in your basket, &lt;em&gt;</span><span class="p">${</span><span class="nx">basket</span><span class="p">.</span><span class="nx">onSale</span> <span class="o">+</span><span class="dl">"</span><span class="s2">-</span><span class="dl">"</span><span class="o">+</span> <span class="nx">basket</span><span class="p">.</span><span class="nx">count</span><span class="p">}</span><span class="s2">&lt;/em&gt;
+  are on sale!
+`</span><span class="p">.</span><span class="nx">trim</span><span class="p">());</span>
+</code></pre></div></div>
+
+:ET

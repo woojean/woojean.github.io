@@ -1,0 +1,318 @@
+I"�h<ul id="markdown-toc">
+  <li><a href="#概念" id="markdown-toc-概念">概念</a></li>
+  <li><a href="#生成xml报文" id="markdown-toc-生成xml报文">生成xml报文</a></li>
+  <li><a href="#生成私钥证书" id="markdown-toc-生成私钥证书">生成私钥、证书</a>    <ul>
+      <li><a href="#准备目录" id="markdown-toc-准备目录">准备目录</a></li>
+      <li><a href="#生成自签名的顶级ca" id="markdown-toc-生成自签名的顶级ca">生成自签名的顶级CA</a></li>
+      <li><a href="#生成中级证书与应用证书" id="markdown-toc-生成中级证书与应用证书">生成中级证书与应用证书</a></li>
+    </ul>
+  </li>
+  <li><a href="#签名xml报文" id="markdown-toc-签名xml报文">签名XML报文</a>    <ul>
+      <li><a href="#准备前置数据" id="markdown-toc-准备前置数据">准备前置数据</a></li>
+      <li><a href="#签名" id="markdown-toc-签名">签名</a></li>
+    </ul>
+  </li>
+  <li><a href="#验证报文" id="markdown-toc-验证报文">验证报文</a></li>
+  <li><a href="#参考文档" id="markdown-toc-参考文档">参考文档</a></li>
+</ul>
+
+<p><a href="https://github.com/woojean/demos/tree/master/php-xml-signature">下载代码:https://github.com/woojean/demos/tree/master/php-xml-signature</a></p>
+
+<h1 id="概念">概念</h1>
+<ul>
+  <li>
+    <p><strong>《XML数字签名规范》</strong><br />
+<a href="https://www.w3.org/TR/2002/REC-xmldsig-core-20020212/">W3C XML signature recommendation on 12 February 2002</a></p>
+  </li>
+  <li>
+    <p><strong>规范化XML</strong> 
+预处理XML文档以实现纯文本比较和数字签名。</p>
+  </li>
+  <li>
+    <p><strong>C14N规范</strong> 
+Canonical XML，一种生成XML文档物理表示的标准方法。</p>
+  </li>
+  <li>
+    <p><strong>封内加签</strong> 
+元素成为被签名数据的子元素。</p>
+  </li>
+  <li>
+    <p><strong>X.509标准</strong> 
+数字证书标准，一种非常通用的证书格式。一份X.509证书是一些标准字段的集合（<strong>含证书持有人的公钥信息及所使用的加密算法</strong>）。
+常用文件扩展名：<code class="language-plaintext highlighter-rouge">.cer</code>、 <code class="language-plaintext highlighter-rouge">.crt</code>- 通常被用于二进制的DER文件格式(同于<code class="language-plaintext highlighter-rouge">.der</code>)，不过也被用于Base64编码的文件 (例如<code class="language-plaintext highlighter-rouge">.pem</code>).</p>
+  </li>
+  <li>
+    <p><strong>SHA</strong> 
+安全哈希算法（Secure Hash Algorithm），主要适用于数字签名标准（Digital Signature Standard DSS）里面定义的数字签名算法（Digital Signature Algorithm DSA）。
+<em>经过权威机构证实，sha-1加密算法的不安全性越来越高，sha-1指纹造假成本越来越低，随即微软、谷歌等IT巨头相继发布弃用sha-1加密算法声明，第三方认证机构自2016年1月1日起，将全面停止签发sha-1算法的数字证书。这一切表明都表明从1995年诞生至今的SHA1算法将被sha-256所取代。</em></p>
+  </li>
+  <li>
+    <p><strong>RSA</strong> 
+一种公钥加密算法（非对称加密算法）。命名取自3个开发者姓名的首字母。
+RSA算法基于一个十分简单的数论事实：将两个大质数相乘十分容易，但是想要对其乘积进行因式分解却极其困难，因此可以将乘积公开作为加密密钥。</p>
+  </li>
+  <li>
+    <p><strong>自签名的证书</strong> 
+数字证书由证书机构签发，证书机构通常需经权威认证机构注册认证。在企业应用中，也常用企业自身作为发证机构（未经过认证）签发数字证书，证书的使用范围也常是企业内部，这样的证书就是所谓的“自签名”的。</p>
+  </li>
+  <li>
+    <p><strong>公钥加密算法</strong> 
+非对称加密技术。私钥用于进行解密和<strong>签名</strong>。公钥用于加密和<strong>验证签名</strong>。</p>
+  </li>
+  <li>
+    <p><strong>消息摘要算法</strong> 
+单向函数或哈希函数，用于创建一个简短的固定长度，或可变长度的消息。可用于验证消息是否被篡改。</p>
+  </li>
+  <li>
+    <p><strong>数字签名</strong> 
+用于安全地发送消息摘要，主要使用私钥来加密消息摘要和其他信息，只有发送方知道私钥，因此只有发件人可以签名。签名包含一个唯一的序列号，这样可以保证发送方无法否认曾经发送过消息（因为只有他可以签名这条消息）。</p>
+  </li>
+  <li>
+    <p><strong>证书</strong> 
+用于发送方确保公钥的正确性，同样，接收方也需要核实用于签名该消息的私钥属于发送方。
+证书的主要内容包括：公钥、真实身份识别信息（DN）、认证和签发的CA、有效期等。</p>
+  </li>
+  <li>
+    <p><strong>DN</strong> 
+Distinguished Name，用来提供对某个特定背景下的身份信息，由X.509标准定义。
+主要的字段包括：CN（Common Name，证书颁发对象名称），O（Organization），OU（ Organizational Unit），L（ City/locality），ST（State/Province），C（Country）。</p>
+  </li>
+  <li>
+    <p><strong>认证中心（CA)</strong> 
+证书颁发机构，负责认证证书，即给证书进行签名，颁发证书的权威机构。</p>
+  </li>
+  <li>
+    <p><strong>证书链</strong> 
+CA机构有时也会为另外一家CA机构颁发证书。
+当检查证书的时候，需要检查每一级证书的父亲证书，一直找到一个能信任的证书为止。</p>
+  </li>
+  <li>
+    <p><strong>根CA</strong> 
+每个证书需要发行者来声明证书拥有者身份的有效性，一直到最顶层CA。
+最顶层CA没有发行者，证书采用一种“自签名”的方式，所以证书的发行者就是证书拥有者自己。
+用户也可以创建自己的证书颁发机构。</p>
+  </li>
+  <li>
+    <p><strong>中级证书</strong> 
+具有继续颁发下级证书权限的子CA。</p>
+  </li>
+  <li>
+    <p><strong>应用证书</strong> 
+不能用来继续颁发下级证书，只能用来证明个体身份的证书。（证书没有-extensions v3_ca选项）</p>
+  </li>
+  <li>
+    <p><strong>CSR证书申请文件</strong> 
+Cerificate Signing Request，证书申请者在申请数字证书时由CSP(加密服务提供者)在生成私钥的同时也生成证书请求文件，证书申请 者只要把CSR文件提交给证书颁发机构后，证书颁发机构使用其根证书私钥签名就生成了证书公钥文件，也就是颁发给用户的证书。</p>
+  </li>
+</ul>
+
+<h1 id="生成xml报文">生成xml报文</h1>
+
+<p>待加密的XML内容如下：</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;RootInfo&gt;</span>
+  <span class="nt">&lt;NS:Item</span> <span class="na">type=</span><span class="s">"1"</span> <span class="na">xmlns:NS=</span><span class="s">"http://www.woojean.com/"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;NS:id&gt;</span>01<span class="nt">&lt;/NS:id&gt;</span>
+    <span class="nt">&lt;name&gt;</span>woojean<span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;/NS:Item&gt;</span>
+<span class="nt">&lt;/RootInfo&gt;</span>
+</code></pre></div></div>
+
+<p>生成该XML的PHP源码：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$xml</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">XMLWriter</span><span class="p">();</span>
+
+<span class="c1">//$xml-&gt;openUri("php://output");</span>
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">openURI</span><span class="p">(</span><span class="s1">'test.xml'</span><span class="p">);</span>
+
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">setIndentString</span><span class="p">(</span><span class="s1">'  '</span><span class="p">);</span>
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">setIndent</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">startDocument</span><span class="p">(</span><span class="s1">'1.0'</span><span class="p">,</span> <span class="s1">'utf-8'</span><span class="p">);</span>
+
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">startElement</span><span class="p">(</span><span class="s2">"RootInfo"</span><span class="p">);</span>
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">startElementNS</span><span class="p">(</span><span class="s2">"NS"</span><span class="p">,</span><span class="s2">"Item"</span><span class="p">,</span><span class="s1">'http://www.woojean.com/'</span><span class="p">);</span>
+<span class="c1">//添加属性</span>
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">writeAttribute</span><span class="p">(</span><span class="s2">"type"</span><span class="p">,</span> <span class="s2">"1"</span><span class="p">);</span>
+
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">startElementNS</span><span class="p">(</span><span class="s2">"NS"</span><span class="p">,</span><span class="s2">"id"</span><span class="p">,</span><span class="kc">null</span><span class="p">);</span>
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">text</span><span class="p">(</span><span class="s2">"01"</span><span class="p">);</span>
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">endElement</span><span class="p">();</span>
+
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">startElement</span><span class="p">(</span><span class="s2">"name"</span><span class="p">);</span>
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">text</span><span class="p">(</span><span class="s2">"woojean"</span><span class="p">);</span>
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">endElement</span><span class="p">();</span>
+
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">endElement</span><span class="p">();</span>
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">endElement</span><span class="p">();</span>
+<span class="nv">$xml</span><span class="o">-&gt;</span><span class="nf">endDocument</span><span class="p">();</span>
+
+<span class="c1">//header("Content-type: text/xml");</span>
+<span class="c1">//echo $xml-&gt;outputMemory();</span>
+</code></pre></div></div>
+
+<h1 id="生成私钥证书">生成私钥、证书</h1>
+
+<h2 id="准备目录">准备目录</h2>
+<p>目录结构取决于/System/Library/OpenSSL/openssl.cnf的配置。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /Users/wujian/projects/demo/test
+mkdir -p ./demoCA/private
+mkdir -p ./demoCA/newcerts
+touch ./demoCA/index.txt
+echo 01 &gt; ./demoCA/serial
+</code></pre></div></div>
+
+<h2 id="生成自签名的顶级ca">生成自签名的顶级CA</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 生成顶级CA的公钥证书和私钥文件，有效期10年（RSA 1024bits，默认），会提示输入phrase、DN信息
+openssl req -new -x509 -days 3650 -keyout CARoot.key -out CARoot.crt
+
+# 为顶级CA的私钥文件去除保护口令（不想在运行过程中还要输入加密口令）
+openssl rsa -in CARoot.key -out CARoot.key
+</code></pre></div></div>
+
+<h2 id="生成中级证书与应用证书">生成中级证书与应用证书</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 为应用证书/中级证书生成私钥文件  
+openssl genrsa -out app.key 2048
+
+# 根据私钥文件，为应用证书/中级证书生成csr文件（证书请求文件）  
+openssl req -new -key app.key -out app.csr
+
+# 使用CA的私钥文件、公钥证书给csr文件签名，生成应用证书，有效期5年  
+openssl ca -in app.csr -out app.crt -cert CARoot.crt -keyfile CARoot.key -days 1826 -policy policy_anything
+</code></pre></div></div>
+<p>提示：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Certificate is to be certified until Apr 27 06:46:15 2022 GMT (1826 days)
+Sign the certificate? [y/n]:Y
+
+1 out of 1 certificate requests certified, commit? [y/n]y
+Write out database with 1 new entries
+Data Base Updated
+</code></pre></div></div>
+
+<p><strong>生成中级证书[本例用不到，这里备忘]</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 使用CA的公私钥文件给csr文件签名，生成中级证书，有效期5年  
+openssl ca -extensions v3_ca -in app.csr -out app.crt -cert CARoot.crt -keyfile CARoot.key -days 1826 -policy policy_anything
+</code></pre></div></div>
+
+<p><strong>生成.pem格式的证书</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat app.key &gt;&gt; app_private.pem
+openssl rsa -in app.key -out app_private.pem 
+openssl x509 -in app.crt -out app_public.pem -outform PEM
+</code></pre></div></div>
+<p>.cer/.crt是用于存放证书，它是2进制形式存放的，不含私钥。
+.pem跟crt/cer的区别是它以Ascii来表示。</p>
+
+<h1 id="签名xml报文">签名XML报文</h1>
+
+<h2 id="准备前置数据">准备前置数据</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="s1">'/Users/wujian/projects/demo/xmlseclibs/src/XMLSecEnc.php'</span><span class="p">;</span>
+<span class="k">require_once</span> <span class="s1">'/Users/wujian/projects/demo/xmlseclibs/src/XMLSecurityDSig.php'</span><span class="p">;</span>
+<span class="k">require_once</span> <span class="s1">'/Users/wujian/projects/demo/xmlseclibs/src/XMLSecurityKey.php'</span><span class="p">;</span>
+
+<span class="kn">use</span> <span class="nc">RobRichards\XMLSecLibs\XMLSecEnc</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">RobRichards\XMLSecLibs\XMLSecurityDSig</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">RobRichards\XMLSecLibs\XMLSecurityKey</span><span class="p">;</span>
+
+<span class="nv">$privateKey</span> <span class="o">=</span> <span class="s1">'/Users/wujian/projects/demo/test/app_private.pem'</span><span class="p">;</span>
+<span class="nv">$publicKey</span> <span class="o">=</span> <span class="s1">'/Users/wujian/projects/demo/test/app_public.pem'</span><span class="p">;</span>
+<span class="nv">$dumpPath</span> <span class="o">=</span> <span class="s1">'/Users/wujian/projects/demo/dump3.xml'</span><span class="p">;</span>
+
+<span class="nv">$xmlStr</span> <span class="o">=</span> <span class="s1">'&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;RootInfo&gt;
+  &lt;NS:Item type="3" xmlns:NS="http://www.woojean.com/"&gt;
+    &lt;NS:id&gt;021&lt;/NS:id&gt;
+    &lt;name&gt;woojean&lt;/name&gt;
+  &lt;/NS:Item&gt;
+&lt;/RootInfo&gt;'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="签名">签名</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DOMDocument</span><span class="p">();</span>
+<span class="nv">$doc</span><span class="o">-&gt;</span><span class="nf">loadXML</span><span class="p">(</span><span class="nv">$xmlStr</span><span class="p">);</span>
+
+<span class="nv">$objDSig</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">XMLSecurityDSig</span><span class="p">();</span>
+<span class="nv">$objDSig</span><span class="o">-&gt;</span><span class="nf">setCanonicalMethod</span><span class="p">(</span><span class="nc">XMLSecurityDSig</span><span class="o">::</span><span class="no">EXC_C14N</span><span class="p">);</span>
+<span class="nv">$objDSig</span><span class="o">-&gt;</span><span class="nf">addReference</span><span class="p">(</span>
+    <span class="nv">$doc</span><span class="p">,</span>
+    <span class="nc">XMLSecurityDSig</span><span class="o">::</span><span class="no">SHA256</span><span class="p">,</span>
+    <span class="p">[</span><span class="s1">'http://www.w3.org/2000/09/xmldsig#enveloped-signature'</span><span class="p">]</span>
+<span class="p">);</span>
+
+<span class="nv">$objKey</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">XMLSecurityKey</span><span class="p">(</span><span class="nc">XMLSecurityKey</span><span class="o">::</span><span class="no">RSA_SHA256</span><span class="p">,</span> <span class="p">[</span><span class="s1">'type'</span> <span class="o">=&gt;</span> <span class="s1">'private'</span><span class="p">]);</span>
+<span class="nv">$objKey</span><span class="o">-&gt;</span><span class="nf">loadKey</span><span class="p">(</span><span class="nv">$privateKey</span><span class="p">,</span> <span class="kc">TRUE</span><span class="p">);</span>
+<span class="c1">// $objKey-&gt;passphrase = '&lt;passphrase&gt;';  // 密码</span>
+
+<span class="nv">$objDSig</span><span class="o">-&gt;</span><span class="nf">sign</span><span class="p">(</span><span class="nv">$objKey</span><span class="p">);</span>
+<span class="nv">$keyNameNode</span> <span class="o">=</span> <span class="nv">$objDSig</span><span class="o">-&gt;</span><span class="n">sigNode</span><span class="o">-&gt;</span><span class="n">ownerDocument</span><span class="o">-&gt;</span><span class="nf">createElementNS</span><span class="p">(</span><span class="s1">'http://www.w3.org/2000/09/xmldsig#'</span><span class="p">,</span> <span class="s1">'ds:KeyName'</span><span class="p">,</span><span class="s1">'my_public_key'</span><span class="p">);</span>
+<span class="nv">$objDSig</span><span class="o">-&gt;</span><span class="nf">appendToKeyInfo</span><span class="p">(</span><span class="nv">$keyNameNode</span><span class="p">);</span>
+<span class="nv">$objDSig</span><span class="o">-&gt;</span><span class="nf">add509Cert</span><span class="p">(</span><span class="nb">file_get_contents</span><span class="p">(</span><span class="nv">$publicKey</span><span class="p">));</span>
+<span class="nv">$objDSig</span><span class="o">-&gt;</span><span class="nf">appendSignature</span><span class="p">(</span><span class="nv">$doc</span><span class="o">-&gt;</span><span class="n">documentElement</span><span class="p">);</span>
+
+<span class="nv">$doc</span><span class="o">-&gt;</span><span class="nf">save</span><span class="p">(</span><span class="nv">$dumpPath</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><strong>签名后的报文</strong></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;RootInfo&gt;</span>
+  <span class="nt">&lt;NS:Item</span> <span class="na">xmlns:NS=</span><span class="s">"http://www.woojean.com/"</span> <span class="na">type=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;NS:id&gt;</span>021<span class="nt">&lt;/NS:id&gt;</span>
+    <span class="nt">&lt;name&gt;</span>woojean<span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;/NS:Item&gt;</span>
+<span class="nt">&lt;ds:Signature</span> <span class="na">xmlns:ds=</span><span class="s">"http://www.w3.org/2000/09/xmldsig#"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ds:SignedInfo&gt;&lt;ds:CanonicalizationMethod</span> <span class="na">Algorithm=</span><span class="s">"http://www.w3.org/2001/10/xml-exc-c14n#"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;ds:SignatureMethod</span> <span class="na">Algorithm=</span><span class="s">"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;ds:Reference&gt;&lt;ds:Transforms&gt;&lt;ds:Transform</span> <span class="na">Algorithm=</span><span class="s">"http://www.w3.org/2000/09/xmldsig#enveloped-signature"</span><span class="nt">/&gt;&lt;/ds:Transforms&gt;&lt;ds:DigestMethod</span> <span class="na">Algorithm=</span><span class="s">"http://www.w3.org/2001/04/xmlenc#sha256"</span><span class="nt">/&gt;&lt;ds:DigestValue&gt;</span>73MIGt50pK6TaTWoCiehnuRHII2HgOgqjjnrmR0+PqA=<span class="nt">&lt;/ds:DigestValue&gt;&lt;/ds:Reference&gt;&lt;/ds:SignedInfo&gt;&lt;ds:SignatureValue&gt;</span>HPYP4AxYhsC6g25Cfd4hMrmPCJmfr+4jw34LAKay2fcU2MzNAItB6bQVrWNaWiQt5wr93ms+CCUF/Q0j5IMolSmJIO7R1NpEj1zpn+/2pqDPoiUNUJbJmZLZH3+dVPrSZqYcCQWz121gBpcjHpPvChLf4OI3+0Nu98BbLZF2XUMwBMUjAainK9QjyDFp13U97zRm50baigjE1rAcLxi1DuZPJljtPmwqPvhy2j7754ekbQUBVhfHe20AnkZs930Y48kOXoCGwq9pD6gsgRT1BA1+DsOlZKo13P/aakuuKoroJ+horPbC88tVU36KQ1aMkAVXdWwdecrfCF4/EEj8KA==<span class="nt">&lt;/ds:SignatureValue&gt;</span>
+<span class="nt">&lt;ds:KeyInfo&gt;&lt;ds:KeyName&gt;</span>my_public_key<span class="nt">&lt;/ds:KeyName&gt;&lt;ds:X509Data&gt;&lt;ds:X509Certificate&gt;</span>MIIDITCCAoqgAwIBAgIBATANBgkqhkiG9w0BAQUFADBVMQswCQYDVQQGEwJVUzELMAkGA1UECBMCV1UxDTALBgNVBAcTBEpJQU4xCzAJBgNVBAoTAldVMQswCQYDVQQLEwJXVTEQMA4GA1UEAxMHd29vamVhbjAeFw0xNzA0MjcwNjQ2MTVaFw0yMjA0MjcwNjQ2MTVaMFcxCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJXVTENMAsGA1UEBxMESklBTjELMAkGA1UEChMCV1UxDTALBgNVBAsTBEpJQU4xEDAOBgNVBAMTB3dvb2plYW4wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDC2JgwHZjRtiXpiQU7SL9VdfqamOJuZ+crD84HwXPuypkHakR+GSVo1aRhbOO2h55xeAG7C5S/qHRfVtJ5KFVckXWFgndTfZNCS2PycZqnu2MFIburpPcp/Bf7e+Z2ldluyC3TDExCma63uk5kGakzbCS/7kpocEVsJrEIYGdzjNTp+JclKJcfmCq/YZ8M3OVhPr4RuO/PdTtzL3uMiyGU9wO17nl9VsTIbgxKYs+/bI2pOEE9iFPHDAEhsaF/k1SBZXlLAmE0x/HVw4SraE5AqL7KLS3Rc/rRp8WveqmHvIqDbX4jv6jgrSMcCznqv+/VUv4IGt7qwbBuPWVGhUsNAgMBAAGjezB5MAkGA1UdEwQCMAAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRlMB0GA1UdDgQWBBQ2Dq/d05/Egnytyvplxu4ykfnvqTAfBgNVHSMEGDAWgBQhnHeUnjnTvK0UnFLZkaRz4VT4CTANBgkqhkiG9w0BAQUFAAOBgQBaCL75URSWqJMA3uWWcwwjWEF0KFiasXzhEAdyeHOoqu8mZHLAXDgKxVpFPfNHAE6Dq9V5cVzqdYC6j5HVdVO6P3wlZXRCrn3MGMmjtfkFu0PNhbWKz//IpJR16d4NqvF8xLtYYvhqMq1jl5gAyFRHTF2itLW3lHkZLAAZG9+o9g==<span class="nt">&lt;/ds:X509Certificate&gt;&lt;/ds:X509Data&gt;&lt;/ds:KeyInfo&gt;&lt;/ds:Signature&gt;&lt;/RootInfo&gt;</span>
+</code></pre></div></div>
+
+<h1 id="验证报文">验证报文</h1>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DOMDocument</span><span class="p">();</span>
+<span class="nv">$doc</span><span class="o">-&gt;</span><span class="nf">load</span><span class="p">(</span><span class="nv">$dumpPath</span><span class="p">);</span>
+
+<span class="nv">$objXMLSecDSig</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">XMLSecurityDSig</span><span class="p">();</span>
+<span class="nv">$objDSig</span> <span class="o">=</span> <span class="nv">$objXMLSecDSig</span><span class="o">-&gt;</span><span class="nf">locateSignature</span><span class="p">(</span><span class="nv">$doc</span><span class="p">);</span>
+<span class="nv">$objXMLSecDSig</span><span class="o">-&gt;</span><span class="nf">canonicalizeSignedInfo</span><span class="p">();</span>
+<span class="nv">$objKey</span> <span class="o">=</span> <span class="nv">$objXMLSecDSig</span><span class="o">-&gt;</span><span class="nf">locateKey</span><span class="p">();</span>
+
+<span class="nc">XMLSecEnc</span><span class="o">::</span><span class="nf">staticLocateKeyInfo</span><span class="p">(</span><span class="nv">$objKey</span><span class="p">,</span> <span class="nv">$objDSig</span><span class="p">);</span>
+<span class="nv">$publicKey</span> <span class="o">=</span> <span class="nv">$objKey</span><span class="o">-&gt;</span><span class="nf">getX509Certificate</span><span class="p">();</span>
+
+<span class="nv">$keyAlgorithm</span> <span class="o">=</span> <span class="nv">$objKey</span><span class="o">-&gt;</span><span class="nf">getAlgorith</span><span class="p">();</span>
+
+<span class="c1">// Check signature</span>
+<span class="nv">$ret</span> <span class="o">=</span> <span class="nv">$objXMLSecDSig</span><span class="o">-&gt;</span><span class="nf">verify</span><span class="p">(</span><span class="nv">$objKey</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">!==</span> <span class="nv">$ret</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">var_dump</span><span class="p">(</span><span class="s1">'wrong!'</span><span class="p">);</span>
+    <span class="k">return</span> <span class="kc">FALSE</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span><span class="p">{</span>
+    <span class="nb">var_dump</span><span class="p">(</span><span class="s1">'ok!'</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Check references (data)</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$objXMLSecDSig</span><span class="o">-&gt;</span><span class="nf">validateReference</span><span class="p">();</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="err">\</span><span class="nc">Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">FALSE</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>输出</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/Users/wujian/projects/demo/decrypt.php:37:string 'ok!' (length=3)
+</code></pre></div></div>
+
+<h1 id="参考文档">参考文档</h1>
+
+<ul>
+  <li><a href="http://blog.csdn.net/howeverpf/article/details/21622545?reload">http://blog.csdn.net/howeverpf/article/details/21622545?reload</a></li>
+  <li><a href="http://www.baike.com/wiki/SSL">http://www.baike.com/wiki/SSL</a></li>
+  <li><a href="https://github.com/robrichards/xmlseclibs">https://github.com/robrichards/xmlseclibs</a></li>
+  <li><a href="https://serverfault.com/questions/706336/how-to-get-a-pem-file-from-ssh-key-pair">https://serverfault.com/questions/706336/how-to-get-a-pem-file-from-ssh-key-pair</a></li>
+  <li><a href="http://www.jianshu.com/p/98569e81cc0b">http://www.jianshu.com/p/98569e81cc0b</a></li>
+</ul>
+
+:ET

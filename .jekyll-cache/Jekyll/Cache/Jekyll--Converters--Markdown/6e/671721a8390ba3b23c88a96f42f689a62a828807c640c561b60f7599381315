@@ -1,0 +1,24 @@
+I"�<ul id="markdown-toc">
+  <li><a href="#安装" id="markdown-toc-安装">安装</a></li>
+  <li><a href="#运行rabbitmq服务" id="markdown-toc-运行rabbitmq服务">运行RabbitMQ服务</a></li>
+  <li><a href="#开启网页版控制台" id="markdown-toc-开启网页版控制台">开启网页版控制台</a></li>
+</ul>
+
+<h1 id="安装">安装</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew update
+brew install rabbitmq
+</code></pre></div></div>
+
+<h1 id="运行rabbitmq服务">运行RabbitMQ服务</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/local/sbin/rabbitmq-server
+</code></pre></div></div>
+
+<h1 id="开启网页版控制台">开启网页版控制台</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/local/sbin/rabbitmq-plugins enable rabbitmq_management 
+</code></pre></div></div>
+<p>访问：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http:localhost:15672
+</code></pre></div></div>
+<p>初始用户及密码：guest guest</p>
+
+:ET

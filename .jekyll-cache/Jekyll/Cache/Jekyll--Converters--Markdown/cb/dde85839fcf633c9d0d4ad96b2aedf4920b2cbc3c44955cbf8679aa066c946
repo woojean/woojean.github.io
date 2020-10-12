@@ -1,0 +1,66 @@
+I"<ul id="markdown-toc">
+  <li><a href="#使用brew安装thrift" id="markdown-toc-使用brew安装thrift">使用brew安装thrift</a></li>
+  <li><a href="#使用brew安装thrift的php扩展" id="markdown-toc-使用brew安装thrift的php扩展">使用brew安装thrift的PHP扩展</a></li>
+  <li><a href="#新建thrift接口idl文件" id="markdown-toc-新建thrift接口idl文件">新建thrift接口（IDL）文件</a></li>
+  <li><a href="#生成文件thrift存根文件" id="markdown-toc-生成文件thrift存根文件">生成文件thrift存根文件</a></li>
+  <li><a href="#引入thrift的php库" id="markdown-toc-引入thrift的php库">引入thrift的PHP库</a></li>
+  <li><a href="#编写client" id="markdown-toc-编写client">编写Client</a></li>
+  <li><a href="#编写server" id="markdown-toc-编写server">编写Server</a></li>
+  <li><a href="#测试" id="markdown-toc-测试">测试</a></li>
+  <li><a href="#安装swoole" id="markdown-toc-安装swoole">安装swoole</a></li>
+</ul>
+
+<h2 id="使用brew安装thrift">使用brew安装thrift</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install thrift
+ln -s /usr/local/Cellar/thrift/0.10.0/bin/thrift /usr/local/bin/thrift
+</code></pre></div></div>
+
+<h2 id="使用brew安装thrift的php扩展">使用brew安装thrift的PHP扩展</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install homebrew/php/php56-thrift
+extension=/usr/local/Cellar/php56-thrift/0.9.2/thrift_protocol.so
+/Applications/MAMP/bin/php/php5.6.30/bin/php -m | grep thrift
+</code></pre></div></div>
+
+<h2 id="新建thrift接口idl文件">新建thrift接口（IDL）文件</h2>
+
+<p>/Users/wujian/learn/demo/thrift-php/hello.thrift</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service HelloWorld
+{
+    string sayHello()
+}
+</code></pre></div></div>
+
+<h2 id="生成文件thrift存根文件">生成文件thrift存根文件</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /Users/wujian/learn/demo/thrift-php
+thrift -gen php:server hello.thrift
+</code></pre></div></div>
+
+<h2 id="引入thrift的php库">引入thrift的PHP库</h2>
+
+<p>composer require apache/thrift</p>
+
+<h2 id="编写client">编写Client</h2>
+
+<p>略</p>
+
+<h2 id="编写server">编写Server</h2>
+
+<p>略</p>
+
+<h2 id="测试">测试</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php -S localhost:9090
+/Applications/MAMP/bin/php/php5.6.30/bin/php server.php
+/Applications/MAMP/bin/php/php5.6.30/bin/php client.php --http
+</code></pre></div></div>
+
+<h1 id="安装swoole">安装swoole</h1>
+
+<p>version: 1.9.6</p>
+
+<p>编译安装，略。</p>
+:ET

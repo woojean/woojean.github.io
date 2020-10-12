@@ -1,0 +1,141 @@
+I"<ul id="markdown-toc">
+  <li><a href="#前置信息" id="markdown-toc-前置信息">前置信息</a></li>
+  <li><a href="#安装检查jdk" id="markdown-toc-安装检查jdk">安装/检查JDK</a></li>
+  <li><a href="#安装jenkins" id="markdown-toc-安装jenkins">安装Jenkins</a></li>
+  <li><a href="#配置jenkins的端口" id="markdown-toc-配置jenkins的端口">配置Jenkins的端口　</a></li>
+  <li><a href="#启动jenkins" id="markdown-toc-启动jenkins">启动Jenkins</a></li>
+  <li><a href="#配置git账户" id="markdown-toc-配置git账户">配置Git账户</a></li>
+  <li><a href="#修改jenkins为root权限运行" id="markdown-toc-修改jenkins为root权限运行">修改Jenkins为root权限运行</a></li>
+  <li><a href="#为jenkins用户添加sudo免密码" id="markdown-toc-为jenkins用户添加sudo免密码">为jenkins用户添加sudo免密码</a></li>
+  <li><a href="#添加新项目" id="markdown-toc-添加新项目">添加新项目</a>    <ul>
+      <li><a href="#源码管理" id="markdown-toc-源码管理">源码管理</a></li>
+      <li><a href="#jenkin构建后指定shell" id="markdown-toc-jenkin构建后指定shell">Jenkin构建后指定Shell</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="前置信息">前置信息</h2>
+
+<p>1.操作系统为CentOS 6.8</p>
+
+<p>2.项目代码基于GitLab维护，且有Submodule；</p>
+
+<p>3.Web服务器、数据库、Redis以及各种PHP扩展的配置等项目正常运行所依赖的前置条件本文不讨论；</p>
+
+<h2 id="安装检查jdk">安装/检查JDK</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install java-1.8.0-openjdk
+java -version
+</code></pre></div></div>
+
+<h2 id="安装jenkins">安装Jenkins</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo yum install jenkins
+</code></pre></div></div>
+
+<p>如果不能更新源，也可以直接下载rpm包进行安装：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://pkg.jenkins-ci.org/redhat-stable/jenkins-2.7.3-1.1.noarch.rpm
+rpm -ivh jenkins-2.7.3-1.1.noarch.rpm
+</code></pre></div></div>
+
+<h2 id="配置jenkins的端口">配置Jenkins的端口　</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /etc/sysconfig/jenkins
+JENKINS_PORT="8888"
+</code></pre></div></div>
+
+<h2 id="启动jenkins">启动Jenkins</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service jenkins start
+</code></pre></div></div>
+
+<p>初始密码：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat /var/lib/jenkins/secrets/initialAdminPassword
+</code></pre></div></div>
+
+<p>第一次访问，通过Web页面登录后，修改Administrator的密码。</p>
+
+<p>rm /var/log/jenkins/jenkins.log
+service jenkins restart</p>
+
+<h2 id="配置git账户">配置Git账户</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "wsnbackend"
+git config --global user.email wsnbackend@gegolab.com
+git config --list
+
+root@iZuf6a6ydemt9fvgy22rcqZ ~]# ssh-keygen -t rsa -C "wsnbackend@gegolab.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 【回车】
+Created directory '/root/.ssh'.
+Enter passphrase (empty for no passphrase): 【回车】
+Enter same passphrase again: 【回车】
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+...
+
+cat ~/.ssh/id_rsa.pub
+[需要将部署账户添加到项目]
+[登录wsnbackend，配置公钥]
+
+ssh -T git@gegolab.com
+</code></pre></div></div>
+
+<h2 id="修改jenkins为root权限运行">修改Jenkins为root权限运行</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpasswd -a root jenkins # 将jenkins用户添加到root组
+vi /etc/default/jenkins
+JENKINS_USER=root
+JENKINS_GROUP=root
+
+service jenkins restart
+</code></pre></div></div>
+
+<h2 id="为jenkins用户添加sudo免密码">为jenkins用户添加sudo免密码</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /etc/sudoers
+jenkins ALL = NOPASSWD:ALL
+</code></pre></div></div>
+
+<h1 id="添加新项目">添加新项目</h1>
+
+<h2 id="源码管理">源码管理</h2>
+
+<p>1.选择Git并添加项目路径</p>
+
+<p>git@git.gegolab.com:backend/sms.git</p>
+
+<p>2.添加认证信息</p>
+
+<p>点击<code class="language-plaintext highlighter-rouge">Credentials</code>右侧<code class="language-plaintext highlighter-rouge">Add</code>按钮，添加一个新的Jenkins Credentials，在打开的对话框中选择kind为<code class="language-plaintext highlighter-rouge">SSH Username with private key</code>。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SSH Username with private key:
+wsnbackend@gegolab.com
+private key 直接输入：
+cat ~/.ssh/id_rsa  # gitlab用户wsnbackend@gegolab.com的私钥
+</code></pre></div></div>
+
+<p>3.处理submodule</p>
+
+<p>点击<code class="language-plaintext highlighter-rouge">Additional Behaviours</code> ，勾选<code class="language-plaintext highlighter-rouge">Recursively update submodules</code></p>
+
+<h2 id="jenkin构建后指定shell">Jenkin构建后指定Shell</h2>
+
+<p>在<code class="language-plaintext highlighter-rouge">构建</code>模块下点击<code class="language-plaintext highlighter-rouge">增加构建步骤</code>，选择<code class="language-plaintext highlighter-rouge">Excute Shell</code>，输入：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#mkdir /data/www/sms
+sudo chown -R jenkins:jenkins /data/www/sms
+\cp -rf /var/lib/jenkins/workspace/sms /data/www/
+cd /data/www/sms
+sudo composer install
+sudo chmod -R 777 /data/www/sms
+sudo chown -R www:www /data/www/sms
+</code></pre></div></div>
+
+<p>以上Shell将会在代码拉取成功后执行。</p>
+:ET

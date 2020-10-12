@@ -1,0 +1,1439 @@
+I"�^<ul id="markdown-toc">
+  <li><a href="#根据浮利进行仓位控制推演" id="markdown-toc-根据浮利进行仓位控制推演">根据浮利进行仓位控制推演</a>    <ul>
+      <li><a href="#一成浮利" id="markdown-toc-一成浮利">一成浮利</a></li>
+      <li><a href="#二成浮利" id="markdown-toc-二成浮利">二成浮利</a></li>
+      <li><a href="#三成浮利" id="markdown-toc-三成浮利">三成浮利</a></li>
+      <li><a href="#四成浮利" id="markdown-toc-四成浮利">四成浮利</a></li>
+      <li><a href="#五成浮利" id="markdown-toc-五成浮利">五成浮利</a></li>
+      <li><a href="#六成浮利" id="markdown-toc-六成浮利">六成浮利</a></li>
+      <li><a href="#七成浮利" id="markdown-toc-七成浮利">七成浮利</a></li>
+      <li><a href="#八成浮利" id="markdown-toc-八成浮利">八成浮利</a></li>
+      <li><a href="#九成浮利" id="markdown-toc-九成浮利">九成浮利</a></li>
+      <li><a href="#十成浮利" id="markdown-toc-十成浮利">十成浮利</a></li>
+      <li><a href="#超十成浮利" id="markdown-toc-超十成浮利">超十成浮利</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="根据浮利进行仓位控制推演">根据浮利进行仓位控制推演</h1>
+
+<h2 id="一成浮利">一成浮利</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>仓位</th>
+      <th>投入</th>
+      <th>浮利</th>
+      <th>净利</th>
+      <th>操作</th>
+      <th>净利头寸比（%）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td> </td>
+      <td>建仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1.05</td>
+      <td>1</td>
+      <td>0.05</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>1</td>
+      <td>0.1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>2</td>
+      <td>0.1</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.05</td>
+      <td>2</td>
+      <td>0.05</td>
+      <td>0.05</td>
+      <td>清仓</td>
+      <td>5%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="二成浮利">二成浮利</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>仓位</th>
+      <th>投入</th>
+      <th>浮利</th>
+      <th>净利</th>
+      <th>操作</th>
+      <th>净利头寸比（%）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td> </td>
+      <td>建仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>1</td>
+      <td>0.1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>2</td>
+      <td>0.1</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.2</td>
+      <td>2</td>
+      <td>0.2</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.2</td>
+      <td>3</td>
+      <td>0.2</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.1</td>
+      <td>3</td>
+      <td>0.1</td>
+      <td>0.1</td>
+      <td>清仓</td>
+      <td>10%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="三成浮利">三成浮利</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>仓位</th>
+      <th>投入</th>
+      <th>浮利</th>
+      <th>净利</th>
+      <th>操作</th>
+      <th>净利头寸比（%）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td> </td>
+      <td>建仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>1</td>
+      <td>0.1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>2</td>
+      <td>0.1</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.2</td>
+      <td>2</td>
+      <td>0.2</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.2</td>
+      <td>3</td>
+      <td>0.2</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.3</td>
+      <td>3</td>
+      <td>0.3</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.3</td>
+      <td>4</td>
+      <td>0.3</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.15</td>
+      <td>4</td>
+      <td>0.15</td>
+      <td>0.15</td>
+      <td>清仓</td>
+      <td>15%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="四成浮利">四成浮利</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>仓位</th>
+      <th>投入</th>
+      <th>浮利</th>
+      <th>净利</th>
+      <th>操作</th>
+      <th>净利头寸比（%）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td> </td>
+      <td>建仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>1</td>
+      <td>0.1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>2</td>
+      <td>0.1</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.2</td>
+      <td>2</td>
+      <td>0.2</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.2</td>
+      <td>3</td>
+      <td>0.2</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.3</td>
+      <td>3</td>
+      <td>0.3</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.3</td>
+      <td>4</td>
+      <td>0.3</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.4</td>
+      <td>4</td>
+      <td>0.4</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.4</td>
+      <td>5</td>
+      <td>0.4</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.2</td>
+      <td>5</td>
+      <td>0.2</td>
+      <td>0.2</td>
+      <td>清仓</td>
+      <td>20%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="五成浮利">五成浮利</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>仓位</th>
+      <th>投入</th>
+      <th>浮利</th>
+      <th>净利</th>
+      <th>操作</th>
+      <th>净利头寸比（%）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td> </td>
+      <td>建仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>1</td>
+      <td>0.1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>2</td>
+      <td>0.1</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.2</td>
+      <td>2</td>
+      <td>0.2</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.2</td>
+      <td>3</td>
+      <td>0.2</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.3</td>
+      <td>3</td>
+      <td>0.3</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.3</td>
+      <td>4</td>
+      <td>0.3</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.4</td>
+      <td>4</td>
+      <td>0.4</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.4</td>
+      <td>5</td>
+      <td>0.4</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.5</td>
+      <td>5</td>
+      <td>0.5</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.5</td>
+      <td>6</td>
+      <td>0.5</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.25</td>
+      <td>6</td>
+      <td>0.25</td>
+      <td>0.25</td>
+      <td>清仓</td>
+      <td>25%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="六成浮利">六成浮利</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>仓位</th>
+      <th>投入</th>
+      <th>浮利</th>
+      <th>净利</th>
+      <th>操作</th>
+      <th>净利头寸比（%）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td> </td>
+      <td>建仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>1</td>
+      <td>0.1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>2</td>
+      <td>0.1</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.2</td>
+      <td>2</td>
+      <td>0.2</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.2</td>
+      <td>3</td>
+      <td>0.2</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.3</td>
+      <td>3</td>
+      <td>0.3</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.3</td>
+      <td>4</td>
+      <td>0.3</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.4</td>
+      <td>4</td>
+      <td>0.4</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.4</td>
+      <td>5</td>
+      <td>0.4</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.5</td>
+      <td>5</td>
+      <td>0.5</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.5</td>
+      <td>6</td>
+      <td>0.5</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.6</td>
+      <td>6</td>
+      <td>0.6</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7.6</td>
+      <td>7</td>
+      <td>0.6</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7.3</td>
+      <td>7</td>
+      <td>0.3</td>
+      <td>0.3</td>
+      <td>清仓</td>
+      <td>30%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="七成浮利">七成浮利</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>仓位</th>
+      <th>投入</th>
+      <th>浮利</th>
+      <th>净利</th>
+      <th>操作</th>
+      <th>净利头寸比（%）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td> </td>
+      <td>建仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>1</td>
+      <td>0.1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>2</td>
+      <td>0.1</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.2</td>
+      <td>2</td>
+      <td>0.2</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.2</td>
+      <td>3</td>
+      <td>0.2</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.3</td>
+      <td>3</td>
+      <td>0.3</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.3</td>
+      <td>4</td>
+      <td>0.3</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.4</td>
+      <td>4</td>
+      <td>0.4</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.4</td>
+      <td>5</td>
+      <td>0.4</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.5</td>
+      <td>5</td>
+      <td>0.5</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.5</td>
+      <td>6</td>
+      <td>0.5</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.6</td>
+      <td>6</td>
+      <td>0.6</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7.6</td>
+      <td>7</td>
+      <td>0.6</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7.7</td>
+      <td>7</td>
+      <td>0.7</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8.7</td>
+      <td>8</td>
+      <td>0.7</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8.35</td>
+      <td>8</td>
+      <td>0.35</td>
+      <td>0.35</td>
+      <td>清仓</td>
+      <td>35%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="八成浮利">八成浮利</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>仓位</th>
+      <th>投入</th>
+      <th>浮利</th>
+      <th>净利</th>
+      <th>操作</th>
+      <th>净利头寸比（%）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td> </td>
+      <td>建仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>1</td>
+      <td>0.1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>2</td>
+      <td>0.1</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.2</td>
+      <td>2</td>
+      <td>0.2</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.2</td>
+      <td>3</td>
+      <td>0.2</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.3</td>
+      <td>3</td>
+      <td>0.3</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.3</td>
+      <td>4</td>
+      <td>0.3</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.4</td>
+      <td>4</td>
+      <td>0.4</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.4</td>
+      <td>5</td>
+      <td>0.4</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.5</td>
+      <td>5</td>
+      <td>0.5</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.5</td>
+      <td>6</td>
+      <td>0.5</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.6</td>
+      <td>6</td>
+      <td>0.6</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7.6</td>
+      <td>7</td>
+      <td>0.6</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7.7</td>
+      <td>7</td>
+      <td>0.7</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8.7</td>
+      <td>8</td>
+      <td>0.7</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8.8</td>
+      <td>8</td>
+      <td>0.8</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9.8</td>
+      <td>9</td>
+      <td>0.8</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9.4</td>
+      <td>9</td>
+      <td>0.4</td>
+      <td>0.4</td>
+      <td>清仓</td>
+      <td>40%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="九成浮利">九成浮利</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>仓位</th>
+      <th>投入</th>
+      <th>浮利</th>
+      <th>净利</th>
+      <th>操作</th>
+      <th>净利头寸比（%）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td> </td>
+      <td>建仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>1</td>
+      <td>0.1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>2</td>
+      <td>0.1</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.2</td>
+      <td>2</td>
+      <td>0.2</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.2</td>
+      <td>3</td>
+      <td>0.2</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.3</td>
+      <td>3</td>
+      <td>0.3</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.3</td>
+      <td>4</td>
+      <td>0.3</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.4</td>
+      <td>4</td>
+      <td>0.4</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.4</td>
+      <td>5</td>
+      <td>0.4</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.5</td>
+      <td>5</td>
+      <td>0.5</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.5</td>
+      <td>6</td>
+      <td>0.5</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.6</td>
+      <td>6</td>
+      <td>0.6</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7.6</td>
+      <td>7</td>
+      <td>0.6</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7.7</td>
+      <td>7</td>
+      <td>0.7</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8.7</td>
+      <td>8</td>
+      <td>0.7</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8.8</td>
+      <td>8</td>
+      <td>0.8</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9.8</td>
+      <td>9</td>
+      <td>0.8</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9.9</td>
+      <td>9</td>
+      <td>0.9</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10.9</td>
+      <td>10</td>
+      <td>0.9</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10.45</td>
+      <td>10</td>
+      <td>0.45</td>
+      <td>0.45</td>
+      <td>清仓</td>
+      <td>45%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="十成浮利">十成浮利</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>仓位</th>
+      <th>投入</th>
+      <th>浮利</th>
+      <th>净利</th>
+      <th>操作</th>
+      <th>净利头寸比（%）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td> </td>
+      <td>建仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>1</td>
+      <td>0.1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>2</td>
+      <td>0.1</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.2</td>
+      <td>2</td>
+      <td>0.2</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.2</td>
+      <td>3</td>
+      <td>0.2</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.3</td>
+      <td>3</td>
+      <td>0.3</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.3</td>
+      <td>4</td>
+      <td>0.3</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.4</td>
+      <td>4</td>
+      <td>0.4</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.4</td>
+      <td>5</td>
+      <td>0.4</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.5</td>
+      <td>5</td>
+      <td>0.5</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.5</td>
+      <td>6</td>
+      <td>0.5</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.6</td>
+      <td>6</td>
+      <td>0.6</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7.6</td>
+      <td>7</td>
+      <td>0.6</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7.7</td>
+      <td>7</td>
+      <td>0.7</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8.7</td>
+      <td>8</td>
+      <td>0.7</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8.8</td>
+      <td>8</td>
+      <td>0.8</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9.8</td>
+      <td>9</td>
+      <td>0.8</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9.9</td>
+      <td>9</td>
+      <td>0.9</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10.9</td>
+      <td>10</td>
+      <td>0.9</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>10</td>
+      <td>1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10.5</td>
+      <td>10</td>
+      <td>0.5</td>
+      <td>0.5</td>
+      <td>清仓</td>
+      <td>50%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="超十成浮利">超十成浮利</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>仓位</th>
+      <th>投入</th>
+      <th>浮利</th>
+      <th>净利</th>
+      <th>操作</th>
+      <th>净利头寸比（%）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td> </td>
+      <td>建仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1.1</td>
+      <td>1</td>
+      <td>0.1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.1</td>
+      <td>2</td>
+      <td>0.1</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2.2</td>
+      <td>2</td>
+      <td>0.2</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.2</td>
+      <td>3</td>
+      <td>0.2</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3.3</td>
+      <td>3</td>
+      <td>0.3</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.3</td>
+      <td>4</td>
+      <td>0.3</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4.4</td>
+      <td>4</td>
+      <td>0.4</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.4</td>
+      <td>5</td>
+      <td>0.4</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5.5</td>
+      <td>5</td>
+      <td>0.5</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.5</td>
+      <td>6</td>
+      <td>0.5</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>6.6</td>
+      <td>6</td>
+      <td>0.6</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7.6</td>
+      <td>7</td>
+      <td>0.6</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>7.7</td>
+      <td>7</td>
+      <td>0.7</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8.7</td>
+      <td>8</td>
+      <td>0.7</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>8.8</td>
+      <td>8</td>
+      <td>0.8</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9.8</td>
+      <td>9</td>
+      <td>0.8</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>9.9</td>
+      <td>9</td>
+      <td>0.9</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>10.9</td>
+      <td>10</td>
+      <td>0.9</td>
+      <td> </td>
+      <td>加仓</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>10</td>
+      <td>1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>10</td>
+      <td>2</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>10</td>
+      <td>1</td>
+      <td>1</td>
+      <td>清仓</td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>10</td>
+      <td>3</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>10</td>
+      <td>2</td>
+      <td>2</td>
+      <td>清仓</td>
+      <td>200%</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

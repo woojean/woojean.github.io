@@ -1,0 +1,67 @@
+I"�
+<ul id="markdown-toc">
+  <li><a href="#centos部署最新node前端执行环境" id="markdown-toc-centos部署最新node前端执行环境">CentOS部署最新Node前端执行环境</a>    <ul>
+      <li><a href="#前置信息" id="markdown-toc-前置信息">前置信息</a></li>
+      <li><a href="#安装node" id="markdown-toc-安装node">安装node</a></li>
+      <li><a href="#安装webpack" id="markdown-toc-安装webpack">安装webpack</a></li>
+      <li><a href="#安装bower" id="markdown-toc-安装bower">安装bower</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="centos部署最新node前端执行环境">CentOS部署最新Node前端执行环境</h1>
+
+<h2 id="前置信息">前置信息</h2>
+
+<p>1.操作系统为CentOS 6.8</p>
+
+<p>2.我们的前端项目执行需要安装node、npm、webpack、bower等等</p>
+
+<p>3.本文的node<code class="language-plaintext highlighter-rouge">最新版本</code>为7.7.3，其他版本安装过程类似</p>
+
+<h2 id="安装node">安装node</h2>
+
+<p>node的编译安装依赖巨多,甚至依赖python版本,所以直接使用二进制文件.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /data/extend/
+wget https://nodejs.org/dist/v7.7.3/node-v7.7.3-linux-x64.tar.gz
+tar -xvf node-v7.7.3-linux-x64.tar.gz
+
+ln -s /data/extend/node-v7.7.3-linux-x64/bin/node /usr/bin/node
+ln -s /data/extend/node-v7.7.3-linux-x64/bin/npm /usr/bin/npm
+npm config set registry https://registry.npm.taobao.org  
+</code></pre></div></div>
+
+<p>输出：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[root@iZuf6cbroi7rj1zjydjruoZ extend]# node -v
+v7.7.3
+[root@iZuf6cbroi7rj1zjydjruoZ extend]# npm -v
+4.1.2
+</code></pre></div></div>
+
+<h2 id="安装webpack">安装webpack</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install webpack -g
+ln -s /data/extend/node-v7.7.3-linux-x64/lib/node_modules/webpack/bin/webpack.js /usr/bin/webpack
+</code></pre></div></div>
+
+<p>输出</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[root@iZuf6cbroi7rj1zjydjruoZ extend]# webpack -v
+webpack 2.2.1
+...
+</code></pre></div></div>
+
+<h2 id="安装bower">安装bower</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g bower
+ln -s /data/extend/node-v7.7.3-linux-x64/lib/node_modules/bower/bin/bower /usr/bin/bower
+</code></pre></div></div>
+
+<p>输出</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[root@iZuf6cbroi7rj1zjydjruoZ deploy]# bower -v
+1.8.0
+</code></pre></div></div>
+:ET

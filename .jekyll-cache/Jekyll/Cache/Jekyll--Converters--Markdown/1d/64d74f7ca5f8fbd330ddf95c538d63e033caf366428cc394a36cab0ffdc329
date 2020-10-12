@@ -1,0 +1,1236 @@
+I"��<ul id="markdown-toc">
+  <li><a href="#查找字符串首次出现的位置-strpos" id="markdown-toc-查找字符串首次出现的位置-strpos">查找字符串首次出现的位置 <code class="language-plaintext highlighter-rouge">strpos</code></a></li>
+  <li><a href="#返回字符串的子串-substr" id="markdown-toc-返回字符串的子串-substr">返回字符串的子串 <code class="language-plaintext highlighter-rouge">substr</code></a></li>
+  <li><a href="#替换字符串的子串-substr_replace" id="markdown-toc-替换字符串的子串-substr_replace">替换字符串的子串 <code class="language-plaintext highlighter-rouge">substr_replace</code></a></li>
+  <li><a href="#获取字符串长度-strlen" id="markdown-toc-获取字符串长度-strlen">获取字符串长度 <code class="language-plaintext highlighter-rouge">strlen</code></a></li>
+  <li><a href="#查找字符串的首次出现-区分大小写-strstr" id="markdown-toc-查找字符串的首次出现-区分大小写-strstr">查找字符串的首次出现-区分大小写 <code class="language-plaintext highlighter-rouge">strstr</code></a></li>
+  <li><a href="#查找字符串的首次出现-不区分大小写-stristr" id="markdown-toc-查找字符串的首次出现-不区分大小写-stristr">查找字符串的首次出现-不区分大小写 <code class="language-plaintext highlighter-rouge">stristr</code></a></li>
+  <li><a href="#按字节反转字符串-strrev" id="markdown-toc-按字节反转字符串-strrev">按字节反转字符串 <code class="language-plaintext highlighter-rouge">strrev</code></a></li>
+  <li><a href="#使用一个字符串分割另一个字符串-explode" id="markdown-toc-使用一个字符串分割另一个字符串-explode">使用一个字符串分割另一个字符串 <code class="language-plaintext highlighter-rouge">explode</code></a></li>
+  <li><a href="#将一个一维数组的值转化为字符串-implode" id="markdown-toc-将一个一维数组的值转化为字符串-implode">将一个一维数组的值转化为字符串 <code class="language-plaintext highlighter-rouge">implode</code></a></li>
+  <li><a href="#结合explode函数实现按单词反转字符串" id="markdown-toc-结合explode函数实现按单词反转字符串">结合explode函数实现按单词反转字符串</a></li>
+  <li><a href="#生成随机数-mt_rand" id="markdown-toc-生成随机数-mt_rand">生成随机数 <code class="language-plaintext highlighter-rouge">mt_rand</code></a></li>
+  <li><a href="#执行一个正则表达式的搜索和替换-preg_replace" id="markdown-toc-执行一个正则表达式的搜索和替换-preg_replace">执行一个正则表达式的搜索和替换 <code class="language-plaintext highlighter-rouge">preg_replace</code></a></li>
+  <li><a href="#执行一个正则表达式搜索并且使用一个回调进行替换-preg_replace_callback" id="markdown-toc-执行一个正则表达式搜索并且使用一个回调进行替换-preg_replace_callback">执行一个正则表达式搜索并且使用一个回调进行替换 <code class="language-plaintext highlighter-rouge">preg_replace_callback</code></a></li>
+  <li><a href="#将字符串转换为数组-str_split" id="markdown-toc-将字符串转换为数组-str_split">将字符串转换为数组 <code class="language-plaintext highlighter-rouge">str_split</code></a></li>
+  <li><a href="#implode的别名-join" id="markdown-toc-implode的别名-join">implode()的别名 <code class="language-plaintext highlighter-rouge">join</code></a></li>
+  <li><a href="#子字符串替换-区分大小写-str_replace" id="markdown-toc-子字符串替换-区分大小写-str_replace">子字符串替换-区分大小写 <code class="language-plaintext highlighter-rouge">str_replace</code></a></li>
+  <li><a href="#子字符串替换-不区分大小写-str_ireplace" id="markdown-toc-子字符串替换-不区分大小写-str_ireplace">子字符串替换-不区分大小写 <code class="language-plaintext highlighter-rouge">str_ireplace</code></a></li>
+  <li><a href="#重复一个字符串-str_repeat" id="markdown-toc-重复一个字符串-str_repeat">重复一个字符串 <code class="language-plaintext highlighter-rouge">str_repeat</code></a></li>
+  <li><a href="#将字符串的首字母转换为大写-ucfirst" id="markdown-toc-将字符串的首字母转换为大写-ucfirst">将字符串的首字母转换为大写 <code class="language-plaintext highlighter-rouge">ucfirst</code></a></li>
+  <li><a href="#将字符串中每个单词的首字母转换为大写" id="markdown-toc-将字符串中每个单词的首字母转换为大写">将字符串中每个单词的首字母转换为大写</a></li>
+  <li><a href="#将字符串转化为小写-strtolower" id="markdown-toc-将字符串转化为小写-strtolower">将字符串转化为小写 <code class="language-plaintext highlighter-rouge">strtolower</code></a></li>
+  <li><a href="#将字符串转化为大写-strtoupper" id="markdown-toc-将字符串转化为大写-strtoupper">将字符串转化为大写 <code class="language-plaintext highlighter-rouge">strtoupper</code></a></li>
+  <li><a href="#删除字符串开头的空白字符或其他字符-ltrim" id="markdown-toc-删除字符串开头的空白字符或其他字符-ltrim">删除字符串开头的空白字符（或其他字符） <code class="language-plaintext highlighter-rouge">ltrim</code></a></li>
+  <li><a href="#删除字符串末端的空白字符或者其他字符-rtrim" id="markdown-toc-删除字符串末端的空白字符或者其他字符-rtrim">删除字符串末端的空白字符（或者其他字符） <code class="language-plaintext highlighter-rouge">rtrim</code></a></li>
+  <li><a href="#去除字符串首尾处的空白字符或者其他字符-trim" id="markdown-toc-去除字符串首尾处的空白字符或者其他字符-trim">去除字符串首尾处的空白字符（或者其他字符） <code class="language-plaintext highlighter-rouge">trim</code></a></li>
+  <li><a href="#rtrim的别名-chop" id="markdown-toc-rtrim的别名-chop">rtrim()的别名 <code class="language-plaintext highlighter-rouge">chop</code></a></li>
+  <li><a href="#打开文件或者url-fopen" id="markdown-toc-打开文件或者url-fopen">打开文件或者URL <code class="language-plaintext highlighter-rouge">fopen</code></a></li>
+  <li><a href="#关闭一个已打开的文件指针-fclose" id="markdown-toc-关闭一个已打开的文件指针-fclose">关闭一个已打开的文件指针 <code class="language-plaintext highlighter-rouge">fclose</code></a></li>
+  <li><a href="#输出一个消息并且退出当前脚本-exit" id="markdown-toc-输出一个消息并且退出当前脚本-exit">输出一个消息并且退出当前脚本 <code class="language-plaintext highlighter-rouge">exit</code></a></li>
+  <li><a href="#输出一个消息并且退出当前脚本等同于exit-die" id="markdown-toc-输出一个消息并且退出当前脚本等同于exit-die">输出一个消息并且退出当前脚本，等同于exit <code class="language-plaintext highlighter-rouge">die</code></a></li>
+  <li><a href="#将行格式化为csv并写入文件指针-fputcsv" id="markdown-toc-将行格式化为csv并写入文件指针-fputcsv">将行格式化为CSV并写入文件指针 <code class="language-plaintext highlighter-rouge">fputcsv</code></a></li>
+  <li><a href="#从文件指针中读入一行并解析-csv-字段-fgetcsv" id="markdown-toc-从文件指针中读入一行并解析-csv-字段-fgetcsv">从文件指针中读入一行并解析 CSV 字段 <code class="language-plaintext highlighter-rouge">fgetcsv</code></a></li>
+  <li><a href="#把字符转换为-html-实体-htmlentities" id="markdown-toc-把字符转换为-html-实体-htmlentities">把字符转换为 HTML 实体 <code class="language-plaintext highlighter-rouge">htmlentities</code></a></li>
+  <li><a href="#从二进制字符串中解析出数据-unpack" id="markdown-toc-从二进制字符串中解析出数据-unpack">从二进制字符串中解析出数据 <code class="language-plaintext highlighter-rouge">unpack</code></a></li>
+  <li><a href="#使用另一个字符串填充字符串为指定长度-str_pad" id="markdown-toc-使用另一个字符串填充字符串为指定长度-str_pad">使用另一个字符串填充字符串为指定长度 <code class="language-plaintext highlighter-rouge">str_pad</code></a></li>
+  <li><a href="#通过一个正则表达式分隔字符串-preg_split" id="markdown-toc-通过一个正则表达式分隔字符串-preg_split">通过一个正则表达式分隔字符串 <code class="language-plaintext highlighter-rouge">preg_split</code></a></li>
+  <li><a href="#打断字符串为指定数量的字串-wordwrap" id="markdown-toc-打断字符串为指定数量的字串-wordwrap">打断字符串为指定数量的字串 <code class="language-plaintext highlighter-rouge">wordwrap</code></a></li>
+  <li><a href="#发送原生-http-头-header" id="markdown-toc-发送原生-http-头-header">发送原生 HTTP 头 <code class="language-plaintext highlighter-rouge">header</code></a></li>
+  <li><a href="#读入一个文件并写入到输出缓冲-readfile" id="markdown-toc-读入一个文件并写入到输出缓冲-readfile">读入一个文件并写入到输出缓冲 <code class="language-plaintext highlighter-rouge">readfile</code></a></li>
+  <li><a href="#检测变量是否为数字或数字字符串-is_numeric" id="markdown-toc-检测变量是否为数字或数字字符串-is_numeric">检测变量是否为数字或数字字符串 <code class="language-plaintext highlighter-rouge">is_numeric</code></a></li>
+  <li><a href="#检测变量是否是布尔型--is_bool" id="markdown-toc-检测变量是否是布尔型--is_bool">检测变量是否是布尔型  <code class="language-plaintext highlighter-rouge">is_bool</code></a></li>
+  <li><a href="#检测变量是否是浮点型--is_float" id="markdown-toc-检测变量是否是浮点型--is_float">检测变量是否是浮点型  <code class="language-plaintext highlighter-rouge">is_float</code></a></li>
+  <li><a href="#检测变量是否是整数-is_int" id="markdown-toc-检测变量是否是整数-is_int">检测变量是否是整数 <code class="language-plaintext highlighter-rouge">is_int</code></a></li>
+  <li><a href="#检测变量是否是字符串--is_string" id="markdown-toc-检测变量是否是字符串--is_string">检测变量是否是字符串  <code class="language-plaintext highlighter-rouge">is_string</code></a></li>
+  <li><a href="#检测变量是否是一个对象-is_object" id="markdown-toc-检测变量是否是一个对象-is_object">检测变量是否是一个对象 <code class="language-plaintext highlighter-rouge">is_object</code></a></li>
+  <li><a href="#检测变量是否是数组-is_array" id="markdown-toc-检测变量是否是数组-is_array">检测变量是否是数组 <code class="language-plaintext highlighter-rouge">is_array</code></a></li>
+  <li><a href="#is_int-的别名-is_integer" id="markdown-toc-is_int-的别名-is_integer">is_int() 的别名 <code class="language-plaintext highlighter-rouge">is_integer</code></a></li>
+  <li><a href="#绝对值-abs" id="markdown-toc-绝对值-abs">绝对值 <code class="language-plaintext highlighter-rouge">abs</code></a></li>
+  <li><a href="#对浮点数进行四舍五入-round" id="markdown-toc-对浮点数进行四舍五入-round">对浮点数进行四舍五入 <code class="language-plaintext highlighter-rouge">round</code></a></li>
+  <li><a href="#向上取整-ceil" id="markdown-toc-向上取整-ceil">向上取整 <code class="language-plaintext highlighter-rouge">ceil</code></a></li>
+  <li><a href="#向下取整-floor" id="markdown-toc-向下取整-floor">向下取整 <code class="language-plaintext highlighter-rouge">floor</code></a></li>
+  <li><a href="#建立一个包含指定范围单元的数组-range" id="markdown-toc-建立一个包含指定范围单元的数组-range">建立一个包含指定范围单元的数组 <code class="language-plaintext highlighter-rouge">range</code></a></li>
+  <li><a href="#带种子生成随机数-mt_srand" id="markdown-toc-带种子生成随机数-mt_srand">带种子生成随机数 <code class="language-plaintext highlighter-rouge">mt_srand</code></a></li>
+  <li><a href="#取对数-log" id="markdown-toc-取对数-log">取对数 <code class="language-plaintext highlighter-rouge">log</code></a></li>
+  <li><a href="#计算-e-的指数-exp" id="markdown-toc-计算-e-的指数-exp">计算 e 的指数 <code class="language-plaintext highlighter-rouge">exp</code></a></li>
+  <li><a href="#取指数-pow" id="markdown-toc-取指数-pow">取指数 <code class="language-plaintext highlighter-rouge">pow</code></a></li>
+  <li><a href="#以千位分隔符方式格式化一个数字-number_format" id="markdown-toc-以千位分隔符方式格式化一个数字-number_format">以千位分隔符方式格式化一个数字 <code class="language-plaintext highlighter-rouge">number_format</code></a></li>
+  <li><a href="#2个任意精度数字的加法计算-bcadd" id="markdown-toc-2个任意精度数字的加法计算-bcadd">2个任意精度数字的加法计算 <code class="language-plaintext highlighter-rouge">bcadd</code></a></li>
+  <li><a href="#2个任意精度数字的减法-bcsub" id="markdown-toc-2个任意精度数字的减法-bcsub">2个任意精度数字的减法 <code class="language-plaintext highlighter-rouge">bcsub</code></a></li>
+  <li><a href="#检查某个名称的常量是否存在-defined" id="markdown-toc-检查某个名称的常量是否存在-defined">检查某个名称的常量是否存在 <code class="language-plaintext highlighter-rouge">defined</code></a>    <ul>
+      <li><a href="#检测变量是否设置-isset" id="markdown-toc-检测变量是否设置-isset">检测变量是否设置 <code class="language-plaintext highlighter-rouge">isset</code></a></li>
+      <li><a href="#检查函数是否已定义-function_exists" id="markdown-toc-检查函数是否已定义-function_exists">检查函数是否已定义 <code class="language-plaintext highlighter-rouge">function_exists</code></a></li>
+      <li><a href="#在任意进制之间转换数字-base_convert" id="markdown-toc-在任意进制之间转换数字-base_convert">在任意进制之间转换数字 <code class="language-plaintext highlighter-rouge">base_convert</code></a></li>
+      <li><a href="#格式化一个本地时间日期-date" id="markdown-toc-格式化一个本地时间日期-date">格式化一个本地时间／日期 <code class="language-plaintext highlighter-rouge">date</code></a></li>
+      <li><a href="#取得日期时间信息-getdate" id="markdown-toc-取得日期时间信息-getdate">取得日期／时间信息 <code class="language-plaintext highlighter-rouge">getdate</code></a></li>
+      <li><a href="#返回当前的-unix-时间戳-time" id="markdown-toc-返回当前的-unix-时间戳-time">返回当前的 Unix 时间戳 <code class="language-plaintext highlighter-rouge">time</code></a></li>
+      <li><a href="#取得本地时间" id="markdown-toc-取得本地时间">取得本地时间</a></li>
+      <li><a href="#取得一个日期的-unix-时间戳-mktime" id="markdown-toc-取得一个日期的-unix-时间戳-mktime">取得一个日期的 Unix 时间戳 <code class="language-plaintext highlighter-rouge">mktime</code></a></li>
+      <li><a href="#取得-gmt-日期的-unix-时间戳-gmmktime" id="markdown-toc-取得-gmt-日期的-unix-时间戳-gmmktime">取得 GMT 日期的 UNIX 时间戳 <code class="language-plaintext highlighter-rouge">gmmktime</code></a></li>
+      <li><a href="#设定用于一个脚本中所有日期时间函数的默认时区-date_default_timezone_set" id="markdown-toc-设定用于一个脚本中所有日期时间函数的默认时区-date_default_timezone_set">设定用于一个脚本中所有日期时间函数的默认时区 <code class="language-plaintext highlighter-rouge">date_default_timezone_set</code></a></li>
+      <li><a href="#检验日期的合法性-checkdate" id="markdown-toc-检验日期的合法性-checkdate">检验日期的合法性 <code class="language-plaintext highlighter-rouge">checkdate</code></a></li>
+      <li><a href="#将任何英文文本的日期时间描述解析为-unix-时间戳-strtotime" id="markdown-toc-将任何英文文本的日期时间描述解析为-unix-时间戳-strtotime">将任何英文文本的日期时间描述解析为 Unix 时间戳 <code class="language-plaintext highlighter-rouge">strtotime</code></a></li>
+      <li><a href="#返回当前-unix-时间戳和微秒数-microtime" id="markdown-toc-返回当前-unix-时间戳和微秒数-microtime">返回当前 Unix 时间戳和微秒数 <code class="language-plaintext highlighter-rouge">microtime</code></a></li>
+      <li><a href="#设置变量的类型-settype" id="markdown-toc-设置变量的类型-settype">设置变量的类型 <code class="language-plaintext highlighter-rouge">settype</code></a></li>
+      <li><a href="#将回调函数作用到给定数组的单元上-array_map" id="markdown-toc-将回调函数作用到给定数组的单元上-array_map">将回调函数作用到给定数组的单元上 <code class="language-plaintext highlighter-rouge">array_map</code></a></li>
+      <li><a href="#释放给定的变量-unset" id="markdown-toc-释放给定的变量-unset">释放给定的变量 <code class="language-plaintext highlighter-rouge">unset</code></a></li>
+      <li><a href="#将数组中的内部指针向前移动一位-next" id="markdown-toc-将数组中的内部指针向前移动一位-next">将数组中的内部指针向前移动一位 <code class="language-plaintext highlighter-rouge">next</code></a></li>
+      <li><a href="#返回数组中的当前单元-current" id="markdown-toc-返回数组中的当前单元-current">返回数组中的当前单元 <code class="language-plaintext highlighter-rouge">current</code></a></li>
+      <li><a href="#将数组的内部指针指向第一个单元-reset" id="markdown-toc-将数组的内部指针指向第一个单元-reset">将数组的内部指针指向第一个单元 <code class="language-plaintext highlighter-rouge">reset</code></a></li>
+      <li><a href="#返回数组中当前的键值对并将数组指针向前移动一步-each" id="markdown-toc-返回数组中当前的键值对并将数组指针向前移动一步-each">返回数组中当前的键／值对并将数组指针向前移动一步 <code class="language-plaintext highlighter-rouge">each</code></a></li>
+      <li><a href="#把数组中的值赋给一些变量-list" id="markdown-toc-把数组中的值赋给一些变量-list">把数组中的值赋给一些变量 <code class="language-plaintext highlighter-rouge">list</code></a></li>
+      <li><a href="#计算数组中的单元数目或对象中的属性个数-count" id="markdown-toc-计算数组中的单元数目或对象中的属性个数-count">计算数组中的单元数目或对象中的属性个数 <code class="language-plaintext highlighter-rouge">count</code></a></li>
+      <li><a href="#把数组中的一部分去掉并用其它值取代-array_splice" id="markdown-toc-把数组中的一部分去掉并用其它值取代-array_splice">把数组中的一部分去掉并用其它值取代 <code class="language-plaintext highlighter-rouge">array_splice</code></a></li>
+      <li><a href="#返回数组中所有的值-array_values" id="markdown-toc-返回数组中所有的值-array_values">返回数组中所有的值 <code class="language-plaintext highlighter-rouge">array_values</code></a></li>
+      <li><a href="#将数组开头的单元移出数组-array_shift" id="markdown-toc-将数组开头的单元移出数组-array_shift">将数组开头的单元移出数组 <code class="language-plaintext highlighter-rouge">array_shift</code></a></li>
+      <li><a href="#将数组最后一个单元弹出-array_pop" id="markdown-toc-将数组最后一个单元弹出-array_pop">将数组最后一个单元弹出 <code class="language-plaintext highlighter-rouge">array_pop</code></a></li>
+      <li><a href="#用值将数组填补到指定长度-array_pad" id="markdown-toc-用值将数组填补到指定长度-array_pad">用值将数组填补到指定长度 <code class="language-plaintext highlighter-rouge">array_pad</code></a></li>
+      <li><a href="#合并一个或多个数组-array_merge" id="markdown-toc-合并一个或多个数组-array_merge">合并一个或多个数组 <code class="language-plaintext highlighter-rouge">array_merge</code></a></li>
+      <li><a href="#将一个或多个单元压入数组的末尾-array_push" id="markdown-toc-将一个或多个单元压入数组的末尾-array_push">将一个或多个单元压入数组的末尾 <code class="language-plaintext highlighter-rouge">array_push</code></a></li>
+      <li><a href="#检查给定的键名或索引是否存在于数组中-array_key_exists" id="markdown-toc-检查给定的键名或索引是否存在于数组中-array_key_exists">检查给定的键名或索引是否存在于数组中 <code class="language-plaintext highlighter-rouge">array_key_exists</code></a></li>
+      <li><a href="#检查数组中是否存在某个值-in_array" id="markdown-toc-检查数组中是否存在某个值-in_array">检查数组中是否存在某个值 <code class="language-plaintext highlighter-rouge">in_array</code></a></li>
+      <li><a href="#交换数组中的键和值-array_flip" id="markdown-toc-交换数组中的键和值-array_flip">交换数组中的键和值 <code class="language-plaintext highlighter-rouge">array_flip</code></a></li>
+      <li><a href="#在数组中搜索给定的值如果成功则返回相应的键名-array_search" id="markdown-toc-在数组中搜索给定的值如果成功则返回相应的键名-array_search">在数组中搜索给定的值，如果成功则返回相应的键名 <code class="language-plaintext highlighter-rouge">array_search</code></a></li>
+      <li><a href="#用回调函数过滤数组中的单元-array_filter" id="markdown-toc-用回调函数过滤数组中的单元-array_filter">用回调函数过滤数组中的单元 <code class="language-plaintext highlighter-rouge">array_filter</code></a></li>
+      <li><a href="#找出最大值-max" id="markdown-toc-找出最大值-max">找出最大值 <code class="language-plaintext highlighter-rouge">max</code></a></li>
+      <li><a href="#找出最小值-min" id="markdown-toc-找出最小值-min">找出最小值 <code class="language-plaintext highlighter-rouge">min</code></a></li>
+      <li><a href="#对数组排序-sort" id="markdown-toc-对数组排序-sort">对数组排序 <code class="language-plaintext highlighter-rouge">sort</code></a></li>
+      <li><a href="#对数组进行排序并保持索引关系-asort" id="markdown-toc-对数组进行排序并保持索引关系-asort">对数组进行排序并保持索引关系 asort</a></li>
+      <li><a href="#返回一个单元顺序相反的数组-array_reverse" id="markdown-toc-返回一个单元顺序相反的数组-array_reverse">返回一个单元顺序相反的数组 <code class="language-plaintext highlighter-rouge">array_reverse</code></a></li>
+      <li><a href="#用自然排序算法对数组排序-natsort" id="markdown-toc-用自然排序算法对数组排序-natsort">用“自然排序”算法对数组排序 <code class="language-plaintext highlighter-rouge">natsort</code></a></li>
+      <li><a href="#用自然排序算法对数组进行不区分大小写字母的排序-natcasesort" id="markdown-toc-用自然排序算法对数组进行不区分大小写字母的排序-natcasesort">用“自然排序”算法对数组进行不区分大小写字母的排序 <code class="language-plaintext highlighter-rouge">natcasesort</code></a></li>
+      <li><a href="#对数组逆向排序-rsort" id="markdown-toc-对数组逆向排序-rsort">对数组逆向排序 <code class="language-plaintext highlighter-rouge">rsort</code></a></li>
+      <li><a href="#对数组进行逆向排序并保持索引关系-arsort" id="markdown-toc-对数组进行逆向排序并保持索引关系-arsort">对数组进行逆向排序并保持索引关系 <code class="language-plaintext highlighter-rouge">arsort</code></a></li>
+      <li><a href="#使用用户自定义的比较函数对数组中的值进行排序-usort" id="markdown-toc-使用用户自定义的比较函数对数组中的值进行排序-usort">使用用户自定义的比较函数对数组中的值进行排序 <code class="language-plaintext highlighter-rouge">usort</code></a></li>
+      <li><a href="#使用自然排序算法比较字符串-strnatcmp" id="markdown-toc-使用自然排序算法比较字符串-strnatcmp">使用自然排序算法比较字符串 <code class="language-plaintext highlighter-rouge">strnatcmp</code></a></li>
+      <li><a href="#对多个数组或多维数组进行排序-array_multisort" id="markdown-toc-对多个数组或多维数组进行排序-array_multisort">对多个数组或多维数组进行排序 <code class="language-plaintext highlighter-rouge">array_multisort</code></a></li>
+      <li><a href="#将数组打乱-shuffle" id="markdown-toc-将数组打乱-shuffle">将数组打乱 <code class="language-plaintext highlighter-rouge">shuffle</code></a></li>
+      <li><a href="#移除数组中重复的值-array_unique" id="markdown-toc-移除数组中重复的值-array_unique">移除数组中重复的值 <code class="language-plaintext highlighter-rouge">array_unique</code></a></li>
+      <li><a href="#返回数组中部分的或所有的键名-array_keys" id="markdown-toc-返回数组中部分的或所有的键名-array_keys">返回数组中部分的或所有的键名 <code class="language-plaintext highlighter-rouge">array_keys</code></a></li>
+      <li><a href="#使用用户自定义函数对数组中的每个元素做回调处理-array_walk" id="markdown-toc-使用用户自定义函数对数组中的每个元素做回调处理-array_walk">使用用户自定义函数对数组中的每个元素做回调处理 <code class="language-plaintext highlighter-rouge">array_walk</code></a></li>
+      <li><a href="#对数组中的每个成员递归地应用用户函数-array_walk_recursive" id="markdown-toc-对数组中的每个成员递归地应用用户函数-array_walk_recursive">对数组中的每个成员递归地应用用户函数 <code class="language-plaintext highlighter-rouge">array_walk_recursive</code></a></li>
+      <li><a href="#计算数组的交集-array_intersect" id="markdown-toc-计算数组的交集-array_intersect">计算数组的交集 <code class="language-plaintext highlighter-rouge">array_intersect</code></a></li>
+      <li><a href="#计算数组的差集-array_diff" id="markdown-toc-计算数组的差集-array_diff">计算数组的差集 <code class="language-plaintext highlighter-rouge">array_diff</code></a></li>
+      <li><a href="#检查一个变量是否为空-empty" id="markdown-toc-检查一个变量是否为空-empty">检查一个变量是否为空 <code class="language-plaintext highlighter-rouge">empty</code></a></li>
+      <li><a href="#产生一个可存储的值的表示-serialize" id="markdown-toc-产生一个可存储的值的表示-serialize">产生一个可存储的值的表示 <code class="language-plaintext highlighter-rouge">serialize</code></a></li>
+      <li><a href="#从已存储的表示中创建-php-的值-unserialize" id="markdown-toc-从已存储的表示中创建-php-的值-unserialize">从已存储的表示中创建 PHP 的值 <code class="language-plaintext highlighter-rouge">unserialize</code></a></li>
+      <li><a href="#打印变量的相关信息-var_dump" id="markdown-toc-打印变量的相关信息-var_dump">打印变量的相关信息 <code class="language-plaintext highlighter-rouge">var_dump</code></a></li>
+      <li><a href="#打印关于变量的易于理解的信息-print_r" id="markdown-toc-打印关于变量的易于理解的信息-print_r">打印关于变量的易于理解的信息 <code class="language-plaintext highlighter-rouge">print_r</code></a></li>
+      <li><a href="#输出或返回一个变量的字符串表示-var_export" id="markdown-toc-输出或返回一个变量的字符串表示-var_export">输出或返回一个变量的字符串表示 <code class="language-plaintext highlighter-rouge">var_export</code></a></li>
+      <li><a href="#打开输出控制缓冲-ob_start" id="markdown-toc-打开输出控制缓冲-ob_start">打开输出控制缓冲 <code class="language-plaintext highlighter-rouge">ob_start</code></a></li>
+      <li><a href="#返回输出缓冲区的内容-ob_get_contents" id="markdown-toc-返回输出缓冲区的内容-ob_get_contents">返回输出缓冲区的内容 <code class="language-plaintext highlighter-rouge">ob_get_contents</code></a></li>
+      <li><a href="#冲刷出送出输出缓冲区内容并关闭缓冲-ob_end_flush" id="markdown-toc-冲刷出送出输出缓冲区内容并关闭缓冲-ob_end_flush">冲刷出（送出）输出缓冲区内容并关闭缓冲 <code class="language-plaintext highlighter-rouge">ob_end_flush</code></a></li>
+      <li><a href="#清空擦除缓冲区并关闭输出缓冲-ob_end_clean" id="markdown-toc-清空擦除缓冲区并关闭输出缓冲-ob_end_clean">清空（擦除）缓冲区并关闭输出缓冲 <code class="language-plaintext highlighter-rouge">ob_end_clean</code></a></li>
+      <li><a href="#获取传递给函数的参数的个数-func_num_args" id="markdown-toc-获取传递给函数的参数的个数-func_num_args">获取传递给函数的参数的个数 <code class="language-plaintext highlighter-rouge">func_num_args</code></a></li>
+      <li><a href="#返回函数参数列表的某一项-func_get_arg" id="markdown-toc-返回函数参数列表的某一项-func_get_arg">返回函数参数列表的某一项 <code class="language-plaintext highlighter-rouge">func_get_arg</code></a></li>
+      <li><a href="#返回一个包含函数参数列表的数组-func_get_args" id="markdown-toc-返回一个包含函数参数列表的数组-func_get_args">返回一个包含函数参数列表的数组 <code class="language-plaintext highlighter-rouge">func_get_args</code></a></li>
+      <li><a href="#把第一个参数作为回调函数调用-call_user_func" id="markdown-toc-把第一个参数作为回调函数调用-call_user_func">把第一个参数作为回调函数调用 <code class="language-plaintext highlighter-rouge">call_user_func</code></a></li>
+      <li><a href="#调用回调函数并把一个数组参数作为回调函数的参数-call_user_func_array" id="markdown-toc-调用回调函数并把一个数组参数作为回调函数的参数-call_user_func_array">调用回调函数，并把一个数组参数作为回调函数的参数 <code class="language-plaintext highlighter-rouge">call_user_func_array</code></a></li>
+      <li><a href="#创建一个lambda-style的匿名内部函数-create_function" id="markdown-toc-创建一个lambda-style的匿名内部函数-create_function">创建一个lambda-style的匿名内部函数 <code class="language-plaintext highlighter-rouge">create_function</code></a></li>
+      <li><a href="#返回类或接口所实现的接口列表-class_implements" id="markdown-toc-返回类或接口所实现的接口列表-class_implements">返回类或接口所实现的接口列表 <code class="language-plaintext highlighter-rouge">class_implements</code></a></li>
+      <li><a href="#尝试加载未定义的类-__autoload" id="markdown-toc-尝试加载未定义的类-__autoload">尝试加载未定义的类 <code class="language-plaintext highlighter-rouge">__autoload</code></a></li>
+      <li><a href="#返回对象或类的父类名-get_parent_class" id="markdown-toc-返回对象或类的父类名-get_parent_class">返回对象或类的父类名 <code class="language-plaintext highlighter-rouge">get_parent_class</code></a></li>
+      <li><a href="#返回文件路径的信息-pathinfo" id="markdown-toc-返回文件路径的信息-pathinfo">返回文件路径的信息 <code class="language-plaintext highlighter-rouge">pathinfo</code></a></li>
+      <li><a href="#检测变量是否为资源类型-is_resource" id="markdown-toc-检测变量是否为资源类型-is_resource">检测变量是否为资源类型 <code class="language-plaintext highlighter-rouge">is_resource</code></a></li>
+      <li><a href="#检查类是否已定义-class_exists" id="markdown-toc-检查类是否已定义-class_exists">检查类是否已定义 <code class="language-plaintext highlighter-rouge">class_exists</code></a></li>
+      <li><a href="#返回由已定义类的名字所组成的数组-get_declared_classes" id="markdown-toc-返回由已定义类的名字所组成的数组-get_declared_classes">返回由已定义类的名字所组成的数组 <code class="language-plaintext highlighter-rouge">get_declared_classes</code></a></li>
+      <li><a href="#返回所有已定义的函数-get_defined_functions" id="markdown-toc-返回所有已定义的函数-get_defined_functions">返回所有已定义的函数 <code class="language-plaintext highlighter-rouge">get_defined_functions</code></a></li>
+      <li><a href="#设置cookie-setcookie" id="markdown-toc-设置cookie-setcookie">设置Cookie <code class="language-plaintext highlighter-rouge">setcookie</code></a></li>
+      <li><a href="#生成-url-encode-之后的请求字符串-http_build_query" id="markdown-toc-生成-url-encode-之后的请求字符串-http_build_query">生成 URL-encode 之后的请求字符串 <code class="language-plaintext highlighter-rouge">http_build_query</code></a></li>
+      <li><a href="#将整个文件读入一个字符串-file_get_contents" id="markdown-toc-将整个文件读入一个字符串-file_get_contents">将整个文件读入一个字符串 <code class="language-plaintext highlighter-rouge">file_get_contents</code></a></li>
+      <li><a href="#读取文件可安全用于二进制文件-fread" id="markdown-toc-读取文件可安全用于二进制文件-fread">读取文件（可安全用于二进制文件） <code class="language-plaintext highlighter-rouge">fread</code></a></li>
+      <li><a href="#获取或者设置http状态码-http_response_code" id="markdown-toc-获取或者设置http状态码-http_response_code">获取或者设置HTTP状态码 <code class="language-plaintext highlighter-rouge">http_response_code</code></a></li>
+      <li><a href="#计算字符串的-md5-散列值-md5" id="markdown-toc-计算字符串的-md5-散列值-md5">计算字符串的 MD5 散列值 <code class="language-plaintext highlighter-rouge">md5</code></a></li>
+      <li><a href="#获取全部-http-请求头信息-getallheaders" id="markdown-toc-获取全部-http-请求头信息-getallheaders">获取全部 HTTP 请求头信息 <code class="language-plaintext highlighter-rouge">getallheaders</code></a></li>
+      <li><a href="#刷新输出缓冲-flush" id="markdown-toc-刷新输出缓冲-flush">刷新输出缓冲 <code class="language-plaintext highlighter-rouge">flush</code></a></li>
+      <li><a href="#获取一个环境变量的值-getenv" id="markdown-toc-获取一个环境变量的值-getenv">获取一个环境变量的值 <code class="language-plaintext highlighter-rouge">getenv</code></a></li>
+      <li><a href="#设置环境变量的值-putenv" id="markdown-toc-设置环境变量的值-putenv">设置环境变量的值 <code class="language-plaintext highlighter-rouge">putenv</code></a></li>
+      <li><a href="#获取浏览器具有的功能-get_browser" id="markdown-toc-获取浏览器具有的功能-get_browser">获取浏览器具有的功能 <code class="language-plaintext highlighter-rouge">get_browser</code></a></li>
+      <li><a href="#检查特定类型的某个变量是否存在-filter_has_var" id="markdown-toc-检查特定类型的某个变量是否存在-filter_has_var">检查特定类型的某个变量是否存在 <code class="language-plaintext highlighter-rouge">filter_has_var</code></a></li>
+      <li><a href="#通过名称获取特定的外部变量并且可以通过过滤器处理它-filter_input" id="markdown-toc-通过名称获取特定的外部变量并且可以通过过滤器处理它-filter_input">通过名称获取特定的外部变量，并且可以通过过滤器处理它 <code class="language-plaintext highlighter-rouge">filter_input</code></a></li>
+      <li><a href="#将字符串转换为html实体-htmlspecialchars" id="markdown-toc-将字符串转换为html实体-htmlspecialchars">将字符串转换为HTML实体 <code class="language-plaintext highlighter-rouge">htmlspecialchars</code></a></li>
+      <li><a href="#将上传的文件移动到新位置-move_uploaded_file" id="markdown-toc-将上传的文件移动到新位置-move_uploaded_file">将上传的文件移动到新位置 <code class="language-plaintext highlighter-rouge">move_uploaded_file</code></a></li>
+      <li><a href="#生成一个唯一id-uniqid" id="markdown-toc-生成一个唯一id-uniqid">生成一个唯一ID <code class="language-plaintext highlighter-rouge">uniqid</code></a></li>
+      <li><a href="#启动新会话或者重用现有会话-session_start" id="markdown-toc-启动新会话或者重用现有会话-session_start">启动新会话或者重用现有会话 <code class="language-plaintext highlighter-rouge">session_start</code></a></li>
+      <li><a href="#读取设置会话名称-session_name" id="markdown-toc-读取设置会话名称-session_name">读取/设置会话名称 <code class="language-plaintext highlighter-rouge">session_name</code></a></li>
+      <li><a href="#读取设置当前会话的保存路径-session_save_path" id="markdown-toc-读取设置当前会话的保存路径-session_save_path">读取/设置当前会话的保存路径 <code class="language-plaintext highlighter-rouge">session_save_path</code></a></li>
+      <li><a href="#添加url重写器的值-output_add_rewrite_var" id="markdown-toc-添加url重写器的值-output_add_rewrite_var">添加URL重写器的值 <code class="language-plaintext highlighter-rouge">output_add_rewrite_var</code></a></li>
+      <li><a href="#设置用户自定义会话存储函数-session_set_save_handler" id="markdown-toc-设置用户自定义会话存储函数-session_set_save_handler">设置用户自定义会话存储函数 <code class="language-plaintext highlighter-rouge">session_set_save_handler</code></a></li>
+      <li><a href="#从字符串中去除-html-和-php-标记-strip_tags" id="markdown-toc-从字符串中去除-html-和-php-标记-strip_tags">从字符串中去除 HTML 和 PHP 标记 <code class="language-plaintext highlighter-rouge">strip_tags</code></a></li>
+      <li><a href="#给一个流添加一个过滤器-stream_filter_append" id="markdown-toc-给一个流添加一个过滤器-stream_filter_append">给一个流添加一个过滤器 <code class="language-plaintext highlighter-rouge">stream_filter_append</code></a></li>
+      <li><a href="#将一个xml文件解析为对象-simplexml_load_file" id="markdown-toc-将一个xml文件解析为对象-simplexml_load_file">将一个XML文件解析为对象 <code class="language-plaintext highlighter-rouge">simplexml_load_file</code></a></li>
+      <li><a href="#创建资源流上下文-stream_context_create" id="markdown-toc-创建资源流上下文-stream_context_create">创建资源流上下文 <code class="language-plaintext highlighter-rouge">stream_context_create</code></a></li>
+      <li><a href="#输出文件指针处的所有剩余数据-fpassthru" id="markdown-toc-输出文件指针处的所有剩余数据-fpassthru">输出文件指针处的所有剩余数据 <code class="language-plaintext highlighter-rouge">fpassthru</code></a></li>
+      <li><a href="#初始化一个curl会话-curl_init" id="markdown-toc-初始化一个curl会话-curl_init">初始化一个cURL会话 <code class="language-plaintext highlighter-rouge">curl_init</code></a></li>
+      <li><a href="#设置一个curl传输选项-curl_setopt" id="markdown-toc-设置一个curl传输选项-curl_setopt">设置一个cURL传输选项 <code class="language-plaintext highlighter-rouge">curl_setopt</code></a></li>
+      <li><a href="#执行一个curl会话-curl_exec" id="markdown-toc-执行一个curl会话-curl_exec">执行一个cURL会话 <code class="language-plaintext highlighter-rouge">curl_exec</code></a></li>
+      <li><a href="#关闭一个curl会话-curl_close" id="markdown-toc-关闭一个curl会话-curl_close">关闭一个cURL会话 <code class="language-plaintext highlighter-rouge">curl_close</code></a></li>
+      <li><a href="#设置一个流的超时时间-stream_set_timeout" id="markdown-toc-设置一个流的超时时间-stream_set_timeout">设置一个流的超时时间 <code class="language-plaintext highlighter-rouge">stream_set_timeout</code></a></li>
+      <li><a href="#更新现有的会话id-session_regenerate_id" id="markdown-toc-更新现有的会话id-session_regenerate_id">更新现有的会话ID <code class="language-plaintext highlighter-rouge">session_regenerate_id</code></a></li>
+      <li><a href="#获取一个php配置-ini_get" id="markdown-toc-获取一个php配置-ini_get">获取一个php配置 <code class="language-plaintext highlighter-rouge">ini_get</code></a></li>
+      <li><a href="#获取所有php配置-ini_get_all" id="markdown-toc-获取所有php配置-ini_get_all">获取所有php配置 <code class="language-plaintext highlighter-rouge">ini_get_all</code></a></li>
+      <li><a href="#设置php报错级别-error_reporting" id="markdown-toc-设置php报错级别-error_reporting">设置php报错级别 <code class="language-plaintext highlighter-rouge">error_reporting</code></a></li>
+      <li><a href="#设置一个用户自定义的错误处理函数-set_error_handler" id="markdown-toc-设置一个用户自定义的错误处理函数-set_error_handler">设置一个用户自定义的错误处理函数 <code class="language-plaintext highlighter-rouge">set_error_handler</code></a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="查找字符串首次出现的位置-strpos">查找字符串首次出现的位置 <code class="language-plaintext highlighter-rouge">strpos</code></h2>
+<p>mixed strpos( string $haystack , mixed $needle [, int $offset = 0 ] )
+if(strpos($_POST[‘email’],’@’) === false){
+…
+}
+为了区别返回值0和false，必须使用===或!==来判断。</p>
+
+<h2 id="返回字符串的子串-substr">返回字符串的子串 <code class="language-plaintext highlighter-rouge">substr</code></h2>
+<p>string substr( string $string , int $start [, int $length ] )
+如果start是负数，返回的字符串将从 string 结尾处向前数第 start 个字符开始：
+$rest = substr(“abcdef”, -3, 1); 	// 返回 “d”</p>
+
+<h2 id="替换字符串的子串-substr_replace">替换字符串的子串 <code class="language-plaintext highlighter-rouge">substr_replace</code></h2>
+<p>mixed substr_replace( mixed $string , mixed $replacement , mixed $start [, mixed $length ] )
+如果没有指定$length参数，将替换从$start到字符串末尾的所有字符。
+如果设定了$length参数并且为正数，表示string中被替换的子字符串的长度。如果设定为负数，它表示待替换的子字符串结尾处距离string末端的字符个数。如果没有提供此参数，那么它默认为strlen( string ) （字符串的长度）。当然，如果length为0，那么这个函数的功能为将replacement插入到string的start位置处。
+print substr_replace(‘abcdefghijklmn’,’XXXX’,-5,3);
+abcdefghijklmn  -&gt;  abcdefghiXXXXmn</p>
+
+<p>print substr_replace(‘abcdefghijklmn’,’…‘,10);
+abcdefghijklmn  -&gt;  abcdefghij…</p>
+
+<h2 id="获取字符串长度-strlen">获取字符串长度 <code class="language-plaintext highlighter-rouge">strlen</code></h2>
+<p>int strlen( string $string )</p>
+
+<h2 id="查找字符串的首次出现-区分大小写-strstr">查找字符串的首次出现-区分大小写 <code class="language-plaintext highlighter-rouge">strstr</code></h2>
+<p>string strstr( string $haystack , mixed $needle [, bool $before_needle = false ] )
+返回haystack字符串从needle第一次出现的位置开始到haystack结尾的字符串。
+若$before_needle为TRUE，strstr()将返回needle在haystack中的位置之前的部分。
+若未发现字符串，返回FALSE。
+$email  = ‘name@example.com’;
+$domain = strstr($email, ‘@’);
+echo $domain; 	// 打印 @example.com</p>
+
+<p>$user = strstr($email, ‘@’, true); 
+echo $user; 		// 打印 name</p>
+
+<h2 id="查找字符串的首次出现-不区分大小写-stristr">查找字符串的首次出现-不区分大小写 <code class="language-plaintext highlighter-rouge">stristr</code></h2>
+<p>string stristr( string $haystack , mixed $needle [, bool $before_needle = false ] )</p>
+
+<h2 id="按字节反转字符串-strrev">按字节反转字符串 <code class="language-plaintext highlighter-rouge">strrev</code></h2>
+<p>string strrev( string $string )
+echo strrev(“Hello world!”); // 输出 “!dlrow olleH”</p>
+
+<h2 id="使用一个字符串分割另一个字符串-explode">使用一个字符串分割另一个字符串 <code class="language-plaintext highlighter-rouge">explode</code></h2>
+<p>array explode( string $delimiter , string $string [, int $limit ] )
+如果设置了limit参数并且是正数，则返回的数组包含最多limit个元素，而最后那个元素将包含string的剩余部分。
+如果limit参数是负数，则返回除了最后的-limit个元素外的所有元素。
+如果limit是0，则会被当做1。</p>
+
+<h2 id="将一个一维数组的值转化为字符串-implode">将一个一维数组的值转化为字符串 <code class="language-plaintext highlighter-rouge">implode</code></h2>
+<p>string implode( string $glue , array $pieces )</p>
+
+<h2 id="结合explode函数实现按单词反转字符串">结合explode函数实现按单词反转字符串</h2>
+<p>$s = ‘one two three four five’;
+$revs = implode(‘ ‘,array_reverse(explode(‘ ‘, $s)));
+print( $revs);  # five four three two one</p>
+
+<h2 id="生成随机数-mt_rand">生成随机数 <code class="language-plaintext highlighter-rouge">mt_rand</code></h2>
+<p>int mt_rand ( int $min , int $max )</p>
+
+<h2 id="执行一个正则表达式的搜索和替换-preg_replace">执行一个正则表达式的搜索和替换 <code class="language-plaintext highlighter-rouge">preg_replace</code></h2>
+<p>mixed preg_replace ( mixed $pattern , mixed $replacement , mixed $subject [, int $limit = -1 [, int &amp;$count ]] )
+$string = ‘April 15, 2003’;
+$pattern = ‘/[ri]/’;
+$replacement = ‘X’;
+echo preg_replace($pattern, $replacement, $string);	# ApXXl 15, 2003</p>
+
+<h2 id="执行一个正则表达式搜索并且使用一个回调进行替换-preg_replace_callback">执行一个正则表达式搜索并且使用一个回调进行替换 <code class="language-plaintext highlighter-rouge">preg_replace_callback</code></h2>
+<p>mixed preg_replace_callback ( mixed $pattern , callable $callback , mixed $subject [, int $limit = -1 [, int &amp;$count ]] )
+这个函数的行为除了可以指定一个callback替代replacement进行替换字符串的计算，其他方面等同于preg_replace()。</p>
+
+<h2 id="将字符串转换为数组-str_split">将字符串转换为数组 <code class="language-plaintext highlighter-rouge">str_split</code></h2>
+<p>array str_split ( string $string [, int $split_length = 1 ] )
+$str = “Hello Friend”;
+$arr = str_split($str,2);
+print_r($arr);
+输出：Array ( [0] =&gt; He [1] =&gt; ll [2] =&gt; o [3] =&gt; Fr [4] =&gt; ie [5] =&gt; nd )</p>
+
+<h2 id="implode的别名-join">implode()的别名 <code class="language-plaintext highlighter-rouge">join</code></h2>
+<p>string join ( string $glue , array $pieces )</p>
+
+<h2 id="子字符串替换-区分大小写-str_replace">子字符串替换-区分大小写 <code class="language-plaintext highlighter-rouge">str_replace</code></h2>
+<p>mixed str_replace ( mixed $search , mixed $replace , mixed $subject [, int &amp;$count ] )
+该函数返回一个字符串或者数组。该字符串或数组是将subject中全部的search都被replace替换之后的结果。
+// &lt;body text='black'&gt;
+echo str_replace(“%body%”, “black”, “&lt;body text='%body%'&gt;”);</p>
+
+<h2 id="子字符串替换-不区分大小写-str_ireplace">子字符串替换-不区分大小写 <code class="language-plaintext highlighter-rouge">str_ireplace</code></h2>
+<p>mixed str_ireplace ( mixed $search , mixed $replace , mixed $subject [, int &amp;$count ] )</p>
+
+<h2 id="重复一个字符串-str_repeat">重复一个字符串 <code class="language-plaintext highlighter-rouge">str_repeat</code></h2>
+<p>string str_repeat ( string $input , int $multiplier )
+echo str_repeat(“-=”, 10);  // -=-=-=-=-=-=-=-=-=-=</p>
+
+<h2 id="将字符串的首字母转换为大写-ucfirst">将字符串的首字母转换为大写 <code class="language-plaintext highlighter-rouge">ucfirst</code></h2>
+<p>string ucfirst ( string $str )
+echo ucfirst(‘hello world!’);	// Hello world!</p>
+
+<h2 id="将字符串中每个单词的首字母转换为大写">将字符串中每个单词的首字母转换为大写</h2>
+<p>string ucwords ( string $str ) ucwords
+echo ucwords(‘hello world!’);		// Hello World!</p>
+
+<h2 id="将字符串转化为小写-strtolower">将字符串转化为小写 <code class="language-plaintext highlighter-rouge">strtolower</code></h2>
+<p>string strtolower ( string $string )
+echo strtolower(‘Hello World!’);	// hello world!</p>
+
+<h2 id="将字符串转化为大写-strtoupper">将字符串转化为大写 <code class="language-plaintext highlighter-rouge">strtoupper</code></h2>
+<p>string strtoupper ( string $string )
+echo strtoupper(‘Hello World!’);	// HELLO WORLD!</p>
+
+<h2 id="删除字符串开头的空白字符或其他字符-ltrim">删除字符串开头的空白字符（或其他字符） <code class="language-plaintext highlighter-rouge">ltrim</code></h2>
+<p>string ltrim ( string $str [, string $character_mask ] )</p>
+
+<h2 id="删除字符串末端的空白字符或者其他字符-rtrim">删除字符串末端的空白字符（或者其他字符） <code class="language-plaintext highlighter-rouge">rtrim</code></h2>
+<p>string rtrim ( string $str [, string $character_mask ] )</p>
+
+<h2 id="去除字符串首尾处的空白字符或者其他字符-trim">去除字符串首尾处的空白字符（或者其他字符） <code class="language-plaintext highlighter-rouge">trim</code></h2>
+<p>string trim ( string $str [, string $charlist = “ \t\n\r\0\x0B” ] )</p>
+
+<h2 id="rtrim的别名-chop">rtrim()的别名 <code class="language-plaintext highlighter-rouge">chop</code></h2>
+<p>string chop ( string $str [, string $character_mask ] )</p>
+
+<h2 id="打开文件或者url-fopen">打开文件或者URL <code class="language-plaintext highlighter-rouge">fopen</code></h2>
+<p>resource fopen ( string $filename , string $mode [, bool $use_include_path = false [, resource $context ]] )
+$handle = fopen(“/home/rasmus/file.txt”, “r”);
+$handle = fopen(“/home/rasmus/file.gif”, “wb”);
+$handle = fopen(“http://www.example.com/”, “r”);
+$handle = fopen(“ftp://user:password@example.com/somefile.txt”, “w”);</p>
+
+<h2 id="关闭一个已打开的文件指针-fclose">关闭一个已打开的文件指针 <code class="language-plaintext highlighter-rouge">fclose</code></h2>
+<p>bool fclose ( resource $handle )</p>
+
+<h2 id="输出一个消息并且退出当前脚本-exit">输出一个消息并且退出当前脚本 <code class="language-plaintext highlighter-rouge">exit</code></h2>
+<p>void exit( [string $status] )
+void exit( int $status )
+尽管调用了exit()，Shutdown函数以及object destructors总是会被执行。</p>
+
+<h2 id="输出一个消息并且退出当前脚本等同于exit-die">输出一个消息并且退出当前脚本，等同于exit <code class="language-plaintext highlighter-rouge">die</code></h2>
+<p>void die([ string $status ] )</p>
+
+<h2 id="将行格式化为csv并写入文件指针-fputcsv">将行格式化为CSV并写入文件指针 <code class="language-plaintext highlighter-rouge">fputcsv</code></h2>
+<p>int fputcsv ( resource $handle , array $fields [, string $delimiter = ‘,’ [, string $enclosure = ‘”’ ]] )
+fputcsv()将一行（用fields数组传递）格式化为CSV格式并写入由handle指定的文件。
+文件指针必须是有效的，必须指向由 fopen() 或 fsockopen() 成功打开的文件(并还未由 fclose() 关闭)。
+$list = array (
+    array(‘aaa’, ‘bbb’, ‘ccc’, ‘dddd’),
+    array(‘123’, ‘456’, ‘789’),
+    array(‘“aaa”’, ‘“bbb”’)
+);</p>
+
+<p>$fp = fopen(‘file.csv’, ‘w’);
+foreach ($list as $fields) {
+    fputcsv($fp, $fields);
+}
+fclose($fp);
+将生成一个如下内容的文件：
+aaa,bbb,ccc,dddd
+123,456,789
+“"”aaa”””,”"”bbb”””</p>
+
+<h2 id="从文件指针中读入一行并解析-csv-字段-fgetcsv">从文件指针中读入一行并解析 CSV 字段 <code class="language-plaintext highlighter-rouge">fgetcsv</code></h2>
+<p>array fgetcsv( resource $handle [, int $length = 0 [, string $delimiter = ‘,’ [, string $enclosure = ‘”’ [, string $escape = ‘\’ ]]]] )
+$row = 1;
+if (($handle = fopen(“test.csv”, “r”)) !== FALSE) {
+    while (($data = fgetcsv($handle, 1000, “,”)) !== FALSE) {
+        $num = count($data);
+        echo “&lt;p&gt; $num fields in line $row: <br />&lt;/p&gt;\n”;
+        $row++;
+        for ($c=0; $c &lt; $num; $c++) {
+            echo $data[$c] . “<br />\n”;
+        }
+    }
+    fclose($handle);
+}</p>
+
+<h2 id="把字符转换为-html-实体-htmlentities">把字符转换为 HTML 实体 <code class="language-plaintext highlighter-rouge">htmlentities</code></h2>
+<p>string htmlentities ( string $string [, int $flags = ENT_COMPAT | ENT_HTML401 [, string $encoding = ini_get(“default_charset”) [, bool $double_encode = true ]]] )
+$str = “A ‘quote’ is <b>bold</b>”;</p>
+
+<p>// Outputs: A ‘quote’ is &lt;b&gt;bold&lt;/b&gt;
+echo htmlentities($str);</p>
+
+<p>// Outputs: A 'quote' is &lt;b&gt;bold&lt;/b&gt;
+echo htmlentities($str, ENT_QUOTES);	# 既转换双引号，也转换单引号</p>
+
+<p>#3 把数据装入一个二进制字符串 <code class="language-plaintext highlighter-rouge">pack</code> 
+string pack ( string $format [, mixed $args [, mixed $… ]] )
+echo pack(“C3”,80,72,80);	// PHP
+echo pack(“A3C1A3”,80,72,80);	// 80 H80</p>
+
+<h2 id="从二进制字符串中解析出数据-unpack">从二进制字符串中解析出数据 <code class="language-plaintext highlighter-rouge">unpack</code></h2>
+<p>array unpack ( string $format , string $data )
+$binarydata = “\x04\x00\xa0\x00”;
+$array = unpack(“cchars/nint”, $binarydata);
+print_r($array);  // Array ( [chars] =&gt; 4 [int] =&gt; 160 )</p>
+
+<h2 id="使用另一个字符串填充字符串为指定长度-str_pad">使用另一个字符串填充字符串为指定长度 <code class="language-plaintext highlighter-rouge">str_pad</code></h2>
+<p>string str_pad ( string $input , int $pad_length [, string $pad_string = “ “ [, int $pad_type = STR_PAD_RIGHT ]] )
+该函数返回input被从左端、右端或者同时两端被填充到指定长度后的结果。如果可选的pad_string参数没有被指定，input将被空格字符填充，否则它将被pad_string填充到指定长度。
+$input = “Alien”;
+echo str_pad($input, 10);                      // 输出 “Alien     “
+echo str_pad($input, 10, “-=”, STR_PAD_LEFT);  // 输出 “-=-=-Alien”
+echo str_pad($input, 10, “<em>”, STR_PAD_BOTH);   // 输出 “<strong>Alien</strong></em>”
+echo str_pad($input, 6 , “<em>__”);               // 输出 “Alien</em>”</p>
+
+<h2 id="通过一个正则表达式分隔字符串-preg_split">通过一个正则表达式分隔字符串 <code class="language-plaintext highlighter-rouge">preg_split</code></h2>
+<p>array preg_split ( string $pattern , string $subject [, int $limit = -1 [, int $flags = 0 ]] )
+//使用逗号或空格(包含” “, \r, \t, \n, \f)分隔短语
+$keywords = preg_split(“/[\s,]+/”, “hypertext language, programming”);
+print_r($keywords);
+输出：
+	Array
+(
+    [0] =&gt; hypertext
+    [1] =&gt; language
+    [2] =&gt; programming
+)</p>
+
+<h2 id="打断字符串为指定数量的字串-wordwrap">打断字符串为指定数量的字串 <code class="language-plaintext highlighter-rouge">wordwrap</code></h2>
+<p>string wordwrap( string $str [, int $width = 75 [, string $break = “\n” [, bool $cut = false ]]] )
+$text = “The quick brown fox jumped over the lazy dog.”;
+$newtext = wordwrap($text, 20, “<br />\n”);
+echo $newtext;
+输出：
+	The quick brown fox<br />
+jumped over the lazy<br />
+dog.</p>
+
+<h2 id="发送原生-http-头-header">发送原生 HTTP 头 <code class="language-plaintext highlighter-rouge">header</code></h2>
+<p>void header ( string $string [, bool $replace = true [, int $http_response_code ]] )
+ 	header()必须在任何实际输出之前调用，不管是普通的HTML标签，还是文件或PHP输出的空行，空格。这是个常见的错误，在通过include，require，或者其访问其他文件里面的函数的时候，如果在header()被调用之前，其中有空格或者空行。
+// 重定向
+header(‘Location: http://www.example.com/’);	
+exit;</p>
+
+<h2 id="读入一个文件并写入到输出缓冲-readfile">读入一个文件并写入到输出缓冲 <code class="language-plaintext highlighter-rouge">readfile</code></h2>
+<p>int readfile ( string $filename [, bool $use_include_path = false [, resource $context ]] )
+// 下载pdf
+header(‘Content-type: application/pdf’);
+header(‘Content-Disposition: attachment; filename=”downloaded.pdf”’);
+readfile(‘original.pdf’);</p>
+
+<h2 id="检测变量是否为数字或数字字符串-is_numeric">检测变量是否为数字或数字字符串 <code class="language-plaintext highlighter-rouge">is_numeric</code></h2>
+<p>bool is_numeric ( mixed $var )</p>
+
+<h2 id="检测变量是否是布尔型--is_bool">检测变量是否是布尔型  <code class="language-plaintext highlighter-rouge">is_bool</code></h2>
+<p>bool is_bool ( mixed $var )</p>
+
+<h2 id="检测变量是否是浮点型--is_float">检测变量是否是浮点型  <code class="language-plaintext highlighter-rouge">is_float</code></h2>
+<p>bool is_float ( mixed $var )</p>
+
+<h2 id="检测变量是否是整数-is_int">检测变量是否是整数 <code class="language-plaintext highlighter-rouge">is_int</code></h2>
+<p>bool is_int ( mixed $var )</p>
+
+<h2 id="检测变量是否是字符串--is_string">检测变量是否是字符串  <code class="language-plaintext highlighter-rouge">is_string</code></h2>
+<p>bool is_string ( mixed $var )</p>
+
+<h2 id="检测变量是否是一个对象-is_object">检测变量是否是一个对象 <code class="language-plaintext highlighter-rouge">is_object</code></h2>
+<p>bool is_object ( mixed $var )</p>
+
+<h2 id="检测变量是否是数组-is_array">检测变量是否是数组 <code class="language-plaintext highlighter-rouge">is_array</code></h2>
+<p>bool is_array ( mixed $var )</p>
+
+<h2 id="is_int-的别名-is_integer">is_int() 的别名 <code class="language-plaintext highlighter-rouge">is_integer</code></h2>
+<p>bool is_integer ( mixed $var )</p>
+
+<h2 id="绝对值-abs">绝对值 <code class="language-plaintext highlighter-rouge">abs</code></h2>
+<p>number abs ( mixed $number )
+// 比较浮点数是否相等（不应该直接用==比较）
+$delta = 0.00001;
+$a = 1.00000001;
+$b = 1.00000000;</p>
+
+<p>if( abs($a - $b) &lt; $delta ){
+	print ‘equal enough !’;
+}</p>
+
+<h2 id="对浮点数进行四舍五入-round">对浮点数进行四舍五入 <code class="language-plaintext highlighter-rouge">round</code></h2>
+<p>float round ( float $val [, int $precision = 0 [, int $mode = PHP_ROUND_HALF_UP ]] )
+PHP 默认不能正确处理类似 “12,300.2” 的字符串。</p>
+
+<h2 id="向上取整-ceil">向上取整 <code class="language-plaintext highlighter-rouge">ceil</code></h2>
+<p>float ceil ( float $value )</p>
+
+<h2 id="向下取整-floor">向下取整 <code class="language-plaintext highlighter-rouge">floor</code></h2>
+<p>float floor ( float $value )</p>
+
+<h2 id="建立一个包含指定范围单元的数组-range">建立一个包含指定范围单元的数组 <code class="language-plaintext highlighter-rouge">range</code></h2>
+<p>array range ( mixed $start , mixed $limit [, number $step = 1 ] )
+返回的数组中从 start 到 limit 的单元，包括它们本身。</p>
+
+<h2 id="带种子生成随机数-mt_srand">带种子生成随机数 <code class="language-plaintext highlighter-rouge">mt_srand</code></h2>
+<p>void mt_srand ([ int $seed ] )</p>
+
+<h2 id="取对数-log">取对数 <code class="language-plaintext highlighter-rouge">log</code></h2>
+<p>float log ( float $arg [, float $base = M_E ] )</p>
+
+<h2 id="计算-e-的指数-exp">计算 e 的指数 <code class="language-plaintext highlighter-rouge">exp</code></h2>
+<p>float exp ( float $arg )</p>
+
+<h2 id="取指数-pow">取指数 <code class="language-plaintext highlighter-rouge">pow</code></h2>
+<p>number pow ( number $base , number $exp )</p>
+
+<h2 id="以千位分隔符方式格式化一个数字-number_format">以千位分隔符方式格式化一个数字 <code class="language-plaintext highlighter-rouge">number_format</code></h2>
+<p>string number_format ( float $number [, int $decimals = 0 ] )
+string number_format ( float $number , int $decimals = 0 , string $dec_point = “.” , string $thousands_sep = “,” )
+$number = 1234.56;
+$english_format_number = number_format($number);			// 1,235
+$nombre_format_francais = number_format($number, 2, ‘,’, ‘ ‘);	// 1 234,56</p>
+
+<p>$number = 1234.5678;
+$english_format_number = number_format($number, 2, ‘.’, ‘’);	// 1234.57</p>
+
+<h2 id="2个任意精度数字的加法计算-bcadd">2个任意精度数字的加法计算 <code class="language-plaintext highlighter-rouge">bcadd</code></h2>
+<p>string bcadd ( string $left_operand , string $right_operand [, int $scale ] )
+$a = ‘1.234’;
+$b = ‘5’;
+echo bcadd($a, $b);     // 6
+echo bcadd($a, $b, 4);  // 6.2340
+非常大或者非常小的数的运算需要使用BCMath或者GMP库。</p>
+
+<h2 id="2个任意精度数字的减法-bcsub">2个任意精度数字的减法 <code class="language-plaintext highlighter-rouge">bcsub</code></h2>
+<p>string bcsub ( string $left_operand , string $right_operand [, int $scale = int ] )</p>
+
+<h1 id="检查某个名称的常量是否存在-defined">检查某个名称的常量是否存在 <code class="language-plaintext highlighter-rouge">defined</code></h1>
+<p>bool defined( string $name )</p>
+
+<h2 id="检测变量是否设置-isset">检测变量是否设置 <code class="language-plaintext highlighter-rouge">isset</code></h2>
+<p>bool isset ( mixed $var [, mixed $… ] )</p>
+
+<h2 id="检查函数是否已定义-function_exists">检查函数是否已定义 <code class="language-plaintext highlighter-rouge">function_exists</code></h2>
+<p>bool function_exists ( string $function_name )</p>
+
+<h2 id="在任意进制之间转换数字-base_convert">在任意进制之间转换数字 <code class="language-plaintext highlighter-rouge">base_convert</code></h2>
+<p>string base_convert ( string $number , int $frombase , int $tobase )
+$hexadecimal = ‘A37334’;
+echo base_convert($hexadecimal, 16, 2);
+输出：
+	101000110111001100110100</p>
+
+<h2 id="格式化一个本地时间日期-date">格式化一个本地时间／日期 <code class="language-plaintext highlighter-rouge">date</code></h2>
+<p>string date ( string $format [, int $timestamp ] )
+echo date(“Y-m-d H:i:s”);	// 2016-01-13 10:05:39</p>
+
+<h2 id="取得日期时间信息-getdate">取得日期／时间信息 <code class="language-plaintext highlighter-rouge">getdate</code></h2>
+<p>array getdate ([ int $timestamp = time() ] )
+print_r(getdate());
+输出：
+	Array ( [seconds] =&gt; 30 [minutes] =&gt; 7 [hours] =&gt; 10 [mday] =&gt; 13 [wday] =&gt; 3 [mon] =&gt; 1 [year] =&gt; 2016 [yday] =&gt; 12 [weekday] =&gt; Wednesday [month] =&gt; January [0] =&gt; 1452676050 )</p>
+
+<h2 id="返回当前的-unix-时间戳-time">返回当前的 Unix 时间戳 <code class="language-plaintext highlighter-rouge">time</code></h2>
+<p>int time ( void )</p>
+
+<h2 id="取得本地时间">取得本地时间</h2>
+<p>array localtime ([ int $timestamp = time() [, bool $is_associative = false ]] ) localtime 
+print_r(localtime(time(),true));
+输出：
+Array ( [tm_sec] =&gt; 52 [tm_min] =&gt; 10 [tm_hour] =&gt; 10 [tm_mday] =&gt; 13 [tm_mon] =&gt; 0 [tm_year] =&gt; 116 [tm_wday] =&gt; 3 [tm_yday] =&gt; 12 [tm_isdst] =&gt; 0 )</p>
+
+<h2 id="取得一个日期的-unix-时间戳-mktime">取得一个日期的 Unix 时间戳 <code class="language-plaintext highlighter-rouge">mktime</code></h2>
+<p>int mktime ([ int $hour = date(“H”) [, int $minute = date(“i”) [, int $second = date(“s”) [, int $month = date(“n”) [, int $day = date(“j”) [, int $year = date(“Y”) [, int $is_dst = -1 ]]]]]]] )
+echo date(“M-d-Y”, mktime(0, 0, 0, 12, 32, 1997));	// Jan-01-1998</p>
+
+<h2 id="取得-gmt-日期的-unix-时间戳-gmmktime">取得 GMT 日期的 UNIX 时间戳 <code class="language-plaintext highlighter-rouge">gmmktime</code></h2>
+<p>int gmmktime ([ int $hour [, int $minute [, int $second [, int $month [, int $day [, int $year [, int $is_dst ]]]]]]] )</p>
+
+<h2 id="设定用于一个脚本中所有日期时间函数的默认时区-date_default_timezone_set">设定用于一个脚本中所有日期时间函数的默认时区 <code class="language-plaintext highlighter-rouge">date_default_timezone_set</code></h2>
+<p>bool date_default_timezone_set ( string $timezone_identifier )</p>
+
+<h2 id="检验日期的合法性-checkdate">检验日期的合法性 <code class="language-plaintext highlighter-rouge">checkdate</code></h2>
+<p>bool checkdate ( int $month , int $day , int $year )
+var_dump(checkdate(12, 31, 2000));	// bool(true)
+var_dump(checkdate(2, 29, 2001));	// bool(false)</p>
+
+<h2 id="将任何英文文本的日期时间描述解析为-unix-时间戳-strtotime">将任何英文文本的日期时间描述解析为 Unix 时间戳 <code class="language-plaintext highlighter-rouge">strtotime</code></h2>
+<p>int strtotime ( string $time [, int $now = time() ] )
+echo strtotime(“now”), “\n”;
+echo strtotime(“10 September 2000”), “\n”;
+echo strtotime(“+1 day”), “\n”;
+echo strtotime(“+1 week”), “\n”;
+echo strtotime(“+1 week 2 days 4 hours 2 seconds”), “\n”;
+echo strtotime(“next Thursday”), “\n”;
+echo strtotime(“last Monday”), “\n”;
+输出：1452677160 968536800 1452763560 1453281960 1453469162 1452726000 1452466800</p>
+
+<h2 id="返回当前-unix-时间戳和微秒数-microtime">返回当前 Unix 时间戳和微秒数 <code class="language-plaintext highlighter-rouge">microtime</code></h2>
+<p>mixed microtime ([ bool $get_as_float ] )
+echo microtime();	// 0.89424900 1452677381</p>
+
+<h2 id="设置变量的类型-settype">设置变量的类型 <code class="language-plaintext highlighter-rouge">settype</code></h2>
+<p>bool settype ( mixed &amp;$var , string $type ) settype 
+$foo = “5bar”; 			// string
+$bar = true;   			// boolean
+settype($foo, “integer”); 		// $foo 现在是 5   (integer)
+settype($bar, “string”);  	// $bar 现在是 “1” (string)</p>
+
+<h2 id="将回调函数作用到给定数组的单元上-array_map">将回调函数作用到给定数组的单元上 <code class="language-plaintext highlighter-rouge">array_map</code></h2>
+<p>array array_map ( callable $callback , array $arr1 [, array $… ] )
+function cube($n)
+{
+    return($n * $n * $n);
+}</p>
+
+<p>$a = array(1, 2, 3, 4, 5);
+$b = array_map(“cube”, $a);
+print_r($b);
+$b将变成：
+Array
+(
+    [0] =&gt; 1
+    [1] =&gt; 8
+    [2] =&gt; 27
+    [3] =&gt; 64
+    [4] =&gt; 125
+)</p>
+
+<h2 id="释放给定的变量-unset">释放给定的变量 <code class="language-plaintext highlighter-rouge">unset</code></h2>
+<p>void unset ( mixed $var [, mixed $… ] )
+$a = array(‘1’=&gt;’a’,’2’=&gt;’b’,’3’=&gt;’c’,’4’=&gt;’d’,’5’=&gt;’e’);
+unset($a[‘3’]);
+print_r($a);	// Array ( [1] =&gt; a [2] =&gt; b [4] =&gt; d [5] =&gt; e )</p>
+
+<p>$a = array(‘a’,’b’,’c’,’d’,’e’);
+unset($a[2]);
+print_r($a);	// Array ( [0] =&gt; a [1] =&gt; b [3] =&gt; d [4] =&gt; e )</p>
+
+<p>如果在函数中 unset() 一个全局变量，则只是局部变量被销毁，而在调用环境中的变量将保持调用 unset() 之前一样的值：
+function destroy_foo() {
+    global $foo;
+    unset($foo);
+}</p>
+
+<p>$foo = ‘bar’;
+destroy_foo();
+echo $foo;	// bar
+正确的做法：unset($GLOBALS[‘bar’]);</p>
+
+<h2 id="将数组中的内部指针向前移动一位-next">将数组中的内部指针向前移动一位 <code class="language-plaintext highlighter-rouge">next</code></h2>
+<p>mixed next ( array &amp;$array )</p>
+
+<h2 id="返回数组中的当前单元-current">返回数组中的当前单元 <code class="language-plaintext highlighter-rouge">current</code></h2>
+<p>mixed current ( array &amp;$array )</p>
+
+<h2 id="将数组的内部指针指向第一个单元-reset">将数组的内部指针指向第一个单元 <code class="language-plaintext highlighter-rouge">reset</code></h2>
+<p>mixed reset ( array &amp;$array )
+$array = array(‘step one’, ‘step two’, ‘step three’, ‘step four’);
+echo current($array); 		// “step one”
+next($array);
+next($array);
+echo current($array) ; 		// “step three”
+reset($array);
+echo current($array) ; 		// “step one”</p>
+
+<h2 id="返回数组中当前的键值对并将数组指针向前移动一步-each">返回数组中当前的键／值对并将数组指针向前移动一步 <code class="language-plaintext highlighter-rouge">each</code></h2>
+<p>array each ( array &amp;$array )</p>
+
+<h2 id="把数组中的值赋给一些变量-list">把数组中的值赋给一些变量 <code class="language-plaintext highlighter-rouge">list</code></h2>
+<p>array list ( mixed $varname [, mixed $… ] )
+$fruit = array(‘a’ =&gt; ‘apple’, ‘b’ =&gt; ‘banana’, ‘c’ =&gt; ‘cranberry’);
+reset($fruit);
+while (list($key, $val) = each($fruit)) {
+    echo “$key =&gt; $val\n”;
+}
+输出：
+a =&gt; apple
+b =&gt; banana
+c =&gt; cranberry</p>
+
+<h2 id="计算数组中的单元数目或对象中的属性个数-count">计算数组中的单元数目或对象中的属性个数 <code class="language-plaintext highlighter-rouge">count</code></h2>
+<p>int count ( mixed $var [, int $mode = COUNT_NORMAL ] )</p>
+
+<h2 id="把数组中的一部分去掉并用其它值取代-array_splice">把数组中的一部分去掉并用其它值取代 <code class="language-plaintext highlighter-rouge">array_splice</code></h2>
+<p>array array_splice ( array &amp;$input , int $offset [, int $length = 0 [, mixed $replacement ]] )
+把input数组中由offset和length指定的单元去掉，如果提供了replacement参数，则用其中的单元取代。input中的数字键名不被保留。
+如果指定了length并且为负值，则移除从offset到数组末尾倒数length为止中间的所有的单元。
+$input = array(“red”, “green”, “blue”, “yellow”);
+array_splice($input, 2);							// array(“red”, “green”)</p>
+
+<p>$input = array(“red”, “green”, “blue”, “yellow”);
+array_splice($input, 1, -1);						// array(“red”, “yellow”)</p>
+
+<p>$input = array(“red”, “green”, “blue”, “yellow”);
+array_splice($input, 1, count($input), “orange”);		// array(“red”, “orange”)</p>
+
+<p>$input = array(“red”, “green”, “blue”, “yellow”);
+array_splice($input, -1, 1, array(“black”, “maroon”));	// array(“red”, “green”,”blue”, “black”, “maroon”)</p>
+
+<p>$input = array(“red”, “green”, “blue”, “yellow”);
+array_splice($input, 3, 0, “purple”);				// array(“red”, “green”,”blue”, “purple”, “yellow”);</p>
+
+<h2 id="返回数组中所有的值-array_values">返回数组中所有的值 <code class="language-plaintext highlighter-rouge">array_values</code></h2>
+<p>array array_values ( array $input )
+$array = array(“size” =&gt; “XL”, “color” =&gt; “gold”);
+print_r(array_values($array));
+输出：
+Array
+(
+    [0] =&gt; XL
+    [1] =&gt; gold
+)</p>
+
+<h2 id="将数组开头的单元移出数组-array_shift">将数组开头的单元移出数组 <code class="language-plaintext highlighter-rouge">array_shift</code></h2>
+<p>mixed array_shift ( array &amp;$array )
+将 array 的第一个单元移出并作为结果返回，将 array 的长度减一并将所有其它单元向前移动一位。所有的数字键名将改为从零开始计数，文字键名将不变。使用此函数后会重置（reset()）array 指针。
+$stack = array(“orange”, “banana”, “apple”, “raspberry”);
+$fruit = array_shift($stack);
+print_r($stack);
+输出：
+Array
+(
+    [0] =&gt; banana
+    [1] =&gt; apple
+    [2] =&gt; raspberry
+)</p>
+
+<h2 id="将数组最后一个单元弹出-array_pop">将数组最后一个单元弹出 <code class="language-plaintext highlighter-rouge">array_pop</code></h2>
+<p>mixed array_pop ( array &amp;$array )
+弹出并返回 array 数组的最后一个单元，并将数组 array 的长度减一。如果 array 为空（或者不是数组）将返回 NULL。使用此函数后会重置（reset()）array 指针。
+$stack = array(“orange”, “banana”, “apple”, “raspberry”);
+$fruit = array_pop($stack);
+print_r($stack);
+输出：
+	Array
+(
+    [0] =&gt; orange
+    [1] =&gt; banana
+    [2] =&gt; apple
+)</p>
+
+<h2 id="用值将数组填补到指定长度-array_pad">用值将数组填补到指定长度 <code class="language-plaintext highlighter-rouge">array_pad</code></h2>
+<p>array array_pad ( array $input , int $pad_size , mixed $pad_value )</p>
+
+<h2 id="合并一个或多个数组-array_merge">合并一个或多个数组 <code class="language-plaintext highlighter-rouge">array_merge</code></h2>
+<p>array array_merge ( array $array1 [, array $… ] )</p>
+
+<h2 id="将一个或多个单元压入数组的末尾-array_push">将一个或多个单元压入数组的末尾 <code class="language-plaintext highlighter-rouge">array_push</code></h2>
+<p>int array_push ( array &amp;$array , mixed $var [, mixed $… ] )
+如果用 array_push() 来给数组增加一个单元，还不如用 $array[] = ，因为这样没有调用函数的额外负担。</p>
+
+<h2 id="检查给定的键名或索引是否存在于数组中-array_key_exists">检查给定的键名或索引是否存在于数组中 <code class="language-plaintext highlighter-rouge">array_key_exists</code></h2>
+<p>bool array_key_exists ( mixed $key , array $search )</p>
+
+<h2 id="检查数组中是否存在某个值-in_array">检查数组中是否存在某个值 <code class="language-plaintext highlighter-rouge">in_array</code></h2>
+<p>bool in_array ( mixed $needle , array $haystack [, bool $strict = FALSE ] )
+如果第三个参数 strict 的值为 TRUE 则 in_array() 函数还会检查 needle 的类型是否和 haystack 中的相同。</p>
+
+<h2 id="交换数组中的键和值-array_flip">交换数组中的键和值 <code class="language-plaintext highlighter-rouge">array_flip</code></h2>
+<p>array array_flip ( array $trans )
+如果值的类型不对将发出一个警告，并且有问题的键／值对将不会反转。
+如果同一个值出现了多次，则最后一个键名将作为它的值，所有其它的都丢失了。
+$trans = array(“a” =&gt; 1, “b” =&gt; 1, “c” =&gt; 2);
+$trans = array_flip($trans);
+print_r($trans);
+输出：
+Array
+(
+    [1] =&gt; b
+    [2] =&gt; c
+)</p>
+
+<h2 id="在数组中搜索给定的值如果成功则返回相应的键名-array_search">在数组中搜索给定的值，如果成功则返回相应的键名 <code class="language-plaintext highlighter-rouge">array_search</code></h2>
+<p>mixed array_search ( mixed $needle , array $haystack [, bool $strict = false ] )
+$array = array(0 =&gt; ‘blue’, 1 =&gt; ‘red’, 2 =&gt; ‘green’, 3 =&gt; ‘red’);
+$key = array_search(‘green’, $array); // $key = 2;
+$key = array_search(‘red’, $array);   // $key = 1;</p>
+
+<h2 id="用回调函数过滤数组中的单元-array_filter">用回调函数过滤数组中的单元 <code class="language-plaintext highlighter-rouge">array_filter</code></h2>
+<p>array array_filter ( array $input [, callable $callback = “” ] )
+function odd($var){	// 奇数
+    return($var &amp; 1);
+}</p>
+
+<p>function even($var){	// 偶数
+    return(!($var &amp; 1));
+}</p>
+
+<p>$array1 = array(“a”=&gt;1, “b”=&gt;2, “c”=&gt;3, “d”=&gt;4, “e”=&gt;5);
+$array2 = array(6, 7, 8, 9, 10, 11, 12);</p>
+
+<p>echo “Odd :\n”;
+print_r(array_filter($array1, “odd”));
+echo “Even:\n”;
+print_r(array_filter($array2, “even”));
+输出：
+Odd :
+Array
+(
+    [a] =&gt; 1
+    [c] =&gt; 3
+    [e] =&gt; 5
+)
+Even:
+Array
+(
+    [0] =&gt; 6
+    [2] =&gt; 8
+    [4] =&gt; 10
+    [6] =&gt; 12
+)</p>
+
+<h2 id="找出最大值-max">找出最大值 <code class="language-plaintext highlighter-rouge">max</code></h2>
+<p>mixed max ( array $values )
+mixed max ( mixed $value1 , mixed $value2 [, mixed $… ] )</p>
+
+<h2 id="找出最小值-min">找出最小值 <code class="language-plaintext highlighter-rouge">min</code></h2>
+<p>mixed min ( array $values )
+mixed min ( mixed $value1 , mixed $value2 [, mixed $… ] )
+max、min都无法得出最大或最小元素的索引。</p>
+
+<h2 id="对数组排序-sort">对数组排序 <code class="language-plaintext highlighter-rouge">sort</code></h2>
+<p>bool sort ( array &amp;$array [, int $sort_flags = SORT_REGULAR ] )
+不能保留元素之间的键值关系，元素会重新从0开始向上索引。</p>
+
+<h2 id="对数组进行排序并保持索引关系-asort">对数组进行排序并保持索引关系 asort</h2>
+<p>bool asort ( array &amp;$array [, int $sort_flags = SORT_REGULAR ] )
+$fruits = array(“d” =&gt; “lemon”, “a” =&gt; “orange”, “b” =&gt; “banana”, “c” =&gt; “apple”);
+sort($fruits);</p>
+
+<p>foreach ($fruits as $key =&gt; $val) {
+    echo “$key = $val\n”;
+}
+输出：0 = apple 1 = banana 2 = lemon 3 = orange
+如果使用asort，则输出：
+c = apple b = banana d = lemon a = orange</p>
+
+<h2 id="返回一个单元顺序相反的数组-array_reverse">返回一个单元顺序相反的数组 <code class="language-plaintext highlighter-rouge">array_reverse</code></h2>
+<p>array array_reverse ( array $array [, bool $preserve_keys = false ] )
+preserve_keys如果设置为 TRUE 会保留数字的键。 非数字的键则不受这个设置的影响，总是会被保留。</p>
+
+<h2 id="用自然排序算法对数组排序-natsort">用“自然排序”算法对数组排序 <code class="language-plaintext highlighter-rouge">natsort</code></h2>
+<p>bool natsort ( array &amp;$array )
+$array1 = $array2 = array(“img12.png”, “img10.png”, “img2.png”, “img1.png”);
+asort($array1);
+echo “Standard sorting\n”;
+print_r($array1);</p>
+
+<p>natsort($array2);
+echo “\nNatural order sorting\n”;
+print_r($array2);</p>
+
+<p>输出：
+Standard sorting
+Array
+(
+    [3] =&gt; img1.png
+    [1] =&gt; img10.png
+    [0] =&gt; img12.png
+    [2] =&gt; img2.png
+)</p>
+
+<p>Natural order sorting
+Array
+(
+    [3] =&gt; img1.png
+    [2] =&gt; img2.png
+    [1] =&gt; img10.png
+    [0] =&gt; img12.png
+)</p>
+
+<h2 id="用自然排序算法对数组进行不区分大小写字母的排序-natcasesort">用“自然排序”算法对数组进行不区分大小写字母的排序 <code class="language-plaintext highlighter-rouge">natcasesort</code></h2>
+<p>bool natcasesort ( array &amp;$array )</p>
+
+<h2 id="对数组逆向排序-rsort">对数组逆向排序 <code class="language-plaintext highlighter-rouge">rsort</code></h2>
+<p>bool rsort ( array &amp;$array [, int $sort_flags = SORT_REGULAR ] )</p>
+
+<h2 id="对数组进行逆向排序并保持索引关系-arsort">对数组进行逆向排序并保持索引关系 <code class="language-plaintext highlighter-rouge">arsort</code></h2>
+<p>bool arsort ( array &amp;$array [, int $sort_flags = SORT_REGULAR ] )</p>
+
+<h2 id="使用用户自定义的比较函数对数组中的值进行排序-usort">使用用户自定义的比较函数对数组中的值进行排序 <code class="language-plaintext highlighter-rouge">usort</code></h2>
+<p>bool usort ( array &amp;$array , callable $cmp_function )
+function cmp($a, $b){
+    if ($a == $b) {
+        return 0;
+    }
+    return ($b &lt; $a) ? 1 : -1;
+}</p>
+
+<p>$a = array(3, 2, 5, 6, 1);</p>
+
+<p>usort($a, “cmp”);</p>
+
+<p>print_r($a);	// Array ( [0] =&gt; 1 [1] =&gt; 2 [2] =&gt; 3 [3] =&gt; 5 [4] =&gt; 6 )</p>
+
+<h2 id="使用自然排序算法比较字符串-strnatcmp">使用自然排序算法比较字符串 <code class="language-plaintext highlighter-rouge">strnatcmp</code></h2>
+<p>int strnatcmp ( string $str1 , string $str2 )</p>
+
+<h2 id="对多个数组或多维数组进行排序-array_multisort">对多个数组或多维数组进行排序 <code class="language-plaintext highlighter-rouge">array_multisort</code></h2>
+<p>bool array_multisort ( array &amp;$arr [, mixed $arg = SORT_ASC [, mixed $arg = SORT_REGULAR [, mixed $… ]]] )
+$ar1 = array(10, 100, 100, 0);
+$ar2 = array(1, 3, 2, 4);
+array_multisort($ar1, $ar2);</p>
+
+<p>var_dump($ar1);
+var_dump($ar2);
+输出：
+array(4) {
+  [0]=&gt; int(0)
+  [1]=&gt; int(10)
+  [2]=&gt; int(100)
+  [3]=&gt; int(100)
+}
+array(4) {
+  [0]=&gt; int(4)
+  [1]=&gt; int(1)
+  [2]=&gt; int(2)
+  [3]=&gt; int(3)
+}</p>
+
+<h2 id="将数组打乱-shuffle">将数组打乱 <code class="language-plaintext highlighter-rouge">shuffle</code></h2>
+<p>bool shuffle ( array &amp;$array )</p>
+
+<h2 id="移除数组中重复的值-array_unique">移除数组中重复的值 <code class="language-plaintext highlighter-rouge">array_unique</code></h2>
+<p>array array_unique ( array $array [, int $sort_flags = SORT_STRING ] )
+$input = array(“a” =&gt; “green”, “red”, “b” =&gt; “green”, “blue”, “red”);
+$result = array_unique($input);
+print_r($result);
+输出：
+Array
+(
+    [a] =&gt; green
+    [0] =&gt; red
+    [1] =&gt; blue
+)</p>
+
+<h2 id="返回数组中部分的或所有的键名-array_keys">返回数组中部分的或所有的键名 <code class="language-plaintext highlighter-rouge">array_keys</code></h2>
+<p>array array_keys ( array $array [, mixed $search_value [, bool $strict = false ]] )
+如果指定了可选参数 search_value，则只返回该值的键名。否则 input 数组中的所有键名都会被返回。</p>
+
+<h2 id="使用用户自定义函数对数组中的每个元素做回调处理-array_walk">使用用户自定义函数对数组中的每个元素做回调处理 <code class="language-plaintext highlighter-rouge">array_walk</code></h2>
+<p>bool array_walk ( array &amp;$array , callable $funcname [, mixed $userdata = NULL ] )
+array_walk() 不会受到 array 内部数组指针的影响。array_walk() 会遍历整个数组而不管指针的位置。
+$fruits = array(“d” =&gt; “lemon”, “a” =&gt; “orange”, “b” =&gt; “banana”, “c” =&gt; “apple”);</p>
+
+<p>function test_alter(&amp;$item1, $key, $prefix){
+    $item1 = “$prefix: $item1”;
+}</p>
+
+<p>function test_print($item2, $key){
+    echo “$key. $item2<br />\n”;
+}</p>
+
+<p>echo “Before …:\n”;
+array_walk($fruits, ‘test_print’);</p>
+
+<p>array_walk($fruits, ‘test_alter’, ‘fruit’);
+echo “… and after:\n”;</p>
+
+<p>array_walk($fruits, ‘test_print’);
+输出：
+Before …:
+d. lemon
+a. orange
+b. banana
+c. apple
+… and after:
+d. fruit: lemon
+a. fruit: orange
+b. fruit: banana
+c. fruit: apple</p>
+
+<h2 id="对数组中的每个成员递归地应用用户函数-array_walk_recursive">对数组中的每个成员递归地应用用户函数 <code class="language-plaintext highlighter-rouge">array_walk_recursive</code></h2>
+<p>bool array_walk_recursive ( array &amp;$input , callable $funcname [, mixed $userdata = NULL ] )</p>
+
+<h2 id="计算数组的交集-array_intersect">计算数组的交集 <code class="language-plaintext highlighter-rouge">array_intersect</code></h2>
+<p>array array_intersect ( array $array1 , array $array2 [, array $ … ] )
+$array1 = array(“a” =&gt; “green”, “red”, “blue”);
+$array2 = array(“b” =&gt; “green”, “yellow”, “red”);
+$result = array_intersect($array1, $array2);
+print_r($result);
+输出：
+Array
+(
+    [a] =&gt; green
+    [0] =&gt; red
+)</p>
+
+<h2 id="计算数组的差集-array_diff">计算数组的差集 <code class="language-plaintext highlighter-rouge">array_diff</code></h2>
+<p>array array_diff ( array $array1 , array $array2 [, array $… ] )</p>
+
+<h2 id="检查一个变量是否为空-empty">检查一个变量是否为空 <code class="language-plaintext highlighter-rouge">empty</code></h2>
+<p>bool empty ( mixed $var )
+当一个变量并不存在，或者它的值等同于FALSE，那么它会被认为不存在。如果变量不存在的话，empty()并不会产生警告。</p>
+
+<h2 id="产生一个可存储的值的表示-serialize">产生一个可存储的值的表示 <code class="language-plaintext highlighter-rouge">serialize</code></h2>
+<p>string serialize ( mixed $value )
+返回字符串，此字符串包含了表示 value 的字节流，可以存储于任何地方</p>
+
+<h2 id="从已存储的表示中创建-php-的值-unserialize">从已存储的表示中创建 PHP 的值 <code class="language-plaintext highlighter-rouge">unserialize</code></h2>
+<p>mixed unserialize ( string $str )
+对单一的已序列化的变量进行操作，将其转换回 PHP 的值。</p>
+
+<h2 id="打印变量的相关信息-var_dump">打印变量的相关信息 <code class="language-plaintext highlighter-rouge">var_dump</code></h2>
+<p>void var_dump ( mixed $expression [, mixed $… ] )</p>
+
+<h2 id="打印关于变量的易于理解的信息-print_r">打印关于变量的易于理解的信息 <code class="language-plaintext highlighter-rouge">print_r</code></h2>
+<p>bool print_r ( mixed $expression [, bool $return ] )</p>
+
+<h2 id="输出或返回一个变量的字符串表示-var_export">输出或返回一个变量的字符串表示 <code class="language-plaintext highlighter-rouge">var_export</code></h2>
+<p>mixed var_export ( mixed $expression [, bool $return ] )</p>
+
+<h2 id="打开输出控制缓冲-ob_start">打开输出控制缓冲 <code class="language-plaintext highlighter-rouge">ob_start</code></h2>
+<p>bool ob_start ([ callback $output_callback [, int $chunk_size [, bool $erase ]]] )
+当输出缓冲激活后，脚本将不会输出内容（除http标头外），相反需要输出的内容被存储在内部缓冲区中。</p>
+
+<h2 id="返回输出缓冲区的内容-ob_get_contents">返回输出缓冲区的内容 <code class="language-plaintext highlighter-rouge">ob_get_contents</code></h2>
+<p>string ob_get_contents ( void )
+只是得到输出缓冲区的内容，但不清除它。
+ob_start();
+echo “Hello “;
+$out1 = ob_get_contents();
+echo “World”;
+$out2 = ob_get_contents();
+ob_end_clean();
+var_dump($out1, $out2);
+输出：
+	string(6) “Hello “
+string(11) “Hello World”</p>
+
+<h2 id="冲刷出送出输出缓冲区内容并关闭缓冲-ob_end_flush">冲刷出（送出）输出缓冲区内容并关闭缓冲 <code class="language-plaintext highlighter-rouge">ob_end_flush</code></h2>
+<p>bool ob_end_flush ( void )</p>
+
+<h2 id="清空擦除缓冲区并关闭输出缓冲-ob_end_clean">清空（擦除）缓冲区并关闭输出缓冲 <code class="language-plaintext highlighter-rouge">ob_end_clean</code></h2>
+<p>bool ob_end_clean ( void )</p>
+
+<h2 id="获取传递给函数的参数的个数-func_num_args">获取传递给函数的参数的个数 <code class="language-plaintext highlighter-rouge">func_num_args</code></h2>
+<p>int func_num_args ( void )</p>
+
+<h2 id="返回函数参数列表的某一项-func_get_arg">返回函数参数列表的某一项 <code class="language-plaintext highlighter-rouge">func_get_arg</code></h2>
+<p>mixed func_get_arg ( int $arg_num )</p>
+
+<h2 id="返回一个包含函数参数列表的数组-func_get_args">返回一个包含函数参数列表的数组 <code class="language-plaintext highlighter-rouge">func_get_args</code></h2>
+<p>array func_get_args ( void )</p>
+
+<h2 id="把第一个参数作为回调函数调用-call_user_func">把第一个参数作为回调函数调用 <code class="language-plaintext highlighter-rouge">call_user_func</code></h2>
+<p>mixed call_user_func ( callable $callback [, mixed $parameter [, mixed $… ]] )
+注意，传入call_user_func()的参数不能为引用传递。可以使用call_user_func_array来实现传引用。</p>
+
+<h2 id="调用回调函数并把一个数组参数作为回调函数的参数-call_user_func_array">调用回调函数，并把一个数组参数作为回调函数的参数 <code class="language-plaintext highlighter-rouge">call_user_func_array</code></h2>
+<p>mixed call_user_func_array ( callable $callback , array $param_arr )
+error_reporting(E_ALL);
+function increment(&amp;$var){
+    $var++;
+}</p>
+
+<p>$a = 0;
+call_user_func(‘increment’, $a);
+echo $a.”\n”;		//	Warning: Parameter 1 to increment() expected to be a reference, value given in …</p>
+
+<p>call_user_func_array(‘increment’, array(&amp;$a));
+echo $a.”\n”;		// 	1</p>
+
+<h2 id="创建一个lambda-style的匿名内部函数-create_function">创建一个lambda-style的匿名内部函数 <code class="language-plaintext highlighter-rouge">create_function</code></h2>
+<p>string create_function ( string $args , string $code )
+$newfunc = create_function(‘$a,$b’, ‘return “ln($a) + ln($b) = “ . log($a * $b);’);
+echo “New anonymous function: $newfunc\n”;
+echo $newfunc(2, M_E) . “\n”;
+输出：
+New anonymous function: lambda_1 
+ln(2) + ln(2.718281828459) = 1.6931471805599</p>
+
+<h2 id="返回类或接口所实现的接口列表-class_implements">返回类或接口所实现的接口列表 <code class="language-plaintext highlighter-rouge">class_implements</code></h2>
+<p>array class_implements ( mixed $class [, bool $autoload = true ] )</p>
+
+<h2 id="尝试加载未定义的类-__autoload">尝试加载未定义的类 <code class="language-plaintext highlighter-rouge">__autoload</code></h2>
+<p>void __autoload ( string $class )</p>
+
+<h2 id="返回对象或类的父类名-get_parent_class">返回对象或类的父类名 <code class="language-plaintext highlighter-rouge">get_parent_class</code></h2>
+<p>string get_parent_class ([ mixed $obj ] )</p>
+
+<h2 id="返回文件路径的信息-pathinfo">返回文件路径的信息 <code class="language-plaintext highlighter-rouge">pathinfo</code></h2>
+<p>mixed pathinfo ( string $path [, int $options = PATHINFO_DIRNAME | PATHINFO_BASENAME | PATHINFO_EXTENSION | PATHINFO_FILENAME ] )
+$path_parts = pathinfo(‘/www/htdocs/inc/lib.inc.php’);
+echo $path_parts[‘dirname’], “\n”;
+echo $path_parts[‘basename’], “\n”;
+echo $path_parts[‘extension’], “\n”;
+echo $path_parts[‘filename’], “\n”; // since PHP 5.2.0
+输出：
+	/www/htdocs/inc
+lib.inc.php
+php
+lib.inc</p>
+
+<h2 id="检测变量是否为资源类型-is_resource">检测变量是否为资源类型 <code class="language-plaintext highlighter-rouge">is_resource</code></h2>
+<p>bool is_resource ( mixed $var )</p>
+
+<h2 id="检查类是否已定义-class_exists">检查类是否已定义 <code class="language-plaintext highlighter-rouge">class_exists</code></h2>
+<p>bool class_exists ( string $class_name [, bool $autoload = true ] )</p>
+
+<h2 id="返回由已定义类的名字所组成的数组-get_declared_classes">返回由已定义类的名字所组成的数组 <code class="language-plaintext highlighter-rouge">get_declared_classes</code></h2>
+<p>array get_declared_classes ( void )</p>
+
+<h2 id="返回所有已定义的函数-get_defined_functions">返回所有已定义的函数 <code class="language-plaintext highlighter-rouge">get_defined_functions</code></h2>
+<p>array get_defined_functions ( void )</p>
+
+<h2 id="设置cookie-setcookie">设置Cookie <code class="language-plaintext highlighter-rouge">setcookie</code></h2>
+<p>bool setcookie ( string $name [, string $value = “” [, int $expire = 0 [, string $path = “” [, string $domain = “” [, bool $secure = false [, bool $httponly = false ]]]]]] )</p>
+
+<h2 id="生成-url-encode-之后的请求字符串-http_build_query">生成 URL-encode 之后的请求字符串 <code class="language-plaintext highlighter-rouge">http_build_query</code></h2>
+<p>string http_build_query ( mixed $query_data [, string $numeric_prefix [, string $arg_separator [, int $enc_type = PHP_QUERY_RFC1738 ]]] )</p>
+
+<h2 id="将整个文件读入一个字符串-file_get_contents">将整个文件读入一个字符串 <code class="language-plaintext highlighter-rouge">file_get_contents</code></h2>
+<p>string file_get_contents ( string $filename [, bool $use_include_path = false [, resource $context [, int $offset = -1 [, int $maxlen ]]]] )
+$homepage = file_get_contents(‘http://www.example.com/’);
+$file = file_get_contents(‘./people.txt’, FILE_USE_INCLUDE_PATH);</p>
+
+<h2 id="读取文件可安全用于二进制文件-fread">读取文件（可安全用于二进制文件） <code class="language-plaintext highlighter-rouge">fread</code></h2>
+<p>string fread ( resource $handle , int $length )
+从文件指针 handle 读取最多 length 个字节。</p>
+
+<h2 id="获取或者设置http状态码-http_response_code">获取或者设置HTTP状态码 <code class="language-plaintext highlighter-rouge">http_response_code</code></h2>
+<p>int http_response_code ([ int $response_code ] )
+&lt;?php
+http_response_code(404);
+?&gt;</p>
+
+<h2 id="计算字符串的-md5-散列值-md5">计算字符串的 MD5 散列值 <code class="language-plaintext highlighter-rouge">md5</code></h2>
+<p>string md5 ( string $str [, bool $raw_output = false ] )</p>
+
+<h2 id="获取全部-http-请求头信息-getallheaders">获取全部 HTTP 请求头信息 <code class="language-plaintext highlighter-rouge">getallheaders</code></h2>
+<p>array getallheaders ( void )</p>
+
+<h2 id="刷新输出缓冲-flush">刷新输出缓冲 <code class="language-plaintext highlighter-rouge">flush</code></h2>
+<p>void flush ( void )
+flush() 函数不会对服务器或客户端浏览器的缓存模式产生影响。因此，必须同时使用 ob_flush() 和flush() 函数来刷新输出缓冲。</p>
+
+<h2 id="获取一个环境变量的值-getenv">获取一个环境变量的值 <code class="language-plaintext highlighter-rouge">getenv</code></h2>
+<p>string getenv ( string $varname )
+$ip = getenv(‘REMOTE_ADDR’);</p>
+
+<h2 id="设置环境变量的值-putenv">设置环境变量的值 <code class="language-plaintext highlighter-rouge">putenv</code></h2>
+<p>bool putenv ( string $setting )
+仅存活于当前请求期间。 在请求结束时环境会恢复到初始状态。</p>
+
+<h2 id="获取浏览器具有的功能-get_browser">获取浏览器具有的功能 <code class="language-plaintext highlighter-rouge">get_browser</code></h2>
+<p>mixed get_browser ([ string $user_agent [, bool $return_array = false ]] )</p>
+
+<h2 id="检查特定类型的某个变量是否存在-filter_has_var">检查特定类型的某个变量是否存在 <code class="language-plaintext highlighter-rouge">filter_has_var</code></h2>
+<p>bool filter_has_var ( int $type , string $variable_name )
+可用类型：INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER, or INPUT_ENV</p>
+
+<h2 id="通过名称获取特定的外部变量并且可以通过过滤器处理它-filter_input">通过名称获取特定的外部变量，并且可以通过过滤器处理它 <code class="language-plaintext highlighter-rouge">filter_input</code></h2>
+<p>mixed filter_input ( int $type , string $variable_name [, int $filter = FILTER_DEFAULT [, mixed $options ]] )</p>
+
+<h2 id="将字符串转换为html实体-htmlspecialchars">将字符串转换为HTML实体 <code class="language-plaintext highlighter-rouge">htmlspecialchars</code></h2>
+<p>string htmlspecialchars ( string $string [, int $flags = ENT_COMPAT | ENT_HTML401 [, string $encoding = ini_get(“default_charset”) [, bool $double_encode = true ]]] )</p>
+
+<h2 id="将上传的文件移动到新位置-move_uploaded_file">将上传的文件移动到新位置 <code class="language-plaintext highlighter-rouge">move_uploaded_file</code></h2>
+<p>bool move_uploaded_file ( string $filename , string $destination )</p>
+
+<h2 id="生成一个唯一id-uniqid">生成一个唯一ID <code class="language-plaintext highlighter-rouge">uniqid</code></h2>
+<p>string uniqid ([ string $prefix = “” [, bool $more_entropy = false ]] )
+获取一个带前缀、基于当前时间微秒数的唯一ID</p>
+
+<h2 id="启动新会话或者重用现有会话-session_start">启动新会话或者重用现有会话 <code class="language-plaintext highlighter-rouge">session_start</code></h2>
+<p>bool session_start ([ array $options = [] ] )</p>
+
+<h2 id="读取设置会话名称-session_name">读取/设置会话名称 <code class="language-plaintext highlighter-rouge">session_name</code></h2>
+<p>string session_name ([ string $name ] )</p>
+
+<h2 id="读取设置当前会话的保存路径-session_save_path">读取/设置当前会话的保存路径 <code class="language-plaintext highlighter-rouge">session_save_path</code></h2>
+<p>string session_save_path ([ string $path ] )</p>
+
+<h2 id="添加url重写器的值-output_add_rewrite_var">添加URL重写器的值 <code class="language-plaintext highlighter-rouge">output_add_rewrite_var</code></h2>
+<p>bool output_add_rewrite_var ( string $name , string $value )
+绝对URL(http://example.com/..)不能被重写。
+output_add_rewrite_var(‘var’, ‘value’);
+echo ‘<a href="file.php">link</a>
+<a href="http://example.com">link2</a>’;
+echo ‘&lt;form action="script.php" method="post"&gt;
+<input type="text" name="var2" />
+&lt;/form&gt;’;
+输出：
+	<a href="file.php?var=value">link</a>
+<a href="http://example.com">link2</a></p>
+
+<form action="script.php" method="post">
+<input type="hidden" name="var" value="value" />
+<input type="text" name="var2" />
+</form>
+
+<h2 id="设置用户自定义会话存储函数-session_set_save_handler">设置用户自定义会话存储函数 <code class="language-plaintext highlighter-rouge">session_set_save_handler</code></h2>
+<p>bool session_set_save_handler ( SessionHandlerInterface $sessionhandler [, bool $register_shutdown = true ] )</p>
+
+<h2 id="从字符串中去除-html-和-php-标记-strip_tags">从字符串中去除 HTML 和 PHP 标记 <code class="language-plaintext highlighter-rouge">strip_tags</code></h2>
+<p>string strip_tags ( string $str [, string $allowable_tags ] )
+$text = ‘&lt;p&gt;Test paragraph.&lt;/p&gt;<!-- Comment --> <a href="#fragment">Other text</a>’;
+echo strip_tags($text);
+echo “\n”;
+echo strip_tags($text, ‘&lt;p&gt;<a>’);		// 允许 &lt;p&gt; 和 <a>
+输出：
+Test paragraph. Other text</a></a></p>
+<p>Test paragraph.</p>
+<p><a href="#fragment">Other text</a></p>
+
+<h2 id="给一个流添加一个过滤器-stream_filter_append">给一个流添加一个过滤器 <code class="language-plaintext highlighter-rouge">stream_filter_append</code></h2>
+<p>resource stream_filter_append ( resource $stream , string $filtername [, int $read_write [, mixed $params ]] )</p>
+
+<h2 id="将一个xml文件解析为对象-simplexml_load_file">将一个XML文件解析为对象 <code class="language-plaintext highlighter-rouge">simplexml_load_file</code></h2>
+<p>SimpleXMLElement simplexml_load_file ( string $filename [, string $class_name = “SimpleXMLElement” [, int $options = 0 [, string $ns = “” [, bool $is_prefix = false ]]]] )</p>
+
+<h2 id="创建资源流上下文-stream_context_create">创建资源流上下文 <code class="language-plaintext highlighter-rouge">stream_context_create</code></h2>
+<p>resource stream_context_create ([ array $options [, array $params ]] )
+$opts = array(
+  ‘http’=&gt;array(
+    ‘method’=&gt;”GET”,
+    ‘header’=&gt;”Accept-language: en\r\n” .
+              “Cookie: foo=bar\r\n”
+  )
+);</p>
+
+<p>$context = stream_context_create($opts);
+$fp = fopen(‘http://www.example.com’, ‘r’, false, $context);
+fpassthru($fp);
+fclose($fp);</p>
+
+<h2 id="输出文件指针处的所有剩余数据-fpassthru">输出文件指针处的所有剩余数据 <code class="language-plaintext highlighter-rouge">fpassthru</code></h2>
+<p>int fpassthru ( resource $handle )</p>
+
+<h2 id="初始化一个curl会话-curl_init">初始化一个cURL会话 <code class="language-plaintext highlighter-rouge">curl_init</code></h2>
+<p>resource curl_init ([ string $url = NULL ] )</p>
+
+<h2 id="设置一个curl传输选项-curl_setopt">设置一个cURL传输选项 <code class="language-plaintext highlighter-rouge">curl_setopt</code></h2>
+<p>bool curl_setopt ( resource $ch , int $option , mixed $value )</p>
+
+<h2 id="执行一个curl会话-curl_exec">执行一个cURL会话 <code class="language-plaintext highlighter-rouge">curl_exec</code></h2>
+<p>mixed curl_exec ( resource $ch )</p>
+
+<h2 id="关闭一个curl会话-curl_close">关闭一个cURL会话 <code class="language-plaintext highlighter-rouge">curl_close</code></h2>
+<p>void curl_close ( resource $ch )
+$ch = curl_init();	// 创建一个新cURL资源</p>
+
+<p>// 设置URL和相应的选项
+curl_setopt($ch, CURLOPT_URL, “http://www.example.com/”);
+curl_setopt($ch, CURLOPT_HEADER, 0);</p>
+
+<p>curl_exec($ch);	// 抓取URL并把它传递给浏览器
+curl_close($ch);	// 关闭cURL资源，并且释放系统资源</p>
+
+<h2 id="设置一个流的超时时间-stream_set_timeout">设置一个流的超时时间 <code class="language-plaintext highlighter-rouge">stream_set_timeout</code></h2>
+<p>bool stream_set_timeout ( resource $stream , int $seconds [, int $microseconds = 0 ] )</p>
+
+<h2 id="更新现有的会话id-session_regenerate_id">更新现有的会话ID <code class="language-plaintext highlighter-rouge">session_regenerate_id</code></h2>
+<p>bool session_regenerate_id ([ bool $delete_old_session = false ] )</p>
+
+<h2 id="获取一个php配置-ini_get">获取一个php配置 <code class="language-plaintext highlighter-rouge">ini_get</code></h2>
+<p>string ini_get ( string $varname )</p>
+
+<h2 id="获取所有php配置-ini_get_all">获取所有php配置 <code class="language-plaintext highlighter-rouge">ini_get_all</code></h2>
+<p>array ini_get_all ([ string $extension [, bool $details = true ]] )</p>
+
+<h2 id="设置php报错级别-error_reporting">设置php报错级别 <code class="language-plaintext highlighter-rouge">error_reporting</code></h2>
+<p>int error_reporting ([ int $level ] )</p>
+
+<h2 id="设置一个用户自定义的错误处理函数-set_error_handler">设置一个用户自定义的错误处理函数 <code class="language-plaintext highlighter-rouge">set_error_handler</code></h2>
+<p>mixed set_error_handler ( callable $error_handler [, int $error_types = E_ALL | E_STRICT ] )</p>
+
+:ET

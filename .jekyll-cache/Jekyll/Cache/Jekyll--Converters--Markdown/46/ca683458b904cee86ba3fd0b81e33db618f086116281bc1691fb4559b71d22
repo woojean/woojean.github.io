@@ -1,0 +1,340 @@
+I"Yh<ul id="markdown-toc">
+  <li><a href="#背景" id="markdown-toc-背景">背景</a>    <ul>
+      <li><a href="#mns和ons的对比" id="markdown-toc-mns和ons的对比">MNS和ONS的对比</a></li>
+      <li><a href="#mns官方文档" id="markdown-toc-mns官方文档">MNS官方文档</a></li>
+    </ul>
+  </li>
+  <li><a href="#实践准备" id="markdown-toc-实践准备">实践准备</a>    <ul>
+      <li><a href="#设置专门用于队列操作的ak" id="markdown-toc-设置专门用于队列操作的ak">设置专门用于队列操作的AK</a></li>
+      <li><a href="#获取mns访问域名" id="markdown-toc-获取mns访问域名">获取MNS访问域名</a></li>
+      <li><a href="#下载sdk" id="markdown-toc-下载sdk">下载SDK</a></li>
+      <li><a href="#demo代码文件结构" id="markdown-toc-demo代码文件结构">Demo代码文件结构</a></li>
+    </ul>
+  </li>
+  <li><a href="#队列操作" id="markdown-toc-队列操作">队列操作</a>    <ul>
+      <li><a href="#创建队列" id="markdown-toc-创建队列">创建队列</a></li>
+      <li><a href="#发送消息" id="markdown-toc-发送消息">发送消息</a></li>
+      <li><a href="#接收消息" id="markdown-toc-接收消息">接收消息</a></li>
+    </ul>
+  </li>
+  <li><a href="#主题操作" id="markdown-toc-主题操作">主题操作</a>    <ul>
+      <li><a href="#创建主题" id="markdown-toc-创建主题">创建主题</a></li>
+      <li><a href="#创建回调" id="markdown-toc-创建回调">创建回调</a></li>
+      <li><a href="#创建订阅" id="markdown-toc-创建订阅">创建订阅</a></li>
+      <li><a href="#发布消息" id="markdown-toc-发布消息">发布消息</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="背景">背景</h1>
+<h2 id="mns和ons的对比">MNS和ONS的对比</h2>
+<p>阿里云提供2种队列服务，在命名上有些混乱，这里先理清一下关系。</p>
+<ul>
+  <li>
+    <p>消息服务
+文档中描述为消息服务（Message Service），但是产品简称<strong>MNS</strong>（而不是MS），之前又称MQS，文档：<a href="https://help.aliyun.com/product/27412.html">https://help.aliyun.com/product/27412.html</a></p>
+  </li>
+  <li>
+    <p>消息队列
+文档中描述为消息队列（Message Queue，简称MQ），但是产品简称为ONS，文档<a href="https://www.aliyun.com/product/ons/">https://www.aliyun.com/product/ons/</a></p>
+  </li>
+</ul>
+
+<p>两个产品的对比：<a href="https://help.aliyun.com/document_detail/27437.html?spm=5176.bbsr259814.0.0.a77IO1">消息服务MNS和消息队列ONS产品对比</a></p>
+
+<p><strong>主要区别：</strong></p>
+<ul>
+  <li>MNS仅支持HTTP协议，ONS支持HTTP、TCP、MQTT等多种协议；</li>
+  <li>MNS不支持定时消息，ONS支持；</li>
+  <li>MNS支持批量消息操作，ONS不支持；</li>
+  <li>MNS支持消息优先级，ONS不支持；</li>
+  <li>MNS可靠性99.99999999%，ONS	99.99%</li>
+</ul>
+
+<p>个人认为：ONS的队列引擎是阿里基于MQTT协议的一种实现，即RocketMQ，主要是作为一种开源产品提供出来，如果自己搭建队列服务，可以考虑使用。当然了，如果是自己搭建服务，倒不如直接用RabbitMQ了。
+而MNS更像是专门为了对外提供商业化的MQ服务而开发的商业化产品（从它只支持HTTP协议可以看出来），所以如果想直接拿来主义，避免自己维护队列服务器的烦恼，显然MNS是更加合适的选择。</p>
+
+<p>阿里云MNS总共包含两种功能模型：队列模型（pull）和主题订阅模型（push）。</p>
+
+<h2 id="mns官方文档">MNS官方文档</h2>
+<p><a href="https://help.aliyun.com/product/27412.html">官方文档</a></p>
+
+<h1 id="实践准备">实践准备</h1>
+<h2 id="设置专门用于队列操作的ak">设置专门用于队列操作的AK</h2>
+<p>Access Key管理 -&gt; 创建Access Key
+这里没有使用RAM子账号的方式，而是直接使用当前账户创建了一组新的Access Key ID和Access Key Secret。</p>
+
+<h2 id="获取mns访问域名">获取MNS访问域名</h2>
+<p>消息服务管理控制台 -&gt; 队列（主题） -&gt; 获取Endpoint，得到消费服务的公网Endpoint：
+http(s)://1460488513831433.mns.cn-shanghai.aliyuncs.com/</p>
+
+<h2 id="下载sdk">下载SDK</h2>
+<p>下载MNS PHP SDK，略。</p>
+
+<h2 id="demo代码文件结构">Demo代码文件结构</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alymns
+  -- php+sdk
+  -- Queue
+    -- getMessage.php
+    -- sendMessage.php
+  -- Topic
+    -- Publish.php
+    -- Subscribe.php
+</code></pre></div></div>
+<p>此外还有处理Topic回调的代码。</p>
+
+<h1 id="队列操作">队列操作</h1>
+<h2 id="创建队列">创建队列</h2>
+<p>消息服务管理控制台 -&gt; 队列 -&gt; 创建队列：</p>
+<ul>
+  <li>队列名称：woojean-queue
+队列的QueueName属性，同一账号同一Region下， 队列名称不能重名;必须以英文字母或者数字开头，剩余名称可以是英文，数字，横划线，长度不超过256个字符。</li>
+  <li>当前地域：华东2</li>
+  <li>消息接收长轮询等待时间：30s 
+队列的PollingWaitSeconds属性， 设为0时关闭长轮询；当不为0时，长轮询模式开启，此时一个消息消费请求只会在取到有效消息或长轮询超时时才返回响应；单位秒，有效值范围为0-30秒。</li>
+  <li>取出消息隐藏时长：300s
+队列的VisibilityTimeout属性，消息从本队列中取出后会被从Active可取状态变成Inactive隐藏状态后，本属性指定了<strong>消息隐藏持续时间</strong>，这个时间一到，消息会从隐藏恢复成Active可取状态；单位为秒，有效值范围1-43200秒，也即1秒到12小时。</li>
+  <li>消息最大长度：2048
+队列的MaxMessageSize属性， 限定允许发送到该队列的消息体的最大长度；单位为byte， 有效值范围为1024-65536 也即1K到64K。</li>
+  <li>消息存活时间：1296000
+队列的MessageRetentionPeriod属性， 消息在本队列中最长的存活时间，从发送到该队列开始经过此参数指定的时间后，<strong>不论消息是否被取出过都将被删除</strong>；单位为秒，有效值范围60-1296000秒，也即1分钟到15天。</li>
+  <li>消息延时：0
+队列的DelaySeconds属性，发送消息到本队列的所有消息默认将以本参数<strong>指定的秒数延后可被消费</strong>；单位为秒，有效值范围为0-604800秒，也即0到 7天。</li>
+</ul>
+
+<p>也可以通过SDK代码创建、删除队列，但是不如通过控制台创建直观。</p>
+
+<h2 id="发送消息">发送消息</h2>
+<p>sendMessage.php</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// 引用MNS SDK</span>
+<span class="nv">$root</span> <span class="o">=</span> <span class="nb">dirname</span><span class="p">(</span><span class="nb">dirname</span><span class="p">(</span><span class="k">__FILE__</span><span class="p">));</span>
+<span class="k">require_once</span><span class="p">(</span><span class="nv">$root</span> <span class="mf">.</span> <span class="s1">'/php_sdk/mns-autoloader.php'</span><span class="p">);</span>
+
+<span class="kn">use</span> <span class="nc">AliyunMNS\Client</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">AliyunMNS\Exception\MnsException</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">AliyunMNS\Requests\SendMessageRequest</span><span class="p">;</span>
+
+
+<span class="c1">// 新建队列操作客户端</span>
+<span class="nv">$endPoint</span> <span class="o">=</span> <span class="s1">'http://1460488513831433.mns.cn-shanghai.aliyuncs.com/'</span><span class="p">;</span>
+<span class="nv">$accessId</span> <span class="o">=</span> <span class="s1">'****'</span><span class="p">;</span>
+<span class="nv">$accessKey</span> <span class="o">=</span> <span class="s1">'****'</span><span class="p">;</span>
+<span class="nv">$queueName</span> <span class="o">=</span> <span class="s1">'woojean-queue'</span><span class="p">;</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Client</span><span class="p">(</span><span class="nv">$endPoint</span><span class="p">,</span> <span class="nv">$accessId</span><span class="p">,</span> <span class="nv">$accessKey</span><span class="p">);</span>
+
+<span class="c1">// 获取队列的引用</span>
+<span class="nv">$queue</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="nf">getQueueRef</span><span class="p">(</span><span class="nv">$queueName</span><span class="p">);</span>
+
+<span class="c1">// 创建待发送的消息</span>
+<span class="nv">$messageBody</span> <span class="o">=</span> <span class="s2">"Hello World!"</span><span class="p">;</span>
+
+<span class="c1">// 发送消息</span>
+<span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SendMessageRequest</span><span class="p">(</span><span class="nv">$messageBody</span><span class="p">);</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$res</span> <span class="o">=</span> <span class="nv">$queue</span><span class="o">-&gt;</span><span class="nf">sendMessage</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">"MessageSent! </span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nc">MnsException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"SendMessage Failed: "</span> <span class="mf">.</span> <span class="nv">$e</span><span class="p">;</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="接收消息">接收消息</h2>
+<p>getMessage.php</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// 引用MNS SDK</span>
+<span class="nv">$root</span> <span class="o">=</span> <span class="nb">dirname</span><span class="p">(</span><span class="nb">dirname</span><span class="p">(</span><span class="k">__FILE__</span><span class="p">));</span>
+<span class="k">require_once</span><span class="p">(</span><span class="nv">$root</span> <span class="mf">.</span> <span class="s1">'/php_sdk/mns-autoloader.php'</span><span class="p">);</span>
+
+<span class="kn">use</span> <span class="nc">AliyunMNS\Client</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">AliyunMNS\Exception\MnsException</span><span class="p">;</span>
+
+
+<span class="c1">// 新建队列操作客户端</span>
+<span class="nv">$endPoint</span> <span class="o">=</span> <span class="s1">'http://1460488513831433.mns.cn-shanghai.aliyuncs.com/'</span><span class="p">;</span>
+<span class="nv">$accessId</span> <span class="o">=</span> <span class="s1">'****'</span><span class="p">;</span>
+<span class="nv">$accessKey</span> <span class="o">=</span> <span class="s1">'****'</span><span class="p">;</span>
+<span class="nv">$queueName</span> <span class="o">=</span> <span class="s1">'woojean-queue'</span><span class="p">;</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Client</span><span class="p">(</span><span class="nv">$endPoint</span><span class="p">,</span> <span class="nv">$accessId</span><span class="p">,</span> <span class="nv">$accessKey</span><span class="p">);</span>
+
+<span class="c1">// 获取队列的引用</span>
+<span class="nv">$queue</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="nf">getQueueRef</span><span class="p">(</span><span class="nv">$queueName</span><span class="p">);</span>
+
+<span class="c1">// 接收消息</span>
+<span class="nv">$receiptHandle</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="c1">// when receiving messages, it's always a good practice to set the waitSeconds to be 30.</span>
+        <span class="c1">// it means to send one http-long-polling request which lasts 30 seconds at most.</span>
+        <span class="nv">$res</span> <span class="o">=</span> <span class="nv">$queue</span><span class="o">-&gt;</span><span class="nf">receiveMessage</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+
+        <span class="k">echo</span> <span class="s2">"ReceiveMessage Succeed! </span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+        <span class="nv">$messageBody</span> <span class="o">=</span> <span class="nv">$res</span><span class="o">-&gt;</span><span class="nf">getMessageBody</span><span class="p">();</span>
+        <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$messageBody</span><span class="p">);</span>
+
+        <span class="c1">// 删除消息</span>
+        <span class="nv">$receiptHandle</span> <span class="o">=</span> <span class="nv">$res</span><span class="o">-&gt;</span><span class="nf">getReceiptHandle</span><span class="p">();</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="nv">$res</span> <span class="o">=</span> <span class="nv">$queue</span><span class="o">-&gt;</span><span class="nf">deleteMessage</span><span class="p">(</span><span class="nv">$receiptHandle</span><span class="p">);</span>
+            <span class="k">echo</span> <span class="s2">"DeleteMessage Succeed! </span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nc">MnsException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">echo</span> <span class="s2">"DeleteMessage Failed: "</span> <span class="mf">.</span> <span class="nv">$e</span><span class="p">;</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nc">MnsException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="cm">/*
+         * ReceiveMessage Failed:
+         * Code: 404 Message: Message not exist.
+         * MnsErrorCode: MessageNotExist
+         * RequestId: 593F70CF19E20A932F4CC096
+         * HostId: http://1460488513831433.mns.cn-shanghai.aliyuncs.com
+         * */</span>
+        <span class="k">echo</span> <span class="s2">"ReceiveMessage Failed: "</span> <span class="mf">.</span> <span class="nv">$e</span><span class="p">;</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="主题操作">主题操作</h1>
+<h2 id="创建主题">创建主题</h2>
+<p>消息服务管理控制台 -&gt; 队列 -&gt; 创建队列：</p>
+<ul>
+  <li>主题名称：woojean-topic
+主题的TopicName属性，同一账号同一Region下，主题名称不能重复，必须以英文字母开头，剩余名称可以是英文，数字，横划线，长度不超过256个字符</li>
+  <li>当前地域：华东 2</li>
+  <li>消息最大长度(Byte) ：2048
+主题的MaximumMessageSize属性，允许发送到该主题的消息体的最大长度，单位为byte，有效值范围为：1024(1KB)-65536(64KB)，默认值为65536。</li>
+</ul>
+
+<p>点击对应主题的“获取地址”按钮，获取主题的地址：
+http://1460488513831433.mns.cn-shanghai.aliyuncs.com/topics/woojean-topic</p>
+
+<h2 id="创建回调">创建回调</h2>
+<p>回调地址需要外网可以访问，临时在已有的Phalcon项目中添加了一个Post入口</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="kn">namespace</span> <span class="nn">Controllers</span><span class="p">;</span>
+
+<span class="cd">/**
+ * @RoutePrefix("/test")
+ */</span>
+<span class="kd">class</span> <span class="nc">TestController</span> <span class="kd">extends</span> <span class="nc">BaseController</span>
+<span class="p">{</span>
+    <span class="cd">/**
+     * @description
+     * @Post("/topic")
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">topicAction</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$request</span> <span class="o">=</span> <span class="err">\</span><span class="no">Phalcon\DI</span><span class="o">::</span><span class="nf">getDefault</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'request'</span><span class="p">);</span>
+        <span class="nv">$rawBody</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="nf">getRawBody</span><span class="p">();</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">log</span><span class="o">-&gt;</span><span class="nf">info</span><span class="p">(</span><span class="nv">$rawBody</span><span class="p">);</span>
+
+        <span class="nb">http_response_code</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>  <span class="c1">// 需要返回200告知成功</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="创建订阅">创建订阅</h2>
+<p>Subscribe.php</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// 引用MNS SDK</span>
+<span class="nv">$root</span> <span class="o">=</span> <span class="nb">dirname</span><span class="p">(</span><span class="nb">dirname</span><span class="p">(</span><span class="k">__FILE__</span><span class="p">));</span>
+<span class="k">require_once</span><span class="p">(</span><span class="nv">$root</span> <span class="mf">.</span> <span class="s1">'/php_sdk/mns-autoloader.php'</span><span class="p">);</span>
+
+<span class="kn">use</span> <span class="nc">AliyunMNS\Client</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">AliyunMNS\Exception\MnsException</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">AliyunMNS\Model\SubscriptionAttributes</span><span class="p">;</span>
+
+<span class="c1">// 新建队列操作客户端</span>
+<span class="nv">$endPoint</span> <span class="o">=</span> <span class="s1">'http://1460488513831433.mns.cn-shanghai.aliyuncs.com/'</span><span class="p">;</span>
+<span class="nv">$accessId</span> <span class="o">=</span> <span class="s1">'****'</span><span class="p">;</span>
+<span class="nv">$accessKey</span> <span class="o">=</span> <span class="s1">'****'</span><span class="p">;</span>
+<span class="nv">$topicName</span> <span class="o">=</span> <span class="s1">'woojean-topic'</span><span class="p">;</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Client</span><span class="p">(</span><span class="nv">$endPoint</span><span class="p">,</span> <span class="nv">$accessId</span><span class="p">,</span> <span class="nv">$accessKey</span><span class="p">);</span>
+
+<span class="k">try</span>
+<span class="p">{</span>
+    <span class="nv">$subscriptionName</span> <span class="o">=</span> <span class="s2">"woojean-subscription"</span><span class="p">;</span>
+    <span class="nv">$endPoint</span> <span class="o">=</span> <span class="s1">'http://sms.dongshier.com/test/topic'</span><span class="p">;</span>
+    <span class="nv">$attributes</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SubscriptionAttributes</span><span class="p">(</span><span class="nv">$subscriptionName</span><span class="p">,</span> <span class="nv">$endPoint</span><span class="p">,</span><span class="s1">'BACKOFF_RETRY'</span><span class="p">,</span><span class="s1">'SIMPLIFIED'</span><span class="p">);</span>
+    <span class="nv">$topic</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="nf">getTopicRef</span><span class="p">(</span><span class="nv">$topicName</span><span class="p">);</span>
+    <span class="nv">$topic</span><span class="o">-&gt;</span><span class="nf">subscribe</span><span class="p">(</span><span class="nv">$attributes</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">"Subscribed! </span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="nc">MnsException</span> <span class="nv">$e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"SubscribeFailed: "</span> <span class="mf">.</span> <span class="nv">$e</span><span class="p">;</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="发布消息">发布消息</h2>
+<p>Publish.php</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// 引用MNS SDK</span>
+<span class="nv">$root</span> <span class="o">=</span> <span class="nb">dirname</span><span class="p">(</span><span class="nb">dirname</span><span class="p">(</span><span class="k">__FILE__</span><span class="p">));</span>
+<span class="k">require_once</span><span class="p">(</span><span class="nv">$root</span> <span class="mf">.</span> <span class="s1">'/php_sdk/mns-autoloader.php'</span><span class="p">);</span>
+
+<span class="kn">use</span> <span class="nc">AliyunMNS\Client</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">AliyunMNS\Exception\MnsException</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">AliyunMNS\Requests\PublishMessageRequest</span><span class="p">;</span>
+
+<span class="c1">// 新建队列操作客户端</span>
+<span class="nv">$endPoint</span> <span class="o">=</span> <span class="s1">'http://1460488513831433.mns.cn-shanghai.aliyuncs.com/'</span><span class="p">;</span>
+<span class="nv">$accessId</span> <span class="o">=</span> <span class="s1">'****'</span><span class="p">;</span>
+<span class="nv">$accessKey</span> <span class="o">=</span> <span class="s1">'****'</span><span class="p">;</span>
+<span class="nv">$topicName</span> <span class="o">=</span> <span class="s1">'woojean-topic'</span><span class="p">;</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Client</span><span class="p">(</span><span class="nv">$endPoint</span><span class="p">,</span> <span class="nv">$accessId</span><span class="p">,</span> <span class="nv">$accessKey</span><span class="p">);</span>
+
+<span class="k">try</span>
+<span class="p">{</span>
+    <span class="nv">$messageBody</span> <span class="o">=</span> <span class="s2">"Hello World!"</span><span class="p">;</span>
+    <span class="nv">$request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PublishMessageRequest</span><span class="p">(</span><span class="nv">$messageBody</span><span class="p">);</span>
+    <span class="nv">$topic</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="nf">getTopicRef</span><span class="p">(</span><span class="nv">$topicName</span><span class="p">);</span>
+    <span class="nv">$res</span> <span class="o">=</span> <span class="nv">$topic</span><span class="o">-&gt;</span><span class="nf">publishMessage</span><span class="p">(</span><span class="nv">$request</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">"MessagePublished! </span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+    <span class="cm">/*
+    $topic-&gt;unsubscribe($subscriptionName);
+    echo "Unsubscribe Succeed! \n";
+    */</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="nc">MnsException</span> <span class="nv">$e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"PublishMessage Failed: "</span> <span class="mf">.</span> <span class="nv">$e</span><span class="p">;</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><a href="https://help.aliyun.com/document_detail/27482.html?spm=5176.doc27496.6.712.6Pyve8">NotifyContentFormat配置的说明文档</a></p>
+
+<p>查看日志，收到如下请求：
+XML格式：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>info | 13130 | 1497335254.557 | 2017:06:13 06:27:34 | /test/topic
+info | 13130 | 1497335254.557 | 2017:06:13 06:27:34 | {"_url":"\/test\/topic"}
+info | 13130 | 1497335254.557 | 2017:06:13 06:27:34 | &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Notification xmlns="http://mns.aliyuncs.com/doc/v1/"&gt;
+  &lt;TopicOwner&gt;1460488513831433&lt;/TopicOwner&gt;
+  &lt;TopicName&gt;woojean-topic&lt;/TopicName&gt;
+  &lt;Subscriber&gt;1460488513831433&lt;/Subscriber&gt;
+  &lt;SubscriptionName&gt;woojean-subscription&lt;/SubscriptionName&gt;
+  &lt;MessageId&gt;CB1A8E7EFFA19158-1-15CA022CE05-200000008&lt;/MessageId&gt;
+  &lt;MessageMD5&gt;ED076287532E86365E841E92BFC50D8C&lt;/MessageMD5&gt;
+  &lt;Message&gt;Hello World!&lt;/Message&gt;
+  &lt;PublishTime&gt;1497335254533&lt;/PublishTime&gt;
+  &lt;SigningCertURL&gt;https://mnstest.oss-cn-hangzhou.aliyuncs.com/x509_public_certificate.pem&lt;/SigningCertURL&gt;
+&lt;/Notification&gt;
+*/
+</code></pre></div></div>
+
+<p>SIMPLIFIED格式：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>info | 23318 | 1497335910.649 | 2017:06:13 06:38:30 | /test/topic
+info | 23318 | 1497335910.649 | 2017:06:13 06:38:30 | {"_url":"\/test\/topic"}
+info | 23318 | 1497335910.649 | 2017:06:13 06:38:30 | Hello World!
+</code></pre></div></div>
+:ET

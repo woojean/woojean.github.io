@@ -1,0 +1,508 @@
+I"E�<ul id="markdown-toc">
+  <li><a href="#求二进制数中1的个数" id="markdown-toc-求二进制数中1的个数">求二进制数中1的个数。</a></li>
+  <li><a href="#寻找发帖水王由水王id所发的帖子数超过了总帖子数的一半" id="markdown-toc-寻找发帖水王由水王id所发的帖子数超过了总帖子数的一半">寻找发帖“水王”：由水王ID所发的帖子数超过了总帖子数的一半。</a></li>
+  <li><a href="#寻找最大的k个数" id="markdown-toc-寻找最大的k个数">寻找最大的K个数</a></li>
+  <li><a href="#求最大公约数考虑两个正整数都很大的情况" id="markdown-toc-求最大公约数考虑两个正整数都很大的情况">求最大公约数。考虑两个正整数都很大的情况。</a></li>
+  <li><a href="#寻找数组中的最大值和最小值" id="markdown-toc-寻找数组中的最大值和最小值">寻找数组中的最大值和最小值</a></li>
+  <li><a href="#快速找出一个数组中的两个数字其和等于给定值" id="markdown-toc-快速找出一个数组中的两个数字其和等于给定值">快速找出一个数组中的两个数字，其和等于给定值。</a></li>
+  <li><a href="#求数组的子数组之和的最大值" id="markdown-toc-求数组的子数组之和的最大值">求数组的子数组之和的最大值。</a></li>
+  <li><a href="#数组循环移位把一个含有n个元素的数组循环右移k位要求时间复杂度为on且只允许使用两个附加变量" id="markdown-toc-数组循环移位把一个含有n个元素的数组循环右移k位要求时间复杂度为on且只允许使用两个附加变量">数组循环移位：把一个含有N个元素的数组循环右移K位，要求时间复杂度为O(N),且只允许使用两个附加变量。</a></li>
+  <li><a href="#计算字符串的相似度" id="markdown-toc-计算字符串的相似度">计算字符串的相似度。</a></li>
+  <li><a href="#从无头单链表中删除节点不是第一个也不是最后一个节点" id="markdown-toc-从无头单链表中删除节点不是第一个也不是最后一个节点">从无头单链表中删除节点（不是第一个，也不是最后一个节点）。</a></li>
+  <li><a href="#设计队列容器的数据结构使得返回最大元素的操作时间复杂度尽可能的低" id="markdown-toc-设计队列容器的数据结构使得返回最大元素的操作时间复杂度尽可能的低">设计队列容器的数据结构，使得返回最大元素的操作时间复杂度尽可能的低。</a></li>
+</ul>
+
+<h2 id="求二进制数中1的个数">求二进制数中1的个数。</h2>
+<p>解法1：对于二进制操作，除以一个2，如果除的过程中有余，那么就表示当前位置有一个1。考虑利用整型数据除法的特点，通过相除和判断余数的值来分析。</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">Count</span> <span class="p">(</span> <span class="n">BYTE</span> <span class="n">v</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">v</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+      <span class="n">num</span><span class="o">++</span><span class="p">;</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">v</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>解法2：对解法1进行改进，通过移位操作来实现除法。通过与00000001进行与操作来判断当前八位数字最后一位是否为1.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">Count</span> <span class="p">(</span> <span class="n">BYTE</span> <span class="n">v</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">num</span> <span class="o">+=</span> <span class="n">v</span> <span class="o">&amp;</span> <span class="mh">0x01</span><span class="p">;</span>
+    <span class="n">v</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>解法3：在每次判断中仅与1来进行判断，将复杂度由二进制数的位数降低至二进制数中1的个数。v &amp; (v-1)操作每次能消去二进制表示中最后一位1，利用这个技巧可以减少一定的循环次数。</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">Count</span> <span class="p">(</span> <span class="n">BYTE</span> <span class="n">v</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">v</span> <span class="o">&amp;=</span> <span class="p">(</span><span class="n">v</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">num</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>解法4：使用分支操作（switch语句），针对8位数据，直接把0~255的情况都罗列出来，并使用分支操作，可以得到答案。不是好的方法。</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">Count</span> <span class="p">(</span> <span class="n">BYTE</span> <span class="n">v</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">switch</span><span class="p">(</span> <span class="n">v</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">case</span> <span class="mh">0x0</span><span class="p">:</span>
+      <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mh">0x1</span><span class="p">:</span>
+    <span class="k">case</span> <span class="mh">0x2</span><span class="p">:</span>
+    <span class="c1">// …</span>
+    <span class="k">case</span> <span class="mh">0x80</span><span class="p">:</span>
+      <span class="n">num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mh">0x3</span><span class="p">:</span>
+    <span class="k">case</span> <span class="mh">0x6</span><span class="p">:</span>
+    <span class="c1">// …</span>
+    <span class="k">case</span> <span class="mh">0xc0</span><span class="p">;</span>
+      <span class="n">num</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="c1">// …</span>
+  <span class="err">}</span>
+  <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+<span class="err">}</span>
+</code></pre></div></div>
+<p>解法5：查表法，典型的空间换时间算法，把0~255中1的个数直接存储在数组中，v作为数组的下标，countTable[v]就是v中1的个数。算法的时间复杂度仅为1.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">countTable</span><span class="p">[</span><span class="mi">256</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="err">…</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">Count</span> <span class="p">(</span> <span class="n">BYTE</span> <span class="n">v</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">//check parameter</span>
+  <span class="k">return</span> <span class="n">countTable</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="寻找发帖水王由水王id所发的帖子数超过了总帖子数的一半">寻找发帖“水王”：由水王ID所发的帖子数超过了总帖子数的一半。</h2>
+<p>最直接的方法，先对所有ID排序，再统计各个ID出现的次数。如果某个ID出现次数超过总数的一半，那么就输出这个ID。这个算法的时间复杂度为O( N*logN + N ) .
+如果ID列表已经是有序的，也可以不用扫描统计各个ID的出现次数。如果一个ID出现的次数超过总数N的一半，那么无论水王的ID是什么，这个有序的ID列表的第N/2项（从0开始编号）一定是这个ID。除去排序的时间复杂度后，处理的时间复杂度为O(1)。
+上面的方法都需要先对ID列表进行排序，时间复杂度方面没有根本的改进。如果<code class="language-plaintext highlighter-rouge">每次删除两个不同的ID</code>，那么在剩下的ID列表中，水王ID出现的次数仍然超过总数的一半（即，哪怕每次拿一个其他ID来同归一个水王的ID，最终剩下的仍然是水王的ID，且只有水王的ID能够满足这种挑战）。可以通过不断重复这个过程，把ID列表中的ID总数降低。从而避免了排序这个耗时的步骤，总的时间复杂度也只有O( N )，且只需要常数的额外内存:</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Type</span> <span class="nf">Find</span><span class="p">(</span> <span class="n">Type</span><span class="o">*</span> <span class="n">ID</span> <span class="p">,</span><span class="kt">int</span> <span class="n">N</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">Type</span> <span class="n">candidate</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">nTimes</span><span class="p">,</span> <span class="n">i</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span> <span class="n">i</span> <span class="o">=</span> <span class="n">nTimes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">nTimes</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
+      <span class="n">candidate</span><span class="o">=</span><span class="n">ID</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">nTimes</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">candidate</span> <span class="o">==</span> <span class="n">ID</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">nTimes</span><span class="o">++</span><span class="p">;</span>
+      <span class="k">else</span>
+        <span class="n">nTimes</span><span class="o">--</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">candidate</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>大致思想就是：假设每个ID都有可能是水王，那么在遍历时这个水王就要遇到一种挑战，可能自己的帖子数是会增加的，也可能是遇到挑战的，帖子数要减少的。这样遍历下来，只有水王的帖子增加的减去遇到挑战的帖子数会是大于0的。其他任何帖子假设为水王时都是禁不起挑战的。
+步骤：</p>
+<ol>
+  <li>可以假设帖子的第一个ID是次数最大的，用candidate记录，次数用nTimes记录。</li>
+  <li>遍历下一个ID，如果跟candidate一样，nTimes++，否则，遇到一个挑战，则nTimes–，如果nTimes == 0，下一步就要重复第一步了。</li>
+  <li>遍历结束，nTimes&gt;0的那个candidate就是水王ID，他是获胜者。
+问题解决的关键在于水王ID超过了总数的一半这一特殊条件。</li>
+</ol>
+
+<h2 id="寻找最大的k个数">寻找最大的K个数</h2>
+<p>解法1：在元素数量不大的情况下，采用快排或者堆排序对所有元素排序，取前K个，时间复杂度为O( N<em>logN )+O( K )= O( N</em>logN ); 采用<code class="language-plaintext highlighter-rouge">部分排序</code>算法，如选择排序或交换排序，把N个数中的前K个数排序出来，复杂度为O( N*K ); 具体选择取决于K与logN的大小。
+解法2：按照快速排序的思路，假设N个数存储在数组S中，从数组S中随机找出一个元素X，把数组分为两部分Sa和Sb。Sa中的元素大于等于X，Sb中的元素小于X。这时有两种可能：</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">Sa中的元素的个数小于K，Sa中所有的数和Sb中最大的K-|Sa|（|Sa|指Sa中元素的个数）个元素就是数组S中最大的K个数</code>。</li>
+  <li>Sa中元素的个数大于或等于K，则需要返回Sa中最大的K个元素。
+如此递归。平均时间复杂度为O( N*logK )。伪代码如下：
+```c
+Kbig( S, K )
+  if ( k &lt;= 0 ):
+ return []
+  if ( S. length &lt;= K ):
+ return S
+  ( Sa,Sb ) = Partition( S )
+  return Kbig( Sa, K ).Append( Kbig( Sb, K - Sa.length ))</li>
+</ol>
+
+<p>Partition(S):
+  Sa=[];
+  Sb=[];
+  Swap( s[1], S[random() % S. length] )
+  p=S[1]</p>
+
+<p>for i in [2: S.length]:
+    S[i] &gt; p ? Sa.Append( S[i] ):Sb.Append( S[i] )</p>
+
+<p>Sa.length &lt; Sb.length ? Sa.Append(p):Sb.Append(p)
+  return (Sa,Sb)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+解法3：寻找N个数中最大的K个数，本质上就是寻找最大的K个数中最小的那个，也就是第K大的数。可以`使用二分搜索的策略来寻找N个数中的第K大的数。然后，对于一个给定的数p，可以在O（N）的时间复杂度内找出所有不小于p的数`。
+	假如N个数中最大的数为Vmax，最小的数为Vmin，那么这N个数中的第K大数一定在区间[Vmin, Vmax]之间。那么，可以在这个区间内二分搜索N个数中的第K大数p。伪代码如下：
+
+```c
+while(Vmax – Vmin &gt; delta)
+{
+  Vmid = Vmin + (Vmax - Vmin) * 0.5;
+  if( f(arr, N, Vmid) &gt;= K)
+    Vmin = Vmid;
+  else
+    Vmax = Vmid;
+}
+</code></pre></div></div>
+<p>伪代码中f（arr, N, Vmid）返回数组arr[0, …, N-1]中大于等于Vmid的数的个数。
+上述伪代码中，delta的取值要比所有N个数中的任意两个不相等的元素差值之最小值小。如果所有元素都是整数，delta可以取值0.5。循环运行之后，得到一个区间（Vmin, Vmax），这个区间仅包含一个元素（或者多个相等的元素）。这个元素就是第K大的元素。整个算法的时间复杂度为O（N * log2（|Vmax - Vmin| /delta））。由于delta的取值要比所有N个数中的任意两个不相等的元素差值之最小值小，因此时间复杂度跟数据分布相关。在数据分布平均的情况下，时间复杂度为O（N * log2（N））。
+解法4：当N非常大的情况下，不能一次性装入内存操作。设N &gt; K，前K个数中的最大K个数是一个退化的情况，所有K个数就是最大的K个数。考虑第K+1个数X。如果X比最大的K个数中的最小的数Y小，那么最大的K个数还是保持不变。如果X比Y大，那么最大的K个数应该去掉Y，而包含X。如果<code class="language-plaintext highlighter-rouge">用一个数组来存储最大的K个数，每新加入一个数X，就扫描一遍数组，得到数组中最小的数Y。用X替代Y，或者保持原数组不变。这样的方法，所耗费的时间为O（N * K）</code>。
+进一步，可以<code class="language-plaintext highlighter-rouge">用容量为K的最小堆来存储最大的K个数</code>。最小堆的堆顶元素就是最大K个数中最小的一个。每次新考虑一个数X，如果X比堆顶的元素Y小，则不需要改变原来的堆，因为这个元素比最大的K个数小。如果X比堆顶元素大，那么用X替换堆顶的元素Y。在X替换堆顶元素Y之后，X可能破坏最小堆的结构（每个结点都比它的父亲结点大），需要更新堆来维持堆的性质。更新过程花费的时间复杂度为O（log2K）。
+解法5：可以通过改进计数排序、基数排序等来得到一个更高效的算法。但算法的适用范围会受到一定的限制。如果所有N个数都是正整数，且它们的取值范围不太大，可以考虑申请空间，记录每个整数出现的次数，然后再从大到小取最大的K个。比如，所有整数都在（0, MAXN）区间中的话，利用一个数组count[MAXN]来记录每个整数出现的个数（count[i]表示整数i在所有整数中出现的个数）。我们只需要扫描一遍就可以得到count数组。然后，寻找第K大的元素：</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span> <span class="n">sumCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">MAXN</span> <span class="err">–</span> <span class="mi">1</span><span class="p">;</span>  <span class="n">v</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span>  <span class="n">v</span><span class="o">--</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">sumCount</span> <span class="o">+=</span> <span class="n">count</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+  <span class="k">if</span><span class="p">(</span> <span class="n">sumCount</span> <span class="o">&gt;=</span> <span class="n">K</span> <span class="p">)</span>
+    <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="n">v</span><span class="p">;</span>
+</code></pre></div></div>
+<p>极端情况下，如果N个整数各不相同，我们甚至只需要一个bit来存储这个整数是否存在。
+实际情况下，并不一定能保证所有元素都是正整数，且取值范围不太大。上面的方法仍然可以推广适用。如果N个数中最大的数为Vmax，最小的数为Vmin，我们可以把这个区间[Vmin, Vmax]分成M块，每个小区间的跨度为d =（Vmax – Vmin）/M，即 [Vmin, Vmin+d], [Vmin + d, Vmin + 2d],……然后，扫描一遍所有元素，统计各个小区间中的元素个数，跟上面方法类似地，我们可以知道第K大的元素在哪一个小区间。然后，再对那个小区间，继续进行分块处理。这个方法介于解法三和类计数排序方法之间，不能保证线性。跟解法三类似地，时间复杂度为O（（N+M）* log2M（|Vmax - Vmin|/delta））。遍历文件的次数为2 * log2M（|Vmax - Vmin|/delta）。当然，我们需要找一个尽量大的M，但M取值要受内存限制。</p>
+
+<p>补：寻找第K大的数。</p>
+
+<h2 id="求最大公约数考虑两个正整数都很大的情况">求最大公约数。考虑两个正整数都很大的情况。</h2>
+<p>欧几里得辗转相除法求最大公约数：<code class="language-plaintext highlighter-rouge">两个整数的最大公约数等于其中较小的数和两数的差的最大公约数</code>。
+如：f(42,30) = f(30,12) = f(12,18) = f(12,6) = f(6,6) = f(6,0)
+即：<code class="language-plaintext highlighter-rouge">f(x,y) = f(y, x%y</code>)  (x &gt;= y &gt; 0) 或<code class="language-plaintext highlighter-rouge">f(x,y)=f(x-y, y)</code>.
+解法1：直接用代码来实现辗转相除法：</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="o">!</span><span class="n">y</span><span class="p">)</span><span class="o">?</span><span class="n">x</span><span class="o">:</span><span class="n">gcd</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">%</span><span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>解法2：解法1中用到%运算，其中包含除运算，这对于大整数而言将成为算法效率的瓶颈。采用公式f(x,y)=f(x-y, y)，就可以不再需要进行大整数的取模运算，而转换成简单得多的大整数的减法。</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">BigInt</span> <span class="nf">gcd</span><span class="p">(</span><span class="n">BigInt</span> <span class="n">x</span><span class="p">,</span> <span class="n">BigInt</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+  <span class="k">else</span>
+    <span class="k">return</span> <span class="n">gcd</span><span class="p">(</span> <span class="n">x</span><span class="o">-</span><span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>解法3：结合上两种算法，并采用移位操作。</p>
+
+<p>补：大整数的实现。</p>
+
+<h2 id="寻找数组中的最大值和最小值">寻找数组中的最大值和最小值</h2>
+<p>解法1：遍历两次，分别求出最大值、最小值。需要比较2<em>N次。
+解法2：按顺序将数组中相邻的两个元素看成一组，遍历数组，调整每一组中两个元素的顺序，使大的数在偶数位上，小的数在奇数位上。然后分别从奇数位、偶数位上求出最大最小值，总的比较次数为1.5</em>N次。
+解法3：不破坏原数组，仍然将数组每相邻两位看成一组，定义两个变量min、max，遍历数组，相邻两位比较，然后得到的大者与max比较，小者与min比较。总的比较次数仍为1.5<em>N。
+解法4：采用分治算法，分别求出前后N/2个数的min和max，然后取较小的min及较大的max。但是总的比较次数仍为1.5</em>N。</p>
+
+<h2 id="快速找出一个数组中的两个数字其和等于给定值">快速找出一个数组中的两个数字，其和等于给定值。</h2>
+<p>解法1：穷举法，时间复杂度O(N);
+解法2：变通思路，<code class="language-plaintext highlighter-rouge">对数组中的每个数字arr[i]都判别sum-arr[i]在不在数组中</code>。这样就变通为一个查找算法。将数组排序，需要时间O(N<em>logN)。对于每个arr[i]用二分法查找sum-arr[i]的时间复杂度都为O(logN)，总计N</em>O(logN)+ O(N<em>logN)= O(N</em>logN)。
+当然也可以用hash的方法简化查找，但是空间效率加大了。
+解法3：首先对数组进行排序，时间复杂度为O(N<em>logN)。
+然后令i=0，j=n-1，看arr[i]+arr[j]是否等于sum，如果是则结束，如果小于sum，则i=i+1;如果大于sum，则j=j-1。这样只需要在排好序的数组上遍历一次，就可以得到最后的结果，该步操作的时间复杂度为O(N)。两步加起来的时间复杂度为O(N</em>logN)。
+查找伪码：</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span><span class="p">(</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">j</span><span class="o">=</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">j</span><span class="p">;</span> <span class="p">)</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">sum</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">i</span> <span class="p">,</span> <span class="n">j</span><span class="p">);</span>
+  <span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">sum</span><span class="p">)</span>
+    <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+  <span class="k">else</span>
+    <span class="n">j</span><span class="o">--</span><span class="p">;</span>
+<span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="求数组的子数组之和的最大值">求数组的子数组之和的最大值。</h2>
+<p>解法1：分治法，将所给数组A[0],…A[n-1]分为长度相等的两段数组A[0],…,A[n/2-1]和A[n/2],…,A[n-1],分别求出这两段数组各自的最大子段和，则原数组的最大子段和为以下三种情况的最大值：</p>
+<ol>
+  <li>A[0],…A[n-1]的最大子段和与A[0],…,A[n/2-1]的最大子段和相同；</li>
+  <li>A[0],…A[n-1]的最大子段和与A[n/2],…,A[n-1]的最大子段和相同；</li>
+  <li>A[0],…A[n-1]的最大子段跨过其中间两个元素A[n/2-1]和A[n/2]。
+第1和第2两种情况是问题规模减半的相同子问题，可以通过递归求得。
+第3种情况只要找到以A[n/2-1]结尾的和最大的一段数组之和S1，以及以A[n/2]开始和最大的一段数组之和S2，那么第3种情况的最大值为S1+S2,只要对原数组进行一次遍历即可。
+分治法使得问题被分解为两个问题规模减半的子问题再加上一次遍历算法。总的时间复杂度为O(N*logN)。</li>
+</ol>
+
+<p>解法2：动态规划法，考虑数组的第一个元素A[0]，以及最大的一段数组A[i],…,A[j]跟A[0]之间的关系，有以下几种情况：</p>
+<ol>
+  <li>当0=i=j时，元素A[0]本身构成和最大的一段；</li>
+  <li>当0=i&lt;j时，和最大的一段以A[0]开始；</li>
+  <li>当0&lt;i时，元素A[0]跟和最大的一段没有关系。
+这样可以将一个大问题(N)转化为一个较小的问题(N-1)。假设已经知道A[1],…,A[N-1]中和最大的一段数组之和为All[1]，并且已经知道A[1],…,A[N-1]中包含A[1]的和最大的一段数组为Start[1]。则由以上三种分析的情况可看出A[0],…,A[N-1]中问题的解All[0]是三种情况的最大值max{A[0],A[0]+Start[1],All[1]}。通过这样的分析可以看出这个问题无后效性，可以使用动态规划的方法解决。代码如下：
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">MaxSum</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">A</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">Start</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+  <span class="n">All</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+  <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="c1">//从数组末尾往前遍历，直到数组首</span>
+  <span class="p">{</span>
+ <span class="n">Start</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">Start</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]);</span>
+ <span class="n">All</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">Start</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">All</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">All</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">//遍历完数组，All[0]中存放结果</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>时间复杂度为O(N);
+改进：
+Start[i] = max( A[i], A[i]+Start[i+1]);		
+All[i] = max(Start[i],All[i+1]);
+如果Start[i+1]&lt;0，则Start[i]=A[i]。并且在这两个递推式中，其实都只需用两个变量就可以了。Start[k+1]只有在计算Start[k]时使用，而All[k+1]也只有在计算All[k]时使用。所以改进程序只需O(1)的空间就足够了：</p>
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">MaxSum</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">A</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">nStart</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+  <span class="n">nAll</span><span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+  <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> 
+  <span class="p">{</span>
+ <span class="n">nStart</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">nStart</span><span class="p">);</span>
+ <span class="n">nAll</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">nStart</span><span class="p">,</span><span class="n">nAll</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">nAll</span><span class="p">;</span> 
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="数组循环移位把一个含有n个元素的数组循环右移k位要求时间复杂度为on且只允许使用两个附加变量">数组循环移位：把一个含有N个元素的数组循环右移K位，要求时间复杂度为O(N),且只允许使用两个附加变量。</h2>
+<p>解法1：循环右移K位之后的情形跟右移k=K%N位之后的情形一样：</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">RightShift</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="kt">int</span> <span class="n">K</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">K</span> <span class="o">%=</span><span class="n">N</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">K</span><span class="o">--</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">t</span><span class="o">=</span><span class="n">arr</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>
+      <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+    <span class="n">arr</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>时间复杂度为O(N^2).
+解法2：假设原数组序列为abcd1234，要求变换成的数组序列为1234abcd，即循环右移了4位。比较之后可以看到其中有两段的顺序是不变的，即1234和abcd，把这两段看成两个整体。右移K位的过程就是把数组的两部分交换一下。变换的过程通过以下步骤完成：</p>
+<ol>
+  <li>逆序排列abcd：abcd1234 -&gt; dcba1234;</li>
+  <li>逆序排列1234：abcd1234 –&gt; dcba4321;</li>
+  <li>全部逆序：abcd1234 -&gt; 1234abcd。
+代码：
+```c
+Reverse(int* arr,  int b,  int e)
+{
+  for(; b&lt;e; b++,e–)
+  {
+ int temp = arr[e];
+ arr[e] = arr[b];
+ arr[b] = temp;
+  }
+}</li>
+</ol>
+
+<p>RightShift(int* arr,  int N,  int k)
+{
+  K %= N;	
+  Reverse(arr,  0,  N – K – 1);
+  Reverse(arr,  N – K, N – 1);
+  Reverse(arr,  0,  N – 1);
+}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## 给定两个字符串s1和s2，要求判定s2是否能够被s1做循环移位得到的字符串包含。例如，给定s1=AABCD和s2=CDAA，返回true；给定s1=ABCD和s2=ACBD,返回false。
+解法1：穷举法
+```c
+char src[] = ”AABBCD”;
+char des[] = ”CDAA”;
+int len = strlen(src);
+for(int i=0;  i&lt;len;  i++)
+{
+  char tempchar = src[0];
+  for(int j=0;  j&lt;len-1;  j++)
+    src[j] = src[j+1];
+  
+  src[len-1] = tempchar;
+  if( strstr(str,des)==0 )
+    return true;
+}
+return false;
+</code></pre></div></div>
+
+<p>解法2：空间换时间，对循环移位之后的结果进行分析。假设s1=ABCD，s1循环移位的结果如下：
+ABCD -&gt; BCDA -&gt; CDAB -&gt; DABC -&gt;ABCD;
+若保留前面移走的数据，则可发现如下规律：
+ABCD -&gt; ABCDA -&gt; ABCDAB -&gt; ABCDABC -&gt;ABCDABCD。
+可见对s1做循环移位所得到的字符串都将是字符串s1s1的子字符串。如果s2可以由循环移位得到，那么s2一定在s1s1上。
+由此，将问题转换成考察s2是否在s1s1上，可通过调用一次strstr函数得到结果。</p>
+
+<h2 id="计算字符串的相似度">计算字符串的相似度。</h2>
+<p>分析：两个字符串的距离肯定不超过它们的长度之和。
+考虑如何才能把这个问题转化成规模较小的同样的问题：
+如果两个串A和B的第一个字符是相同的，则只要计算A[2，…lenA]和B[2，…lenB]的距离就可以了。但是如果两个串的第一个字符不相同，那么进行如下操作：</p>
+<ol>
+  <li>删除A串的第一个字符，然后计算A[2，…lenA]和B[1，…lenB]的距离；</li>
+  <li>删除B串的第一个字符，然后计算A[1，…lenA]和B[2，…lenB]的距离；</li>
+  <li>修改A串的第一个字符为B串的第一个字符，然后计算A[2，…lenA]和B[2，…lenB]的距离；</li>
+  <li>修改B串的第一个字符为A串的第一个字符，然后计算A[2，…lenA]和B[2，…lenB]的距离；</li>
+  <li>增加B串的第一个字符到A串的第一个字符之前，然后计算A[1，…lenA]和B[2，…lenB]的距离；</li>
+  <li>增加A串的第一个字符到B串的第一个字符之前，然后计算A[2，…lenA]和B[1，…lenB]的距离；</li>
+</ol>
+
+<p>由题意知，并不在乎两个字符串变得相等之后的字符串是怎样的，所以可以将上面的6个操作合并为：</p>
+<ol>
+  <li>一步操作之后，再将A[2，…lenA]和B[1，…lenB]变成相同的字符串；</li>
+  <li>一步操作之后，再将A[1，…lenA]和B[2，…lenB]变成相同的字符串；</li>
+  <li>一步操作之后，再将A[2，…lenA]和B[2，…lenB]变成相同的字符串；
+实现代码：
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">CalculateStringDistance</span><span class="p">(</span> <span class="n">string</span> <span class="n">strA</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pABegin</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pAEnd</span><span class="p">,</span> <span class="n">string</span> <span class="n">strB</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pBBegin</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pBEnd</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">pABegin</span> <span class="o">&gt;</span> <span class="n">pAEnd</span><span class="p">)</span>
+  <span class="p">{</span>
+ <span class="k">if</span><span class="p">(</span> <span class="n">pBBegin</span> <span class="o">&gt;</span> <span class="n">pBEnd</span><span class="p">)</span>
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+ <span class="k">else</span>
+   <span class="k">return</span> <span class="n">pBEnd</span> <span class="err">–</span> <span class="n">pBBegin</span> <span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="k">if</span><span class="p">(</span><span class="n">pBBegin</span> <span class="o">&gt;</span> <span class="n">pBEnd</span><span class="p">)</span>
+ <span class="p">{</span>
+   <span class="k">if</span><span class="p">(</span><span class="n">pABegin</span> <span class="o">&gt;</span> <span class="n">pAEnd</span><span class="p">)</span>
+     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="k">else</span>
+     <span class="k">return</span> <span class="n">pAEnd</span> <span class="err">–</span> <span class="n">pABegin</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+ <span class="p">}</span>
+		 
+ <span class="k">if</span><span class="p">(</span> <span class="n">strA</span><span class="p">[</span><span class="n">pABegin</span><span class="p">]</span> <span class="o">==</span> <span class="n">strB</span><span class="p">[</span><span class="n">pBBegin</span><span class="p">])</span>
+   <span class="k">return</span> <span class="n">CalculateStringDistance</span><span class="p">(</span> <span class="n">strA</span><span class="p">,</span> <span class="n">pABegin</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">pAEnd</span><span class="p">,</span> <span class="n">strB</span><span class="p">,</span> <span class="n">pBBegin</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">pBEnd</span><span class="p">);</span>
+ <span class="k">else</span>
+ <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">t1</span> <span class="o">=</span> <span class="n">CalculateStringDistance</span><span class="p">(</span> <span class="n">strA</span><span class="p">,</span> <span class="n">pABegin</span><span class="p">,</span> <span class="n">pAEnd</span><span class="p">,</span> <span class="n">strB</span><span class="p">,</span> <span class="n">pBBegin</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">pBEnd</span><span class="p">);</span>
+   <span class="kt">int</span> <span class="n">t2</span> <span class="o">=</span> <span class="n">CalculateStringDistance</span><span class="p">(</span> <span class="n">strA</span><span class="p">,</span> <span class="n">pABegin</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">pAEnd</span><span class="p">,</span> <span class="n">strB</span><span class="p">,</span> <span class="n">pBBegin</span><span class="p">,</span> <span class="n">pBEnd</span><span class="p">);</span>
+   <span class="kt">int</span> <span class="n">t3</span> <span class="o">=</span> <span class="n">CalculateStringDistance</span><span class="p">(</span> <span class="n">strA</span><span class="p">,</span> <span class="n">pABegin</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">pAEnd</span><span class="p">,</span> <span class="n">strB</span><span class="p">,</span> <span class="n">pBBegin</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">pBEnd</span><span class="p">);</span>
+   <span class="k">return</span> <span class="n">minValue</span><span class="p">(</span> <span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+<span class="err">}</span>
+</code></pre></div>    </div>
+    <h2 id="从无头单链表中删除节点不是第一个也不是最后一个节点">从无头单链表中删除节点（不是第一个，也不是最后一个节点）。</h2>
+    <p>假设给定指针为pCurrent，Node* pNext = pCurrent-&gt;Next。
+假设pCurrent指向当前节点为B，B的前一个节点为A，后一个节点为C。因为单链表没有头指针，因此无法追溯到A，假设直接删除B，则无法将A和C相连。
+解法：由给定条件可以安全的删除节点C，然后用C中的数据项替换B中的数据项，代码如下：</p>
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pCurrent</span> <span class="o">-&gt;</span> <span class="n">Next</span> <span class="o">=</span> <span class="n">pNext</span> <span class="o">-&gt;</span> <span class="n">Next</span><span class="p">;</span>
+<span class="n">pCurrent</span> <span class="o">-&gt;</span> <span class="n">Data</span> <span class="o">=</span> <span class="n">pNext</span> <span class="o">-&gt;</span> <span class="n">Data</span><span class="p">;</span>
+<span class="n">delete</span> <span class="n">pNext</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="设计队列容器的数据结构使得返回最大元素的操作时间复杂度尽可能的低">设计队列容器的数据结构，使得返回最大元素的操作时间复杂度尽可能的低。</h2>
+<p>解法1：用传统方式来实现队列，采用一个数组或链表来存储队列的元素，利用两个指针分别指向队尾和队首。如果采用这种方法，那么取最大值的操作需要遍历队列的所有元素。时间复杂度为O(N)；
+解法2：考虑用最大堆来维护队列中的元素。堆中每个元素都有指向它的后续元素的指针。这样，取最大值操作的时间复杂度为O(1)，而入队和出队操作的时间复杂度为O( logN )。
+解法3：对于栈来讲，Push和Pop操作都是在栈顶完成的，所以很容易维护栈中的最大值，它的时间复杂度为O(1),实现代码如下：</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">class</span> <span class="n">stack</span>
+<span class="p">{</span>
+  <span class="nl">public:</span>
+    <span class="n">stack</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="n">stackTop</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+      <span class="n">maxStackItemIndex</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">Push</span><span class="p">(</span> <span class="n">Type</span> <span class="n">x</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">stackTop</span><span class="o">++</span><span class="p">;</span>
+      <span class="k">if</span><span class="p">(</span> <span class="n">stackTop</span> <span class="o">&gt;=</span> <span class="n">MAXN</span> <span class="p">)</span> <span class="c1">// 溢出</span>
+        <span class="p">;</span>
+      <span class="k">else</span>
+      <span class="p">{</span>
+        <span class="n">stackItem</span><span class="p">[</span><span class="n">stackTop</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">Max</span><span class="p">()</span> <span class="p">)</span> <span class="c1">// 当前插入值为最大值</span>
+        <span class="p">{</span>
+          <span class="n">link2NextMaxItem</span><span class="p">[</span><span class="n">stackTop</span><span class="p">]</span> <span class="o">=</span> <span class="n">maxStackItemIndex</span><span class="p">;</span> <span class="c1">// 之前的最大值成为第二大的值，即当前值（最大值）的下一个最大值</span>
+          <span class="n">maxStackItemIndex</span> <span class="o">=</span> <span class="n">stackTop</span><span class="p">;</span> <span class="c1">// 最大值坐标指向当前值</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+          <span class="n">link2NextMaxItem</span><span class="p">[</span><span class="n">stackTop</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+      <span class="p">}</span>	
+    <span class="p">}</span>
+
+    <span class="n">Type</span> <span class="n">Pop</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="n">Type</span> <span class="n">ret</span><span class="p">;</span>
+      <span class="k">if</span><span class="p">(</span> <span class="n">stackTop</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span>
+        <span class="n">ThrowException</span><span class="p">();</span> <span class="c1">// 没有元素了</span>
+      <span class="k">else</span>
+      <span class="p">{</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">stackItem</span><span class="p">[</span> <span class="n">stackTop</span> <span class="p">];</span>
+        <span class="k">if</span><span class="p">(</span> <span class="n">stackTop</span> <span class="o">==</span> <span class="n">maxStackItemIndex</span> <span class="p">)</span> <span class="c1">// 当前出栈的为最大值</span>
+          <span class="n">maxStackItemIndex</span> <span class="o">=</span> <span class="n">link2NextMaxItem</span><span class="p">[</span><span class="n">stackTop</span><span class="p">];</span>	<span class="c1">// 修改最大值坐标</span>
+        <span class="n">stackTop</span><span class="o">--</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+    <span class="p">}</span>
+		
+    <span class="n">Type</span> <span class="n">Max</span><span class="p">()</span>
+    <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span> <span class="n">maxStackItemIndex</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">)</span>
+        <span class="k">return</span> <span class="n">stackItem</span><span class="p">[</span> <span class="n">maxStackItemIndex</span><span class="p">];</span>
+      <span class="k">else</span> 
+        <span class="k">return</span> <span class="err">–</span><span class="n">INF</span><span class="p">;</span>
+    <span class="p">}</span>
+		
+  <span class="nl">private:</span>
+    <span class="n">Type</span> <span class="n">stackItem</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">stackTop</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">link2NextMaxItem</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span> <span class="c1">// 维护一个最大值序列</span>
+    <span class="kt">int</span> <span class="n">maxStackItemIndex</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>如果能够用栈有效地实现队列，而栈的Max操作又很容易实现，那么队列的Max操作也就能有效地完成了。考虑使用两个栈A跟B来实现队列。</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">class</span> <span class="n">Queue</span>
+<span class="p">{</span>
+<span class="nl">public:</span>
+  <span class="n">Type</span> <span class="n">MaxValue</span><span class="p">(</span> <span class="n">Type</span> <span class="n">x</span><span class="p">,</span> <span class="n">Type</span> <span class="n">y</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span> <span class="p">)</span>
+      <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+    <span class="k">else</span>
+      <span class="k">return</span> <span class="n">y</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">Type</span> <span class="n">Queue</span><span class="o">::</span><span class="n">Max</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="k">return</span> <span class="n">MaxValue</span><span class="p">(</span> <span class="n">stackA</span><span class="p">.</span><span class="n">Max</span><span class="p">(),</span> <span class="n">stackB</span><span class="p">.</span><span class="n">Max</span><span class="p">()</span> <span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">EnQueue</span><span class="p">(</span> <span class="n">v</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">stackB</span><span class="p">.</span><span class="n">push</span><span class="p">(</span> <span class="n">v</span> <span class="p">);</span>
+  <span class="p">}</span>
+	
+  <span class="n">Type</span> <span class="n">DeQueue</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span> <span class="n">stackA</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">while</span><span class="p">(</span> <span class="o">!</span><span class="n">stackB</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="p">)</span>
+        <span class="n">stackA</span><span class="p">.</span><span class="n">push</span><span class="p">(</span> <span class="n">stackB</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span> <span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">stackA</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nl">private:</span>
+	<span class="n">stack</span> <span class="n">stackA</span><span class="p">;</span>
+	<span class="n">stack</span> <span class="n">stackB</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>从每个元素的角度来看，它被移动的次数最多可能有3次，这3次分别是：从B栈进入、当A栈为空时从B栈弹出并压入A栈、从A栈被弹出。相当于入队经过一次操作，出队经过两次操作。所以这种方法的平均时间复杂度是线性的。</p>
+
+:ET

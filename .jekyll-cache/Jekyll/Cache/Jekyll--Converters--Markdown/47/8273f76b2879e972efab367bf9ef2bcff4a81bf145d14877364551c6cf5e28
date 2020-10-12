@@ -1,0 +1,26 @@
+I"�
+<p>假设价格走势是纯随机的，即在任意位置开仓，固定时间后涨跌一定比例的概率是均等的，那么仅仅通过资金管理也存在盈利的可能。
+用PHP代码实现一个极简版蒙特卡洛测试：（可以把代码拷贝到这里PHP代码在线执行，执行预览，也可以根据需要修改参数后执行）</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// Monte Carlo Test</span>
+<span class="nv">$lower</span> <span class="o">=</span> <span class="mi">95</span><span class="p">;</span> <span class="c1">// 单月最大亏损，95代表单月亏5%</span>
+<span class="nv">$higher</span> <span class="o">=</span> <span class="mi">110</span><span class="p">;</span> <span class="c1">// 单月最大盈利，110代表单月赚10%</span>
+<span class="nv">$times</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span> <span class="c1">// 测试轮回数（一个轮回是一年，一年12个月，比如测试100年求平均值）</span>
+<span class="nv">$sum</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nv">$times</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> 
+  <span class="nv">$init</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span> <span class="c1">// 初始值（即初始本金）</span>
+  <span class="nv">$num</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span> <span class="c1">// 一年12个月</span>
+  <span class="k">for</span><span class="p">(</span><span class="nv">$j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nv">$j</span> <span class="o">&lt;=</span> <span class="nv">$num</span><span class="p">;</span> <span class="nv">$j</span><span class="o">++</span><span class="p">){</span> <span class="c1">// 循环12个月</span>
+    <span class="nv">$d</span> <span class="o">=</span> <span class="p">(</span><span class="nb">mt_rand</span><span class="p">(</span><span class="nv">$lower</span><span class="p">,</span><span class="nv">$higher</span><span class="p">)</span> <span class="o">-</span> <span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="mf">100.0</span><span class="p">;</span>
+    <span class="c1">// echo "\n获利：".strval($d*100.0).'%';</span>
+    <span class="nv">$init</span> <span class="o">+=</span> <span class="nv">$d</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nv">$sum</span> <span class="o">+=</span> <span class="nv">$init</span><span class="p">;</span>
+  <span class="k">echo</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">获利："</span><span class="mf">.</span><span class="nb">strval</span><span class="p">((</span><span class="nv">$init</span><span class="o">-</span><span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="mf">100.0</span><span class="p">)</span><span class="mf">.</span><span class="s1">'%'</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nv">$r</span> <span class="o">=</span> <span class="p">(</span><span class="nv">$sum</span><span class="o">/</span><span class="nv">$times</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">*</span><span class="mf">100.0</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">平均收益率：</span><span class="nv">$r</span><span class="s2">%</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+</code></pre></div></div>
+
+:ET

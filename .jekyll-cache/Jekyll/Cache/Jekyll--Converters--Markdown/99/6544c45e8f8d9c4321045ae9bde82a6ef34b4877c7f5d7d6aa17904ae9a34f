@@ -1,0 +1,376 @@
+I".2<ul id="markdown-toc">
+  <li><a href="#回测区间" id="markdown-toc-回测区间">回测区间</a></li>
+  <li><a href="#初始选股" id="markdown-toc-初始选股">初始选股</a></li>
+  <li><a href="#初始持股" id="markdown-toc-初始持股">初始持股</a></li>
+  <li><a href="#未排除一字板" id="markdown-toc-未排除一字板">未排除一字板*</a></li>
+  <li><a href="#排除一字板参照标准" id="markdown-toc-排除一字板参照标准">排除一字板（参照标准）</a></li>
+  <li><a href="#跳空涨停-" id="markdown-toc-跳空涨停-">跳空涨停 ×××</a></li>
+  <li><a href="#10天内涨幅低于20-" id="markdown-toc-10天内涨幅低于20-">10天内涨幅低于20% ☆☆☆</a></li>
+  <li><a href="#涨停突破60日线-" id="markdown-toc-涨停突破60日线-">涨停突破60日线 ×☆☆</a></li>
+  <li><a href="#收盘价为近55日内最高价-" id="markdown-toc-收盘价为近55日内最高价-">收盘价为近55日内最高价 ×××</a></li>
+  <li><a href="#收盘价为近20日内最高价-" id="markdown-toc-收盘价为近20日内最高价-">收盘价为近20日内最高价 ×××</a></li>
+  <li><a href="#前一日最低价是近55日最低价-" id="markdown-toc-前一日最低价是近55日最低价-">前一日最低价是近55日最低价 ×☆☆</a></li>
+  <li><a href="#前一日最低价是近20日最低价-" id="markdown-toc-前一日最低价是近20日最低价-">前一日最低价是近20日最低价 ☆☆☆</a></li>
+  <li><a href="#近5日最低价是近55日最低价-" id="markdown-toc-近5日最低价是近55日最低价-">近5日最低价是近55日最低价 ☆☆☆</a></li>
+  <li><a href="#近5日最低价是近20日最低价-" id="markdown-toc-近5日最低价是近20日最低价-">近5日最低价是近20日最低价 ☆☆☆</a></li>
+</ul>
+<p><strong>涨停板持股研究</strong></p>
+
+<h2 id="回测区间">回测区间</h2>
+
+<p>2018年1月2日至8月27日，共160个交易日，期间上证下跌15.49%。</p>
+
+<h2 id="初始选股">初始选股</h2>
+
+<p>当日非一字板涨停。</p>
+
+<h2 id="初始持股">初始持股</h2>
+
+<p>涨停后，第二天开盘价买。</p>
+
+<p>如果买入当天阴线，或者假阳线，则后一天开盘价走。（判断错误，尽快离场）</p>
+
+<p>如果买入当天涨，则首阴走。（放大利润）</p>
+
+<h2 id="未排除一字板">未排除一字板*</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>交易总数</strong></th>
+      <th><strong>日均交易数</strong></th>
+      <th><strong>涨</strong></th>
+      <th><strong>跌</strong></th>
+      <th><strong>胜率</strong></th>
+      <th><strong>赢利交易平均收益率</strong></th>
+      <th><strong>亏损交易平均收益率</strong></th>
+      <th><strong>日均收益率</strong></th>
+      <th><strong>单笔交易平均收益率</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>6019</strong></td>
+      <td><strong>37</strong></td>
+      <td><strong>1946</strong></td>
+      <td><strong>4073</strong></td>
+      <td><strong>32.331%</strong></td>
+      <td><strong>16.721%</strong></td>
+      <td><strong>-5.02%</strong></td>
+      <td><strong>2.505%</strong></td>
+      <td><strong>2.009%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="排除一字板参照标准">排除一字板（参照标准）</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>交易总数</strong></th>
+      <th><strong>日均交易数</strong></th>
+      <th><strong>涨</strong></th>
+      <th><strong>跌</strong></th>
+      <th><strong>胜率</strong></th>
+      <th><strong>赢利交易平均收益率</strong></th>
+      <th><strong>亏损交易平均收益率</strong></th>
+      <th><strong>日均收益率</strong></th>
+      <th><strong>单笔交易平均收益率</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>5163</strong></td>
+      <td><strong>32</strong></td>
+      <td><strong>1456</strong></td>
+      <td><strong>3707</strong></td>
+      <td><strong>28.201%</strong></td>
+      <td><strong>6.391%</strong></td>
+      <td><strong>-4.86%</strong></td>
+      <td><strong>-1.485%</strong></td>
+      <td><strong>-1.687%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="跳空涨停-">跳空涨停 ×××</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>交易总数</strong></th>
+      <th><strong>日均交易数</strong></th>
+      <th><strong>涨</strong></th>
+      <th><strong>跌</strong></th>
+      <th><strong>胜率</strong></th>
+      <th><strong>赢利交易平均收益率</strong></th>
+      <th><strong>亏损交易平均收益率</strong></th>
+      <th><strong>日均收益率</strong></th>
+      <th><strong>单笔交易平均收益率</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1381</strong></td>
+      <td><strong>8</strong></td>
+      <td><strong>387</strong></td>
+      <td><strong>994</strong></td>
+      <td><strong>28.023%</strong></td>
+      <td><strong>6.723%</strong></td>
+      <td><strong>-6.03%</strong></td>
+      <td><strong>-2.514%</strong></td>
+      <td><strong>-2.456%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="10天内涨幅低于20-">10天内涨幅低于20% ☆☆☆</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>交易总数</strong></th>
+      <th><strong>日均交易数</strong></th>
+      <th><strong>涨</strong></th>
+      <th><strong>跌</strong></th>
+      <th><strong>胜率</strong></th>
+      <th><strong>赢利交易平均收益率</strong></th>
+      <th><strong>亏损交易平均收益率</strong></th>
+      <th><strong>日均收益率</strong></th>
+      <th><strong>单笔交易平均收益率</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>3841</strong></td>
+      <td><strong>24</strong></td>
+      <td><strong>1110</strong></td>
+      <td><strong>2731</strong></td>
+      <td><strong>28.899%</strong></td>
+      <td><strong>5.919%</strong></td>
+      <td><strong>-4.245%</strong></td>
+      <td><strong>-1.135%</strong></td>
+      <td><strong>-1.308%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="涨停突破60日线-">涨停突破60日线 ×☆☆</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>交易总数</strong></th>
+      <th><strong>日均交易数</strong></th>
+      <th><strong>涨</strong></th>
+      <th><strong>跌</strong></th>
+      <th><strong>胜率</strong></th>
+      <th><strong>赢利交易平均收益率</strong></th>
+      <th><strong>亏损交易平均收益率</strong></th>
+      <th><strong>日均收益率</strong></th>
+      <th><strong>单笔交易平均收益率</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1144</strong></td>
+      <td><strong>7</strong></td>
+      <td><strong>303</strong></td>
+      <td><strong>841</strong></td>
+      <td><strong>26.486%</strong></td>
+      <td><strong>5.387%</strong></td>
+      <td><strong>-4.191%</strong></td>
+      <td><strong>-1.341%</strong></td>
+      <td><strong>-1.654%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="收盘价为近55日内最高价-">收盘价为近55日内最高价 ×××</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>交易总数</strong></th>
+      <th><strong>日均交易数</strong></th>
+      <th><strong>涨</strong></th>
+      <th><strong>跌</strong></th>
+      <th><strong>胜率</strong></th>
+      <th><strong>赢利交易平均收益率</strong></th>
+      <th><strong>亏损交易平均收益率</strong></th>
+      <th><strong>日均收益率</strong></th>
+      <th><strong>单笔交易平均收益率</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1087</strong></td>
+      <td><strong>6</strong></td>
+      <td><strong>275</strong></td>
+      <td><strong>812</strong></td>
+      <td><strong>25.299%</strong></td>
+      <td><strong>5.978%</strong></td>
+      <td><strong>-6.161%</strong></td>
+      <td><strong>-2.766%</strong></td>
+      <td><strong>-3.09%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="收盘价为近20日内最高价-">收盘价为近20日内最高价 ×××</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>交易总数</strong></th>
+      <th><strong>日均交易数</strong></th>
+      <th><strong>涨</strong></th>
+      <th><strong>跌</strong></th>
+      <th><strong>胜率</strong></th>
+      <th><strong>赢利交易平均收益率</strong></th>
+      <th><strong>亏损交易平均收益率</strong></th>
+      <th><strong>日均收益率</strong></th>
+      <th><strong>单笔交易平均收益率</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>2387</strong></td>
+      <td><strong>14</strong></td>
+      <td><strong>612</strong></td>
+      <td><strong>1775</strong></td>
+      <td><strong>25.639%</strong></td>
+      <td><strong>6.378%</strong></td>
+      <td><strong>-5.555%</strong></td>
+      <td><strong>-2.179%</strong></td>
+      <td><strong>-2.495%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="前一日最低价是近55日最低价-">前一日最低价是近55日最低价 ×☆☆</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>交易总数</strong></th>
+      <th><strong>日均交易数</strong></th>
+      <th><strong>涨</strong></th>
+      <th><strong>跌</strong></th>
+      <th><strong>胜率</strong></th>
+      <th><strong>赢利交易平均收益率</strong></th>
+      <th><strong>亏损交易平均收益率</strong></th>
+      <th><strong>日均收益率</strong></th>
+      <th><strong>单笔交易平均收益率</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>45</strong></td>
+      <td><strong>1</strong></td>
+      <td><strong>11</strong></td>
+      <td><strong>34</strong></td>
+      <td><strong>24.444%</strong></td>
+      <td><strong>5.843%</strong></td>
+      <td><strong>-3.428%</strong></td>
+      <td><strong>-0.157%</strong></td>
+      <td><strong>-1.161%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="前一日最低价是近20日最低价-">前一日最低价是近20日最低价 ☆☆☆</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>交易总数</strong></th>
+      <th><strong>日均交易数</strong></th>
+      <th><strong>涨</strong></th>
+      <th><strong>跌</strong></th>
+      <th><strong>胜率</strong></th>
+      <th><strong>赢利交易平均收益率</strong></th>
+      <th><strong>亏损交易平均收益率</strong></th>
+      <th><strong>日均收益率</strong></th>
+      <th><strong>单笔交易平均收益率</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>423</strong></td>
+      <td><strong>2</strong></td>
+      <td><strong>141</strong></td>
+      <td><strong>282</strong></td>
+      <td><strong>33.333%</strong></td>
+      <td><strong>6.394%</strong></td>
+      <td><strong>-3.814%</strong></td>
+      <td><strong>-0.517%</strong></td>
+      <td><strong>-0.411%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="近5日最低价是近55日最低价-">近5日最低价是近55日最低价 ☆☆☆</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>交易总数</strong></th>
+      <th><strong>日均交易数</strong></th>
+      <th><strong>涨</strong></th>
+      <th><strong>跌</strong></th>
+      <th><strong>胜率</strong></th>
+      <th><strong>赢利交易平均收益率</strong></th>
+      <th><strong>亏损交易平均收益率</strong></th>
+      <th><strong>日均收益率</strong></th>
+      <th><strong>单笔交易平均收益率</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>754</strong></td>
+      <td><strong>4</strong></td>
+      <td><strong>235</strong></td>
+      <td><strong>519</strong></td>
+      <td><strong>31.167%</strong></td>
+      <td><strong>6.94%</strong></td>
+      <td><strong>-4.458%</strong></td>
+      <td><strong>-0.915%</strong></td>
+      <td><strong>-0.905%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="近5日最低价是近20日最低价-">近5日最低价是近20日最低价 ☆☆☆</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>交易总数</strong></th>
+      <th><strong>日均交易数</strong></th>
+      <th><strong>涨</strong></th>
+      <th><strong>跌</strong></th>
+      <th><strong>胜率</strong></th>
+      <th><strong>赢利交易平均收益率</strong></th>
+      <th><strong>亏损交易平均收益率</strong></th>
+      <th><strong>日均收益率</strong></th>
+      <th><strong>单笔交易平均收益率</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1361</strong></td>
+      <td><strong>8</strong></td>
+      <td><strong>411</strong></td>
+      <td><strong>950</strong></td>
+      <td><strong>30.198%</strong></td>
+      <td><strong>6.117%</strong></td>
+      <td><strong>-4.37%</strong></td>
+      <td><strong>-1.015%</strong></td>
+      <td><strong>-1.203%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

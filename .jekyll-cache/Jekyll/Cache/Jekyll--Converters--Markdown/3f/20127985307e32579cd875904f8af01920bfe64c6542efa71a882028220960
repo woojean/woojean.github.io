@@ -1,0 +1,52 @@
+I"$<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(E1 + E2 + E3 + E4 + E5)/5 = MA5
+</code></pre></div></div>
+
+<p>例：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5.66 + 5.88 + 6.47 + 7.12 + 7.3 = 32.43
+32.43/5 = 6.486
+
+S4 = 25.13
+E4 = 7.12
+GR5 = 0.0253
+E5 = (1 + GR5)*E4
+   = (1 + 0.0253)*7.12
+   = 7.3
+</code></pre></div></div>
+
+<p>因为：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>E5 = (1 + GR5)*E4
+(E5 + S4)/5 = MA5
+</code></pre></div></div>
+<p>若要：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MA5 = E5
+</code></pre></div></div>
+
+<p>则有：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>((1 + GR5)*E4 + S4)/5 = (1 + GR5)*E4
+(1 + GR5)*E4 + S4 = (1 + GR5)*E4*5
+E4 + E4*GR5 + S4 = E4*5 + GR5*E4*5
+E4 + S4 - E4*5 = GR5*E4*5 - E4*GR5
+S4 - 4*E4 = 4*E4*GR5
+(S4 - 4*E4)/(4*E4) = GR5
+S4/(4*E4) - 1 = GR5
+</code></pre></div></div>
+
+<p>即：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GR5 = S4 / (4 * E4) - 1
+</code></pre></div></div>
+
+<p>例：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>S4 = 25.13
+E4 = 7.12
+GR5 = 25.13/(4*7.12) - 1
+   = 25.13/28.48 - 1
+   = -0.1176
+</code></pre></div></div>
+
+<p>买入参考价：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>B = (S4 / (4 * E4)+ 0.01) * E4；
+</code></pre></div></div>
+
+<p><strong>收盘后看到的MA5是用收盘价计算出来的，盘中的MA5最终没有痕迹。</strong></p>
+
+:ET

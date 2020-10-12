@@ -1,0 +1,67 @@
+I"*<ul id="markdown-toc">
+  <li><a href="#安装" id="markdown-toc-安装">安装</a></li>
+  <li><a href="#准备数据目录" id="markdown-toc-准备数据目录">准备数据目录</a></li>
+  <li><a href="#导入数据库" id="markdown-toc-导入数据库">导入数据库</a></li>
+  <li><a href="#运行server端" id="markdown-toc-运行server端">运行Server端</a></li>
+  <li><a href="#运行shell" id="markdown-toc-运行shell">运行Shell</a></li>
+  <li><a href="#查看帮助" id="markdown-toc-查看帮助">查看帮助</a></li>
+</ul>
+
+<h1 id="安装">安装</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew update
+brew install mongodb  // brew install mongodb --with-openssl
+</code></pre></div></div>
+
+<h1 id="准备数据目录">准备数据目录</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p ~/data/mongodb  // ensure that the user account running mongod has read and write permissions for the directory.
+</code></pre></div></div>
+<p>默认目录为/data/db。</p>
+
+<h1 id="导入数据库">导入数据库</h1>
+<p>数据库文件：https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mongoimport --db test --collection restaurants --drop --file ~/Downloads/primer-dataset.json
+</code></pre></div></div>
+<p>如果MongoDB中已存在同名的Collection，则会先删除已有的Collection后再导入。</p>
+
+<h1 id="运行server端">运行Server端</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mongod --dbpath ~/data/mongodb
+</code></pre></div></div>
+
+<h1 id="运行shell">运行Shell</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mongo
+</code></pre></div></div>
+
+<h1 id="查看帮助">查看帮助</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; help
+	db.help()                    help on db methods
+	db.mycoll.help()             help on collection methods
+	sh.help()                    sharding helpers
+	rs.help()                    replica set helpers
+	help admin                   administrative help
+	help connect                 connecting to a db help
+	help keys                    key shortcuts
+	help misc                    misc things to know
+	help mr                      mapreduce
+
+	show dbs                     show database names
+	show collections             show collections in current database
+	show users                   show users in current database
+	show profile                 show most recent system.profile entries with time &gt;= 1ms
+	show logs                    show the accessible logger names
+	show log [name]              prints out the last segment of log in memory, 'global' is default
+	use &lt;db_name&gt;                set current database
+	db.foo.find()                list objects in collection foo
+	db.foo.find( { a : 1 } )     list objects in foo where a == 1
+	it                           result of the last line evaluated; use to further iterate
+	DBQuery.shellBatchSize = x   set default number of items to display on shell
+	exit                         quit the mongo shell
+</code></pre></div></div>
+
+<p>比如：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; show dbs
+admin  0.000GB
+local  0.000GB
+test   0.005GB
+</code></pre></div></div>
+
+:ET

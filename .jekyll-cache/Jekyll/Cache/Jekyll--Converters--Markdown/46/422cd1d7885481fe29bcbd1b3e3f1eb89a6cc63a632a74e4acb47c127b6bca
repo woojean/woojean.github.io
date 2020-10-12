@@ -1,0 +1,1725 @@
+I"� <ul id="markdown-toc">
+  <li><a href="#concepts" id="markdown-toc-concepts">Concepts</a>    <ul>
+      <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a>        <ul>
+          <li><a href="#entry" id="markdown-toc-entry">Entry</a></li>
+          <li><a href="#output" id="markdown-toc-output">Output</a></li>
+          <li><a href="#loaders" id="markdown-toc-loaders">Loaders</a></li>
+          <li><a href="#plugins" id="markdown-toc-plugins">Plugins</a></li>
+        </ul>
+      </li>
+      <li><a href="#entry-points" id="markdown-toc-entry-points">Entry Points</a>        <ul>
+          <li><a href="#single-entry-shorthand-syntax" id="markdown-toc-single-entry-shorthand-syntax">Single Entry (Shorthand) Syntax</a></li>
+          <li><a href="#object-syntax" id="markdown-toc-object-syntax">Object Syntax</a></li>
+          <li><a href="#scenarios" id="markdown-toc-scenarios">Scenarios</a></li>
+        </ul>
+      </li>
+      <li><a href="#output-1" id="markdown-toc-output-1">Output</a>        <ul>
+          <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
+          <li><a href="#options" id="markdown-toc-options">Options</a></li>
+          <li><a href="#configuration" id="markdown-toc-configuration">Configuration</a></li>
+          <li><a href="#loader-features" id="markdown-toc-loader-features">Loader Features</a></li>
+          <li><a href="#resolving-loaders" id="markdown-toc-resolving-loaders">Resolving Loaders</a></li>
+        </ul>
+      </li>
+      <li><a href="#plugins-1" id="markdown-toc-plugins-1">Plugins</a>        <ul>
+          <li><a href="#anatomy" id="markdown-toc-anatomy">Anatomy</a></li>
+          <li><a href="#usage-1" id="markdown-toc-usage-1">Usage</a></li>
+        </ul>
+      </li>
+      <li><a href="#configuration-1" id="markdown-toc-configuration-1">Configuration</a></li>
+      <li><a href="#modules" id="markdown-toc-modules">Modules</a>        <ul>
+          <li><a href="#what-is-a-webpack-module" id="markdown-toc-what-is-a-webpack-module">What is a webpack Module</a></li>
+          <li><a href="#supported-module-types" id="markdown-toc-supported-module-types">Supported Module Types</a></li>
+        </ul>
+      </li>
+      <li><a href="#module-resolution" id="markdown-toc-module-resolution">Module Resolution</a>        <ul>
+          <li><a href="#resolving-loaders-1" id="markdown-toc-resolving-loaders-1">Resolving Loaders</a></li>
+          <li><a href="#caching" id="markdown-toc-caching">Caching</a></li>
+        </ul>
+      </li>
+      <li><a href="#dependency-graph" id="markdown-toc-dependency-graph">Dependency Graph</a></li>
+      <li><a href="#targets" id="markdown-toc-targets">Targets</a></li>
+      <li><a href="#hot-module-replacement" id="markdown-toc-hot-module-replacement">Hot Module Replacement</a>        <ul>
+          <li><a href="#how-it-works" id="markdown-toc-how-it-works">How It Works</a></li>
+          <li><a href="#what-it-can-be-used-for" id="markdown-toc-what-it-can-be-used-for">What It Can Be Used For</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#guides" id="markdown-toc-guides">Guides</a>    <ul>
+      <li><a href="#getting-started" id="markdown-toc-getting-started">Getting Started</a></li>
+      <li><a href="#installation" id="markdown-toc-installation">Installation</a></li>
+      <li><a href="#migrating-from-v1-to-v2" id="markdown-toc-migrating-from-v1-to-v2">Migrating from v1 to v2</a></li>
+      <li><a href="#code-splitting" id="markdown-toc-code-splitting">Code Splitting</a>        <ul>
+          <li><a href="#resource-splitting-for-caching-and-parallel-loads" id="markdown-toc-resource-splitting-for-caching-and-parallel-loads">Resource splitting for caching and parallel loads</a></li>
+          <li><a href="#on-demand-code-splitting" id="markdown-toc-on-demand-code-splitting">On demand code-splitting</a></li>
+        </ul>
+      </li>
+      <li><a href="#code-splitting---css" id="markdown-toc-code-splitting---css">Code Splitting - CSS</a>        <ul>
+          <li><a href="#importing-css" id="markdown-toc-importing-css">Importing CSS</a></li>
+          <li><a href="#using-css-loader" id="markdown-toc-using-css-loader">Using css-loader</a></li>
+          <li><a href="#using-extracttextwebpackplugin" id="markdown-toc-using-extracttextwebpackplugin">Using ExtractTextWebpackPlugin</a></li>
+        </ul>
+      </li>
+      <li><a href="#code-splitting---libraries" id="markdown-toc-code-splitting---libraries">Code Splitting - Libraries</a></li>
+      <li><a href="#code-splitting---async" id="markdown-toc-code-splitting---async">Code Splitting - Async</a>        <ul>
+          <li><a href="#dynamic-import-import" id="markdown-toc-dynamic-import-import">Dynamic import: import()</a></li>
+          <li><a href="#chunk-names" id="markdown-toc-chunk-names">Chunk names</a></li>
+          <li><a href="#usage-with-babel" id="markdown-toc-usage-with-babel">Usage with Babel</a></li>
+          <li><a href="#usage-with-babel-and-asyncawait" id="markdown-toc-usage-with-babel-and-asyncawait">Usage with Babel and async/await</a></li>
+          <li><a href="#requireensure" id="markdown-toc-requireensure">require.ensure()</a></li>
+        </ul>
+      </li>
+      <li><a href="#building-for-production" id="markdown-toc-building-for-production">Building for Production</a>        <ul>
+          <li><a href="#the-manual-way-configuring-webpack-for-multiple-environments" id="markdown-toc-the-manual-way-configuring-webpack-for-multiple-environments">The manual way: Configuring webpack for multiple environments</a></li>
+        </ul>
+      </li>
+      <li><a href="#caching-1" id="markdown-toc-caching-1">Caching</a>        <ul>
+          <li><a href="#the-problem" id="markdown-toc-the-problem">The problem</a></li>
+          <li><a href="#generating-unique-hashes-for-each-file" id="markdown-toc-generating-unique-hashes-for-each-file">Generating unique hashes for each file</a></li>
+          <li><a href="#get-filenames-from-webpack-compilation-stats" id="markdown-toc-get-filenames-from-webpack-compilation-stats">Get filenames from webpack compilation stats</a></li>
+          <li><a href="#deterministic-hashes" id="markdown-toc-deterministic-hashes">Deterministic hashes</a></li>
+        </ul>
+      </li>
+      <li><a href="#development" id="markdown-toc-development">Development</a></li>
+      <li><a href="#development---vagrant" id="markdown-toc-development---vagrant">Development - Vagrant</a></li>
+      <li><a href="#dependency-management" id="markdown-toc-dependency-management">Dependency Management</a></li>
+      <li><a href="#shimming" id="markdown-toc-shimming">Shimming</a></li>
+      <li><a href="#authoring-libraries" id="markdown-toc-authoring-libraries">Authoring Libraries</a></li>
+      <li><a href="#improving-build-performance" id="markdown-toc-improving-build-performance">Improving Build Performance</a></li>
+      <li><a href="#comparison-with-other-bundlers" id="markdown-toc-comparison-with-other-bundlers">Comparison with other bundlers</a></li>
+      <li><a href="#handling-compatibility" id="markdown-toc-handling-compatibility">Handling Compatibility</a></li>
+      <li><a href="#using-environment-variables" id="markdown-toc-using-environment-variables">Using environment variables</a></li>
+      <li><a href="#hot-module-replacement---react" id="markdown-toc-hot-module-replacement---react">Hot Module Replacement - React</a>        <ul>
+          <li><a href="#project-config" id="markdown-toc-project-config">Project Config</a></li>
+        </ul>
+      </li>
+      <li><a href="#lazy-loading---react" id="markdown-toc-lazy-loading---react">Lazy Loading - React</a></li>
+      <li><a href="#public-path" id="markdown-toc-public-path">Public Path</a></li>
+      <li><a href="#integration-with-tasktest-runners" id="markdown-toc-integration-with-tasktest-runners">Integration with task/test runners</a></li>
+      <li><a href="#tree-shaking" id="markdown-toc-tree-shaking">Tree Shaking</a></li>
+      <li><a href="#webpack--typescript" id="markdown-toc-webpack--typescript">webpack &amp; Typescript</a></li>
+    </ul>
+  </li>
+  <li><a href="#documentationconfiguration" id="markdown-toc-documentationconfiguration">DOCUMENTATION(Configuration)</a>    <ul>
+      <li><a href="#introduction-1" id="markdown-toc-introduction-1">Introduction</a></li>
+      <li><a href="#configuration-languages" id="markdown-toc-configuration-languages">Configuration Languages</a></li>
+      <li><a href="#configuration-types" id="markdown-toc-configuration-types">Configuration Types</a>        <ul>
+          <li><a href="#exporting-a-function-to-use-env" id="markdown-toc-exporting-a-function-to-use-env">Exporting a function to use –env</a></li>
+          <li><a href="#exporting-a-promise" id="markdown-toc-exporting-a-promise">Exporting a Promise</a></li>
+          <li><a href="#exporting-multiple-configurations" id="markdown-toc-exporting-multiple-configurations">Exporting multiple configurations</a></li>
+        </ul>
+      </li>
+      <li><a href="#entry-and-context" id="markdown-toc-entry-and-context">Entry and Context</a>        <ul>
+          <li><a href="#context" id="markdown-toc-context">context</a></li>
+          <li><a href="#entry-1" id="markdown-toc-entry-1">entry</a></li>
+        </ul>
+      </li>
+      <li><a href="#output-2" id="markdown-toc-output-2">Output</a>        <ul>
+          <li><a href="#outputchunkfilename" id="markdown-toc-outputchunkfilename">output.chunkFilename</a></li>
+          <li><a href="#outputcrossoriginloading" id="markdown-toc-outputcrossoriginloading">output.crossOriginLoading</a></li>
+          <li><a href="#outputhashfunction" id="markdown-toc-outputhashfunction">output.hashFunction</a></li>
+          <li><a href="#outputhashdigest" id="markdown-toc-outputhashdigest">output.hashDigest</a></li>
+          <li><a href="#outputhashdigestlength" id="markdown-toc-outputhashdigestlength">output.hashDigestLength</a></li>
+          <li><a href="#outputhashsalt" id="markdown-toc-outputhashsalt">output.hashSalt</a></li>
+          <li><a href="#outputfilename" id="markdown-toc-outputfilename">output.filename</a></li>
+          <li><a href="#outputhotupdatechunkfilename" id="markdown-toc-outputhotupdatechunkfilename">output.hotUpdateChunkFilename</a></li>
+          <li><a href="#outputhotupdatefunction" id="markdown-toc-outputhotupdatefunction">output.hotUpdateFunction</a></li>
+          <li><a href="#outputhotupdatemainfilename" id="markdown-toc-outputhotupdatemainfilename">output.hotUpdateMainFilename</a></li>
+          <li><a href="#outputjsonpfunction" id="markdown-toc-outputjsonpfunction">output.jsonpFunction</a></li>
+          <li><a href="#outputlibrary" id="markdown-toc-outputlibrary">output.library</a></li>
+          <li><a href="#outputlibrarytarget" id="markdown-toc-outputlibrarytarget">output.libraryTarget</a></li>
+          <li><a href="#outputpath" id="markdown-toc-outputpath">output.path</a></li>
+          <li><a href="#outputpathinfo" id="markdown-toc-outputpathinfo">output.pathinfo</a></li>
+          <li><a href="#outputpublicpath" id="markdown-toc-outputpublicpath">output.publicPath</a></li>
+          <li><a href="#outputsourcemapfilename" id="markdown-toc-outputsourcemapfilename">output.sourceMapFilename</a></li>
+          <li><a href="#outputsourceprefix" id="markdown-toc-outputsourceprefix">output.sourcePrefix</a></li>
+          <li><a href="#outputstrictmoduleexceptionhandling" id="markdown-toc-outputstrictmoduleexceptionhandling">output.strictModuleExceptionHandling</a></li>
+          <li><a href="#outputumdnameddefine" id="markdown-toc-outputumdnameddefine">output.umdNamedDefine</a></li>
+        </ul>
+      </li>
+      <li><a href="#module" id="markdown-toc-module">Module</a>        <ul>
+          <li><a href="#modulenoparse" id="markdown-toc-modulenoparse">module.noParse</a></li>
+          <li><a href="#modulerules" id="markdown-toc-modulerules">module.rules</a></li>
+          <li><a href="#rule" id="markdown-toc-rule">Rule</a>            <ul>
+              <li><a href="#rule-conditions" id="markdown-toc-rule-conditions">Rule conditions</a></li>
+              <li><a href="#rule-results" id="markdown-toc-rule-results">Rule results</a></li>
+            </ul>
+          </li>
+          <li><a href="#nested-rules" id="markdown-toc-nested-rules">Nested rules</a></li>
+          <li><a href="#ruleenforce" id="markdown-toc-ruleenforce">Rule.enforce</a></li>
+          <li><a href="#ruleexclude" id="markdown-toc-ruleexclude">Rule.exclude</a></li>
+          <li><a href="#ruleinclude" id="markdown-toc-ruleinclude">Rule.include</a></li>
+          <li><a href="#ruleissuer" id="markdown-toc-ruleissuer">Rule.issuer</a></li>
+          <li><a href="#ruleloader" id="markdown-toc-ruleloader">Rule.loader</a></li>
+          <li><a href="#ruleloaders" id="markdown-toc-ruleloaders">Rule.loaders</a></li>
+          <li><a href="#ruleoneof" id="markdown-toc-ruleoneof">Rule.oneOf</a></li>
+          <li><a href="#ruleoptions--rulequery" id="markdown-toc-ruleoptions--rulequery">Rule.options / Rule.query</a></li>
+          <li><a href="#ruleparser" id="markdown-toc-ruleparser">Rule.parser</a></li>
+          <li><a href="#ruleresource" id="markdown-toc-ruleresource">Rule.resource</a></li>
+          <li><a href="#ruleresourcequery" id="markdown-toc-ruleresourcequery">Rule.resourceQuery</a></li>
+          <li><a href="#rulerules" id="markdown-toc-rulerules">Rule.rules</a></li>
+          <li><a href="#ruletest" id="markdown-toc-ruletest">Rule.test</a></li>
+          <li><a href="#ruleuse" id="markdown-toc-ruleuse">Rule.use</a></li>
+          <li><a href="#condition" id="markdown-toc-condition">Condition</a></li>
+          <li><a href="#useentry" id="markdown-toc-useentry">UseEntry</a></li>
+          <li><a href="#module-contexts" id="markdown-toc-module-contexts">Module Contexts</a></li>
+        </ul>
+      </li>
+      <li><a href="#resolve" id="markdown-toc-resolve">Resolve</a>        <ul>
+          <li><a href="#resolve-1" id="markdown-toc-resolve-1">resolve</a></li>
+          <li><a href="#resolvealias" id="markdown-toc-resolvealias">resolve.alias</a></li>
+          <li><a href="#resolvealiasfields" id="markdown-toc-resolvealiasfields">resolve.aliasFields</a></li>
+          <li><a href="#resolvedescriptionfiles" id="markdown-toc-resolvedescriptionfiles">resolve.descriptionFiles</a></li>
+          <li><a href="#resolveenforceextension" id="markdown-toc-resolveenforceextension">resolve.enforceExtension</a></li>
+          <li><a href="#resolveenforcemoduleextension" id="markdown-toc-resolveenforcemoduleextension">resolve.enforceModuleExtension</a></li>
+          <li><a href="#resolveextensions" id="markdown-toc-resolveextensions">resolve.extensions</a></li>
+          <li><a href="#resolvemainfields" id="markdown-toc-resolvemainfields">resolve.mainFields</a></li>
+          <li><a href="#resolvemainfiles" id="markdown-toc-resolvemainfiles">resolve.mainFiles</a></li>
+          <li><a href="#resolvemodules" id="markdown-toc-resolvemodules">resolve.modules</a></li>
+          <li><a href="#resolveunsafecache" id="markdown-toc-resolveunsafecache">resolve.unsafeCache</a></li>
+          <li><a href="#resolveloader" id="markdown-toc-resolveloader">resolveLoader</a></li>
+          <li><a href="#resolveloadermoduleextensions" id="markdown-toc-resolveloadermoduleextensions">resolveLoader.moduleExtensions</a></li>
+          <li><a href="#resolveplugins" id="markdown-toc-resolveplugins">resolve.plugins</a></li>
+          <li><a href="#resolvesymlinks" id="markdown-toc-resolvesymlinks">resolve.symlinks</a></li>
+          <li><a href="#resolvecachepredicate" id="markdown-toc-resolvecachepredicate">resolve.cachePredicate</a></li>
+        </ul>
+      </li>
+      <li><a href="#plugins-2" id="markdown-toc-plugins-2">Plugins</a></li>
+      <li><a href="#devserver" id="markdown-toc-devserver">DevServer</a>        <ul>
+          <li><a href="#devserver-1" id="markdown-toc-devserver-1">devServer</a></li>
+          <li><a href="#devserverclientloglevel" id="markdown-toc-devserverclientloglevel">devServer.clientLogLevel</a></li>
+          <li><a href="#devservercompress" id="markdown-toc-devservercompress">devServer.compress</a></li>
+          <li><a href="#devservercontentbase" id="markdown-toc-devservercontentbase">devServer.contentBase</a></li>
+          <li><a href="#devserverfilename" id="markdown-toc-devserverfilename">devServer.filename</a></li>
+          <li><a href="#devserverheaders" id="markdown-toc-devserverheaders">devServer.headers</a></li>
+          <li><a href="#devserverhistoryapifallback" id="markdown-toc-devserverhistoryapifallback">devServer.historyApiFallback</a></li>
+          <li><a href="#devserverhost---cli-only" id="markdown-toc-devserverhost---cli-only">devServer.host - CLI only</a></li>
+          <li><a href="#devserverhot" id="markdown-toc-devserverhot">devServer.hot</a></li>
+          <li><a href="#devserverhotonly" id="markdown-toc-devserverhotonly">devServer.hotOnly</a></li>
+          <li><a href="#devserverhttps" id="markdown-toc-devserverhttps">devServer.https</a></li>
+          <li><a href="#devserverinline" id="markdown-toc-devserverinline">devServer.inline</a></li>
+          <li><a href="#devserverlazy" id="markdown-toc-devserverlazy">devServer.lazy</a></li>
+          <li><a href="#devservernoinfo" id="markdown-toc-devservernoinfo">devServer.noInfo</a></li>
+          <li><a href="#devserveroverlay" id="markdown-toc-devserveroverlay">devServer.overlay</a></li>
+          <li><a href="#devserverport" id="markdown-toc-devserverport">devServer.port</a></li>
+          <li><a href="#devserverproxy" id="markdown-toc-devserverproxy">devServer.proxy</a></li>
+          <li><a href="#devserverprogress" id="markdown-toc-devserverprogress">devServer.progress</a></li>
+          <li><a href="#devserverpublic" id="markdown-toc-devserverpublic">devServer.public</a></li>
+          <li><a href="#devserverpublicpath" id="markdown-toc-devserverpublicpath">devServer.publicPath</a></li>
+          <li><a href="#devserverquiet" id="markdown-toc-devserverquiet">devServer.quiet</a></li>
+          <li><a href="#devserversetup" id="markdown-toc-devserversetup">devServer.setup</a></li>
+          <li><a href="#devserverstaticoptions" id="markdown-toc-devserverstaticoptions">devServer.staticOptions</a></li>
+          <li><a href="#devserverstats" id="markdown-toc-devserverstats">devServer.stats</a></li>
+          <li><a href="#devserverwatchcontentbase" id="markdown-toc-devserverwatchcontentbase">devServer.watchContentBase</a></li>
+          <li><a href="#devserverwatchoptions" id="markdown-toc-devserverwatchoptions">devServer.watchOptions</a></li>
+        </ul>
+      </li>
+      <li><a href="#devtool" id="markdown-toc-devtool">Devtool</a>        <ul>
+          <li><a href="#target" id="markdown-toc-target">Target</a></li>
+        </ul>
+      </li>
+      <li><a href="#watch-and-watchoptions" id="markdown-toc-watch-and-watchoptions">Watch and WatchOptions</a>        <ul>
+          <li><a href="#watch" id="markdown-toc-watch">watch</a></li>
+          <li><a href="#watchoptions" id="markdown-toc-watchoptions">watchOptions</a></li>
+        </ul>
+      </li>
+      <li><a href="#externals" id="markdown-toc-externals">Externals</a></li>
+      <li><a href="#node" id="markdown-toc-node">Node</a>        <ul>
+          <li><a href="#nodeconsole" id="markdown-toc-nodeconsole">node.console</a></li>
+          <li><a href="#nodeprocess" id="markdown-toc-nodeprocess">node.process</a></li>
+          <li><a href="#nodeglobal" id="markdown-toc-nodeglobal">node.global</a></li>
+          <li><a href="#node__filename" id="markdown-toc-node__filename">node.__filename</a></li>
+          <li><a href="#node__dirname" id="markdown-toc-node__dirname">node.__dirname</a></li>
+          <li><a href="#nodebuffer" id="markdown-toc-nodebuffer">node.Buffer</a></li>
+          <li><a href="#nodesetimmediate" id="markdown-toc-nodesetimmediate">node.setImmediate</a></li>
+        </ul>
+      </li>
+      <li><a href="#performance" id="markdown-toc-performance">Performance</a>        <ul>
+          <li><a href="#performancehints" id="markdown-toc-performancehints">performance.hints</a></li>
+          <li><a href="#performancemaxentrypointsize" id="markdown-toc-performancemaxentrypointsize">performance.maxEntrypointSize</a></li>
+          <li><a href="#performancemaxassetsize" id="markdown-toc-performancemaxassetsize">performance.maxAssetSize</a></li>
+          <li><a href="#performanceassetfilter" id="markdown-toc-performanceassetfilter">performance.assetFilter</a></li>
+        </ul>
+      </li>
+      <li><a href="#stats" id="markdown-toc-stats">Stats</a></li>
+      <li><a href="#other-options" id="markdown-toc-other-options">Other Options</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="concepts">Concepts</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>webpack is a module bundler for modern JavaScript applications.</p>
+
+<p><strong>Four Core Concepts</strong>: entry, output, loaders, and plugins.</p>
+
+<h3 id="entry">Entry</h3>
+<p>webpack creates a graph of all of your application’s dependencies. <strong>The starting point</strong> of this graph is known as an entry point. The entry point tells webpack where to start and follows the graph of dependencies to know what to bundle.</p>
+
+<h3 id="output">Output</h3>
+<p>tell webpack the name of our bundle and where we want it to be emitted to.</p>
+
+<h3 id="loaders">Loaders</h3>
+<p>webpack treats every file (.css, .html, .scss, .jpg, etc.) as a module.Loaders in webpack transform these files into modules(as they are added to your dependency graph). They have two purposes:</p>
+<ul>
+  <li>Identify what <strong>files</strong> should be transformed by a certain loader. (test property)</li>
+  <li>Transform that <strong>file</strong> so that it can be added to your dependency graph (and eventually your bundle). (use property)</li>
+</ul>
+
+<h3 id="plugins">Plugins</h3>
+<p>plugins are most commonly used performing actions and custom functionality on “compilations” or “chunks” of your bundled modules.</p>
+
+<p><strong>example:webpack.config.js</strong></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">html-webpack-plugin</span><span class="dl">'</span><span class="p">);</span> <span class="c1">//installed via npm</span>
+<span class="kd">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpack</span><span class="dl">'</span><span class="p">);</span> <span class="c1">//to access built-in plugins</span>
+<span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./path/to/my/entry/file.js</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">'</span><span class="s1">dist</span><span class="dl">'</span><span class="p">),</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">my-first-webpack.bundle.js</span><span class="dl">'</span>
+  <span class="p">},</span>
+  <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">rules</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span><span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">js|jsx</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span> <span class="na">use</span><span class="p">:</span> <span class="dl">'</span><span class="s1">babel-loader</span><span class="dl">'</span><span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">UglifyJsPlugin</span><span class="p">(),</span>
+    <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span><span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/index.html</span><span class="dl">'</span><span class="p">})</span>
+  <span class="p">]</span>
+<span class="p">};</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">config</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="entry-points">Entry Points</h2>
+<p>there are multiple ways to define the entry property in your webpack configuration.</p>
+
+<h3 id="single-entry-shorthand-syntax">Single Entry (Shorthand) Syntax</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./path/to/my/entry/file.js</span><span class="dl">'</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Passing an array of file paths to the entry property creates what is known as a “multi-main entry”. This is useful when you would like to inject multiple dependent files together and graph their dependencies into one “chunk”.</p>
+
+<h3 id="object-syntax">Object Syntax</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">app</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/app.js</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">vendors</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/vendors.js</span><span class="dl">'</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>this is the <strong>most scalable way</strong> of defining entry/entries in your application.</p>
+
+<h3 id="scenarios">Scenarios</h3>
+<ul>
+  <li>1.Separate App and Vendor Entries
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+<span class="na">entry</span><span class="p">:</span> <span class="p">{</span>
+  <span class="na">app</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/app.js</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">vendors</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/vendors.js</span><span class="dl">'</span>
+<span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>    </div>
+    <p>this tells webpack to create dependency graphs starting at both app.js and vendors.js. <strong>These graphs are completely separate and independent of each other</strong>.</p>
+  </li>
+  <li>2.Multi Page Application
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+<span class="na">entry</span><span class="p">:</span> <span class="p">{</span>
+  <span class="na">pageOne</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/pageOne/index.js</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">pageTwo</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/pageTwo/index.js</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">pageThree</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/pageThree/index.js</span><span class="dl">'</span>
+<span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>    </div>
+    <p>telling webpack that we would like 3 separate dependency graphs.
+Use <code class="language-plaintext highlighter-rouge">CommonsChunkPlugin</code> to create bundles of shared application code between each page.</p>
+  </li>
+</ul>
+
+<h2 id="output-1">Output</h2>
+<p>tell webpack how to write the compiled files to disk.while there can be multiple entry points, <strong>only one output configuration is specified</strong>.</p>
+
+<h3 id="usage">Usage</h3>
+<p>The <strong>minimum requirements</strong> for the output property is to set its value to an object including <strong>two things</strong> :filename,path.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bundle.js</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/home/proj/public/assets</span><span class="dl">'</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h3 id="options">Options</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">output.chunkFilename</code> : The filename of non-entry chunks as a relative path inside the output.path directory.(非入口文件的命名规则,在按需加载（异步）模块的时候，这样的文件是没有被列在entry中的，如使用CommonJS的方式异步加载模块)</li>
+  <li><code class="language-plaintext highlighter-rouge">output.crossOriginLoading</code> : enables cross-origin loading of chunks.</li>
+  <li><code class="language-plaintext highlighter-rouge">output.devtoolLineToLine</code> : Enable line-to-line mapped mode for all/specified modules.</li>
+  <li><code class="language-plaintext highlighter-rouge">output.filename</code> : Specifies the name of each output file on disk.filename is used solely for naming the individual files.（可以指定文件的hash值，如<code class="language-plaintext highlighter-rouge">filename: '[name].js',</code>，可选的项包括：<code class="language-plaintext highlighter-rouge">[name]</code>、<code class="language-plaintext highlighter-rouge">[hash]</code>、<code class="language-plaintext highlighter-rouge">[chunkhash]</code>）</li>
+  <li><code class="language-plaintext highlighter-rouge">output.hotUpdateChunkFilename</code> : The filename of the <code class="language-plaintext highlighter-rouge">Hot Update Chunks</code>. They are inside the output.path directory.Default: <code class="language-plaintext highlighter-rouge">"[id].[hash].hot-update.js"</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">output.hotUpdateFunction</code> : <strong>The JSONP function used by webpack for async loading of hot update chunks</strong>.Default: <code class="language-plaintext highlighter-rouge">"webpackHotUpdate"</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">output.hotUpdateMainFilename</code> : The filename of the Hot Update Main File. Default: <code class="language-plaintext highlighter-rouge">"[hash].hot-update.json"</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">output.jsonpFunction</code> : The JSONP function used by webpack for async loading of chunks. Default: <code class="language-plaintext highlighter-rouge">"webpackJsonp"</code>.(A shorter function may reduce the file size a bit. Use a different identifier when having multiple webpack instances on a single page.)</li>
+  <li><code class="language-plaintext highlighter-rouge">output.library</code> : If set, export the bundle as library. output.library is the name.</li>
+  <li><code class="language-plaintext highlighter-rouge">output.libraryTarget</code> : format to export the library : var,this,commonjs,commonjs2,amd,umd.</li>
+  <li><code class="language-plaintext highlighter-rouge">output.path</code> : The output directory as an absolute path (required).
+```js
+// config.js
+output: {
+  path: “/home/proj/public/assets”,
+  publicPath: “/assets/”
+}</li>
+</ul>
+
+<p>// index.html</p>
+<head>
+  <link href="/assets/spinner.gif" />
+</head>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* `output.sourceMapFilename` : The filename of the SourceMaps for the JavaScript files.Default: `"[file].map"`.
+
+
+## Loaders
+Loaders are transformations that are applied on the source code of a module. 
+the following specifications define the identical loader usage:
+```js
+{test: /\.css$/, loader: 'css-loader'}
+// or equivalently
+{test: /\.css$/, use: 'css-loader'}
+// or equivalently
+{test: /\.css$/, use: {
+  loader: 'css-loader',
+  options: {}
+}}
+</code></pre></div></div>
+<h3 id="configuration">Configuration</h3>
+<p>There are <strong>three ways to use loaders</strong> in your application:</p>
+<ul>
+  <li>via configuration
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nl">rules</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">css$/</span><span class="p">,</span>
+      <span class="na">use</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="na">loader</span><span class="p">:</span> <span class="dl">'</span><span class="s1">style-loader</span><span class="dl">'</span><span class="p">},</span>
+        <span class="p">{</span>
+          <span class="na">loader</span><span class="p">:</span> <span class="dl">'</span><span class="s1">css-loader</span><span class="dl">'</span><span class="p">,</span>
+          <span class="na">options</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">modules</span><span class="p">:</span> <span class="kc">true</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>explicit in the require statement
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Separate loaders from the resource with !</span>
+<span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">style-loader!css-loader?modules!./styles.css</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div>    </div>
+    <p><strong>It’s possible to overwrite any loaders in the configuration by prefixing the entire rule with !</strong>
+Options can be passed with a query parameter, just like on the web (?key=value&amp;foo=bar). It’s also possible to use a JSON object (?{“key”:”value”,”foo”:”bar”}).</p>
+  </li>
+  <li>via CLI
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>webpack --module-bind jade-loader --module-bind 'css=style-loader!css-loader'
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="loader-features">Loader Features</h3>
+<ul>
+  <li>Loaders can be chained. They are applied in a pipeline to the resource. A chain of loaders are compiled chronologically. <strong>The first loader in a chain of loaders returns a value to the next</strong>. At the end loader, webpack expects JavaScript to be returned.</li>
+  <li>Loaders can be synchronous or asynchronous.</li>
+  <li>Loaders run in Node.js and can do everything that’s possible there.</li>
+  <li>Loaders accept query parameters. This can be used to pass configuration to the loader.</li>
+  <li>Loaders can also be configured with an options object.</li>
+  <li>Normal modules can export a loader in addition to the normal main via package.json with the loader field.</li>
+  <li>Plugins can give loaders more features.</li>
+  <li>Loaders can emit additional arbitrary files.</li>
+</ul>
+
+<h3 id="resolving-loaders">Resolving Loaders</h3>
+<p>Loaders <strong>follow the standard module resolution</strong>. In most cases it will be loaders from the module path (node_modules).
+The loader name convention and precedence search order is defined by resolveLoader.moduleTemplates within the webpack configuration API.</p>
+
+<h2 id="plugins-1">Plugins</h2>
+<p>Plugins are the backbone of webpack. <strong>webpack itself is built on the same plugin system</strong> that you use in your webpack configuration!
+They also serve the purpose of <strong>doing anything else that a loader cannot do</strong>.</p>
+
+<h3 id="anatomy">Anatomy</h3>
+<p>A webpack plugin is a JavaScript object that has an apply property. This apply property is called by the webpack compiler, giving access to the entire compilation lifecycle.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ConsoleLogOnBuildWebpackPlugin.js</span>
+<span class="kd">function</span> <span class="nx">ConsoleLogOnBuildWebpackPlugin</span><span class="p">()</span> <span class="p">{</span>
+
+<span class="p">};</span>
+
+<span class="nx">ConsoleLogOnBuildWebpackPlugin</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">apply</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">compiler</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">compiler</span><span class="p">.</span><span class="nx">plugin</span><span class="p">(</span><span class="dl">'</span><span class="s1">run</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">compiler</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">The webpack build process is starting!!!</span><span class="dl">"</span><span class="p">);</span>
+
+    <span class="nx">callback</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h3 id="usage-1">Usage</h3>
+<p>Since plugins can take arguments/options, you must pass a new instance to the plugins property in your webpack configuration.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">plugins</span><span class="p">:</span> <span class="p">[</span>
+  <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">UglifyJsPlugin</span><span class="p">(),</span>
+  <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span><span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/index.html</span><span class="dl">'</span><span class="p">})</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<h2 id="configuration-1">Configuration</h2>
+<p>webpack’s configuration file is a JavaScript file that exports an object(it’s a standard Node.js CommonJS module,).</p>
+
+<p>You should NOT use the following things. Technically you could use them, but it’s not recommended:</p>
+<ul>
+  <li>Access CLI arguments, when using the webpack CLI (instead write your own CLI, or use –env)</li>
+  <li>Export non-deterministic values (calling webpack twice should result in the same output files)</li>
+  <li>Write long configurations (instead split the configuration into multiple files)</li>
+</ul>
+
+<p>The Simplest Configuration,Multiple Targets,Using TypeScript,Using JSX.略。</p>
+
+<h2 id="modules">Modules</h2>
+<p>In modular programming, developers break programs up into discrete chunks of functionality called a module.</p>
+
+<h3 id="what-is-a-webpack-module">What is a webpack Module</h3>
+<p>In contrast to Node.js modules, webpack modules can express their dependencies in a variety of ways：</p>
+<ul>
+  <li>An ES2015 import statement</li>
+  <li>A CommonJS require() statement</li>
+  <li>An AMD define and require statement</li>
+  <li>An @import statement inside of a css/sass/less file.</li>
+  <li>An image url in a stylesheet (url(…)) or html (&lt;img src=…&gt;) file.</li>
+</ul>
+
+<h3 id="supported-module-types">Supported Module Types</h3>
+<p>略。</p>
+
+<h2 id="module-resolution">Module Resolution</h2>
+<p>A resolver is a library which helps in locating a module by its absolute path.</p>
+
+<p>webpack can resolve three kinds of file paths：</p>
+<ul>
+  <li>Absolute paths
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import "/home/me/file";
+import "C:\\Users\\me\\file";
+</code></pre></div>    </div>
+  </li>
+  <li>Relative paths
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import "../src/file1";
+import "./file2";
+</code></pre></div>    </div>
+  </li>
+  <li>Module paths
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import "module";
+import "module/lib/file";
+</code></pre></div>    </div>
+    <p>Modules are searched for inside all directories <strong>specified in resolve.modules</strong>. You can replace the original module path by an alternate path by creating an alias for it using <strong>resolve.alias configuration option</strong>.Once the path is resolved based on the above rule, the resolver checks to see if the path points to a file or a directory.</p>
+  </li>
+</ul>
+
+<p><strong>If the path points to a file</strong>:</p>
+<ul>
+  <li>If the path has a file extension, then the file is bundled straightaway.</li>
+  <li>Otherwise, the file extension is resolved using the <code class="language-plaintext highlighter-rouge">resolve.extensions</code> option, which tells the resolver which extensions (eg - .js, .jsx) are acceptable for resolution.</li>
+</ul>
+
+<p><strong>If the path points to a folder</strong>:
+then the following steps are taken to find the right file with the right extension:</p>
+<ul>
+  <li>If the folder contains a <code class="language-plaintext highlighter-rouge">package.json</code> file, then fields specified in <code class="language-plaintext highlighter-rouge">resolve.mainFields</code> configuration option are looked up in order, and the first such field in package.json determines the file path.</li>
+  <li>If there is no package.json or if the main fields do not return a valid path, file names specified in the <code class="language-plaintext highlighter-rouge">resolve.mainFiles</code> configuration option are looked for in order, to see if a matching filename exists in the imported/required directory .</li>
+  <li>The file extension is then resolved in a similar way using the resolve.extensions option.</li>
+</ul>
+
+<h3 id="resolving-loaders-1">Resolving Loaders</h3>
+<p>This follows the same rules as those specified for file resolution. But the resolveLoader configuration option can be used to have separate resolution rules for loaders.</p>
+
+<h3 id="caching">Caching</h3>
+<p>Every filesystem access is cached, so that multiple parallel or serial requests to the same file occur faster. In watch mode, only modified files are evicted from the cache. If watch mode is off, then the cache gets purged before every compilation.</p>
+
+<h2 id="dependency-graph">Dependency Graph</h2>
+<p>Any time one file depends on another, webpack treats this as a dependency.(This allows webpack to take non-code assets, such as images or web fonts, and also provide them as dependencies).</p>
+
+<p>When webpack processes your application, it starts from a list of modules defined on the command line or in its config file. Starting from these entry points, webpack recursively builds a dependency graph that includes every module your application needs, then packages all of those modules into a small number of bundles - often, just one - to be loaded by the browser.</p>
+
+<h2 id="targets">Targets</h2>
+<p>webpack offers multiple deployment targets that you can set in your webpack configuration.
+Each target has a variety of deployment/environment specific additions, support to fit its needs.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module.exports = {
+  target: 'node'
+};
+</code></pre></div></div>
+<p>In the example above, using node webpack will compile for usage in a Node.js-like environment (uses Node.js require to load chunks and not touch any built in modules like fs or path).</p>
+
+<h2 id="hot-module-replacement">Hot Module Replacement</h2>
+<p>Hot Module Replacement (HMR) exchanges, adds, or removes modules while an application is running without a page reload.</p>
+
+<h3 id="how-it-works">How It Works</h3>
+
+<p><strong>From The App View</strong></p>
+<ul>
+  <li>The app code asks the <strong>HMR runtime</strong> to check for updates.</li>
+  <li>The HMR runtime downloads the updates (asynchronously) and tells the app code that an update is available.</li>
+  <li>The app code then asks the HMR runtime to apply the updates.</li>
+  <li>The HMR runtime applies the update (synchronously).</li>
+</ul>
+
+<p><strong>From The Compiler (webpack) View</strong>
+In addition to the normal assets, the compiler needs to <strong>emit an “update” to allow updating from previous version to the new version</strong>. The “update” consists of two parts:</p>
+<ul>
+  <li>The update manifest (JSON)</li>
+  <li>One or more update chunks (JavaScript)
+The manifest contains the new compilation hash and a list of all update chunks.Each update chunk contains code for all updated modules in the respective chunk (or a flag indicating that the module was removed).The compiler makes sure that module IDs and chunk IDs are consistent between these builds. It typically stores these IDs in memory (for example, when using webpack-dev-server), but it’s also possible to store them in a JSON file.</li>
+</ul>
+
+<p><strong>From The Module View</strong>
+HMR is an opt-in feature that <strong>only affects modules containing HMR code</strong>. One example would be patching styling through the style-loader. <strong>In order for patching to work, style-loader implements the HMR interface</strong>; when it receives an update through HMR, it replaces the old styles with the new ones.
+a single handler can handle an update to a complete module tree. If a single module in this tree is updated, the complete module tree is reloaded (only reloaded, not transferred).</p>
+
+<p><strong>From The HMR Runtime View</strong>
+略。</p>
+
+<h3 id="what-it-can-be-used-for">What It Can Be Used For</h3>
+<p>webpack-dev-server supports a hot mode in which it tries to <strong>update with HMR before trying to reload the whole page</strong>.</p>
+
+<h1 id="guides">Guides</h1>
+
+<h2 id="getting-started">Getting Started</h2>
+<p>webpack simplifies your workflow by quickly constructing a dependency graph of your application and bundling them in the right order.</p>
+
+<p>略。</p>
+
+<h2 id="installation">Installation</h2>
+<p>If you are using npm scripts in your project, npm will try to look for webpack installation in your local modules for which this installation technique is useful.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">scripts</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">start</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">webpack --config mywebpack.config.js</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><strong>This is standard and recommended practice</strong>.</p>
+
+<p>Note that a global webpack installation is not a recommended practice. This locks you down to a specific version of webpack and might fail in projects that use a different version.</p>
+
+<h2 id="migrating-from-v1-to-v2">Migrating from v1 to v2</h2>
+<p>略。</p>
+
+<h2 id="code-splitting">Code Splitting</h2>
+<p>split your code into various bundles which you can then <strong>load on demand</strong>.</p>
+
+<h3 id="resource-splitting-for-caching-and-parallel-loads">Resource splitting for caching and parallel loads</h3>
+<ul>
+  <li>Vendor code splitting : <code class="language-plaintext highlighter-rouge">CommonsChunkPlugin</code>.</li>
+  <li>CSS splitting : <code class="language-plaintext highlighter-rouge">ExtractTextWebpackPlugin</code>.</li>
+</ul>
+
+<h3 id="on-demand-code-splitting">On demand code-splitting</h3>
+<p>While resource splitting of the previous kind requires the user to specify the split points upfront in the configuration, one can also <strong>create dynamic split points in the application code</strong>.
+using import() or require.ensure().</p>
+
+<h2 id="code-splitting---css">Code Splitting - CSS</h2>
+
+<h3 id="importing-css">Importing CSS</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Import the CSS file like a JavaScript module</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">bootstrap/dist/css/bootstrap.css</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="using-css-loader">Using css-loader</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">rules</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">css$/</span><span class="p">,</span>
+            <span class="na">use</span><span class="p">:</span> <span class="dl">'</span><span class="s1">css-loader</span><span class="dl">'</span>
+        <span class="p">}]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>As a result, the CSS is bundled along with JavaScript.This has the disadvantage that you will not be able to utilize the browser’s ability to load CSS asynchronously and parallel. Instead, <strong>your page will have to wait until your whole JavaScript bundle is loaded</strong>, to style itself.</p>
+
+<h3 id="using-extracttextwebpackplugin">Using ExtractTextWebpackPlugin</h3>
+<p>you can generate a new bundle specifically for all the CSS modules and add them as a separate tag in the index.html:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">ExtractTextPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">extract-text-webpack-plugin</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+         <span class="na">rules</span><span class="p">:</span> <span class="p">[{</span>
+             <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">css$/</span><span class="p">,</span>
+             <span class="na">use</span><span class="p">:</span> <span class="nx">ExtractTextPlugin</span><span class="p">.</span><span class="nx">extract</span><span class="p">({</span>
+                 <span class="na">use</span><span class="p">:</span> <span class="dl">'</span><span class="s1">css-loader</span><span class="dl">'</span>
+             <span class="p">})</span>
+         <span class="p">}]</span>
+     <span class="p">},</span>
+     <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+         <span class="k">new</span> <span class="nx">ExtractTextPlugin</span><span class="p">(</span><span class="dl">'</span><span class="s1">styles.css</span><span class="dl">'</span><span class="p">),</span>
+     <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="code-splitting---libraries">Code Splitting - Libraries</h2>
+<p>略。</p>
+
+<h2 id="code-splitting---async">Code Splitting - Async</h2>
+<p>split your bundle into chunks which can be downloaded asynchronously at a later time.</p>
+
+<h3 id="dynamic-import-import">Dynamic import: import()</h3>
+<p>The ES2015 Loader spec defines import() as method to load ES2015 modules dynamically on runtime.import() takes the module name as argument and <strong>returns a Promise</strong>: <code class="language-plaintext highlighter-rouge">import(name) -&gt; Promise</code>.
+webpack treats import() as a split-point and puts the requested module in a separate chunk.</p>
+
+<p>fully dynamic statements, such as import(foo), will fail because <strong>webpack requires at least some file location information</strong>. This is because foo could potentially be any path to any file in your system or project. The import() must contain at least some information about where the module is located, so bundling can be limited to a specific directory or set of files.
+For example, import(<code class="language-plaintext highlighter-rouge">./locale/${language}.json</code>) will cause every .json file in the ./locale directory to be bundled into the split-point.</p>
+
+<h3 id="chunk-names">Chunk names</h3>
+<p>Since webpack 2.4.0, chunk names for dynamic imports can be specified using a “magic comment”.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span><span class="p">(</span><span class="cm">/* webpackChunkName: "my-chunk-name" */</span> <span class="dl">'</span><span class="s1">module</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="usage-with-babel">Usage with Babel</h3>
+<p>If you want to <strong>use import with Babel</strong>, you’ll need to install/add the <code class="language-plaintext highlighter-rouge">syntax-dynamic-import</code> plugin .</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save-dev babel-core babel-loader babel-plugin-syntax-dynamic-import babel-preset-es2015
+</code></pre></div></div>
+
+<p>webpack.config.js</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./index-es2015.js</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">dist.js</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">rules</span><span class="p">:</span> <span class="p">[{</span>
+      <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">js$/</span><span class="p">,</span>
+      <span class="na">exclude</span><span class="p">:</span> <span class="sr">/</span><span class="se">(</span><span class="sr">node_modules</span><span class="se">)</span><span class="sr">/</span><span class="p">,</span>
+      <span class="na">use</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="na">loader</span><span class="p">:</span> <span class="dl">'</span><span class="s1">babel-loader</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">options</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">presets</span><span class="p">:</span> <span class="p">[[</span><span class="dl">'</span><span class="s1">es2015</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">modules</span><span class="p">:</span> <span class="kc">false</span><span class="p">}]],</span>
+          <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">syntax-dynamic-import</span><span class="dl">'</span><span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">}]</span>
+    <span class="p">}]</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h3 id="usage-with-babel-and-asyncawait">Usage with Babel and async/await</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save-dev babel-plugin-transform-async-to-generator babel-plugin-transform-regenerator babel-plugin-transform-runtime
+</code></pre></div></div>
+
+<p>index-es2017.js</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">determineDate</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">moment</span> <span class="o">=</span> <span class="k">await</span> <span class="k">import</span><span class="p">(</span><span class="dl">'</span><span class="s1">moment</span><span class="dl">'</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">moment</span><span class="p">().</span><span class="nx">format</span><span class="p">(</span><span class="dl">'</span><span class="s1">LLLL</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">determineDate</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">str</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">));</span>
+</code></pre></div></div>
+
+<p>webpack.config.js</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module.exports = {
+  entry: './index-es2017.js',
+  output: {
+    filename: 'dist.js',
+  },
+  module: {
+    rules: [{
+      test: /\.js$/,
+      exclude: /(node_modules)/,
+      use: [{
+        loader: 'babel-loader',
+        options: {
+          presets: [['es2015', {modules: false}]],
+          plugins: [
+            'syntax-dynamic-import',
+            'transform-async-to-generator',
+            'transform-regenerator',
+            'transform-runtime'
+          ]
+        }
+      }]
+    }]
+  }
+};
+
+</code></pre></div></div>
+
+<h3 id="requireensure">require.ensure()</h3>
+<p>require.ensure() is specific to webpack and superseded by import().
+略。</p>
+
+<h2 id="building-for-production">Building for Production</h2>
+<p>Running:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>webpack -p
+</code></pre></div></div>
+<p>or:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>webpack --optimize-minimize --define process.env.NODE_ENV="'production'"
+</code></pre></div></div>
+<p>This performs the following steps:</p>
+<ul>
+  <li>Minification(using UglifyJsPlugin)</li>
+  <li>Runs the LoaderOptionsPlugin</li>
+  <li>Sets the Node environment variable</li>
+</ul>
+
+<p>Specifying –optimize-minimize on the command line, the following plugin configuration is added:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins:[
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: options.devtool &amp;&amp; (options.devtool.indexOf("sourcemap") &gt;= 0 || options.devtool.indexOf("source-map") &gt;= 0)
+    })
+]
+</code></pre></div></div>
+
+<p>We encourage you to have Source Maps enabled in production. They are useful for debugging and to run benchmark tests. webpack can generate inline Source Maps included in the bundles or separated files.</p>
+
+<p>Running webpack -p (or –define process.env.NODE_ENV=”‘production’”) invokes the <code class="language-plaintext highlighter-rouge">DefinePlugin</code> in the following way:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">plugins</span><span class="p">:[</span>
+  <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">DefinePlugin</span><span class="p">({</span>
+    <span class="dl">'</span><span class="s1">process.env.NODE_ENV</span><span class="dl">'</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="dl">'</span><span class="s1">production</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">})</span>
+<span class="p">]</span>
+</code></pre></div></div>
+<p>The DefinePlugin performs search-and-replace operations on the original source code. Any occurrence of process.env.NODE_ENV in the imported code is replaced by “production”. Thus, checks like if (process.env.NODE_ENV !== ‘production’) console.log(‘…’) are evaluated to if (false) console.log(‘…’) and finally minified away using UglifyJS.</p>
+
+<h3 id="the-manual-way-configuring-webpack-for-multiple-environments">The manual way: Configuring webpack for multiple environments</h3>
+<p>the easiest way is to write separate js files for each environment.
+Have the following snippet in your webpack.config.js:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function buildConfig(env) {
+  return require('./config/' + env + '.js')(env)
+}
+
+module.exports = buildConfig;
+</code></pre></div></div>
+<p>And from our package.json, where we build our application using webpack, the command goes like this:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"build:dev": "webpack --env=dev --progress --profile --colors",
+"build:dist": "webpack --env=prod --progress --profile --colors",
+</code></pre></div></div>
+<p>we passed the environment variable to our webpack.config.js file. The environment variable is then passed to buildConfig method which simply loads the right js file for the build.</p>
+
+<p>An advanced approach would be to have a base configuration file, put in all common functionalities, and then have environment specific files and simply use ‘webpack-merge’ to merge them. This would help to avoid code repetitions.</p>
+
+<p>For example, you could have all your base configurations like resolving your js, ts, png, jpeg, json and so on.. in a common base file :
+base.js</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="na">entry</span><span class="p">:</span> <span class="p">{</span>
+            <span class="dl">'</span><span class="s1">polyfills</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/polyfills.ts</span><span class="dl">'</span><span class="p">,</span>
+            <span class="dl">'</span><span class="s1">vendor</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/vendor.ts</span><span class="dl">'</span><span class="p">,</span>
+            <span class="dl">'</span><span class="s1">main</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/main.ts</span><span class="dl">'</span>
+
+        <span class="p">},</span>
+        <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">'</span><span class="s1">/../dist/assets</span><span class="dl">'</span><span class="p">),</span>
+            <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">[name].bundle.js</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">publicPath</span><span class="p">:</span> <span class="nx">publicPath</span><span class="p">,</span>
+            <span class="na">sourceMapFilename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">[name].map</span><span class="dl">'</span>
+        <span class="p">},</span>
+        <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">.ts</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">.js</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">.json</span><span class="dl">'</span><span class="p">],</span>
+            <span class="na">modules</span><span class="p">:</span> <span class="p">[</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">'</span><span class="s1">src</span><span class="dl">'</span><span class="p">),</span> <span class="dl">'</span><span class="s1">node_modules</span><span class="dl">'</span><span class="p">]</span>
+
+        <span class="p">},</span>
+        <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">rules</span><span class="p">:</span> <span class="p">[{</span>
+                <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">ts$/</span><span class="p">,</span>
+                <span class="na">use</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="dl">'</span><span class="s1">awesome-typescript-loader</span><span class="dl">'</span><span class="p">,</span>
+                    <span class="dl">'</span><span class="s1">angular2-template-loader</span><span class="dl">'</span>
+                <span class="p">],</span>
+                <span class="na">exclude</span><span class="p">:</span> <span class="p">[</span><span class="sr">/</span><span class="se">\.(</span><span class="sr">spec|e2e</span><span class="se">)\.</span><span class="sr">ts$/</span><span class="p">]</span>
+            <span class="p">},</span> <span class="p">{</span>
+                <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">css$/</span><span class="p">,</span>
+                <span class="na">use</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">to-string-loader</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">css-loader</span><span class="dl">'</span><span class="p">]</span>
+            <span class="p">},</span> <span class="p">{</span>
+                <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">jpg|png|gif</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span>
+                <span class="na">use</span><span class="p">:</span> <span class="dl">'</span><span class="s1">file-loader</span><span class="dl">'</span>
+            <span class="p">},</span> <span class="p">{</span>
+                <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">woff|woff2|eot|ttf|svg</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span>
+                <span class="na">use</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="na">loader</span><span class="p">:</span> <span class="dl">'</span><span class="s1">url-loader</span><span class="dl">'</span><span class="p">,</span>
+                  <span class="na">options</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="na">limit</span><span class="p">:</span> <span class="mi">100000</span>
+                  <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}],</span>
+        <span class="p">},</span>
+        <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+            <span class="k">new</span> <span class="nx">ForkCheckerPlugin</span><span class="p">(),</span>
+
+            <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">CommonsChunkPlugin</span><span class="p">({</span>
+                <span class="na">name</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">polyfills</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">vendor</span><span class="dl">'</span><span class="p">].</span><span class="nx">reverse</span><span class="p">()</span>
+            <span class="p">}),</span>
+            <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
+                <span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">src/index.html</span><span class="dl">'</span><span class="p">,</span>
+                <span class="na">chunksSortMode</span><span class="p">:</span> <span class="dl">'</span><span class="s1">dependency</span><span class="dl">'</span>
+            <span class="p">})</span>
+        <span class="p">],</span>
+    <span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>And then merge this base config with an environment specific configuration file using ‘webpack-merge’.</p>
+
+<p>prod.js</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">webpackMerge</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpack-merge</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">commonConfig</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./base.js</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">webpackMerge</span><span class="p">(</span><span class="nx">commonConfig</span><span class="p">(),</span> <span class="p">{</span>
+        <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+            <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">LoaderOptionsPlugin</span><span class="p">({</span>
+                <span class="na">minimize</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="na">debug</span><span class="p">:</span> <span class="kc">false</span>
+            <span class="p">}),</span>
+            <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">DefinePlugin</span><span class="p">({</span>
+                <span class="dl">'</span><span class="s1">process.env</span><span class="dl">'</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="dl">'</span><span class="s1">NODE_ENV</span><span class="dl">'</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="dl">'</span><span class="s1">production</span><span class="dl">'</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}),</span>
+            <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">UglifyJsPlugin</span><span class="p">({</span>
+                <span class="na">beautify</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="na">mangle</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="na">screw_ie8</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                    <span class="na">keep_fnames</span><span class="p">:</span> <span class="kc">true</span>
+                <span class="p">},</span>
+                <span class="na">compress</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="na">screw_ie8</span><span class="p">:</span> <span class="kc">true</span>
+                <span class="p">},</span>
+                <span class="na">comments</span><span class="p">:</span> <span class="kc">false</span>
+            <span class="p">})</span>
+        <span class="p">]</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="caching-1">Caching</h2>
+<p>To enable long-term caching of static resources produced by webpack:</p>
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">[chunkhash]</code> to add a content-dependent cache-buster to each file.</li>
+  <li>Extract the webpack manifest into a separate file.</li>
+  <li>Ensure that the entry point chunk containing the bootstrapping code doesn’t change hash over time for the same set of dependencies.</li>
+</ul>
+
+<h3 id="the-problem">The problem</h3>
+<p>Each webpack build generates a unique hash which can be used to compose a filename, by including output placeholders.But the problem here is, builds after any file update will update all filenames and clients will have to re-download all application code.</p>
+
+<h3 id="generating-unique-hashes-for-each-file">Generating unique hashes for each file</h3>
+<p>webpack allows you to generate hashes depending on file contents, by replacing the placeholder [hash] with [chunkhash].</p>
+
+<p><strong>Don’t use [chunkhash] in development</strong> since this will increase compilation time. Separate development and production configs and use [name].js for development and [name].[chunkhash].js in production.</p>
+
+<h3 id="get-filenames-from-webpack-compilation-stats">Get filenames from webpack compilation stats</h3>
+<p>In order to reference a correct file(with right hash) in the HTML, we’ll need information about our build. This can be extracted from webpack compilation stats by using this plugin</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">plugins</span><span class="p">:</span> <span class="p">[</span>
+  <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">plugin</span><span class="p">(</span><span class="dl">"</span><span class="s2">done</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">stats</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">fs</span><span class="dl">"</span><span class="p">).</span><span class="nx">writeFileSync</span><span class="p">(</span>
+        <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">build</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">stats.json</span><span class="dl">"</span><span class="p">),</span>
+        <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">stats</span><span class="p">.</span><span class="nx">toJson</span><span class="p">()));</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></div>
+<p>Alternatively, just use one of these plugins to export JSON files:</p>
+<ul>
+  <li>webpack-manifest-plugin</li>
+  <li>assets-webpack-plugin</li>
+</ul>
+
+<h3 id="deterministic-hashes">Deterministic hashes</h3>
+<p>To minimize the size of generated files, webpack uses identifiers instead of module names. <strong>During compilation, identifiers are generated, mapped to chunk filenames and then put into a JavaScript object called <code class="language-plaintext highlighter-rouge">chunk manifest</code></strong>. To generate identifiers that are preserved over builds, webpack supplies the <code class="language-plaintext highlighter-rouge">NamedModulesPlugin</code> (recommended for development) and <code class="language-plaintext highlighter-rouge">HashedModuleIdsPlugin</code> (recommended for production).The chunk manifest (<strong>along with bootstrapping/runtime code</strong>) is then <strong>placed into the entry chunk</strong> and it is crucial for webpack-packaged code to work.</p>
+
+<p>The problem with this, is the same as before: Whenever we change any part of the code it will, even if the rest of its contents wasn’t altered, update our entry chunk to include the new manifest. we should use <code class="language-plaintext highlighter-rouge">ChunkManifestWebpackPlugin</code>, which will <strong>extract the manifest to a separate JSON file</strong>. <strong>This replaces the chunk manifest with a variable</strong> in the webpack runtime. But we can do even better; we can <strong>extract the runtime</strong> into a separate entry by using CommonsChunkPlugin.</p>
+
+<p><strong>the final webpack.config.js</strong>:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">path</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">webpack</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">ChunkManifestPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">chunk-manifest-webpack-plugin</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">WebpackChunkHash</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">webpack-chunk-hash</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">vendor</span><span class="p">:</span> <span class="dl">"</span><span class="s2">./src/vendor.js</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// vendor reference file(s)</span>
+    <span class="na">main</span><span class="p">:</span> <span class="dl">"</span><span class="s2">./src/index.js</span><span class="dl">"</span> <span class="c1">// application code</span>
+  <span class="p">},</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">build</span><span class="dl">"</span><span class="p">),</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="dl">"</span><span class="s2">[name].[chunkhash].js</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">chunkFilename</span><span class="p">:</span> <span class="dl">"</span><span class="s2">[name].[chunkhash].js</span><span class="dl">"</span>
+  <span class="p">},</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">CommonsChunkPlugin</span><span class="p">({</span>
+      <span class="na">name</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">vendor</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">manifest</span><span class="dl">"</span><span class="p">],</span> <span class="c1">// vendor libs + extracted manifest</span>
+      <span class="na">minChunks</span><span class="p">:</span> <span class="kc">Infinity</span><span class="p">,</span>
+    <span class="p">}),</span>
+    <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">HashedModuleIdsPlugin</span><span class="p">(),</span>
+    <span class="k">new</span> <span class="nx">WebpackChunkHash</span><span class="p">(),</span>
+    <span class="k">new</span> <span class="nx">ChunkManifestPlugin</span><span class="p">({</span>
+      <span class="na">filename</span><span class="p">:</span> <span class="dl">"</span><span class="s2">chunk-manifest.json</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">manifestVariable</span><span class="p">:</span> <span class="dl">"</span><span class="s2">webpackManifest</span><span class="dl">"</span>
+    <span class="p">})</span>
+  <span class="p">]</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>The manifestVariable option is the name of the global variable where webpack will look for the manifest JSON. This should be defined before we require our bundle in HTML:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
+//&lt;![CDATA[
+window.webpackManifest = {"0":"main.5f020f80c23aa50ebedf.js","1":"vendor.81adc64d405c8b218485.js"}
+//]]&gt;
+&lt;/script&gt;
+</code></pre></div></div>
+
+<h2 id="development">Development</h2>
+<p>webpack-dev-server and webpack-dev-middleware use in-memory compilation, meaning that the bundle will not be saved to disk. This makes compiling faster and results in less mess on your file system.
+开发工具介绍，略。</p>
+
+<h2 id="development---vagrant">Development - Vagrant</h2>
+<p>略。</p>
+
+<h2 id="dependency-management">Dependency Management</h2>
+<p>略。</p>
+
+<h2 id="shimming">Shimming</h2>
+<p>different ways to help webpack understand these <em>broken modules</em>.
+略。</p>
+
+<h2 id="authoring-libraries">Authoring Libraries</h2>
+<p>If you are the author of a JavaScript library and are looking to streamline your bundle strategy then this document will help you.
+略。</p>
+
+<h2 id="improving-build-performance">Improving Build Performance</h2>
+<p>空。</p>
+
+<h2 id="comparison-with-other-bundlers">Comparison with other bundlers</h2>
+<p>略。</p>
+
+<h2 id="handling-compatibility">Handling Compatibility</h2>
+<p>空。</p>
+
+<h2 id="using-environment-variables">Using environment variables</h2>
+<p>The standard approach in Node.js modules can be applied: Set an environment variable when running webpack and refer to the variables using Node’s process.env. The variable NODE_ENV is commonly used as de-facto standard.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">UglifyJsPlugin</span><span class="p">({</span>
+       <span class="na">compress</span><span class="p">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">production</span><span class="dl">'</span>
+    <span class="p">})</span>
+  <span class="p">]</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="hot-module-replacement---react">Hot Module Replacement - React</h2>
+<p>HMR is particularly useful in applications using a single state tree since components are “dumb” and will reflect the latest application state, even after their source is changed and they are replaced.</p>
+
+<h3 id="project-config">Project Config</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save-dev webpack webpack-dev-server
+npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react
+npm install --save-dev style-loader css-loader
+npm install --save react react-dom react-hot-loader@next
+</code></pre></div></div>
+
+<p>.babelrc:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">presets</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">[</span><span class="dl">"</span><span class="s2">es2015</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span><span class="dl">"</span><span class="s2">modules</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">}],</span>
+    <span class="c1">// webpack understands the native import syntax, and uses it for tree shaking</span>
+
+    <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span>
+    <span class="c1">// Transpile React components to JavaScript</span>
+  <span class="p">],</span>
+  <span class="dl">"</span><span class="s2">plugins</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="dl">"</span><span class="s2">react-hot-loader/babel</span><span class="dl">"</span>
+    <span class="c1">// Enables React code to work with HMR.</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Setting Babel’s module plugin to false helps fix many issues.</p>
+
+<p>webpack.config.js:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">resolve</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpack</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">context</span><span class="p">:</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">'</span><span class="s1">src</span><span class="dl">'</span><span class="p">),</span>
+
+  <span class="na">entry</span><span class="p">:</span> <span class="p">[</span>
+    <span class="dl">'</span><span class="s1">react-hot-loader/patch</span><span class="dl">'</span><span class="p">,</span>
+    <span class="c1">// activate HMR for React</span>
+
+    <span class="dl">'</span><span class="s1">webpack-dev-server/client?http://localhost:8080</span><span class="dl">'</span><span class="p">,</span>
+    <span class="c1">// bundle the client for webpack-dev-server</span>
+    <span class="c1">// and connect to the provided endpoint</span>
+
+    <span class="dl">'</span><span class="s1">webpack/hot/only-dev-server</span><span class="dl">'</span><span class="p">,</span>
+    <span class="c1">// bundle the client for hot reloading</span>
+    <span class="c1">// only- means to only hot reload for successful updates</span>
+
+    <span class="dl">'</span><span class="s1">./index.js</span><span class="dl">'</span>
+    <span class="c1">// the entry point of our app</span>
+  <span class="p">],</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bundle.js</span><span class="dl">'</span><span class="p">,</span>
+    <span class="c1">// the output bundle</span>
+
+    <span class="na">path</span><span class="p">:</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">'</span><span class="s1">dist</span><span class="dl">'</span><span class="p">),</span>
+
+    <span class="na">publicPath</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span>
+    <span class="c1">// necessary for HMR to know where to load the hot update chunks</span>
+  <span class="p">},</span>
+
+  <span class="na">devtool</span><span class="p">:</span> <span class="dl">'</span><span class="s1">inline-source-map</span><span class="dl">'</span><span class="p">,</span>
+
+  <span class="na">devServer</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">hot</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">// enable HMR on the server</span>
+
+    <span class="na">contentBase</span><span class="p">:</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">'</span><span class="s1">dist</span><span class="dl">'</span><span class="p">),</span>
+    <span class="c1">// match the output path</span>
+
+    <span class="na">publicPath</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span>
+    <span class="c1">// match the output `publicPath`</span>
+  <span class="p">},</span>
+
+  <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">rules</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">jsx</span><span class="se">?</span><span class="sr">$/</span><span class="p">,</span>
+        <span class="na">use</span><span class="p">:</span> <span class="p">[</span> <span class="dl">'</span><span class="s1">babel-loader</span><span class="dl">'</span><span class="p">,</span> <span class="p">],</span>
+        <span class="na">exclude</span><span class="p">:</span> <span class="sr">/node_modules/</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">css$/</span><span class="p">,</span>
+        <span class="na">use</span><span class="p">:</span> <span class="p">[</span> <span class="dl">'</span><span class="s1">style-loader</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">css-loader?modules</span><span class="dl">'</span><span class="p">,</span> <span class="p">],</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">HotModuleReplacementPlugin</span><span class="p">(),</span>
+    <span class="c1">// enable HMR globally</span>
+
+    <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">NamedModulesPlugin</span><span class="p">(),</span>
+    <span class="c1">// prints more readable module names in the browser console on HMR updates</span>
+  <span class="p">],</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Setting set devServer: { hot: true } causes webpack will expose the module.hot API to our code</li>
+  <li>We <strong>use the module.hot hook to enable HMR for specific resources (App.js in this example)</strong>. The most important property here is module.hot.accept, which specifies how to handle changes to specific dependencies.</li>
+  <li>Whenever src/components/App.js or its dependencies are changed module.hot.accept will fire the render method. The render method will even fire when App.css is changed because it is included in App.js.</li>
+</ul>
+
+<p>src/index.js:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">ReactDOM</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-dom</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="p">{</span> <span class="nx">AppContainer</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-hot-loader</span><span class="dl">'</span><span class="p">;</span>
+<span class="c1">// AppContainer is a necessary wrapper component for HMR</span>
+
+<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./components/App</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">render</span> <span class="o">=</span> <span class="p">(</span><span class="nx">Component</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">AppContainer</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Component</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/AppContainer&gt;</span><span class="err">,
+</span>    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">render</span><span class="p">(</span><span class="nx">App</span><span class="p">);</span>
+
+<span class="c1">// Hot Module Replacement API</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">module</span><span class="p">.</span><span class="nx">hot</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">module</span><span class="p">.</span><span class="nx">hot</span><span class="p">.</span><span class="nx">accept</span><span class="p">(</span><span class="dl">'</span><span class="s1">./components/App</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">render</span><span class="p">(</span><span class="nx">App</span><span class="p">)</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="lazy-loading---react">Lazy Loading - React</h2>
+<p>略。</p>
+
+<h2 id="public-path">Public Path</h2>
+<p>specify the base path for all the assets on your application.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">path</span><span class="p">:</span> <span class="dl">"</span><span class="s2">/home/proj/cdn/assets/[hash]</span><span class="dl">"</span><span class="p">,</span>
+    <span class="nx">publicPath</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://cdn.example.com/assets/[hash]/</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Another possible use case is to set the public path on the fly. webpack exposes a global variable that let’s you do that, it’s called <strong>webpack_public_path</strong>. So in your application entry point, you can simply do this:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">__webpack_public_path__</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">ASSET_PATH</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="integration-with-tasktest-runners">Integration with task/test runners</h2>
+<p>webpack is a module bundler, like Browserify or Brunch. It is not a task runner. Make, Grunt, or Gulp are task runners. Task runners handle automation of common development tasks such as linting, building, or testing your project. Compared to bundlers, task runners have a higher level focus.</p>
+
+<p>Often webpack users use npm scripts as their task runner. Even though webpack core focuses on bundling, you can find a variety of extensions that allow you to use it in a task runner kind of way.</p>
+
+<h2 id="tree-shaking">Tree Shaking</h2>
+<p>先略。</p>
+
+<h2 id="webpack--typescript">webpack &amp; Typescript</h2>
+<p>To start using webpack with Typescript you need a couple of things:</p>
+<ul>
+  <li>Install the Typescript compiler in your project.</li>
+  <li>Install a Typescript loader (in this case we’re using ts-loader).</li>
+  <li>Create a tsconfig.json file to contain our TypeScript compilation configuration.</li>
+  <li>Create webpack.config.js to contain our webpack configuration.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save-dev typescript ts-loader
+</code></pre></div></div>
+<p>详略。</p>
+
+<h1 id="documentationconfiguration">DOCUMENTATION(Configuration)</h1>
+
+<h2 id="introduction-1">Introduction</h2>
+<p>webpack is fed via a configuration object. <strong>All the available configuration options</strong> are specified below:</p>
+
+<h2 id="configuration-languages">Configuration Languages</h2>
+<p>define you configuration files in any language. 
+略。</p>
+
+<h2 id="configuration-types">Configuration Types</h2>
+
+<h3 id="exporting-a-function-to-use-env">Exporting a function to use –env</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">env</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+      <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">UglifyJsPlugin</span><span class="p">({</span>
+         <span class="na">compress</span><span class="p">:</span> <span class="nx">env</span><span class="p">.</span><span class="nx">production</span> <span class="c1">// compress only in production build</span>
+      <span class="p">})</span>
+    <span class="p">]</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h3 id="exporting-a-promise">Exporting a Promise</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">resolve</span><span class="p">({</span>
+        <span class="na">entry</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./app.js</span><span class="dl">'</span><span class="p">,</span>
+        <span class="cm">/* ... */</span>
+      <span class="p">})</span>
+    <span class="p">},</span> <span class="mi">5000</span><span class="p">)</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="exporting-multiple-configurations">Exporting multiple configurations</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">[{</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./dist-amd.js</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">libraryTarget</span><span class="p">:</span> <span class="dl">'</span><span class="s1">amd</span><span class="dl">'</span>
+  <span class="p">},</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./app.js</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./dist-commonjs.js</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">libraryTarget</span><span class="p">:</span> <span class="dl">'</span><span class="s1">commonjs</span><span class="dl">'</span>
+  <span class="p">},</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./app.js</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">}]</span>
+</code></pre></div></div>
+
+<h2 id="entry-and-context">Entry and Context</h2>
+<h3 id="context">context</h3>
+<p>The base directory, an absolute path, for resolving entry points and loaders from configuration.By default the current directory is used.</p>
+
+<h3 id="entry-1">entry</h3>
+<p>The point or points to enter the application. 
+A dynamically loaded module is <strong>not an entry point</strong>.</p>
+
+<p>If a string or array of strings is passed, the chunk is named <code class="language-plaintext highlighter-rouge">main</code>. If an object is passed, each key is the name of a chunk, and the value describes the entrypoint for the chunk.</p>
+
+<h2 id="output-2">Output</h2>
+<p>instructing webpack on how and where it should output your bundles, assets and anything else you bundle or load with webpack.</p>
+
+<h3 id="outputchunkfilename">output.chunkFilename</h3>
+<p>determines the name of <strong>on-demand loaded chunk files</strong>.</p>
+
+<h3 id="outputcrossoriginloading">output.crossOriginLoading</h3>
+<p>Only used when target is web, which uses JSONP for loading on-demand chunks, by adding script tags.</p>
+
+<h3 id="outputhashfunction">output.hashFunction</h3>
+<h3 id="outputhashdigest">output.hashDigest</h3>
+<h3 id="outputhashdigestlength">output.hashDigestLength</h3>
+<h3 id="outputhashsalt">output.hashSalt</h3>
+
+<h3 id="outputfilename">output.filename</h3>
+<p>determines the name of each output bundle. The default value is “[name].js”.
+notes：</p>
+<ul>
+  <li>this option is called filename but you are still allowed to something like “js/[name]/bundle.js” to create a folder structure.</li>
+  <li>this options does not affect output files for on-demand-loaded chunks. For these files the output.chunkFilename option is used.</li>
+  <li>It also doesn’t affect files created by loaders. For these files see loader options.</li>
+  <li>The lengths of [hash] and [chunkhash] can be specified using [hash:16] (defaults to 20). （Alternatively, specify output.hashDigestLength to configure the length globally.）</li>
+  <li>When using the ExtractTextWebpackPlugin, use [contenthash] to obtain a hash of the extracted file (neither [hash] nor [chunkhash] work).</li>
+</ul>
+
+<h3 id="outputhotupdatechunkfilename">output.hotUpdateChunkFilename</h3>
+<h3 id="outputhotupdatefunction">output.hotUpdateFunction</h3>
+<h3 id="outputhotupdatemainfilename">output.hotUpdateMainFilename</h3>
+
+<h3 id="outputjsonpfunction">output.jsonpFunction</h3>
+<p>Only used when target is web, which uses JSONP for loading on-demand chunks.
+This needs to be changed if multiple webpack runtimes (from different compilation) are used on the same webpage.</p>
+
+<h3 id="outputlibrary">output.library</h3>
+<h3 id="outputlibrarytarget">output.libraryTarget</h3>
+
+<h3 id="outputpath">output.path</h3>
+<p>The output directory as an absolute path.</p>
+
+<h3 id="outputpathinfo">output.pathinfo</h3>
+<p>Tell webpack to include comments in bundles <strong>with information about the contained modules</strong>. 
+This option defaults to false and should not be used in production, but it’s very useful in development when reading the generated code.</p>
+
+<h3 id="outputpublicpath">output.publicPath</h3>
+<p>specifies the public URL of the output directory when referenced in a browser. A relative URL is resolved relative to the HTML page (or <base /> tag). Server-relative URLs, protocol-relative URLs or absolute URLs are also possible and sometimes required, i. e. when hosting assets on a CDN.
+The value of the option is prefixed to every URL created by the runtime or loaders. 
+the value of this option **ends with / **in most cases.The default value is an empty string “”.</p>
+
+<p>The webpack-dev-server also takes a hint from publicPath, using it to determine where to serve the output files from.</p>
+
+<h3 id="outputsourcemapfilename">output.sourceMapFilename</h3>
+<p>only used when devtool uses a SourceMap option which writes an output file.</p>
+
+<h3 id="outputsourceprefix">output.sourcePrefix</h3>
+<p>Change the prefix for each line in the output bundles.</p>
+
+<h3 id="outputstrictmoduleexceptionhandling">output.strictModuleExceptionHandling</h3>
+<p>Tell webpack to remove a module from the module instance cache (require.cache) if it throws an exception when it is required.It defaults to false for performance reasons.</p>
+
+<h3 id="outputumdnameddefine">output.umdNamedDefine</h3>
+
+<h2 id="module">Module</h2>
+<p>determine how the different types of modules within a project will be treated.</p>
+
+<h3 id="modulenoparse">module.noParse</h3>
+<p>Prevent webpack from parsing any files matching the given regular expression(s). <strong>Ignored files should not have calls to import, require, define or any other importing mechanism</strong>. This can boost build performance when ignoring large libraries.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>noParse: /jquery|lodash/
+</code></pre></div></div>
+
+<h3 id="modulerules">module.rules</h3>
+<p>An array of Rules which are matched to requests when modules are created. These rules can modify how the module is created. They can apply loaders to the module, or modify the parser.</p>
+
+<h3 id="rule">Rule</h3>
+<p>A Rule can be separated into three parts — Conditions, Results and nested Rules.</p>
+<h4 id="rule-conditions">Rule conditions</h4>
+<p>There are two input values for the conditions:resource and issuer.When we import “./style.css” from app.js, the <strong>resource</strong> is /path/to/style.css and the <strong>issuer</strong> is /path/to/app.js.
+In a Rule the properties test, include, exclude and resource are matched with the resource and the property issuer is matched with the issuer.
+When using multiple conditions, all conditions must match.</p>
+
+<h4 id="rule-results">Rule results</h4>
+<p>Rule results are used only when the Rule condition matches.There are two output values of a Rule:</p>
+<ul>
+  <li>Applied loaders: An array of loaders applied to the resource.</li>
+  <li>Parser options: An options object which should be used to create the parser for this module.</li>
+</ul>
+
+<h3 id="nested-rules">Nested rules</h3>
+<p>Nested rules can be specified under the properties rules and oneOf.
+These rules are evaluated when the Rule condition matches.</p>
+
+<h3 id="ruleenforce">Rule.enforce</h3>
+<p>Specifies the category of the loader(“pre” | “post”). No value means normal loader.There is also an additional category “inlined loader” which are loaders applied inline of the import/require.</p>
+<ul>
+  <li>All loaders are sorted in the order <strong>post, inline, normal, pre</strong> and used in this order.</li>
+  <li>All normal loaders can be omitted (overridden) by prefixing ! in the request.</li>
+  <li>All normal and pre loaders can be omitted (overridden) by prefixing -! in the request.</li>
+  <li>All normal, post and pre loaders can be omitted (overridden) by prefixing !! in the request.</li>
+  <li>Inline loaders and ! prefixes should not be used as they are non-standard. They may be use by loader generated code.</li>
+</ul>
+
+<h3 id="ruleexclude">Rule.exclude</h3>
+<p>is a shortcut to Rule.resource.exclude.</p>
+
+<h3 id="ruleinclude">Rule.include</h3>
+<p>is a shortcut to Rule.resource.include.</p>
+
+<h3 id="ruleissuer">Rule.issuer</h3>
+<p>A Condition matched with the issuer.</p>
+
+<h3 id="ruleloader">Rule.loader</h3>
+<p>is a shortcut to Rule.use: [ { loader } ].</p>
+
+<h3 id="ruleloaders">Rule.loaders</h3>
+<p>is an alias to Rule.use. (It exists for compatibility reasons. Use Rule.use instead.)</p>
+
+<h3 id="ruleoneof">Rule.oneOf</h3>
+<p>An array of Rules from which only the first matching Rule is used when the Rule matches.</p>
+
+<h3 id="ruleoptions--rulequery">Rule.options / Rule.query</h3>
+<p>are shortcuts to Rule.use: [ { options } ]. (Rule.query only exists for compatibility reasons. Use Rule.options instead.)</p>
+
+<h3 id="ruleparser">Rule.parser</h3>
+<p>An object with parser options. All applied parser options are merged.</p>
+
+<h3 id="ruleresource">Rule.resource</h3>
+<p>A Condition matched with the resource.</p>
+
+<h3 id="ruleresourcequery">Rule.resourceQuery</h3>
+<p>A Condition matched with the resource query. The condition matches against a string that starts with a question mark (“?exampleQuery”).</p>
+
+<h3 id="rulerules">Rule.rules</h3>
+<p>An array of Rules that is also used when the Rule matches.</p>
+
+<h3 id="ruletest">Rule.test</h3>
+<p>is a shortcut to Rule.resource.test.</p>
+
+<h3 id="ruleuse">Rule.use</h3>
+<p>A list of UseEntries which are applied to modules. Each entry specifies a loader to be used.
+assing a string (i.e. <code class="language-plaintext highlighter-rouge">use: [ "style-loader" ]</code>) is a shortcut to the loader property (i.e. <code class="language-plaintext highlighter-rouge">use: [ { loader: "style-loader "} ]</code>).
+Loaders can be chained by passing multiple loaders, which will be applied <strong>from right to left</strong> (last to first configured).</p>
+
+<h3 id="condition">Condition</h3>
+<p>Conditions can be one of these:</p>
+<ul>
+  <li>A string: To match the input must start with the provided string. I. e. an absolute directory path, or absolute path to the file.</li>
+  <li>A RegExp: It’s tested with the input.</li>
+  <li>A function: It’s called with the input and must return a truthy value to match.</li>
+  <li>An array of Conditions: At least one of the Condition must match.</li>
+  <li>A object: All properties must match. Each property has a defined behavior.</li>
+</ul>
+
+<p>ie:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">{ test: Condition }</code>: The Condition must match. The convention is the provide a RegExp or array of RegExps here, but it’s not enforced.</li>
+  <li><code class="language-plaintext highlighter-rouge">{ include: Condition }</code>: The Condition must match. The convention is the provide a string or array of strings here, but it’s not enforced.</li>
+  <li><code class="language-plaintext highlighter-rouge">{ exclude: Condition }</code>: The Condition must NOT match. The convention is the provide a string or array of strings here, but it’s not enforced.</li>
+  <li><code class="language-plaintext highlighter-rouge">{ and: [Condition] }</code>: All Conditions must match.</li>
+  <li><code class="language-plaintext highlighter-rouge">{ or: [Condition] }</code>: Any Condition must match.</li>
+  <li><code class="language-plaintext highlighter-rouge">{ not: Condition }</code>: The Condition must NOT match.</li>
+</ul>
+
+<h3 id="useentry">UseEntry</h3>
+<p>It must have a loader property being a string. It is resolved relative to the configuration context with the <strong>loader resolving options</strong> (resolveLoader).It can have a options property being a string or object. This value is passed to the loader, which should interpret it as loader options.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  loader: "css-loader",
+  options: {
+    modules: true
+  }
+}
+</code></pre></div></div>
+
+<h3 id="module-contexts">Module Contexts</h3>
+<p>(Deprecated)</p>
+
+<h2 id="resolve">Resolve</h2>
+<p>change how <strong>modules</strong> are resolved.</p>
+
+<h3 id="resolve-1">resolve</h3>
+<p>Configure how modules are resolved. For example, when calling import “lodash” in ES2015, the resolve options can <strong>change where webpack goes to look for</strong> “lodash”.</p>
+
+<h3 id="resolvealias">resolve.alias</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">alias</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nl">Utilities</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">'</span><span class="s1">src/utilities/</span><span class="dl">'</span><span class="p">),</span>
+  <span class="nx">Templates</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">'</span><span class="s1">src/templates/</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Now, instead of using relative paths when importing like so:</span>
+<span class="k">import</span> <span class="nx">Utility</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../../utilities/utility</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">// you can use the alias:</span>
+<span class="k">import</span> <span class="nx">Utility</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">Utilities/utility</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>A trailing $ can also be added to the given object’s keys to signify an exact match:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">alias</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nx">xyz$</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">'</span><span class="s1">path/to/file.js</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">import</span> <span class="nx">Test1</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">xyz</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// Success, file.js is resolved and imported</span>
+<span class="k">import</span> <span class="nx">Test2</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">xyz/file.js</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// Error, /path/to/file.js/file.js is invalid</span>
+</code></pre></div></div>
+
+<h3 id="resolvealiasfields">resolve.aliasFields</h3>
+<p>Specify a field to be parsed.</p>
+
+<h3 id="resolvedescriptionfiles">resolve.descriptionFiles</h3>
+<p>The JSON files to use for descriptions.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>descriptionFiles: ["package.json"]
+</code></pre></div></div>
+
+<h3 id="resolveenforceextension">resolve.enforceExtension</h3>
+<p>If true, it will not allow extension-less files. So by default require(‘./foo’) works if ./foo has a .js extension, but with this enabled only require(‘./foo.js’) will work.</p>
+
+<h3 id="resolveenforcemoduleextension">resolve.enforceModuleExtension</h3>
+<p>Whether to require to use an extension for modules .</p>
+
+<h3 id="resolveextensions">resolve.extensions</h3>
+<p>Automatically resolve certain extensions. which is what <strong>enables users to leave off the extension when importing</strong>:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">File</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../path/to/file</span><span class="dl">'</span>
+</code></pre></div></div>
+<p>Using this will override the default array, meaning that webpack will no longer try to resolve modules using the default extensions. For modules that are imported with their extension, e.g. import SomeFile from “./somefile.ext”, to be properly resolved, <strong>a string containing “*” must be included in the array</strong>.</p>
+
+<h3 id="resolvemainfields">resolve.mainFields</h3>
+<p>this option will determine which fields in it’s package.json are checked.</p>
+
+<h3 id="resolvemainfiles">resolve.mainFiles</h3>
+<p>The filename to be used while resolving directories. Default:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">mainFiles</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">index</span><span class="dl">"</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="resolvemodules">resolve.modules</h3>
+<p>Tell webpack what directories should be searched when resolving modules.
+A relative path will be scanned similarly to how Node scans for node_modules, by <strong>looking through the current directory as well as it’s ancestors</strong> (i.e. ./node_modules, ../node_modules, and on).
+With an absolute path, it will only search in the given directory.</p>
+
+<p>defaults to:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">modules</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">node_modules</span><span class="dl">"</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="resolveunsafecache">resolve.unsafeCache</h3>
+<p>Enable aggressive, but unsafe, caching of modules.</p>
+
+<h3 id="resolveloader">resolveLoader</h3>
+<p>used only to resolve webpack’s loader packages.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nl">modules</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">node_modules</span><span class="dl">"</span><span class="p">],</span>
+  <span class="nx">extensions</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">.js</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.json</span><span class="dl">"</span><span class="p">],</span>
+  <span class="nx">mainFields</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">loader</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">main</span><span class="dl">"</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="resolveloadermoduleextensions">resolveLoader.moduleExtensions</h3>
+<p>The extensions which are tried when resolving a module (e.g. loaders).</p>
+
+<h3 id="resolveplugins">resolve.plugins</h3>
+<p>A list of additional resolve plugins which should be applied.</p>
+
+<h3 id="resolvesymlinks">resolve.symlinks</h3>
+<p>Whether to resolve symlinks to their symlinked location.</p>
+
+<h3 id="resolvecachepredicate">resolve.cachePredicate</h3>
+<p>A function which decides whether a request should be cached or not.</p>
+
+<h2 id="plugins-2">Plugins</h2>
+<p>customize the webpack build process in a variety of ways. webpack comes with a variety <strong>built-in plugins</strong> available under webpack.[plugin-name].</p>
+
+<h2 id="devserver">DevServer</h2>
+<p>webpack-dev-server.</p>
+
+<h3 id="devserver-1">devServer</h3>
+<p><strong>This set of options is picked up by webpack-dev-server</strong> and can be used to change its behavior in various ways.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">devServer</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nl">contentBase</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">dist</span><span class="dl">"</span><span class="p">),</span>
+  <span class="nx">compress</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">port</span><span class="p">:</span> <span class="mi">9000</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="devserverclientloglevel">devServer.clientLogLevel</h3>
+<p>Possible values are none, error, warning or info (default).</p>
+
+<h3 id="devservercompress">devServer.compress</h3>
+<p>Enable gzip compression for everything served.</p>
+
+<h3 id="devservercontentbase">devServer.contentBase</h3>
+<p>Tell the server where to serve content from. <strong>This is only necessary if you want to serve static files</strong>. devServer.publicPath will be used to determine where the bundles should be served from, and takes precedence.
+It is also possible to <strong>serve from multiple directories</strong>.</p>
+
+<h3 id="devserverfilename">devServer.filename</h3>
+<p>This option lets you reduce the compilations in lazy mode. By default in lazy mode, every request results in a new compilation. With filename, it’s possible to only compile when a certain file is requested.If output.filename is set to bundle.js and filename is used like this:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lazy: true,
+filename: "bundle.js"
+</code></pre></div></div>
+<p>It will now only compile the bundle when /bundle.js is requested.
+<strong>filename has no effect when used without lazy mode.</strong></p>
+
+<h3 id="devserverheaders">devServer.headers</h3>
+<p>Adds headers to all requests.</p>
+
+<h3 id="devserverhistoryapifallback">devServer.historyApiFallback</h3>
+<p>When using the HTML5 History API, the index.html page will likely have to be served in place of any 404 responses. Enable this by passing:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>historyApiFallback: true
+</code></pre></div></div>
+<p>By passing an object this behavior can be controlled further using options like rewrites:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">historyApiFallback</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nl">rewrites</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="na">from</span><span class="p">:</span> <span class="sr">/^</span><span class="se">\/</span><span class="sr">$/</span><span class="p">,</span> <span class="na">to</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/views/landing.html</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">from</span><span class="p">:</span> <span class="sr">/^</span><span class="se">\/</span><span class="sr">subpage/</span><span class="p">,</span> <span class="na">to</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/views/subpage.html</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">from</span><span class="p">:</span> <span class="sr">/./</span><span class="p">,</span> <span class="na">to</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/views/404.html</span><span class="dl">'</span> <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="devserverhost---cli-only">devServer.host - CLI only</h3>
+<p>Specify a host to use. By default this is localhost.</p>
+
+<h3 id="devserverhot">devServer.hot</h3>
+<p>Enable webpack’s Hot Module Replacement feature.</p>
+
+<h3 id="devserverhotonly">devServer.hotOnly</h3>
+<p>Enables Hot Module Replacement without page refresh as fallback in case of build failures.</p>
+
+<h3 id="devserverhttps">devServer.https</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">https</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nl">key</span><span class="p">:</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="dl">"</span><span class="s2">/path/to/server.key</span><span class="dl">"</span><span class="p">),</span>
+  <span class="nx">cert</span><span class="p">:</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="dl">"</span><span class="s2">/path/to/server.crt</span><span class="dl">"</span><span class="p">),</span>
+  <span class="nx">ca</span><span class="p">:</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="dl">"</span><span class="s2">/path/to/ca.pem</span><span class="dl">"</span><span class="p">),</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="devserverinline">devServer.inline</h3>
+<p>Toggle between the dev-server’s two different modes. By default the application will be served with inline mode enabled. This means that a script will be inserted in your bundle to take care of live reloading, and build messages will appear in the browser console.</p>
+
+<p>It is also possible to use iframe mode, which uses an &lt;iframe&gt; under a notification bar with messages about the build. To switch to iframe mode:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>inline: false
+</code></pre></div></div>
+
+<p>Inline mode is recommended when using Hot Module Replacement.</p>
+
+<h3 id="devserverlazy">devServer.lazy</h3>
+<p>When lazy is enabled, the dev-server will only compile the bundle when it gets requested. 
+watchOptions will have no effect when used with lazy mode.</p>
+
+<h3 id="devservernoinfo">devServer.noInfo</h3>
+<p>Errors and warnings will still be shown.</p>
+
+<h3 id="devserveroverlay">devServer.overlay</h3>
+<p>Shows a full-screen overlay in the browser when there are compiler errors or warnings.</p>
+
+<h3 id="devserverport">devServer.port</h3>
+<p>Specify a port number to listen for requests on.</p>
+
+<h3 id="devserverproxy">devServer.proxy</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">proxy</span><span class="p">:</span> <span class="p">{</span>
+  <span class="dl">"</span><span class="s2">/api</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://localhost:3000</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="devserverprogress">devServer.progress</h3>
+<p>Output running progress to console.</p>
+
+<h3 id="devserverpublic">devServer.public</h3>
+<h3 id="devserverpublicpath">devServer.publicPath</h3>
+
+<h3 id="devserverquiet">devServer.quiet</h3>
+<p>nothing except the initial startup information will be written to the console.</p>
+
+<h3 id="devserversetup">devServer.setup</h3>
+<p>Here you can access the Express app object and add your own custom middleware to it. 
+For example, to define custom handlers for some paths:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">setup</span><span class="p">(</span><span class="nx">app</span><span class="p">){</span>
+  <span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/some/path</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span> <span class="na">custom</span><span class="p">:</span> <span class="dl">'</span><span class="s1">response</span><span class="dl">'</span> <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="devserverstaticoptions">devServer.staticOptions</h3>
+<p>configure advanced options for serving static files from contentBase.</p>
+
+<h3 id="devserverstats">devServer.stats</h3>
+<p>precisely control what bundle information gets displayed.</p>
+
+<h3 id="devserverwatchcontentbase">devServer.watchContentBase</h3>
+<p>Tell the server to watch the files served by the devServer.contentBase option. File changes will trigger a full page reload.</p>
+
+<h3 id="devserverwatchoptions">devServer.watchOptions</h3>
+<p>Control options related to watching the files.</p>
+
+<p>webpack uses the file system to get notified of file changes. In some cases this does not work. For example, when using Network File System (NFS). Vagrant also has a lot of problems with this. In these cases, use polling:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">watchOptions</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nl">poll</span><span class="p">:</span> <span class="kc">true</span>  <span class="c1">// If this is too heavy on the file system, you can change this to an integer to set the interval in milliseconds.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="devtool">Devtool</h2>
+<p>controls if and how Source Maps are generated.
+略。</p>
+
+<h3 id="target">Target</h3>
+<p>webpack can compile for multiple environments or targets. To understand what a target is in detail, read the concepts.
+略。</p>
+
+<h2 id="watch-and-watchoptions">Watch and WatchOptions</h2>
+<h3 id="watch">watch</h3>
+<p>Watch mode is turned off by default.In webpack-dev-server and webpack-dev-middleware watch mode is enabled by default.</p>
+
+<h3 id="watchoptions">watchOptions</h3>
+<p>A set of options used to customize watch mode:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">watchOptions</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nl">aggregateTimeout</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+  <span class="nx">ignored</span><span class="p">:</span> <span class="o">/</span><span class="nx">node_modules</span><span class="o">/</span>
+  <span class="nx">poll</span><span class="p">:</span> <span class="mi">1000</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="externals">Externals</h2>
+<p>provides a way of excluding dependencies from the output bundles.</p>
+
+<p>Prevent bundling of certain imported packages and instead <strong>retrieve these external dependencies at runtime</strong>.</p>
+
+<p>For example, to include jQuery from a CDN instead of bundling it:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// index.html
+...
+&lt;script src="https://code.jquery.com/jquery-3.1.0.js"
+  integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+  crossorigin="anonymous"&gt;&lt;/script&gt;
+...
+
+// webpack.config.js
+externals: {
+  jquery: 'jQuery'
+}
+</code></pre></div></div>
+<p>the code shown below will still work:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">$</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">jquery</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.my-element</span><span class="dl">'</span><span class="p">).</span><span class="nx">animate</span><span class="p">(...);</span>
+</code></pre></div></div>
+
+<p>externals accepts various syntax and interprets them in different manners:</p>
+<ul>
+  <li>
+    <p>string
+jQuery in the externals indicates that your bundle will need jQuery variable in the global form.</p>
+  </li>
+  <li>array
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">externals</span><span class="p">:</span> <span class="p">{</span>
+<span class="nl">subtract</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">./math</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">subtract</span><span class="dl">'</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>object</li>
+  <li>function</li>
+  <li>regex</li>
+</ul>
+
+<h2 id="node">Node</h2>
+<p>configure whether to polyfill or mock certain Node.js globals and modules. This allows code originally written for the Node.js environment to run in other environments like the browser. This feature is provided by webpack’s internal <code class="language-plaintext highlighter-rouge">NodeStuffPlugin</code>.</p>
+<h3 id="nodeconsole">node.console</h3>
+<h3 id="nodeprocess">node.process</h3>
+<h3 id="nodeglobal">node.global</h3>
+<h3 id="node__filename">node.__filename</h3>
+<h3 id="node__dirname">node.__dirname</h3>
+<h3 id="nodebuffer">node.Buffer</h3>
+<h3 id="nodesetimmediate">node.setImmediate</h3>
+<p>略。</p>
+
+<h2 id="performance">Performance</h2>
+<p>allows you to control how webpack notifies you of assets and entrypoints that exceed a specific file limit.</p>
+
+<p>For example if you have an asset that is over 250kb, webpack will emit a warning notifiying you of this.</p>
+<h3 id="performancehints">performance.hints</h3>
+<h3 id="performancemaxentrypointsize">performance.maxEntrypointSize</h3>
+<h3 id="performancemaxassetsize">performance.maxAssetSize</h3>
+<h3 id="performanceassetfilter">performance.assetFilter</h3>
+
+<h2 id="stats">Stats</h2>
+<p>precisely control what bundle information gets displayed. This can be a nice middle ground if you don’t want to use quiet or noInfo because you want some bundle information, but not all of it.
+For webpack-dev-server, this property needs to be in the devServer object.</p>
+
+<h2 id="other-options">Other Options</h2>
+<p>This page is still a work in progress.
+略。</p>
+
+:ET

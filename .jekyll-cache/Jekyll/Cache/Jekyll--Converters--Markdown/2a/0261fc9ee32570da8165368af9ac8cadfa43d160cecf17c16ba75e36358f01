@@ -1,0 +1,283 @@
+I"(<ul id="markdown-toc">
+  <li><a href="#待构建项目结构" id="markdown-toc-待构建项目结构">待构建项目结构</a></li>
+  <li><a href="#不使用makefile进行构建" id="markdown-toc-不使用makefile进行构建">不使用Makefile进行构建</a></li>
+  <li><a href="#最基本的makefile使用" id="markdown-toc-最基本的makefile使用">最基本的Makefile使用</a></li>
+  <li><a href="#使用自定义变量" id="markdown-toc-使用自定义变量">使用自定义变量</a></li>
+  <li><a href="#使用预定义变量" id="markdown-toc-使用预定义变量">使用预定义变量</a></li>
+  <li><a href="#使用自动变量" id="markdown-toc-使用自动变量">使用自动变量</a></li>
+  <li><a href="#设置搜索路径" id="markdown-toc-设置搜索路径">设置搜索路径</a></li>
+  <li><a href="#使用自动推导规则" id="markdown-toc-使用自动推导规则">使用自动推导规则</a></li>
+  <li><a href="#使用递归" id="markdown-toc-使用递归">使用递归</a></li>
+  <li><a href="#使用函数" id="markdown-toc-使用函数">使用函数</a></li>
+</ul>
+
+<p><a href="http://www.cnblogs.com/OpenShiFt/p/4313351.html">本文实例主要参考：一个工程实例来学习Makefile</a>
+<a href="https://github.com/woojean/demos/tree/master/makefile-demo">下载代码:https://github.com/woojean/demos/tree/master/makefile-demo</a></p>
+
+<h1 id="待构建项目结构">待构建项目结构</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── add
+│   ├── add_float.c
+│   ├── add.h
+│   └── add_int.c
+├── main.c
+└── sub
+    ├── sub_float.c
+    ├── sub.h
+    └── sub_int.c
+</code></pre></div></div>
+
+<h1 id="不使用makefile进行构建">不使用Makefile进行构建</h1>
+
+<p>构建：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># -ggdb 使GCC为GDB生成专用的更为丰富的调试信息，但是，此时就不能用其他的调试器来进行调试了(如ddx)
+gcc -c add/add_int.c -o add/add_int.o -ggdb
+gcc -c add/add_float.c -o add/add_float.o -ggdb
+gcc -c sub/sub_float.c -o sub/sub_float.o -ggdb
+gcc -c sub/sub_int.c -o sub/sub_int.o -ggdb
+
+# -I表示将指定目录作为第一个寻找头文件的目录（即优先级高于/usr/include和/usr/local/include）
+gcc -c main.c -o main.o -Iadd -Isub -ggdb
+gcc -o cacu add/add_int.o add/add_float.o sub/sub_int.o sub/sub_float.o main.o -ggdb
+</code></pre></div></div>
+
+<p>清理：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -f cacu
+rm -rf add/*.o sub/*.o *.o
+</code></pre></div></div>
+
+<h1 id="最基本的makefile使用">最基本的Makefile使用</h1>
+
+<p>Makefile的基本格式：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TARGET... : DEPENDEDS...
+	COMMAND
+	...
+	...
+</code></pre></div></div>
+
+<p>据此，编写如下Makefile文件：
+<u>Makefile_1</u></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 最终的编译目标是生成一个名为cacu的文件
+cacu:add_int.o add_float.o sub_int.o sub_float.o main.o
+	gcc -o cacu add/add_int.o add/add_float.o \
+		sub/sub_int.o sub/sub_float.o main.o -ggdb
+
+add_int.o:add/add_int.c add/add.h
+	gcc -c -o add/add_int.o add/add_int.c -ggdb
+
+add_float.o:add/add_float.c add/add.h
+	gcc -c -o add/add_float.o add/add_float.c -ggdb
+
+sub_int.o:sub/sub_int.c sub/sub.h
+	gcc -c -o sub/sub_int.o sub/sub_int.c -ggdb
+
+sub_float.o:sub/sub_float.c sub/sub.h
+	gcc -c -o sub/sub_float.o sub/sub_float.c -ggdb
+
+main.o:main.c add/add.h sub/sub.h
+	gcc -c -o main.o main.c -Iadd -Isub -ggdb
+
+# 清理
+clean:
+	rm -f cacu add/add_int.o add/add_float.o \
+		sub/sub_int.o sub/sub_float.o main.o
+</code></pre></div></div>
+
+<p>执行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 构建
+make -f Makefile_1
+
+# 清理
+make clean -f Makefile_1
+</code></pre></div></div>
+
+<h1 id="使用自定义变量">使用自定义变量</h1>
+
+<p><u>Makefile_2</u></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CC = gcc
+CFLAGS = -Iadd -Isub -O2
+OBJS = add/add_int.o add/add_float.o sub/sub_float.o sub/sub_int.o main.o
+TARGET = cacu
+RM = rm -f
+
+$(TARGET):$(OBJS)
+	$(CC) -o $(TARGET) $(OBJS) $(CFLAGS)
+
+# %o:%c是将以.o结尾的文件替换成以.c结尾的文件
+$(OBJS):%o:%c
+	$(CC) -c $(CFLAGS) $&lt; -o $@
+
+clean:
+	$(RM) $(TARGET) $(OBJS)
+</code></pre></div></div>
+
+<h1 id="使用预定义变量">使用预定义变量</h1>
+
+<p><u>Makefile_3</u></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CFLAGS = -Iadd -Isub -O2
+OBJS = add/add_int.o add/add_float.o \
+	   sub/sub_int.o sub/sub_float.o main.o
+TARGET = cacu
+
+$(TARGET):$(OBJS)
+	$(CC) $^ -o $@ $(CFLAGS)
+
+## $(CC)即cc
+$(OBJS):%o:%c
+	$(CC) -c $&lt; -o $@ $(CFLAGS)
+
+## $(RM)即rm -f
+clean:
+	-$(RM) $(TARGET) $(OBJS)
+</code></pre></div></div>
+
+<h1 id="使用自动变量">使用自动变量</h1>
+
+<p>常见的自动变量及其含义：
+<code class="language-plaintext highlighter-rouge">*</code> 表示目标文件的名称，不包含目标文件的扩展名
+<code class="language-plaintext highlighter-rouge">+</code> 表示所有的依赖文件，这些依赖文件之间以空格分开，按照出现的先后为顺序，其中可能包含重复的依赖文件
+<code class="language-plaintext highlighter-rouge">&lt;</code> 表示依赖项中第一个依赖文件的名称
+<code class="language-plaintext highlighter-rouge">?</code> 依赖项中，所有比目标文件时间戳晚的依赖文件，依赖文件之间以空格分开
+<code class="language-plaintext highlighter-rouge">@</code> 目标项中目标文件的名称
+<code class="language-plaintext highlighter-rouge">^</code> 依赖项中，所有不重复的依赖文件，这些文件之间以空格分开</p>
+
+<p><u>Makefile_4</u></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CFLAGS = -Iadd -Isub -O2
+OBJS = add/add_int.o add/add_float.o \
+	   sub/sub_int.o sub/sub_float.o main.o
+TARGET = cacu
+
+$(TARGET):$(OBJS)
+	$(CC) $^ -o $@ $(CFLAGS)
+
+$(OBJS):%o:%c
+	$(CC) -c $&lt; -o $@ $(CFLAGS)
+
+clean:
+	-$(RM) $(TARGET) $(OBJS)
+</code></pre></div></div>
+
+<h1 id="设置搜索路径">设置搜索路径</h1>
+
+<p>指定需要搜索的目录， make会自动找到指定文件的目录并添加到文件上，VPATH变量可以实现此目的。
+<u>Makefile_5</u></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CFLAGS = -Iadd -Isub -O2
+OBJDIR = objs
+VPATH = add:sub:.
+OBJS = add_int.o add_float.o sub_int.o sub_float.o main.o
+TARGET = cacu
+
+$(TARGET):$(OBJSDIR) $(OBJS)
+	$(CC) -o $(TARGET) $(OBJDIR)/*.o $(CFLAGS)
+
+$(OBJDIR):
+	mkdir -p ./$@
+
+$(OBJS):%.o:%.c 
+	$(CC) -c $(CFLAGS) $&lt; -o $(OBJDIR)/$@
+
+clean:
+	-$(RM) $(TARGET)
+	-$(RM) $(OBJDIR)/*.o -r
+</code></pre></div></div>
+
+<h1 id="使用自动推导规则">使用自动推导规则</h1>
+
+<p>在书写 Makefile 时，就可以省略掉描述 .c 文件和 .o 依赖关系的规则，而只需要给出那些特定的规则描述（.o 目标所需要的 .h 文件）。
+对一个目标文件是“文件名.o“，依赖文件是”文件名.c“的规则，可以省略其编译规则的命令行，由make命令决定如何使用编译命令和选项。此默认规则称为make的隐含规则。</p>
+
+<p><u>Makefile_6</u></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CC = gcc
+CFLAGS = -O2 -Iadd -Isub
+TARGET = cacu
+DIRS = sub add .
+FILES = $(foreach dir, $(DIRS), $(wildcard $(dir)/*.c))
+OBJS = $(patsubst %.c, %.o, $(FILES))
+$(TARGET):$(OBJS)
+	$(CC) -o $(TARGET) $(OBJS)
+
+clean:
+	-$(RM) $(TARGET)
+	-$(RM) $(OBJS)
+</code></pre></div></div>
+
+<h1 id="使用递归">使用递归</h1>
+
+<p><u>Makefile_7</u></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CC = gcc
+CFLAGS = -O2
+TARGET = cacu
+export OBJSDIR = $(shell pwd)/objs
+
+# make -C 切换到指定目录再执行make
+$(TARGET):$(OBJSDIR) main.o
+	$(MAKE) -C add
+	$(MAKE) -C sub
+	$(CC) -o $(TARGET) $(OBJSDIR)/*.o
+
+$(OBJSDIR):
+	mkdir -p $@
+
+main.o:%.o:%.c
+	$(CC) -c $&lt; -o $(OBJSDIR)/$@ $(CFLAGS) -Iadd -Isub
+
+clean:
+	-$(RM) $(TARGET)
+	-$(RM) $(OBJSDIR)/*.o
+</code></pre></div></div>
+
+<p>add/Makefile</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OBJS = add_int.o add_float.o
+all:$(OBJS)
+
+$(OBJS):%.o:%.c
+	$(CC) -c $&lt; -o $(OBJSDIR)/$@ $(CFLAGS)
+
+clean:
+	$(RM) $(OBJS)
+</code></pre></div></div>
+
+<p>sub/Makefile</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OBJS = sub_int.o sub_float.o
+all:$(OBJS)
+
+$(OBJS):%.o:%.c
+	$(CC) -c $&lt; -o $(OBJSDIR)/$@ $(CFLAGS)
+
+clean:
+	$(RM) $(OBJS)
+</code></pre></div></div>
+
+<h1 id="使用函数">使用函数</h1>
+
+<ul>
+  <li>wildcard 获取匹配模式的文件名
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$(wildcard PATTERN)
+</code></pre></div>    </div>
+  </li>
+  <li>patsubst 模式替换函数
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$(patsubst pattern, replacement, text)
+</code></pre></div>    </div>
+  </li>
+  <li>foreach 循环函数
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$(foreach VAR, LIST, TEXT)
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><u>Makefile_8</u></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CC = gcc
+CFLAGS = -O2 -Iadd -Isub
+TARGET = cacu
+DIRS = sub add .
+FILES = $(foreach dir, $(DIRS), $(wildcard $(dir)/*.c))
+OBJS = $(patsubst %.c, %.o, $(FILES))
+$(TARGET):$(OBJS)
+	$(CC) -o $(TARGET) $(OBJS)
+
+clean:
+	-$(RM) $(TARGET)
+	-$(RM) $(OBJS)
+</code></pre></div></div>
+
+:ET

@@ -1,0 +1,129 @@
+I"[<ul id="markdown-toc">
+  <li><a href="#mac" id="markdown-toc-mac">Mac</a>    <ul>
+      <li><a href="#先安装php7否则phpize无法编译cphalcon" id="markdown-toc-先安装php7否则phpize无法编译cphalcon">先安装PHP7，否则phpize无法编译cphalcon</a></li>
+      <li><a href="#安装phalconso" id="markdown-toc-安装phalconso">安装Phalcon.so</a></li>
+    </ul>
+  </li>
+  <li><a href="#更新seaslogso" id="markdown-toc-更新seaslogso">更新seaslog.so</a>    <ul>
+      <li><a href="#更新redisso" id="markdown-toc-更新redisso">更新redis.so</a></li>
+      <li><a href="#更新xdebug" id="markdown-toc-更新xdebug">更新xdebug</a></li>
+      <li><a href="#更新swooleso" id="markdown-toc-更新swooleso">更新swoole.so</a></li>
+    </ul>
+  </li>
+  <li><a href="#更新thrift_protocolso" id="markdown-toc-更新thrift_protocolso">更新thrift_protocol.so</a>    <ul>
+      <li><a href="#编辑mamp的php7配置文件php711ini" id="markdown-toc-编辑mamp的php7配置文件php711ini">编辑MAMP的PHP7配置文件（php7.1.1.ini）：</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>所有程序、扩展全部用最新稳定版本！（所有扩展需要使用PHP7环境进行编译）</p>
+
+<h2 id="mac">Mac</h2>
+
+<h3 id="先安装php7否则phpize无法编译cphalcon">先安装PHP7，否则phpize无法编译cphalcon</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew update
+brew tap homebrew/dupes
+brew tap homebrew/php
+brew update
+brew unlink php56   # 删除低版本php
+brew install php71
+</code></pre></div></div>
+
+<p>测试：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wujian@wujiandeMacBook-Pro 64bits$ php -v
+PHP 7.1.3 (cli) (built: Mar 28 2017 21:57:28) ( NTS )
+Copyright (c) 1997-2017 The PHP Group
+Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
+</code></pre></div></div>
+
+<h3 id="安装phalconso">安装Phalcon.so</h3>
+
+<p>https://github.com/phalcon/cphalcon/archive/v3.1.1.tar.gz</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /Users/wujian/extensions/cphalcon-3.1.1/build/php7/64bits
+sudo phpize
+sudo ./configure
+sudo make &amp; make install
+
+# 拷贝生成的模块
+cp /Users/wujian/extensions/cphalcon-3.1.1/build/php7/64bits/modules/phalcon.so /Users/wujian/extensions/phalcon.so
+</code></pre></div></div>
+
+<h2 id="更新seaslogso">更新seaslog.so</h2>
+
+<p>https://github.com/Neeke/SeasLog/archive/SeasLog-1.6.9.tar.gz</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /Users/wujian/extensions/SeasLog-SeasLog-1.6.9
+sudo phpize
+sudo ./configure
+sudo make &amp; make install # 如果失败 make clean后再sudo make
+
+# 拷贝生成的模块
+cp /Users/wujian/extensions/SeasLog-SeasLog-1.6.9/modules/seaslog.so /Users/wujian/extensions/seaslog.so
+</code></pre></div></div>
+
+<h3 id="更新redisso">更新redis.so</h3>
+
+<p>https://github.com/phpredis/phpredis/archive/3.1.2.tar.gz</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /Users/wujian/extensions/phpredis-3.1.2
+sudo phpize
+sudo ./configure
+sudo make &amp; make install  # 如果失败 make clean后再sudo make
+
+# 拷贝生成的模块
+cp /Users/wujian/extensions/phpredis-3.1.2/modules/redis.so /Users/wujian/extensions/redis.so
+</code></pre></div></div>
+
+<h3 id="更新xdebug">更新xdebug</h3>
+
+<p>https://github.com/xdebug/xdebug/archive/XDEBUG_2_5_1.tar.gz</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /Users/wujian/extensions/xdebug-XDEBUG_2_5_1
+sudo phpize
+sudo ./configure
+sudo make &amp; make install 
+
+# 拷贝生成的模块
+cp /Users/wujian/extensions/xdebug-XDEBUG_2_5_1/modules/xdebug.so /Users/wujian/extensions/xdebug.so
+</code></pre></div></div>
+
+<h3 id="更新swooleso">更新swoole.so</h3>
+
+<p>https://github.com/swoole/swoole-src/archive/v2.0.7.tar.gz</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /Users/wujian/extensions/swoole-src-2.0.7
+sudo phpize
+sudo ./configure
+sudo make &amp; make install 
+
+# 拷贝生成的模块
+cp /Users/wujian/extensions/swoole-src-2.0.7/modules/swoole.so /Users/wujian/extensions/swoole.so
+</code></pre></div></div>
+
+<h2 id="更新thrift_protocolso">更新thrift_protocol.so</h2>
+
+<p>https://github.com/apache/thrift/archive/0.10.0.tar.gz</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /Users/wujian/extensions/thrift-0.10.0/lib/php/src/ext/thrift_protocol
+
+sudo phpize
+sudo ./configure
+sudo make &amp; make install 
+
+cp /Users/wujian/extensions/thrift-0.10.0/lib/php/src/ext/thrift_protocol/modules/thrift_protocol.so /Users/wujian/extensions/thrift_protocol.so
+</code></pre></div></div>
+
+<h3 id="编辑mamp的php7配置文件php711ini">编辑MAMP的PHP7配置文件（php7.1.1.ini）：</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>extension=/Users/wujian/extensions/phalcon.so
+extension=/Users/wujian/extensions/seaslog.so
+extension=/Users/wujian/extensions/redis.so
+extension=/Users/wujian/extensions/swoole.so
+extension=/Users/wujian/extensions/thrift_protocol.so
+zend_extension=/Users/wujian/extensions/xdebug.so
+</code></pre></div></div>
+
+:ET

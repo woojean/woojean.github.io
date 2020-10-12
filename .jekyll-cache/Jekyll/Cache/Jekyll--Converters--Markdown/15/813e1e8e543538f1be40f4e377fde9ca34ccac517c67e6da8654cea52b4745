@@ -1,0 +1,120 @@
+I"� <ul id="markdown-toc">
+  <li><a href="#源代码" id="markdown-toc-源代码">源代码</a></li>
+  <li><a href="#数据流" id="markdown-toc-数据流">数据流</a></li>
+  <li><a href="#demo" id="markdown-toc-demo">Demo</a>    <ul>
+      <li><a href="#add-task" id="markdown-toc-add-task">Add task</a></li>
+      <li><a href="#处理任务" id="markdown-toc-处理任务">处理任务</a></li>
+    </ul>
+  </li>
+  <li><a href="#其他参数" id="markdown-toc-其他参数">其他参数</a></li>
+</ul>
+
+<h1 id="源代码">源代码</h1>
+<p>代码见这里：<a href="https://github.com/woojean/RedisQueue">https://github.com/woojean/RedisQueue</a></p>
+
+<h1 id="数据流">数据流</h1>
+<p><img src="/images/tech/redis-queue.png" alt="image" /></p>
+
+<h1 id="demo">Demo</h1>
+<h2 id="add-task">Add task</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="c1">// 队列配置</span>
+<span class="nv">$queueName</span> <span class="o">=</span> <span class="s1">'myqueue'</span><span class="p">;</span>
+<span class="nv">$redisConfig</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">'host'</span> <span class="o">=&gt;</span> <span class="s1">'127.0.0.1'</span><span class="p">,</span>
+  <span class="s1">'port'</span> <span class="o">=&gt;</span> <span class="s1">'6379'</span><span class="p">,</span>
+  <span class="s1">'index'</span> <span class="o">=&gt;</span> <span class="s1">'0'</span>
+<span class="p">];</span>
+
+<span class="c1">// 添加任务</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="p">[</span>
+ <span class="s1">'k1'</span> <span class="o">=&gt;</span> <span class="s1">'v1'</span><span class="p">,</span>
+ <span class="s1">'k2'</span> <span class="o">=&gt;</span> <span class="s1">'v2'</span><span class="p">,</span>
+<span class="p">];</span>
+
+<span class="k">echo</span> <span class="s2">"Queue name: "</span> <span class="mf">.</span> <span class="nv">$queueName</span> <span class="mf">.</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="k">try</span> <span class="p">{</span>
+  <span class="c1">// create queue</span>
+  <span class="nv">$redisQueue</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RedisQueue</span><span class="p">(</span><span class="nv">$queueName</span><span class="p">,</span> <span class="nv">$redisConfig</span><span class="p">);</span>
+
+  <span class="c1">// add to queue</span>
+  <span class="nv">$index</span> <span class="o">=</span> <span class="nv">$redisQueue</span><span class="o">-&gt;</span><span class="nf">add</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+
+  <span class="k">echo</span> <span class="s2">"Data index: "</span> <span class="mf">.</span> <span class="nv">$index</span> <span class="mf">.</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>  <span class="c1">// index of added data</span>
+
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nc">RedisQueueException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="nf">getMessage</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="处理任务">处理任务</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+  <span class="c1">// 队列配置</span>
+  <span class="nv">$queueName</span> <span class="o">=</span> <span class="s1">'myqueue'</span><span class="p">;</span>
+  <span class="nv">$redisConfig</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">'host'</span> <span class="o">=&gt;</span> <span class="s1">'127.0.0.1'</span><span class="p">,</span>
+    <span class="s1">'port'</span> <span class="o">=&gt;</span> <span class="s1">'6379'</span><span class="p">,</span>
+    <span class="s1">'index'</span> <span class="o">=&gt;</span> <span class="s1">'0'</span>
+    <span class="p">];</span>
+
+  <span class="k">echo</span> <span class="s2">"Queue name: "</span> <span class="mf">.</span> <span class="nv">$queueName</span> <span class="mf">.</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="c1">// create queue</span>
+    <span class="nv">$redisQueue</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RedisQueue</span><span class="p">(</span><span class="nv">$queueName</span><span class="p">,</span> <span class="nv">$redisConfig</span><span class="p">);</span>
+
+    <span class="c1">// fetch from queue</span>
+    <span class="nv">$data</span> <span class="o">=</span> <span class="nv">$redisQueue</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">();</span>
+    <span class="k">echo</span> <span class="s2">"Fetched data:</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+    <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+
+    <span class="c1">// get the index of current data</span>
+    <span class="k">echo</span> <span class="s2">"Current Index:"</span><span class="p">;</span>
+    <span class="nv">$currentIndex</span> <span class="o">=</span> <span class="nv">$redisQueue</span><span class="o">-&gt;</span><span class="nf">getCurrentIndex</span><span class="p">();</span>
+    <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$currentIndex</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="nv">$currentIndex</span><span class="p">;</span>
+
+
+    <span class="cm">/* ... */</span>
+    <span class="nv">$success</span> <span class="o">=</span> <span class="kc">True</span><span class="p">;</span>  <span class="c1">//  process result</span>
+    <span class="c1">//$success = False;  //  process result</span>
+    <span class="cm">/* ... */</span>
+
+
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$success</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// success</span>
+      <span class="nv">$ret</span> <span class="o">=</span> <span class="nv">$redisQueue</span><span class="o">-&gt;</span><span class="nf">remove</span><span class="p">();</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">empty</span><span class="p">(</span><span class="nv">$ret</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">Data removed !"</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// failed</span>
+      <span class="k">echo</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">Rollback current data"</span><span class="p">;</span>
+      <span class="nv">$redisQueue</span><span class="o">-&gt;</span><span class="nf">rollback</span><span class="p">();</span>  <span class="c1">// if retry times up to max, the index will be transfer to blocked list</span>
+    <span class="p">}</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nc">RedisQueueException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="nf">getMessage</span><span class="p">();</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="其他参数">其他参数</h1>
+<ul>
+  <li>
+    <p><strong>$queueName</strong></p>
+  </li>
+  <li>
+    <p><strong>$redisConfig</strong> 
+Redis connect config.</p>
+  </li>
+  <li>
+    <p><strong>$retryTimes</strong>
+If the task handle failed,and up to retryLimit ,the task will be transfer to block task.</p>
+  </li>
+  <li>
+    <p><strong>$waitTime</strong>
+If there is no more task to handle, the ‘get’ action will be block.</p>
+  </li>
+</ul>
+
+:ET

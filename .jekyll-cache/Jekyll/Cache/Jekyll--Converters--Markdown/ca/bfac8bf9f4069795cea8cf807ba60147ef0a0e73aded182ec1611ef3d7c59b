@@ -1,0 +1,1021 @@
+I"	j<ul id="markdown-toc">
+  <li><a href="#排序" id="markdown-toc-排序">排序</a>    <ul>
+      <li><a href="#排序算法类模板" id="markdown-toc-排序算法类模板">排序算法类模板：</a></li>
+      <li><a href="#选择排序" id="markdown-toc-选择排序">选择排序</a></li>
+      <li><a href="#插入排序" id="markdown-toc-插入排序">插入排序</a></li>
+      <li><a href="#冒泡排序" id="markdown-toc-冒泡排序">冒泡排序*</a></li>
+      <li><a href="#希尔排序" id="markdown-toc-希尔排序">希尔排序</a></li>
+      <li><a href="#归并排序" id="markdown-toc-归并排序">归并排序</a></li>
+      <li><a href="#快速排序" id="markdown-toc-快速排序">快速排序</a></li>
+      <li><a href="#堆排序" id="markdown-toc-堆排序">堆排序</a></li>
+      <li><a href="#计数排序" id="markdown-toc-计数排序">计数排序*</a></li>
+    </ul>
+  </li>
+  <li><a href="#查找" id="markdown-toc-查找">查找</a>    <ul>
+      <li><a href="#无序链表中的顺序查找" id="markdown-toc-无序链表中的顺序查找">无序链表中的顺序查找</a></li>
+      <li><a href="#有序数组中的二分查找" id="markdown-toc-有序数组中的二分查找">有序数组中的二分查找</a></li>
+      <li><a href="#二叉查找树" id="markdown-toc-二叉查找树">二叉查找树</a></li>
+      <li><a href="#红黑二叉查找树" id="markdown-toc-红黑二叉查找树">红黑二叉查找树*</a></li>
+      <li><a href="#基于拉链法的散列表查找" id="markdown-toc-基于拉链法的散列表查找">基于拉链法的散列表查找</a></li>
+      <li><a href="#基于线性探测法的散列表查找" id="markdown-toc-基于线性探测法的散列表查找">基于线性探测法的散列表查找</a></li>
+    </ul>
+  </li>
+  <li><a href="#图" id="markdown-toc-图">图*</a></li>
+  <li><a href="#字符串" id="markdown-toc-字符串">字符串</a>    <ul>
+      <li><a href="#暴力子字符串查找算法一" id="markdown-toc-暴力子字符串查找算法一">暴力子字符串查找算法一</a></li>
+      <li><a href="#暴力子字符串查找算法二" id="markdown-toc-暴力子字符串查找算法二">暴力子字符串查找算法二</a></li>
+      <li><a href="#kmp字符串查找算法" id="markdown-toc-kmp字符串查找算法">KMP字符串查找算法</a></li>
+      <li><a href="#bm字符串查找算法" id="markdown-toc-bm字符串查找算法">BM字符串查找算法</a></li>
+      <li><a href="#rk字符串查找算法" id="markdown-toc-rk字符串查找算法">RK字符串查找算法</a></li>
+    </ul>
+  </li>
+  <li><a href="#补充" id="markdown-toc-补充">补充*</a>    <ul>
+      <li><a href="#求最大子序列和的联机算法" id="markdown-toc-求最大子序列和的联机算法">求最大子序列和的联机算法</a></li>
+      <li><a href="#单链表相关操作" id="markdown-toc-单链表相关操作">单链表相关操作</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="排序">排序</h2>
+<h3 id="排序算法类模板">排序算法类模板：</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Sort</span> <span class="o">{</span>
+  <span class="nd">@SuppressWarnings</span><span class="o">(</span><span class="s">"unchecked"</span><span class="o">)</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">less</span><span class="o">(</span><span class="nc">Comparable</span> <span class="n">v</span><span class="o">,</span> <span class="nc">Comparable</span> <span class="n">w</span><span class="o">)</span> <span class="o">{</span> 
+    <span class="k">return</span> <span class="o">(</span><span class="n">v</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">w</span><span class="o">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">);</span>
+  <span class="o">}</span>
+        
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">exch</span><span class="o">(</span><span class="nc">Object</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="kt">int</span> <span class="n">j</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Object</span> <span class="n">swap</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+    <span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">];</span>
+    <span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">swap</span><span class="o">;</span>
+  <span class="o">}</span>       
+
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">show</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sort</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// 具体实现</span>
+  <span class="o">}</span>
+  
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">String</span><span class="o">[]</span> <span class="n">a</span> <span class="o">=</span> 
+<span class="o">{</span><span class="s">"E"</span><span class="o">,</span><span class="s">"F"</span><span class="o">,</span><span class="s">"G"</span><span class="o">,</span><span class="s">"A"</span><span class="o">,</span><span class="s">"B"</span><span class="o">,</span><span class="s">"Q"</span><span class="o">,</span><span class="s">"R"</span><span class="o">,</span><span class="s">"S"</span><span class="o">,</span><span class="s">"T"</span><span class="o">,</span><span class="s">"U"</span><span class="o">,</span><span class="s">"V"</span><span class="o">,</span><span class="s">"W"</span><span class="o">,</span><span class="s">"X"</span><span class="o">,</span><span class="s">"D"</span><span class="o">,</span><span class="s">"H"</span><span class="o">,</span><span class="s">"I"</span><span class="o">,</span><span class="s">"J"</span><span class="o">,</span><span class="s">"K"</span><span class="o">,</span><span class="s">"L"</span><span class="o">,</span><span class="s">"M"</span><span class="o">,</span><span class="s">"C"</span><span class="o">,</span><span class="s">"O"</span><span class="o">,</span><span class="s">"P"</span><span class="o">,</span><span class="s">"N"</span><span class="o">,</span><span class="s">"Y"</span><span class="o">,</span><span class="s">"Z"</span><span class="o">,</span><span class="s">"X"</span><span class="o">,</span><span class="s">"X"</span><span class="o">};</span>
+    <span class="nc">Sort</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">a</span><span class="o">);</span>
+    <span class="n">show</span><span class="o">(</span><span class="n">a</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>  
+</code></pre></div></div>
+
+<h3 id="选择排序">选择排序</h3>
+<p>首先找到数组中最小的那个元素，然后将它和数组的第一个元素交换位置（如果第一个元素就是最小元素，那么它就和自己交换位置）。在剩下的元素中找到最小的元素，将它与数组的第二个元素交换位置，如此往复，直到将整个数组排序。</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">selectionSort</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="no">N</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="kt">int</span> <span class="n">min</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">less</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">],</span> <span class="n">a</span><span class="o">[</span><span class="n">min</span><span class="o">]))</span> <span class="n">min</span> <span class="o">=</span> <span class="n">j</span><span class="o">;</span>
+      <span class="o">}</span>
+      <span class="n">exch</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">min</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="插入排序">插入排序</h3>
+<p>每次选择最小的一个元素插入到已排序序列中。</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">insertSort</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="no">N</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">less</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">],</span> <span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">]);</span> <span class="n">j</span><span class="o">--)</span> <span class="o">{</span>
+                <span class="n">exch</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">j</span><span class="o">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>插入排序不会访问索引右侧的元素，选择排序不会访问索引左侧的元素。
+插入排序对于部分有序时的排序十分高效。
+对于随机排序的无重复主键的数组，插入排序和选择排序的运行时间是平方级别的，两者之比应该是一个较小的常数。具体测试时可以通过修改代码，统计不同算法解决同一问题所使用的比较总次数来进行算法性能比较。</p>
+
+<h3 id="冒泡排序">冒泡排序*</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">bubbleSort</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="no">N</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="no">N</span><span class="o">-</span><span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+      <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;</span><span class="no">N</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="o">;</span><span class="n">j</span><span class="o">++){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">less</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">],</span><span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">])){</span>
+          <span class="n">exch</span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">j</span><span class="o">,</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">);</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<h3 id="希尔排序">希尔排序</h3>
+<p>希尔排序基于插入排序改进而来。对于大规模的乱序数组，插入排序很慢，因为它只会交换相邻的元素。希尔排序为了加快速度，使数组中任意间隔为h的元素都是有序的（h有序数组），即交换不相邻的元素以对数组的局部进行排序，并最终用插入排序（h最终为1）将局部有序数组排序。希尔排序需要选择一个递减序列，该序列最终收敛为1。（相当于在插入排序之外再加一层循环用来将h进行递减）</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">shellSort</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="no">N</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+
+        <span class="c1">// 3x+1 increment sequence:  1, 4, 13, 40, 121, 364, 1093, ... </span>
+        <span class="kt">int</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">h</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">/</span><span class="mi">3</span><span class="o">)</span> 
+<span class="n">h</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">h</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> 
+
+        <span class="k">while</span> <span class="o">(</span><span class="n">h</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// h-sort the array</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">h</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="n">h</span> <span class="o">&amp;&amp;</span> <span class="n">less</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">],</span> <span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="n">h</span><span class="o">]);</span> <span class="n">j</span> <span class="o">-=</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">exch</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">j</span><span class="o">,</span> <span class="n">j</span><span class="o">-</span><span class="n">h</span><span class="o">);</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+            <span class="n">h</span> <span class="o">/=</span> <span class="mi">3</span><span class="o">;</span>
+        <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>希尔排序时间复杂度与所选择的步长有关：</p>
+
+<h3 id="归并排序">归并排序</h3>
+<p>归并算法基于归并操作，即将两个有序的数组归并成一个更大的有序数组。要将一个数组排序，可以先递归地将它分成两半分别排序，然后将结果归并起来。
+归并排序能够保证将任意长度为N的数组排序所需时间和NlogN成正比。其主要缺点是所需的额外空间和N成正比。</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 原地归并方法：先将原数组整个拷贝，再合并回去</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">merge</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span> <span class="nc">Comparable</span><span class="o">[]</span> <span class="n">aux</span><span class="o">,</span> <span class="kt">int</span> <span class="n">lo</span><span class="o">,</span> <span class="kt">int</span> <span class="n">mid</span><span class="o">,</span> <span class="kt">int</span> <span class="n">hi</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">lo</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">aux</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="n">k</span><span class="o">];</span> 
+        <span class="o">}</span>
+
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">lo</span><span class="o">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">lo</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">if</span>      <span class="o">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="n">mid</span><span class="o">)</span>              <span class="n">a</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">aux</span><span class="o">[</span><span class="n">j</span><span class="o">++];</span>
+            <span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">j</span> <span class="o">&gt;</span> <span class="n">hi</span><span class="o">)</span>               <span class="n">a</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">aux</span><span class="o">[</span><span class="n">i</span><span class="o">++];</span>
+            <span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">less</span><span class="o">(</span><span class="n">aux</span><span class="o">[</span><span class="n">j</span><span class="o">],</span> <span class="n">aux</span><span class="o">[</span><span class="n">i</span><span class="o">]))</span> <span class="n">a</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">aux</span><span class="o">[</span><span class="n">j</span><span class="o">++];</span>
+            <span class="k">else</span>                           <span class="n">a</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">aux</span><span class="o">[</span><span class="n">i</span><span class="o">++];</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+  <span class="c1">// 实际的递归归并操作</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mergeSort</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span> <span class="nc">Comparable</span><span class="o">[]</span> <span class="n">aux</span><span class="o">,</span> <span class="kt">int</span> <span class="n">lo</span><span class="o">,</span> <span class="kt">int</span> <span class="n">hi</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">hi</span> <span class="o">&lt;=</span> <span class="n">lo</span><span class="o">)</span> 
+      <span class="k">return</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">lo</span> <span class="o">+</span> <span class="o">(</span><span class="n">hi</span> <span class="o">-</span> <span class="n">lo</span><span class="o">)</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
+        <span class="n">mergeSort</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">aux</span><span class="o">,</span> <span class="n">lo</span><span class="o">,</span> <span class="n">mid</span><span class="o">);</span>
+        <span class="n">mergeSort</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">aux</span><span class="o">,</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="n">hi</span><span class="o">);</span>
+        <span class="n">merge</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">aux</span><span class="o">,</span> <span class="n">lo</span><span class="o">,</span> <span class="n">mid</span><span class="o">,</span> <span class="n">hi</span><span class="o">);</span>
+    <span class="o">}</span>
+
+  <span class="c1">// 归并排序接口</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mergeSort</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Comparable</span><span class="o">[]</span> <span class="n">aux</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Comparable</span><span class="o">[</span><span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>  <span class="c1">// 交换空间</span>
+        <span class="n">mergeSort</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">aux</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="快速排序">快速排序</h3>
+<p>快速排序将长度为N的数组排序所需的时间和NlogN成正比，且所需空间小于归并排序。
+它将一个数组分成两个子数组，并将两部分独立地排序，该方法的关键在于切分：对于一个选定的元素，每次切分后使得该元素处于最终的位置，即其左边的元素都不大于它，而右边的元素都不小于它。</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 快速排序的切分操作</span>
+<span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">partition</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">lo</span><span class="o">,</span> <span class="kt">int</span> <span class="n">hi</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">lo</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">hi</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="nc">Comparable</span> <span class="n">v</span> <span class="o">=</span> <span class="n">a</span><span class="o">[</span><span class="n">lo</span><span class="o">];</span>   <span class="c1">// 选定第一个元素为切分基准</span>
+        <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span> 
+            <span class="k">while</span> <span class="o">(</span><span class="n">less</span><span class="o">(</span><span class="n">a</span><span class="o">[++</span><span class="n">i</span><span class="o">],</span> <span class="n">v</span><span class="o">))</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">hi</span><span class="o">)</span> <span class="k">break</span><span class="o">;</span>
+            <span class="k">while</span> <span class="o">(</span><span class="n">less</span><span class="o">(</span><span class="n">v</span><span class="o">,</span> <span class="n">a</span><span class="o">[--</span><span class="n">j</span><span class="o">]))</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">j</span> <span class="o">==</span> <span class="n">lo</span><span class="o">)</span> <span class="k">break</span><span class="o">;</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">j</span><span class="o">)</span> 
+        <span class="k">break</span><span class="o">;</span>
+            <span class="n">exch</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="n">exch</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">lo</span><span class="o">,</span> <span class="n">j</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">j</span><span class="o">;</span>
+    <span class="o">}</span>
+ 
+<span class="c1">// 快速排序的实际递归操作</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">quickSort</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">lo</span><span class="o">,</span> <span class="kt">int</span> <span class="n">hi</span><span class="o">)</span> <span class="o">{</span> 
+        <span class="k">if</span> <span class="o">(</span><span class="n">hi</span> <span class="o">&lt;=</span> <span class="n">lo</span><span class="o">)</span> 
+      <span class="k">return</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">partition</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">lo</span><span class="o">,</span> <span class="n">hi</span><span class="o">);</span>
+        <span class="n">quickSort</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">lo</span><span class="o">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+        <span class="n">quickSort</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span> <span class="n">hi</span><span class="o">);</span>
+    <span class="o">}</span>
+  
+<span class="c1">// 快速排序的接口</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">quickSort</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">quickSort</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="堆排序">堆排序</h3>
+<p>基于二叉堆的排序，二叉堆是一组能够用堆有序的完全二叉树排序的元素，并在数组中按层级存储。
+完全二叉树：除最后一层外，每一层上的节点数均达到最大值；在最后一层上只缺少右边的若干结点。
+叶子结点只可能在最大的两层上出现。对任意结点，若其右分支下的子孙最大层次为L，则其左分支下的子孙的最大层次必为L 或 L+1；
+完全二叉树通常采用数组而不是链表存储，对于tree[i]，有如下特点：
+（1）若i为奇数且i&gt;1，那么tree的左兄弟为tree[i-1]；
+（2）若i为偶数且i&lt;n，那么tree的右兄弟为tree[i+1]；
+（3）若i&gt;1，tree的双亲为tree[i div 2]；
+（4）若2<em>i&lt;=n，那么tree的左孩子为tree[2</em>i]；若2<em>i+1&lt;=n，那么tree的右孩子为tree[2</em>i+1]；
+（5）若i&gt;n/2，那么tree[i]为叶子结点（对应于（3））；
+（6）若i&lt;(n-1)/2，那么tree[i]必有两个孩子（对应于（4））。
+（7）满二叉树一定是完全二叉树，完全二叉树不一定是满二叉树。
+完全二叉树第i层至多有2^（i-1）个节点，共i层的完全二叉树最多有2^i-1个节点。</p>
+
+<p>堆排序：使用堆下沉操作，将原始数组重新组织安排进一个大根堆中，然后将大根堆的顶部元素（当前大根堆中最大的元素）与数组空间的最后一个元素交换，这样最后一个元素就排好序了，然后用剩下的N-1个元素构造新的大根堆，继续以上操作。</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 大根堆下沉算法：k为待下沉元素索引，N为堆中最后一个元素的索引</span>
+<span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sink</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span><span class="kt">int</span> <span class="n">k</span><span class="o">,</span><span class="kt">int</span> <span class="no">N</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">while</span> <span class="o">(</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span> <span class="o">&lt;=</span> <span class="no">N</span><span class="o">)</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">;</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="no">N</span> <span class="o">&amp;&amp;</span> <span class="n">less</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">],</span> <span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">]))</span> 
+        <span class="n">j</span><span class="o">++;</span>
+            <span class="k">if</span> <span class="o">(!</span><span class="n">less</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">k</span><span class="o">],</span> <span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">]))</span> 
+        <span class="k">break</span><span class="o">;</span>
+            <span class="n">exch</span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">k</span><span class="o">,</span><span class="n">j</span><span class="o">);</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">j</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+  
+<span class="c1">// 堆排序</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">heapSort</span><span class="o">(</span><span class="nc">Comparable</span><span class="o">[]</span> <span class="n">a</span><span class="o">){</span>
+    <span class="kt">int</span> <span class="no">N</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+<span class="c1">// 首先将指定数组调整为一个大根堆：从k=N/2的元素开始往前调整</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span> <span class="no">N</span><span class="o">/</span><span class="mi">2</span><span class="o">;</span> <span class="n">k</span><span class="o">&gt;=</span><span class="mi">0</span><span class="o">;</span> <span class="n">k</span><span class="o">--){</span>
+      <span class="n">sink</span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">k</span><span class="o">,</span><span class="no">N</span><span class="o">);</span>
+    <span class="o">}</span>
+ 
+<span class="c1">// 去掉大根堆的堆顶元素，用剩下的元素重新构造堆。循环N次</span>
+    <span class="k">while</span><span class="o">(</span><span class="no">N</span><span class="o">&gt;</span><span class="mi">0</span><span class="o">){</span>
+      <span class="n">exch</span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span><span class="no">N</span><span class="o">--);</span>
+      <span class="n">sink</span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span><span class="no">N</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="计数排序">计数排序*</h3>
+<p>一种稳定的线性时间排序算法。计数排序使用一个额外的数组，其中第i个元素是待排序数组A中值等于i的元素的个数。然后根据数组C来将A中的元素排到正确的位置。
+（略）</p>
+
+<h2 id="查找">查找</h2>
+<h3 id="无序链表中的顺序查找">无序链表中的顺序查找</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SequentialSearchST</span><span class="o">&lt;</span><span class="nc">Key</span><span class="o">,</span> <span class="nc">Value</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">Node</span> <span class="n">first</span><span class="o">;</span> 
+
+<span class="c1">// 内部类，用来表示链表的节点</span>
+    <span class="kd">private</span> <span class="kd">class</span> <span class="nc">Node</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="nc">Key</span> <span class="n">key</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="nc">Node</span> <span class="n">next</span><span class="o">;</span>
+
+        <span class="kd">public</span> <span class="nf">Node</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">,</span> <span class="nc">Node</span> <span class="n">next</span><span class="o">)</span>  <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">key</span>  <span class="o">=</span> <span class="n">key</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">val</span>  <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">next</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+<span class="c1">// 根据键值进行查找</span>
+    <span class="kd">public</span> <span class="nc">Value</span> <span class="nf">get</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="nc">Node</span> <span class="n">x</span> <span class="o">=</span> <span class="n">first</span><span class="o">;</span> <span class="n">x</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="na">next</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">key</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">key</span><span class="o">))</span> <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="na">val</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+  
+<span class="c1">// 往链表添加节点，相同键值的数据会被覆盖</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">put</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="nc">Node</span> <span class="n">x</span> <span class="o">=</span> <span class="n">first</span><span class="o">;</span> <span class="n">x</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="na">next</span><span class="o">)</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">key</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">key</span><span class="o">))</span> <span class="o">{</span> <span class="n">x</span><span class="o">.</span><span class="na">val</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span> <span class="k">return</span><span class="o">;</span> <span class="o">}</span>
+        <span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">key</span><span class="o">,</span> <span class="n">val</span><span class="o">,</span> <span class="n">first</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">SequentialSearchST</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SequentialSearchST</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>
+
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.cs.princeton.edu"</span><span class="o">,</span>   <span class="s">"128.112.136.11"</span><span class="o">);</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.princeton.edu"</span><span class="o">,</span>      <span class="s">"128.112.130.211"</span><span class="o">);</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.math.princeton.edu"</span><span class="o">,</span> <span class="s">"128.112.18.11"</span><span class="o">);</span>
+<span class="o">...</span>    
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"www.cs.princeton.edu"</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="有序数组中的二分查找">有序数组中的二分查找</h3>
+<p>在N个键的有序数组中进行二分查找最多需要lgN+1次比较，无论成功与否。</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BinarySearch</span><span class="o">&lt;</span><span class="nc">Key</span> <span class="kd">extends</span> <span class="nc">Comparable</span><span class="o">&lt;</span><span class="nc">Key</span><span class="o">&gt;,</span> <span class="nc">Value</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">Key</span><span class="o">[]</span> <span class="n">keys</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">Value</span><span class="o">[]</span> <span class="n">vals</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="no">N</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+  <span class="nd">@SuppressWarnings</span><span class="o">(</span><span class="s">"unchecked"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nf">BinarySearch</span><span class="o">(</span><span class="kt">int</span> <span class="n">capacity</span><span class="o">)</span> <span class="o">{</span> 
+        <span class="n">keys</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Key</span><span class="o">[])</span> <span class="k">new</span> <span class="nc">Comparable</span><span class="o">[</span><span class="n">capacity</span><span class="o">];</span> 
+        <span class="n">vals</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Value</span><span class="o">[])</span> <span class="k">new</span> <span class="nc">Object</span><span class="o">[</span><span class="n">capacity</span><span class="o">];</span> 
+    <span class="o">}</span>   
+
+<span class="c1">// 在put时调用，当数组容量不够时扩容</span>
+  <span class="nd">@SuppressWarnings</span><span class="o">(</span><span class="s">"unchecked"</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">resize</span><span class="o">(</span><span class="kt">int</span> <span class="n">capacity</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Key</span><span class="o">[]</span>   <span class="n">tempk</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Key</span><span class="o">[])</span>   <span class="k">new</span> <span class="nc">Comparable</span><span class="o">[</span><span class="n">capacity</span><span class="o">];</span>
+        <span class="nc">Value</span><span class="o">[]</span> <span class="n">tempv</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Value</span><span class="o">[])</span> <span class="k">new</span> <span class="nc">Object</span><span class="o">[</span><span class="n">capacity</span><span class="o">];</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">tempk</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">keys</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+            <span class="n">tempv</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">vals</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+        <span class="o">}</span>
+        <span class="n">vals</span> <span class="o">=</span> <span class="n">tempv</span><span class="o">;</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="n">tempk</span><span class="o">;</span>
+    <span class="o">}</span>
+ 
+<span class="c1">// 查询接口</span>
+    <span class="kd">public</span> <span class="nc">Value</span> <span class="nf">get</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="no">N</span><span class="o">==</span><span class="mi">0</span><span class="o">)</span> 
+      <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">rank</span><span class="o">(</span><span class="n">key</span><span class="o">);</span> 
+        <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span> <span class="o">&amp;&amp;</span> <span class="n">keys</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">compareTo</span><span class="o">(</span><span class="n">key</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="n">vals</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span> 
+
+<span class="c1">// 返回表中小于给定键的键的数量 -- 循环版</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">rank</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">lo</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="no">N</span><span class="o">-</span><span class="mi">1</span><span class="o">;</span> 
+        <span class="k">while</span> <span class="o">(</span><span class="n">lo</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="o">)</span> <span class="o">{</span> 
+            <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">lo</span> <span class="o">+</span> <span class="o">(</span><span class="n">hi</span> <span class="o">-</span> <span class="n">lo</span><span class="o">)</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span> 
+            <span class="kt">int</span> <span class="n">cmp</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">keys</span><span class="o">[</span><span class="n">mid</span><span class="o">]);</span> 
+            <span class="k">if</span><span class="o">(</span><span class="n">cmp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> 
+            <span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">cmp</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">lo</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> 
+            <span class="k">else</span> <span class="k">return</span> <span class="n">mid</span><span class="o">;</span> 
+        <span class="o">}</span> 
+        <span class="k">return</span> <span class="n">lo</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="c1">// 返回表中小于给定键的键的数量 -- 递归版</span>
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">rank</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">,</span><span class="kt">int</span> <span class="n">lo</span><span class="o">,</span><span class="kt">int</span> <span class="n">hi</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span><span class="o">(</span> <span class="n">hi</span> <span class="o">&lt;</span> <span class="n">lo</span> <span class="o">)</span> 
+      <span class="k">return</span> <span class="n">lo</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">lo</span><span class="o">+(</span><span class="n">hi</span> <span class="o">-</span> <span class="n">lo</span><span class="o">)/</span><span class="mi">2</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">cmp</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">keys</span><span class="o">[</span><span class="n">mid</span><span class="o">]);</span>
+    <span class="k">if</span><span class="o">(</span> <span class="n">cmp</span><span class="o">&lt;</span><span class="mi">0</span> <span class="o">)</span>
+      <span class="k">return</span> <span class="nf">rank</span><span class="o">(</span><span class="n">key</span><span class="o">,</span><span class="n">lo</span><span class="o">,</span><span class="n">mid</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+    <span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">cmp</span><span class="o">&gt;</span><span class="mi">0</span><span class="o">)</span>
+      <span class="k">return</span> <span class="nf">rank</span><span class="o">(</span><span class="n">key</span><span class="o">,</span><span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span><span class="n">hi</span><span class="o">);</span>
+    <span class="k">else</span> 
+      <span class="k">return</span> <span class="n">mid</span><span class="o">;</span>
+    <span class="o">}</span>
+
+
+<span class="c1">// 在插入新元素前将所有较大的键向后移动一格</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">put</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">)</span>  <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">rank</span><span class="o">(</span><span class="n">key</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span> <span class="o">&amp;&amp;</span> <span class="n">keys</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">compareTo</span><span class="o">(</span><span class="n">key</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">vals</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+            <span class="k">return</span><span class="o">;</span>
+        <span class="o">}</span>
+    
+        <span class="k">if</span> <span class="o">(</span><span class="no">N</span> <span class="o">==</span> <span class="n">keys</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="n">resize</span><span class="o">(</span><span class="mi">2</span><span class="o">*</span><span class="n">keys</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="no">N</span><span class="o">;</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span><span class="o">--)</span>  <span class="o">{</span>
+            <span class="n">keys</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">keys</span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">];</span>
+            <span class="n">vals</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">vals</span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">];</span>
+        <span class="o">}</span>
+        <span class="n">keys</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">key</span><span class="o">;</span>
+        <span class="n">vals</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+        <span class="no">N</span><span class="o">++;</span>
+    <span class="o">}</span> 
+ 
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> 
+        <span class="nc">BinarySearch</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BinarySearch</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;(</span><span class="mi">10</span><span class="o">);</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.cs.princeton.edu"</span><span class="o">,</span>   <span class="s">"128.112.136.11"</span><span class="o">);</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.princeton.edu"</span><span class="o">,</span>      <span class="s">"128.112.130.211"</span><span class="o">);</span>
+        <span class="o">...</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.iitb.ac.in"</span><span class="o">,</span>         <span class="s">"202.68.145.210"</span><span class="o">);</span>
+    
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"www.iitb.ac.in"</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="二叉查找树">二叉查找树</h3>
+<p>一棵二叉查找树是一棵二叉树，其中每个结点都含有一个Comparable的键及其相关联的值，且每个结点的键都大于其左子树中的任意结点的键而小于右子树的任意结点的值。</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BST</span><span class="o">&lt;</span><span class="nc">Key</span> <span class="kd">extends</span> <span class="nc">Comparable</span><span class="o">&lt;</span><span class="nc">Key</span><span class="o">&gt;,</span> <span class="nc">Value</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">Node</span> <span class="n">root</span><span class="o">;</span>
+
+    <span class="kd">private</span> <span class="kd">class</span> <span class="nc">Node</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="nc">Key</span> <span class="n">key</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="nc">Node</span> <span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">;</span> 
+        <span class="kd">private</span> <span class="kt">int</span> <span class="no">N</span><span class="o">;</span> <span class="c1">// 含根节点在内的整个二叉树中的节点数</span>
+
+        <span class="kd">public</span> <span class="nf">Node</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">,</span> <span class="kt">int</span> <span class="no">N</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">val</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">N</span> <span class="o">=</span> <span class="no">N</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+  
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">(</span><span class="nc">Node</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">else</span> <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="na">N</span><span class="o">;</span>
+    <span class="o">}</span>
+  
+  <span class="c1">// 查找接口</span>
+    <span class="kd">public</span> <span class="nc">Value</span> <span class="nf">get</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="nf">get</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="n">key</span><span class="o">);</span>
+    <span class="o">}</span>
+
+  <span class="c1">// 实际的递归查找</span>
+    <span class="kd">private</span> <span class="nc">Value</span> <span class="nf">get</span><span class="o">(</span><span class="nc">Node</span> <span class="n">x</span><span class="o">,</span> <span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">cmp</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">key</span><span class="o">);</span>
+        <span class="k">if</span>  <span class="o">(</span><span class="n">cmp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="n">get</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">left</span><span class="o">,</span> <span class="n">key</span><span class="o">);</span>
+        <span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">cmp</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="n">get</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">right</span><span class="o">,</span> <span class="n">key</span><span class="o">);</span>
+        <span class="k">else</span>  <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="na">val</span><span class="o">;</span>
+    <span class="o">}</span>
+
+  <span class="c1">// 添加新节点的接口</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">put</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">root</span> <span class="o">=</span> <span class="n">put</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="n">key</span><span class="o">,</span> <span class="n">val</span><span class="o">);</span>
+    <span class="o">}</span>
+
+  <span class="c1">// 实际的递归添加</span>
+    <span class="kd">private</span> <span class="nc">Node</span> <span class="nf">put</span><span class="o">(</span><span class="nc">Node</span> <span class="n">x</span><span class="o">,</span> <span class="nc">Key</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">key</span><span class="o">,</span> <span class="n">val</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">cmp</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">key</span><span class="o">);</span>
+        <span class="k">if</span>      
+      <span class="o">(</span><span class="n">cmp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">x</span><span class="o">.</span><span class="na">left</span>  <span class="o">=</span> <span class="n">put</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">left</span><span class="o">,</span><span class="n">key</span><span class="o">,</span><span class="n">val</span><span class="o">);</span>
+        <span class="k">else</span> 
+      <span class="nf">if</span> <span class="o">(</span><span class="n">cmp</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">x</span><span class="o">.</span><span class="na">right</span> <span class="o">=</span> <span class="n">put</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">right</span><span class="o">,</span><span class="n">key</span><span class="o">,</span><span class="n">val</span><span class="o">);</span>
+        <span class="k">else</span>  
+      <span class="n">x</span><span class="o">.</span><span class="na">val</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+        <span class="n">x</span><span class="o">.</span><span class="na">N</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">size</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">left</span><span class="o">)</span> <span class="o">+</span> <span class="n">size</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">;</span>
+    <span class="o">}</span>
+
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> 
+        <span class="no">BST</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="no">BST</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.cs.princeton.edu"</span><span class="o">,</span>   <span class="s">"128.112.136.11"</span><span class="o">);</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.princeton.edu"</span><span class="o">,</span>      <span class="s">"128.112.130.211"</span><span class="o">);</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.math.princeton.edu"</span><span class="o">,</span> <span class="s">"128.112.18.11"</span><span class="o">);</span>
+       <span class="o">...</span>
+    
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"www.princeton.edu"</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="红黑二叉查找树">红黑二叉查找树*</h3>
+<p>红黑树是一种平衡二叉树（AVL树）。平衡二叉树中任何节点的两个子树的高度最大差别为1，增加和删除可能需要通过一次或多次树旋转来重新平衡这个树。</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RedBlackBST</span><span class="o">&lt;</span><span class="nc">Key</span> <span class="kd">extends</span> <span class="nc">Comparable</span><span class="o">&lt;</span><span class="nc">Key</span><span class="o">&gt;,</span> <span class="nc">Value</span><span class="o">&gt;</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="no">RED</span>   <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="no">BLACK</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+
+    <span class="kd">private</span> <span class="nc">Node</span> <span class="n">root</span><span class="o">;</span>     <span class="c1">// root of the BST</span>
+
+    <span class="c1">// BST helper node data type</span>
+    <span class="kd">private</span> <span class="kd">class</span> <span class="nc">Node</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="nc">Key</span> <span class="n">key</span><span class="o">;</span>           <span class="c1">// key</span>
+        <span class="kd">private</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">;</span>         <span class="c1">// associated data</span>
+        <span class="kd">private</span> <span class="nc">Node</span> <span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">;</span>  <span class="c1">// links to left and right subtrees</span>
+        <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">color</span><span class="o">;</span>     <span class="c1">// color of parent link</span>
+        <span class="kd">private</span> <span class="kt">int</span> <span class="no">N</span><span class="o">;</span>             <span class="c1">// subtree count</span>
+
+        <span class="kd">public</span> <span class="nf">Node</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">color</span><span class="o">,</span> <span class="kt">int</span> <span class="no">N</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">val</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">;</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">N</span> <span class="o">=</span> <span class="no">N</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+  
+ <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">isRed</span><span class="o">(</span><span class="nc">Node</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="k">return</span> <span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">color</span> <span class="o">==</span> <span class="no">RED</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="c1">// number of node in subtree rooted at x; 0 if x is null</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">(</span><span class="nc">Node</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="na">N</span><span class="o">;</span>
+    <span class="o">}</span> 
+
+  
+    <span class="c1">// value associated with the given key; null if no such key</span>
+    <span class="kd">public</span> <span class="nc">Value</span> <span class="nf">get</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span> <span class="k">return</span> <span class="n">get</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="n">key</span><span class="o">);</span> <span class="o">}</span>
+
+    <span class="c1">// value associated with the given key in subtree rooted at x; null if no such key</span>
+    <span class="kd">private</span> <span class="nc">Value</span> <span class="nf">get</span><span class="o">(</span><span class="nc">Node</span> <span class="n">x</span><span class="o">,</span> <span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">x</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="kt">int</span> <span class="n">cmp</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">key</span><span class="o">);</span>
+            <span class="k">if</span>  <span class="o">(</span><span class="n">cmp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="na">left</span><span class="o">;</span>
+            <span class="k">else</span> 
+        <span class="nf">if</span> <span class="o">(</span><span class="n">cmp</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="na">right</span><span class="o">;</span>
+            <span class="k">else</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="na">val</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">put</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">root</span> <span class="o">=</span> <span class="n">put</span><span class="o">(</span><span class="n">root</span><span class="o">,</span> <span class="n">key</span><span class="o">,</span> <span class="n">val</span><span class="o">);</span>
+        <span class="n">root</span><span class="o">.</span><span class="na">color</span> <span class="o">=</span> <span class="no">BLACK</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="nc">Node</span> <span class="nf">put</span><span class="o">(</span><span class="nc">Node</span> <span class="n">h</span><span class="o">,</span> <span class="nc">Key</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span> 
+        <span class="k">if</span> <span class="o">(</span><span class="n">h</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">key</span><span class="o">,</span> <span class="n">val</span><span class="o">,</span> <span class="no">RED</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+
+        <span class="kt">int</span> <span class="n">cmp</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">key</span><span class="o">);</span>
+        <span class="k">if</span>      <span class="o">(</span><span class="n">cmp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">h</span><span class="o">.</span><span class="na">left</span>  <span class="o">=</span> <span class="n">put</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">,</span>  <span class="n">key</span><span class="o">,</span> <span class="n">val</span><span class="o">);</span> 
+        <span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">cmp</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">h</span><span class="o">.</span><span class="na">right</span> <span class="o">=</span> <span class="n">put</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">right</span><span class="o">,</span> <span class="n">key</span><span class="o">,</span> <span class="n">val</span><span class="o">);</span> 
+        <span class="k">else</span>              <span class="n">h</span><span class="o">.</span><span class="na">val</span>   <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+
+        <span class="c1">// fix-up any right-leaning links</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">right</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">))</span>      <span class="n">h</span> <span class="o">=</span> <span class="n">rotateLeft</span><span class="o">(</span><span class="n">h</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">)</span>  <span class="o">&amp;&amp;</span>  <span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">.</span><span class="na">left</span><span class="o">))</span> <span class="n">h</span> <span class="o">=</span> <span class="n">rotateRight</span><span class="o">(</span><span class="n">h</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">)</span>  <span class="o">&amp;&amp;</span>  <span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">right</span><span class="o">))</span>     <span class="n">flipColors</span><span class="o">(</span><span class="n">h</span><span class="o">);</span>
+        <span class="n">h</span><span class="o">.</span><span class="na">N</span> <span class="o">=</span> <span class="n">size</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">)</span> <span class="o">+</span> <span class="n">size</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">right</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+
+        <span class="k">return</span> <span class="n">h</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// make a left-leaning link lean to the right</span>
+    <span class="kd">private</span> <span class="nc">Node</span> <span class="nf">rotateRight</span><span class="o">(</span><span class="nc">Node</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">assert</span> <span class="o">(</span><span class="n">h</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">);</span>
+        <span class="nc">Node</span> <span class="n">x</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">;</span>
+        <span class="n">h</span><span class="o">.</span><span class="na">left</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="na">right</span><span class="o">;</span>
+        <span class="n">x</span><span class="o">.</span><span class="na">right</span> <span class="o">=</span> <span class="n">h</span><span class="o">;</span>
+        <span class="n">x</span><span class="o">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="na">right</span><span class="o">.</span><span class="na">color</span><span class="o">;</span>
+        <span class="n">x</span><span class="o">.</span><span class="na">right</span><span class="o">.</span><span class="na">color</span> <span class="o">=</span> <span class="no">RED</span><span class="o">;</span>
+        <span class="n">x</span><span class="o">.</span><span class="na">N</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="na">N</span><span class="o">;</span>
+        <span class="n">h</span><span class="o">.</span><span class="na">N</span> <span class="o">=</span> <span class="n">size</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">)</span> <span class="o">+</span> <span class="n">size</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">right</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// make a right-leaning link lean to the left</span>
+    <span class="kd">private</span> <span class="nc">Node</span> <span class="nf">rotateLeft</span><span class="o">(</span><span class="nc">Node</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">assert</span> <span class="o">(</span><span class="n">h</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
+        <span class="nc">Node</span> <span class="n">x</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="na">right</span><span class="o">;</span>
+        <span class="n">h</span><span class="o">.</span><span class="na">right</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="na">left</span><span class="o">;</span>
+        <span class="n">x</span><span class="o">.</span><span class="na">left</span> <span class="o">=</span> <span class="n">h</span><span class="o">;</span>
+        <span class="n">x</span><span class="o">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="na">left</span><span class="o">.</span><span class="na">color</span><span class="o">;</span>
+        <span class="n">x</span><span class="o">.</span><span class="na">left</span><span class="o">.</span><span class="na">color</span> <span class="o">=</span> <span class="no">RED</span><span class="o">;</span>
+        <span class="n">x</span><span class="o">.</span><span class="na">N</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="na">N</span><span class="o">;</span>
+        <span class="n">h</span><span class="o">.</span><span class="na">N</span> <span class="o">=</span> <span class="n">size</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">)</span> <span class="o">+</span> <span class="n">size</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">right</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// flip the colors of a node and its two children</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">flipColors</span><span class="o">(</span><span class="nc">Node</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// h must have opposite color of its two children</span>
+        <span class="k">assert</span> <span class="o">(</span><span class="n">h</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">left</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">right</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">);</span>
+        <span class="k">assert</span> <span class="o">(!</span><span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">)</span> <span class="o">&amp;&amp;</span>  <span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">)</span> <span class="o">&amp;&amp;</span>  <span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">right</span><span class="o">))</span>
+            <span class="o">||</span> <span class="o">(</span><span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">)</span>  <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">isRed</span><span class="o">(</span><span class="n">h</span><span class="o">.</span><span class="na">right</span><span class="o">));</span>
+        <span class="n">h</span><span class="o">.</span><span class="na">color</span> <span class="o">=</span> <span class="o">!</span><span class="n">h</span><span class="o">.</span><span class="na">color</span><span class="o">;</span>
+        <span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">.</span><span class="na">color</span> <span class="o">=</span> <span class="o">!</span><span class="n">h</span><span class="o">.</span><span class="na">left</span><span class="o">.</span><span class="na">color</span><span class="o">;</span>
+        <span class="n">h</span><span class="o">.</span><span class="na">right</span><span class="o">.</span><span class="na">color</span> <span class="o">=</span> <span class="o">!</span><span class="n">h</span><span class="o">.</span><span class="na">right</span><span class="o">.</span><span class="na">color</span><span class="o">;</span>
+    <span class="o">}</span>
+
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> 
+        <span class="nc">RedBlackBST</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RedBlackBST</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.cs.princeton.edu"</span><span class="o">,</span>   <span class="s">"128.112.136.11"</span><span class="o">);</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.princeton.edu"</span><span class="o">,</span>      <span class="s">"128.112.130.211"</span><span class="o">);</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.math.princeton.edu"</span><span class="o">,</span> <span class="s">"128.112.18.11"</span><span class="o">);</span>
+<span class="o">...</span>    
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"www.princeton.edu"</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="基于拉链法的散列表查找">基于拉链法的散列表查找</h3>
+<p>所有hash值相同的节点（发生冲突了）都存放在同一个链表中。</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SeparateChainingHashST</span><span class="o">&lt;</span><span class="nc">Key</span><span class="o">,</span> <span class="nc">Value</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="no">N</span><span class="o">;</span> 
+    <span class="kd">private</span> <span class="kt">int</span> <span class="no">M</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">SequentialSearchST</span><span class="o">&lt;</span><span class="nc">Key</span><span class="o">,</span> <span class="nc">Value</span><span class="o">&gt;[]</span> <span class="n">st</span><span class="o">;</span> <span class="c1">// 一个链表，用于存放hash结果相同的所有节点</span>
+
+    <span class="kd">public</span> <span class="nf">SeparateChainingHashST</span><span class="o">(</span><span class="kt">int</span> <span class="no">M</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">M</span> <span class="o">=</span> <span class="no">M</span><span class="o">;</span>
+        <span class="n">st</span> <span class="o">=</span> <span class="o">(</span><span class="nc">SequentialSearchST</span><span class="o">&lt;</span><span class="nc">Key</span><span class="o">,</span> <span class="nc">Value</span><span class="o">&gt;[])</span> <span class="k">new</span> <span class="nc">SequentialSearchST</span><span class="o">[</span><span class="no">M</span><span class="o">];</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">M</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+            <span class="n">st</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SequentialSearchST</span><span class="o">&lt;</span><span class="nc">Key</span><span class="o">,</span> <span class="nc">Value</span><span class="o">&gt;();</span>
+    <span class="o">}</span> 
+
+    <span class="c1">// 计算hash值</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">hash</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="o">(</span><span class="n">key</span><span class="o">.</span><span class="na">hashCode</span><span class="o">()</span> <span class="o">&amp;</span> <span class="mh">0x7fffffff</span><span class="o">)</span> <span class="o">%</span> <span class="no">M</span><span class="o">;</span>  <span class="c1">// hashCode()是Object的方法</span>
+    <span class="o">}</span> 
+
+    <span class="c1">// 查找接口：先算出hash值用来确定所要查找的链表，再在该链表中用指定的key进行查找</span>
+    <span class="kd">public</span> <span class="nc">Value</span> <span class="nf">get</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">hash</span><span class="o">(</span><span class="n">key</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">st</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">get</span><span class="o">(</span><span class="n">key</span><span class="o">);</span>
+    <span class="o">}</span> 
+
+    <span class="c1">// 往hash列表中加入节点</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">put</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">hash</span><span class="o">(</span><span class="n">key</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(!</span><span class="n">st</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">contains</span><span class="o">(</span><span class="n">key</span><span class="o">))</span> <span class="no">N</span><span class="o">++;</span>
+        <span class="n">st</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">put</span><span class="o">(</span><span class="n">key</span><span class="o">,</span> <span class="n">val</span><span class="o">);</span>
+    <span class="o">}</span> 
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="基于线性探测法的散列表查找">基于线性探测法的散列表查找</h3>
+<p>用大小为M的数组保存N个键值对，M&gt;N，依靠数组中的空位来解决碰撞冲突。算出hash值后，找到其在数组中对应的索引，检查改索引对应的值和被查找的值是否相同，如果不同则将索引增大继续查找，到达数组结尾时折回数组的开头，直到找到该键或者遇到一个空元素。</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LinearProbingHashST</span><span class="o">&lt;</span><span class="nc">Key</span><span class="o">,</span> <span class="nc">Value</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="no">N</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="no">M</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">Key</span><span class="o">[]</span> <span class="n">keys</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">Value</span><span class="o">[]</span> <span class="n">vals</span><span class="o">;</span>
+
+  <span class="nd">@SuppressWarnings</span><span class="o">(</span><span class="s">"unchecked"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nf">LinearProbingHashST</span><span class="o">(</span><span class="kt">int</span> <span class="n">capacity</span><span class="o">)</span> <span class="o">{</span>
+        <span class="no">M</span> <span class="o">=</span> <span class="n">capacity</span><span class="o">;</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Key</span><span class="o">[])</span>   <span class="k">new</span> <span class="nc">Object</span><span class="o">[</span><span class="no">M</span><span class="o">];</span>
+        <span class="n">vals</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Value</span><span class="o">[])</span> <span class="k">new</span> <span class="nc">Object</span><span class="o">[</span><span class="no">M</span><span class="o">];</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">hash</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="o">(</span><span class="n">key</span><span class="o">.</span><span class="na">hashCode</span><span class="o">()</span> <span class="o">&amp;</span> <span class="mh">0x7fffffff</span><span class="o">)</span> <span class="o">%</span> <span class="no">M</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">resize</span><span class="o">(</span><span class="kt">int</span> <span class="n">capacity</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">LinearProbingHashST</span><span class="o">&lt;</span><span class="nc">Key</span><span class="o">,</span> <span class="nc">Value</span><span class="o">&gt;</span> <span class="n">temp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinearProbingHashST</span><span class="o">&lt;</span><span class="nc">Key</span><span class="o">,</span> <span class="nc">Value</span><span class="o">&gt;(</span><span class="n">capacity</span><span class="o">);</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">M</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">keys</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">temp</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">keys</span><span class="o">[</span><span class="n">i</span><span class="o">],</span> <span class="n">vals</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="n">keys</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="na">keys</span><span class="o">;</span>
+        <span class="n">vals</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="na">vals</span><span class="o">;</span>
+        <span class="no">M</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="na">M</span><span class="o">;</span>
+    <span class="o">}</span>
+
+<span class="c1">// 往散列表表中插入数据</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">put</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="no">N</span> <span class="o">&gt;=</span> <span class="no">M</span><span class="o">/</span><span class="mi">2</span><span class="o">)</span> <span class="n">resize</span><span class="o">(</span><span class="mi">2</span><span class="o">*</span><span class="no">M</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">i</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">hash</span><span class="o">(</span><span class="n">key</span><span class="o">);</span> <span class="n">keys</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">;</span> <span class="n">i</span> <span class="o">=</span> <span class="o">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)</span> <span class="o">%</span> <span class="no">M</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">keys</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="n">key</span><span class="o">))</span> <span class="o">{</span> 
+        <span class="n">vals</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span> 
+        <span class="k">return</span><span class="o">;</span> 
+      <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="n">keys</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">key</span><span class="o">;</span>
+        <span class="n">vals</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+        <span class="no">N</span><span class="o">++;</span>
+    <span class="o">}</span>
+
+<span class="c1">// 搜索</span>
+    <span class="kd">public</span> <span class="nc">Value</span> <span class="nf">get</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">hash</span><span class="o">(</span><span class="n">key</span><span class="o">);</span> <span class="n">keys</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">;</span> <span class="n">i</span> <span class="o">=</span> <span class="o">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)</span> <span class="o">%</span> <span class="no">M</span><span class="o">)</span> 
+            <span class="k">if</span> <span class="o">(</span><span class="n">keys</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="n">key</span><span class="o">))</span>
+                <span class="k">return</span> <span class="n">vals</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> 
+        <span class="nc">LinearProbingHashST</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinearProbingHashST</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;(</span><span class="mi">10</span><span class="o">);</span>
+
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.cs.princeton.edu"</span><span class="o">,</span>   <span class="s">"128.112.136.11"</span><span class="o">);</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"www.princeton.edu"</span><span class="o">,</span>      <span class="s">"128.112.130.211"</span><span class="o">);</span>
+        <span class="o">...</span>
+    
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"www.cs.princeton.edu"</span><span class="o">));</span> 
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<h2 id="图">图*</h2>
+
+<h2 id="字符串">字符串</h2>
+<h3 id="暴力子字符串查找算法一">暴力子字符串查找算法一</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">violenceSearch</span><span class="o">(</span><span class="nc">String</span> <span class="n">pat</span><span class="o">,</span><span class="nc">String</span> <span class="n">txt</span><span class="o">){</span>
+  <span class="kt">int</span> <span class="no">M</span> <span class="o">=</span> <span class="n">pat</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+  <span class="kt">int</span> <span class="no">N</span> <span class="o">=</span> <span class="n">txt</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+    
+  <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="no">N</span><span class="o">-</span><span class="no">M</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+    <span class="kt">int</span> <span class="n">j</span><span class="o">;</span>
+    <span class="k">for</span><span class="o">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="no">M</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span>
+      <span class="k">if</span><span class="o">(</span><span class="n">txt</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">)</span> <span class="o">!=</span> <span class="n">pat</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">))</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">j</span> <span class="o">==</span> <span class="no">M</span><span class="o">)</span>
+      <span class="k">return</span> <span class="n">i</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="暴力子字符串查找算法二">暴力子字符串查找算法二</h3>
+<p>显式回退：</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">violenceSearch2</span><span class="o">(</span><span class="nc">String</span> <span class="n">pat</span><span class="o">,</span><span class="nc">String</span> <span class="n">txt</span><span class="o">){</span>
+  <span class="kt">int</span> <span class="n">j</span><span class="o">,</span><span class="no">M</span> <span class="o">=</span> <span class="n">pat</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+  <span class="kt">int</span> <span class="n">i</span><span class="o">,</span><span class="no">N</span> <span class="o">=</span> <span class="n">txt</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+    
+  <span class="k">for</span><span class="o">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">,</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="no">N</span> <span class="o">&amp;&amp;</span> <span class="n">j</span><span class="o">&lt;</span><span class="no">M</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">txt</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">==</span> <span class="n">pat</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">))</span>
+      <span class="n">j</span><span class="o">++;</span>
+    <span class="k">else</span><span class="o">{</span>
+      <span class="n">i</span><span class="o">-=</span><span class="n">j</span><span class="o">;</span>  <span class="c1">// 虽然只有一个循环，但是循环指针存在回退操作</span>
+      <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+  <span class="k">if</span><span class="o">(</span><span class="n">j</span><span class="o">==</span><span class="no">M</span><span class="o">)</span>
+    <span class="k">return</span> <span class="n">i</span><span class="o">-</span><span class="no">M</span><span class="o">;</span>
+  <span class="k">else</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="kmp字符串查找算法">KMP字符串查找算法</h3>
+<p>此算法通过运用对这个词在不匹配时本身就包含足够的信息来确定下一个匹配将在哪里开始的发现，从而避免重新检查先前匹配的字符。
+具体而言就是针对搜索词，算出一张《部分匹配表》（Partial Match Table），当发生不匹配时，通过查表并结合如下公式来计算出需要后移的下一个匹配位置：
+移动位数 = 已匹配的字符数 - 对应的部分匹配值</p>
+
+<p>部分匹配表的生成算法：
+首先，要了解两个概念：”前缀”和”后缀”。 “前缀”指除了最后一个字符以外，一个字符串的全部头部组合；”后缀”指除了第一个字符以外，一个字符串的全部尾部组合。
+“部分匹配值”就是”前缀”和”后缀”的最长的共有元素的长度。以”ABCDABD”为例：</p>
+<ul>
+  <li>“A”的前缀和后缀都为空集，共有元素的长度为0；</li>
+  <li>“AB”的前缀为[A]，后缀为[B]，共有元素的长度为0；</li>
+  <li>“ABC”的前缀为[A, AB]，后缀为[BC, C]，共有元素的长度0；</li>
+  <li>“ABCD”的前缀为[A, AB, ABC]，后缀为[BCD, CD, D]，共有元素的长度为0；</li>
+  <li>“ABCDA”的前缀为[A, AB, ABC, ABCD]，后缀为[BCDA, CDA, DA, A]，共有元素为”A”，长度为1；</li>
+  <li>“ABCDAB”的前缀为[A, AB, ABC, ABCD, ABCDA]，后缀为[BCDAB, CDAB, DAB, AB, B]，共有元素为”AB”，长度为2；</li>
+  <li>“ABCDABD”的前缀为[A, AB, ABC, ABCD, ABCDA, ABCDAB]，后缀为[BCDABD, CDABD, DABD, ABD, BD, D]，共有元素的长度为0。
+最终的部分匹配表内容：</li>
+</ul>
+
+<p>KMP匹配过程举例：
+发生不匹配：<br />
+已知空格与D不匹配时，前面六个字符”ABCDAB”是匹配的。查表可知，最后一个匹配字符B对应的”部分匹配值”为2，因此移动的位数 = 已匹配的字符数6 - 部分匹配值2 ，为4，即将匹配开始位置后移4位后继续匹配：
+因为空格与Ｃ不匹配，搜索词还要继续往后移。这时，已匹配的字符数为2（”AB”），对应的”部分匹配值”为0。所以，移动位数 = 2 - 0，结果为 2，于是将搜索词向后移2位继续匹配：
+因为空格与A不匹配，继续后移一位：
+逐位比较，直到发现C与D不匹配。于是，移动位数 = 6 - 2，继续将搜索词向后移动4位，继续匹配：
+逐位比较，直到搜索词的最后一位，发现完全匹配，于是搜索完成。如果还要继续搜索（即找出全部匹配），移动位数 = 7 - 0，再将搜索词向后移动7位（7为已匹配的字符数，这里就是匹配字符串的总长度）。</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">KMP</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">R</span><span class="o">;</span>    <span class="c1">// the radix</span>
+  <span class="kd">private</span> <span class="kt">int</span><span class="o">[][]</span> <span class="n">dfa</span><span class="o">;</span>    <span class="c1">// the KMP automoton</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">pat</span><span class="o">;</span>    <span class="c1">// or the pattern string</span>
+
+  <span class="c1">// create the DFA from a String</span>
+  <span class="kd">public</span> <span class="nf">KMP</span><span class="o">(</span><span class="nc">String</span> <span class="n">pat</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">R</span> <span class="o">=</span> <span class="mi">256</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">pat</span> <span class="o">=</span> <span class="n">pat</span><span class="o">;</span>
+
+    <span class="c1">// build DFA from pattern</span>
+    <span class="kt">int</span> <span class="no">M</span> <span class="o">=</span> <span class="n">pat</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+    <span class="n">dfa</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">R</span><span class="o">][</span><span class="no">M</span><span class="o">];</span> 
+    <span class="n">dfa</span><span class="o">[</span><span class="n">pat</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">)][</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> 
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="no">X</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="no">M</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="no">R</span><span class="o">;</span> <span class="n">c</span><span class="o">++)</span> 
+        <span class="n">dfa</span><span class="o">[</span><span class="n">c</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">dfa</span><span class="o">[</span><span class="n">c</span><span class="o">][</span><span class="no">X</span><span class="o">];</span>   <span class="c1">// Copy mismatch cases. </span>
+      <span class="n">dfa</span><span class="o">[</span><span class="n">pat</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">)][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span>   <span class="c1">// Set match case. </span>
+      <span class="no">X</span> <span class="o">=</span> <span class="n">dfa</span><span class="o">[</span><span class="n">pat</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">)][</span><span class="no">X</span><span class="o">];</span>   <span class="c1">// Update restart state. </span>
+    <span class="o">}</span> 
+  <span class="o">}</span> 
+
+    <span class="c1">// return offset of first match; N if no match</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">search</span><span class="o">(</span><span class="nc">String</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// simulate operation of DFA on text</span>
+    <span class="kt">int</span> <span class="no">M</span> <span class="o">=</span> <span class="n">pat</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+    <span class="kt">int</span> <span class="no">N</span> <span class="o">=</span> <span class="n">txt</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">;</span>
+    <span class="k">for</span> <span class="o">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">N</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="no">M</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="n">j</span> <span class="o">=</span> <span class="n">dfa</span><span class="o">[</span><span class="n">txt</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)][</span><span class="n">j</span><span class="o">];</span>
+    <span class="o">}</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">j</span> <span class="o">==</span> <span class="no">M</span><span class="o">)</span> <span class="k">return</span> <span class="n">i</span> <span class="o">-</span> <span class="no">M</span><span class="o">;</span>    <span class="c1">// found</span>
+      <span class="k">return</span> <span class="no">N</span><span class="o">;</span>                <span class="c1">// not found</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">pat</span> <span class="o">=</span> <span class="s">"WINSTON"</span><span class="o">;</span>
+    <span class="nc">String</span> <span class="n">txt</span> <span class="o">=</span> <span class="s">"0123456789WINSTONdsiyghkadfadfafhdg"</span><span class="o">;</span>
+    
+    <span class="no">KMP</span> <span class="n">kmp</span> <span class="o">=</span> <span class="k">new</span> <span class="no">KMP</span><span class="o">(</span><span class="n">pat</span><span class="o">);</span>
+    <span class="kt">int</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">kmp</span><span class="o">.</span><span class="na">search</span><span class="o">(</span><span class="n">txt</span><span class="o">);</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">offset</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="bm字符串查找算法">BM字符串查找算法</h3>
+<p>BM算法的效率比KMP高，是一种从后往前扫描的算法。当某个字符不匹配时（坏字符），检查该主串中的不匹配的字符是否出现在匹配字符串中的其他位置，然后根据如下公式计算下一次匹配的位移数：
+后移位数 = 坏字符的位置 - 搜索词中的上一次出现位置
+如果”坏字符”不包含在搜索词之中，则上一次出现位置为 -1。
+假定字符串为”HERE IS A SIMPLE EXAMPLE”，搜索词为”EXAMPLE”：</p>
+
+<p>首先，”字符串”与”搜索词”头部对齐，从尾部开始比较。发现坏字符为‘S’，后移位数 = 坏字符S在搜索词中的当前匹配位置6（从0开始） - S在搜索词中的上一次出现的位置-1，为7.因此后移7位后继续匹配：</p>
+
+<p>发现”P”与”E”不匹配，所以”P”是”坏字符”。但是，”P”包含在搜索词”EXAMPLE”之中。所以，后移位数 = 坏字符位置6 - 在搜索词中上一次出现的位置4，为2，因此后移2位再继续匹配：</p>
+
+<p>“MPLE”与”MPLE”匹配。我们把这种情况称为”好后缀”（good suffix），即所有尾部匹配的字符串。注意，”MPLE”、”PLE”、”LE”、”E”都是好后缀。
+发现”I”与”A”不匹配。所以，”I”是”坏字符”，但此时因为有好后缀的存在，所以不按之前的公式，而是按如下公式来计算位移：
+　后移位数 = 好后缀的位置 - 搜索词中的上一次出现位置</p>
+
+<p>这个规则有三个注意点：</p>
+<ol>
+  <li>“好后缀”的位置以最后一个字符为准。假定”ABCDEF”的”EF”是好后缀，则它的位置以”F”为准，即5（从0开始计算）。</li>
+  <li>如果”好后缀”在搜索词中只出现一次，则它的上一次出现位置为 -1。比如，”EF”在”ABCDEF”之中只出现一次，则它的上一次出现位置为-1（即未出现）。</li>
+  <li>如果”好后缀”有多个，则除了最长的那个”好后缀”，其他”好后缀”的上一次出现位置必须在头部。比如，假定”BABCDAB”的”好后缀”是”DAB”、”AB”、”B”，请问这时”好后缀”的上一次出现位置是什么？回答是，此时采用的好后缀是”B”，它的上一次出现位置是头部，即第0位。这个规则也可以这样表达：如果最长的那个”好后缀”只出现一次，则可以把搜索词改写成如下形式进行位置计算”(DA)BABCDAB”，即虚拟加入最前面的”DA”。</li>
+</ol>
+
+<p>回到上文的这个例子。此时，所有的”好后缀”（MPLE、PLE、LE、E）之中，只有”E”在”EXAMPLE”还出现在头部，所以后移 6 - 0 = 6位。</p>
+
+<p>可以看到，”坏字符规则”只能移3位，”好后缀规则”可以移6位。所以，Boyer-Moore算法的基本思想是，每次后移这两个规则之中的较大值。更巧妙的是，这两个规则的移动位数，只与搜索词有关，与原字符串无关。因此，可以预先计算生成《坏字符规则表》和《好后缀规则表》。使用时，只要查表比较一下就可以了。</p>
+
+<p>继续从尾部开始比较，”P”与”E”不匹配，因此”P”是”坏字符”。根据”坏字符规则”，后移 6 - 4 = 2位。</p>
+
+<p>从尾部开始逐位比较，发现全部匹配，于是搜索结束。如果还要继续查找（即找出全部匹配），则根据”好后缀规则”，后移 6 - 0 = 6位，即头部的”E”移到尾部的”E”的位置。</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BoyerMoore</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">R</span><span class="o">;</span>     <span class="c1">// the radix</span>
+  <span class="kd">private</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">right</span><span class="o">;</span>     <span class="c1">// the bad-character skip array</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">pat</span><span class="o">;</span>      <span class="c1">// or as a string</span>
+
+  <span class="c1">// pattern provided as a string</span>
+  <span class="kd">public</span> <span class="nf">BoyerMoore</span><span class="o">(</span><span class="nc">String</span> <span class="n">pat</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">R</span> <span class="o">=</span> <span class="mi">256</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">pat</span> <span class="o">=</span> <span class="n">pat</span><span class="o">;</span>
+
+    <span class="c1">// position of rightmost occurrence of c in the pattern</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">R</span><span class="o">];</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="no">R</span><span class="o">;</span> <span class="n">c</span><span class="o">++)</span>
+      <span class="n">right</span><span class="o">[</span><span class="n">c</span><span class="o">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">pat</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">j</span><span class="o">++)</span>
+      <span class="n">right</span><span class="o">[</span><span class="n">pat</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">)]</span> <span class="o">=</span> <span class="n">j</span><span class="o">;</span>
+  <span class="o">}</span>
+  
+  <span class="c1">// return offset of first match; N if no match</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">search</span><span class="o">(</span><span class="nc">String</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="no">M</span> <span class="o">=</span> <span class="n">pat</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+    <span class="kt">int</span> <span class="no">N</span> <span class="o">=</span> <span class="n">txt</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+    <span class="kt">int</span> <span class="n">skip</span><span class="o">;</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="no">N</span> <span class="o">-</span> <span class="no">M</span><span class="o">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="n">skip</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">skip</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="no">M</span><span class="o">-</span><span class="mi">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span><span class="o">--)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">pat</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">)</span> <span class="o">!=</span> <span class="n">txt</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">))</span> <span class="o">{</span>
+          <span class="n">skip</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">j</span> <span class="o">-</span> <span class="n">right</span><span class="o">[</span><span class="n">txt</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">)]);</span>
+          <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">skip</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="n">i</span><span class="o">;</span>    <span class="c1">// found</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="no">N</span><span class="o">;</span>                       <span class="c1">// not found</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">pat</span> <span class="o">=</span> <span class="s">"WINSTON"</span><span class="o">;</span>
+    <span class="nc">String</span> <span class="n">txt</span> <span class="o">=</span> <span class="s">"0123456789WINSTONdsiyghkadfadfafhdg"</span><span class="o">;</span>
+    
+    <span class="nc">BoyerMoore</span> <span class="n">bm</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BoyerMoore</span><span class="o">(</span><span class="n">pat</span><span class="o">);</span>
+    <span class="kt">int</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">bm</span><span class="o">.</span><span class="na">search</span><span class="o">(</span><span class="n">txt</span><span class="o">);</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">offset</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="rk字符串查找算法">RK字符串查找算法</h3>
+<p>Rabin-Karp算法的思想：</p>
+<ol>
+  <li>假设子串的长度为M，目标字符串的长度为N</li>
+  <li>计算子串的hash值</li>
+  <li>计算目标字符串中每个长度为M的子串的hash值（共需要计算N-M+1次）</li>
+  <li>比较hash值，如果hash值不同，字符串必然不匹配，如果hash值相同，还需要使用朴素算法再次判断
+实现略。</li>
+</ol>
+
+<h2 id="补充">补充*</h2>
+<h3 id="求最大子序列和的联机算法">求最大子序列和的联机算法</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MaxSubsequenceSum</span> <span class="o">{</span>
+  
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">maxSubsequenceSum</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">){</span>
+    <span class="kt">int</span>  <span class="n">thisSum</span><span class="o">,</span> <span class="n">maxSum</span><span class="o">,</span> <span class="n">i</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="no">N</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+    <span class="n">thisSum</span> <span class="o">=</span> <span class="n">maxSum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+    <span class="c1">// 只用一次循环</span>
+    <span class="k">for</span><span class="o">(</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="no">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++</span> <span class="o">){</span> 
+      <span class="n">thisSum</span> <span class="o">+=</span> <span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+      <span class="k">if</span><span class="o">(</span> <span class="n">thisSum</span> <span class="o">&gt;</span> <span class="n">maxSum</span> <span class="o">)</span>
+        <span class="n">maxSum</span> <span class="o">=</span> <span class="n">thisSum</span><span class="o">;</span>
+      <span class="k">else</span> <span class="nf">if</span><span class="o">(</span> <span class="n">thisSum</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">)</span>  <span class="c1">// 当当前累加和为负数时，和置0</span>
+        <span class="n">thisSum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">maxSum</span><span class="o">;</span>
+  <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> 
+    <span class="kt">int</span><span class="o">[]</span> <span class="n">a</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,-</span><span class="mi">4</span><span class="o">,</span><span class="mi">4</span><span class="o">,-</span><span class="mi">2</span><span class="o">,-</span><span class="mi">9</span><span class="o">,</span><span class="mi">9</span><span class="o">,</span><span class="mi">9</span><span class="o">,</span><span class="mi">9</span><span class="o">,-</span><span class="mi">100</span><span class="o">,-</span><span class="mi">7</span><span class="o">,</span><span class="mi">9</span><span class="o">,</span><span class="mi">9</span><span class="o">,</span><span class="mi">9</span><span class="o">,-</span><span class="mi">50</span><span class="o">,</span><span class="mi">8</span><span class="o">,</span><span class="mi">8</span><span class="o">,-</span><span class="mi">8</span><span class="o">};</span>  <span class="c1">//</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">maxSubsequenceSum</span><span class="o">(</span><span class="n">a</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="单链表相关操作">单链表相关操作</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LinkList</span><span class="o">&lt;</span><span class="nc">Key</span><span class="o">,</span> <span class="nc">Value</span><span class="o">&gt;</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="no">N</span><span class="o">;</span> <span class="c1">// 链表长度</span>
+  <span class="kd">private</span> <span class="nc">Node</span> <span class="n">first</span><span class="o">;</span> <span class="c1">// 头结点</span>
+
+  <span class="c1">// 链表结点</span>
+  <span class="kd">private</span> <span class="kd">class</span> <span class="nc">Node</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">Key</span> <span class="n">key</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">Node</span> <span class="n">next</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">Node</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">,</span> <span class="nc">Node</span> <span class="n">next</span><span class="o">)</span>  <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">key</span>  <span class="o">=</span> <span class="n">key</span><span class="o">;</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">val</span>  <span class="o">=</span> <span class="n">val</span><span class="o">;</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">next</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="c1">// 搜索</span>
+  <span class="kd">public</span> <span class="nc">Value</span> <span class="nf">get</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">Node</span> <span class="n">x</span> <span class="o">=</span> <span class="n">first</span><span class="o">;</span> <span class="n">x</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="na">next</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">key</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">key</span><span class="o">)){</span> 
+        <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="na">val</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="o">}</span>
+  
+  <span class="c1">// 添加新结点</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">put</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Value</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span> <span class="nc">Node</span> <span class="n">x</span> <span class="o">=</span> <span class="n">first</span><span class="o">;</span> <span class="n">x</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="na">next</span> <span class="o">){</span>
+      <span class="k">if</span> <span class="o">(</span> <span class="n">key</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">key</span><span class="o">)</span> <span class="o">)</span> <span class="o">{</span> 
+        <span class="n">x</span><span class="o">.</span><span class="na">val</span> <span class="o">=</span> <span class="n">val</span><span class="o">;</span> 
+        <span class="k">return</span><span class="o">;</span> 
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="o">(</span><span class="n">key</span><span class="o">,</span> <span class="n">val</span><span class="o">,</span> <span class="n">first</span><span class="o">);</span>
+  <span class="o">}</span>
+  
+  <span class="c1">// 删除结点</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">delete</span><span class="o">(</span><span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">first</span> <span class="o">=</span> <span class="n">delete</span><span class="o">(</span><span class="n">first</span><span class="o">,</span> <span class="n">key</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="c1">// 递归删除结点</span>
+  <span class="kd">private</span> <span class="nc">Node</span> <span class="nf">delete</span><span class="o">(</span><span class="nc">Node</span> <span class="n">x</span><span class="o">,</span> <span class="nc">Key</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> 
+      <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    
+    <span class="k">if</span> <span class="o">(</span> <span class="n">key</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">key</span><span class="o">)</span> <span class="o">){</span> 
+      <span class="no">N</span><span class="o">--;</span> 
+      <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="na">next</span><span class="o">;</span> 
+    <span class="o">}</span>
+
+    <span class="n">x</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">delete</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">next</span><span class="o">,</span> <span class="n">key</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">;</span>
+  <span class="o">}</span>
+  
+  <span class="c1">// 反转链表</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">reverse</span><span class="o">(){</span>
+    <span class="nc">Node</span> <span class="n">prev</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="nc">Node</span> <span class="n">curr</span> <span class="o">=</span> <span class="n">first</span><span class="o">;</span>
+    <span class="k">while</span><span class="o">(</span><span class="n">curr</span><span class="o">!=</span><span class="kc">null</span><span class="o">){</span>
+      <span class="nc">Node</span> <span class="n">next</span> <span class="o">=</span> <span class="n">curr</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
+      <span class="c1">// next.next = curr;</span>
+      <span class="n">curr</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">prev</span><span class="o">;</span>
+      <span class="n">prev</span> <span class="o">=</span> <span class="n">curr</span><span class="o">;</span>
+      <span class="n">curr</span> <span class="o">=</span> <span class="n">next</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="n">first</span> <span class="o">=</span> <span class="n">prev</span><span class="o">;</span>
+  <span class="o">}</span>
+  
+  <span class="c1">// 打印链表</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">show</span><span class="o">(){</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">Node</span> <span class="n">x</span> <span class="o">=</span> <span class="n">first</span><span class="o">;</span> <span class="n">x</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="na">next</span><span class="o">){</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">x</span><span class="o">.</span><span class="na">key</span><span class="o">+</span><span class="s">"["</span><span class="o">+</span><span class="n">x</span><span class="o">.</span><span class="na">val</span><span class="o">+</span><span class="s">"] "</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+  <span class="o">}</span>
+  
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span> 
+    <span class="c1">// 初始化、新增结点</span>
+    <span class="nc">LinkList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">st</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"A"</span><span class="o">,</span><span class="s">"1"</span><span class="o">);</span>
+        <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"B"</span><span class="o">,</span><span class="s">"2"</span><span class="o">);</span>
+    <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"C"</span><span class="o">,</span><span class="s">"3"</span><span class="o">);</span>
+    <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"D"</span><span class="o">,</span><span class="s">"4"</span><span class="o">);</span>
+    <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"E"</span><span class="o">,</span><span class="s">"5"</span><span class="o">);</span>
+    <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"F"</span><span class="o">,</span><span class="s">"6"</span><span class="o">);</span>
+    <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"G"</span><span class="o">,</span><span class="s">"7"</span><span class="o">);</span>
+    <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"H"</span><span class="o">,</span><span class="s">"8"</span><span class="o">);</span>
+    <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"I"</span><span class="o">,</span><span class="s">"9"</span><span class="o">);</span>
+    <span class="n">st</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"J"</span><span class="o">,</span><span class="s">"10"</span><span class="o">);</span>
+    <span class="n">st</span><span class="o">.</span><span class="na">show</span><span class="o">();</span>
+    
+    <span class="c1">// 查找</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">st</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"I"</span><span class="o">));</span>
+    
+    <span class="c1">// 删除</span>
+    <span class="nc">String</span> <span class="n">delKey</span> <span class="o">=</span> <span class="s">"I"</span><span class="o">;</span>
+    <span class="n">st</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">delKey</span><span class="o">);</span>
+    <span class="n">st</span><span class="o">.</span><span class="na">show</span><span class="o">();</span>
+    
+    <span class="c1">// 反转</span>
+    <span class="n">st</span><span class="o">.</span><span class="na">reverse</span><span class="o">();</span>
+    <span class="n">st</span><span class="o">.</span><span class="na">show</span><span class="o">();</span>
+    
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+:ET

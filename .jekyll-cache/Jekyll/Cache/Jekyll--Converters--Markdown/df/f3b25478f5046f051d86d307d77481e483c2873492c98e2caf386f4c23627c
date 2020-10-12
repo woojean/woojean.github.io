@@ -1,0 +1,224 @@
+I"n/<ul id="markdown-toc">
+  <li><a href="#前言" id="markdown-toc-前言">前言</a></li>
+  <li><a href="#第1章-速算法简单而又非同寻常的速算法" id="markdown-toc-第1章-速算法简单而又非同寻常的速算法">第1章 速算法：简单而又非同寻常的速算法</a>    <ul>
+      <li><a href="#两位数与11的乘积" id="markdown-toc-两位数与11的乘积">两位数与11的乘积</a></li>
+      <li><a href="#个位数是5的两位数的平方" id="markdown-toc-个位数是5的两位数的平方">个位数是5的两位数的平方</a></li>
+      <li><a href="#十位数相同个位数和为10的两个两位数相乘" id="markdown-toc-十位数相同个位数和为10的两个两位数相乘">十位数相同，个位数和为10的两个两位数相乘</a></li>
+    </ul>
+  </li>
+  <li><a href="#多退少补自左至右的加减法心算法则" id="markdown-toc-多退少补自左至右的加减法心算法则">多退少补：自左至右的加减法心算法则</a>    <ul>
+      <li><a href="#自左至右" id="markdown-toc-自左至右">自左至右</a></li>
+      <li><a href="#取整法" id="markdown-toc-取整法">取整法</a></li>
+      <li><a href="#补足数" id="markdown-toc-补足数">补足数</a></li>
+    </ul>
+  </li>
+  <li><a href="#第3章-分配率乘法心算的基本原则" id="markdown-toc-第3章-分配率乘法心算的基本原则">第3章 分配率：乘法心算的基本原则</a>    <ul>
+      <li><a href="#ab--c--ab--ac" id="markdown-toc-ab--c--ab--ac">a<em>(b + c) = a</em>b + a*c</a></li>
+      <li><a href="#左边第一个数是5的数与偶数相乘" id="markdown-toc-左边第一个数是5的数与偶数相乘">左边第一个数是5的数与偶数相乘</a></li>
+      <li><a href="#取整法-1" id="markdown-toc-取整法-1">取整法</a></li>
+      <li><a href="#两位数的平方" id="markdown-toc-两位数的平方">两位数的平方</a></li>
+    </ul>
+  </li>
+  <li><a href="#第4章-新颖的乘法运算间接相乘法" id="markdown-toc-第4章-新颖的乘法运算间接相乘法">第4章 新颖的乘法运算：间接相乘法</a>    <ul>
+      <li><a href="#加法方法" id="markdown-toc-加法方法">加法方法</a></li>
+      <li><a href="#分解法" id="markdown-toc-分解法">分解法</a></li>
+      <li><a href="#友好乘积数字表" id="markdown-toc-友好乘积数字表">友好乘积数字表</a></li>
+      <li><a href="#立方的心算" id="markdown-toc-立方的心算">立方的心算</a></li>
+    </ul>
+  </li>
+  <li><a href="#第5章-除法心算" id="markdown-toc-第5章-除法心算">第5章 除法心算</a>    <ul>
+      <li><a href="#拇指法则" id="markdown-toc-拇指法则">拇指法则</a></li>
+      <li><a href="#整除的判断" id="markdown-toc-整除的判断">整除的判断</a></li>
+    </ul>
+  </li>
+  <li><a href="#第6章-估算的技巧" id="markdown-toc-第6章-估算的技巧">第6章 估算的技巧</a>    <ul>
+      <li><a href="#加法的估算" id="markdown-toc-加法的估算">加法的估算</a></li>
+      <li><a href="#70定律" id="markdown-toc-70定律">70定律</a></li>
+    </ul>
+  </li>
+  <li><a href="#第7章-黑板数学神笔妙算" id="markdown-toc-第7章-黑板数学神笔妙算">第7章 黑板数学：神笔妙算</a></li>
+  <li><a href="#第8章-难忘的一章数字的记忆" id="markdown-toc-第8章-难忘的一章数字的记忆">第8章 难忘的一章：数字的记忆</a></li>
+  <li><a href="#第9章-由难变易高级乘法运算" id="markdown-toc-第9章-由难变易高级乘法运算">第9章 由难变易：高级乘法运算</a></li>
+  <li><a href="#第10章-其乐无穷神奇的魔法数学" id="markdown-toc-第10章-其乐无穷神奇的魔法数学">第10章 其乐无穷：神奇的魔法数学</a>    <ul>
+      <li><a href="#结果总是6" id="markdown-toc-结果总是6">结果总是6</a></li>
+    </ul>
+  </li>
+  <li><a href="#第11章-结束语用科学的语言数学来甄别谎言" id="markdown-toc-第11章-结束语用科学的语言数学来甄别谎言">第11章 结束语：用科学的语言——数学来甄别谎言</a>    <ul>
+      <li><a href="#大数定律" id="markdown-toc-大数定律">大数定律</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="前言">前言</h1>
+<p>数学是科学的语言。
+事实上我们把我们使用的数字和手指都称为digits，而这并非是一种巧合。
+当运算变得很容易时，你就不会陷入到运算这种令人厌烦的琐事之中，也就能够把注意力放在数字奇妙的特性上。毕竟，数学是宇宙的主宰。</p>
+
+<h1 id="第1章-速算法简单而又非同寻常的速算法">第1章 速算法：简单而又非同寻常的速算法</h1>
+
+<h2 id="两位数与11的乘积">两位数与11的乘积</h2>
+<p>把这两个数相加，再把相加的结果放在两个数字中间，如果相加的结果也是两位数，则只取相加后结果的个位数放在两个数中间，并把第一个数进一位，如：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>32 * 11 = 352
+53 * 11 = 583
+85 * 11 = 935
+99 * 11 = 1089
+</code></pre></div></div>
+
+<h2 id="个位数是5的两位数的平方">个位数是5的两位数的平方</h2>
+<p>它的平方数的前一位或者前两位就是它的十位数与十位数加1的乘积，后两位是25。如：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>35 * 35 = 1225
+75 * 75 = 5625
+</code></pre></div></div>
+
+<h2 id="十位数相同个位数和为10的两个两位数相乘">十位数相同，个位数和为10的两个两位数相乘</h2>
+<p>它们的乘积的前一位或者前两位就是它们十位数与十位数加1的乘积，后两位是他们个位数的乘积.如果两个个位数之积小于10，则要在这个积之前添加一个0，如：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>26 * 24 = 624
+83 * 87 = 7221
+31 * 39 = 1209
+</code></pre></div></div>
+
+<h1 id="多退少补自左至右的加减法心算法则">多退少补：自左至右的加减法心算法则</h1>
+<p><strong>自左至右的加减法运算往往比自右自左要容易。</strong>
+心算数学的基本原理即采用化整为零、化繁为简的方法解决疑难问题。取得成功的三大要素就是：简单、简单、再简单。</p>
+
+<h2 id="自左至右">自左至右</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  538
++ 327 (300 + 20 + 7)
+  ----
+= 865
+</code></pre></div></div>
+
+<h2 id="取整法">取整法</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  759
++ 496 (500 - 4)
+  ----
+= 1255
+</code></pre></div></div>
+
+<h2 id="补足数">补足数</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>100 = 57 + 43
+100 = 68 + 32
+100 = 49 + 51
+100 = 21 + 79
+...
+</code></pre></div></div>
+<p>如上每一对相加起来等于100的数字中，十位数加起来为9，个位数加起来为10，它们互为补足数。
+有了补足数，就可以将难解的减法题转变为简单的加法题：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  725
+- 468 (500 - 32)
+  ----
+= 257
+</code></pre></div></div>
+
+<h1 id="第3章-分配率乘法心算的基本原则">第3章 分配率：乘法心算的基本原则</h1>
+
+<h2 id="ab--c--ab--ac">a<em>(b + c) = a</em>b + a*c</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  42 (40 + 2)
+*  7
+  ----
+= 294
+</code></pre></div></div>
+
+<h2 id="左边第一个数是5的数与偶数相乘">左边第一个数是5的数与偶数相乘</h2>
+<p>第一次运算的结果必定是100的倍数：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  58 (50 + 8)
+*  4
+  ----
+= 232
+</code></pre></div></div>
+
+<h2 id="取整法-1">取整法</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  69 (60 + 9)
+*  6
+  ----
+= 414
+</code></pre></div></div>
+
+<h2 id="两位数的平方">两位数的平方</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A^2 = (A + d) * (A -d) + d^2
+</code></pre></div></div>
+
+<h1 id="第4章-新颖的乘法运算间接相乘法">第4章 新颖的乘法运算：间接相乘法</h1>
+<h2 id="加法方法">加法方法</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  46
+* 42 (40 + 2)
+  ----
+= 1932
+</code></pre></div></div>
+
+<h2 id="分解法">分解法</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>84 = 7 * 6 * 2
+</code></pre></div></div>
+
+<h2 id="友好乘积数字表">友好乘积数字表</h2>
+<p>略。</p>
+
+<h2 id="立方的心算">立方的心算</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A^3 = (A - d)A(A + d) + Ad^2
+</code></pre></div></div>
+
+<h1 id="第5章-除法心算">第5章 除法心算</h1>
+<p>在进行除法心算时，首先要做的就是要弄清楚答案将是几位数。比如对于 179/7，
+因为179介于7<em>10 = 70和7</em>100=700之间，所以结果肯定介于10和100之间，也即是一个两位数。
+然后再估算十位数字，因为179介于7<em>20=140和7</em>30=210之间，因此答案一定是20多，所以十位数字是2.
+再用179减去140得39，39于35的差为4，因此个位数为5，余数为4。</p>
+
+<h2 id="拇指法则">拇指法则</h2>
+<p>通过一只手表示不同的数字用以保存计算过程中的值，略。</p>
+
+<h2 id="整除的判断">整除的判断</h2>
+<ul>
+  <li>最末两位数能被4整除，则该数能被4整除。</li>
+  <li>最末三位数能被8整除，则该数能被8整除。</li>
+  <li>一个数的各位数之和能被3整除，则该数能被3整除。（该规则同样适用于9）</li>
+  <li>一个能被3整除的偶数肯定能被6整除。</li>
+  <li>只要对一个数的各位数从左至右依次交替减、加，得出的结果如果是0或者11的倍数，这个数就能被11整除，如73958就不能被11整除，因为7-3+9-5+8=16。</li>
+</ul>
+
+<h1 id="第6章-估算的技巧">第6章 估算的技巧</h1>
+<h2 id="加法的估算">加法的估算</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  8367
++ 5819
+  ----
+= 14186
+
+约等于：
+  8000
++ 6000
+  ----
+= 14000
+</code></pre></div></div>
+
+<h2 id="70定律">70定律</h2>
+<p>本金翻一番需要的年份数等于70与利率的商。</p>
+
+<h1 id="第7章-黑板数学神笔妙算">第7章 黑板数学：神笔妙算</h1>
+<p>略。</p>
+
+<h1 id="第8章-难忘的一章数字的记忆">第8章 难忘的一章：数字的记忆</h1>
+<p>记忆术就是将一些无法理解的数据转换成更具有意义的事物。
+基于英文发音，详略。</p>
+
+<h1 id="第9章-由难变易高级乘法运算">第9章 由难变易：高级乘法运算</h1>
+<p>从四位数的平方到我公开表演的难度最大的乘法运算题——五位数的乘法心算，要做这些运算，快速而又轻松地应用语音代码就显得特别重要。
+详略。</p>
+
+<h1 id="第10章-其乐无穷神奇的魔法数学">第10章 其乐无穷：神奇的魔法数学</h1>
+
+<h2 id="结果总是6">结果总是6</h2>
+<p>任意一个数：</p>
+<ul>
+  <li>1.乘2</li>
+  <li>2.加12</li>
+  <li>3.除2</li>
+  <li>4.减去原来的数</li>
+</ul>
+
+<p>各种数字“魔术”，略。</p>
+
+<h1 id="第11章-结束语用科学的语言数学来甄别谎言">第11章 结束语：用科学的语言——数学来甄别谎言</h1>
+
+<h2 id="大数定律">大数定律</h2>
+<p>假如将奇迹定义为发生概率为百万分之一的事件，那么相对于数亿的人口基数，各种“奇迹”也就不那么神奇了。</p>
+
+:ET

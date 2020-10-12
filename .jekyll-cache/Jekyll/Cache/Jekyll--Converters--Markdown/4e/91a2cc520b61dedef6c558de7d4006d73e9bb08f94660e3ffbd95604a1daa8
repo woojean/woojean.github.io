@@ -1,0 +1,223 @@
+I"�/<ul id="markdown-toc">
+  <li><a href="#开放平台申请与接入" id="markdown-toc-开放平台申请与接入">开放平台申请与接入</a>    <ul>
+      <li><a href="#注册微信开放平台账号" id="markdown-toc-注册微信开放平台账号">注册微信开放平台账号</a></li>
+      <li><a href="#开发者资质认证" id="markdown-toc-开发者资质认证">开发者资质认证</a></li>
+      <li><a href="#创建第三方平台" id="markdown-toc-创建第三方平台">创建第三方平台</a></li>
+    </ul>
+  </li>
+  <li><a href="#微信第三方平台全网发布" id="markdown-toc-微信第三方平台全网发布">微信第三方平台全网发布</a>    <ul>
+      <li><a href="#全网发布测试点" id="markdown-toc-全网发布测试点">全网发布测试点</a></li>
+      <li><a href="#相关接口" id="markdown-toc-相关接口">相关接口</a></li>
+    </ul>
+  </li>
+  <li><a href="#开发小程序模板" id="markdown-toc-开发小程序模板">开发小程序模板</a>    <ul>
+      <li><a href="#创建模板小程序" id="markdown-toc-创建模板小程序">创建模板小程序</a></li>
+    </ul>
+  </li>
+  <li><a href="#小程序准备" id="markdown-toc-小程序准备">小程序准备</a></li>
+  <li><a href="#小程序授权" id="markdown-toc-小程序授权">小程序授权</a></li>
+  <li><a href="#小程序代码生成" id="markdown-toc-小程序代码生成">小程序代码生成</a>    <ul>
+      <li><a href="#上传代码" id="markdown-toc-上传代码">上传代码</a></li>
+      <li><a href="#获取授权小程序帐号的可选类目" id="markdown-toc-获取授权小程序帐号的可选类目">获取授权小程序帐号的可选类目</a></li>
+      <li><a href="#提交审核" id="markdown-toc-提交审核">提交审核</a></li>
+      <li><a href="#查询最新一次提交的审核状态" id="markdown-toc-查询最新一次提交的审核状态">查询最新一次提交的审核状态</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="开放平台申请与接入">开放平台申请与接入</h1>
+<p>微信开放平台地址：<a href="https://open.weixin.qq.com">https://open.weixin.qq.com</a></p>
+
+<h2 id="注册微信开放平台账号">注册微信开放平台账号</h2>
+<ul>
+  <li>使用邮箱注册开放平台账号，作为登录帐号，邮箱必须未被微信开放平台注册、未被微信公众平台注册、未被微信私人帐号绑定；</li>
+  <li>需要管理员的身份证号；</li>
+</ul>
+
+<h2 id="开发者资质认证">开发者资质认证</h2>
+<ul>
+  <li>认证有效期：一年，有效期最后三个月可申请年审即可续期；</li>
+  <li>需要进行微信打款认证，打款费用300；</li>
+</ul>
+
+<h2 id="创建第三方平台">创建第三方平台</h2>
+<ul>
+  <li>一个开放平台账号可以创建5个“第三方平台”；</li>
+  <li>平台图标必须为108*108像素的png图片，大小不能超过300KB；</li>
+  <li>需要官网地址；</li>
+  <li>授权发起页域名：必须从本域名内网页跳转到登录授权页，才可完成登录授权；</li>
+  <li>授权测试公众号列表（原始ID列表）：在全网发布之前，仅该列表内公众号才可进行授权，以便测试；</li>
+  <li><strong>授权事件接收URL</strong>：用于接收取消授权通知、授权成功通知、授权更新通知，也用于接收ticket，ticket是验证平台方的重要凭据；</li>
+  <li>消息校验Token：在代替公众号或小程序接收到消息时，用此Token来校验消息；</li>
+  <li>消息加解密Key：在代替公众号或小程序收发消息过程中使用；</li>
+  <li><strong>消息与事件接收URL</strong>：通过该URL接收公众号或小程序消息和事件推送，该参数按规则填写（需包含/$APPID$，如www.abc.com/$APPID$/callback），实际接收消息时$APPID$将被替换为公众号或小程序AppId；</li>
+  <li>公众号开发域名：在代公众号做网页授权、调用JS SDK等网页开发工作时所用的域名，可填写3个，为了满足开发者管理需要，符合以下要求的下级域名也将生效：$APPID$.wx.abc.com（$APPID$为公众号的AppID的替换符）；（需要下载校验文件，并放置在项目根目录下）</li>
+  <li>小程序服务器域名：已授权的小程序只能请求这里配置的域名，一共可以配置20个；</li>
+  <li>小程序业务域名：应该是从小程序可跳转的H5域名，只能设置一个域名！（需要下载校验文件，并放置在项目根目录下）</li>
+  <li>白名单IP地址列表：仅当开发者IP地址在该列表中时，才被允许调用相关接口。最多填写100个IP地址；</li>
+  <li>修改平台审核成功后，仅对测试公众号生效，届时再提交“覆盖现网全网发布状态”并审核成功后，才可影响现网；</li>
+  <li>创建成功后，第三方平台同样会生成AppID和AppSecret，<strong>AppSecret只能重置，不能查看</strong>；</li>
+</ul>
+
+<h1 id="微信第三方平台全网发布">微信第三方平台全网发布</h1>
+<p>在第三方平台方创建成功并最终开发测试完毕，提交全网发布申请时，<strong>微信服务器会通过自动化测试的方式，检测服务的基础逻辑是否可用</strong>，在确保基础可用的情况下，才会允许公众号第三方平台提交全网发布。</p>
+
+<p>详情见：<a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1419318611&amp;lang=zh_CN">全网发布接入检测说明</a></p>
+
+<h2 id="全网发布测试点">全网发布测试点</h2>
+<p>具体的测试方式是通过专门的测试公众号和测试小程序来授权给平台，发送指定的消息并验证返回。总结起来就是对第三方平台的如下功能进行测试：</p>
+<ul>
+  <li>组件ticket正确接收；</li>
+  <li>生成预授权码；</li>
+  <li>获取授权code；</li>
+  <li>授权；</li>
+  <li>返回Api文本消息；</li>
+  <li>返回普通文本消息；</li>
+  <li>发送事件消息；</li>
+  <li>取消授权；</li>
+</ul>
+
+<h2 id="相关接口">相关接口</h2>
+<ul>
+  <li>
+    <p>/callback/handleOpenPlatformNotify
+用于接收取消授权通知、授权成功通知、授权更新通知以及ticket；</p>
+  </li>
+  <li>
+    <p>/callback/handleWxPublicAccountNotify/{appid}
+处理事件消息等；</p>
+  </li>
+</ul>
+
+<h1 id="开发小程序模板">开发小程序模板</h1>
+<p>小程序模板开发的相关文档：<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/ext.html?nettype=WIFI&amp;version=12020810&amp;ascene=0&amp;fontScale=100&amp;pass_ticket=pH7Un%2BduHUF3PtuRRCQqqtruo1OGAfDbsZuhoyiYWh6TUZ5%2FGKzDgiIVScwgwU0t">开发第三方平台小程序</a></p>
+
+<h2 id="创建模板小程序">创建模板小程序</h2>
+<p>通过以下步骤创建模板小程序并开发代码模板：</p>
+<ul>
+  <li>创建一个普通小程序；</li>
+  <li>在开放平台后台“绑定小程序-添加开发小程序”将该小程序绑定为开发小程序，用于开发小程序模板；（一共可以添加10个）</li>
+  <li>在本地通过小程序开发IDE，并指定appid为开发小程序的appid打开模板项目进行模板开发；</li>
+  <li>在小程序代码的项目根目录中新建ext.json文件，并在其中自定义参数。例如：
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+"extEnable": true,
+"extAppid": "wxd7dc153d31ea****",
+"ext": {
+  "name": "小程序调试",
+  "attr": {
+    "host": "***.com",
+    "shopId": "1002"
+  }
+},
+"extPages": {
+},
+"window":{
+  "navigationBarTitleText": "【通过ext.json修改标题】"
+},
+"tabBar": {
+},
+"networkTimeout": {
+}
+}
+</code></pre></div>    </div>
+    <p>ext.json文件放在代码版本控制之外；</p>
+  </li>
+  <li>开发完成后，通过IDE上传代码；</li>
+  <li>在开放平台后台“小程序模板库-草稿箱”中可以看到最新上传的代码，将其从草稿箱中添加到模板库，将生成一个新的模板（通过TemplateID做区分）；</li>
+  <li></li>
+</ul>
+
+<h1 id="小程序准备">小程序准备</h1>
+<p>以企业用户名义申请小程序，及对应的微信商户；至少准备好以下信息：</p>
+<ul>
+  <li>小程序的appId；</li>
+  <li>appSecret；</li>
+  <li>对应微信支付商户的merchantId；</li>
+  <li>支付key；</li>
+</ul>
+
+<h1 id="小程序授权">小程序授权</h1>
+<ul>
+  <li>网页前端通过指定参数（shopId、redirectUrl）重定向到授权页面，例如：
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://***.com/auth.html?shopId=1002&amp;redirectUrl=http%3a%2f%2fwww.qq.com
+</code></pre></div>    </div>
+    <p>之所以这样做，是因为小程序授权页面有跳转域名的限制。</p>
+  </li>
+  <li>授权页面使用获取的参数调用后端接口生成微信授权页地址，并直接跳转该地址；生成微信授权页的过程：<a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=open1453779503&amp;token=&amp;lang=zh_CN">授权流程技术说明</a></li>
+  <li>小程序管理员扫描二维码进行授权；（授权成功后，若用户小程序已存在，则更新相关信息，否则新建小程序账户）</li>
+  <li>完善小程序信息（即填入小程序appId、appSecret、wxMerchantId、wxMerchantKey）；<strong>完善信息的时候仍然要填appId，是因为最终以用户手工填写的为准，这样在授权页（auth.html）的处理中可以省去鉴权的麻烦，也更容易发现用户授权与实际填写不一致的问题</strong></li>
+</ul>
+
+<h1 id="小程序代码生成">小程序代码生成</h1>
+<h2 id="上传代码">上传代码</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/rpc/ops/commitCode
+{
+  "shopId":"1002",
+  "templateId":"4",
+  "extJson":"{"extEnable":true,"extAppid":"wxd7dc153d31ea6833","ext":{"name":"小程序调试","attr":{"host":"miniapp-test.wemeshops.com","shopId":"1002"}},"extPages":{},"window":{"navigationBarTitleText":"【自动生成的小程序】"},"tabBar":{},"networkTimeout":{}}",
+  "userVersion":"1.0.1",
+  "userDesc":"新版本功能描述"
+}
+</code></pre></div></div>
+
+<h2 id="获取授权小程序帐号的可选类目">获取授权小程序帐号的可选类目</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/rpc/ops/getCategory
+</code></pre></div></div>
+<p>返回结果：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "errcode":"0",
+  "errmsg":"ok",
+  "category_list":[
+    {
+      "first_class":"商家自营",
+      "second_class":"美妆/洗护",
+      "first_id":"304",
+      "second_id":"786"
+    }
+  ]
+}
+</code></pre></div></div>
+
+<h2 id="提交审核">提交审核</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/rpc/ops/submitAudit
+
+{
+  "shopId":"1002",
+  "itemList":[
+    {
+      "address":"pages/home/home",
+      "tag":"电商",
+      "first_class":"商家自营",
+      "second_class":"美妆/洗护",
+      "first_id":"304",
+      "second_id":"786",
+      "title":"首页"
+    }
+  ]
+}
+</code></pre></div></div>
+<p>返回：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "errcode":"0",
+  "errmsg":"ok",
+  "auditid":"434707756"
+}
+</code></pre></div></div>
+
+<h2 id="查询最新一次提交的审核状态">查询最新一次提交的审核状态</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/rpc/ops/getLatestAuditStatus
+</code></pre></div></div>
+<p>返回：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "errcode":"0",
+  "errmsg":"ok",
+  "auditid":"434707756",
+  "status":"2"
+}
+</code></pre></div></div>
+<p>审核状态：
+0：审核成功
+1：审核失败
+2：审核中</p>
+
+:ET

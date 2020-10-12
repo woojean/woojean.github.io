@@ -1,0 +1,1525 @@
+I"m�<ul id="markdown-toc">
+  <li><a href="#foreach循环中使用引用存在的问题" id="markdown-toc-foreach循环中使用引用存在的问题">foreach循环中使用引用存在的问题</a></li>
+  <li><a href="#__autoload和spl_autoload_register的主要区别" id="markdown-toc-__autoload和spl_autoload_register的主要区别">__autoload()和spl_autoload_register()的主要区别</a></li>
+  <li><a href="#使用spl_autoload_register调用静态方法" id="markdown-toc-使用spl_autoload_register调用静态方法">使用spl_autoload_register()调用静态方法</a></li>
+  <li><a href="#4种字符串表示方法" id="markdown-toc-4种字符串表示方法">4种字符串表示方法</a></li>
+  <li><a href="#php中的闭包无须像js非es6一样通过selfthis的形式来扩展作用域" id="markdown-toc-php中的闭包无须像js非es6一样通过selfthis的形式来扩展作用域">PHP中的闭包无须像js（非ES6）一样通过self=this的形式来扩展作用域</a></li>
+  <li><a href="#在php中使用异步非阻塞函数" id="markdown-toc-在php中使用异步非阻塞函数">在PHP中使用异步非阻塞函数</a></li>
+  <li><a href="#php对象注入漏洞" id="markdown-toc-php对象注入漏洞">PHP对象注入漏洞</a></li>
+  <li><a href="#php数据类型" id="markdown-toc-php数据类型">PHP数据类型</a></li>
+  <li><a href="#php变量作用域" id="markdown-toc-php变量作用域">PHP变量作用域</a></li>
+  <li><a href="#sapi" id="markdown-toc-sapi">SAPI</a></li>
+  <li><a href="#php扩展的基本执行方式" id="markdown-toc-php扩展的基本执行方式">PHP扩展的基本执行方式</a></li>
+  <li><a href="#php的生命周期" id="markdown-toc-php的生命周期">PHP的生命周期</a></li>
+  <li><a href="#open_basedir配置项的作用" id="markdown-toc-open_basedir配置项的作用">open_basedir配置项的作用</a></li>
+  <li><a href="#使用php数组模拟队列操作的性能问题" id="markdown-toc-使用php数组模拟队列操作的性能问题">使用PHP数组模拟队列操作的性能问题</a></li>
+  <li><a href="#php不必做编译优化" id="markdown-toc-php不必做编译优化">PHP不必做编译优化</a></li>
+  <li><a href="#在被包含文件中仍然要使用php起始标志" id="markdown-toc-在被包含文件中仍然要使用php起始标志">在被包含文件中仍然要使用<code class="language-plaintext highlighter-rouge">&lt;?php</code>起始标志</a></li>
+  <li><a href="#应该关闭register_globals配置" id="markdown-toc-应该关闭register_globals配置">应该关闭register_globals配置</a></li>
+  <li><a href="#php中null值的判断" id="markdown-toc-php中null值的判断">PHP中NULL值的判断</a></li>
+  <li><a href="#不能使用可变变量的变量" id="markdown-toc-不能使用可变变量的变量">不能使用可变变量的变量</a></li>
+  <li><a href="#使用yield实现双向异步信息传递" id="markdown-toc-使用yield实现双向异步信息传递">使用yield实现双向异步信息传递</a></li>
+  <li><a href="#控制数组json_encode后为json对象或者json数组" id="markdown-toc-控制数组json_encode后为json对象或者json数组">控制数组json_encode后为json对象或者json数组</a></li>
+  <li><a href="#return的使用场景和行为" id="markdown-toc-return的使用场景和行为">return的使用场景和行为</a></li>
+  <li><a href="#cgifix_pathinfo配置项的作用" id="markdown-toc-cgifix_pathinfo配置项的作用">cgi.fix_pathinfo配置项的作用</a></li>
+  <li><a href="#启用并配置opcache" id="markdown-toc-启用并配置opcache">启用并配置OpCache</a></li>
+  <li><a href="#收集php错误日志" id="markdown-toc-收集php错误日志">收集PHP错误日志</a></li>
+  <li><a href="#禁止在php中使用危险函数" id="markdown-toc-禁止在php中使用危险函数">禁止在PHP中使用危险函数</a></li>
+  <li><a href="#使用define和const定义常量的区别" id="markdown-toc-使用define和const定义常量的区别">使用define和const定义常量的区别</a></li>
+  <li><a href="#allow_url_fopen和allow_url_include配置" id="markdown-toc-allow_url_fopen和allow_url_include配置">allow_url_fopen和allow_url_include配置</a></li>
+  <li><a href="#魔术常量" id="markdown-toc-魔术常量">魔术常量</a></li>
+  <li><a href="#用于属性重载的魔术方法" id="markdown-toc-用于属性重载的魔术方法">用于属性重载的魔术方法</a></li>
+  <li><a href="#用于方法重载的魔术方法" id="markdown-toc-用于方法重载的魔术方法">用于方法重载的魔术方法</a></li>
+  <li><a href="#在声明静态变量时不能使用表达式进行赋值" id="markdown-toc-在声明静态变量时不能使用表达式进行赋值">在声明静态变量时不能使用表达式进行赋值</a></li>
+  <li><a href="#将非对象类型转换为对象" id="markdown-toc-将非对象类型转换为对象">将非对象类型转换为对象</a></li>
+  <li><a href="#被包含文件的搜索顺序" id="markdown-toc-被包含文件的搜索顺序">被包含文件的搜索顺序</a></li>
+  <li><a href="#包含文件的作用域关系" id="markdown-toc-包含文件的作用域关系">包含文件的作用域关系</a></li>
+  <li><a href="#几种动态内容缓存方式" id="markdown-toc-几种动态内容缓存方式">几种动态内容缓存方式</a></li>
+  <li><a href="#动态内容局部无缓存的实现" id="markdown-toc-动态内容局部无缓存的实现">动态内容局部无缓存的实现</a></li>
+  <li><a href="#php脚本加速常见方式" id="markdown-toc-php脚本加速常见方式">PHP脚本加速常见方式</a></li>
+  <li><a href="#xdebug基本功能" id="markdown-toc-xdebug基本功能">Xdebug基本功能</a></li>
+  <li><a href="#php-cgi路径解析问题" id="markdown-toc-php-cgi路径解析问题">PHP CGI路径解析问题</a></li>
+  <li><a href="#文件包含漏洞" id="markdown-toc-文件包含漏洞">文件包含漏洞</a></li>
+  <li><a href="#本地文件包含漏洞的利用技巧" id="markdown-toc-本地文件包含漏洞的利用技巧">本地文件包含漏洞的利用技巧</a></li>
+  <li><a href="#变量覆盖漏洞" id="markdown-toc-变量覆盖漏洞">变量覆盖漏洞</a></li>
+  <li><a href="#代码执行漏洞" id="markdown-toc-代码执行漏洞">代码执行漏洞</a></li>
+  <li><a href="#定制安全的php环境" id="markdown-toc-定制安全的php环境">定制安全的PHP环境</a></li>
+  <li><a href="#延迟静态绑定" id="markdown-toc-延迟静态绑定">延迟静态绑定</a></li>
+  <li><a href="#克隆对象" id="markdown-toc-克隆对象">克隆对象</a></li>
+  <li><a href="#php会话控制" id="markdown-toc-php会话控制">PHP会话控制</a></li>
+  <li><a href="#脱离cookie来使用session" id="markdown-toc-脱离cookie来使用session">脱离cookie来使用session</a></li>
+  <li><a href="#开始会话" id="markdown-toc-开始会话">开始会话：</a></li>
+  <li><a href="#php会在输出时自动删除其结束符后的一个换行" id="markdown-toc-php会在输出时自动删除其结束符后的一个换行">PHP会在输出时自动删除其结束符?&gt;后的一个换行</a></li>
+  <li><a href="#php基本语法注意点" id="markdown-toc-php基本语法注意点">PHP基本语法注意点</a></li>
+  <li><a href="#在进行布尔运算时被认为false的值" id="markdown-toc-在进行布尔运算时被认为false的值">在进行布尔运算时被认为false的值</a></li>
+  <li><a href="#如果给定的一个数超出了integer的范围将会被解释为float" id="markdown-toc-如果给定的一个数超出了integer的范围将会被解释为float">如果给定的一个数超出了integer的范围，将会被解释为float</a></li>
+  <li><a href="#php中没有整除的运算符" id="markdown-toc-php中没有整除的运算符">PHP中没有整除的运算符</a></li>
+  <li><a href="#浮点数的精度有限" id="markdown-toc-浮点数的精度有限">浮点数的精度有限</a></li>
+  <li><a href="#字符串中的变量解析的规则" id="markdown-toc-字符串中的变量解析的规则">字符串中的变量解析的规则</a></li>
+  <li><a href="#php中的字符串是二进制安全的" id="markdown-toc-php中的字符串是二进制安全的">PHP中的字符串是二进制安全的</a></li>
+  <li><a href="#数组key的强制转换" id="markdown-toc-数组key的强制转换">数组key的强制转换</a></li>
+  <li><a href="#unset删除数组中的某个键将不会重建索引" id="markdown-toc-unset删除数组中的某个键将不会重建索引">unset()删除数组中的某个键将不会重建索引</a></li>
+  <li><a href="#通过引用来拷贝数组" id="markdown-toc-通过引用来拷贝数组">通过引用来拷贝数组</a></li>
+  <li><a href="#只有有名字的变量才可以引用赋值" id="markdown-toc-只有有名字的变量才可以引用赋值">只有有名字的变量才可以引用赋值：</a></li>
+  <li><a href="#变量的作用域可以包含include或者require引入的文件" id="markdown-toc-变量的作用域可以包含include或者require引入的文件">变量的作用域可以包含include或者require引入的文件。</a></li>
+  <li><a href="#局部函数范围" id="markdown-toc-局部函数范围">局部函数范围</a></li>
+  <li><a href="#对于通过表单或者cookies传进来的变量php将会自动将变量名中的点如果有的话替换成下划线" id="markdown-toc-对于通过表单或者cookies传进来的变量php将会自动将变量名中的点如果有的话替换成下划线">对于通过表单或者Cookies传进来的变量，PHP将会自动将变量名中的点（如果有的话）替换成下划线</a></li>
+  <li><a href="#require和include的区别" id="markdown-toc-require和include的区别">require和include的区别</a></li>
+  <li><a href="#使用swoole后php开发的一些变化理解" id="markdown-toc-使用swoole后php开发的一些变化理解">使用Swoole后PHP开发的一些变化理解</a></li>
+  <li><a href="#如何不直接使用include返回赋值实现将一个php文件的执行结果赋值到一个变量中" id="markdown-toc-如何不直接使用include返回赋值实现将一个php文件的执行结果赋值到一个变量中">如何不直接使用include返回赋值实现将一个PHP文件的执行结果赋值到一个变量中？</a></li>
+  <li><a href="#父类方法是protected子类重构为private会发生什么" id="markdown-toc-父类方法是protected子类重构为private会发生什么">父类方法是protected，子类重构为private，会发生什么？</a></li>
+  <li><a href="#pcntl_fork" id="markdown-toc-pcntl_fork">pcntl_fork</a></li>
+  <li><a href="#php的内存管理机制" id="markdown-toc-php的内存管理机制">PHP的内存管理机制</a></li>
+  <li><a href="#php进程死锁产生的原因是什么怎么自动排查与自动恢复" id="markdown-toc-php进程死锁产生的原因是什么怎么自动排查与自动恢复">php进程死锁产生的原因是什么？怎么自动排查与自动恢复？</a></li>
+  <li><a href="#php52-php71的各版本演进历史新增特性等" id="markdown-toc-php52-php71的各版本演进历史新增特性等">php5.2-&gt;php7.1的各版本演进历史，新增特性等</a></li>
+</ul>
+
+<h2 id="foreach循环中使用引用存在的问题">foreach循环中使用引用存在的问题</h2>
+<p><strong>问题</strong>
+求以下代码的打印值：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span> 
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$array</span> <span class="k">as</span> <span class="o">&amp;</span><span class="nv">$value</span><span class="p">)</span> <span class="p">{}</span>   
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$array</span> <span class="k">as</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{}</span>        
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$array</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><strong>分析</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span> 
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$array</span> <span class="k">as</span> <span class="o">&amp;</span><span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// do nothing</span>
+<span class="p">}</span>   
+
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$array</span><span class="p">);</span>  <span class="c1">// 1 2 3</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>  <span class="c1">// 3 $value在这里仍然有作用域</span>
+
+<span class="c1">// unset($value);  // fix</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$array</span> <span class="k">as</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// do nothing</span>
+<span class="p">}</span>        
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$array</span><span class="p">);</span>  <span class="c1">// 1 2 2</span>
+</code></pre></div></div>
+<p><strong>总结</strong></p>
+<ul>
+  <li>PHP foreach循环中定义的“临时变量”的作用域会延伸到循环体之外；</li>
+  <li>引用自己并没有维护一个值，而是指向引用的变量，对引用的修改等于对被引用对象的修改；</li>
+</ul>
+
+<h2 id="__autoload和spl_autoload_register的主要区别">__autoload()和spl_autoload_register()的主要区别</h2>
+
+<p><strong>函数原型</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="n">void</span> <span class="nb">__autoload</span><span class="p">(</span><span class="n">string</span> <span class="nv">$class</span><span class="p">)</span>
+
+<span class="n">bool</span> <span class="nb">spl_autoload_register</span> <span class="p">([</span> <span class="n">callable</span> <span class="nv">$autoload_function</span> <span class="p">[,</span> <span class="n">bool</span> <span class="nv">$throw</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">[,</span> <span class="n">bool</span> <span class="nv">$prepend</span> <span class="o">=</span> <span class="kc">false</span> <span class="p">]]]</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>区别</strong></p>
+<ul>
+  <li>spl_autoload_register()函数会将Zend Engine中的__autoload()函数取代为spl_autoload()或spl_autoload_call()。</li>
+  <li>spl_autoload_register()<u>可以很好地处理需要多个加载器的情况</u>，这种情况下spl_autoload_register会<u>按顺序依次调用之前注册过的加载器</u>。作为对比，__autoload 因为是一个函数，所以只能被定义一次。</li>
+</ul>
+
+<p><strong>举例</strong></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nb">spl_autoload_register</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nv">$class</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">include</span> <span class="s1">'classes/'</span> <span class="mf">.</span> <span class="nv">$class</span> <span class="mf">.</span> <span class="s1">'.class.php'</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h2 id="使用spl_autoload_register调用静态方法">使用spl_autoload_register()调用静态方法</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="kd">class</span> <span class="nc">Loader</span> <span class="p">{</span>
+  <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="n">loadPrinter</span><span class="p">(</span> <span class="nv">$class</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$file</span> <span class="o">=</span> <span class="nv">$class</span> <span class="mf">.</span> <span class="s1">'.class.php'</span><span class="p">;</span>  
+    <span class="k">if</span> <span class="p">(</span><span class="nb">is_file</span><span class="p">(</span><span class="nv">$file</span><span class="p">))</span> <span class="p">{</span>  
+      <span class="k">require_once</span><span class="p">(</span><span class="nv">$file</span><span class="p">);</span>  
+    <span class="p">}</span> 
+  <span class="p">}</span>
+<span class="p">}</span> 
+
+<span class="nb">spl_autoload_register</span><span class="p">([</span><span class="s1">'Loader'</span><span class="p">,</span><span class="s1">'loadPrinter'</span><span class="p">]);</span>
+<span class="c1">// 另一种写法：spl_autoload_register("Loader::loadPrinter"); </span>
+
+<span class="nv">$obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Printer</span><span class="p">();</span>  <span class="c1">// 假设存在Printer.class.php这个文件</span>
+<span class="nv">$obj</span><span class="o">-&gt;</span><span class="nf">doPrint</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h2 id="4种字符串表示方法">4种字符串表示方法</h2>
+
+<ul>
+  <li>单引号（不会转义）</li>
+  <li>双引号（会转义）</li>
+  <li>heredoc语法结构（类似双引号）</li>
+  <li>nowdoc语法结构（类似单引号）
+字符串会被按照该脚本文件相同的编码方式来编码。因此如果一个脚本的编码是 ISO-8859-1，则其中的字符串也会被编码为 ISO-8859-1。</li>
+</ul>
+
+<h2 id="php中的闭包无须像js非es6一样通过selfthis的形式来扩展作用域">PHP中的闭包无须像js（非ES6）一样通过self=this的形式来扩展作用域</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="kd">class</span> <span class="nc">Demo</span><span class="p">{</span>
+  <span class="k">private</span> <span class="nv">$list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">];</span>
+  <span class="k">public</span> <span class="nv">$delList</span> <span class="o">=</span> <span class="p">[];</span>
+  
+  <span class="k">public</span> <span class="k">function</span> <span class="n">test</span><span class="p">(){</span>
+    <span class="nv">$arr</span> <span class="o">=</span> <span class="nb">array_filter</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="k">list</span><span class="p">,</span><span class="k">function</span><span class="p">(</span><span class="nv">$n</span><span class="p">){</span>
+      <span class="k">if</span><span class="p">(</span><span class="nv">$n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">else</span><span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">delList</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$n</span><span class="p">;</span>  <span class="c1">// 此$this指向Demo的对象，而非闭包函数</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+    
+    <span class="k">return</span> <span class="nv">$arr</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nv">$demo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Demo</span><span class="p">();</span>
+<span class="nv">$arr</span> <span class="o">=</span> <span class="nv">$demo</span><span class="o">-&gt;</span><span class="nf">test</span><span class="p">();</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arr</span><span class="p">);</span>   <span class="c1">// 1 3 5 7 9</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$demo</span><span class="o">-&gt;</span><span class="n">delList</span><span class="p">);</span> <span class="c1">// 2 4 6 8 10</span>
+</code></pre></div></div>
+
+<h2 id="在php中使用异步非阻塞函数">在PHP中使用异步非阻塞函数</h2>
+
+<ul>
+  <li>swoole_client异步模式</li>
+  <li>mysql-async库</li>
+  <li>redis-async库</li>
+  <li>swoole_timer_tick/swoole_timer_after</li>
+  <li>swoole_event系列函数</li>
+  <li>swoole_table/swoole_atomic/swoole_buffer</li>
+  <li>swoole_server-&gt;task/finish函数</li>
+</ul>
+
+<h2 id="php对象注入漏洞">PHP对象注入漏洞</h2>
+
+<p>PHP支持对象的序列化和反序列化操作（serialize、unserialize）。
+如：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="kd">class</span> <span class="nc">User</span><span class="p">{</span>
+  <span class="k">public</span> <span class="nv">$age</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">public</span> <span class="nv">$name</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+  <span class="k">public</span> <span class="k">function</span> <span class="n">PrintData</span><span class="p">(){</span>
+    <span class="k">echo</span> <span class="s1">'User '</span> <span class="mf">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">name</span> <span class="mf">.</span> <span class="s1">' is '</span> <span class="mf">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">age</span> <span class="mf">.</span> <span class="s1">' years old. &lt;br /&gt;'</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nv">$usr</span> <span class="o">=</span> <span class="nb">unserialize</span><span class="p">(</span><span class="s1">'O:4:"User":2:{s:3:"age";i:20;s:4:"name";s:4:"John";}'</span><span class="p">);</span>
+<span class="nv">$usr</span><span class="o">-&gt;</span><span class="nf">PrintData</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>输出：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User John is 20 years old. 
+</code></pre></div></div>
+<p>当一个对象进行序列化和反序列化操作时也会自动调用其他相应的魔术方法：</p>
+<ul>
+  <li>当对象进行序列化操作时魔术方法__sleep()会被自动调用（必须返回一个包含序列化的类变量名的数组）。</li>
+  <li>当对象进行反序列化操作时魔术方法__wakeup()会被自动调用。</li>
+</ul>
+
+<p>攻击者可以操作类变量来攻击web应用，比如：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$usr</span> <span class="o">=</span> <span class="nb">unserialize</span><span class="p">(</span><span class="s1">'O:7:"LogFile":1:{s:8:"filename";s:9:".htaccess";}'</span><span class="p">);</span>
+<span class="nv">$usr</span><span class="o">-&gt;</span><span class="nf">PrintData</span><span class="p">();</span>
+</code></pre></div></div>
+<p>从而意外地执行了LogFile的__construct()和_destruct()。
+在处理由用户提供数据的地方不要使用unserialize()，可以使用json_decode(…)。</p>
+
+<p><strong>总结</strong>
+实际就是PHP的反序列化机制会自动执行一些魔方方法，从而引起一些意外情况。</p>
+
+<h2 id="php数据类型">PHP数据类型</h2>
+
+<p>PHP共支持8种原始数据类型，其中包括：</p>
+<ul>
+  <li>4种标量类型：boolean、integer、float（double）、string</li>
+  <li>2种复合类型：array、object</li>
+  <li>2种特殊类型：resource、NULL</li>
+</ul>
+
+<p><u>double和float是相同的</u>，由于一些历史的原因，这两个名称同时存在。
+变量的类型通常不是由程序员设定的，确切地说，是由PHP根据该变量使用的上下文在运行时决定的。</p>
+
+<h2 id="php变量作用域">PHP变量作用域</h2>
+
+<p><strong>6项基本的作用域规则</strong>：</p>
+<ul>
+  <li>超级全局变量（内置）可以在脚本的任何地方使用和可见。</li>
+  <li>常量一旦被声明，将全局可见，即可以在函数内外使用。</li>
+  <li>在一个脚本中声明的全局变量在整个脚本中是可见的。</li>
+  <li>函数内部使用的变量声明为全局变量时，其名称要与全局变量一致。</li>
+  <li>在函数内部创建的静态变量，在函数外部不可见，但是可以在函数的多次执行中保持值。</li>
+  <li>在函数内部创建的非静态变量，当函数终止时就不存在了。</li>
+</ul>
+
+<h2 id="sapi">SAPI</h2>
+
+<p>无论是Web模式还是Cli模式运行，PHP的工作原理都是一样的， 都是作为一种SAPI在运行（Server Application Programming Interface：the API used by PHP to interface with Web Servers）。<u>SAPI就是PHP和外部环境的代理器。它把外部环境抽象后, 为内部的PHP提供一套固定的，统一的接口，使得PHP自身实现能够不受错综复杂的外部环境影响，保持一定的独立性。</u></p>
+
+<h2 id="php扩展的基本执行方式">PHP扩展的基本执行方式</h2>
+
+<ul>
+  <li><strong>MINIT</strong>
+在<u>PHP启动时</u>， 会把自己所有已加载扩展的MINIT方法(全称Module Initialization，是由每个模块自己定义的函数)都执行一遍。 在这个时间里，扩展可以定义一些自己的常量、类、资源等所有会被用户端的PHP脚本用到的东西。</li>
+  <li><strong>RINIT</strong></li>
+</ul>
+
+<p><u>当一个页面请求到来时</u>，PHP会迅速的开辟一个新的环境，并重新扫描自己的各个扩展， 遍历执行它们各自的RINIT方法(俗称Request Initialization)， 这时候一个扩展可能会初始化在本次请求中会使用到的变量等， 还会初始化稍后用户端（即PHP脚本）中的变量之类的。</p>
+
+<ul>
+  <li><strong>RSHUTDOWN</strong></li>
+</ul>
+
+<p>当<u>请求完成</u>（或者别die等终结），PHP便会启动回收程序，执行所有已加载扩展的RSHUTDOWN（Request Shutdown）方法， 这时候扩展可以抓紧利用内核中的变量表之类的做一些事情， 因为一旦PHP把所有扩展的RSHUTDOWN方法执行完， 便会释放掉这次请求使用过的所有东西， 包括变量表的所有变量、所有在这次请求中申请的内存等等。</p>
+
+<ul>
+  <li><strong>MSHUTDOWN</strong></li>
+</ul>
+
+<p>当PHP要停止运行的时候，PHP便进入MSHUTDOWN（Module Shutdown）阶段。一旦PHP把扩展的MSHUTDOWN执行完，便会进入自毁程序，所以这里一定要把自己擅自申请的内存给释放掉。</p>
+
+<p><strong>一个最简单的例子</strong>
+walu.c</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">time_of_minit</span><span class="p">;</span>  <span class="c1">// 每次请求都不变</span>
+<span class="n">PHP_MINIT_FUNCTION</span><span class="p">(</span><span class="n">walu</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">time_of_minit</span><span class="o">=</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">time_of_rinit</span><span class="p">;</span>  <span class="c1">// 每次请求都改变</span>
+<span class="n">PHP_RINIT_FUNCTION</span><span class="p">(</span><span class="n">walu</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">time_of_rinit</span><span class="o">=</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 每次页面请求都会往time_rshutdown.txt中写入数据</span>
+<span class="n">PHP_RSHUTDOWN_FUNCTION</span><span class="p">(</span><span class="n">walu</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="o">=</span><span class="n">fopen</span><span class="p">(</span><span class="s">"/cnan/www/erzha/time_rshutdown.txt"</span><span class="p">,</span><span class="s">"a+"</span><span class="p">);</span>
+  <span class="n">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">));</span>
+  <span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 只有在apache结束后time_mshutdown.txt才写入有数据</span>
+<span class="n">PHP_MSHUTDOWN_FUNCTION</span><span class="p">(</span><span class="n">walu</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="o">=</span><span class="n">fopen</span><span class="p">(</span><span class="s">"/cnan/www/erzha/time_mshutdown.txt"</span><span class="p">,</span><span class="s">"a+"</span><span class="p">);</span>
+  <span class="n">fprintf</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">));</span>
+  <span class="k">return</span> <span class="n">SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">PHP_FUNCTION</span><span class="p">(</span><span class="n">walu_test</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">php_printf</span><span class="p">(</span><span class="s">"%d&amp;lt;br /&amp;gt;"</span><span class="p">,</span><span class="n">time_of_minit</span><span class="p">);</span>
+  <span class="n">php_printf</span><span class="p">(</span><span class="s">"%d&amp;lt;br /&amp;gt;"</span><span class="p">,</span><span class="n">time_of_rinit</span><span class="p">);</span>
+  <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="php的生命周期">PHP的生命周期</h2>
+
+<p>PHP扩展程序的<u>两种init</u>（MINIT、RINIT）和<u>两种shutdown</u>（RSHUTDOWN、MSHUTDOWN）各会执行多少次、各自的执行频率有多少取决于PHP是用什么SAPI与宿主通信的。最常见的四种SAPI通信方式如下：
+<strong>1.直接以CLI/CGI模式调用</strong>
+ PHP的生命周期完全在一个单独的请求中完成，两种init和两种shutdown仍然都会被执行。
+ 以<code class="language-plaintext highlighter-rouge">php -f test.php</code>为例，执行过程如下：</p>
+<ul>
+  <li>（1）调用每个扩展的MINIT；</li>
+  <li>（2）请求test.php文件；</li>
+  <li>（3）调用每个扩展的RINIT；</li>
+  <li>（4）执行test.php；</li>
+  <li>（5）调用每个扩展的RSHUTDOWN；</li>
+  <li>（6）执行清理操作；</li>
+  <li>（7）调用每个扩展的MSHUTDOWN；</li>
+  <li>（8）终止php；
+fpm的每个请求都是在执行RINIT到RSHUTDOWN的步骤。
+opcode cache是把第（4）步的词法分析、语法分析、生成opcode代码这几个操作给缓存起来了，从而达到加速的作用。
+swoole在第（4）步接管了PHP，进入swoole的生命周期。</li>
+</ul>
+
+<p><strong>2.多进程模块</strong>
+如编译成Apache2的Pre-fork MPM，当Apache启动的时候，会立即把自己fork出好几个子进程，每一个进程都有自己独立的内存空间，在每个进程里的PHP的工作方式如下：</p>
+<ul>
+  <li>（1）调用每个扩展的MINIT；</li>
+  <li>（2）循环：{ a.调用每个扩展的RINIT;  b.执行脚本； c.调用每个扩展的RSHUTDOWN；}</li>
+  <li>（3）调用每个扩展的MSHUTDOWN；</li>
+</ul>
+
+<p><strong>3.多线程模块</strong>
+如IIS的isapi和Apache MPM worker，<strong>只有一个服务器进程在运行着，但会同时运行很多线程</strong>，这样可以减少一些资源开销，像Module init和Module shutdown就只需要运行一次就行了，一些全局变量也只需要初始化一次， 因为线程独具的特质，使得各个请求之间方便的共享一些数据成为可能。</p>
+
+<p><strong>4.Embedded(嵌入式，在自己的C程序中调用Zend Engine)</strong>
+Embed SAPI是一种比较特殊但不常用的SAPI，允许在C/C++语言中调用PHP/ZE提供的函数。 这种SAPI和上面的三种一样，按Module Init、Request Init、Rshutdown、mshutdown的流程执行着。</p>
+
+<h2 id="open_basedir配置项的作用">open_basedir配置项的作用</h2>
+
+<p>open_basedir是PHP配置中为了防御跨目录进行文件（目录）读写的配置，所有PHP中有关文件读、写的函数都会经过open_basedir的检查。实际上是一些目录的集合，<u>在定义了open_basedir以后，PHP可以读写的文件、目录都将被限制在这些目录中</u>。在Linux下，不同的目录由<code class="language-plaintext highlighter-rouge">:</code>分割，如<code class="language-plaintext highlighter-rouge">/var/www/:/tmp/</code>。
+注意用open_basedir指定的限制实际上是前缀，而不是目录名。</p>
+
+<p>Apache运行PHP有三种配置open_basedir的方法：</p>
+<ul>
+  <li>（1）在php.ini里配置
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>open_basedir = .:/tmp/
+</code></pre></div>    </div>
+  </li>
+  <li>（2）在Apache配置的VirtualHost里设置(httpd-vhosts.conf)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php_admin_value open_basedir .:/tmp/
+</code></pre></div>    </div>
+  </li>
+  <li>（3）在Apache配置的Direcotry里设置
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php_admin_value open_basedir .:/tmp/
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>关于三个配置方法的解释</strong></p>
+<ul>
+  <li>优先级：方法（3）&gt;方法（2）&gt;方法（1）;</li>
+  <li>配置目录里加了<code class="language-plaintext highlighter-rouge">/tmp/</code>是因为PHP默认的临时文件（如上传的文件、session等）会放在该目录，所以一般需要添加该目录，否则部分功能将无法使用；</li>
+  <li>配置目录里加了<code class="language-plaintext highlighter-rouge">.</code>是指运行PHP文件的当前目录，这样做可以避免每个站点一个一个设置；</li>
+  <li>如果站点还使用了站点目录外的文件，需要单独在对应VirtualHost设置该目录；</li>
+</ul>
+
+<h2 id="使用php数组模拟队列操作的性能问题">使用PHP数组模拟队列操作的性能问题</h2>
+
+<p>PHP的数组提供了array_pop和array_shift可以使用数组模拟队列数据结构。虽然使用Array可以实现队列，但实际上性能会非常差。在一个大并发的服务器程序上，建议使用<strong>SplQueue</strong>作为队列数据结构。
+一项实测结果：100万条数据随机入队、出队，使用SplQueue仅用2312.345ms即可完成，而使用Array模拟的队列的程序根本无法完成测试，CPU一直持续在100%，降低到1万条后，也需要260ms才能完成测试。
+详略。</p>
+
+<h2 id="php不必做编译优化">PHP不必做编译优化</h2>
+<p>C等需要编译执行的程序通常一次编译，会多次运行或长时间运行，因此在编译上多耗些时间、多做些优化被认为是值得的。而解释型语言往往作为胶水语言，也就是完成一项用后即弃的特定任务。官方的答复是，PHP程序运行时间往往很短暂，比如10ms；如果花100ms做编译优化，把运行时间压缩到1ms，总的时间消耗是101ms，反而更慢了（不考虑中间代码缓存）。</p>
+
+<h2 id="在被包含文件中仍然要使用php起始标志">在被包含文件中仍然要使用<code class="language-plaintext highlighter-rouge">&lt;?php</code>起始标志</h2>
+
+<p>当一个文件被包含时，语法解析器<u>在目标文件的开头脱离PHP模式并进入HTML模式，到文件结尾处恢复</u>。由于此原因，目标文件中需要作为PHP代码执行的任何代码都必须被包括在有效的PHP起始和结束标记之中。</p>
+
+<h2 id="应该关闭register_globals配置">应该关闭register_globals配置</h2>
+
+<p>这个配置影响到PHP如何接收传递过来的参数。register_globals的意思就是注册为全局变量，所以当On的时候，传递过来的值会被直接的注册为（与HTML控件的name属性同名的）全局变量直接使用，而Off的时候，需要到特定的全局变量数组里去得到它。</p>
+
+<h2 id="php中null值的判断">PHP中NULL值的判断</h2>
+
+<p>NULL类型唯一可能的值就是NULL（不区分大小写）。在下列情况下一个变量被认为是NULL：</p>
+<ul>
+  <li>被赋值为NULL</li>
+  <li>尚未被赋值</li>
+  <li>被unset() 
+递减NULL值也没有效果，但是递增NULL的结果是1。</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+<span class="nv">$a</span><span class="o">--</span><span class="p">;</span>
+<span class="nv">$b</span><span class="o">++</span><span class="p">;</span>
+
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span>  <span class="c1">// null</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$b</span><span class="p">);</span>  <span class="c1">// 1</span>
+</code></pre></div></div>
+
+<h2 id="不能使用可变变量的变量">不能使用可变变量的变量</h2>
+
+<p>超全局变量不能用作可变变量。$this变量也是一个特殊变量，不能被动态引用。</p>
+
+<h2 id="使用yield实现双向异步信息传递">使用yield实现双向异步信息传递</h2>
+
+<p>包含yield关键字的函数比较特殊，<u>返回值是一个Generator对象</u>，此时函数内语句尚未真正执行。<u>Generator对象是Iterator接口实例，可以通过rewind()、current()、next()、valid()系列接口进行操纵</u>。Generator可以视为一种“可中断”的函数，而yield构成了一系列的“中断点”。</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">function</span> <span class="n">gen</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">for</span><span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="nv">$i</span><span class="o">&lt;=</span><span class="mi">100</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// yield既是语句，又是表达式，既具备类似return语句的功能，同时也有类似表达式的返回值（通过send得到的值）</span>
+    <span class="nv">$cmd</span> <span class="o">=</span> <span class="p">(</span><span class="k">yield</span> <span class="nv">$i</span><span class="p">);</span>  
+    <span class="k">if</span><span class="p">(</span><span class="nv">$cmd</span><span class="o">==</span><span class="s1">'stop'</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nv">$gen</span> <span class="o">=</span> <span class="nf">gen</span><span class="p">();</span>
+<span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">foreach</span><span class="p">(</span><span class="nv">$gen</span> <span class="k">as</span> <span class="nv">$item</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="nv">$item</span><span class="mf">.</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+  <span class="k">if</span><span class="p">(</span><span class="nv">$i</span><span class="o">&gt;=</span><span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$gen</span><span class="o">-&gt;</span><span class="nf">send</span><span class="p">(</span><span class="s1">'stop'</span><span class="p">);</span>  <span class="c1">// 向Generator发送值</span>
+  <span class="p">}</span>
+  <span class="nv">$i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="控制数组json_encode后为json对象或者json数组">控制数组json_encode后为json对象或者json数组</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$foo</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s2">"item1"</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nc">Object</span><span class="p">)[],</span>  <span class="c1">// 关键点：将Array转换成Object类型</span>
+  <span class="s2">"item2"</span> <span class="o">=&gt;</span> <span class="p">[]</span>
+<span class="p">];</span>
+
+<span class="k">echo</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$foo</span><span class="p">);</span>
+</code></pre></div></div>
+<p>输出：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"item1"</span><span class="o">:</span><span class="p">{},</span><span class="s2">"item2"</span><span class="o">:</span><span class="p">[]}</span>
+</code></pre></div></div>
+
+<h2 id="return的使用场景和行为">return的使用场景和行为</h2>
+
+<ul>
+  <li>如果在全局范围中调用，则当前脚本文件中止运行；</li>
+  <li>如果当前脚本文件是被include的或者require的，则控制交回调用文件；且<u>如果当前脚本是被include的，则return的值会被当作include调用的返回值</u>。</li>
+  <li>如果当前脚本文件是在php.ini中的配置选项auto_prepend_file或者auto_append_file所指定的，则此脚本文件中止运行；</li>
+</ul>
+
+<p>return是语言结构而不是函数，因此其参数没有必要用括号将其括起来。通常都不用括号，实际上也应该不用，这样可以降低PHP的负担。 如果没有提供参数，则一定不能用括号，此时返回NULL。如果调用return时加上了括号却又没有参数会导致解析错误。</p>
+
+<h2 id="cgifix_pathinfo配置项的作用">cgi.fix_pathinfo配置项的作用</h2>
+
+<p>如果Web Server为Nginx，则须在PHP的配置文件php.ini中配置cgi.fix_pathinfo = 0，防止<u>Nginx文件解析漏洞</u>。
+在cgi.fix_pathinfo = 1的情况下，假设有如下的URL：http://xxx.net/foo.jpg，当访问http://xxx.net/foo.jpg/a.php时，foo.jpg将会被执行，如果foo.jpg是一个普通文件，那么foo.jpg的内容会被直接显示出来，但是如果把一段php代码保存为foo.jpg，那么问题就来了，这段代码就会被直接执行。</p>
+
+<h2 id="启用并配置opcache">启用并配置OpCache</h2>
+
+<p><strong>php.ini</strong></p>
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">; 开关打开
+</span><span class="py">opcache.enable</span><span class="p">=</span><span class="s">1</span>
+
+<span class="c">; 可用内存, 酌情而定, 单位megabytes(M)
+</span><span class="py">opcache.memory_consumption</span><span class="p">=</span><span class="s">256</span>
+
+<span class="err">...</span>
+</code></pre></div></div>
+
+<p><strong>检查</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php -v
+
+PHP 5.5.3-1ubuntu2.2 (cli) (built: Feb 28 2014 20:06:05) 
+Copyright (c) 1997-2013 The PHP Group
+Zend Engine v2.5.0, Copyright (c) 1998-2013 Zend Technologies
+with Zend OPcache v7.0.3-dev, Copyright (c) 1999-2013, by Zend Technologies
+</code></pre></div></div>
+<p>注意其中多出了：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>with Zend OPcache v7.0.3-dev
+</code></pre></div></div>
+<p>需要提醒的是，在生产环境中使用上述配置之前，必须经过严格测试。 因为上述配置存在一个已知问题，它会引发一些框架和应用的异常， 尤其是在存在文档使用了备注注解的时候。
+如果在更新代码之后，发现没有执行的还是旧代码，可使用函数opcache_reset()来清除缓存。</p>
+
+<h2 id="收集php错误日志">收集PHP错误日志</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>display_errors = Off
+log_errors = On
+
+# 该文件必须允许Web Server的用户和组具有写的权限
+error_log = /usr/local/apache2/logs/php_error.log 
+</code></pre></div></div>
+
+<h2 id="禁止在php中使用危险函数">禁止在PHP中使用危险函数</h2>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">disable_functions</span> <span class="p">=</span> <span class="s">dl,assert,exec,popen,system,passthru,shell_exec,proc_close,proc_open,pcntl_exec</span>
+</code></pre></div></div>
+
+<h2 id="使用define和const定义常量的区别">使用define和const定义常量的区别</h2>
+
+<ul>
+  <li>用define定义的常量可以不用理会变量的作用域而在任何地方定义和访问；</li>
+  <li>使用const关键字定义常量必须处于最顶端的作用区域，因为用此方法是在编译时定义的。这就意味着不能在函数内、循环内以及if语句之内用const来定义常量；</li>
+</ul>
+
+<h2 id="allow_url_fopen和allow_url_include配置">allow_url_fopen和allow_url_include配置</h2>
+
+<p>允许访问URL远程资源（即允许fopen这样的函数打开url）使得PHP应用程序的漏洞变得更加容易被利用，php脚本若存在远程文件包含漏洞会使得攻击者直接获取网站权限及上传web木马。一般会在php配置文件中关闭该功能，若需要访问远程服务器建议采用其他方式如libcurl库。</p>
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">allow_url_fopen</span> <span class="p">=</span> <span class="s">Off</span>
+<span class="py">allow_url_include</span> <span class="p">=</span> <span class="s">Off</span>
+</code></pre></div></div>
+<p>比如有这样的代码：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">if</span><span class="p">(</span><span class="k">isset</span><span class="p">(</span><span class="nv">$HTTP_GET_VARS</span><span class="p">)){</span>
+  <span class="nb">reset</span><span class="p">(</span><span class="nv">$HTTP_GET_VARS</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span> <span class="k">list</span><span class="p">(</span><span class="nv">$var</span><span class="p">,</span> <span class="nv">$val</span><span class="p">)</span> <span class="o">=</span> <span class="nb">each</span><span class="p">(</span><span class="nv">$HTTP_GET_VARS</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$$var</span><span class="o">=</span><span class="nv">$val</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>一些较偶然的场景会导致将以http://开头的get参数所表示的远程文件直接包含进来，然后执行。</p>
+
+<h2 id="魔术常量">魔术常量</h2>
+
+<ul>
+  <li><strong>LINE</strong> 文件中的当前行号</li>
+  <li><strong>FILE</strong> 文件的完整路径和文件名</li>
+  <li><strong>DIR</strong> 文件所在的目录</li>
+  <li><strong>FUNCTION</strong> 函数名称（PHP 4.3.0 新加）</li>
+  <li><strong>CLASS</strong> 类的名称（PHP 4.3.0 新加）</li>
+  <li><strong>TRAIT</strong> Trait 的名字（PHP 5.4.0 新加）</li>
+  <li><strong>METHOD</strong> 类的方法名（PHP 5.0.0 新加）</li>
+  <li><strong>NAMESPACE</strong> 当前命名空间的名称（区分大小写）</li>
+</ul>
+
+<h2 id="用于属性重载的魔术方法">用于属性重载的魔术方法</h2>
+
+<ul>
+  <li>在给不可访问属性赋值时，__set()会被调用。</li>
+  <li>读取不可访问属性的值时，__get()会被调用。</li>
+  <li>当对不可访问属性调用isset()或empty()时，__isset()会被调用。</li>
+  <li>当对不可访问属性调用 unset() 时，__unset()会被调用。</li>
+  <li>属性重载只能在对象中进行。在静态方法中，这些魔术方法将不会被调用。</li>
+</ul>
+
+<h2 id="用于方法重载的魔术方法">用于方法重载的魔术方法</h2>
+
+<ul>
+  <li>在对象中调用一个不可访问方法时，__call()会被调用。</li>
+  <li>用静态方式中调用一个不可访问方法时，__callStatic()会被调用。</li>
+</ul>
+
+<h2 id="在声明静态变量时不能使用表达式进行赋值">在声明静态变量时不能使用表达式进行赋值</h2>
+
+<p>静态变量的声明是在编译时解析的，因此在声明静态变量时不能用表达式进行赋值。</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">function</span> <span class="n">foo</span><span class="p">(){</span>
+  <span class="k">static</span> <span class="nv">$int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>       	<span class="c1">// ok</span>
+  <span class="k">static</span> <span class="nv">$int</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="p">;</span>    	<span class="c1">// error  (as it is an expression)</span>
+  <span class="k">static</span> <span class="nv">$int</span> <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="mi">121</span><span class="p">);</span>  <span class="c1">// error  (as it is an expression too)</span>
+
+  <span class="nv">$int</span><span class="o">++</span><span class="p">;</span>
+  <span class="k">echo</span> <span class="nv">$int</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="将非对象类型转换为对象">将非对象类型转换为对象</h2>
+
+<ul>
+  <li>如果将一个对象转换成对象，它将不会有任何变化；</li>
+  <li>如果其它任何类型的值被转换成对象，将会创建一个内置类stdClass的实例；</li>
+  <li>如果该值为NULL，则新的实例为空；</li>
+  <li><u>数组转换成对象将使键名成为属性名并具有相对应的值</u>；</li>
+  <li><u>对于任何其它的值，名为**scalar**的成员变量将包含该值</u>；
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="p">(</span><span class="nc">Object</span><span class="p">)</span><span class="s1">'abc'</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$a</span><span class="o">-&gt;</span><span class="n">scalar</span><span class="p">;</span>  <span class="c1">// abc</span>
+<span class="k">echo</span> <span class="nb">gettype</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span> <span class="c1">// object</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="被包含文件的搜索顺序">被包含文件的搜索顺序</h2>
+
+<ul>
+  <li>先按参数给出的路径寻找；</li>
+  <li>如果没有给出目录（只有文件名）时则按照<strong>include_path</strong>指定的目录寻找；</li>
+  <li>如果在include_path下没找到该文件则include最后才在调用<u>脚本文件所在的目录</u>和<u>当前工作目录</u>下寻找；</li>
+  <li>如果最后仍未找到文件则include结构会发出一条警告；这一点和require不同，后者会发出一个致命错误；</li>
+  <li>如果定义了路径，不管是绝对路径还是当前目录的相对路径，include_path都会被完全忽略；</li>
+</ul>
+
+<h2 id="包含文件的作用域关系">包含文件的作用域关系</h2>
+
+<ul>
+  <li>当一个文件被包含时，其中所包含的代码<u>继承了include所在行的变量范围</u>。从该处开始，调用文件在该行处可用的任何变量在被调用的文件中也都可用。不过所有在包含文件中定义的函数和类都具有全局作用域；</li>
+  <li>如果include出现于调用文件中的一个函数里，则被调用的文件中所包含的所有代码将表现得如同它们是在该函数内部定义的一样。所以它将遵循该函数的变量范围。此规则的一个例外是魔术常量，它们是在发生包含之前就已被解析器处理的；</li>
+</ul>
+
+<h2 id="几种动态内容缓存方式">几种动态内容缓存方式</h2>
+
+<ul>
+  <li>Smarty缓存</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">require</span> <span class="s1">'../libsmarty/Smarty.class.php'</span><span class="p">;</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="n">smarty</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Smarty</span><span class="p">();</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="n">smarty</span><span class="o">-&gt;</span><span class="n">caching</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="n">template_page</span> <span class="o">=</span> <span class="s1">'place_posts.html'</span><span class="p">;</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="n">cache_id</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">marker_id</span><span class="p">;</span>
+
+<span class="k">if</span><span class="p">(</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">smarty</span><span class="o">-&gt;</span><span class="nf">is_cached</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">template_page</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">cache_id</span><span class="p">)</span> <span class="p">){</span>
+   <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">smarty</span><span class="o">-&gt;</span><span class="nf">display</span><span class="p">(</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">template_page</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">cache_id</span> <span class="p">);</span> 
+   <span class="k">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nf">do_some_db_query</span><span class="p">();</span>
+<span class="mf">...</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="n">smarty</span><span class="o">-&gt;</span><span class="nf">display</span><span class="p">(</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">template_page</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">cache_id</span> <span class="p">);</span> 
+</code></pre></div></div>
+
+<p>缓存保存、查找、过期检查等，主要是Smarty的API，略。</p>
+
+<ul>
+  <li>APC
+<u>Smarty的存储基于磁盘，而APC基于内存</u>。</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">template_page</span> <span class="mf">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">cache_id</span><span class="p">;</span>
+<span class="nv">$html</span> <span class="o">=</span> <span class="nb">apc_fetch</span><span class="p">(</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">key</span> <span class="p">);</span>
+<span class="k">if</span><span class="p">(</span> <span class="nv">$html</span> <span class="o">!==</span> <span class="kc">false</span> <span class="p">){</span>
+    <span class="k">echo</span> <span class="nv">$html</span><span class="p">;</span>
+    <span class="k">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nf">do_some_db_query</span><span class="p">();</span>
+<span class="nv">$html</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">smarty</span><span class="o">-&gt;</span><span class="nf">fetch</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">template_page</span> <span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">cache_id</span><span class="p">);</span>
+<span class="nb">apc_add</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">key</span><span class="p">,</span> <span class="nv">$html</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">smarty</span><span class="o">-&gt;</span><span class="n">cache_lifetime</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$html</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>XCache
+和APC类似，略。</p>
+  </li>
+  <li>
+    <p>memcached
+memcached支持将缓存存储在独立的缓存服务器中。
+有Redis了，略。</p>
+  </li>
+</ul>
+
+<h2 id="动态内容局部无缓存的实现">动态内容局部无缓存的实现</h2>
+
+<p>基本实现方式都是自定义一组标签，然后在模板中将局部无缓存的内容用标签包含，比如Smarty：</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="n">smarty_block_dynamic</span><span class="p">(</span> <span class="nv">$params</span><span class="p">,</span> <span class="nv">$content</span><span class="p">,</span> <span class="o">&amp;</span><span class="nv">$smarty</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nv">$content</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="n">smarty</span><span class="o">-&gt;</span><span class="nf">register_block</span><span class="p">(</span><span class="s1">'dynamic'</span><span class="p">,</span> <span class="s1">'smarty_block_dynamic'</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+
+<span class="p">{</span><span class="n">dynamic</span><span class="p">}</span>
+<span class="nv">$user</span><span class="o">-&gt;</span><span class="n">user_nick</span><span class="p">;</span>
+<span class="p">{</span><span class="n">dynamic</span><span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="php脚本加速常见方式">PHP脚本加速常见方式</h2>
+
+<ul>
+  <li>opcode
+脚本语言的解释器会事先经过词法分析、语法分析、语义分析等一系列步骤将源代码编译为操作码（Operate Code），然后再执行。PHP解释器的核心引擎为Zend Engine。</li>
+</ul>
+
+<p>PHP的parsekit扩展提供运行时API来查看PHP代码的opcode。</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span> <span class="nb">parsekit_compile_string</span><span class="p">(</span><span class="s1">'print 1+1;'</span><span class="p">)</span> <span class="p">);</span>
+</code></pre></div></div>
+<p>opcode的格式类似于汇编代码（都是三地址码的格式），因此可以方便地翻译为不同平台的本地代码。</p>
+
+<ul>
+  <li>APC
+开启：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apc.cache_by_default = on
+</code></pre></div></div>
+<p>也可以配置apc.filters<u>让APC只对特定范围的动态程序进行opcode缓存</u>。
+APC同时提供跳过过期检查的机制，如果动态程序长期不会变化，那么可以跳过过期检查以获得更好的性能：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apc.stat = off
+</code></pre></div></div>
+
+<ul>
+  <li>XCache
+和APC差不多，详略。</li>
+</ul>
+
+<h2 id="xdebug基本功能">Xdebug基本功能</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">xdebug_time_index</span><span class="p">();</span>  <span class="c1">// 返回从脚本开始处执行到当前位置所花费的时间</span>
+<span class="nf">xdebug_call_line</span><span class="p">();</span>   <span class="c1">// 当前函数在哪一行被调用</span>
+<span class="nf">xdebug_call_function</span><span class="p">();</span>  <span class="c1">// 当前函数在哪个函数中被调用</span>
+
+<span class="c1">// 代码覆盖率</span>
+<span class="nf">xdebug_start_code_coverage</span><span class="p">();</span>
+<span class="mf">...</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nf">xdebug_get_code_coverage</span><span class="p">());</span>
+</code></pre></div></div>
+<ul>
+  <li>函数跟踪
+根据程序在实际运行时的执行顺序跟踪记录所有函数的执行时间，以及函数调用时的上下文，包括实际参数和返回值。</li>
+</ul>
+
+<p>在php.ini中配置记录文件的存储目录和文件名前缀：</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">xdebug</span><span class="mf">.</span><span class="n">trace_output_dir</span> <span class="o">=</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">xdebug</span>
+<span class="n">xdebug</span><span class="mf">.</span><span class="n">trace_output_name</span> <span class="n">trace</span><span class="mf">.</span><span class="o">%</span><span class="n">c</span>
+</code></pre></div></div>
+<p>%c代表函数调用。</p>
+
+<p>输出示例：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.0167  1009988  -&gt; MarkerInfo-&gt;getMarkerInfo()
+0.0167  1009988    -&gt; DataAccess-&gt;selectDb(string(11))
+0.0168  1010040      -&gt; DataAccess-&gt;connect()
+...
+0.0170  1010288      -&gt; mysql_connect(string(9), string(4), string(0))
+0.0207  1011320      -&gt; ...
+</code></pre></div></div>
+<p>通过以上片段可以分析出代码执行的时间主要消耗在mysql_connect()处。</p>
+
+<ul>
+  <li>瓶颈分析
+Xdebug提供性能跟踪器：</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xdebug.profiler_output_dir = /tmp/xdebug
+xdebug.profiler_output_name = cachegrind.out.%p
+</code></pre></div></div>
+<p>其中%p是运行时PHP解释器所在进程的PID。
+可以使用图形界面工具CacheGrind分析日志。</p>
+
+<h2 id="php-cgi路径解析问题">PHP CGI路径解析问题</h2>
+<p>当访问：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://www.xxx.com/path/test.jpg/notexist.php
+</code></pre></div></div>
+<p>时，<u>若notexist.php不存在，会将test.jpg当做PHP进行解析</u>。
+这个漏洞的原因与在fastcgi方式下PHP获取环境变量的方式有关。php.ini中cgi.fix_pathinfo开关默认打开，在映射URI时，两个环境变量很重要：PATH_INFO和SCRIPT_FILENAME。上例中PATH_INFO为notexist.php，当cgi.fix_pathinfo打开的情况下，在映射URI时将递归查询路径确认文件的合法性，因为notexist.php不存在，所以将往前递归查询路径。（这个功能原本是为了解决/info.php/test这种URL，使其能够正确地解析到info.php上），此时SCRIPT_FILENAME需要检查文件是否存在，最终递归查询后确认为/path/test.jpg，而PATH_INFO此时还是notexist.php，从而造成最终执行时test.jpg会被当做PHP进行解析。</p>
+
+<h2 id="文件包含漏洞">文件包含漏洞</h2>
+
+<p>文件包含漏洞是代码注入的一种，原理就是注入一段用户能够控制的脚本或代码，并让服务器端执行。常见的导致文件包含的函数包括：include()、include_once()、require()、require_once()、fopen（）、readfile()等。</p>
+
+<p>当使用include()、include_once()、require()、require_once()这4个函数包含一个新的文件时，该文件将作为PHP代码执行，PHP内核并不会在意该被包含的文件是什么类型。</p>
+
+<p><strong>本地文件包含</strong>
+即能够打开并包含本地文件的漏洞。
+通常服务器端代码可能这样接收用户输入：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>include ‘/home/wwwrun/’ .$file. '.php'；
+</code></pre></div></div>
+<p>看起来无论用户输入什么$file，最终只能包含’.php’文件。实际PHP内核由C语言实现，使用了一些C语言的字符串处理函数，在连接字符串时\x00将作为字符串结束符，所以当攻击者如下输入时：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>../../etc/passwd\0
+</code></pre></div></div>
+<p>或者在通过Web输入时UrlEncode：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>../../etc/passwd%00
+</code></pre></div></div>
+<p>就能<u>截断file变量之后的字符串</u>。</p>
+
+<p>当PHP配置了open_basedir时，将可以使得这种攻击无效。open_basedir的作用是限制在某个特定目录下PHP能打开的文件，需要注意的是其值是目录的前缀，因此如果设置为/home/app/aaa，那么实际上如下目录都将被允许：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/app/aaa
+/home/app/aaabbb
+/home/app/aaa123
+</code></pre></div></div>
+<p>如果要限定一个指定的目录，则需要在最后加上’/’：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>open_basedir = /home/app/aaa/
+</code></pre></div></div>
+
+<p>要解决文件包含漏洞应该尽量避免包含动态的变量，尤其是用户可以控制的变量，一种通用方式是使用枚举判断被包含的文件。</p>
+
+<p><strong>远程文件包含</strong>
+如果PHP设置中allow_url_include为ON，则include、require函数可以加载远程文件，远程文件漏洞可以用来执行任意命令。</p>
+
+<h2 id="本地文件包含漏洞的利用技巧">本地文件包含漏洞的利用技巧</h2>
+<ul>
+  <li>
+    <ol>
+      <li>包含用户上传的文件；</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>包含data://或php://input等伪协议；</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>包含Session文件；（需要攻击者能够控制Session文件的部分内容）</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>包含日志文件，比如Web Server的access log；（攻击者可以拼凑特定请求来将PHP代码写到日志中）</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>包含/proc/self/environ文件；（Web进程运行时的环境变量，其中很多都是用户可以控制的，比如User-Agent）</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>包含上传的临时文件；</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>
+        <p>包含其他应用程序创建的文件，比如数据库文件、缓存文件、应用日志等。</p>
+
+        <p>​</p>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="变量覆盖漏洞">变量覆盖漏洞</h2>
+<p>当register_globals为ON时，PHP全局变量的来源可能是多个地方，包括页面的表单、Cookie等（会自动创建全局变量）。PHP4.2.0之后的版本register_globals默认为OFF。</p>
+
+<p>extract()函数能够将变量从数组导入当前的符号表：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int extract( array $var_array [, int $extract_type [, string $prefix]] );
+</code></pre></div></div>
+<p>$extract_type指定将变量导入符号表时的行为，为EXTR_OVERWRITE时，若发生变量名冲突，将覆盖已有的变量。当extract()函数从用户可以控制的数组中导出变量时，将可能覆盖变量，从而绕过服务器端逻辑。</p>
+
+<p>需要注意类似<code class="language-plaintext highlighter-rouge">$$k</code>的变量赋值方式可能覆盖已有的变量。</p>
+
+<p>import_request_variables(…)函数将GET、POST、Cookie中的变量导入到全局，因而也可能导致变量覆盖问题。</p>
+
+<p>parse_str()函数往往用于解析URL中的query string，当参数值能被用户控制时，很可能导致变量覆盖。</p>
+
+<h2 id="代码执行漏洞">代码执行漏洞</h2>
+
+<p>PHP中popen()、system()、passthru()、exec()等函数都可以直接执行系统命令，eval()函数可以执行PHP代码。当攻击者可以控制输入时，将造成代码执行漏洞。</p>
+
+<p>preg_replace()的第一个参数如果存在/e模式修饰符，则允许代码执行。</p>
+
+<p>用户自定义的动态函数也能导致代码执行：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$dyn_func = $_GET['dyn_func'];
+$argument = $_GET['argument'];
+$dyn_func($argument);
+</code></pre></div></div>
+
+<p>Curly Syntax也能导致代码执行，它将执行花括号间的代码并将结果替换回去：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$var = "I was ...until $(`ls`) appeared here";
+</code></pre></div></div>
+
+<p>很多函数都可以执行回调函数，当回调函数可以被用户控制时，将导致代码执行。
+unserialize()在执行时如果定义了__destruct()或者__wakeup()函数，则这两个函数将执行。</p>
+
+<h2 id="定制安全的php环境">定制安全的PHP环境</h2>
+
+<ul>
+  <li>
+    <ol>
+      <li>register_globals = OFF</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>设置open_basedir</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>allow_url_fopen = Off</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>allow_url_include = Off</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>display_errors = Off / log_errors = On</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>magic_quotes_gpc = Off 因为有若干种方法可以绕过它，甚至由于它反而衍生出一些新的安全问题</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>cgi.fix_pathinfo = 0</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>session.cookie_httponly = 1</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>session.cookie_secure = 1 # 当全站HTTPS时，应该开启</li>
+    </ol>
+  </li>
+</ul>
+
+<p><strong>safe_mode</strong>
+开启时，很多函数的行为将发生变化，略。</p>
+
+<p><strong>disable_functions</strong>
+应该禁止使用一些函数，详细列表略。</p>
+
+<h2 id="延迟静态绑定">延迟静态绑定</h2>
+
+<p>延迟静态绑定，就是把本来在定义阶段固定下来的表达式或变量，改在执行阶段才决定，比如当一个子类继承了父类的静态表达式的时候，它的值并不能被改变，有时不希望看到这种情况。</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">A</span><span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="n">echoClass</span><span class="p">(){</span>
+      <span class="k">echo</span> <span class="k">__CLASS__</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="n">test</span><span class="p">(){</span>
+      <span class="k">self</span><span class="o">::</span><span class="nf">echoClass</span><span class="p">();</span>      
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="kd">class</span> <span class="nc">B</span> <span class="kd">extends</span> <span class="nc">A</span><span class="p">{</span>      
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="n">echoClass</span><span class="p">(){</span>
+      <span class="k">echo</span> <span class="k">__CLASS__</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nc">B</span><span class="o">::</span><span class="nf">test</span><span class="p">();</span> <span class="c1">//输出A</span>
+</code></pre></div></div>
+<p>延迟静态绑定使用了static关键字，而不是self：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">A</span><span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="n">echoClass</span><span class="p">(){</span>
+      <span class="k">echo</span> <span class="k">__CLASS__</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="n">test</span><span class="p">(){</span>
+      <span class="k">static</span><span class="o">::</span><span class="nf">echoClass</span><span class="p">();</span>      
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="kd">class</span> <span class="nc">B</span> <span class="kd">extends</span> <span class="nc">A</span><span class="p">{</span>      
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="n">echoClass</span><span class="p">(){</span>
+      <span class="k">echo</span> <span class="k">__CLASS__</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nc">B</span><span class="o">::</span><span class="nf">test</span><span class="p">();</span> <span class="c1">//输出B</span>
+</code></pre></div></div>
+
+<h2 id="克隆对象">克隆对象</h2>
+
+<p>PHP提供了clone关键字：
+$b = clone $a; // 将创建与$a具有相同类的副本，而且具有相同的属性值
+要想改变默认的克隆行为，需要重定义__clone()方法。</p>
+
+<h2 id="php会话控制">PHP会话控制</h2>
+
+<p>PHP的会话是通过唯一的会话ID来驱动的，<u>会话ID是一个加密的随机数字串，它由PHP生成</u>，在会话的生命周期中都会保存在客户端。可以通过cookie或者url来在网络上传递。</p>
+
+<h2 id="脱离cookie来使用session">脱离cookie来使用session</h2>
+<p>有时候会遇到因cookie无法使用从而导致session变量不能跨页传递。原因可能有：
+客户端禁用了cookie；
+浏览器出现问题，暂时无法存取cookie；
+php.ini中的<code class="language-plaintext highlighter-rouge">session.use_trans_sid = 0</code>，或者编译时没有打开<code class="language-plaintext highlighter-rouge">--enable-trans-sid</code>选项。
+当代码session_start()时，就在服务器上产生了一个session文件，随之也产生了一个唯一对应的sessionID。跨页后，为了使用session，必须又执行session_start()，将又会产生一个session文件以及新的sessionID，这个新的sessionID无法用来获取前一个sessionID设置的值。除非在session_start()之前加代码session_id($session_id);将不会产生session文件，而是直接读取与这个id对应的session文件。</p>
+
+<p>假设cookie功能不可用，可以通过如下方式实现抛开cookie来使用session：
+设置php.ini中的session.use_trans_sid =1，或者编译时打开–enable-trans-sid选项，让PHP自动跨页传递sessionID（基于URL）；
+手动通过URL传值、隐藏表单传递sessionID，即约定一个键名，读出后手工赋值给session_id();函数；
+用文件、数据库等形式保存sessionID，在跨页中手工调用。</p>
+
+<p>注：
+清除所有cookie后，加载本地127.0.0.1/test.php，内容如下：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+  <span class="nb">session_start</span><span class="p">();</span> 
+  <span class="nv">$_SESSION</span><span class="p">[</span><span class="s1">'var1'</span><span class="p">]</span><span class="o">=</span><span class="s2">"value"</span><span class="p">;</span> 
+  <span class="nv">$url</span><span class="o">=</span><span class="s2">"&lt;a href="</span><span class="mf">.</span><span class="s2">"'test2.php'&gt;link&lt;/a&gt;"</span><span class="p">;</span> 
+  <span class="k">echo</span> <span class="nv">$url</span><span class="p">;</span> 
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+<p>返回HTTP头部如下：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+Date: Sat, 09 May 2015 09:30:03 GMT
+Server: Apache/2.4.9 (Win64) PHP/5.5.12
+X-Powered-By: PHP/5.5.12
+Set-Cookie: PHPSESSID=4j6ngd4o2vgeq8bj1otluvvih2; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Content-Length: 28
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+</code></pre></div></div>
+
+<p>仅设置session.use_trans_sid =1可能无效，php.ini中还有另外两个选项：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>session.use_cookies = 1
+session.use_only_cookies = 1
+</code></pre></div></div>
+<p>因此如果想要在cookie可用时则使用cookie，不可用时则使用url重写，则应该进行如下配置：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>session.use_trans_sid =1
+session.use_cookies = 1
+session.use_only_cookies = 0
+</code></pre></div></div>
+<p>或者在php中：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ini_set(“session.use_trans_sid”,”1”);
+ini_set(“session.use_only_cookies”,”0”);
+ini_set(“session.use_cookies”,”1”);
+</code></pre></div></div>
+
+<h2 id="开始会话">开始会话：</h2>
+
+<p>开始一个会话有2种方法：</p>
+
+<ul>
+  <li>session_start()函数：该函数将检查是否有一个会话ID存在，如果不存在就创建一个，如果已经存在，就将这个已经注册的会话变量载入以便使用。</li>
+  <li>将PHP设置为当有用户访问网站的时候就自动启动一个会话，具体方法是打开php.ini中的<strong>session.auto_start</strong>选项。这种方法有一个很大的缺点：无法使用对象作为会话变量，因为该对象的类定义必须在创建该对象的会话开始之前载入。</li>
+</ul>
+
+<p>创建会话变量：
+可以通过全局数组$_SESSION来注册新的会话变量，如：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$_SESSION</span><span class="p">[</span><span class="err">“</span><span class="n">new_var</span><span class="err">”</span><span class="p">]</span> <span class="o">=</span> <span class="err">“</span><span class="n">value</span><span class="err">”</span><span class="p">;</span>
+</code></pre></div></div>
+<p>会话变量创建后，只有在会话结束，或者手动重置时才会失效。此外，php.ini中的<strong>gc_maxlifetime</strong>指令确定了会话的持续时间，超时后会话将会被垃圾回收。</p>
+
+<p>使用会话变量：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span><span class="p">(</span><span class="k">isset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="err">‘</span><span class="n">myvar</span><span class="err">’</span><span class="p">])){</span>
+<span class="mf">...</span>
+</code></pre></div></div>
+<p>销毁会话变量：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">unset</span><span class="p">(</span><span class="nv">$_SESSION</span><span class="p">[</span><span class="err">‘</span><span class="n">myvar</span><span class="err">’</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<p>一次销毁所有的会话变量：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$_SESSION</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+</code></pre></div></div>
+<p>清除会话ID：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">session_destroy</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>配置会话控制：</p>
+<ul>
+  <li>
+    <p>session.auto_start 自动启动会话，默认为0</p>
+  </li>
+  <li>
+    <p>session.cache_expire 为缓存中的会话页设置当前时间 默认180分钟</p>
+  </li>
+  <li>
+    <p>session.cookie_domain 指定会话cookie中的域 默认为none</p>
+  </li>
+  <li>
+    <p>session.cookie_lifetime 指定cookie在用户机器上延续多久，默认值为0，表示延续到浏览器关闭</p>
+  </li>
+  <li>
+    <p>session.cookie_path 指定会话cookie中要设置的路径</p>
+  </li>
+  <li>
+    <p>session.name 会话的名称，在用户系统中用作会话名，默认为PHPSESSID</p>
+  </li>
+  <li>
+    <p>session.save_handler 定义会话数据保存的地方，可以将其设置为指向一个数据库，但是要编写自己函数，默认值为files</p>
+  </li>
+  <li>
+    <p>session.save_path 会话数据存储的路径</p>
+  </li>
+  <li>
+    <p>session.use_cookie 在客户端使用cookie的会话</p>
+  </li>
+  <li>
+    <p>session.cookie_secure 是否该在安全连接中发送cookie</p>
+  </li>
+  <li>
+    <p>session.hash_function 指定用来生成会话ID的哈希算法，如MD5，SHA1</p>
+
+    <p>​</p>
+  </li>
+</ul>
+
+<h2 id="php会在输出时自动删除其结束符后的一个换行">PHP会在输出时自动删除其结束符?&gt;后的一个换行</h2>
+<p>例1：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>   
+  <span class="k">echo</span> <span class="s2">"XXX"</span><span class="p">;</span>
+<span class="cp">?&gt;</span>YYY
+</code></pre></div></div>
+<p>输出：
+XXXYYY</p>
+
+<p>例2：一个换行，会被直接删除</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>   
+  <span class="k">echo</span> <span class="s2">"XXX"</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+YYY
+</code></pre></div></div>
+<p>输出：
+XXXYYY</p>
+
+<p>例3：多个换行，效果等同于一个空格</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>   
+  <span class="k">echo</span> <span class="s2">"XXX"</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+
+YYY
+</code></pre></div></div>
+<p>输出：
+XXX YYY</p>
+
+<h2 id="php基本语法注意点">PHP基本语法注意点</h2>
+
+<ul>
+  <li>
+    <ol>
+      <li>PHP也允许使用短标记&lt;? 和 ?&gt;，但不鼓励使用。只有通过激活php.ini中的short_open_tag配置指令或者在编译PHP时使用了配置选项–enable-short-tags 时才能使用短标记。ASP 风格标记仅在通过php.ini 配置文件中的指令asp_tags打开后才可用。</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>如果文件内容是纯PHP代码，最好在文件末尾删除PHP结束标记。这可以避免在PHP结束标记之后万一意外加入了空格或者换行符，会导致PHP开始输出这些空白，而脚本中此时并无输出的意图。</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>当PHP解释器碰到?&gt;结束标记时就简单地将其后内容原样输出，直到碰到下一个开始标记；例外是处于条件语句中间时，此时 PHP 解释器会根据条件判断来决定哪些输出，哪些跳过：
+        <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$expression</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span><span class="o">:</span> <span class="cp">?&gt;</span>
+This will show if the expression is true.
+<span class="cp">&lt;?php</span> <span class="k">else</span><span class="o">:</span> <span class="cp">?&gt;</span>
+Otherwise this will show.
+<span class="cp">&lt;?php</span> <span class="k">endif</span><span class="p">;</span> <span class="cp">?&gt;</span> 
+</code></pre></div>        </div>
+        <p>上例中PHP将跳过条件语句未达成的段落，即使该段落位于 PHP 开始和结束标记之外。</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>如果将PHP嵌入到XML或XHTML中则需要使用&lt;?php ?&gt;标记以保持符合标准。</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>一段PHP代码中的结束标记隐含表示了一个分号；在一个PHP代码段中的最后一行可以不用分号结束。</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>如果文件内容是纯PHP代码，最好在文件末尾删除PHP结束标记
+  例：
+        <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>   
+<span class="k">echo</span> <span class="s2">"XXX"</span><span class="p">;</span>
+<span class="cp">?&gt;</span> 
+</code></pre></div>        </div>
+        <p>这里在结尾处多了一个空格和一个换行
+将输出：</p>
+      </li>
+    </ol>
+  </li>
+</ul>
+<body>XXX 
+</body>
+<p>即，在XXX后面多了一个空格，并换行</p>
+
+<p>而：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>   
+  <span class="k">echo</span> <span class="s2">"XXX"</span><span class="p">;</span>
+</code></pre></div></div>
+<p>将输出：</p>
+<body>XXX</body>
+
+<ul>
+  <li>
+    <ol>
+      <li>一段PHP代码中的结束标记隐含表示了一个分号
+  例：
+        <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>   
+<span class="k">echo</span> <span class="s2">"XXX"</span>
+</code></pre></div>        </div>
+        <p>输出：
+Parse error: syntax error, unexpected $end, expecting ‘,’ or ‘;’ in D:\wamp\www\t.php on line 2</p>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>   
+  <span class="k">echo</span> <span class="s2">"XXX"</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+<p>输出：
+XXX</p>
+
+<h2 id="在进行布尔运算时被认为false的值">在进行布尔运算时被认为false的值</h2>
+
+<p>当转换为boolean时，除以下值外，其他所有的值都会被认为是TRUE。被认为是FALSE的值包括：</p>
+<ul>
+  <li>
+    <p>(1)布尔值 FALSE 本身</p>
+  </li>
+  <li>
+    <p>(2)整型值 0（零）</p>
+  </li>
+  <li>
+    <p>(3)浮点型值 0.0（零）</p>
+  </li>
+  <li>
+    <p>(4)空字符串，以及字符串 “0”</p>
+  </li>
+  <li>
+    <p>(5)不包括任何元素的数组</p>
+  </li>
+  <li>
+    <p>(6)不包括任何成员变量的对象（仅 PHP 4.0 适用）</p>
+  </li>
+  <li>
+    <p>(7)特殊类型 NULL（包括尚未赋值的变量）</p>
+  </li>
+  <li>
+    <p>(8)从空标记生成的SimpleXML对象</p>
+
+    <p>​</p>
+  </li>
+</ul>
+
+<h2 id="如果给定的一个数超出了integer的范围将会被解释为float">如果给定的一个数超出了integer的范围，将会被解释为float</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$large_number</span> <span class="o">=</span> <span class="mi">2147483647</span><span class="p">;</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$large_number</span><span class="p">);</span>  <span class="c1">// int(2147483647)</span>
+
+<span class="nv">$large_number</span> <span class="o">=</span> <span class="mi">2147483648</span><span class="p">;</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$large_number</span><span class="p">);</span>  <span class="c1">// float(2147483648)</span>
+
+<span class="nv">$million</span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">;</span>
+<span class="nv">$large_number</span> <span class="o">=</span>  <span class="mi">50000</span> <span class="o">*</span> <span class="nv">$million</span><span class="p">;</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$large_number</span><span class="p">);</span>  <span class="c1">// float(50000000000)</span>
+<span class="cp">?&gt;</span> 
+</code></pre></div></div>
+
+<h2 id="php中没有整除的运算符">PHP中没有整除的运算符</h2>
+
+<p>PHP中没有整除的运算符。1/2 产生出float 0.5。值可以舍弃小数部分强制转换为integer，或者使用round()函数可以更好地进行四舍五入。</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="mi">25</span><span class="o">/</span><span class="mi">7</span><span class="p">);</span>           <span class="c1">// float(3.5714285714286) </span>
+<span class="nb">var_dump</span><span class="p">((</span><span class="n">int</span><span class="p">)</span> <span class="p">(</span><span class="mi">25</span><span class="o">/</span><span class="mi">7</span><span class="p">));</span>   <span class="c1">// int(3)</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="mi">25</span><span class="o">/</span><span class="mi">7</span><span class="p">));</span>    <span class="c1">// float(4) </span>
+<span class="cp">?&gt;</span> 
+</code></pre></div></div>
+
+<h2 id="浮点数的精度有限">浮点数的精度有限</h2>
+
+<p>尽管取决于系统，PHP 通常使用IEEE 754双精度格式，则由于取整而导致的最大相对误差为<code class="language-plaintext highlighter-rouge">1.11e-16</code>。非基本数学运算可能会给出更大误差，并且要考虑到进行复合运算时的误差传递。以十进制能够精确表示的有理数如0.1或0.7，无论有多少尾数都不能被内部所使用的二进制精确表示，因此不能在不丢失一点点精度的情况下转换为二进制的格式。
+如：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">echo</span> <span class="p">(</span><span class="n">int</span><span class="p">)</span> <span class="p">(</span> <span class="p">(</span><span class="mf">0.1</span><span class="o">+</span><span class="mf">0.7</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span> <span class="p">);</span> <span class="c1">// 显示 7!</span>
+</code></pre></div></div>
+<p>因为该结果内部的表示其实是类似 7.9999999999999991118…</p>
+
+<h2 id="字符串中的变量解析的规则">字符串中的变量解析的规则</h2>
+
+<p>当字符串用双引号或 heredoc 结构定义时，其中的变量将会被解析。这里有两种变量解析的规则：</p>
+<ul>
+  <li>(1)简单规则：在一个string中嵌入一个变量，一个array的值，或一个object的属性。</li>
+  <li>(2)复杂规则：不是因为其语法复杂而得名，而是因为它可以借助花括号紧接美元符号（{$）来使用复杂的表达式：
+例：</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//只有通过花括号语法才能正确解析带引号的键名</span>
+<span class="k">echo</span> <span class="s2">"This works: </span><span class="si">{</span><span class="nv">$arr</span><span class="p">[</span><span class="s1">'key'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="c1">//当在字符串中使用多重数组时，一定要用括号将它括起来</span>
+<span class="k">echo</span> <span class="s2">"This works: </span><span class="si">{</span><span class="nv">$arr</span><span class="p">[</span><span class="s1">'foo'</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span>
+</code></pre></div></div>
+<p>注意：$必须紧挨着{
+例：</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$great</span> <span class="o">=</span> <span class="s1">'fantastic'</span><span class="p">;</span>
+<span class="c1">// {和$之间多了一个空格，无效，输出: This is { fantastic}</span>
+<span class="k">echo</span> <span class="s2">"This is { </span><span class="nv">$great</span><span class="s2">}"</span><span class="p">;</span>
+<span class="c1">// 有效，输出： This is fantastic</span>
+<span class="k">echo</span> <span class="s2">"This is </span><span class="si">{</span><span class="nv">$great</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="php中的字符串是二进制安全的">PHP中的字符串是二进制安全的</h2>
+
+<p>PHP中的string的实现方式是一个由字节组成的数组再加上一个整数指明缓冲区长度，并无如何将字节转换成字符的信息，由程序员来决定。因此是二进制安全的。</p>
+
+<h2 id="数组key的强制转换">数组key的强制转换</h2>
+
+<ul>
+  <li>(1)包含有合法整型值的字符串会被转换为整型。例如键名 “8” 实际会被储存为 8。但是 “08” 则不会强制转换，因为其不是一个合法的十进制数值。</li>
+  <li>(2)浮点数也会被转换为整型，意味着其小数部分会被舍去。例如键名 8.7 实际会被储存为 8。</li>
+  <li>(3)布尔值也会被转换成整型。即键名 true 实际会被储存为 1 而键名 false 会被储存为 0。</li>
+  <li>(4)Null 会被转换为空字符串，即键名 null 实际会被储存为 ““。</li>
+  <li>(5)数组和对象不能被用为键名。坚持这么做会导致警告：Illegal offset type。 
+例：
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$array</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+  <span class="mi">1</span>    <span class="o">=&gt;</span> <span class="s2">"a"</span><span class="p">,</span>
+  <span class="s2">"1"</span>  <span class="o">=&gt;</span> <span class="s2">"b"</span><span class="p">,</span>  
+  <span class="mf">1.5</span>  <span class="o">=&gt;</span> <span class="s2">"c"</span><span class="p">,</span>
+  <span class="kc">true</span> <span class="o">=&gt;</span> <span class="s2">"d"</span><span class="p">,</span>
+<span class="p">);</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$array</span><span class="p">);</span>
+</code></pre></div>    </div>
+    <p>输出：
+array(1) {
+[1]=&gt;
+string(1) “d”
+}</p>
+  </li>
+</ul>
+
+<p>上例中所有的键名都被强制转换为1，所以最终值为最后一次的赋值。</p>
+
+<h2 id="unset删除数组中的某个键将不会重建索引">unset()删除数组中的某个键将不会重建索引</h2>
+<p>unset()函数允许删除数组中的某个键。但要注意数组将不会重建索引。
+如果需要删除后重建索引，可以用 array_values() 函数：
+​</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="mi">1</span> <span class="o">=&gt;</span> <span class="s1">'one'</span><span class="p">,</span> <span class="mi">2</span> <span class="o">=&gt;</span> <span class="s1">'two'</span><span class="p">,</span> <span class="mi">3</span> <span class="o">=&gt;</span> <span class="s1">'three'</span><span class="p">);</span>
+<span class="nb">unset</span><span class="p">(</span><span class="nv">$a</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="cm">/* will produce an array that would have been defined as
+   $a = array(1 =&gt; 'one', 3 =&gt; 'three');
+   and NOT
+   $a = array(1 =&gt; 'one', 2 =&gt;'three');
+*/</span>
+
+<span class="nv">$b</span> <span class="o">=</span> <span class="nb">array_values</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span>
+<span class="c1">// Now $b is array(0 =&gt; 'one', 1 =&gt;'three')</span>
+</code></pre></div></div>
+
+<h2 id="通过引用来拷贝数组">通过引用来拷贝数组</h2>
+<p>数组拷贝默认是值拷贝。</p>
+
+<p>​```php
+&lt;?php
+$arr1 = [2, 3];
+$arr2 = $arr1;
+$arr2[] = 4; // $arr2 is changed,
+             // $arr1 is still array(2, 3)</p>
+
+<p>$arr3 = &amp;$arr1;
+$arr3[] = 4; // now $arr1 and $arr3 are the same</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+
+## 各种类型回调函数 
+ 
+```php
+&lt;?php
+// An example callback function
+function my_callback_function() {
+    echo 'hello world!';
+}
+
+// An example callback method
+class MyClass {
+    static function myCallbackMethod() {
+        echo 'Hello World!';
+    }
+}
+
+// Type 1: Simple callback 最简单的回调
+call_user_func('my_callback_function'); 
+
+// Type 2: Static class method call 回调类的静态方法
+call_user_func(array('MyClass', 'myCallbackMethod')); 
+
+// Type 3: Object method call  回调对象的方法
+$obj = new MyClass();
+call_user_func(array($obj, 'myCallbackMethod'));
+
+// Type 4: Static class method call (As of PHP 5.2.3)  新的回调静态方法的形式
+call_user_func('MyClass::myCallbackMethod');
+
+// Type 5: Relative static class method call (As of PHP 5.3.0) 回调父类静态方法
+class A {
+    public static function who() {
+        echo "A\n";
+    }
+}
+
+class B extends A {
+    public static function who() {
+        echo "B\n";
+    }
+}
+call_user_func(array('B', 'parent::who')); // A
+</code></pre></div></div>
+
+<h2 id="只有有名字的变量才可以引用赋值">只有有名字的变量才可以引用赋值：</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$foo</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+<span class="nv">$bar</span> <span class="o">=</span> <span class="o">&amp;</span><span class="nv">$foo</span><span class="p">;</span>      <span class="c1">// 合法的赋值</span>
+<span class="nv">$bar</span> <span class="o">=</span> <span class="o">&amp;</span><span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">7</span><span class="p">);</span>  <span class="c1">// 非法; 引用没有名字的表达式</span>
+
+<span class="k">function</span> <span class="n">test</span><span class="p">()</span>
+<span class="p">{</span>
+   <span class="k">return</span> <span class="mi">25</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nv">$bar</span> <span class="o">=</span> <span class="o">&amp;</span><span class="nf">test</span><span class="p">();</span>    <span class="c1">// 非法</span>
+</code></pre></div></div>
+
+<h2 id="变量的作用域可以包含include或者require引入的文件">变量的作用域可以包含include或者require引入的文件。</h2>
+
+<p>如：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$a = 1;
+include 'b.inc';
+</code></pre></div></div>
+<p>这里变量$a将会在包含文件b.inc中生效。</p>
+
+<h2 id="局部函数范围">局部函数范围</h2>
+<p>在用户自定义函数中，一个局部函数范围将被引入。任何用于函数内部的变量按缺省情况将被限制在局部函数范围内。
+如：</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="cm">/* global scope */</span>
+
+<span class="k">function</span> <span class="n">Test</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">echo</span> <span class="nv">$a</span><span class="p">;</span> <span class="cm">/* reference to local scope variable */</span>
+<span class="p">}</span>
+
+<span class="nf">Test</span><span class="p">();</span>
+</code></pre></div></div>
+<p>这个脚本不会有任何输出，因为echo语句引用了一个局部版本的变量$a，而且在这个范围内，它并没有被赋值。
+PHP 中全局变量在函数中使用时必须声明为global。</p>
+
+<h2 id="对于通过表单或者cookies传进来的变量php将会自动将变量名中的点如果有的话替换成下划线">对于通过表单或者Cookies传进来的变量，PHP将会自动将变量名中的点（如果有的话）替换成下划线</h2>
+
+<p>如：<input type="image" src="image.gif" name="sub" />，点击后，将会加上两个变量：sub_x和sub_y。它们包含了用户点击图像的坐标。（这里浏览器发出的是sub.x和sub.y）</p>
+
+<h2 id="require和include的区别">require和include的区别</h2>
+
+<p>require和include几乎完全一样，除了处理失败的方式不同。require 在出错时产生E_COMPILE_ERROR 级别的错误。换句话说将导致脚本中止而include只产生警告（E_WARNING），脚本会继续运行。</p>
+
+<h2 id="使用swoole后php开发的一些变化理解">使用Swoole后PHP开发的一些变化理解</h2>
+
+<p>使用Swoole扩展执行的<u>PHP脚本需要预先在服务端执行</u>（而不是每次访问时才会执行）。
+比如程序中定义了一个类A，在传统模式下每次有用户访问时，类A都需要提前编译到内存中，1万次访问就要编译1万次。而用swoole则只需要在服务端编译一次，只要Swoole的进程存在，类A就会一直存在于内存中。
+再比如PHP入门时就必须要掌握的session，对于运用了Swoole扩展的PHP程序而言，完全可以用一个变量来替换。
+再比如：平时写PHP代码，完全不必担心内存使用，全局变量/函数/对象等，可以随便使用，因为PHP脚本执行结束后，内存自然会自行释放掉。但用Swoole扩展的PHP程序，则必然要手动注销全局的变量/函数/对象等。
+PHP在fork子进程的时候，父进程的资源连接会被子进程获得，父进程本身会断掉。要解决这个问题只能在fork之后重新建连接。
+<u>一定不可以多进程或多线程共同一个mysql或redis连接，否则消息会串。</u>每个进程或线程创建一个mysql的连接。连接断掉也就是mysql gone away之后进行重连。子进程退出后php引擎回清理回收所有的内存，关闭所有的连接。然后由于子进程和父进程共享内存，所以父进程里建立的连接等等也会被顺带关闭掉。
+fpm本身是leader follower同步阻塞模型，同一时间只能处理一个请求，支持不了异步。</p>
+
+<h2 id="如何不直接使用include返回赋值实现将一个php文件的执行结果赋值到一个变量中">如何不直接使用include返回赋值实现将一个PHP文件的执行结果赋值到一个变量中？</h2>
+<p>用<strong>输出控制函数</strong>结合include来捕获其输出。
+例：使用<u>输出缓冲</u>来将 PHP 文件包含入一个字符串</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="k">function</span> <span class="n">get_include_contents</span><span class="p">(</span><span class="nv">$filename</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nb">is_file</span><span class="p">(</span><span class="nv">$filename</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nb">ob_start</span><span class="p">();</span>
+    <span class="k">include</span> <span class="nv">$filename</span><span class="p">;</span>
+    <span class="nv">$contents</span> <span class="o">=</span> <span class="nb">ob_get_contents</span><span class="p">();</span>
+    <span class="nb">ob_end_clean</span><span class="p">();</span>
+    <span class="k">return</span> <span class="nv">$contents</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nv">$string</span> <span class="o">=</span> <span class="nf">get_include_contents</span><span class="p">(</span><span class="s1">'somefile.php'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="父类方法是protected子类重构为private会发生什么">父类方法是protected，子类重构为private，会发生什么？</h2>
+<p>会发生fatal错误，因为<u>继承的方法或属性只能维持或放大权限，不能缩小</u>，比如protected重载为public是可行的。</p>
+
+<h2 id="pcntl_fork">pcntl_fork</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?php
+$pid=pcntl_fork();
+
+switch($pid){
+case-1:
+    echo"couldn't fork";
+    break;
+case0:
+    echo"I'm parent";
+    break;
+default:
+    echo"I'm child";
+}
+</code></pre></div></div>
+
+<h2 id="php的内存管理机制">PHP的内存管理机制</h2>
+
+<h2 id="php进程死锁产生的原因是什么怎么自动排查与自动恢复">php进程死锁产生的原因是什么？怎么自动排查与自动恢复？</h2>
+
+<h2 id="php52-php71的各版本演进历史新增特性等">php5.2-&gt;php7.1的各版本演进历史，新增特性等</h2>
+
+:ET

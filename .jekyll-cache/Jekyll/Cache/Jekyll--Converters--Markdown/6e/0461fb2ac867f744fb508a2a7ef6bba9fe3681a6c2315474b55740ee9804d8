@@ -1,0 +1,208 @@
+I"o-<ul id="markdown-toc">
+  <li><a href="#amqp-0-9-1协议及amqp-model-概览" id="markdown-toc-amqp-0-9-1协议及amqp-model-概览">AMQP 0-9-1协议及AMQP Model 概览</a></li>
+  <li><a href="#exchanges及其类型" id="markdown-toc-exchanges及其类型">Exchanges及其类型</a>    <ul>
+      <li><a href="#default-exchange" id="markdown-toc-default-exchange">Default Exchange</a></li>
+      <li><a href="#direct-exchange" id="markdown-toc-direct-exchange">Direct Exchange</a></li>
+      <li><a href="#fanout-exchange" id="markdown-toc-fanout-exchange">Fanout Exchange</a></li>
+      <li><a href="#topic-exchange" id="markdown-toc-topic-exchange">Topic Exchange</a></li>
+      <li><a href="#headers-exchange" id="markdown-toc-headers-exchange">Headers Exchange</a></li>
+    </ul>
+  </li>
+  <li><a href="#queues" id="markdown-toc-queues">Queues</a>    <ul>
+      <li><a href="#queue-names" id="markdown-toc-queue-names">Queue Names</a></li>
+      <li><a href="#queue-durability" id="markdown-toc-queue-durability">Queue Durability</a></li>
+    </ul>
+  </li>
+  <li><a href="#bindings" id="markdown-toc-bindings">Bindings</a></li>
+  <li><a href="#consumers" id="markdown-toc-consumers">Consumers</a>    <ul>
+      <li><a href="#message-acknowledgements" id="markdown-toc-message-acknowledgements">Message Acknowledgements</a></li>
+      <li><a href="#rejecting-messages" id="markdown-toc-rejecting-messages">Rejecting Messages</a></li>
+      <li><a href="#negative-acknowledgements" id="markdown-toc-negative-acknowledgements">Negative Acknowledgements</a></li>
+      <li><a href="#prefetching-messages" id="markdown-toc-prefetching-messages">Prefetching Messages</a></li>
+    </ul>
+  </li>
+  <li><a href="#message-attributes-and-payload" id="markdown-toc-message-attributes-and-payload">Message Attributes and Payload</a></li>
+  <li><a href="#message-acknowledgements-1" id="markdown-toc-message-acknowledgements-1">Message Acknowledgements</a></li>
+  <li><a href="#amqp-0-9-1-methods" id="markdown-toc-amqp-0-9-1-methods">AMQP 0-9-1 Methods</a>    <ul>
+      <li><a href="#exchange-class" id="markdown-toc-exchange-class">exchange class</a></li>
+    </ul>
+  </li>
+  <li><a href="#connections" id="markdown-toc-connections">Connections</a></li>
+  <li><a href="#channels" id="markdown-toc-channels">Channels</a></li>
+  <li><a href="#virtual-hosts" id="markdown-toc-virtual-hosts">Virtual Hosts</a></li>
+  <li><a href="#amqp-is-extensible" id="markdown-toc-amqp-is-extensible">AMQP is Extensible</a></li>
+  <li><a href="#amqp-0-9-1-clients-ecosystem" id="markdown-toc-amqp-0-9-1-clients-ecosystem">AMQP 0-9-1 Clients Ecosystem</a></li>
+</ul>
+<p>本文翻译自：<a href="http://www.rabbitmq.com/tutorials/amqp-concepts.html">http://www.rabbitmq.com/tutorials/amqp-concepts.html</a></p>
+
+<h1 id="amqp-0-9-1协议及amqp-model-概览">AMQP 0-9-1协议及AMQP Model 概览</h1>
+
+<p><strong>AMQP</strong>:Advanced Message Queuing Protocol，是一个用于特定客户端与特定<strong>消息代理</strong>通信的协议。因为<strong>AMQP的“实体”（即Exchange、message、queue等）和路由架构是由应用程序自己定义的</strong>（而不是代理管理员），所以AMQP是一个支持编程扩展的协议。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>publisher --publish--&gt; exchange --routes--&gt; queue --consumers--&gt; consumer
+</code></pre></div></div>
+
+<h1 id="exchanges及其类型">Exchanges及其类型</h1>
+
+<h2 id="default-exchange">Default Exchange</h2>
+<p>由消息代理（broker）预先定义的，未命名的exchange。每一个被创建的queue都使用queue的名称自动绑定到该exchange。比如定义一个名为“search-indexing-online”的queue，那么AMQP broker将会使用“search-indexing-online”为routing key将该队列绑定到默认的exchange，当一个带有该routing key的消息被发布时，将会被路由到”search-indexing-online”这个队列。</p>
+
+<h2 id="direct-exchange">Direct Exchange</h2>
+<p>直接Exchange基于消息的路由键（message routing key）来分发消息。当一个带有routing key的消息到来时，Direct Exchange将会把该消息分发给所有使用该key进行绑定的queue（注意，这里的queue也可能是多个，即它们要处理的routing key相同）。</p>
+
+<p><strong>当有多个队列匹配时，时轮询还是全部发送？</strong> 全部发送</p>
+
+<h2 id="fanout-exchange">Fanout Exchange</h2>
+<p>Fanout Exchange会把收到的消息分发给所有绑定的queue（即忽略routing key），适用于广播的场景。</p>
+
+<h2 id="topic-exchange">Topic Exchange</h2>
+<p>基于消息的routing key和匹配模式（pattern）来分发消息。</p>
+
+<h2 id="headers-exchange">Headers Exchange</h2>
+<p>忽略routing key，而是基于message headers来分发消息。</p>
+
+<p>当其x-match参数设为any时，只要有一个header值满足条件，则消息会被分发。当设为all时，所有headers都必须满足才会被分发。</p>
+
+<h1 id="queues">Queues</h1>
+<p>queue用来保存消息，主要有以下这些属性：</p>
+<ul>
+  <li>Name</li>
+  <li>Durable：broker重启后消息不会丢失</li>
+  <li>Exclusive：该queue只能用于一个连接，且当连接关闭时queue将会被删除</li>
+  <li>Auto-delete：当最后一个消费者解除订阅时，queue将被删除</li>
+  <li>Arguments：一些broker使用它来实现重要的属性，比如message的TTL</li>
+</ul>
+
+<h2 id="queue-names">Queue Names</h2>
+<p>Queue names不能超过255个字符。以”amq.”开头的名称被保留为broker内部使用。</p>
+
+<h2 id="queue-durability">Queue Durability</h2>
+<p>持久队列会被辞旧化到磁盘上，所以broker重启后，队列不会丢失。非持久化的队列也称为transient。</p>
+
+<p>持久化队列并不保证队列中的消息也被持久化。当broker重启时，持久化的队列会被重新定义，但是只有持久化的消息（persistent messages）才会被恢复。</p>
+
+<h1 id="bindings">Bindings</h1>
+
+<p>Binding用来指定exchanges与queue之间的路由关系。</p>
+
+<p>如果一个消息无法被路由（比如消息发布到的exchange没有绑定任何queue），那么这个消息将会被丢弃或者返回给消息的发布者（取决于消息发布者的设置）。</p>
+
+<h1 id="consumers">Consumers</h1>
+<p>应用程序有2种消费消息的方式：</p>
+
+<ul>
+  <li>
+    <p>push方式：注册一个消费者，并<strong>订阅</strong>一个队里。</p>
+  </li>
+  <li>
+    <p>pull方式：主动去队列获取消息。</p>
+
+    <p>​</p>
+  </li>
+</ul>
+
+<h2 id="message-acknowledgements">Message Acknowledgements</h2>
+<p>AMQP定义了2种从队列中确认并删除消息的选择：</p>
+<ul>
+  <li>自动确认：在broker将消息发送到应用程序后，自动删除。</li>
+  <li>明确确认：在应用程序发回确认信息后删除。</li>
+</ul>
+
+<p>当消费者（consumer）崩溃因而未能返回确认信息，broker将会尝试把消息分发到其他的消费者。如果没有任何可用的消费者，broker将会等待直到有一个新的消费者注册。</p>
+
+<h2 id="rejecting-messages">Rejecting Messages</h2>
+<p>应用程序可以拒绝消息以此来通知broker消息处理失败，并且可以告诉broker丢弃该消息或者重新入队。</p>
+
+<h2 id="negative-acknowledgements">Negative Acknowledgements</h2>
+<p>AMQP没有定义拒绝复合消息（multiple messages）的方法，不过如果使用RabbitMQ，则可以。</p>
+
+<h2 id="prefetching-messages">Prefetching Messages</h2>
+<p>Prefetching Messages是一种负载均衡技术，应用于有多个消费者消费同一个队列的场景。它定义了在消费者返回下一个确认信息之前可以发送的消息的数量。</p>
+
+<p>RabbitMQ只支持渠道级别（channel-level）的prefetch-count，而不是连接级别或者基于传输大小（not connection or size based prefetching）。</p>
+
+<h1 id="message-attributes-and-payload">Message Attributes and Payload</h1>
+<p>Message的一些属性：</p>
+<ul>
+  <li>
+    <p>Content type</p>
+  </li>
+  <li>
+    <p>Content encoding</p>
+  </li>
+  <li>
+    <p>Routing key</p>
+  </li>
+  <li>
+    <p>Delivery mode (persistent or not)</p>
+  </li>
+  <li>
+    <p>Message priority</p>
+  </li>
+  <li>
+    <p>Message publishing timestamp</p>
+  </li>
+  <li>
+    <p>Expiration period</p>
+  </li>
+  <li>
+    <p>Publisher application id</p>
+  </li>
+</ul>
+
+<p>AMQP messages支持携带负载信息（payload），<strong>AMQP brokers会把这些信息当做字节数组</strong>进行透明传输，而不会去修改它们。</p>
+
+<p>在发布消息时可以指定消息为持久消息，如果这样，队列将会持久化这些消息（影响性能）。</p>
+
+<h1 id="message-acknowledgements-1">Message Acknowledgements</h1>
+<p>AMQP内建了消息确认机制，当应用程序崩溃时（broker通过发现连接断开来判断），对于未收到确认的消息，broker将会被重新入队或者等待有可用的队列后重新入队。</p>
+
+<h1 id="amqp-0-9-1-methods">AMQP 0-9-1 Methods</h1>
+<p>AMQP定义了一系列的方法（类似HTTP的方法，而不是程序语言的方法），方法使用类（classes）来组织。</p>
+
+<h2 id="exchange-class">exchange class</h2>
+<p>一组与exchange操作相关的方法:</p>
+<ul>
+  <li>exchange.declare</li>
+  <li>exchange.declare-ok</li>
+  <li>exchange.delete</li>
+  <li>exchange.delete-ok</li>
+</ul>
+
+<p>比如一个客户端请求broker来定义一个新的exchange：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Client(Publisher/Consumer) --exchange.declare--&gt; AMQP broker
+              [name="xxx",type="direct",durable=true,...]
+</code></pre></div></div>
+<p>如果创建成功，broker将会通过exchange.declare-ok方法返回信息：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Client(Publisher/Consumer) &lt;--exchange.declare-ok-- AMQP broker
+</code></pre></div></div>
+
+<p>并非所有的AMQP方法都有对应的response方法，比如basic.publish。</p>
+
+<h1 id="connections">Connections</h1>
+<p>AMQP connections are typically long-lived. 
+AMQP is an <strong>application level protocol</strong> that uses TCP for reliable delivery. 
+AMQP connections use authentication and can be protected using TLS (SSL).</p>
+
+<p>AMQP连接是典型的长连接。</p>
+
+<p>AMQP是一个应用层协议，使用TCP来实现可靠传输。</p>
+
+<p>AMQP可以使用认证，也可以使用TLS（SSL）来实现安全传输。</p>
+
+<h1 id="channels">Channels</h1>
+<p>有些应用程序可能同时需要多个连接连接到AMQP broker，但是同时保持多个打开的TCP连接是不可取的。</p>
+
+<p>AMQP 0-9-1连接使用channel来实现并发连接的功能。多个channel共享同一个TCP连接。常用的场景是在每一个进程或线程中打开一个channel，不同channel之间的数据是不共享的（因而所有的AMQP方法都同时带有一个channel number以便于客户端判断操作对应的channel）。</p>
+
+<h1 id="virtual-hosts">Virtual Hosts</h1>
+<p>AMQP提供类似Web Server的vhosts的概念，用于提供独立的broker运行环境。AMQP客户端在连接阶段可以指定想要连接的vhost。</p>
+
+<h1 id="amqp-is-extensible">AMQP is Extensible</h1>
+
+<p>AMQP 0-9-1 has several extension points:略.</p>
+
+<h1 id="amqp-0-9-1-clients-ecosystem">AMQP 0-9-1 Clients Ecosystem</h1>
+<p>There are many AMQP 0-9-1 clients for many popular programming languages and platforms.</p>
+
+:ET

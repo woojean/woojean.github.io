@@ -1,0 +1,120 @@
+I"@(
+<p><a href="https://github.com/woojean/demos/tree/master/redis-hongbao">下载代码:https://github.com/woojean/demos/tree/master/redis-hongbao</a></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="cd">/** 
+* 生成红包函数
+* $totalMoney 总金额
+* $num 红包数量
+* $min 红包最小值
+*/</span>
+<span class="k">function</span> <span class="n">gen</span><span class="p">(</span><span class="nv">$totalMoney</span><span class="p">,</span> <span class="nv">$num</span><span class="p">,</span> <span class="nv">$min</span><span class="o">=</span><span class="s1">'0.01'</span><span class="p">){</span>
+  <span class="c1">// 分配结果</span>
+  <span class="nv">$ret</span> <span class="o">=</span> <span class="p">[];</span>
+  
+  <span class="c1">// 剩余红包金额</span>
+  <span class="nv">$remainMoney</span> <span class="o">=</span> <span class="nv">$totalMoney</span><span class="p">;</span>  
+  
+  <span class="k">for</span> <span class="p">(</span> <span class="nv">$i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nv">$num</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 剩余红包数量</span>
+    <span class="nv">$remainNum</span> <span class="o">=</span> <span class="nv">$num</span><span class="o">-</span><span class="nv">$i</span><span class="p">;</span>  
+    
+    <span class="c1">// 当前可领取的红包的最大值</span>
+    <span class="nv">$remainMax</span> <span class="o">=</span> <span class="nv">$remainMoney</span><span class="o">-</span><span class="nv">$remainNum</span><span class="o">*</span><span class="nv">$min</span><span class="p">;</span>  
+    
+    <span class="nv">$allocateMoney</span> <span class="o">=</span> <span class="nb">mt_rand</span><span class="p">(</span><span class="nv">$min</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="nv">$remainMax</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">;</span>
+    <span class="nv">$remainMoney</span> <span class="o">=</span> <span class="nv">$remainMoney</span><span class="o">-</span><span class="nv">$allocateMoney</span><span class="p">;</span>
+    <span class="nv">$ret</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+      <span class="s1">'allocation'</span> <span class="o">=&gt;</span> <span class="nv">$allocateMoney</span><span class="p">,</span>
+      <span class="s1">'remainder'</span> <span class="o">=&gt;</span> <span class="nv">$remainMoney</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// 处理最后一个</span>
+  <span class="nv">$ret</span><span class="p">[</span><span class="nv">$num</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">'allocation'</span><span class="o">=&gt;</span><span class="nv">$remainMoney</span><span class="p">,</span>
+    <span class="s1">'remainder'</span><span class="o">=&gt;</span><span class="mi">0</span>
+  <span class="p">];</span>
+  
+  <span class="k">return</span> <span class="nv">$ret</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="c1">// ======================= demo ========================</span>
+
+<span class="c1">// 红包总金额</span>
+<span class="nv">$totalMoney</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>  
+
+<span class="c1">// 红包总数</span>
+<span class="nv">$num</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>  
+
+<span class="nv">$redis</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Redis</span><span class="p">();</span>
+<span class="nv">$redis</span><span class="o">-&gt;</span><span class="nf">connect</span><span class="p">(</span><span class="s1">'127.0.0.1'</span><span class="p">,</span> <span class="mi">6379</span><span class="p">);</span>
+
+<span class="c1">// 库存队列</span>
+<span class="nv">$mapStock</span> <span class="o">=</span> <span class="s1">'queue_stock'</span><span class="p">;</span>  
+
+<span class="c1">// 已抢队列 uid =&gt; hongbao</span>
+<span class="nv">$mapGrab</span> <span class="o">=</span> <span class="s1">'queue_grab'</span><span class="p">;</span>  
+
+<span class="c1">// 剩余红包索引 </span>
+<span class="nv">$listIndexs</span> <span class="o">=</span> <span class="s1">'list_indexs'</span><span class="p">;</span>  
+
+
+<span class="nv">$allocated</span> <span class="o">=</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="nf">hlen</span><span class="p">(</span><span class="nv">$mapGrab</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$allocated</span> <span class="o">==</span> <span class="nv">$num</span><span class="p">){</span>
+  <span class="k">echo</span> <span class="s1">'已抢光！'</span><span class="p">;</span>
+  <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nv">$inited</span> <span class="o">=</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="nf">hlen</span><span class="p">(</span><span class="nv">$mapStock</span><span class="p">);</span>
+
+<span class="c1">// 如果索引尚未生成，生成红包库存</span>
+<span class="k">if</span><span class="p">(</span> <span class="mi">0</span> <span class="o">==</span> <span class="nv">$inited</span> <span class="p">){</span>
+  <span class="c1">// 生成红包库存</span>
+  <span class="nv">$stock</span> <span class="o">=</span> <span class="nf">gen</span><span class="p">(</span><span class="nv">$totalMoney</span><span class="p">,</span><span class="nv">$num</span><span class="p">);</span>  
+
+  <span class="c1">// 存储红包索引</span>
+  <span class="k">foreach</span><span class="p">(</span><span class="nv">$stock</span> <span class="k">as</span> <span class="nv">$index</span> <span class="o">=&gt;</span> <span class="nv">$hongbao</span><span class="p">){</span>
+    <span class="nv">$redis</span><span class="o">-&gt;</span><span class="nf">hset</span><span class="p">(</span><span class="nv">$mapStock</span><span class="p">,</span> <span class="nv">$index</span><span class="p">,</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$hongbao</span><span class="p">));</span>
+    <span class="nv">$redis</span><span class="o">-&gt;</span><span class="nf">lpush</span><span class="p">(</span><span class="nv">$listIndexs</span><span class="p">,</span><span class="nv">$index</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 获取用户ID</span>
+<span class="nv">$uid</span> <span class="o">=</span> <span class="nb">intval</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'uid'</span><span class="p">]);</span>
+<span class="k">if</span><span class="p">(</span> <span class="nv">$uid</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">){</span>
+  <span class="k">echo</span> <span class="s1">'用户ID非法！'</span><span class="p">;</span>
+  <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 判断用户是否已经抢过红包</span>
+<span class="nv">$participated</span> <span class="o">=</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="nf">hexists</span><span class="p">(</span><span class="nv">$mapGrab</span><span class="p">,</span><span class="nv">$uid</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$participated</span><span class="p">){</span>
+  <span class="k">echo</span> <span class="s1">'不能重复参加！'</span><span class="p">;</span>
+  <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 分配红包给用户（原子操作，关键！）</span>
+<span class="nv">$index</span> <span class="o">=</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="nf">lpop</span><span class="p">(</span><span class="nv">$listIndexs</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">intval</span><span class="p">(</span><span class="nv">$index</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">){</span>
+  <span class="k">echo</span> <span class="s1">'已抢光！'</span><span class="p">;</span>
+  <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// todo 操作失败后，将红包的索引push回去</span>
+
+<span class="nv">$hongbao</span> <span class="o">=</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="nf">hget</span><span class="p">(</span><span class="nv">$mapStock</span><span class="p">,</span> <span class="nv">$index</span><span class="p">);</span>
+<span class="nv">$redis</span><span class="o">-&gt;</span><span class="nf">hset</span><span class="p">(</span><span class="nv">$mapGrab</span><span class="p">,</span> <span class="nv">$uid</span><span class="p">,</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$hongbao</span><span class="p">));</span>
+
+<span class="k">echo</span> <span class="nv">$uid</span><span class="mf">.</span><span class="s1">' -&gt; '</span> <span class="mf">.</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$hongbao</span><span class="p">);</span>
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>关键点：
+* 正确的红包生成算法（给定总金额、红包数、每个红包的最小金额）；
+* 红包分配的的原子性、互斥性（红包领取失败的回滚）；
+</code></pre></div></div>
+
+:ET

@@ -1,0 +1,65 @@
+I"D
+<ul id="markdown-toc">
+  <li><a href="#按psr-0标准开发并发布github项目" id="markdown-toc-按psr-0标准开发并发布github项目">按psr-0标准开发并发布Github项目</a></li>
+  <li><a href="#注册composer项目" id="markdown-toc-注册composer项目">注册Composer项目</a></li>
+  <li><a href="#设置代码自动更新" id="markdown-toc-设置代码自动更新">设置代码自动更新</a></li>
+  <li><a href="#发布项目" id="markdown-toc-发布项目">发布项目</a></li>
+</ul>
+
+<h1 id="按psr-0标准开发并发布github项目">按psr-0标准开发并发布Github项目</h1>
+<p>主要就是命名空间、类名、文件路径的映射关系要正确，详略。</p>
+
+<p>这里使用的项目是：<a href="https://github.com/woojean/RedisQueue">https://github.com/woojean/RedisQueue</a></p>
+
+<p>在项目中创建一个文件composer.json，内容如下：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "name": "woojean/php-redis-queue",
+    "description": "a redis queue of php",
+    "license": "MIT",
+    "keywords": ["redis queue php"],
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "woojean",
+            "email": "168056828@qq.com"
+        }
+    ],
+    "require": {
+        "php": "&gt;=5.5.0"
+    },
+ 
+    "autoload": {
+        "psr-0": {
+            "Woojean\\RedisQueue": "src/"
+        }
+    }
+}
+</code></pre></div></div>
+
+<h1 id="注册composer项目">注册Composer项目</h1>
+
+<p>到<a href="https://packagist.org">packagist.org</a>注册账号，详略。</p>
+
+<p>点击<code class="language-plaintext highlighter-rouge">Submit</code>，输入项目地址：
+<img src="/images/tech/composer_1.png" alt="image" /></p>
+
+<h1 id="设置代码自动更新">设置代码自动更新</h1>
+<p><img src="/images/tech/composer_2.png" alt="image" /></p>
+
+<p>To do so you can:</p>
+<ul>
+  <li>Go to your GitHub repository</li>
+  <li>Click the “Settings” button  <strong>（是项目的setting，而不是Github的setting）</strong></li>
+  <li>Click “Integrations &amp; services”</li>
+  <li>Add a “Packagist” service, and configure it with your API token, plus your Packagist username <strong>(API token随便写)</strong></li>
+  <li>Check the “Active” box and submit the form</li>
+</ul>
+
+<p>You can then hit the “Test Service” button to trigger it and check if Packagist removes the warning about the package not being auto-updated.</p>
+
+<p><img src="/images/tech/composer_3.png" alt="image" /></p>
+
+<h1 id="发布项目">发布项目</h1>
+<p>在Github中将项目pull release.</p>
+
+:ET

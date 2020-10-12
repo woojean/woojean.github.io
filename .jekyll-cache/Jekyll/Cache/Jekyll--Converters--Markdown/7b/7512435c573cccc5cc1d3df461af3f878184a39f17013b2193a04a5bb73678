@@ -1,0 +1,574 @@
+I"�<ul id="markdown-toc">
+  <li><a href="#准备" id="markdown-toc-准备">准备</a>    <ul>
+      <li><a href="#安装rabbitmq-server" id="markdown-toc-安装rabbitmq-server">安装rabbitmq server</a></li>
+      <li><a href="#安装php-amqplib包" id="markdown-toc-安装php-amqplib包">安装php-amqplib包</a></li>
+    </ul>
+  </li>
+  <li><a href="#例hello-world-" id="markdown-toc-例hello-world-">例：Hello World !</a>    <ul>
+      <li><a href="#生产者sendphp" id="markdown-toc-生产者sendphp">生产者：send.php</a></li>
+      <li><a href="#消费者receivephp" id="markdown-toc-消费者receivephp">消费者：receive.php</a></li>
+      <li><a href="#测试" id="markdown-toc-测试">测试</a></li>
+    </ul>
+  </li>
+  <li><a href="#例work-queues" id="markdown-toc-例work-queues">例：Work Queues</a>    <ul>
+      <li><a href="#添加新任务new_taskphp" id="markdown-toc-添加新任务new_taskphp">添加新任务：new_task.php</a></li>
+      <li><a href="#任务处理器workerphp" id="markdown-toc-任务处理器workerphp">任务处理器：worker.php</a></li>
+    </ul>
+  </li>
+  <li><a href="#例publishsubscribe" id="markdown-toc-例publishsubscribe">例：Publish/Subscribe</a>    <ul>
+      <li><a href="#log接收者" id="markdown-toc-log接收者">log接收者</a></li>
+      <li><a href="#log发送者" id="markdown-toc-log发送者">log发送者</a></li>
+    </ul>
+  </li>
+  <li><a href="#例routing" id="markdown-toc-例routing">例：Routing</a>    <ul>
+      <li><a href="#发出日志emit_log_directphp" id="markdown-toc-发出日志emit_log_directphp">发出日志：emit_log_direct.php</a></li>
+      <li><a href="#处理日志receive_logs_directphp" id="markdown-toc-处理日志receive_logs_directphp">处理日志：receive_logs_direct.php</a></li>
+      <li><a href="#测试-1" id="markdown-toc-测试-1">测试</a></li>
+    </ul>
+  </li>
+  <li><a href="#例topics" id="markdown-toc-例topics">例：Topics</a>    <ul>
+      <li><a href="#发出日志emit_log_directphp-1" id="markdown-toc-发出日志emit_log_directphp-1">发出日志：emit_log_direct.php</a></li>
+      <li><a href="#处理日志receive_logs_directphp-1" id="markdown-toc-处理日志receive_logs_directphp-1">处理日志：receive_logs_direct.php</a></li>
+      <li><a href="#测试-2" id="markdown-toc-测试-2">测试</a></li>
+    </ul>
+  </li>
+  <li><a href="#例remote-procedure-call-rpc" id="markdown-toc-例remote-procedure-call-rpc">例：Remote procedure call (RPC)</a>    <ul>
+      <li><a href="#rpc_serverphp" id="markdown-toc-rpc_serverphp">rpc_server.php</a></li>
+      <li><a href="#rpc_clientphp" id="markdown-toc-rpc_clientphp">rpc_client.php</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="https://github.com/woojean/demos/tree/master/rabbitmq-tutorials">下载代码:https://github.com/woojean/demos/tree/master/rabbitmq-tutorials</a></p>
+
+<h1 id="准备">准备</h1>
+<h2 id="安装rabbitmq-server">安装rabbitmq server</h2>
+<p>略。</p>
+
+<h2 id="安装php-amqplib包">安装php-amqplib包</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /Users/wujian/projects/demo/rabbitmq
+composer require php-amqplib/php-amqplib
+</code></pre></div></div>
+
+<h1 id="例hello-world-">例：Hello World !</h1>
+
+<p>一个生产者发送一个消息，一个消费者收到该消息并打印。</p>
+
+<h2 id="生产者sendphp">生产者：send.php</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Connection\AMQPStreamConnection</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Message\AMQPMessage</span><span class="p">;</span>
+
+<span class="nv">$queueName</span> <span class="o">=</span> <span class="s1">'queue_hello'</span><span class="p">;</span>
+<span class="nv">$connection</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPStreamConnection</span><span class="p">(</span><span class="s1">'localhost'</span><span class="p">,</span><span class="mi">5672</span><span class="p">,</span><span class="s1">'guest'</span><span class="p">,</span><span class="s1">'guest'</span><span class="p">);</span>  <span class="c1">// vhost</span>
+
+<span class="c1">// AMQP 0-9-1 connections are multiplexed with channels that can be thought of as “lightweight connections that share a single TCP connection”.</span>
+<span class="nv">$channel</span> <span class="o">=</span> <span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">channel</span><span class="p">();</span>
+
+<span class="c1">// declare a queue for us to send to</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">queue_declare</span><span class="p">(</span><span class="nv">$queueName</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">);</span>
+
+<span class="c1">// publish a message to the queue</span>
+<span class="nv">$msg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPMessage</span><span class="p">(</span><span class="s1">'Hello World!'</span><span class="p">);</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">basic_publish</span><span class="p">(</span><span class="nv">$msg</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span> <span class="nv">$queueName</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="s2">" [x] Sent 'Hello World!'</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="c1">// close the channel and the connection</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+<span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h2 id="消费者receivephp">消费者：receive.php</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Connection\AMQPStreamConnection</span><span class="p">;</span>
+
+<span class="nv">$queueName</span> <span class="o">=</span> <span class="s1">'queue_hello'</span><span class="p">;</span>
+<span class="nv">$connection</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPStreamConnection</span><span class="p">(</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="mi">5672</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">);</span>
+<span class="nv">$channel</span> <span class="o">=</span> <span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">channel</span><span class="p">();</span>
+
+<span class="c1">// Note that we declare the queue here, as well. Because we might start the consumer before the publisher, we want to make sure the queue exists before we try to consume messages from it.</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">queue_declare</span><span class="p">(</span><span class="nv">$queueName</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">);</span>
+<span class="k">echo</span> <span class="s1">' [*] Waiting for messages. To exit press CTRL+C'</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="c1">// define a PHP callable that will receive the messages sent by the server</span>
+<span class="nv">$callback</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="nv">$msg</span><span class="p">){</span>
+    <span class="k">echo</span> <span class="s2">" [x] Received "</span><span class="p">,</span> <span class="nv">$msg</span><span class="o">-&gt;</span><span class="n">body</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">basic_consume</span><span class="p">(</span><span class="nv">$queueName</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="kc">true</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="nv">$callback</span><span class="p">);</span>
+
+<span class="cm">/*
+basic_consume(...)的第2个参数是$consumer_tag，在该方法中会对当前$channel对象执行：
+$this-&gt;callbacks[$consumer_tag] = $callback;
+所以，当$channel对象的callbacks列表不为空时，表明存在监听该channel的消费者
+*/</span>
+
+<span class="c1">// keep it running to listen for messages and print them out .</span>
+<span class="k">while</span><span class="p">(</span><span class="nb">count</span><span class="p">(</span><span class="nv">$channel</span><span class="o">-&gt;</span><span class="n">callbacks</span><span class="p">)){</span>
+    <span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">wait</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="测试">测试</h2>
+<p>先执行消费者，再执行生产者：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php receive.php
+php send.php
+</code></pre></div></div>
+
+<h1 id="例work-queues">例：Work Queues</h1>
+<p>轮询地分发消息。<u>启动2个worker，之后执行多次new_task，消息将会在2个worker之间交替进行处理。</u></p>
+
+<p>工作队列的方式非常便于并发扩展（通过添加更多的队列）。RabbitMQ会按序发送每一个消息至下一个消费者，所以从平均来讲，每个消费者将会收到相同数量的消息。</p>
+
+<p>消息没有超时的概念，所以处理消息的时间可以很长。RabbitMQ通过判断连接是否断开来判断消费者是否崩溃。</p>
+
+<p>消息确认（Message acknowledgments）默认是关闭的。</p>
+
+<p>为了确保消息不会丢失，要将队列和消息都设置为持久化（durable）。</p>
+
+<p>Marking messages as persistent doesn’t fully guarantee that a message won’t be lost. Although it tells RabbitMQ to save the message to disk, <strong>there is still a short time window when RabbitMQ has accepted a message and hasn’t saved it yet</strong>. Also, RabbitMQ doesn’t do fsync(2) for every message – it may be just saved to cache and not really written to the disk. The persistence guarantees aren’t strong, but it’s more than enough for our simple task queue. If you need a stronger guarantee then you can use publisher confirms.</p>
+
+<p>RabbitMQ在收到消息时就直接分发，而不会去检查当前某个消费者未确认的消息的数量，它只是盲目地分发下一个消息去往下一个消费者。</p>
+
+<h2 id="添加新任务new_taskphp">添加新任务：new_task.php</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Connection\AMQPStreamConnection</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Message\AMQPMessage</span><span class="p">;</span>
+
+<span class="nv">$connection</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPStreamConnection</span><span class="p">(</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="mi">5672</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">);</span>
+<span class="nv">$channel</span> <span class="o">=</span> <span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">channel</span><span class="p">();</span>
+
+<span class="c1">// 第3个参数为true，代表队列的durable为true，此处要与worker中的定义一致</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">queue_declare</span><span class="p">(</span><span class="s1">'task_queue'</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="kc">true</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="kc">false</span><span class="p">);</span>
+
+<span class="c1">// 拼装消息参数</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="s2">"Hello World!"</span><span class="p">;</span>
+<span class="nv">$msg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPMessage</span><span class="p">(</span><span class="nv">$data</span><span class="p">,[</span>
+    <span class="s1">'delivery_mode'</span> <span class="o">=&gt;</span> <span class="nc">AMQPMessage</span><span class="o">::</span><span class="no">DELIVERY_MODE_PERSISTENT</span>  <span class="c1">// 代表持久化消息</span>
+<span class="p">]);</span>
+
+<span class="c1">// 发布消息</span>
+<span class="c1">// exchange为空字符串，即使用default exchange，那么队列名就是routing key</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">basic_publish</span><span class="p">(</span><span class="nv">$msg</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="s1">'task_queue'</span><span class="p">);</span>
+<span class="k">echo</span> <span class="s2">" [x] Sent "</span><span class="p">,</span> <span class="nv">$data</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+<span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h2 id="任务处理器workerphp">任务处理器：worker.php</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Connection\AMQPStreamConnection</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Message\AMQPMessage</span><span class="p">;</span>
+
+<span class="nv">$connection</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPStreamConnection</span><span class="p">(</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="mi">5672</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">);</span>
+<span class="nv">$channel</span> <span class="o">=</span> <span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">channel</span><span class="p">();</span>
+
+<span class="c1">// 第3个参数为true，代表队列的durable为true</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">queue_declare</span><span class="p">(</span><span class="s1">'task_queue'</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">);</span>
+<span class="k">echo</span> <span class="s1">' [*] Waiting for messages. To exit press CTRL+C'</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="c1">// 定义任务处理函数</span>
+<span class="nv">$callback</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$msg</span><span class="p">){</span>
+    <span class="k">echo</span> <span class="s2">" [x] Received "</span><span class="p">,</span> <span class="nv">$msg</span><span class="o">-&gt;</span><span class="n">body</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>  <span class="c1">// 总之，消息体的形式肯定是一个字符串（byte string）</span>
+    <span class="nb">sleep</span><span class="p">(</span><span class="nb">substr_count</span><span class="p">(</span><span class="nv">$msg</span><span class="o">-&gt;</span><span class="n">body</span><span class="p">,</span> <span class="s1">'.'</span><span class="p">));</span>  <span class="c1">// 模拟任务执行时间</span>
+    <span class="k">echo</span> <span class="s2">" [x] Done"</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+    <span class="c1">// message acknowledgment</span>
+    <span class="nv">$msg</span><span class="o">-&gt;</span><span class="n">delivery_info</span><span class="p">[</span><span class="s1">'channel'</span><span class="p">]</span><span class="o">-&gt;</span><span class="nf">basic_ack</span><span class="p">(</span><span class="nv">$msg</span><span class="o">-&gt;</span><span class="n">delivery_info</span><span class="p">[</span><span class="s1">'delivery_tag'</span><span class="p">]);</span>
+<span class="p">};</span>
+
+<span class="c1">// prefetch_count = 1,This tells RabbitMQ not to give more than one message to a worker at a time.</span>
+<span class="c1">// in other words, don't dispatch a new message to a worker until it has processed and acknowledged the previous one. Instead, it will dispatch it to the next worker that is not still busy.</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">basic_qos</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="kc">null</span><span class="p">);</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">basic_consume</span><span class="p">(</span><span class="s1">'task_queue'</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="nv">$callback</span><span class="p">);</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nb">count</span><span class="p">(</span><span class="nv">$channel</span><span class="o">-&gt;</span><span class="n">callbacks</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">wait</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+<span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h1 id="例publishsubscribe">例：Publish/Subscribe</h1>
+<p>分发一个消息给多个消费者。</p>
+
+<p>RabbitMQ的核心思想是：生产者从不直接将消息发送给队列，而是将消息发送给exchange，exchange在接收到消息后需要知道如何进行分发：分发给特定的某个队列、分发给多个队列、丢弃消息等，取决于exchange的类型：direct, topic, headers , fanout。</p>
+
+<p>如果使用空字符串定义队列，将会创一个非持久化的队列，该队列的名字自动生成（以amq.开头）。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list($queue_name, ,) = $channel-&gt;queue_declare(""); // amq.gen-JzTY20BRgKO-HjmUJj0wLg
+</code></pre></div></div>
+<p>exchange和队列之间的关系称为binding.</p>
+
+<h2 id="log接收者">log接收者</h2>
+<p>每次运行动态生成一个queue，并绑定到相应的exchange上</p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Connection\AMQPStreamConnection</span><span class="p">;</span>
+
+<span class="nv">$connection</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPStreamConnection</span><span class="p">(</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="mi">5672</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">);</span>
+<span class="nv">$channel</span> <span class="o">=</span> <span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">channel</span><span class="p">();</span>
+
+<span class="c1">// 定义fanout exchange</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">exchange_declare</span><span class="p">(</span><span class="s1">'logs'</span><span class="p">,</span><span class="s1">'fanout'</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">);</span>
+
+<span class="c1">// 生成一个临时queue，并保存queue的名字</span>
+<span class="k">list</span><span class="p">(</span><span class="nv">$queue_name</span><span class="p">,,)</span> <span class="o">=</span> <span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">queue_declare</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span><span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">);</span>
+
+<span class="c1">// 将queue绑定到exchange，因为该exchange是一个fanout类型的，所以绑定的每个queue将被广播</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">queue_bind</span><span class="p">(</span><span class="nv">$queue_name</span><span class="p">,</span><span class="s1">'logs'</span><span class="p">);</span>  <span class="c1">// queue -&gt; exchange</span>
+<span class="k">echo</span> <span class="s1">' [*] Waiting for logs. To exit press CTRL+C'</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="nv">$callback</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$msg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">' [x] '</span><span class="p">,</span> <span class="nv">$msg</span><span class="o">-&gt;</span><span class="n">body</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">basic_consume</span><span class="p">(</span><span class="nv">$queue_name</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="kc">FALSE</span><span class="p">,</span><span class="kc">true</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="nv">$callback</span><span class="p">);</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nb">count</span><span class="p">(</span><span class="nv">$channel</span><span class="o">-&gt;</span><span class="n">callbacks</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">wait</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+<span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h2 id="log发送者">log发送者</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Connection\AMQPStreamConnection</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Message\AMQPMessage</span><span class="p">;</span>
+
+<span class="nv">$connection</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPStreamConnection</span><span class="p">(</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="mi">5672</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">);</span>
+<span class="nv">$channel</span> <span class="o">=</span> <span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">channel</span><span class="p">();</span>
+
+<span class="c1">// 定义一个fanout类型的exchange</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">exchange_declare</span><span class="p">(</span><span class="s1">'logs'</span><span class="p">,</span><span class="s1">'fanout'</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="kc">FALSE</span><span class="p">,</span><span class="kc">FALSE</span><span class="p">);</span>
+
+<span class="c1">// 拼装消息</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="s2">"info: Hello World!"</span><span class="p">;</span>
+<span class="nv">$msg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPMessage</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+
+<span class="c1">// 将消息发布到exchange</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">basic_publish</span><span class="p">(</span><span class="nv">$msg</span><span class="p">,</span><span class="s1">'logs'</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="s2">" [x] Sent "</span><span class="p">,</span> <span class="nv">$data</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+<span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h1 id="例routing">例：Routing</h1>
+<p>只处理全部消息的子集。比如在能够打印所有日志的同时，将错误日志保存到磁盘。</p>
+
+<p>多个queue可以使用同一个routing key绑定到同一个exchange。
+同一个queue和同一个exchange之间也可以绑定多个不同的key。</p>
+
+<h2 id="发出日志emit_log_directphp">发出日志：emit_log_direct.php</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Connection\AMQPStreamConnection</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Message\AMQPMessage</span><span class="p">;</span>
+
+<span class="nv">$connection</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPStreamConnection</span><span class="p">(</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="mi">5672</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">);</span>
+<span class="nv">$channel</span> <span class="o">=</span> <span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">channel</span><span class="p">();</span>
+
+<span class="c1">// 定义一个direct类型的exchange</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">exchange_declare</span><span class="p">(</span><span class="s1">'direct_logs'</span><span class="p">,</span> <span class="s1">'direct'</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">);</span>
+
+<span class="c1">// 获取用户输入</span>
+<span class="nv">$severity</span> <span class="o">=</span> <span class="k">isset</span><span class="p">(</span><span class="nv">$argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nb">empty</span><span class="p">(</span><span class="nv">$argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">?</span> <span class="nv">$argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">:</span> <span class="s1">'info'</span><span class="p">;</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="nb">implode</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="nb">array_slice</span><span class="p">(</span><span class="nv">$argv</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">empty</span><span class="p">(</span><span class="nv">$data</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$data</span> <span class="o">=</span> <span class="s2">"Hello World!"</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nv">$msg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPMessage</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+
+<span class="c1">// 发出信息，其中$severity为route key</span>
+<span class="c1">// 即发布一个routing key为$severity的消息到direct_logs这个exchange中</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">basic_publish</span><span class="p">(</span><span class="nv">$msg</span><span class="p">,</span> <span class="s1">'direct_logs'</span><span class="p">,</span> <span class="nv">$severity</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="s2">" [x] Sent "</span><span class="p">,</span> <span class="nv">$severity</span><span class="p">,</span> <span class="s1">':'</span><span class="p">,</span> <span class="nv">$data</span><span class="p">,</span> <span class="s2">" </span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+<span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h2 id="处理日志receive_logs_directphp">处理日志：receive_logs_direct.php</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Connection\AMQPStreamConnection</span><span class="p">;</span>
+
+<span class="nv">$connection</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPStreamConnection</span><span class="p">(</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="mi">5672</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">);</span>
+<span class="nv">$channel</span> <span class="o">=</span> <span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">channel</span><span class="p">();</span>
+
+<span class="c1">// 定义一个direct类型的exchange</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">exchange_declare</span><span class="p">(</span><span class="s1">'direct_logs'</span><span class="p">,</span> <span class="s1">'direct'</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">);</span>
+
+<span class="c1">// 动态生成一个queue</span>
+<span class="k">list</span><span class="p">(</span><span class="nv">$queue_name</span><span class="p">,</span> <span class="p">,)</span> <span class="o">=</span> <span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">queue_declare</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">);</span>
+
+<span class="nv">$severities</span> <span class="o">=</span> <span class="nb">array_slice</span><span class="p">(</span><span class="nv">$argv</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">empty</span><span class="p">(</span><span class="nv">$severities</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nb">file_put_contents</span><span class="p">(</span><span class="s1">'php://stderr'</span><span class="p">,</span> <span class="s2">"Usage: </span><span class="nv">$argv[0]</span><span class="s2"> [info] [warning] [error]</span><span class="se">\n</span><span class="s2">"</span><span class="p">);</span>
+    <span class="k">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// 每一种级别的日志都进行一次绑定</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$severities</span> <span class="k">as</span> <span class="nv">$severity</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 将$queue_name这个queue使用routing key $severity绑定到exchange direct_logs</span>
+    <span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">queue_bind</span><span class="p">(</span><span class="nv">$queue_name</span><span class="p">,</span> <span class="s1">'direct_logs'</span><span class="p">,</span> <span class="nv">$severity</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">echo</span> <span class="s1">' [*] Waiting for logs. To exit press CTRL+C'</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="nv">$callback</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$msg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">' [x] '</span><span class="p">,</span> <span class="nv">$msg</span><span class="o">-&gt;</span><span class="n">delivery_info</span><span class="p">[</span><span class="s1">'routing_key'</span><span class="p">],</span> <span class="s1">':'</span><span class="p">,</span> <span class="nv">$msg</span><span class="o">-&gt;</span><span class="n">body</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">basic_consume</span><span class="p">(</span><span class="nv">$queue_name</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="nv">$callback</span><span class="p">);</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nb">count</span><span class="p">(</span><span class="nv">$channel</span><span class="o">-&gt;</span><span class="n">callbacks</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">wait</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+<span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h2 id="测试-1">测试</h2>
+<p>启2个receiver</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php receive_logs_direct.php error
+php receive_logs_direct.php info error
+</code></pre></div></div>
+<p>发出一个error级别的log：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php emit_log_direct.php error
+</code></pre></div></div>
+
+<p><u>如果发布error消息，2个receiver都会收到，如果发布info消息，则只有第2个receiver会收到消息。</u></p>
+
+<h1 id="例topics">例：Topics</h1>
+<p>direct exchange的不足在于它不能基于多个纬度来分发消息。比如要同时基于日志的错误级别和来源进行处理。</p>
+
+<p>发送往topic exchange的消息需要带有一个由.号分隔的多个单词组成的binding key，且有2个字符比较特殊：</p>
+
+<ul>
+  <li>* (star) 代表1个单词；</li>
+  <li># (hash) 代表0或多个单词；</li>
+</ul>
+
+<p>比如：<code class="language-plaintext highlighter-rouge">&lt;speed&gt;.&lt;colour&gt;.&lt;species&gt;</code>，声明如下的绑定：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Q1: *.orange.*  // all the orange animals
+Q2: *.*.rabbit  // everything about rabbits
+Q3: lazy.#      // everything about lazy animals
+</code></pre></div></div>
+<p>“quick.brown.fox”不能匹配任何绑定，所以该消息将被丢弃。
+“orange”或”quick.orange.male.rabbit”也不能匹配任何绑定。
+“lazy.orange.male.rabbit”, 将匹配最后一个绑定。</p>
+
+<p>如果仅使用”#”作为binding key，那么将会匹配所有接收到的消息而忽略routing key，就像fanout exchange一样。对于topic exchange，如果没有使用 “*” 和”#”，那么其行为将和direct exchange一样。</p>
+
+<p>样例代码几乎和Routing部分的一样。</p>
+
+<h2 id="发出日志emit_log_directphp-1">发出日志：emit_log_direct.php</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Connection\AMQPStreamConnection</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Message\AMQPMessage</span><span class="p">;</span>
+
+<span class="nv">$connection</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPStreamConnection</span><span class="p">(</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="mi">5672</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">);</span>
+<span class="nv">$channel</span> <span class="o">=</span> <span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">channel</span><span class="p">();</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">exchange_declare</span><span class="p">(</span><span class="s1">'topic_logs'</span><span class="p">,</span> <span class="s1">'topic'</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">);</span>
+
+<span class="nv">$routing_key</span> <span class="o">=</span> <span class="k">isset</span><span class="p">(</span><span class="nv">$argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nb">empty</span><span class="p">(</span><span class="nv">$argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">?</span> <span class="nv">$argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">:</span> <span class="s1">'anonymous.info'</span><span class="p">;</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="nb">implode</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="nb">array_slice</span><span class="p">(</span><span class="nv">$argv</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">empty</span><span class="p">(</span><span class="nv">$data</span><span class="p">))</span> <span class="nv">$data</span> <span class="o">=</span> <span class="s2">"Hello World!"</span><span class="p">;</span>
+
+<span class="nv">$msg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPMessage</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">basic_publish</span><span class="p">(</span><span class="nv">$msg</span><span class="p">,</span> <span class="s1">'topic_logs'</span><span class="p">,</span> <span class="nv">$routing_key</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="s2">" [x] Sent "</span><span class="p">,</span> <span class="nv">$routing_key</span><span class="p">,</span> <span class="s1">':'</span><span class="p">,</span> <span class="nv">$data</span><span class="p">,</span> <span class="s2">" </span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+<span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h2 id="处理日志receive_logs_directphp-1">处理日志：receive_logs_direct.php</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Connection\AMQPStreamConnection</span><span class="p">;</span>
+
+<span class="nv">$connection</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPStreamConnection</span><span class="p">(</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="mi">5672</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">);</span>
+<span class="nv">$channel</span> <span class="o">=</span> <span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">channel</span><span class="p">();</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">exchange_declare</span><span class="p">(</span><span class="s1">'topic_logs'</span><span class="p">,</span> <span class="s1">'topic'</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">);</span>
+
+<span class="k">list</span><span class="p">(</span><span class="nv">$queue_name</span><span class="p">,</span> <span class="p">,)</span> <span class="o">=</span> <span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">queue_declare</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">);</span>
+
+<span class="nv">$binding_keys</span> <span class="o">=</span> <span class="nb">array_slice</span><span class="p">(</span><span class="nv">$argv</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">empty</span><span class="p">(</span><span class="nv">$binding_keys</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nb">file_put_contents</span><span class="p">(</span><span class="s1">'php://stderr'</span><span class="p">,</span> <span class="s2">"Usage: </span><span class="nv">$argv[0]</span><span class="s2"> [binding_key]</span><span class="se">\n</span><span class="s2">"</span><span class="p">);</span>
+    <span class="k">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$binding_keys</span> <span class="k">as</span> <span class="nv">$binding_key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">queue_bind</span><span class="p">(</span><span class="nv">$queue_name</span><span class="p">,</span> <span class="s1">'topic_logs'</span><span class="p">,</span> <span class="nv">$binding_key</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">echo</span> <span class="s1">' [*] Waiting for logs. To exit press CTRL+C'</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="nv">$callback</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$msg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">' [x] '</span><span class="p">,</span> <span class="nv">$msg</span><span class="o">-&gt;</span><span class="n">delivery_info</span><span class="p">[</span><span class="s1">'routing_key'</span><span class="p">],</span> <span class="s1">':'</span><span class="p">,</span> <span class="nv">$msg</span><span class="o">-&gt;</span><span class="n">body</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">basic_consume</span><span class="p">(</span><span class="nv">$queue_name</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="nv">$callback</span><span class="p">);</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nb">count</span><span class="p">(</span><span class="nv">$channel</span><span class="o">-&gt;</span><span class="n">callbacks</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">wait</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+<span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h2 id="测试-2">测试</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php receive_logs_topic.php "#"   // To receive all the logs
+php receive_logs_topic.php "kern.*" // To receive all logs from the facility "kern"
+php receive_logs_topic.php "kern.*" "*.critical"  // create multiple bindings
+php emit_log_topic.php "kern.critical" "A critical kernel error" // emit a log with a routing key "kern.critical" type
+</code></pre></div></div>
+
+<h1 id="例remote-procedure-call-rpc">例：Remote procedure call (RPC)</h1>
+
+<p>基于回调方式的RPC调用。</p>
+
+<p>涉及的Message属性：</p>
+<ul>
+  <li>delivery_mode: 指定消息为是否为持久化的；</li>
+  <li>content_type: 比如application/json；</li>
+  <li>reply_to: 用于指定回调队列；</li>
+  <li>correlation_id: 用于关联RPC Response和请求；</li>
+</ul>
+
+<h2 id="rpc_serverphp">rpc_server.php</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Connection\AMQPStreamConnection</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Message\AMQPMessage</span><span class="p">;</span>
+
+<span class="nv">$connection</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPStreamConnection</span><span class="p">(</span><span class="s1">'localhost'</span><span class="p">,</span> <span class="mi">5672</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">);</span>
+<span class="nv">$channel</span> <span class="o">=</span> <span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">channel</span><span class="p">();</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">queue_declare</span><span class="p">(</span><span class="s1">'rpc_queue'</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">);</span>
+
+<span class="k">function</span> <span class="n">fib</span><span class="p">(</span><span class="nv">$n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nf">fib</span><span class="p">(</span><span class="nv">$n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nf">fib</span><span class="p">(</span><span class="nv">$n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">echo</span> <span class="s2">" [x] Awaiting RPC requests</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<span class="nv">$callback</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$req</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$n</span> <span class="o">=</span> <span class="nb">intval</span><span class="p">(</span><span class="nv">$req</span><span class="o">-&gt;</span><span class="n">body</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">" [.] fib("</span><span class="p">,</span> <span class="nv">$n</span><span class="p">,</span> <span class="s2">")</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+    <span class="nv">$msg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPMessage</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">string</span><span class="p">)</span><span class="nf">fib</span><span class="p">(</span><span class="nv">$n</span><span class="p">),</span>
+        <span class="p">[</span><span class="s1">'correlation_id'</span> <span class="o">=&gt;</span> <span class="nv">$req</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'correlation_id'</span><span class="p">)]</span>
+    <span class="p">);</span>
+
+    <span class="nv">$req</span><span class="o">-&gt;</span><span class="n">delivery_info</span><span class="p">[</span><span class="s1">'channel'</span><span class="p">]</span><span class="o">-&gt;</span><span class="nf">basic_publish</span><span class="p">(</span>
+        <span class="nv">$msg</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="nv">$req</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'reply_to'</span><span class="p">));</span>
+    <span class="nv">$req</span><span class="o">-&gt;</span><span class="n">delivery_info</span><span class="p">[</span><span class="s1">'channel'</span><span class="p">]</span><span class="o">-&gt;</span><span class="nf">basic_ack</span><span class="p">(</span>
+        <span class="nv">$req</span><span class="o">-&gt;</span><span class="n">delivery_info</span><span class="p">[</span><span class="s1">'delivery_tag'</span><span class="p">]);</span>
+<span class="p">};</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">basic_qos</span><span class="p">(</span><span class="kc">NULL</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">NULL</span><span class="p">);</span>
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">basic_consume</span><span class="p">(</span><span class="s1">'rpc_queue'</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="nv">$callback</span><span class="p">);</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nb">count</span><span class="p">(</span><span class="nv">$channel</span><span class="o">-&gt;</span><span class="n">callbacks</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">wait</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nv">$channel</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+<span class="nv">$connection</span><span class="o">-&gt;</span><span class="nf">close</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h2 id="rpc_clientphp">rpc_client.php</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Connection\AMQPStreamConnection</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nc">PhpAmqpLib\Message\AMQPMessage</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">FibonacciRpcClient</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$connection</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$channel</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$callback_queue</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$response</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$corr_id</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="n">__construct</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">connection</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPStreamConnection</span><span class="p">(</span>
+            <span class="s1">'localhost'</span><span class="p">,</span> <span class="mi">5672</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">,</span> <span class="s1">'guest'</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">channel</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">connection</span><span class="o">-&gt;</span><span class="nf">channel</span><span class="p">();</span>
+        <span class="k">list</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">callback_queue</span><span class="p">,</span> <span class="p">,)</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">channel</span><span class="o">-&gt;</span><span class="nf">queue_declare</span><span class="p">(</span>
+            <span class="s2">""</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">channel</span><span class="o">-&gt;</span><span class="nf">basic_consume</span><span class="p">(</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">callback_queue</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span>
+            <span class="p">[</span><span class="nv">$this</span><span class="p">,</span> <span class="s1">'on_response'</span><span class="p">]);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="n">on_response</span><span class="p">(</span><span class="nv">$rep</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$rep</span><span class="o">-&gt;</span><span class="nf">get</span><span class="p">(</span><span class="s1">'correlation_id'</span><span class="p">)</span> <span class="o">==</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">corr_id</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">response</span> <span class="o">=</span> <span class="nv">$rep</span><span class="o">-&gt;</span><span class="n">body</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="cm">/*
+         If we see an unknown correlation_id value, we may safely discard the message - it doesn't belong to our requests.
+        You may ask, why should we ignore unknown messages in the callback queue, rather than failing with an error?
+         It's due to a possibility of a race condition on the server side.
+        Although unlikely, it is possible that the RPC server will die just after sending us the answer, but before sending an acknowledgment message for the request.
+        If that happens, the restarted RPC server will process the request again.
+        That's why on the client we must handle the duplicate responses gracefully, and the RPC should ideally be idempotent.*/</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="n">call</span><span class="p">(</span><span class="nv">$n</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">response</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">corr_id</span> <span class="o">=</span> <span class="nb">uniqid</span><span class="p">();</span>  <span class="c1">// set it to a unique value for every request</span>
+
+        <span class="nv">$msg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AMQPMessage</span><span class="p">(</span>
+            <span class="p">(</span><span class="n">string</span><span class="p">)</span><span class="nv">$n</span><span class="p">,</span>
+            <span class="p">[</span><span class="s1">'correlation_id'</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">corr_id</span><span class="p">,</span>
+             <span class="s1">'reply_to'</span>       <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">callback_queue</span><span class="p">]</span>
+        <span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">channel</span><span class="o">-&gt;</span><span class="nf">basic_publish</span><span class="p">(</span><span class="nv">$msg</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">'rpc_queue'</span><span class="p">);</span>
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">response</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">channel</span><span class="o">-&gt;</span><span class="nf">wait</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">intval</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="n">response</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">;</span>
+
+<span class="nv">$fibonacci_rpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FibonacciRpcClient</span><span class="p">();</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$fibonacci_rpc</span><span class="o">-&gt;</span><span class="nf">call</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+<span class="k">echo</span> <span class="s2">" [.] Got "</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+</code></pre></div></div>
+
+:ET

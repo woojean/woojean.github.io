@@ -1,0 +1,37 @@
+I"�<ul id="markdown-toc">
+  <li><a href="#平台" id="markdown-toc-平台">平台</a></li>
+  <li><a href="#平台相对起点位置" id="markdown-toc-平台相对起点位置">平台相对起点位置</a></li>
+  <li><a href="#平台干扰" id="markdown-toc-平台干扰">平台干扰</a></li>
+</ul>
+
+<h1 id="平台">平台</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/      \       ×
+
+/\     \/      ×
+
+/\/    \/\     √
+
+/\/\   \/\/    √
+</code></pre></div></div>
+
+<h1 id="平台相对起点位置">平台相对起点位置</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>S
+ \
+  |||         ×
+
+
+
+  |||         √
+ /
+S
+</code></pre></div></div>
+
+<h1 id="平台干扰">平台干扰</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    |
+   / \
+  /   \       ×
+ /     |||
+S
+</code></pre></div></div>
+
+:ET

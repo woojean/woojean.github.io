@@ -1,0 +1,111 @@
+I"f<ul id="markdown-toc">
+  <li><a href="#问题" id="markdown-toc-问题">问题</a></li>
+  <li><a href="#python代码" id="markdown-toc-python代码">Python代码</a></li>
+  <li><a href="#部分结果实测统计" id="markdown-toc-部分结果实测统计">部分结果实测统计</a></li>
+</ul>
+
+<h1 id="问题">问题</h1>
+<p>单独执行一次某任务，事件A发生的概率为r
+执行m次某任务，“事件A连续发生n次”（n&lt;=m）出现的概率为：</p>
+
+<p><code class="language-plaintext highlighter-rouge">Pm = Pm_1 + (1-Pm_n_1)*(1-r)*r^n</code>
+其中：</p>
+<ul>
+  <li>P0~Pn_1的概率为0；</li>
+  <li>Pn的概率为r^n</li>
+</ul>
+
+<h1 id="python代码">Python代码</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#coding:utf-8
+#!/usr/bin/env python
+</span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">m</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
+    <span class="k">return</span> <span class="mi">0</span>
+  <span class="k">if</span> <span class="n">m</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+  	<span class="k">return</span> <span class="n">math</span><span class="p">.</span><span class="nb">pow</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+  <span class="n">Pm_1</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+  <span class="n">Pm_n_1</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+  <span class="n">Pm</span> <span class="o">=</span> <span class="n">Pm_1</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">Pm_n_1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="p">.</span><span class="nb">pow</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">Pm</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="mf">0.9</span>
+  <span class="n">m</span> <span class="o">=</span> <span class="mi">100</span>
+  <span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+  <span class="n">Pm</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+  <span class="k">print</span> <span class="n">Pm</span>
+</code></pre></div></div>
+
+<h1 id="部分结果实测统计">部分结果实测统计</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>r</th>
+      <th>m</th>
+      <th>n</th>
+      <th>Pm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.1</td>
+      <td>100</td>
+      <td>10</td>
+      <td>8.20E-09</td>
+    </tr>
+    <tr>
+      <td>0.2</td>
+      <td>100</td>
+      <td>10</td>
+      <td>7.48E-06</td>
+    </tr>
+    <tr>
+      <td>0.3</td>
+      <td>100</td>
+      <td>10</td>
+      <td>0.000377858</td>
+    </tr>
+    <tr>
+      <td>0.4</td>
+      <td>100</td>
+      <td>10</td>
+      <td>0.005754147</td>
+    </tr>
+    <tr>
+      <td>0.5</td>
+      <td>100</td>
+      <td>10</td>
+      <td>0.044137229</td>
+    </tr>
+    <tr>
+      <td>0.6</td>
+      <td>100</td>
+      <td>10</td>
+      <td>0.204909875</td>
+    </tr>
+    <tr>
+      <td>0.7</td>
+      <td>100</td>
+      <td>10</td>
+      <td>0.580083848</td>
+    </tr>
+    <tr>
+      <td>0.8</td>
+      <td>100</td>
+      <td>10</td>
+      <td>0.934202784</td>
+    </tr>
+    <tr>
+      <td>0.9</td>
+      <td>100</td>
+      <td>10</td>
+      <td>0.999681084</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET
