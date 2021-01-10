@@ -1,0 +1,254 @@
+I")<p>当前参与品种数量：47</p>
+
+<p>交易所平均保证金：9%</p>
+
+<p>期货公司+1%后平均保证金：<strong><u>10%</u></strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>序号</th>
+      <th>品种</th>
+      <th>交易所保证金</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>白银2102 (ag2102)</td>
+      <td>12%</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>铝2102 (al2102)</td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>石油沥青2106 (bu2106)</td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>燃料油2105 (fu2105)</td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>热轧卷板2105 (hc2105)</td>
+      <td>7%</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>镍2103 (ni2103)</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>铅2102 (pb2102)</td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>螺纹钢2105 (rb2105)</td>
+      <td>7%</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>天然橡胶2105 (ru2105)</td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>锡2103 (sn2103)</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>漂针浆2103 (sp2103)</td>
+      <td>7%</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>不锈钢2103 (ss2103)</td>
+      <td>7%</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>锌2102 (zn2102)</td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>黄大豆1号2105 (a2105)</td>
+      <td>12%</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>黄大豆2号2102 (b2102)</td>
+      <td>9%</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>黄玉米2105 (c2105)</td>
+      <td>9%</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>玉米淀粉2105 (cs2105)</td>
+      <td>7%</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>苯乙烯2102 (eb2102)</td>
+      <td>12%</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>乙二醇2105 (eg2105)</td>
+      <td>11%</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>铁矿石2105 (i2105)</td>
+      <td>15%</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>冶金焦炭2105 (j2105)</td>
+      <td>11%</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>鲜鸡蛋2105 (jd2105)</td>
+      <td>9%</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>焦煤2105 (jm2105)</td>
+      <td>11%</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>线型低密度聚乙烯2105 (l2105)</td>
+      <td>11%</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>豆粕2105 (m2105)</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>棕榈油2105 (p2105)</td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>液化石油气2102 (pg2102)</td>
+      <td>11%</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>聚丙烯2105 (pp2105)</td>
+      <td>11%</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>聚氯乙烯2105 (v2105)</td>
+      <td>9%</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>豆油2105 (y2105)</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>鲜苹果105 (AP105)</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>一号棉花105 (CF105)</td>
+      <td>7%</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>红枣105 (CJ105)</td>
+      <td>7%</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>棉纱105 (CY105)</td>
+      <td>7%</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>玻璃105 (FG105)</td>
+      <td>6%</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>甲醇MA105 (MA105)</td>
+      <td>7%</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>菜籽油105 (OI105)</td>
+      <td>6%</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>菜籽粕105 (RM105)</td>
+      <td>6%</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>纯碱105 (SA105)</td>
+      <td>6%</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>硅铁105 (SF105)</td>
+      <td>11%</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>锰硅105 (SM105)</td>
+      <td>7%</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td>白砂糖105 (SR105)</td>
+      <td>7%</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td>精对苯二甲酸105 (TA105)</td>
+      <td>6%</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>尿素105 (UR105)</td>
+      <td>5%</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>动力煤ZC105 (ZC105)</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>低硫燃料油2104 (lu2104)</td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>20号胶2103 (nr2103)</td>
+      <td>10%</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET
