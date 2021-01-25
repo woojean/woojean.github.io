@@ -46,7 +46,7 @@ sudo pip3 install selenium
 ```
 
 
-# 第一个demo
+# 第一个demo（python）
 ```python
 from selenium import webdriver
 import time
@@ -63,6 +63,12 @@ wd.quit()   #关闭浏览器
 ```
 
 
+
+# 改chromedriver，反嗅探
+```
+vim chromedriver
+:%s/cdc_/win_/g
+```
 
 
 
