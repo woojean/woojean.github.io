@@ -10,6 +10,8 @@ excerpt: ""
 * content
 {:toc}
 
+
+
 本文总结了Thrift的最基本应用。
 [下载代码:https://github.com/woojean/demos/tree/master/thrift-php-java](https://github.com/woojean/demos/tree/master/thrift-php-java)
 
