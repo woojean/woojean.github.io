@@ -13,7 +13,7 @@ excerpt: ""
 
 
 # 下载：chromedriver
-[http://npm.taobao.org/mirrors/chromedriver/2.36/](http://npm.taobao.org/mirrors/chromedriver/2.36/)
+[http://chromedriver.storage.googleapis.com/index.html](http://chromedriver.storage.googleapis.com/index.html)
 
 ```
 sudo mv ~/Downloads/chromedriver ~/extensions/chromedriver
