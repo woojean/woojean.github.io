@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Selenium安装配置（Mac）"
+title:  "Selenium安装配置及爬取淘宝直通车数据（Mac）"
 date: 2021-01-25 00:00:01
 categories: 编程
 tags: Selenium
