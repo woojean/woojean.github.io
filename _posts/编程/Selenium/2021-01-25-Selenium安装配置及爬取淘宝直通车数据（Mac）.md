@@ -68,7 +68,11 @@ wd.quit()   #关闭浏览器
 ```
 vim chromedriver
 :%s/cdc_/win_/g
+
+:%s/win_/jjj_/g
 ```
+
+
 
 
 # 其他
