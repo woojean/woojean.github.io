@@ -1,0 +1,248 @@
+I"�V<ul id="markdown-toc">
+  <li><a href="#下载chromedriver" id="markdown-toc-下载chromedriver">下载：chromedriver</a></li>
+  <li><a href="#升级python3" id="markdown-toc-升级python3">升级python3</a></li>
+  <li><a href="#vi-zshrc" id="markdown-toc-vi-zshrc">vi .zshrc</a></li>
+  <li><a href="#安装selenium的python模块" id="markdown-toc-安装selenium的python模块">安装selenium的python模块：</a></li>
+  <li><a href="#第一个demopython" id="markdown-toc-第一个demopython">第一个demo（python）</a></li>
+  <li><a href="#改chromedriver反嗅探" id="markdown-toc-改chromedriver反嗅探">改chromedriver，反嗅探</a></li>
+  <li><a href="#其他" id="markdown-toc-其他">其他</a>    <ul>
+      <li><a href="#kill-chromedriver-port" id="markdown-toc-kill-chromedriver-port">kill chromedriver –port=***</a></li>
+    </ul>
+  </li>
+  <li><a href="#高级示例爬取淘宝直通车数据" id="markdown-toc-高级示例爬取淘宝直通车数据">高级示例（爬取淘宝直通车数据）</a></li>
+</ul>
+
+<h1 id="下载chromedriver">下载：chromedriver</h1>
+<p><a href="http://chromedriver.storage.googleapis.com/index.html">http://chromedriver.storage.googleapis.com/index.html</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mv ~/Downloads/chromedriver ~/extensions/chromedriver
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># chromedriver
+export PATH="/Users/wujian/extensions/:$PATH"
+</code></pre></div></div>
+
+<h1 id="升级python3">升级python3</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install python
+brew upgrade python
+</code></pre></div></div>
+
+<h1 id="vi-zshrc">vi .zshrc</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias python='python3'
+alias pip3='pip3'
+</code></pre></div></div>
+
+<h1 id="安装selenium的python模块">安装selenium的python模块：</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pip3 install selenium
+</code></pre></div></div>
+
+<h1 id="第一个demopython">第一个demo（python）</h1>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">import</span> <span class="nn">time</span>
+ 
+<span class="n">wd</span><span class="o">=</span><span class="n">webdriver</span><span class="p">.</span><span class="n">Chrome</span><span class="p">()</span>  <span class="c1"># 打开 Chrome 浏览器
+## 打开百度浏览器
+</span><span class="n">wd</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://www.baidu.com'</span><span class="p">)</span>
+<span class="c1"># 定位输入框并输入关键字
+</span><span class="n">wd</span><span class="p">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">'kw'</span><span class="p">).</span><span class="n">send_keys</span><span class="p">(</span><span class="s">'selenium'</span><span class="p">)</span>
+<span class="c1"># 点击[百度一下]搜索
+</span><span class="n">wd</span><span class="p">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">'su'</span><span class="p">).</span><span class="n">click</span><span class="p">()</span>
+<span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">wd</span><span class="p">.</span><span class="n">quit</span><span class="p">()</span>   <span class="c1">#关闭浏览器
+</span></code></pre></div></div>
+
+<h1 id="改chromedriver反嗅探">改chromedriver，反嗅探</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim chromedriver
+:%s/cdc_/win_/g
+
+:%s/win_/jjj_/g
+</code></pre></div></div>
+
+<h1 id="其他">其他</h1>
+<h2 id="kill-chromedriver-port">kill chromedriver –port=***</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pgrep chromedriver |xargs kill -9
+</code></pre></div></div>
+
+<h1 id="高级示例爬取淘宝直通车数据">高级示例（爬取淘宝直通车数据）</h1>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.action_chains</span> <span class="kn">import</span> <span class="n">ActionChains</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.keys</span> <span class="kn">import</span> <span class="n">Keys</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support.ui</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support.wait</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
+<span class="kn">from</span> <span class="nn">selenium.common.exceptions</span> <span class="kn">import</span> <span class="n">TimeoutException</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="k">def</span> <span class="nf">getYesterday</span><span class="p">():</span> 
+	<span class="n">today</span><span class="o">=</span><span class="n">datetime</span><span class="p">.</span><span class="n">date</span><span class="p">.</span><span class="n">today</span><span class="p">()</span> 
+	<span class="n">oneday</span><span class="o">=</span><span class="n">datetime</span><span class="p">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
+	<span class="n">yesterday</span><span class="o">=</span><span class="n">today</span><span class="o">-</span><span class="n">oneday</span>  
+	<span class="k">return</span> <span class="n">yesterday</span>
+
+<span class="c1"># yesterdayStr = getYesterday()
+# print(yesterdayStr)
+# sys.exit(0)
+</span>
+<span class="n">options</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="n">ChromeOptions</span><span class="p">()</span>
+
+<span class="n">options</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'User-Agent=M*****) ***32 MQ**'</span><span class="p">)</span>
+
+<span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="p">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">options</span> <span class="o">=</span> <span class="n">options</span><span class="p">)</span>  <span class="c1"># 创建一个浏览器对象
+</span>
+<span class="c1"># 隐藏window.navigator.webdriver
+</span><span class="n">browser</span><span class="p">.</span><span class="n">execute_cdp_cmd</span><span class="p">(</span><span class="s">"Page.addScriptToEvaluateOnNewDocument"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="s">"source"</span><span class="p">:</span> <span class="s">"""
+	Object.defineProperty(navigator, 'webdriver', {
+	  get: () =&gt; undefined
+	})
+  """</span>
+<span class="p">})</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://login.taobao.com/member/login.jhtml"</span>
+<span class="n">browser</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">browser</span><span class="p">.</span><span class="n">current_url</span><span class="p">)</span>
+
+<span class="c1"># 填写用户名密码
+</span><span class="n">user</span> <span class="o">=</span> <span class="s">'********'</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s">''</span><span class="o">********</span><span class="s">''</span>
+
+<span class="n">elem</span> <span class="o">=</span> <span class="n">browser</span><span class="p">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">"fm-login-id"</span><span class="p">)</span>
+<span class="n">elem</span><span class="p">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+
+<span class="n">elem</span> <span class="o">=</span> <span class="n">browser</span><span class="p">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">"fm-login-password"</span><span class="p">)</span>
+<span class="n">elem</span><span class="p">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+
+<span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">browser</span><span class="p">.</span><span class="n">current_url</span><span class="p">)</span>
+
+<span class="c1"># 登录
+</span><span class="n">ActionChains</span><span class="p">(</span><span class="n">browser</span><span class="p">).</span><span class="n">key_down</span><span class="p">(</span><span class="n">Keys</span><span class="p">.</span><span class="n">ENTER</span><span class="p">).</span><span class="n">perform</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'登录成功</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+
+<span class="c1"># time.sleep(10)
+</span>
+<span class="c1"># 加载左侧导航菜单
+</span><span class="n">wait</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">browser</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span> <span class="c1">#等待的最大时间
+</span><span class="k">try</span><span class="p">:</span>
+	<span class="c1"># 获取搜索点击按钮
+</span>	<span class="n">wait</span><span class="p">.</span><span class="n">until</span><span class="p">(</span>
+		<span class="c1"># EC.presence_of_element_located((By.ID, 'magix_vf_root'))
+</span>		<span class="c1"># elems = browser.find_elements_by_class_name("qn-aside-childMenuItemName")
+</span>		<span class="n">EC</span><span class="p">.</span><span class="n">presence_of_element_located</span><span class="p">((</span><span class="n">By</span><span class="p">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span> <span class="s">'.qn-aside-childMenuItemName'</span><span class="p">))</span>
+	<span class="p">)</span>
+
+	<span class="k">print</span><span class="p">(</span><span class="s">'菜单出现'</span><span class="p">)</span>
+
+	<span class="n">elems</span> <span class="o">=</span> <span class="n">browser</span><span class="p">.</span><span class="n">find_elements_by_class_name</span><span class="p">(</span><span class="s">"qn-aside-childMenuItemName"</span><span class="p">)</span>
+	<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">elems</span><span class="p">:</span>
+		<span class="n">elemText</span> <span class="o">=</span> <span class="n">item</span><span class="p">.</span><span class="n">text</span>
+		<span class="k">print</span><span class="p">(</span><span class="n">elemText</span><span class="p">)</span>
+		<span class="k">if</span> <span class="n">elemText</span> <span class="o">==</span> <span class="s">'直通车'</span><span class="p">:</span>
+			<span class="n">item</span><span class="p">.</span><span class="n">click</span><span class="p">()</span>
+			<span class="k">break</span>
+
+<span class="k">except</span> <span class="n">TimeoutException</span><span class="p">:</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'未出现菜单'</span><span class="p">)</span>
+	<span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+
+
+<span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">browser</span><span class="p">.</span><span class="n">switch_to</span><span class="p">.</span><span class="n">window</span><span class="p">(</span><span class="n">browser</span><span class="p">.</span><span class="n">window_handles</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">browser</span><span class="p">.</span><span class="n">current_url</span><span class="p">)</span>
+<span class="n">browser</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">browser</span><span class="p">.</span><span class="n">current_url</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'done'</span><span class="p">)</span>
+
+<span class="c1"># wrapperEle = browser.find_element_by_id('magix_vf_root')
+# print(wrapperEle)
+</span>
+<span class="c1">#wrapperEle = browser.find_element_by_id('J_xiaomi_dialog')
+#print(wrapperEle)
+#ActionChains(browser).move_to_element_with_offset(wrapperEle).click().perform()
+</span>
+
+<span class="n">wait</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">browser</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span> <span class="c1">#等待的最大时间
+</span><span class="k">try</span><span class="p">:</span>
+	<span class="c1"># 获取搜索点击按钮
+</span>	<span class="n">wrapperEle</span> <span class="o">=</span> <span class="n">wait</span><span class="p">.</span><span class="n">until</span><span class="p">(</span>
+		<span class="n">EC</span><span class="p">.</span><span class="n">presence_of_element_located</span><span class="p">((</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span> <span class="s">'magix_vf_root'</span><span class="p">))</span>
+	<span class="p">)</span>
+
+
+	<span class="n">wrapperEle</span> <span class="o">=</span> <span class="n">browser</span><span class="p">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">'magix_vf_root'</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="n">wrapperEle</span><span class="p">)</span>
+
+	<span class="s">'''
+	for x in xrange(1,10):
+		print(1)
+		ActionChains(browser).move_to_element_with_offset(wrapperEle,50, 50).click().perform()
+		time.sleep(10)
+	'''</span>
+<span class="k">except</span> <span class="n">TimeoutException</span><span class="p">:</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'无弹窗'</span><span class="p">)</span>
+
+
+<span class="s">'''
+elems = browser.find_elements_by_class_name("today mt10")
+print(elems)
+for item in elems:
+	elemText = item.text
+	print(elemText)
+'''</span>
+<span class="c1"># vframe = browser.find_element_by_id('J_default_view')
+# print(vframe)
+</span>
+
+<span class="n">yesterdayStr</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">getYesterday</span><span class="p">())</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://subway.simba.tmall.hk/index.jsp#!/report/bpreport/index"</span>
+<span class="n">url</span> <span class="o">+=</span> <span class="s">'?start='</span><span class="o">+</span><span class="n">yesterdayStr</span>
+<span class="n">url</span> <span class="o">+=</span> <span class="s">'&amp;end='</span><span class="o">+</span><span class="n">yesterdayStr</span>
+<span class="n">url</span> <span class="o">+=</span> <span class="s">'?page=1'</span>
+
+<span class="n">browser</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+
+<span class="n">wait</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">browser</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span> <span class="c1">#等待的最大时间
+</span><span class="k">try</span><span class="p">:</span>
+	<span class="n">wait</span><span class="p">.</span><span class="n">until</span><span class="p">(</span>
+		<span class="n">EC</span><span class="p">.</span><span class="n">presence_of_element_located</span><span class="p">((</span><span class="n">By</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span> <span class="s">'J_report_total_J_report_bpreport_table_list_impression'</span><span class="p">))</span>
+	<span class="p">)</span>
+
+	<span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">===================================================</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+
+	<span class="n">ele</span> <span class="o">=</span> <span class="n">browser</span><span class="p">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">'J_report_total_J_report_bpreport_table_list_impression'</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'展现量:'</span><span class="o">+</span><span class="n">ele</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+
+	<span class="n">ele</span> <span class="o">=</span> <span class="n">browser</span><span class="p">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">'J_report_total_J_report_bpreport_table_list_click'</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'点击量:'</span><span class="o">+</span><span class="n">ele</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+
+	<span class="n">ele</span> <span class="o">=</span> <span class="n">browser</span><span class="p">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">'J_report_total_J_report_bpreport_table_list_cost'</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'花费:'</span><span class="o">+</span><span class="n">ele</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+
+	<span class="n">ele</span> <span class="o">=</span> <span class="n">browser</span><span class="p">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">'J_report_total_J_report_bpreport_table_list_ctr'</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'点击率:'</span><span class="o">+</span><span class="n">ele</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+
+	<span class="n">ele</span> <span class="o">=</span> <span class="n">browser</span><span class="p">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">'J_report_total_J_report_bpreport_table_list_cpc'</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'平均点击花费:'</span><span class="o">+</span><span class="n">ele</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+
+	<span class="n">ele</span> <span class="o">=</span> <span class="n">browser</span><span class="p">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">'J_report_total_J_report_bpreport_table_list_transactionshippingtotal'</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'总成交笔数:'</span><span class="o">+</span><span class="n">ele</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+
+	<span class="n">ele</span> <span class="o">=</span> <span class="n">browser</span><span class="p">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">'J_report_total_J_report_bpreport_table_list_carttotal'</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'总购物车数:'</span><span class="o">+</span><span class="n">ele</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+
+	<span class="n">ele</span> <span class="o">=</span> <span class="n">browser</span><span class="p">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">'J_report_total_J_report_bpreport_table_list_coverage'</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'点击转化率:'</span><span class="o">+</span><span class="n">ele</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+	
+<span class="k">except</span> <span class="n">TimeoutException</span><span class="p">:</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'无弹窗'</span><span class="p">)</span>
+</code></pre></div></div>
+
+:ET
