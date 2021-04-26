@@ -73,6 +73,10 @@ vim chromedriver
 ```
 
 
+# 关闭Chrome自动更新
+```
+defaults write com.google.Keystone.Agent checkInterval 0
+```
 
 
 # 其他
