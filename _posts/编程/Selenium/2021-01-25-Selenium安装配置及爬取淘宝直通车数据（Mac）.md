@@ -75,7 +75,12 @@ vim chromedriver
 
 # 关闭Chrome自动更新
 ```
-defaults write com.google.Keystone.Agent checkInterval 0
+cd ~/Library/Google/GoogleSoftwareUpdate
+mv GoogleSoftwareUpdate.bundle GoogleSoftwareUpdate.bundle2
+```
+or
+```
+sudo /Users/wujian/Library/Google/GoogleSoftwareUpdate/GoogleSoftwareUpdate.bundle/Contents/Resources/ksinstall --uninstall
 ```
 
 
