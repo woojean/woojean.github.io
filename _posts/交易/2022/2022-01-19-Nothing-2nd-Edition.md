@@ -15,10 +15,10 @@ excerpt : ""
 # Nothing 
 
 
-True unsolicited`未被要求的` comments from readers: 
-
+True <u>unsolicited</u> comments from readers: 
 
 “I was truly moved and changed by reading this book. 
+
 I have been on the path for a number of years reading all 
 kinds of books, and Nothing is the best... truly beyond 
 words.” 
@@ -26,10 +26,14 @@ words.”
 —JLS, Utah 
 
 
+
+
 “I have read Nothing several times now and think it is 
 the best book of its type that I have ever read.” 
 
 — EW y New Jersey 
+
+
 
 “I get great pleasure from Nothing. I open it often to 
 remind myself of the truths therein.” 
@@ -37,24 +41,29 @@ remind myself of the truths therein.”
 — VBj Ch icago 
 
 
-u Nothing is the best book IVe read in a long time... a 
-beautiful job.” 
 
+“Nothing is the best book IVe read in a long time... a 
+beautiful job.” 
 
 — SGy Phoenix 
 
 
+
 “Nothing came as we were experiencing an unusually 
-tough situation... it helped immensely（极大地）.” 
+tough situation... it helped <u>immensely</u>.” 
 
 — J&PS, Miami 
 
-“I have read extensively in this area but had not pre- 
+
+
+“I have read <u>extensively</u> in this area but had not pre- 
 viously encountered a work wherein clarity of vision and 
-uncluttered sensibility were so evenly balanced ... Nothing 
+<u>uncluttered</u> <u>sensibility</u> were so evenly balanced ... Nothing 
 speaks straight to the heart.. .its helping so much.” 
 
 — VL y N. Carolina 
+
+
 
 
 This book is graced with the wonderful 
@@ -63,7 +72,7 @@ who may be contacted at 919-682-3924
 
 
 
-© 1999 by James Sloman 
+© 1999 by **James Sloman** 
 Drawings by Tonia Weeks 
 Photo by Russell Rigsbee 
 
@@ -79,7 +88,6 @@ To order this book
 or any OceanBlue product 
 call anytime 1-800-838-7360 
 
-
 OceanBlue Publishing 
 98 Main St, Tiburon, CA 94920 
 www. ocean-blue, com 
@@ -89,11 +97,11 @@ www. ocean-blue, com
 # Foreword 
 
 
-Nothing was originally published in 1981. 
+Nothing was **originally published in 1981**. 
 
 For this new second edition an extensive revision was 
 undertaken, but an attempt was made also to retain the basic 
-essence and flavor of the original book. 
+<u>essence</u> and <u>flavor</u> of the original book. 
 
 Nothing has the grand certainty of youth — I was 37 at 
 the time — but from my current vantage point that seems like 
@@ -103,12 +111,12 @@ Currently, its increasingly clear that I know nothing at
 all about anything at all, least of all about anything discussed 
 in this book. And I like that. 
 
-Adapted from the Foreword in 1981: 
+*Adapted from the Foreword in 1981:* 
 
 This book is the result of an experience in March of 
-1980 which did not bring about mastery but did bring a clear 
-glimpse of an alternate reality, or rather, an alternate way of 
-perceiving this reality. 
+1980 which did not bring about <u>mastery</u> but did bring a clear 
+<u>glimpse</u> of an alternate reality, or rather, an alternate way of 
+<u>perceiving</u> this reality. 
 
 In order to communicate about this experience, stories 
 and concepts from various sources have been used. The work 
@@ -140,9 +148,9 @@ for their great open hearts.
 
 I would like to express my special appreciation in this 
 book to Osho. He had a profoundly beneficial impact on my 
-early life, and I’d like to acknowledge my special indebtedness 
+early life, and I’d like to acknowledge my special <u>indebtedness</u> 
 to him. I’ve tried to incorporate here wherever possible his 
-beautiful metaphors about the Mystery. 
+beautiful <u>metaphors</u> about the Mystery. 
 
 I would like finally to express my gratitude to the many 
 people who cannot be named here and who have touched my 
@@ -158,7 +166,6 @@ in many different ways over thousands of years. I hope you
 might find useful this particular arrangement and expression 
 of what has gone before. 
 
-
 8 
 
 
@@ -173,10 +180,10 @@ of what has gone before.
 A true story... 
 
 It concerns Alexander the Great, the world conqueror, 
-and Diogenes, a mystic who lived in Athens during the fourth 
+and Diogenes, a <u>mystic</u> who lived in Athens during the fourth 
 century BC. Diogenes possessed nothing except for a begging 
 bowl, and one day he threw even that small possession away. 
-Diogenes was well known then for his serene, blissful state. 
+Diogenes was well known then for his <u>serene</u>, <u>blissful</u> state. 
 Alexander had heard of him and desired to meet him. 
 
 It’s one of the more interesting meetings in history. 
@@ -189,9 +196,9 @@ Diogenes paused a moment, and then said, “Yes, there
 is one thing you could do for me. You could move a little to 
 the side, you’re blocking the sun.” 
 
-An eerie and beautiful reply. The most powerful man in 
+An <u>eerie</u> and beautiful reply. The most powerful man in 
 the world was offering anything, and Diogenes asked him not 
-to block the sun. Here was a person who needed nothing. 
+to block the sun. **Here was a person who needed nothing.** 
 
 Alexander said, “When I am finished conquering the 
 world I am going to come and join you on the river bank and 
