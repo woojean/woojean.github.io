@@ -3,7 +3,7 @@ layout : post
 title : "Nothing(2nd Edition)"
 date : 2022-01-19 19:06:58
 categories : 交易
-tags : James·Sloman
+tags : 亚当理论
 excerpt : ""
 ---
 

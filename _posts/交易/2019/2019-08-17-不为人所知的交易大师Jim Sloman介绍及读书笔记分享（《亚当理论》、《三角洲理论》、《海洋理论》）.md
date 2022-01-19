@@ -2,8 +2,8 @@
 layout : post
 title : "不为人所知的交易大师Jim Sloman介绍及读书笔记分享（《亚当理论》、《三角洲理论》、《海洋理论》）"
 date : 2019-08-17 00:00:01
-categories : 交易
-tags : 
+categories : 交易 
+tags : 亚当理论
 excerpt : ""
 ---
 
