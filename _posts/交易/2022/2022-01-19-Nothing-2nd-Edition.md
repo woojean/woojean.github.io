@@ -210,10 +210,9 @@ ii
 
 PART ONE 
 
-
 Diogenes replied, “There is no need to conquer the 
 world first. I have not conquered the world and I am relaxing. 
-What is preventing you? You can relax now.” 
+**What is preventing you? You can relax now.**” 
 
 Alexander said, “No, I must conquer the world first.” 
 Then Diogenes said to him, “You will never finish. You 
@@ -223,14 +222,14 @@ midst of a war campaign he died.
 This is our mind, always needing to do something first 
 before it can relax. In fact, it can never relax because it is 
 always occupied. The mind’s disease is constant occupation. If 
-the mind stops being occupied it simply ceases to exist. It is 
+the mind stops being occupied it simply <u>ceases</u> to exist. It is 
 like a shark, which must stay moving to breathe. Without 
 movement the mind will die. 
 
 Even to say it will die is incorrect, because the very 
 movement is the mind. It is not the shark but the movement 
-itself. When the movement stops, the mind is already gone 
-because it never actually existed. But the movement — mind’s 
+itself. **When the movement stops, the mind is already gone** 
+**because it never actually existed.** But the movement — mind’s 
 constant occupation — made it seem as if it did. 
 
 And with what is the mind occupied? With thoughts, 
@@ -251,7 +250,6 @@ one problem, they say, and if that problem is solved then all
 
 THE MIND 
 
-
 other problems are solved instantly, they simply cease to exist, 
 because they never existed in the first place apart from the 
 problem of mind itself. Mind created all our problems, they 
@@ -261,7 +259,7 @@ appear unless we solve the basic problem of mind itself.
 It’s like a tree where we’re cutting off leaves one by one, 
 solving one problem after another. But we’re surprised, too, 
 because for every leaf we cut off three more appear. Every 
-gardener knows that the way to thicken a tree is to prune it. 
+gardener knows that the way to <u>thicken</u> a tree is to <u>prune</u> it. 
 Thus for every problem we solve others appear; the process 
 never ends. We become exhausted solving this never-ending 
 series of problems. 
@@ -270,18 +268,19 @@ If we look deeply enough, we’ll see that the process will
 never end; new leaves will always keep growing. So we must 
 look not to the leaves but to the root — the mind — for that is 
 where the real problem resides. If we cut the root all the leaves 
-will wither simultaneously. 
+will wither <u>simultaneously</u>. 
 
 So let’s look to the root, not to the leaves. Let’s look to 
 the nature of mind itself. 
 
-
 13 
+
+
 
 
 ## Chapter Two 
 What is this nature? It is the nature of mind to always 
-seek, to want. It is a pursuer, a goal-seeking mechanism. It is 
+seek, to want. It is a <u>pursuer</u>, a goal-seeking mechanism. It is 
 always trying to get somewhere; that is why it is never here. 
 Look at the way we talk to ourselves: “Once I get the right 
 partner, then everything will be fine.” “As soon as I get the 
@@ -304,22 +303,22 @@ mind’s desire for something or other to be different than the
 way it is. It’s some situation inconsistent with the mind's 
 model of how the situation should be. 
 
-If we have no desire for anything to be different than it 
-is, there’s no problem. But the mind always has a list of things 
+**If we have no desire for anything to be different than it** 
+**is, there’s no problem.** But the mind always has a list of things 
 which it wants to be different; hence it always has many prob- 
 lems to solve. This keeps it occupied; it keeps it alive. 
 
-What is the ultimate problem the mind is working on? 
+What is the <u>ultimate</u> problem the mind is working on? 
 Its ultimate problem is death. The mind does not want to be 
-annihilated, and it remains in fear because it knows that death 
+<u>annihilated</u>, and it remains in fear because it knows that death 
 can come at any time. If we look deeply inside we can see a 
 trembling, a tension — the fear of annihilation. The mind is 
 constandy working on the problem of how to survive. Its goal 
 is to find a way to keep on existing, forever if possible. 
 
-To assuage this inner fear mind tries to gather more and 
+To <u>assuage</u> this inner fear mind tries to gather more and 
 more security, power and pleasure. Mind becomes a collector. 
-It collects more status, prestige, wealth, possessions. It collects 
+It collects more status, <u>prestige</u>, wealth, possessions. It collects 
 more knowledge, more data, more answers. It collects more 
 sensations, and then more yet. More food or more sex or more 
 adventure. More partners, friends or allies. More technology. 
@@ -328,13 +327,13 @@ more solutions. Each of us is different but each of us wants
 more of something. It’s the nature of the mind. 
 
 But no amount of more, no amount of collecting will 
-satisfy the fear and trembling because all collecting is outer 
-and the fear and trembling are inner. And this outer can never 
-satisfy the inner. That’s why the mind is greedy. It gathers 
-more and more, hoping to fill the inner hollowness, but it can 
+satisfy the fear and trembling because **all collecting is outer** 
+**and the fear and trembling are inner**. And this outer can never 
+satisfy the inner. That’s why the mind is <u>greedy</u>. It gathers 
+more and more, hoping to fill the inner <u>hollowness</u>, but it can 
 never fill it, and so it goes on gathering, wanting, seeking. The 
-game never ends, it goes on until the day of death. We always 
-die in the middle — in the middle of getting what we want. 
+game never ends, it goes on until the day of death. **We always** 
+**die in the middle — in the middle of getting what we want.** 
 
 
 i5 
@@ -343,11 +342,10 @@ i5
 
 ## Chapter Three 
 
-
 The mind has been compared to a drunken monkey 
-swinging through the trees, for its incessant activity never 
+swinging through the trees, for its <u>incessant</u> activity never 
 stops. Look at a monkey; it’s always doing something. It fid- 
-gets, it scratches, it eats, it looks around; it never stops except 
+gets, it <u>scratches</u>, it eats, it looks around; it never stops except 
 when it sleeps. Now look at the thoughts of our mind, they 
 have the same quality. Our mind flies from one thing to 
 another endlessly. “The table... made of hard wood... where 
@@ -358,13 +356,13 @@ had very little rain here recently.. .the farmers need some rain
 
 Incessant thought is manifested in incessant activity. 
 Even during relaxation we often stay active: chewing gum, 
-leafing through a magazine, listening to the radio, cooking, 
+<u>leafing</u> through a magazine, listening to the radio, cooking, 
 snacking, reading, watching TV. To the mind the question is 
 always, “What’s next?” And so we go from eating to talking to 
 working to making love to reading to watching a movie to 
 going to the beach to eating to going to a party... forever. 
 
-“What’s next?” The mind gets a gratification moment, 
+“What’s next?” The mind gets a <u>gratification</u> moment, 
 but then the moment passes and the mind wants another. It 
 gets another and that passes too; then it wants yet another, ad 
 
@@ -374,9 +372,8 @@ gets another and that passes too; then it wants yet another, ad
 
 THE MIND 
 
-
-infinitum. The mind can never be in the present because to 
-the mind the present is only a means to an end. 
+<u>infinitum</u>. **The mind can never be in the present because to** 
+**the mind the present is only a means to an end.** 
 
 This is why the mind is always essentially in misery, 
 because it can never be here in the present moment. 
@@ -384,10 +381,10 @@ because it can never be here in the present moment.
 Our mind’s pictures of what we’re supposed to do are 
 based on memories from the past. It uses the past to try to get 
 to the future. Since the mind is always in in the past or future, 
-it has to be mosdy miserable. 
+it has to be <u>mosdy</u> <u>miserable</u>. 
 
-Misery is just another name for never being here now, 
-always being somewhere other than where we are. The misery 
+**Misery is just another name for never being here now,** 
+**always being somewhere other than where we are.** The misery 
 is pushed down so we won’t notice it too much, but it’s always 
 there. Even when we’re seemingly feeling good, deep down 
 the buried misery remains. 
@@ -402,7 +399,7 @@ In the meantime we’re thinking a thousand and one
 thoughts: what Bob said yesterday... the dinner we’re going to 
 have tonight... oh, the plants need watering... how beautiful 
 Carrie is... but she likes the temperature of the house too 
-high... on and on. And we’re restimulated by the memory of 
+high... on and on. And we’re <u>restimulated</u> by the memory of 
 when we were washing the dishes last year and burned our 
 hand. We’re not herenow. 
 
@@ -411,33 +408,32 @@ present, it hasn’t any past or future in it. To have fun is to do
 something without having any goal in it, neither the goal of 
 
 
-r 7 
+
 
 
 PART ONE 
 
-
 pleasure nor the goal of getting to the end of it. Its just play, 
-frolic; theres no purpose to it. 
+<u>frolic</u>; theres no purpose to it. 
 
-True play is incomprehensible to the mind because to 
+True play is <u>incomprehensible</u> to the mind because to 
 the mind everything must have a purpose, it must serve some 
 end, it must have a meaning. Otherwise, what is the point? 
-But fun and play have no point; that's their point. They're just 
-what they are. 
+But **fun and play have no point; that's their point. They're just**
+**what they are.**
 
-Osho tells the story of a seeker who was very good at 
-archery. He would hit the target virtually every time. He went 
+<u>Osho</u> tells the story of a seeker who was very good at 
+<u>archery</u>. He would hit the target virtually every time. He went 
 to Japan to study under an archery master, to get the certifi- 
 cate from him. In Japan they use all sorts of excuses to teach 
-meditation. Archery is one of them. The seeker would hit the 
-target again and again but the master would only say, “You are 
-shooting the arrow. The arrow must shoot itself.” 
+<u>meditation</u>. Archery is one of them. The seeker would hit the 
+target again and again but the master would only say, “**You are** 
+**shooting the arrow. The arrow must shoot itself.**” 
 
-This sounds absurd. How can the arrow shoot itself? 
+This sounds <u>absurd</u>. How can the arrow shoot itself? 
 The seeker continued hitting the target. Then he attempted to 
-deliberately not hit the target. That didn't work either. The 
-master said, w The target is not the target. You are the target.” 
+<u>deliberately</u> not hit the target. That didn't work either. The 
+master said, ”The target is not the target. You are the target.” 
 The master wasn't interested in the end, the outcome. He was 
 interested in the beginning. 
 
@@ -449,8 +445,8 @@ archery range.
 The seeker sat down to watch and now he was no 
 longer interested in the certificate; he had given that up. 
 
-And he saw the master for the first time. The master 
-was just having fun; there was nobody interested in hitting the 
+And he saw the master for the first time. **The master** 
+**was just having fun; there was nobody interested in hitting the** 
 
 
 18 
@@ -458,111 +454,105 @@ was just having fun; there was nobody interested in hitting the
 
 THE MIND 
 
-
-target. The seeker then took the bow and pulled back the 
-arrow. He was no longer concerned, he was just playing now. 
+**target.** The seeker then took the bow and pulled back the 
+arrow. He was no longer concerned, **he was just playing now**. 
 Before the arrow had left the bow the master turned away and 
 said, “Finished. The target has been reached.” 
 
 Deep down, our minds are always serious, always trying 
 to reach to the target. Mind can’t understand that the target is 
-already here because its very nature is to be striving to reach 
+already here because its very nature is to be <u>striving</u> to reach 
 the target. 
 
 Thus the mind is almost always involved in struggle, in 
 trying. It’s always making an effort, involved in difficulties 
-and obstacles. 
+and <u>obstacles</u>. 
 
-The mind never sees that this endless seeking is the real 
-problem. It never sees that its attempts to find a solution are 
-the very motions that keep it from seeing that no solution is 
-necessary. It’s like a muddy pond where our motion in the 
+**The mind never sees that this endless seeking is the real** 
+**problem.** It never sees that its attempts to find a solution are 
+the very <u>motions</u> that keep it from seeing that no solution is 
+necessary. It’s like a <u>muddy</u> <u>pond</u> where our motion in the 
 pond to clear up the mud is the very thing that keeps the 
-water muddy and prevents us from seeing beneath the surface 
-to the mysterious bottom. 
+water muddy and prevents us from seeing <u>beneath</u> the surface 
+to the <u>mysterious</u> bottom. 
 
 
-i9 
+
 
 
 ## Chapter Four 
 
-
-
 The basis of the mind’s motion towards all its goals is 
-discriminations. The world is a totality but the mind separates 
-it into a multiplicity through its labels, concepts, categories. 
+<u>discriminations</u>. The world is a <u>totality</u> but the mind separates 
+it into a <u>multiplicity</u> through its labels, concepts, categories. 
 The mind is a labeler and labels everything. “This is a tree, 
-that is a fence. This is moving, that is stationary. This is red, 
+that is a <u>fence</u>. This is moving, that is <u>stationary</u>. This is red, 
 that is orange. He is well-dressed, she is average. The boy is 
 good-looking, his father is not. This is a cloudy day, too bad, 
 yesterday was sunny.” 
 
-Mind then perceives reality through its constructs and 
+Mind then <u>perceives</u> reality through its constructs and 
 concepts rather than directly. Experiments have indicated that 
 a person shown a red ace of spades will see an ace of hearts, 
 because he has a concept that red means a heart or diamond. 
 Other experiments have shown that if by prearrangement a 
 crowd of people claims to see something that isn't there then 
-the uninitiated observer will see it too. They will actually see 
+the <u>uninitiated</u> observer will see it too. They will actually see 
 something that isn’t there because the mind computes that it 
 must be there. 
 
-In fact all labels, all concepts set up dualities. To create 
-a category of “tree” we must simultaneously create a category 
+In fact all labels, all concepts set up <u>dualities</u>. To create 
+a category of “tree” we must <u>simultaneously</u> create a category 
 of “not-tree,” of all that which is not a tree. Otherwise this 
 category of “tree” has no meaning. It’s the same with all our 
 
 
-ao 
+
 
 
 THE MIND 
 
-
 categories. “Up” has no meaning without “down.” Something 
 can only be “up” in relation to something else which is “down.” 
-The two concepts come into being together. No “up” or 
-“down” exists in reality. Such labels are mind-creations. 
+The two concepts come into being together. **No “up” or** 
+**“down” exists in reality.** Such labels are mind-creations. 
 
 Similarly, “beautiful” can’t exist without “ugly.” “Good” 
-cannot exist without “bad.” It is all the mind’s creation. The 
-mind’s experiences are determined by its theories, and in turn 
-reinforce those theories. 
+cannot exist without “bad.” It is all the mind’s creation. **The** 
+**mind’s experiences are determined by its theories, and in turn** 
+**reinforce those theories.** 
 
 Through some experience we set up a belief, let’s say, 
-that men with beards are impolite. And we find that every 
+that men with <u>beards</u> are <u>impolite</u>. And we find that every 
 man with a beard follows the rule. We bring our expectation 
 to each situation, and then we get to be right. 
 
-Mind wants to be right at all costs because the mind is 
-a collection of points of view. Thus, being right about its point 
-of view is tantamount to survival. And then when we come 
+Mind wants to be right at all costs because **the mind is** 
+**a collection of points of view**. Thus, being right about its point 
+of view is <u>tantamount</u> to survival. And then when we come 
 across a bearded man who is not impolite, we’re still right, 
 because he becomes “the exception that proves the rule.” And 
-the moment he slips up we say, “See? I knew I was right. Men 
-with beards are impolite.” Mind lives in its own reality. 
+the moment he <u>slips</u> up we say, “See? I knew I was right. Men 
+with beards are impolite.” **Mind lives in its own reality**. 
 
 There’s an Hassidic story about this. There was a zad- 
 dic, an Hassidic master, who became a judge. Because he was 
-very conscious he was not concerned with being right but saw 
-rightness in everything. The first case came up and the judge 
-heard the plaintiff and then said, “Right. You are right.” 
+very <u>conscious</u> he was not concerned with being right but saw 
+<u>rightness</u> in everything. The first case came up and the judge 
+heard the <u>plaintiff</u> and then said, “Right. You are right.” 
 
-The court clerk took him aside and said, “Are you crazy? 
+The court <u>clerk</u> took him aside and said, “Are you crazy? 
 You have only heard one side; how can you pronounce it 
 right?” The judge said, “You’re right. Let’s hear the defense.” 
 After hearing the defense the judge said, “Yes, right. You are 
-
 
 21 
 
 
 PART ONE 
 
-
 absolutely right.” The clerk took the judge aside again and 
-said, “Now you are insane. You have done what you should 
+said, “Now you are <u>insane</u>. You have done what you should 
 never do, you have made both sides right.” And the judge said, 
 “Of course, you’re right. How can both sides be right?” 
 
@@ -571,26 +561,26 @@ to its point of view, it clings to its rightness. Mind is a clinger.
 As soon as it discriminates it starts preferring one thing to 
 another. It makes a multiplicity out of the totality and then 
 starts picking and choosing among the multiplicity. It prefers 
-palm trees over fir trees, or vice-versa. It prefers blue over red, 
+<u>palm</u> trees over <u>fir</u> trees, or <u>vice-versa</u>. It prefers blue over red, 
 or tall women over short, or a big house over a small one, or 
-prestige over disgrace, or whatever. Desire has arisen. 
+<u>prestige</u> over <u>disgrace</u>, or whatever. <u>Desire</u> has <u>arisen</u>. 
 
 Now what exists in the moment is not enough. Now 
 something must be obtained before the moment will be 
 enough. And something else must be pushed away. Mind 
 clings to what it likes and tries to avoid what it dislikes. It 
 becomes attached to its desires, preferences, points of view, 
-beliefs and goals. It clings to people, possessions, money, 
+beliefs and goals. It clings to people, <u>possessions</u>, money, 
 power, youth. It attaches itself to particular solutions, answers, 
-rituals, habitual attitudes, ways of acting and models of how 
-things should be. The mind becomes as brittle and rigid as a 
-dead stick of wood. It loses the flexibility of life and becomes 
-dead inside. But it continues to cling because it equates that 
+<u>rituals</u>, <u>habitual</u> attitudes, ways of acting and models of how 
+things should be. The mind becomes as <u>brittle</u> and <u>rigid</u> as a 
+dead stick of wood. **It loses the flexibility of life and becomes** 
+**dead inside**. But it continues to cling because it <u>equates</u> that 
 with survival. 
 
 The most basic point of view that the mind has, the 
-most basic duality that it creates, is that it is separate. This 
-assumption is so fundamental that the mind cannot even see 
+most basic <u>duality</u> that it creates, is that it is separate. This 
+<u>assumption</u> is so fundamental that the mind cannot even see 
 it as an assumption. It’s like water to a fish. The mind sees this 
 
 
@@ -599,10 +589,9 @@ it as an assumption. It’s like water to a fish. The mind sees this
 
 THE MIND 
 
-
 as simply one of the givens of existence. It doesn’t question 
-this paradigm because the paradigm runs so deep that it can’t 
-even be seen as a paradigm. Intellectually perhaps, yes; but at 
+this <u>paradigm</u> because the paradigm runs so deep that it can’t 
+even be seen as a paradigm. <u>Intellectually</u> perhaps, yes; but at 
 the level of blood and bone, no. 
 
 And this paradigm colors all of life. Naturally, since the 
@@ -610,7 +599,7 @@ mind feels separate it must struggle, strive, survive, and make
 things go right. 
 
 In fact, this whole question of rightness or wrongness is 
-one of the most intriguing aspects of the mind. The mind sees 
+one of the most <u>intriguing</u> aspects of the mind. The mind sees 
 many things as wrong because it sees many things as directly 
 or indirecdy threatening to its survival as a separate thing. 
 
@@ -637,54 +626,52 @@ drawer over there.” The thief gathered the money and pre-
 pared to leave. “Remember to thank me,” the master said. The 
 thief thanked him and left. 
 
-Caught for other crimes, the thief confessed also to the 
-burglary against the master. Called to testify and asked what 
+Caught for other crimes, the thief <u>confessed</u> also to the 
+<u>burglary</u> against the master. Called to <u>testify</u> and asked what 
 happened, Shichiri said, “A man came and I gave him a gift of 
 money. He thanked me and left. There was no thief.” 
 
 Each of us creates our own reality by what we notice, by 
-the concepts and interpretations that we overlay onto what is. 
+the concepts and <u>interpretations</u> that we overlay onto what is. 
 Reality itself is not knowable by the mind. Our senses are 
-small windows indeed. Our faculty of sight, for instance, is 
-only a tiny segment of the whole electromagnetic spectrum. 
+small windows indeed. Our <u>faculty</u> of sight, for instance, is 
+only a tiny segment of the whole <u>electromagnetic</u> <u>spectrum</u>. 
 
 And concerning the data that is available, our senses act 
 to filter out most of it. For example, it’s been demonstrated 
-that a frog’s eye notices only nearby movements characteristic 
-of insects. All other visual data is screened out. 
+that a frog’s eye notices only nearby movements <u>characteristic</u> 
+of insects. All other visual data is <u>screened</u> out. 
 
-And what little data the brain does receive must then be 
-interpreted by the brain before we experience the sensation of 
-
+And what little data the brain does receive **must then be** 
+**interpreted by the brain before we experience the sensation of** 
 
 24 
 
 
 THE MIND 
 
-
-sight or any other sense. There is no way to know for sure that 
+**sight or any other sense**. There is no way to know for sure that 
 the brain is not manufacturing its product completely inter- 
 nally — and that what we think of as sense data may just be 
 part of the internal computation. 
 
 In other words, we don’t really know what’s out there, 
 we have actually no idea of what exists external to us. And 
-there may be nothing at all out there; all of our sensory data 
+there may be nothing at all out there; all of our <u>sensory</u> data 
 may be a completely internal product of the brain. There’s no 
 way to be certain about it. 
 
 Yet all of our concepts, beliefs, opinions, knowledge are 
-ultimately based upon sensory data. Reality in its ultimate 
+<u>ultimately</u> based upon sensory data. Reality in its ultimate 
 essence simply cannot be known by the mind. Someone sits in 
 a room, and in the same room an ant crawls across the floor. 
-It perceives a totally different reality than the person does. 
+It <u>perceives</u> a totally different reality than the person does. 
 Which reality is correct? Both. Neither. Neither perceives 
 ultimate reality. Both have their own version. 
 
-The Taoist master Chuang Tzu said, “How can you talk 
+The Taoist master **Chuang Tzu** said, “How can you talk 
 about the sea to a frog in a well?” Mind is always in its own 
-little well, hemmed in by its limited data and then hemming 
+little well, <u>hemmed</u> in by its limited data and then hemming 
 itself in further by the concepts and beliefs it forms about the 
 data. Then those concepts, beliefs, attitudes, models and so on 
 form the screen through which further data is perceived and 
@@ -694,7 +681,7 @@ it thinks that its well is the sea itself.
 
 Another way of looking at this is to see the mind as a 
 projector which uses reality as merely a screen upon which to 
-project its own version of things. Mind projects its fantasies, 
+project its own version of things. Mind projects its <u>fantasies</u>, 
 
 
 25 
@@ -702,20 +689,19 @@ project its own version of things. Mind projects its fantasies,
 
 PART ONE 
 
-
 attitudes, concepts and models onto reality and then confuses 
 this motion picture with reality itself. 
 
 Mind is a dreamer and it never stops dreaming even for 
 a single moment. And it confuses its dreams with reality, just 
 as the dreams we have while sleeping are real to us while we're 
-dreaming them. Our version of reality is simply another type 
-of dream. We create it, we manufacture it. Our experience of 
-the world around us is our creation entirely; we are totally 
-responsible for it. 
+dreaming them. **Our version of reality is simply another type** 
+**of dream. We create it, we manufacture it. Our experience of** 
+**the world around us is our creation entirely; we are totally** 
+**responsible for it.** 
 
 Thus when we see “wrongness” we feel that something 
-must be changed out there. How can we change an illusion 
+must be changed out there. How can we change an <u>illusion</u> 
 through external means when it's totally an internal thing? As 
 soon as we correct one “wrongness” more will spring up, but 
 the sense of things being wrong can go on forever. 
@@ -726,22 +712,20 @@ switched on. Until we’ve looked deeply into the nature of the
 mind itself, we go on and on altering the dream — but we are 
 still dreaming. 
 
-Still another way of expressing mind's illusory version 
+Still another way of expressing mind's <u>illusory</u> version 
 of reality is to say that the mind is always on drugs, it is always 
-intoxicating itself. Mind is a drug addict. And what are its 
+<u>intoxicating</u> itself. Mind is a drug <u>addict</u>. And what are its 
 drugs? Its drugs are power, wealth, status, knowledge, pres- 
 tige. Its drugs are food, sex, adventure, alcohol and pills. Its 
 drugs are accomplishments, goals, saving the world, being 
-infatuated, being part of a group, being creative. Its drugs are 
-various beliefs and stories. Its drugs are hatred, anger, envy, 
-pleasure, melancholy and so on. 
-
+<u>infatuated</u>, being part of a group, being creative. Its drugs are 
+various beliefs and stories. Its drugs are <u>hatred</u>, anger, envy, 
+pleasure, <u>melancholy</u> and so on. 
 
 26 
 
 
 THE MIND 
-
 
 Mind is always drugged, it can never see the real. Mind 
 wants to be high so that it does not have to experience its suf- 
@@ -749,8 +733,8 @@ fering. But the nature of being high is that we must come
 down. And when mind comes down it immediately looks for 
 another drug so that it can go up again. It wants a new man 
 or woman, a new job, a new city, a new article of clothing, a 
-new movie. And the process goes on, the mind never realizing 
-that its drugs are not the solution. 
+new movie. And the process goes on, **the mind never realizing** 
+**that its drugs are not the solution.** 
 
 Mind can never realize this because the mind lives in 
 hope. Tomorrow will be better. But tomorrow never comes, 
@@ -759,8 +743,8 @@ future cannot arrive. All that is ever here is the present
 moment. If we look closely we’ll see that it is the very hope, 
 the very desire itself that creates time. 
 
-Imagine sitting silently with no desires, blissful, calm. 
-There is no time. We are simply in the eternal moment. Now 
+Imagine sitting silently with no desires, <u>blissful</u>, calm. 
+There is no time. We are simply in the <u>eternal</u> moment. Now 
 let a single desire enter our being and we are in time again. If 
 it will take a month to fulfill our desire then we have created 
 the time of one month. If it will take an hour, then we have 
@@ -775,15 +759,13 @@ want to do. We need more time and there is not enough of it.
 Our desires have created this. If we had no desires we would 
 have no fear of death either; we would be ready for it. 
 
-
 27 
 
 
 PART ONE 
 
-
 Mind is in hell because of its desires. Have we noticed? 
-When we’re miserable time goes very slowly, it seems to drag 
+When we’re <u>miserable</u> time goes very slowly, it seems to drag 
 on and on. Deep down, mind is always miserable since it 
 spends its time outside the present moment. This is it, this is 
 what hell looks like. It looks like our life when were outside 
@@ -792,7 +774,7 @@ of the moment.
 Conversely, if we had no desires, no goals, we would be 
 totally blissful and time would have speeded up until there 
 was no time — until there was just the moment. That would be 
-paradise, heaven. But that is not possible for the mind, since 
+<u>paradise</u>, heaven. But that is not possible for the mind, since 
 it’s filled with desires. Desire is its very essence. 
 
 
