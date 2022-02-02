@@ -1505,7 +1505,7 @@ vanished.
 
 In fact there is not now and there has never been any 
 problem in life — other than the magic-show, the mind’s inter- 
-pretations and stories about what’s happening. 
+<u>pretations</u> and stories about what’s happening. 
 
 To actually see this is to have transcended the problem 
 of mind. And when that happens the problem of life becomes 
@@ -1526,7 +1526,7 @@ All of our attempts to change our life in any way merely keep
 it fundamentally the way it is. So how does this transcendence 
 arise? 
 
-Consider the following: Imagine a caterpillar which 
+Consider the following: Imagine a <u>caterpillar</u> which 
 creates a goal of becoming a butterfly. It spends its time imag- 
 ining ways to do so, trying this method and that method, but 
 nothing seems to work. Because no matter how hard it tries to 
@@ -1547,20 +1547,19 @@ attempts to improve itself as a caterpillar. Futile. How does our
 caterpillar become a butterfly? 
 
 The thing to notice is that nothing the caterpillar does 
-causes it to transmute into a butterfly. Nature handles the 
-problem, the caterpillar doesn’t have to. All it has to do is be 
+causes it to <u>transmute</u> into a butterfly. **Nature handles the** 
+**problem, the caterpillar doesn’t have to.** All it has to do is be 
 a caterpillar — which it already is — and the transmutation then 
 happens by itself. 
 
 The key is being a caterpillar. If the caterpillar is busy 
 trying to become a butterfly or a better caterpillar it is not 
-simply being a caterpillar. Let it just be a caterpillar — then the 
-butterfly part will take care of itself. 
+simply being a caterpillar. **Let it just be a caterpillar — then the** 
+**butterfly part will take care of itself.** 
 
 
 
 ## Chapter Thirteen 
-
 
 In the case of a caterpillar that’s no problem because a 
 caterpillar has no mind, it has no notion of itself as a chooser 
@@ -1569,79 +1568,78 @@ mind, everything we’ve ever thought of ourselves as being is
 the mind. If the mind decides to “be the way it is,” that is just 
 another decision by the mind, it’s the mind surviving. And the 
 mind can never be herenow, can never simply be the way it is. 
-No, it’s very busy trying to get somewhere. So how is this 
+No, **it’s very busy trying to get somewhere**. So how is this 
 paradox resolved? 
 
 To answer that question we must introduce the notion 
-of being or the true self. It is who we really are, but it is not 
+of being or the **true self**. It is who we really are, but it is not 
 “you” or “I.” It has nothing to do with who or what we think 
 we are. It has nothing to do with the mind, nothing to do with 
 our tapes, models, programs, voice-overs, thoughts, emotions, 
 sensations, stories, actions, presentations, metaphysics or any- 
-thing else about “you” or “I.” No, it’s who we really are. And 
-it’s beyond the world of stimulus-response. 
+thing else about “you” or “I.” No, **it’s who we really are. And** 
+**it’s beyond the world of stimulus-response.** 
 
-The true self is like an empty blue sky — vast, silent, 
-unchanging. It’s pure consciousness, pure existence. It has no 
-form, and it doesn't look like anything. It is reality, but has 
-nothing to do with the mind’s stories of reality. 
+**The true self is like an empty blue sky — vast, silent,** 
+**unchanging. It’s pure consciousness, pure existence. It has no** 
+**form, and it doesn't look like anything. It is reality, but has** 
+**nothing to do with the mind’s stories of reality.** 
 
 It is truth, but has nothing to do with concepts or 
 words. It is beauty itself, but a beauty beyond form or image. 
 It is bliss, but it has nothing to do with what is normally 
 thought of as happiness because it has no cause. It is peace, 
-stillness, silence, but it has nothing to do with what normally 
+<u>stillness</u>, silence, but it has nothing to do with what normally 
 is thought of as relaxation in human life. 
 
 No formulations of any kind can really describe being, 
 the self, the existence. It is emptiness, nothing, the absence of 
 anything. It is unsayable, unthinkable, not reachable by any 
 conceptualization. That is, we can conceptualize it but the 
-conceptualization is just nonsense because it has nothing to 
-do with existence or being itself. Being is unlimited and words 
-are limited — the gap is more or less unbridgeable. Thus all 
+conceptualization is just <u>nonsense</u> because it has nothing to 
+do with existence or being itself. **Being is unlimited and words** 
+**are limited — the gap is more or less unbridgeable**. Thus all 
 words and concepts about it are fundamentally false, because 
-words come from a context of exclusion and existence is not 
-that way. 
+**words come from a context of exclusion and existence is not** 
+**that way.** 
 
 Lets look directly. In order for any conceptualization at 
 all to be formed something must be excluded; otherwise we 
 have the totality, the whole, but no concept. In order to form 
 the concept of ‘pencil” we must exclude that which is “not- 
 pencil.” In order to form the concept of “red” we must exclude 
-that which is w not-red.”This is why no mental formulation, no 
-conceptual system no matter how subtle or sublime can be the 
+that which is not-red.”This is why no mental formulation, no 
+conceptual system no matter how <u>subtle</u> or sublime can be the 
 truth. Because concepts are ultimately grounded in limitation, 
 exclusion, logic — and truth is unlimited, non-exclusive and, to 
 the mind, illogical. 
 
 What is truth? Truth is a sunset, truth is rain on the 
-streets, truth is percolating coffee. It is whole. Truth is like a 
+streets, truth is <u>percolating</u> coffee. It is whole. Truth is like a 
 
-
-hologram in that each part of it contains the totality. Truth is 
+<u>hologram</u> in that each part of it contains the totality. Truth is 
 not a sum of the parts and no amount of explanation can ever 
-reach it; it simply is what it is. 
+reach it; **it simply is what it is**. 
 
-What is truth? Truth is a rose — not the word “rose” nor 
-any theory about roses but purely a rose itself. We can experi- 
+**What is truth? Truth is a rose — not the word “rose” nor** 
+**any theory about roses but purely a rose itself.** We can experi- 
 ence a rose, we can experience reality, we can experience truth, 
-but as soon as we try to put it into words we distort it. We 
+but as soon as we try to put it into words we <u>distort</u> it. We 
 could write a million words about experiencing a rose on a 
 warm spring evening but they would not even come close to 
 the experience itself. 
 
 To really see this is to understand, as Osho often said, 
-that ignorance is so vast that it can never be destroyed. What 
+that <u>ignorance</u> is so vast that it can never be destroyed. What 
 is water? Science answers that it is H2O, hydrogen and oxy- 
 gen. What is hydrogen, what is oxygen? Science answers that 
-they are certain configurations of protons and electrons, mat- 
+they are certain configurations of <u>protons</u> and <u>electrons</u>, mat- 
 ter and energy, but these are just new names. 
 
 Nobody knows what an electron is, nobody knows what 
 matter is, nobody knows what hydrogen is and nobody knows 
 what water is. We have added a few new labels and categories, 
-but the mystery is still profound, totally impenetrable. Our 
+but the mystery is still <u>profound</u>, totally <u>impenetrable</u>. Our 
 ignorance is infinite, it can never be overcome. It is not possi- 
 ble to ever really know anything. 
 
@@ -1649,22 +1647,22 @@ This being so, it follows that even the simplest things
 are basically incommunicable, they can’t actually be accurate- 
 ly talked about. Words immediately distort them. If this is 
 true of water or a rose, how much more true is it of words 
-about being.. .self.. .existence. The moment we talk about it we 
-fall into error and distortion and falsity. 
+about being.. .self.. .existence. **The moment we talk about it we** 
+**fall into error and distortion and <u>falsity</u>.** 
 
 Thus when we say that being is truth or bliss or peace 
-it must be remembered that this is the language of poetry, of 
-metaphor, of indirect allusion. Even the very words “being” or 
+it must be remembered that this is the language of <u>poetry</u>, of 
+<u>metaphor</u>, of indirect allusion. Even the very words “being” or 
 “self” or “existence” are merely labels created by the mind, and 
 we do well not to take them literally. 
 
-The apt phrase used in the Buddhist Surangama Sutra 
+The <u>apt phrase</u> used in the Buddhist Surangama Sutra 
 is that all words and concepts about existence are “a finger 
 pointing at the moon.” Words can only indicate, suggest; they 
 are not the moon — reality — but only a finger pointing at it. 
 
 The mind, however, misses the moon and focuses on 
-the finger. Mind pores over philosophies, theologies, meta- 
+the finger. Mind <u>pores</u> over philosophies, <u>theologies</u>, meta- 
 physical systems and then feels that the existence is really 
 such-and-such a way. Mind always misses the point. Even the 
 concepts in this paragraph are just toys in the sandbox. 
@@ -1673,7 +1671,7 @@ An interesting true story: A seeker once came to the
 Zen master Joshu and asked, “What is the Buddha? Who is 
 the Buddha? Where can he be found?” Joshu replied, “Go into 
 the temple. You will find the Buddha there.” Then the man 
-said, “But inside the temple there is only a stone statue. And 
+said, “But inside the temple there is only a stone <u>statue</u>. And 
 you know and I know that a stone statue is not the Buddha.” 
 Joshu replied, “You are absolutely right. A stone statue is not 
 the Buddha.” 
@@ -1683,22 +1681,21 @@ Joshu replied, “Go into the temple. You will find the Buddha
 there.” 
 
 A curious story. This seeker had seen beyond the sym- 
-bolism of stone statues, but not beyond other symbolisms. So 
+bolism of stone statues, but not beyond other <u>symbolisms</u>. So 
 he assumed that Joshu was talking about external temples. 
 
-
 But Joshu had no interest in external temples, he was 
-talking about the temple within. He was saying that unless we 
-see into the nature of the mind we are lost, we’ll never find out 
-that were already the Buddha. 
+talking about the temple within. He was saying that **unless we** 
+**see into the nature of the mind we are lost, we’ll never find out** 
+**that were already the Buddha.** 
 
-Mind needs excitement; it needs diversion, the chase, 
-the search. It is like a spider constantly spinning and then 
+Mind needs excitement; it needs <u>diversion</u>, the <u>chase</u>, 
+the search. It is like a spider constantly <u>spinning</u> and then 
 being caught in its own web. The spinning, the excitement, 
-the activity, the seeking are smokescreens which prevent us 
-from seeing into the nature of all this. We’ve become like a 
-man searching around the world for the nose on his face. So 
-he can’t see that he already has what he’s looking for. 
+the activity, the seeking are <u>smokescreens</u> which prevent us 
+from seeing into the nature of all this. **We’ve become like a** 
+**man searching around the world for the nose on his face. So** 
+**he can’t see that he already has what he’s looking for.** 
 
 Truth is the immediate, the foreground, but we don’t 
 see it because we’re scanning the heavens for it. 
