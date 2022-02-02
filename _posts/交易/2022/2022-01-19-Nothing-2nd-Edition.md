@@ -128,9 +128,6 @@ Dass, Werner Erhard, Ken Keyes Jr., Mahaghossananda, my
 friend Richard Gobeille, and many others. 
 
 
-7 
-
-
 This book was originally made possible by the gracious 
 assistance of Howard Brown, Carol Schroeder, John Weeks, 
 the late and great Alfred Kapuler, and others. 
@@ -166,13 +163,11 @@ in many different ways over thousands of years. I hope you
 might find useful this particular arrangement and expression 
 of what has gone before. 
 
-8 
+
 
 
 
 # The Mind 
-
-
 
 ## Chapter One 
 
@@ -204,11 +199,6 @@ Alexander said, “When I am finished conquering the
 world I am going to come and join you on the river bank and 
 just relax.” 
 
-
-ii 
-
-
-PART ONE 
 
 Diogenes replied, “There is no need to conquer the 
 world first. I have not conquered the world and I am relaxing. 
@@ -244,12 +234,6 @@ It looks as if there are many problems in our lives. But
 the masters say there is only one: the mind. There is only that 
 one problem, they say, and if that problem is solved then all 
 
-
-12 
-
-
-THE MIND 
-
 other problems are solved instantly, they simply cease to exist, 
 because they never existed in the first place apart from the 
 problem of mind itself. Mind created all our problems, they 
@@ -272,8 +256,6 @@ will wither <u>simultaneously</u>.
 
 So let’s look to the root, not to the leaves. Let’s look to 
 the nature of mind itself. 
-
-13 
 
 
 
@@ -336,9 +318,6 @@ game never ends, it goes on until the day of death. **We always**
 **die in the middle — in the middle of getting what we want.** 
 
 
-i5 
-
-
 
 ## Chapter Three 
 
@@ -365,12 +344,6 @@ going to the beach to eating to going to a party... forever.
 “What’s next?” The mind gets a <u>gratification</u> moment, 
 but then the moment passes and the mind wants another. It 
 gets another and that passes too; then it wants yet another, ad 
-
-
-16 
-
-
-THE MIND 
 
 <u>infinitum</u>. **The mind can never be in the present because to** 
 **the mind the present is only a means to an end.** 
@@ -407,12 +380,6 @@ The mind can never truly play, because playing is of the
 present, it hasn’t any past or future in it. To have fun is to do 
 something without having any goal in it, neither the goal of 
 
-
-
-
-
-PART ONE 
-
 pleasure nor the goal of getting to the end of it. Its just play, 
 <u>frolic</u>; theres no purpose to it. 
 
@@ -448,12 +415,6 @@ longer interested in the certificate; he had given that up.
 And he saw the master for the first time. **The master** 
 **was just having fun; there was nobody interested in hitting the** 
 
-
-18 
-
-
-THE MIND 
-
 **target.** The seeker then took the bow and pulled back the 
 arrow. He was no longer concerned, **he was just playing now**. 
 Before the arrow had left the bow the master turned away and 
@@ -475,8 +436,6 @@ necessary. It’s like a <u>muddy</u> <u>pond</u> where our motion in the
 pond to clear up the mud is the very thing that keeps the 
 water muddy and prevents us from seeing <u>beneath</u> the surface 
 to the <u>mysterious</u> bottom. 
-
-
 
 
 
@@ -505,12 +464,6 @@ In fact all labels, all concepts set up <u>dualities</u>. To create
 a category of “tree” we must <u>simultaneously</u> create a category 
 of “not-tree,” of all that which is not a tree. Otherwise this 
 category of “tree” has no meaning. It’s the same with all our 
-
-
-
-
-
-THE MIND 
 
 categories. “Up” has no meaning without “down.” Something 
 can only be “up” in relation to something else which is “down.” 
@@ -546,10 +499,6 @@ You have only heard one side; how can you pronounce it
 right?” The judge said, “You’re right. Let’s hear the defense.” 
 After hearing the defense the judge said, “Yes, right. You are 
 
-21 
-
-
-PART ONE 
 
 absolutely right.” The clerk took the judge aside again and 
 said, “Now you are <u>insane</u>. You have done what you should 
@@ -583,12 +532,6 @@ most basic <u>duality</u> that it creates, is that it is separate. This
 <u>assumption</u> is so fundamental that the mind cannot even see 
 it as an assumption. It’s like water to a fish. The mind sees this 
 
-
-22 
-
-
-THE MIND 
-
 as simply one of the givens of existence. It doesn’t question 
 this <u>paradigm</u> because the paradigm runs so deep that it can’t 
 even be seen as a paradigm. <u>Intellectually</u> perhaps, yes; but at 
@@ -612,12 +555,10 @@ All minds are ill, but a simple test of how much illness
 a mind has is to observe how much “complaint” it has. 
 
 
-23 
+
 
 
 ## Chapter Five 
-
-
 
 One night as the master Shichiri Kojun was meditating 
 a thief entered with a sword, demanding his money or his life. 
@@ -644,11 +585,6 @@ of insects. All other visual data is <u>screened</u> out.
 
 And what little data the brain does receive **must then be** 
 **interpreted by the brain before we experience the sensation of** 
-
-24 
-
-
-THE MIND 
 
 **sight or any other sense**. There is no way to know for sure that 
 the brain is not manufacturing its product completely inter- 
@@ -683,12 +619,6 @@ Another way of looking at this is to see the mind as a
 projector which uses reality as merely a screen upon which to 
 project its own version of things. Mind projects its <u>fantasies</u>, 
 
-
-25 
-
-
-PART ONE 
-
 attitudes, concepts and models onto reality and then confuses 
 this motion picture with reality itself. 
 
@@ -722,11 +652,6 @@ drugs are accomplishments, goals, saving the world, being
 various beliefs and stories. Its drugs are <u>hatred</u>, anger, envy, 
 pleasure, <u>melancholy</u> and so on. 
 
-26 
-
-
-THE MIND 
-
 Mind is always drugged, it can never see the real. Mind 
 wants to be high so that it does not have to experience its suf- 
 fering. But the nature of being high is that we must come 
@@ -759,11 +684,6 @@ want to do. We need more time and there is not enough of it.
 Our desires have created this. If we had no desires we would 
 have no fear of death either; we would be ready for it. 
 
-27 
-
-
-PART ONE 
-
 Mind is in hell because of its desires. Have we noticed? 
 When we’re <u>miserable</u> time goes very slowly, it seems to drag 
 on and on. Deep down, mind is always miserable since it 
@@ -778,12 +698,10 @@ was no time — until there was just the moment. That would be
 it’s filled with desires. Desire is its very essence. 
 
 
-28 
+
 
 
 ## Chapter Six 
-
-
 
 When mind finally sees its own misery then it goes on 
 a spiritual quest. Now instead of desiring money, power, pos- 
@@ -792,36 +710,30 @@ transformation. Look deeply and we can see that nothing has
 changed. The goals may be different but the quality is the 
 same; the mind is still seeking. 
 
-And it is this seeking which constitutes the very exis- 
+And it is this seeking which <u>constitutes</u> the very exis- 
 tence of the mind. Mind is motion, mind is occupation. And 
 along with its spiritual quest mind usually becomes involved 
-with metaphysical doctrines. And then it clings to them and 
-disputes about them as if it’s doing something important. 
+with <u>metaphysical</u> <u>doctrines</u>. And then it clings to them and 
+<u>disputes</u> about them as if it’s doing something important. 
 
 There is a great true story. A student of Zen said, 
-“Master, do we survive death or not? Do we get reincarnated? 
+“Master, do we survive death or not? Do we get <u>reincarnated</u>? 
 And if so, do we retain our memory or lose it? Do we lose all 
 aspects of our personality or are some aspects retained? And 
 how long is it before we reincarnate? 
 
-“Or is this whole notion false and the Western notion 
-of an immortal soul more accurate? And if so, do we retain our 
+“Or is this whole <u>notion</u> false and the Western notion 
+of an <u>immortal</u> soul more accurate? And if so, do we retain our 
 memory in heaven and hell or do we lose it? And are there 
-other realms between here and heaven?” 
+other <u>realms</u> between here and heaven?” 
 
 “Your breakfast is getting cold, ” the master replied. 
 
 
-29 
-
-
-PART ONE 
-
-
-Mind can understand the complicated but has a hard 
-time with the simple. Life is simple... a sunset, a rainstorm, a 
+**Mind can understand the complicated but has a hard** 
+**time with the simple**. Life is simple... a sunset, a rainstorm, a 
 flower. Life is so simple that it is beyond our understanding. 
-The mind cannot comprehend it, cannot comprehend simply 
+The mind cannot <u>comprehend</u> it, cannot comprehend simply 
 being in the moment without any purpose or goal. So mind 
 keeps trying to fit life into a box, to structure it, to create order 
 out of what it sees as chaos. Mind feels deeply anxious when 
@@ -832,8 +744,8 @@ It asks questions. Why is there suffering? Why is there
 disease? Why is there hate? Why is there pain? Why is there 
 death? Mind wants answers. 
 
-It doesn’t see that the very impetus to ask questions and 
-find answers arises from a feeling of discontent. When we are 
+It doesn’t see that the very <u>impetus</u> to ask questions and 
+find answers <u>arises</u> from a feeling of <u>discontent</u>. When we are 
 happy we don’t ask why love exists. When we are healthy we 
 don’t ask why health exists. Only when there is suffering and 
 dissatisfaction does questioning arise. 
@@ -845,34 +757,27 @@ from it. There would be no need. But mind cannot drop its
 grasping because it is the graspingness. The mind is diseased; 
 only when there is illness is there a search for medicine. 
 
-Mind wants to impose an order on existence because 
+Mind wants to <u>impose</u> an order on existence because 
 existence is too wild, too chaotic. As Osho says, just when 
 we’re getting settled with our wisdom and our ways... we die. 
 And a new baby is brought into the world, knowing nothing, 
 not even knowing who it is. 
 
-
-30 
-
-
-THE MIND 
-
-
-It is a chaos! Big trees die and little seeds sprout. 
+It is a chaos! Big trees die and little seeds <u>sprout</u>. 
 Galaxies die and new galaxies are born. A chaos! If mind had 
 its way there would be no death, but then there would be no 
 life either. Everything would be perfect, mechanical, efficient, 
 ordered — and dead. Because the new would be impossible. 
 
 Chaos makes the new possible; that is its significance. 
-Mind binds itself in rules, doctrines, attitudes, “shoulds,” and 
-then wonders why the flavor has gone out of life, why life 
-seems more and more a matter of going through the motions. 
-Mind becomes a prisoner of its own boxes. 
+**Mind binds itself in rules, <u>doctrines</u>, attitudes, “shoulds,” and** 
+**then wonders why the flavor has gone out of life, why life** 
+**seems more and more a matter of going through the motions.** 
+**Mind becomes a <u>prisoner</u> of its own boxes.** 
 
 Mind is a perfectionist, trying to find the structures and 
 the answers that will be just right. It’s an idealist, trying to 
-attain some beckoning goal — political, moral, legal, cultural, 
+attain some <u>beckoning</u> goal — political, moral, legal, cultural, 
 scientific, artistic, economic, religious, whatever. And only the 
 impossible looks really attractive as an ideal because only the 
 impossible looks perfect. 
@@ -883,20 +788,14 @@ goes on. It’s an ego-trip, the impossible must be attained.
 
 Only the possible and imperfect is human. Mind always 
 desires the super-human, and the super-human is always 
-inhuman. The most difficult thing for the mind is just to be 
-ordinary, natural, “nothing special.” 
+inhuman. **The most difficult thing for the mind is just to be** 
+**ordinary, natural, “nothing special.** 
 
 On the contrary, the ego/mind is trying very hard to be 
 unique, special, extraordinary. It wants to stand out and be 
 noticed. In fact this desire to be extraordinary is absolutely 
-ordinary because it is ubiquitous, it’s the everyday nature of 
+ordinary because it is <u>ubiquitous</u>, it’s the everyday nature of 
 the mind. 
-
-
-
-
-PART ONE 
-
 
 And mind is an extremist, going from one extreme to 
 the other in its efforts to be unique and special. It can never 
@@ -909,22 +808,19 @@ seek suicide, death.
 
 Above all, mind is a doer. Something must be done — 
 about one’s life, about the world, about someone else, about 
-this situation and that situation. And mind is innately violent, 
+this situation and that situation. And mind is <u>innately</u> <u>violent</u>, 
 it is always willing to use force if necessary. To achieve its per- 
-fect ideal, coercion may have to be used. To the mind, the end 
+fect ideal, <u>coercion</u> may have to be used. To the mind, the end 
 justifies the means. 
 
-It wants to pry open the rosebud in order to obtain the 
-rose, and is then surprised when petals fall to the ground and 
+It wants to <u>pry</u> open the <u>rosebud</u> in order to obtain the 
+rose, and is then surprised when <u>petals</u> fall to the ground and 
 it holds nothing. 
 
 
-32 
 
 
 ## Chapter Seven 
-
-
 
 So this is the mind: It feels separate and alone, and feels 
 a need to survive. It sees much wrongness everywhere and 
@@ -932,12 +828,12 @@ wants to change things including parts of itself so that they
 will be “right.” It is doingness, movement, struggle, striving — 
 always trying to get somewhere but never being here. It’s self- 
 centered, selfish, always figuring its payoff in everything — 
-even in altruism. 
+even in <u>altruism</u>. 
 
 And what is its payoff? Survival of its attitudes, points 
-of view, opinions, beliefs, rationalizations, acts, stories, pre- 
+of view, opinions, beliefs, <u>rationalizations</u>, acts, stories, pre- 
 sentations. The payoff is that it gets to be right. Finally, mind 
-is a self-deceiver. It suffers but persuades itself it is reasonably 
+is a self-<u>deceiver</u>. It suffers but <u>persuades</u> itself it is reasonably 
 happy. It lives in the past and future but persuades itself that 
 it lives in the moment. It knows nothing but persuades itself 
 that it knows the truth. 
@@ -945,22 +841,15 @@ that it knows the truth.
 Now let’s look deeper. The first thing to notice is that 
 the mind is a crowd. . .at one moment satisfied, at another one 
 sad, at one moment jealous, at another one frustrated, at one 
-moment gratified, at another one bored. There is no unity. At 
+moment <u>gratified</u>, at another one bored. There is no unity. At 
 different times a different actor has center stage. And so many 
 thoughts!. . .pulling this way and that, on this subject and that, 
 constandy changing. 
 
-
-33 
-
-
-PART ONE 
-
-
 If we consider emotions and sensations as simply dif- 
 ferent types of thought, then we notice that there is an end- 
-less parade of thoughts each different from the last. It is a 
-melange, a grouping... a crowd. 
+less <u>parade</u> of thoughts each different from the last. It is a 
+<u>melange</u>, a grouping... a crowd. 
 
 The most interesting feature of a crowd is that there is 
 no such thing as a crowd. Can we find a crowd apart from the 
@@ -969,11 +858,11 @@ Only individuals exist, but all of them standing together give
 the impression that something apart from the individuals 
 exists. But only individuals exist. 
 
-Mind is like this. If we look closely we’ll see that there 
-is no such thing as mind. There are only individual thoughts. 
+**Mind is like this. If we look closely we’ll see that there** 
+is no such thing as mind. There are only individual thoughts.** 
 One thought following another in endless succession gives the 
 feeling that something apart from thoughts themselves exists, 
-but it doesn’t. If we search for our mind we’ll never find it. 
+but it doesn’t. **If we search for our mind we’ll never find it.** 
 We’ll only find individual thoughts. Mind is an abstraction. It 
 doesn’t actually exist. 
 
@@ -981,24 +870,17 @@ What is this sense of “I” then, this sense of a separate
 existence? It is itself a series of thoughts, as the Buddha first 
 pointed out. In fact, we think about ourself all the time. The 
 telephone company did a study and found that by far the most 
-common word used by people was “I.” This “I” is actually an 
-assumption, a conclusion formed out of a long succession of 
-thoughts. It is itself a thought. 
+common word used by people was “I.” **This “I” is actually an** 
+**assumption, a conclusion formed out of a long succession of** 
+**thoughts. It is itself a thought.** 
 
 And if we look at our thoughts we’ll see that they are 
 things just like a glass or a chair. Each thought is like a wave 
-rising out of the ocean. It appears out of nowhere, has a brief 
-lifespan and then disappears back to where it came from. 
+rising out of the ocean. **It appears out of nowhere, has a brief** 
+**lifespan and then disappears back to where it came from.** 
 
-
-34 
-
-
-THE MIND 
-
-
-Each thought rises and falls of its own accord, it is not 
-under any control. Ask yourself: Can you change the thoughts 
+Each thought rises and falls of its own accord, **it is not** 
+**under any control**. Ask yourself: Can you change the thoughts 
 you had yesterday? No. Can you change the thoughts that you 
 will have tomorrow? No. Can you change the thought you’re 
 having right now? No. The “right now” has already passed. 
@@ -1006,7 +888,7 @@ You’ll be surprised — you can't change any of your thoughts.
 “You” have no control over them. They appear and disappear 
 of their own accord. They are independent things. 
 
-This is the dilemma of the mind. It wants to control 
+This is the <u>dilemma</u> of the mind. It wants to control 
 everything, and it imagines that it is the controller of its own 
 decisions. It thinks of itself as the chooser, the decider, the 
 self-guider. But actually it doesn’t choose, it doesn’t decide, it 
@@ -1014,9 +896,9 @@ doesn’t guide anything because it doesn’t exist. All of its many
 choices and decisions are just more thoughts appearing of 
 their own accord. 
 
-The irony is that the mind which spends its time strug- 
-gling and striving to control things actually controls nothing 
-at all because it doesn’t exist. There is no self-guider, no 
+The <u>irony</u> is that the mind which spends its time strug- 
+gling and striving to control things **actually controls nothing** 
+**at all because it doesn’t exist**. There is no self-guider, no 
 chooser, no decider. Not that thoughts don’t exist; they do. 
 But there is no center guiding them all. There is no center at 
 all, that’s an illusion. Mind thinks of itself as the controller, 
@@ -1024,117 +906,93 @@ the chooser, and that is exactly what is not there. Mind itself
 is not there. 
 
 Mind is terrified of not having control. It’s terrified to 
-be out of control because it conceives of itself as the controller. 
-To be out of control is tantamount to being out of existence. 
-At the deepest level, the mind cannot let go because it would 
-be letting go of its own existence. 
+be out of control because it <u>conceives</u> of itself as the controller. 
+To be out of control is <u>tantamount</u> to being out of existence. 
+**At the deepest level, the mind cannot let go because it would** 
+**be letting go of its own existence.** 
 
-
-35 
-
-
-PART ONE 
-
-
-The paradox is that mind doesn’t exist anyway, it only 
+The <u>paradox</u> is that mind doesn’t exist anyway, it only 
 thinks it exists. It doesn’t choose anything anyway; it only 
 thinks it chooses. All that exists is isolated thoughts, one after 
 another, some of which are that there is a self-guiding entity, 
 that the entity makes decisions, that it knows the truth, that 
 it is reasonably happy, and so on. 
 
-So we have the spectacle of something that does not 
+So we have the <u>spectacle</u> of something that does not 
 actually exist spending its time trying to survive. 
 
-And this is not an academic matter. Because who or 
+And this is not an <u>academic</u> matter. Because who or 
 what is the mind? We are. All of our thoughts, emotions, atti- 
 tudes, points of view, acts, stories, presentations and behavior 
-patterns are all mind. We are the mind and the mind is us. 
+patterns are all mind. **We are the mind and the mind is us.** 
 
-If we’re imagining that there is some part of us which is 
-separate from the mind, look again. There is no part of us that 
-is not mind. Everything whatever that we conceive of ourself 
-as being is simply mind. 
+**If we’re imagining that there is some part of us which is** 
+**separate from the mind, look again. There is no part of us that** 
+**is not mind. Everything whatever that we conceive of ourself** 
+**as being is simply mind.** 
 
 
-36 
 
 
 ## Chapter Eight 
-
-
 
 So to say that “mind” does not exist means that “you” 
 and “I” do not exist. We think of ourselves as making deci- 
 sions, but nobody is there to make them. “You” and “I” as self- 
 guiders, as controllers, as choosers don’t exist. There’s nobody 
-home. There are simply thoughts... and thoughts expressing 
-themselves in activity through a servo-mechanism. Each 
+home. There are simply thoughts... **and thoughts expressing** 
+**themselves in activity through a servo-mechanism**. Each 
 thing that we think of as “us” is just another thought. There is 
 no center. “You” and “I” are an illusion. 
 
-In fact, we’re entirely a stimulus/response mechanism. 
+In fact, we’re entirely a <u>stimulus</u>/response mechanism. 
 A machine. A very complex machine, but a machine never- 
-theless. Normally we’re accustomed to think only of objects 
-such as jukeboxes and billiard balls as being completely in the 
-realm of stimulus-response. We push a button on the jukebox 
+theless. Normally we’re <u>accustomed</u> to think only of objects 
+such as <u>jukeboxes</u> and <u>billiard</u> balls as being completely in the 
+<u>realm</u> of stimulus-response. We push a button on the jukebox 
 and it plays “White Christmas.” We knock a billiard ball and 
 it rolls across the table. 
 
 But now let’s move up the scale to plant life. A plant is 
 a mechanism which is wired up to respond to the environ- 
-ment in a particular way. Light shines on it and its chemistry 
-turns carbon and minerals to sugar and oxygen. 
+ment in a particular way. Light shines on it and its <u>chemistry</u> 
+turns <u>carbon</u> and <u>minerals</u> to sugar and oxygen. 
 
 Now consider animals. Behaviorists demonstrate that 
 animals act entirely within the parameters of stimulus- 
 
-
-37 
-
-
-PART ONE 
-
-
 response. We may like that or not, approve of it or not, but the 
 demonstration remains. It looks as if the cat chooses whether 
 or not to walk into the bedroom, but actually it’s simply 
-responding to stimuli. 
+responding to <u>stimuli</u>. 
 
 The difference between a plant and an animal in this 
 respect is that an animal has a much more complex set of 
 responses and it can distinguish between different types of 
 stimuli. For instance, a pet can normally distinguish between 
 someone it knows and someone it doesn’t know, and it can 
-respond accordingly in a variety of different ways. Stimulus- 
-response in animals is much richer than that of plants, but the 
-quality is the same. 
+respond accordingly in a variety of different ways. **Stimulus-** 
+**response in animals is much richer than that of plants, but the** 
+**quality is the same.** 
 
 Now let’s move up to humans. A human being is also a 
-stimulus-response mechanism, but a vasdy more complex one. 
+stimulus-response mechanism, but a <u>vasdy</u> more complex one. 
 The human mechanism has an ability to distinguish between 
 many thousands of different types of stimuli, and its range of 
-responses is exceedingly broad and rich. 
+responses is <u>exceedingly</u> broad and rich. 
 
 But this is perhaps not the most significant difference 
 between the human and animal mechanisms. Perhaps the 
 most significant difference is that we humans have a sound- 
-track — an accompanying voice-over which takes all of our 
+track — an <u>accompanying</u> voice-over which takes all of our 
 responses and explains them, justifies them, rationalizes them. 
 This mental soundtrack is absolutely part-and-parcel of the 
 stimulus-response system, but it gives rise to the idea of the 
 “I” and thus to the idea that this “I” is guiding itself, that this 
 “I” is choosing and deciding. 
 
-If a billiard ball is thrown off of a cliff it will fall. If an 
-animal is thrown off a cliff it will fall and its organism will 
-
-
-38 
-
-
-THE MIND 
-
+If a billiard ball is thrown off of a <u>cliff</u> it will fall. If an 
+animal is thrown off a cliff it will fall and its <u>organism</u> will 
 
 produce the emotion of fear on the way down. If you or I are 
 thrown off a cliff we will fall and our responses will include a 
@@ -1148,33 +1006,26 @@ One of the things which makes it so difficult to see us
 humans as being entirely stimulus-response is that part of the 
 mechanism’s range of responses is the ability to alter its future 
 responses to stimuli. One of our human responses is to alter 
-our future responses. This very sophisticated response tends to 
+our future responses. This very <u>sophisticated</u> response tends to 
 look like “choice,” even though it is still stimulus-response. 
 
-Another smokescreen is that the human mechanism’s 
-responses are often unpredictable — simply because we are so 
+Another <u>smokescreen</u> is that the human mechanism’s 
+responses are often <u>unpredictable</u> — simply because we are so 
 complex. The human mechanism is so unbelievably complex 
 that there is often no way to predict what the responses will 
-be, and this unpredictability is taken as further evidence of 
+be, and this unpredictability is taken as further <u>evidence</u> of 
 choice and control. 
 
-To say on the one hand that the mind is totally a stim- 
-ulus-response mechanism and to say on the other hand that 
-the mind creates its own version of reality seems like a para- 
-dox. But look closely and we’ll see that the two statements are 
-actually saying the same thing. 
+**To say on the one hand that the mind is totally a stim-** 
+**ulus-response mechanism and to say on the other hand that** 
+**the mind creates its own version of reality seems like a para-** 
+**dox. But look closely and we’ll see that the two statements are** 
+**actually saying the same thing.** 
 
 The mind responds to stimuli from the environment 
 and part of its response is to label, categorize, judge, evaluate. 
 On the basis of this it desires certain things and desires to 
 avoid other things. And then it feels a sense of pleasure or 
-
-
-39 
-
-
-PART ONE 
-
 
 pain depending on whether the environment provides what it 
 desires. But what it desires, and its response to what it gets, is 
@@ -1183,9 +1034,9 @@ pleasure or pain in a given moment is dependent on its own
 stimulus-response conditioning, not on what the environment 
 is providing. 
 
-In other words, mind responds to reality by creating its 
-own version of reality. That horse is really no good. Cherries 
-really taste better than melons. I was really justified in doing 
+In other words, **mind responds to reality by creating its** 
+**own version of reality.** That horse is really no good. Cherries 
+really taste better than <u>melons</u>. I was really justified in doing 
 that. And so forth. Each of those statements is a version of 
 reality; each is totally created by the mind. 
 
@@ -1193,18 +1044,16 @@ Mind is totally stimulus-response and simultaneously it
 is totally responsible for its experience of reality. And not only 
 is the mind stimulus-response, but the environment is too; it 
 is all stimulus-response. Mind is trying to maintain control 
-when there is no such thing as independent control. All parts 
-of the environment, including the mind as one of those parts, 
-are simply responding. Long before the days of behaviorists, 
+when there is no such thing as independent control. **All parts** 
+**of the environment, including the mind as one of those parts,** 
+**are simply responding.** Long before the days of behaviorists, 
 the Buddha called this “co-dependent co-origination.” 
 
 
-40 
+
 
 
 ## Chapter Nine 
-
-
 
 Another way of considering this is to look at the mind 
 as a very sophisticated computer. What are the components 
@@ -1216,10 +1065,10 @@ And memory units where data and programs are stored.
 
 And what is a program? A program is simply a list of 
 instructions for the CPU to execute.. .first do this, then do 
-that, then do this... on and on. Each instruction is simple, but 
-since computers can do many millions of these instructions 
-per second the end result can look and be very sophisticated 
-indeed. 
+that, then do this... on and on. **Each instruction is simple, but** 
+**since computers can do many millions of these instructions** 
+**per second the end result can look and be very sophisticated** 
+**indeed.** 
 
 Now among a computer’s programs is a master pro- 
 gram — a list of instructions as to which programs will be done 
@@ -1230,16 +1079,9 @@ guidance about it. Depending on circumstances — stimuli — it
 responds according to its instructions. The result can be very 
 refined, but is pure stimulus-response. 
 
-
-4i 
-
-
-PART ONE 
-
-
 Now compare the mind to this computer. The minds 
-input is the five senses. Its output is thoughts, emotions, facial 
-expressions, postures, actions, etc... our whole presentation, 
+input is the five senses. Its output is thoughts, emotions, <u>facial</u> 
+expressions, <u>postures</u>, actions, etc... our whole presentation, 
 internally and externally. We can call all of the output by the 
 word “tapes.” A stimulus comes in and the mind processes it 
 and comes up with a response, a tape. The tape may be anger, 
@@ -1249,13 +1091,13 @@ physical, is a tape.
 
 The mind has memory banks, of course, where data and 
 programs of various kinds are stored. And the mind has an 
-executive sub-routine which determines — on the basis of the 
+executive sub-<u>routine</u> which determines — on the basis of the 
 directions in it — which program will be running at any given 
 time and thus which tape will be presented. 
 
-This master program is about one thing and one thing 
-only — survival. Each moment the executive sub-routine gives 
-center stage to that subsidiary program which, according to its 
+**This master program is about one thing and one thing** 
+**only — survival**. Each moment the executive sub-routine gives 
+center stage to that <u>subsidiary</u> program which, according to its 
 instructions, will most ensure survival. Survival may look like 
 lying out on the beach getting a tan, it may look like finishing 
 one's homework, it may look like getting jealous. The tape 
@@ -1263,23 +1105,16 @@ will be whatever seems to optimize survival the most in that
 moment, considering all factors. 
 
 And this business of survival can take strange forms. 
-Lets say somebody slaps us in the face. The mind will search 
-its memory banks for an earlier situation that looks similar. 
-Lets say it finds an early episode where someone hit us and 
-we went unconscious — but we survived. It pulls that program 
+Lets say somebody slaps us in the face. **The mind will search** 
+**its memory banks for an earlier situation that looks similar.** 
+Lets say it finds an early <u>episode</u> where someone hit us and 
+we went <u>unconscious</u> — but we survived. It pulls that program 
 out of storage and runs it. 
 
-
-42 
-
-
-THE MIND 
-
-
-Now, in the present, after the slap we faint. To this 
+Now, in the present, after the slap we <u>faint</u>. To this 
 mind, this is what looks most like survival. To some other 
 mind with a different history, survival in that situation could 
-take some other form — anger, propitiation, tears, whatever. 
+take some other form — anger, <u>propitiation</u>, tears, whatever. 
 But to this mind in this circumstance, survival looks most like 
 fainting. So that is what it does. 
 
@@ -1292,7 +1127,7 @@ we can faint.
 
 If we observe ourselves, we can see us creating certain 
 patterns over and over again in our lives. The boss who always 
-finds himself with irresponsible employees. The man or 
+finds himself with <u>irresponsible</u> employees. The man or 
 woman who is always late because of unavoidable circum- 
 stances. The person who always likes his new job until he 
 gradually discovers that his co-workers are unfair to him. The 
@@ -1306,17 +1141,10 @@ the mind, this is survival. And it is all stimulus-response, it is
 all automatic machinery. 
 
 To see the mind as a computer (in its current beginning 
-incarnation) conveys a sense of the mind’s mechanicalness and 
-automaticity, but it doesn’t do it justice. For the mind is far 
+<u>incarnation</u>) conveys a sense of the mind’s mechanicalness and 
+automaticity, but it doesn’t do it justice. **For the mind is far** 
 
-
-43 
-
-
-PART ONE 
-
-
-more refined than any present-day computer. For example, as 
+**more refined than any present-day computer**. For example, as 
 said before, part of the mind’s programming is an ability to 
 alter its response to future stimuli. 
 
@@ -1331,11 +1159,11 @@ And that’s a really interesting feature of this computer,
 this mind. Part of its programming is the idea that it is self- 
 guiding, that it is an “I,” that it is an independent entity which 
 controls itself and chooses among alternatives. And it’s all 
-illusion. There is no controlling, there is no choosing going 
+<u>illusion</u>. There is no controlling, there is no choosing going 
 on. There is no center, no “I.” There is only stimulus-response, 
 automatic programming. 
 
-If we were to dismantle this computer-mind we would 
+If we were to <u>dismantle</u> this computer-mind we would 
 never find this “I,” we would never find this self-choosing 
 essence because it is not there. It’s no different in principle 
 from dismantling a car. If we take all the parts away from a car 
@@ -1345,28 +1173,26 @@ away from the mind there would be no mind left, no “I” left.
 Because it’s not really there. 
 
 
-44 
+
 
 
 ## Chapter Ten 
 
-
-
-Yet because of this sense of an “I,” all sorts of bizarre 
+Yet because of this sense of an “I,” all sorts of <u>bizarre</u> 
 phenomena take place. Since there is an “I,” an attempt must 
-be made to have this “I” survive. This separate “I” which does 
-not actually exist tries to find ways to maintain its existence. 
+be made to have this “I” survive. **This separate “I” which does** 
+**not actually exist tries to find ways to maintain its existence.** 
 This controller which in fact controls nothing tries to find 
-ways to maintain and increase its control. No wonder the 
-mind is so busy; it has an impossible problem to solve! 
+ways to maintain and increase its control. **No wonder the** 
+**mind is so busy; it has an impossible problem to solve!** 
 
 Actually the only problem is the “I” itself, but the mind 
 cannot see this. Mind itself is the only problem, which is why 
 the mind cannot solve its problem. 
 
-And so the whole game arises. The mind engages in its 
+And so the whole game <u>arises</u>. The mind engages in its 
 struggles and strivings, its activities and efforts in the attempt 
-to solve a problem which cannot be solved. Preoccupied with 
+to solve a problem which cannot be solved. <u>Preoccupied</u> with 
 the problem of survival and security, reaching toward the 
 future and responding from the past, it can never be herenow. 
 It can never let go, can never be completely in the moment 
@@ -1374,31 +1200,24 @@ because it ceases to exist if it does.
 
 The mind collects power, money, status, allies, lovers, 
 possessions, answers and agreement from the environment in 
-the vain attempt to solve its problem. It projects its stories 
-onto reality so that it doesn’t see reality, and then ponders how 
+the <u>vain</u> attempt to solve its problem. It projects its stories 
+onto reality so that it doesn’t see reality, and then <u>ponders</u> how 
 
-
-45 
-
-
-PART ONE 
-
-
-reality ought to be changed. Mind tries to improve, change, 
+reality <u>ought</u> to be changed. Mind tries to improve, change, 
 get better and be different, but at bottom the game remains 
 the same. 
 
 Just see deeply into the illusion. Mind is activity, mind 
 is thought. Mind is the solving of problems, the running of 
 tapes, the striving toward goals. It is all movement. Mind is 
-occupation; occupation is mind. Since mind itself is the only 
-problem in life, this means that the movement of the mind is 
-the actual problem. 
+occupation; occupation is mind. **Since mind itself is the only** 
+**problem in life, this means that the movement of the mind is** 
+**the actual problem.** 
 
 Further, since movement is mind, any movement or 
 doingness at all will be contributing to the problem instead of 
-solving it. Indeed, it is the movement or doingness which is 
-the problem. 
+solving it. **Indeed, it is the movement or doingness which is** 
+**the problem.** 
 
 If we look closely we’ll see that ultimately all of our 
 attempts to improve, change, be different or better are part of 
@@ -1408,9 +1227,9 @@ motion and thus of sustaining mind itself.
 
 In attempting to change or be different, who is doing 
 the attempting? The mind. The very effort involved is the 
-problem, is the mind. It perpetuates the only suffering in life, 
-which is wanting things to be different than they are at this 
-moment. 
+problem, is the mind. **It <u>perpetuates</u> the only suffering in life,** 
+**which is wanting things to be different than they are at this** 
+**moment.** 
 
 That is, everything in our life which we conceive of as 
 the solution to our problems is the problem. Every effort we 
@@ -1418,22 +1237,15 @@ make to achieve happiness is what keeps us in suffering deep
 down. Everything we do to make things better is what keeps 
 things the way they are. 
 
-
-46 
-
-
-THE MIND 
-
-
 Watch. You’ll see that the motions of the mind — its 
 desires, discriminations, efforting, struggling — are the only 
 problem. There is no problem outside of that. 
 
 The mind creates its own version of reality, which it 
-then takes for reality itself. Finding this “reality” inadequate, it 
+then takes for reality itself. Finding this “reality” <u>inadequate</u>, it 
 then attempts to change things, not seeing that the problem 
-is not reality but its own created version of it. Reality is never 
-a problem; only our stories about it are the problem. 
+is not reality but its own created version of it. **Reality is never** 
+**a problem; only our stories about it are the problem.** 
 
 The mind creates problems out of what is in order to 
 give itself something to do, since the very doingness sustains 
@@ -1441,15 +1253,15 @@ the existence of the mind. There is no problem other than this
 craving of the mind itself. 
 
 If mind is the problem, then why not do something to 
-nullify or alter or extinguish the mind? Just see that the very 
+<u>nullify</u> or alter or extinguish the mind? Just see that the very 
 question comes from the mind. In attempting to extinguish 
 the mind, who would be making the attempt? The mind. In 
-endeavoring to alter the mind, who would be making the 
-endeavor? The mind. 
+<u>endeavoring</u> to alter the mind, who would be making the 
+<u>endeavor</u>? The mind. 
 
 This is what the mind is doing now. It’s trying to 
 improve, change, make things different and better. All of that 
-may temporarily palliate the problem, distract us from it or 
+may temporarily <u>palliate</u> the problem, distract us from it or 
 better adjust us to it, but it won’t remove or solve it. How can 
 it? All of that is the problem. 
 
@@ -1459,13 +1271,6 @@ desire is wanting something that isn’t herenow. The desire
 itself is the suffering because it prevents us from experiencing 
 the perfection and enoughness of this moment. 
 
-
-47 
-
-
-PART ONE 
-
-
 Thus, our desires to reach satisfaction in life are what 
 keep it unsatisfactory. Our desires to alter the world so that it 
 will be more acceptable are what keep it unacceptable in our 
@@ -1473,9 +1278,9 @@ version of reality. Our desires to make things perfect are what
 keep them imperfect. 
 
 It is possible to deeply see that nothing can be done. 
-There’s nothing we can do to solve the situation or escape 
-from it, because anything we do becomes simply another way 
-of maintaining it. 
+**There’s nothing we can do to solve the situation or escape** 
+**from it, because anything we do becomes simply another way** 
+**of maintaining it.** 
 
 There is no way to get out of the mind because “we” are 
 the mind, there is no part of what we think we are which is 
@@ -1484,12 +1289,8 @@ the problem of life; how therefore are “you” going to solve the
 problem? 
 
 
-48 
-
 
 ## Chapter Eleven 
-
-
 
 So, you may ask, why not just let go then? Why not just 
 accept everything the way it is? Observe. This is simply 
@@ -1507,21 +1308,14 @@ that’s just a head-trip. Deep down the solidity of the “I” is
 being reinforced. 
 
 What about other solutions then? To love everyone. To 
-serve others. To seek God or enlightenment. Or to not give a 
+serve others. To seek God or <u>enlightenment</u>. Or to not give a 
 damn. But look deeply. To decide to love everyone is just 
 another tape. Who is it that is deciding to love? The mind. 
-And deciding to or trying to love is a misguided effort because 
-real love has nothing to do with trying to be loving. 
+And **deciding to or trying to love is a misguided effort because** 
+**real love has nothing to do with trying to be loving.** 
 
 Love just happens; it’s effortless and involuntary. It’s a 
 falling; it just happens of itself. There’s no way to force it. 
-
-
-49 
-
-
-PART ONE 
-
 
 Attempting to love is of the mind. It’s false and far removed 
 from love itself. 
@@ -1532,10 +1326,10 @@ can’t serve ourself? If the water in our own pond is still muddy,
 how can we expect to clear up the muddiness in the ponds of 
 others? What looks good to us may have a bad result. To think 
 we are doing something good is of the mind; it reinforces the 
-illusions that constitute the mind. 
+illusions that <u>constitute</u> the mind. 
 
 Not that serving others is bad. But when it truly hap- 
-pens it’s like love — involuntary, effortless. And there is no 
+pens it’s like love — <u>involuntary</u>, effortless. And there is no 
 thought that one is serving others, no decision about it. It just 
 happens. 
 
@@ -1545,7 +1339,7 @@ enlightenment or transformation or whatever is just another
 way for the mind to sustain itself, another way for the mind to 
 keep up its motion. 
 
-Seeking money-power-pleasure and seeking the divine 
+Seeking money-power-pleasure and seeking the <u>divine</u> 
 may look much different, but they have the same quality. It’s 
 still a seeking. It’s still an attempt to get to someplace other 
 than where we are. It’s still the mind trying to go beyond the 
@@ -1558,18 +1352,11 @@ seeking Her.
 Then there is the ultimate solution — to just not give a 
 damn, to simply not do anything at all about it. But that does 
 
-
-5 ° 
-
-
-THE MIND 
-
-
 not alter anything, because the deep-down suffering is still 
 there. And who is it that is choosing not to give a damn? Yes, 
-the mind. To choose not to care is to perpetuate the chooser, 
-is to perpetuate this illusory “I.” It’s the same game and the 
-problem continues. Pretending that it doesn’t exist is merely 
+the mind. To choose not to care is to <u>perpetuate</u> the chooser, 
+is to perpetuate this <u>illusory</u> “I.” It’s the same game and the 
+problem continues. <u>Pretending</u> that it doesn’t exist is merely 
 another way for the problem to sustain itself. 
 
 Mind is the problem, but look carefully and we see that 
@@ -1581,7 +1368,7 @@ attempts to get there are ways of not getting there. All ways
 out lead back in. It is like holding up a mirror to a mirror — an 
 infinite regression, limitless, never-ending. 
 
-Everything whatsoever is grist for the mind in terms of 
+Everything whatsoever is <u>grist</u> for the mind in terms of 
 it perpetuating itself. There is absolutely no activity of any 
 kind that cannot serve the mind's purpose, since activity is the 
 mind. All efforts to choose, to struggle, to seek goals and to 
@@ -1595,32 +1382,25 @@ all of it, everything sustains the mind, is the mind. Nothing is
 left out. Everything whatsoever about us is part-and-parcel of 
 the problem. “We” ourselves are the problem. 
 
-If “you” and “I” are the problem in our life, how can that 
-problem be solved? It can’t. How can we get away from this 
+**If “you” and “I” are the problem in our life, how can that** 
+**problem be solved? It can’t. How can we get away from this** 
 
-
-5i 
-
-
-PART ONE 
-
-
-ficticious “you” and “I” then? We can't; that's who “we” are. 
-How can we improve our situation then? We can't. We can 
-fool ourselves of course, but at the deepest level there is no 
-way to improve it. 
+**<u>ficticious</u> “you” and “I” then? We can't; that's who “we” are.** 
+**How can we improve our situation then? We can't. We can** 
+**fool ourselves of course, but at the deepest level there is no** 
+**way to improve it.** 
 
 Just see that all our solutions are the problem, all our 
-escapes are the imprisonment, all of our getting better is the 
+escapes are the <u>imprisonment</u>, all of our getting better is the 
 illness. Further, see that we must try to solve it, escape from it, 
 improve it because that is the nature of the mind, that is what 
 it does, that is who “we” are. It is totally unsolvable. All of our 
 solutions and non-solutions are the obstacle. 
 
 Question: If all this is so, then what should be done? 
-Answer: Nothing, because nothing can be done. Question: If 
+Answer: **Nothing**, because nothing can be done. Question: If 
 nothing can be done, then where do we go from here? 
-Answer: Nowhere. Question: But then what is the point of all 
+Answer: **Nowhere**. Question: But then what is the point of all 
 this? Answer: There is no point. 
 
 The mind thinks that everything must have a point, 
@@ -1636,15 +1416,8 @@ that is simply another way of perpetuating itself, perpetuating
 the separate “you” and “me.” 
 
 In fact, a logician would note that these concepts have 
-contained a number of contradictions. It doesn’t matter. There 
+contained a number of <u>contradictions</u>. It doesn’t matter. There 
 will be more; it has to be that way. Besides, they’re fun. 
-
-
-52 
-
-
-THE MIND 
-
 
 All these words — past and future and this sentence 
 too — are just devices to create a situation where something 
@@ -1655,53 +1428,13 @@ can’t be slowed down either.
 
 In truth — do you enjoy the joke? — in truth, these words 
 are merely a playing in the sandbox, a passing of toys back and 
-forth, a building of castles in the damp sand. There is no point 
+forth, a building of <u>castles</u> in the damp sand. There is no point 
 to them at all. See the point. 
-
-
-53 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 ## Chapter Twelve 
-
 
 The central dilemma that we humans find ourselves in, 
 the central problem of our life, is not solvable at the level at 
@@ -1713,32 +1446,25 @@ effort to get out only sinks him deeper and deeper into the
 sand. 
 
 What is the problem? The problem is that the mind is 
-a problem-solving mechanism which is obsessed by the prob- 
+a problem-solving mechanism which is  by the prob- 
 lem of its own survival. It seems as if this problem is some- 
 thing inherited by the mind. It seems as if the mind finds 
-itself alone and separate in a world which seems indifferent at 
-best and overtly hostile at worst. But it isn’t that way. The 
-mind creates its own problem — and then spends its energy 
-trying to solve its self-created problem. 
+itself alone and separate in a world which seems indifferent at
+best and <u>overtly</u> <u>hostile</u> at worst. But it isn’t that way. **The** 
+**mind creates its own problem — and then spends its energy** 
+**trying to solve its self-created problem.** 
 
 Of course, since the problem is an illusion it cannot be 
-solved. The mind as controller, chooser, guider of its destiny 
+solved. The mind as controller, chooser, guider of its <u>destiny</u> 
 does not exist — only stimulus-response exists. If the mind-as- 
 controller doesn’t exist, how can it survive? By pretense; by not 
 seeing that it doesn’t exist. 
 
-
-57 
-
-
-PART TWO 
-
-
 The mind is a magic show, a trick with mirrors, it’s the 
-magician who makes something appear to be so when it isn't. 
+<u>magician</u> who makes something appear to be so when it isn't. 
 You see the lady in the box sawed in half, yet she is not sawed 
 in half; something is ficticious. This is like the mind. The 
-non-existent mind-magician survives through the sleight-of- 
+non-existent mind-magician survives through the <u>sleight</u>-of- 
 hand of working on the problem of its survival. 
 
 If we look at our life carefully, we see that it is about 
@@ -1752,8 +1478,8 @@ something which doesn't exist can survive. It’s willing to use
 a whole lifetime in the misery of this absurd struggle. 
 
 And it is not only willing to do so but it must do so; that 
-is its nature. The mind — you and I — will act out this comic 
-tragedy right up to the moment of stepping into our grave. 
+is its nature. The mind — you and I — will act out this <u>comic</u> 
+<u>tragedy</u> right up to the moment of stepping into our <u>grave</u>. 
 The mind has no choice; this is what it must do. It cannot do 
 anything else than be the magician — and it is the ultimate 
 magician, for its trick is that the magician herself appears to 
@@ -1761,14 +1487,13 @@ be there but is non-existent.
 
 So the problem cannot in any way be solved, since all 
 efforts to do so constitute the problem. The problem can only 
-be transcended, but that transcendence is not a doingness of 
+be <u>transcended</u>, but that transcendence is not a doingness of 
 any kind. Nothing is done. Nothing is improved or changed, 
 since at the deepest level no improvement or change is possi- 
 ble. Rather an awareness, a seeing arises and then the problem 
 is no longer experienced as a problem. 
 
 
-58 
 
 
 # EXISTENCE 
@@ -1807,13 +1532,6 @@ ining ways to do so, trying this method and that method, but
 nothing seems to work. Because no matter how hard it tries to 
 be a butterfly, it still stays a caterpillar. 
 
-
-59 
-
-
-PART TWO 
-
-
 It may be an “improved” or “better” caterpillar but its 
 fundamental essence is still caterpillarness. 
 
@@ -1838,9 +1556,6 @@ The key is being a caterpillar. If the caterpillar is busy
 trying to become a butterfly or a better caterpillar it is not 
 simply being a caterpillar. Let it just be a caterpillar — then the 
 butterfly part will take care of itself. 
-
-
-60 
 
 
 
@@ -1870,13 +1585,6 @@ The true self is like an empty blue sky — vast, silent,
 unchanging. It’s pure consciousness, pure existence. It has no 
 form, and it doesn't look like anything. It is reality, but has 
 nothing to do with the mind’s stories of reality. 
-
-
-61 
-
-
-PART TWO 
-
 
 It is truth, but has nothing to do with concepts or 
 words. It is beauty itself, but a beauty beyond form or image. 
@@ -1911,12 +1619,6 @@ What is truth? Truth is a sunset, truth is rain on the
 streets, truth is percolating coffee. It is whole. Truth is like a 
 
 
-62 
-
-
-EXISTENCE 
-
-
 hologram in that each part of it contains the totality. Truth is 
 not a sum of the parts and no amount of explanation can ever 
 reach it; it simply is what it is. 
@@ -1949,13 +1651,6 @@ ly talked about. Words immediately distort them. If this is
 true of water or a rose, how much more true is it of words 
 about being.. .self.. .existence. The moment we talk about it we 
 fall into error and distortion and falsity. 
-
-
-63 
-
-
-PART TWO 
-
 
 Thus when we say that being is truth or bliss or peace 
 it must be remembered that this is the language of poetry, of 
@@ -1992,12 +1687,6 @@ bolism of stone statues, but not beyond other symbolisms. So
 he assumed that Joshu was talking about external temples. 
 
 
-64 
-
-
-EXISTENCE 
-
-
 But Joshu had no interest in external temples, he was 
 talking about the temple within. He was saying that unless we 
 see into the nature of the mind we are lost, we’ll never find out 
@@ -2015,7 +1704,7 @@ Truth is the immediate, the foreground, but we don’t
 see it because we’re scanning the heavens for it. 
 
 
-65 
+
 
 
 ## Chapter Fourteen 
@@ -2044,12 +1733,6 @@ may be chartreuse.
 
 This might seem like an out-of-the-way or irrelevant 
 matter, but it extends into our whole life. 
-
-
-66 
-
-
-EXISTENCE 
 
 
 Let's say we feel that our girlfriend is boring. To us 
@@ -2084,13 +1767,6 @@ desire for anything more whatsoever? A handful of times?
 If bliss is the criterion — and it is — then we’re missing 
 the mark. What is wrong? We go on fixing things, improving, 
 solving problems — and our situation remains the same. 
-
-
-67 
-
-
-PART TWO 
-
 
 Seeing this, we begin to look at the root of the prob- 
 lem — the mind itself — instead of the leaves. Once we begin to 
@@ -2127,12 +1803,6 @@ followed the via negativa , the negative way, in referring to
 existence. They refer to it by indicating what it is not. 
 
 
-68 
-
-
-EXISTENCE 
-
-
 Thus in the Upanishads there’s a famous passage which 
 describes the existence as “not this, not that.” Whatever 
 description we use, it is not that. This seems a bit closer. For 
@@ -2165,20 +1835,10 @@ something or against something. But the One is everything; it
 excludes nothing, desires nothing, seeks nothing, is against 
 nothing. How then can there be a struggle? The existence is 
 
-
-69 
-
-
-PART TWO 
-
-
 playing, it likes to look upon itself from different points of 
 view... different entities. And part of this play or lela is that 
 those points of view which have consciousness imagine them- 
 selves to be separate entities. 
-
-
-70 
 
 
 
@@ -2208,13 +1868,6 @@ thinks it is separate, it is not. The attempt to survive perpetu-
 ates its sense of separateness, but actually it is never separate. 
 There is only the ocean, evolving and changing its form on 
 the surface, yet remaining always the same. 
-
-
-7i 
-
-
-PART TWO 
-
 
 Actually, the only problem the wave has is that it is try- 
 ing to solve a problem. The moment it gives up its problem of 
@@ -2250,12 +1903,6 @@ because of the mud blocking it. Remove that mud, and the
 light that was always there is revealed. 
 
 
-72 
-
-
-EXISTENCE 
-
-
 Another analogy is of the sun shining on a cloudy day. 
 If clouds cover the sky then the sun cannot be seen, yet it is 
 still there. This is our situation. Those clouds are thoughts, 
@@ -2288,13 +1935,6 @@ could desire in the afterlife are all here now. “The kingdom of
 heaven is within you,” Jesus said. It is Existence itself which 
 reincarnates into new forms. 
 
-
-73 
-
-
-PART TWO 
-
-
 Existence keeps taking new forms and the surface of 
 things keeps changing just as the surface of the ocean is con- 
 stantly in motion. But underneath, all is changeless, silent, 
@@ -2326,9 +1966,6 @@ need to be solved. Awakening is enough. Then the dream
 vanishes and the unsolvable problem vanishes with it. 
 
 
-74 
-
-
 
 ## Chapter Sixteen 
 
@@ -2357,13 +1994,6 @@ it’s not real.
 
 Similarly, if with one of the mind’s tapes or programs 
 we suddenly remember that it’s only a tape, if we suddenly 
-
-
-75 
-
-
-PART TWO 
-
 
 notice it as a tape — a beautiful tape or an ugly tape, but still 
 only a tape — then the movie is over for that moment. The 
@@ -2397,13 +2027,6 @@ reality, then, so to speak, the Self is caught once more; then
 the Being has been sucked into the illusion once again. Again 
 It has fallen asleep. Once more It has become identified with 
 
-
-7 6 
-
-
-EXISTENCE 
-
-
 the mind, with the automatic stimulus-response mechanism. 
 Now the survival programming of the mechanism is in the 
 driver's seat. 
@@ -2436,13 +2059,6 @@ ness, it is something being done by the mind. For the mind is
 all about effort and struggle and striving; the mind can never 
 be effortless since it is always in one way or another trying to 
 be somewhere other than where it is. 
-
-
-77 
-
-
-PART TWO 
-
 
 Awareness, not being of the mind, is effortless. It takes 
 place outside of the whole stimulus-response mechanism, and 
@@ -2478,12 +2094,6 @@ else would be doing something with the tape/story, and pure
 awareness is a non-doingness. 
 
 
-7 « 
-
-
-EXISTENCE 
-
-
 We allow each leaf — each tape — to come into our 
 awareness without desire or avoidance, and we allow it to 
 leave without clinging or pushing. There are no preferences. 
@@ -2500,9 +2110,6 @@ the sky, then disappears. There is no reason for the cloud to be
 there; it just happens to be there. And while it is there it is 
 silently watched. We watch the thoughts of the mind in just 
 the way that we would watch clouds pass across the sky. 
-
-
-79 
 
 
 
@@ -2532,12 +2139,6 @@ noticing the stories/tapes that are running as we’re taking the
 shower. It would mean noticing what is getting in the way of 
 just being there with the shower. As we notice the tapes, we 
 neither reject them nor encourage them. 
-
-
-80 
-
-
-EXISTENCE 
 
 
 We do nothing with them. Its simply a noticing that 
@@ -2572,13 +2173,6 @@ no attachment to it either. Then it will be just another belief
 or story and will be seen as such. Divested of the quality of 
 being ""true” and ‘"real,” it ceases to engage us. 
 
-
-81 
-
-
-PART TWO 
-
-
 Thus attachment to a person or object actually consists 
 of the moment-to-moment clinging that occurs when there is 
 a story about it. And the interactions and circumstances of 
@@ -2610,9 +2204,6 @@ resulting emptiness, Existence can play its Melody through us
 more and more, like Breath through a hollow flute. 
 
 
-82 
-
-
 
 ## Chapter Eighteen 
 
@@ -2640,13 +2231,6 @@ because of the post-hypnotic suggestion. Yet on top of that we
 will add a soundtrack, a voice-over, a story or rationalization 
 about why we are desiring soup now. That is, we’ll justify our 
 impulse. That’s one of the things the mind does. 
-
-
-83 
-
-
-PART TWO 
-
 
 More than that, we’ll feel that we’ve chosen now to have 
 a bowl of soup because it’s lunchtime, when in fact we’re act- 
@@ -2681,13 +2265,6 @@ implanting the proper combination of post-hypnotic sugges-
 tions? Yes. Why is this important? Because early experiences in 
 life function essentially like post-hypnotic suggestions. 
 
-
-84 
-
-
-EXISTENCE 
-
-
 When were experiencing the shock and pain, physical 
 or emotional, of a deeply perceived threat to survival then 
 whatever “suggestions” are present at that time will be burned 
@@ -2719,13 +2296,6 @@ behavior with survival and will create that situation over and
 over again in order to “survive.” Look around and we’ll see 
 people (including ourselves) creating recurring patterns again 
 and again in their lives. 
-
-
-85 
-
-
-PART TWO 
-
 
 These patterns in our lives are absolutely non-nurturing 
 and yet we are all frozen in them, clinging to them — and 
@@ -2761,12 +2331,6 @@ as a woman, engaged on an unconscious level in proving that
 men are bastards. And when through her unwitting behavior 
 
 
-86 
-
-
-EXISTENCE 
-
-
 each love affair breaks up abruptly and that man leaves her 
 too, she gets to be right again. She gets to feel self-righteous 
 and self-justified. “See? I told you. Men are bastards.” 
@@ -2800,13 +2364,6 @@ force and power.
 These methods are valuable in helping us to adjust to 
 life. But while they can ameliorate some of the problems that 
 
-
-87 
-
-
-PART TWO 
-
-
 we humans create for ourselves, they cannot relieve the deep- 
 est suffering of the mind because they don’t involve a deep 
 seeing into the nature of the mind itself, which creates its suf- 
@@ -2817,9 +2374,6 @@ set up by intense threat-to-survival incidents — very unlikely
 since there are so many of them — they would still not lead to 
 no-mind, to liberation. Why? Because liberation is not of you 
 and I; it is from you and I. 
-
-
-88 
 
 
 
@@ -2849,13 +2403,6 @@ because only awareness is not an activity and doesn’t keep the
 mind's motion going. Only awareness is silent, effortless, pas- 
 sive, not of the mind. Only awareness cuts at the root by 
 watching the very nature of mind itself. 
-
-
-89 
-
-
-PART TWO 
-
 
 For example, let's suppose were running a tape that 
 men are bastards and thereby creating a situation where our 
@@ -2891,12 +2438,6 @@ dreaming, then the wrongness and the rightness, the labels
 and interpretations and acts gradually disappear. 
 
 
-90 
-
-
-EXISTENCE 
-
-
 Then we can simply be with what’s there — a child, a 
 flower, a tax form, a lover, a sunset. In that moment there are 
 no obstacles between us and Existence in all Its many forms. 
@@ -2930,13 +2471,6 @@ quietly with no activity. In the stillness and silence of sitting
 quietly, the mind will come to seem more and more flimsy, 
 distant. And one day it will simply be gone. 
 
-
-9i 
-
-
-PART TWO 
-
-
 A question: If awareness is not a doingness of any kind, 
 how do we start? How do we get it to begin? Actually its 
 there already, so beginning is really a matter of allowing it to 
@@ -2962,12 +2496,9 @@ understand it. We can just allow it. We just become a witness
 to our own movement. There are no instructions. 
 
 
-92 
 
 
 # Opening 
-
-
 
 
 ## Chapter Twenty 
@@ -2998,10 +2529,6 @@ we seek to survive.
 
 Along with this predominant pattern or survival-mode, 
 each of us has a predominant method or complex of methods 
-
-
-PART THREE 
-
 
 for seeking happiness. This is how we feel we can achieve ful- 
 fillment, completion, satisfaction. It’s our dream, our search. 
@@ -3036,12 +2563,6 @@ hump, I'll relax.” “Once I get past these obstacles, I'll be able
 to enjoy myself.” 
 
 
-96 
-
-
-OPENING 
-
-
 Now the interesting thing is that sometimes we do 
 reach our goal. We achieve what we wanted to achieve. And 
 what happens? We’re gratified for a little while. But then we 
@@ -3074,13 +2595,6 @@ our attachment grows and we whirl around faster we descend
 further into suffering. We don’t have what we want, or we’re 
 afraid of losing what we have. 
 
-
-97 
-
-
-PART THREE 
-
-
 If our attachments cause suffering, why do we cling to 
 them? Because all our attachments feel comfortable on the 
 surface. We like our attachments. We get a payoff from them. 
@@ -3111,7 +2625,6 @@ is scary to our mind because the mind cannot comprehend it.
 So we cling to the partial, missing the bliss of the Whole. 
 
 
-98 
 
 
 ## Chapter Twenty-one 
@@ -3140,10 +2653,6 @@ us stuck in tension and suffering. Do we then forcibly give up
 our attachments? Do we reject them, run away from them? It 
 doesn’t work. To reject something is still to be attached to it; 
 it’s just the opposite side of the same coin. 
-
-
-PART THREE 
-
 
 The attachment is still running us; were still at the 
 effect of it. That is why force doesn’t work, because it doesn't 
@@ -3177,12 +2686,6 @@ Each new path is like a drug trip. It feels good at first,
 we get high on it. But after a while it becomes obsessive; we 
 cling just to avoid coming down. “I'll be able to relax as soon 
 as I achieve such-and-such.” 
-
-
-xoo 
-
-
-OPENING 
 
 
 Awareness is seeing that this version of reality — the one 
@@ -3219,20 +2722,13 @@ unconsciousness that keeps us trapped. All paths are good not
 only for whatever value is there, but also in the sense that they 
 provide opportunities to see through them too. 
 
-
-ioi 
-
-
-PART THREE 
-
-
 All devices, all therapies can be useful. All are channels 
 to Reality as our awareness becomes more real. Awareness 
 makes our moment-to-moment living — just as it is — the road 
 to heaven. 
 
 
-ioa 
+
 
 
 ## Chapter Twenty-two 
@@ -3262,10 +2758,6 @@ we can become attached to that.
 
 The attachment may be to serving others or to saving 
 the world. It may be to a certain way of acting — very loving, 
-
-
-PART THREE 
-
 
 or very high, or very surrendered. It may be to the rapture 
 found in certain absorption states. All such attachments are 
@@ -3301,12 +2793,6 @@ ness there is no mind, since the mind is just tapes, thoughts.
 When there are no tapes there is no mind either. 
 
 
-104 
-
-
-OPENING 
-
-
 In that moment there’s only silence. In this silence we 
 encounter the Existence. It is already there waiting, but we are 
 not silent, we are not absent, so there’s no experience of It. 
@@ -3338,13 +2824,6 @@ and stories because to the extent that one surrenders one has
 no goals other than to be surrendered, to be in love. It gives us 
 a taste of Existence, of bliss because the controller becomes 
 mostly and temporarily absent. 
-
-
-105 
-
-
-PART THREE 
-
 
 But who is it that makes the decision to be surrendered? 
 The mind, for all decisions are of the mind. Behind the act of 
@@ -3380,12 +2859,6 @@ relaxation. It can be a preliminary act to meditation. Guided
 not. It’s actually a kind of guided daydreaming. 
 
 
-106 
-
-
-OPENING 
-
-
 Both prayer and guided imagery are still mind-motions, 
 one with ideas and the other with images. Prayer is noisy still, 
 it’s a mental talking. Guided imagery is the visual form of this, 
@@ -3397,6 +2870,7 @@ of affirmations — another kind of mind-occupation.
 All things have their uses at the appropriate time. All is 
 exactly as it should be. And it’s also so, as the saying goes, that 
 “when we give it all up we get it all back.” 
+
 
 
 ## Chapter Twenty-three 
@@ -3426,12 +2900,6 @@ The object of meditation can be almost anything. It can
 be a mantra or a mandala, an internal image or sound, or an 
 unanswerable question or paradoxical statement (a koan). It 
 can be a picture of an avatar or a particular movement or pose 
-
-
-108 
-
-
-OPENING 
 
 
 by the body (tai-chi, sufi dancing, yoga). The object can be 
@@ -3465,13 +2933,6 @@ read minds. It is a rare person who will not become attached
 to such powers and others once developed. Yet ultimately it’s 
 just another power trip on a more subtle level. It’s still the 
 mind working and in motion. 
-
-
-109 
-
-
-PART THREE 
-
 
 Seductive too are experiences of rapture in jhanic states, 
 brought about by prolonged and intense meditations. They 
@@ -3507,12 +2968,6 @@ Concentration meditation is still a doingness, it is still
 the mind trying to get somewhere. 
 
 
-no 
-
-
-OPENING 
-
-
 Why do we meditate? In order to obtain peace, rapture, 
 enlightenment or whatever label we give our goal. But it is 
 still a goal-process. And who is doing the meditating, who is 
@@ -3545,13 +3000,6 @@ passive, it is merely watching the leaves go by on the river —
 choosing none, preferring none, clinging to nothing. It is a 
 silence, a stillness that dissolves all things. 
 
-
-hi 
-
-
-PART THREE 
-
-
 Concentration meditation is not necessary, but can be a 
 valuable device. It is useful in that it can create a situation 
 where awareness can begin to happen. In slowing down the 
@@ -3568,9 +3016,6 @@ now with awareness. We begin where we are. But if we don’t
 yet see the nature of the mind’s game then concentration 
 meditation can be useful. It creates a situation where aware- 
 ness can begin spontaneously, and be more penetrating. 
-
-
-112 
 
 
 
@@ -3601,13 +3046,6 @@ master, our slumbers may continue for quite a while.
 An interesting attachment is the feeling that we have to 
 save the world. The world doesn’t need saving because it’s 
 already perfect. 
-
-
-“3 
-
-
-PART THREE 
-
 
 As Byron Katie says, How do we know that the way the 
 world is is for the highest good? Because it is that way. How 
@@ -3643,12 +3081,6 @@ it shares its fragrance; nor does it ask itself whether it is liked.
 No, the fragrance is simply there. 
 
 
-114 
-
-
-OPENING 
-
-
 And the fragrance is not given off to help you or save 
 you. It is simply there out of the flower’s abundance, out of its 
 bliss and exuberance. The master is the same. 
@@ -3667,6 +3099,7 @@ he can go on forever. A body of knowledge is limited, but a
 master is unlimited. He knows nothing; he has attained to 
 perfect ignorance, so he can keep on talking for all eternity 
 and never exhaust the subject. 
+
 
 
 ## Chapter Twenty-five 
@@ -3696,12 +3129,6 @@ It is a moment when all doingness simply drops. Not
 that we drop it. We simply see the true reality of things and in 
 that moment the doingness drops away of itself. This doesn’t 
 mean that we necessarily become inactive. 
-
-
-116 
-
-
-OPENING 
 
 
 Instead, it means that we do whatever we do — without 
@@ -3736,10 +3163,6 @@ the way its flowing. And the issue is not whether or not we re
 going to flow with the river, because were going to do that in 
 any event. It is vast, and “you” and “I” are atoms. 
 
-
-PART THREE 
-
-
 Rather, the issue really is whether we will struggle or 
 not as we flow down the river. The question is whether we’ll 
 become aware of who is creating the struggle in our life. To 
@@ -3773,13 +3196,6 @@ there, and it can be used as a tool just as a hammer is picked
 up and used when needed. The capability to compute is still 
 there, but the computer is silent unless called upon. 
 
-
-118 
-
-
-OPENING 
-
-
 If an awakened person crosses a street the computer- 
 brain will figure out the right time to cross. But the mind, the 
 “separate” person is vanished. That which struggled to control, 
@@ -3794,7 +3210,7 @@ flows by itself. Indeed, at the deepest level we are the river.
 We’ve already arrived. What are we struggling about? 
 
 
-119 
+
 
 
 ## Chapter Twenty-six 
@@ -3823,9 +3239,6 @@ At the deepest level, all there ever is to do is to notice the way
 it is right now, to be fully conscious of it. Then we’re in deep 
 harmony with the way things are. We’re in deep harmony with 
 Existence. 
-
-
-OPENING 
 
 
 To use a different terminology, all there ever is to do is 
@@ -3861,13 +3274,6 @@ aware of the way it is. Since that is not a doingness, it’s doing
 nothing. But again, doing nothing doesn’t necessarily look like 
 inactivity; it looks like just doing what we do. 
 
-
-X2I 
-
-
-PART THREE 
-
-
 Just doing what we do, following our inner guidance, 
 without performing our actions as means to an end. Then 
 each action can become a blissful end-in-itself. 
@@ -3897,9 +3303,6 @@ out? This is mind, struggling to get to a place where it already
 is, striving to achieve a result that’s already achieved. 
 
 
-122 
-
-
 
 ## Chapter Twenty-seven 
 
@@ -3927,13 +3330,6 @@ instant of awakening, we see that we’ve always been awakened
 because there’s no awakening to achieve. Awakening is seeing 
 that nothing whatever needs to be achieved, including of 
 course awakening itself. It just happens when it does. 
-
-
-123 
-
-
-PART THREE 
-
 
 We’ve been dreaming, and in the dream creating walls, 
 obstacles, barriers, as well as power and money, achievements 
@@ -3969,12 +3365,6 @@ tion of changing the circumstances of one’s life first, or of
 changing one’s programming. Journeys and preparations and 
 
 
-124 
-
-
-OPENING 
-
-
 changes all take time; they are all of the mind, part of the 
 dream. No, one simply awakens; it is instantaneous. We just 
 see, no preparation is needed. And in that seeing the concept 
@@ -3983,7 +3373,7 @@ fact, the mind cannot be enlightened. The mind is actually an
 illusion; with what will we enlighten it? 
 
 
-125 
+
 
 
 ## Chapter Twenty-eight 
@@ -4011,12 +3401,6 @@ denly we see through all our efforts to remain occupied. We
 see that awareness is all that is ever needed or possible, and 
 that our efforts to achieve a result are what have been causing 
 the delay. 
-
-
-126 
-
-
-OPENING 
 
 
 This is satori, awakening. But it’s not the final, ultimate 
@@ -4051,13 +3435,6 @@ tapes are all gone, they are simply there no more. And we’re
 there no more either. All desires, all goals, all clingings, all 
 programs are absent, extinguished. There is no past and no 
 
-
-127 
-
-
-PART THREE 
-
-
 future anymore, there is only the moment. The ego’s smoky 
 candle flame has gone out, but now the sun lights up the sky. 
 We are dead, we are gone, but now God is alive. While we 
@@ -4076,8 +3453,6 @@ Now It moves, It controls.
 
 As Jesus said: “Thy will be done.” 
 
-
-128 
 
 
 
@@ -4110,10 +3485,6 @@ being what It is. It is totally sufficient in Itself at each instant.
 It has no purpose except Itself. It has no reason except Itself. 
 The rose is not trying to be something else; it is in bliss to be 
 what it is this moment. 
-
-
-PART FOUR 
-
 
 Clouds, rivers, trees, life itself — all of Existence is in a 
 deep ecstasy. All except us humans. We humans are in secret 
@@ -4148,12 +3519,6 @@ pain, pleasure is taking a rest and gathering energy; soon it
 will come. 
 
 
-132 
-
-
-SILENCE 
-
-
 When the pendulum swings to one side it must then 
 swing to the other, but it remains the same pendulum. Beauty 
 is impossible without ugliness. Good is impossible without 
@@ -4185,13 +3550,6 @@ requires a position, a point of view, an identity. When there is
 no identity and no position there is no bad, and no good 
 either. Then all simply is what it is. 
 
-
-133 
-
-
-PART FOUR 
-
-
 There is no way to foresee the ultimate consequences of 
 anything. That which we call bad may lead to good. That 
 which we label good may lead to bad. Certain monastic orders 
@@ -4222,9 +3580,6 @@ certain way — and that’s the only cause of suffering. It isn’t
 logical, but it can be seen. 
 
 
-134 
-
-
 
 ## Chapter Thirty 
 
@@ -4253,13 +3608,6 @@ are nothing, they are one. They’re one because they’re unified,
 they’re in harmony. There’s no longer any distinction between 
 the conscious and unconscious mind, because everything is 
 conscious. 
-
-
-135 
-
-
-PART FOUR 
-
 
 Such a person is no longer a cacophony of successive 
 mind-states — anger replaced by hope replaced by frustration 
@@ -4294,12 +3642,6 @@ seriously. They won’t be “truth” to her, they won’t be “reality.”
 She’ll just play with them. 
 
 
-136 
-
-
-SILENCE 
-
-
 And if she talks again tomorrow she’ll probably con- 
 tradict what she said today, and deliberately so. For the listen- 
 ing mind will try to box up what she says, to position it, to 
@@ -4332,13 +3674,6 @@ they don’t come unless she asks them. They do not run her
 because they don’t come uninvited. Besides, she’s not there, 
 there is nobody to run. 
 
-
-137 
-
-
-PART FOUR 
-
-
 She is not there because who she was has died. Who 
 she thought she was was her beliefs, attitudes, thoughts, goals, 
 emotions, sensations, desires, status — all of her positions, all 
@@ -4369,7 +3704,7 @@ controller, the chooser disappeared she disappeared too. Now
 Existence chooses. Now the Mystery is the controller. 
 
 
-138 
+
 
 
 ## Chapter Thirty-one 
@@ -4399,13 +3734,6 @@ But this is not enough for the mind. The mind finds it
 difficult to trust. The mind asks, “But what if I die? What if I 
 don’t get enough to eat? What if I don’t get enough money? 
 What if I don’t get the right partner?” And so on. 
-
-
-139 
-
-
-PART FOUR 
-
 
 Mind’s questions presuppose certain preferences. But 
 the awakened person has no more preferences. If death comes, 
@@ -4438,12 +3766,6 @@ profound bliss that is independent of circumstances.
 
 Just to see the sky is too great a gift for him, it overflows 
 into bliss. Just to see a tree blow in the wind or hear the crick- 
-
-
-140 
-
-
-SILENCE 
 
 
 ets cry is the fulfillment of his being. To eat his dinner or to 
@@ -4496,12 +3818,6 @@ the mind this looks cruel. But it may be the precise action that
 will awaken that devotee in that moment, in that situation. It 
 
 
-142 
-
-
-SILENCE 
-
-
 may be the greatest compassion. There is no way to judge it, 
 Existence itself is acting. He may found a hospital, or throw a 
 party. He may teach people how to dance, or sit silently. He 
@@ -4533,13 +3849,6 @@ His morality is a function of the moment; it’s a spontaneous,
 harmonious response. He is not thinking in terms of being 
 “moral” or “good.” He simply responds in the appropriate way. 
 He is just natural, flexible. 
-
-
-143 
-
-
-PART FOUR 
-
 
 All other so-called moralities are suppressions of the 
 mind’s greed and violence, they are a using of force against 
@@ -4573,13 +3882,6 @@ the very fabric of Existence itself. So even though we may be
 in misery in our prison, we cling to our dogmas and our rules 
 and rituals. 
 
-
-144 
-
-
-SILENCE 
-
-
 They serve the purpose of reducing the unlimited to the 
 limited. They reduce the unknowable to the knowable. They 
 are familiar, a comfortable misery. Then we try to escape this 
@@ -4611,13 +3913,6 @@ passing; she watches both. They are the same — simply waves
 on the surface of Existence. As she watches the sadness, by 
 and by it disappears like a cloud passing to the horizon. It was 
 beautiful but she doesn't cling to it. 
-
-
-145 
-
-
-PART FOUR 
-
 
 Now she witnesses whatever is next. It might sound as 
 if she’s indifferent, but she’s not — she’s just detached. To be 
@@ -4652,13 +3947,6 @@ cling even for a moment.
 The person of wisdom is like this. His consciousness is 
 empty, silent. If something comes into his consciousness he 
 
-
-146 
-
-
-SILENCE 
-
-
 accepts it, loves it, is grateful for it, but doesn’t cling to it. 
 Even to say that he does these things is inaccurate, for he is 
 not there. Rather, the acceptance, the love, the gratitude is 
@@ -4671,7 +3959,7 @@ there, a choiceless mirror-like awareness of what is there —
 and this is the acceptance and love. 
 
 
-*47 
+
 
 
 
@@ -4701,12 +3989,6 @@ sun. Let the mind fall away through awareness, and suddenly
 love is there, it is already there. It has always been there. It is 
 the bottom-line. We can’t do it. Yet become still inside and it 
 is already present. When mind is absent, love is present. 
-
-
-148 
-
-
-SILENCE 
 
 
 Since love is at the level of the Self, it has no form to it. 
@@ -4741,13 +4023,6 @@ on the special and unique. But to love, each person has the
 same essence; indeed, everything in Existence has the same 
 essence. 
 
-
-149 
-
-
-PART FOUR 
-
-
 True love is non-directional, therefore. It’s not directed 
 towards particular persons or things; it has no address on it. It 
 is open to everyone and everything. 
@@ -4769,9 +4044,6 @@ Love is not hot as passion is. Neither is it cold. It is just
 in the middle — a quiet, subde, warm fragrance which can’t be 
 practiced or implemented, but which expresses spontaneously 
 when the mind is no longer there. 
-
-
-150 
 
 
 
@@ -4801,10 +4073,6 @@ Let’s not try to change ourselves or blame ourselves, because
 all that is the usual game. Trying to change ourselves hasn’t 
 worked and won’t work at the deepest level. Yet in becoming 
 aware, certain things fall away from us. 
-
-
-PART FOUR 
-
 
 If we force ourselves to give something up then the 
 desire will still be there, just suppressed. But as we become 
@@ -4842,12 +4110,6 @@ to dissolve barriers and hatreds. It can be looking within to see
 how our own stories are perpetuating our separateness. 
 
 
-152 
-
-
-SILENCE 
-
-
 In doing this, any type of rigidity that we try to impose 
 on ourself or life is again a suppression, a form of violence. 
 Life is flexibility, openness, a plunge into the unknown each 
@@ -4880,20 +4142,13 @@ awake, all rules and disciplines fall away; they’re just irrelevant
 now. An awakened being may look disciplined because of a 
 daily routine or rhythm, but that’s just the appearance. 
 
-
-153 
-
-
-PART FOUR 
-
-
 The routine of an awakened person is not a discipline 
 because it’s not something imposed. Rather, it’s a rhythm that 
 has arisen naturally, spontaneously, by itself. The Melody is 
 moving unimpeded now in that vessel. The light is on. 
 
 
-i54 
+
 
 
 ## Chapter Thirty-five 
@@ -4923,13 +4178,6 @@ alive, because by moving to extremes it keeps moving.
 The master is a contrast to that. She’s balanced, like a 
 tightrope walker. She leans neither to the left nor the right; 
 but stays balanced over the center, not going to extremes. 
-
-
-i55 
-
-
-PART FOUR 
-
 
 She has a great sense of appropriateness. She’s just easy, 
 ordinary. To be ordinary is a rare quality, for the mind is 
@@ -4962,12 +4210,6 @@ look: The Existence is vast, infinite, incomprehensible — and
 we are going to change it? We know better than God how 
 things should go? We make war on Reality — especially in our 
 mind — and then wonder why life seems so difficult. 
-
-
-156 
-
-
-SILENCE 
 
 
 Since the mind finds it difficult to relax, one device is to 
@@ -5003,9 +4245,6 @@ bottom, they are the same. Awakening is going so far into the
 present moment that you can’t get back out. 
 
 
-J 57 
-
-
 
 ## Chapter Thirty-six 
 
@@ -5034,12 +4273,6 @@ jections. The River mirrors our own struggles. For instance,
 the qualities that annoy us about others are projections of 
 qualities that we ourselves have. Otherwise, we would notice 
 them but they wouldn’t have any charge for us. 
-
-
-158 
-
-
-SILENCE 
 
 
 If arrogance in someone bothers us it’s because we’re 
@@ -5073,13 +4306,6 @@ is missing. In our universe, we are the person who has the
 opportunity to get off it. And there is no way to get off it and 
 still be right. Working on other people is a good way to stay 
 stuck in the mind. Let’s work on ourselves. 
-
-
-i59 
-
-
-PART FOUR 
-
 
 Does this mean that we never communicate how we 
 feel if were upset about something? Does it mean that we 
@@ -5115,12 +4341,6 @@ ought to be different — and how those stories are creating our
 sense of isolation and suffering. 
 
 
-160 
-
-
-SILENCE 
-
-
 When we become more silent within it will all begin to 
 work. We’ll experience the perfection of Existence, not as a 
 concept but as an experiential reality. Nothing will be seen as 
@@ -5154,13 +4374,6 @@ munion; it makes us real to others, it makes us available. Then
 we’re not trying to protect anything, for example our story, for 
 we’ve seen that there’s nothing to protect. 
 
-
-161 
-
-
-PART FOUR 
-
-
 The mind always feels that certain things need to be 
 protected for the sake of our survival. But what is really being 
 protected? Yes, the mind itself, the survival programming 
@@ -5171,9 +4384,6 @@ we’ll see more and more that what we are protecting isn’t
 worth protecting, and conversely, that what is really worth 
 protecting — the vast pregnant spaciousness and emptiness 
 within that we really are — needs no protection at all. 
-
-
-162 
 
 
 
@@ -5204,13 +4414,6 @@ For she knows that Existence is a vast mystery which
 cannot be penetrated. She knows that she knows nothing at 
 all, and so she simply opens her heart. She trusts. She allows 
 the River to carry her, she knows not where, she knows not 
-
-
-163 
-
-
-PART FOUR 
-
 
 why. But with that trusting heart she experiences the bliss of 
 allowing herself to be a part of the flow. Just to exist in each 
@@ -5246,12 +4449,6 @@ We can pin the butterfly down, but then it’s not a butterfly
 anymore; it’s dead. 
 
 
-164 
-
-
-SILENCE 
-
-
 Only the trusting heart really sees. As the fox said to the 
 little prince, “It is only with the heart that one sees rightly; 
 what is essential is invisible to the eye.” Facts, data, boxes do 
@@ -5284,13 +4481,6 @@ and we go to the lake to find this happiness. We lie back in
 the lake waiting for the moment of bliss, but it doesn’t come. 
 Why not? 
 
-
-165 
-
-
-PART FOUR 
-
-
 Perhaps because we were direct. We sought directly. But 
 Existence is indirect. It moves through hints and whispers, It 
 reveals itself through silence. Only when all seeking is gone 
@@ -5309,10 +4499,10 @@ when there is simply waiting with no goal in mind, then God
 finds you. The seeker is the sought. You are the goal. 
 
 
-166 
 
 
-## Chapter 
+
+## Chapter Thirty-eight
 
 
 God finds us when we’re not away from home. But God 
@@ -5339,17 +4529,6 @@ desires about part of it; it is to have no identification left with
 anything partial. And this means to have no attachment even 
 to any concept of God or Existence or enlightenment, because 
 all concepts whatsoever are partial. 
-
-
-Thirty-eight 
-
-
-
-167 
-
-
-PART FOUR 
-
 
 How can we leave our partial versions of reality behind 
 when were so mired in them? Awareness does it. We see that 
@@ -5385,12 +4564,6 @@ The value of concentration meditations — focusing on
 an object such as a mantra, an image, a koan, the breath, and 
 
 
-168 
-
-
-SILENCE 
-
-
 so on — is that they can still the waves of the mind and thus 
 give a taste of Silence. However, the effect is only temporary. 
 The mind is being suppressed, that’s all; it does not fall, it is 
@@ -5422,13 +4595,6 @@ not reality, that the mind as self-determiner does not exist,
 that the “I” does not exist, that all the grasping and seeking 
 and judgments and aversion concerning the problems of life 
 are the problem itself. 
-
-
-169 
-
-
-PART FOUR 
-
 
 Only through awareness can we see that at the deepest 
 level there is nowhere to go, that the goingness itself was the 
@@ -5462,13 +4628,6 @@ It’s the death of everything we’ve ever associated with
 any longer. The luggage full of stories and tapes and desires 
 has been put down forever. We leave behind all our burdens, 
 including the ultimate burden — the separate “I.” 
-
-
-170 
-
-
-SILENCE 
-
 
 Now death has no hold anymore. Death is dead, for we 
 have already died. In that death we are reborn, but it is not us. 
@@ -5515,12 +4674,6 @@ ness, the hell of mind — and that is what we do experience.
 But this hell also contains the seeds of another possibility. 
 
 
-172 
-
-
-SILENCE 
-
-
 To be conscious means to be split, to be divided. The 
 mind is always trying to be somewhere other than where it is. 
 The conscious mind is pulling in one direction and the 
@@ -5554,13 +4707,6 @@ awakened — it is not yet conscious. One must pass through the
 pain of partial consciousness before the doors of heaven can 
 open in complete consciousness. 
 
-
-173 
-
-
-PART FOUR 
-
-
 And then deliverance is here, in this life. In one sense, 
 the pathless path to awakening can be considered a regression 
 back through the history of the organism to life in the womb. 
@@ -5592,13 +4738,6 @@ But we cannot attain to our own non-existence; there is no
 way for us to reach that, for the very attempt to reach keeps 
 “us” in existence. All that can be done is to cultivate the 
 ground — and then it happens of its own accord. 
-
-
-l 74 
-
-
-SILENCE 
-
 
 Existence does it. It’s like the farmer growing his crop. 
 He tills the soil, plants the seeds and then waits. He must have 
@@ -5632,13 +4771,6 @@ It’s allowing the waves of the mind to subside, it’s allowing the
 bicycle to come to a stop and then just topple over. It is the 
 ultimate in doing nothing. 
 
-
-m 
-
-
-PART FOUR 
-
-
 And in that absence Existence reveals Itself. 
 
 The Zen master Zenrin said: 
@@ -5651,9 +4783,6 @@ Sitting silently, doing nothing, we imperceptibly merge
 into a harmony with the Existence... which is not trying to get 
 anywhere, which is not trying to accomplish anything, which 
 is simply the bliss of being what It is. 
-
-
-176 
 
 
 
@@ -5684,13 +4813,6 @@ where it can be still for awhile. And then the essential thing is
 that we are no longer moving in a particular direction or 
 dimension but are open to all dimensions, all directions.. .open 
 to whatever is happening, open to the Totality. 
-
-
-r 77 
-
-
-PART FOUR 
-
 
 An interesting metaphor: 
 
@@ -5725,13 +4847,6 @@ no clinging, no mind, no “I.” On the other hand, there is no
 consciousness either. Freedom is adding consciousness to this 
 state of inner stillness, and living in the world with it. 
 
-
-178 
-
-
-SILENCE 
-
-
 It is awareness without attachment, consciousness with- 
 out an object. The only difference between ourselves and a 
 Buddha, then, is that we have something that the Buddha 
@@ -5765,13 +4880,6 @@ drunkard, for no one is there. There is nobody, nothing. There
 is simply bliss, peace, grace, enchantment for no reason, no 
 cause. It’s just the quality' of the Mystery. 
 
-
-179 
-
-
-PART FOUR 
-
-
 In this state life is like the notes of a symphony, in Alan 
 Watts’ great metaphor. There is no attempt to get to the end 
 of anything, for each moment is the whole point. Each note is 
@@ -5788,8 +4896,6 @@ anything anymore. All things have merged into emptiness,
 the void.. .Nothing. Now there is only the pat-pat-pat of the 
 rain itself, vanishing into silence. 
 
-
-180 
 
 
 # Afterword 
@@ -5821,9 +4927,6 @@ that is its natural tendency when it isn’t being continuously
 stirred up by the mind’s motion. 
 
 
-183 
-
-
 We don’t need to be unduly concerned about the “right” 
 posture, schedule or technique. An undue concern would just 
 create more tension. There are many useful devices, such as 
@@ -5849,12 +4952,6 @@ to where you are — to where “you” aren't — may you experience
 much love. And may you experience the peace that passes all 
 understanding. 
 
-
-
-184 
-
-
-
 James M. Sloman is an investigative writer whose 
 subject is the human condition. He has sought under- 
 standing from a wide range of great teachers past and 
@@ -5875,16 +4972,8 @@ consciousness in everyday life, diet and nutrition, finding
 our true calling in life, and accessing our inner guidance. 
 He currently lives near San Francisco. 
 
-
-186 
-
-
-
 (This photo was used in the 1st edition 
 and in honor of that is used here.) 
-
-
-187 
 
 
 Thank you for reading Nothing. 
@@ -5909,13 +4998,6 @@ Songs From The Bottom Of The Sea
 
 Descriptions are on the next pages. 
 
-
-188 
-
-
-
-
-
 To place an order: 
 
 1 - 800 - 838-7360 
@@ -5931,9 +5013,6 @@ OceanBlue Publishing
 Tiburon, CA 94920 
 
 www.ocean-blue.com 
-
-
-189 
 
 
 MAY YOU BE HAPPY 
@@ -5972,16 +5051,8 @@ practical ways.
 
 Part 3, Mind, discusses following our inner guide, 
 
-
 May You 
 Be Happy 
-
-
-
-
-190 
-
-
 
 our inner voice or knowing, and how to distinguish it 
 from the other voices in our mind. (And other topics 
@@ -6061,11 +5132,6 @@ Humans
 
 James Sloman 
 
-
-192 
-
-
-
 grasp the inner work that will support the expressions he 
 or she would like to take into the world. 
 
@@ -6095,9 +5161,6 @@ is so thoroughly researched, from Taoism to diets, from
 evolution to empathy...” 
 
 — Vern Barnett, Kansas City Star 
-
-
-193 
 
 
 NOTHING 
@@ -6141,10 +5204,6 @@ tiful’.. .a superb job.”
 — DO, Fort Lauderdale 
 
 
-
-194 
-
-
 THE RIPPLE 
 
 A Mystery Story 
@@ -6180,12 +5239,6 @@ and though redemption is found at last, the price is the loss of
 a soul.” 
 
 — Michael Gottlieb, author of Squeeze Play 
-
-
-
-195 
-
-
 
 AFFECTING 
 
@@ -6236,9 +5289,6 @@ Affecting
 Our Reality 
 
 
-196 
-
-
 
 
 SONGS FROM THE 
@@ -6273,10 +5323,6 @@ new song that’s respectful and appreciative of the original,
 but fresh and vital nonetheless.” 
 
 — CMJ New Music Report 
-
-
-
-197 
 
 
 
@@ -6373,11 +5419,6 @@ DayPhone/e-mail
 
 
 
-
-
-
-
-
 Spirituality 
 Personal Growth 
 
@@ -6418,28 +5459,6 @@ $14
 Ocean3\ue 
 
 Publishing 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
