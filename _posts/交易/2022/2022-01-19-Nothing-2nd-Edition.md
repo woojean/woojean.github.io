@@ -1706,31 +1706,29 @@ see it because we’re scanning the heavens for it.
 
 ## Chapter Fourteen 
 
-
-Mind is enmeshed in symbolism, in stories, and it takes 
+Mind is <u>enmeshed</u> in symbolism, in stories, and it takes 
 these for reality, for truth. Yet nothing which can be expressed 
 in words or symbols is “true”; neither is it “false.” Rather, it is 
-merely useful or non-useful. Science is replete with examples 
-of “truths” which became supplanted. First light was a parti- 
+merely useful or non-useful. Science is <u>replete</u> with examples 
+of “truths” which became <u>supplanted</u>. First light was a parti- 
 cle, then a wave; now it’s something of both. First the world 
 was flat, now it is round; someday it may be perceived in some 
 other way. First Newton's laws were “true”; now relativity is 
 considered “true,” and someday it in turn will be supplanted. 
-No concept or law or symbolic relation is ultimately “true”; it's 
-simply useful or not useful for a limited period. 
+**No concept or law or symbolic relation is ultimately “true”; it's** 
+**simply useful or not useful for a limited period.** 
 
-Is “The tree is green” true? Certain vibrations are hit- 
+Is “The tree is green” true? Certain <u>vibrations</u> are hit- 
 ting our eyes and we have agreed to label those “green.” A dif- 
 ferent interpretation of the vibrations we have agreed to label 
 “tree.” When we say “The tree is green” we're simply attach- 
-ing two labels together; it may be useful, but there’s nothing 
-true about it. Conjoining the labels “tree” and “green” has a lot 
+ing two labels together; **it may be useful, but there’s nothing** 
+**true about it.** Conjoining the labels “tree” and “green” has a lot 
 of agreement, but somebody may disagree — to them the tree 
-may be chartreuse. 
+may be <u>chartreuse</u>. 
 
-This might seem like an out-of-the-way or irrelevant 
+This might seem like an out-of-the-way or <u>irrelevant</u> 
 matter, but it extends into our whole life. 
-
 
 Let's say we feel that our girlfriend is boring. To us 
 that’s true, but to someone else it’s false. Let’s say we feel we 
@@ -1745,7 +1743,7 @@ good, bad, true, false, right, wrong, desirable and undesirable
 in our life. 
 
 Existence is none of these categories. It simply is what 
-it is. It is pristine, pure, ever-new. It has no past, no future, it 
+it is. It is <u>pristine</u>, pure, ever-new. It has no past, no future, it 
 is simply herenow. Then the mind comes in and imposes its 
 tapes and stories upon it. The mind imposes its judgments, 
 evaluations, discriminations, dualities, categories, labels and 
@@ -1754,11 +1752,11 @@ box. It projects its own movie onto the screen of reality and
 then lives in the movie. And it’s in deep suffering because it’s 
 off in the past or the future somewhere. 
 
-Something is wrong, because happiness is the criterion 
+Something is wrong, because happiness is the <u>criterion</u> 
 in life. If our path in life is giving us deep bliss, deep abiding 
 joy then it is the right path. But look carefully and let’s ask 
 ourselves truthfully: How many moments in our life have we 
-experienced such profound rapture and peace that we had no 
+experienced such profound <u>rapture</u> and peace that we had no 
 desire for anything more whatsoever? A handful of times? 
 
 If bliss is the criterion — and it is — then we’re missing 
@@ -1767,8 +1765,8 @@ solving problems — and our situation remains the same.
 
 Seeing this, we begin to look at the root of the prob- 
 lem — the mind itself — instead of the leaves. Once we begin to 
-see direcdy into the con game of the mind we’re astonished, 
-stupefied as to why we go on carrying this madman. 
+see direcly into the <u>con</u> game of the mind we’re astonished, 
+<u>stupefied</u> as to why we go on carrying this madman. 
 
 For it is us as the self, existence itself, who is carrying 
 the mind. Not the self that we identify with — our thoughts, 
@@ -1778,7 +1776,7 @@ No, us as existence itself is carrying it.
 Let’s be alert now, for the mind will immediately try to 
 box up “the self,” “the existence.” Mind will create pictures of 
 what it is, images of what it looks like: Infinite space. White 
-light. Blue light. Darkness. Pure energy. The eternal. And so 
+light. Blue light. Darkness. Pure energy. The <u>eternal</u>. And so 
 on. None of these are wrong, and neither are they right. None 
 of these symbols can be taken seriously, for they’re all just 
 playthings. They’re only fingers pointing at the moon. 
@@ -1787,7 +1785,7 @@ And there are many such symbols, reflecting the
 attempts of those who have awakened to communicate the 
 incommunicable. 
 
-There is the tradition known as the via positiva, the 
+There is the tradition known as the via positive, the 
 positive way, in which existence is given some of the labels we 
 have been using, such as being, the self, reality, the whole, the 
 eternal, the infinite, consciousness, truth. These are not sepa- 
@@ -1799,27 +1797,26 @@ To get around this tendency some other traditions have
 followed the via negativa , the negative way, in referring to 
 existence. They refer to it by indicating what it is not. 
 
-
 Thus in the Upanishads there’s a famous passage which 
 describes the existence as “not this, not that.” Whatever 
 description we use, it is not that. This seems a bit closer. For 
-referring to the existence is akin to describing the color blue 
+referring to the existence is <u>akin</u> to describing the color blue 
 to someone born blind: Is it loud? No. Is it soft? No. Is it 
-rough? No. Is it smooth? No. Is it sweet? No. Is it fragrant? 
-No. Is it melodic? No. Saying what it is not is in a sense more 
+rough? No. Is it smooth? No. Is it sweet? No. Is it <u>fragrant</u>? 
+No. Is it <u>melodic</u>? No. Saying what it is not is in a sense more 
 accurate than trying to say what it is. 
 
 So when the existence is referred to in these traditions 
 it’s given names such as nothingness, emptiness, the void, the 
-abyss. The advantage of such labels is that they don't suggest 
+<u>abyss</u>. The advantage of such labels is that they don't suggest 
 any particular attribute to which the mind can cling, since all 
-attributes are negated. On the other hand, the mind can take 
-even “nothingness” or “emptiness” literally — so it’s fruitful to 
+attributes are <u>negated</u>. On the other hand, the mind can take 
+even “nothingness” or “emptiness” literally — so it’s <u>fruitful</u> to 
 remember that even via negativa labels are not actually true or 
 accurate. 
 
 Still another way of approaching being or existence is to 
-refer to it as oneness or the non-dual or the One. When mind 
+refer to it as oneness or the <u>non-dual</u> or the One. When mind 
 looks upon the world it looks through its glasses of discrimi- 
 nation and sees a multiplicity of separate entities — including 
 itself — all struggling for survival. This, however, is just the 
@@ -1833,7 +1830,7 @@ excludes nothing, desires nothing, seeks nothing, is against
 nothing. How then can there be a struggle? The existence is 
 
 playing, it likes to look upon itself from different points of 
-view... different entities. And part of this play or lela is that 
+view... different entities. And part of this play or <u>lela</u> is that 
 those points of view which have consciousness imagine them- 
 selves to be separate entities. 
 
@@ -1841,10 +1838,9 @@ selves to be separate entities.
 
 ## Chapter Fifteen 
 
-
 Picture an ocean.. .waves moving on its surface. Each 
 wave rises up, exists for a while, then falls back into the ocean 
-from whence it came. Now imagine that each wave has the 
+from <u>whence</u> it came. Now imagine that each wave has the 
 notion that it exists separately. Naturally, each wave is then 
 concerned with survival, with the problem of how to go on 
 existing. 
@@ -1863,13 +1859,13 @@ from the ocean. Indeed, even to call it a “wave” separates it in
 our minds, but in fact there is only the ocean. Even if the wave 
 thinks it is separate, it is not. The attempt to survive perpetu- 
 ates its sense of separateness, but actually it is never separate. 
-There is only the ocean, evolving and changing its form on 
+There is only the ocean, <u>evolving</u> and changing its form on 
 the surface, yet remaining always the same. 
 
 Actually, the only problem the wave has is that it is try- 
 ing to solve a problem. The moment it gives up its problem of 
 survival it is at the level of ocean, where there is no problem 
-of any kind. At that level there is only the serenity and bliss of 
+of any kind. At that level there is only the <u>serenity</u> and bliss of 
 existence itself. 
 
 The wave is already the ocean; it doesn't have to achieve 
@@ -1877,9 +1873,9 @@ anything in order to become the ocean. It already is that. Its
 only problem is its illusion that it has to achieve something, 
 that it has to get somewhere, that it has to make its way, that 
 it has to survive. The shift from the level of wave to the level 
-of ocean can come in an instant; it takes no time because 
+of ocean can come in an <u>instant</u>; it takes no time because 
 nothing has to be changed or achieved. Everything is already 
-in place except for the wave dropping its cherished illusion of 
+in place except for the wave dropping its <u>cherished</u> illusion of 
 being separate. 
 
 But notice that the wave itself cannot drop this illusion 
@@ -1889,16 +1885,15 @@ and will always feel separate; that is its nature. Separateness is
 its very existence; it cannot see through itself. 
 
 But if the mind somehow disappears then there is no 
-problem. Then Being, Existence shines forth from that empty 
-vessel, It experiences itself without any impediment from the 
+problem. Then Being, Existence <u>shines forth</u> from that empty 
+<u>vessel</u>, It experiences itself without any <u>impediment</u> from the 
 mind. It was always there. When the mind is gone, Being is. 
 It is there automatically since it was never not there. 
 
-An analogy can be used of a lamp encased in mud. The 
+An <u>analogy</u> can be used of a <u>lamp</u> <u>encased</u> in mud. The 
 light is there but it cannot be seen, cannot be experienced 
 because of the mud blocking it. Remove that mud, and the 
-light that was always there is revealed. 
-
+light that was always there is <u>revealed</u>. 
 
 Another analogy is of the sun shining on a cloudy day. 
 If clouds cover the sky then the sun cannot be seen, yet it is 
@@ -1918,37 +1913,37 @@ cloud in the way.
 To say that Being or the Self awakens is perhaps to give 
 the impression that there is a separate being or self in each 
 person. But no, only minds are separate; that is why they're an 
-illusion. Being is always One. Putting it another way, my true 
-self and your true self are the same self. There is only one Self, 
-one Being, one Existence, one Ocean. In the Upanishads it is 
-said that Atman is Brahman — the individual soul is the Exis- 
-tence, is the totality. There is only the One. 
+illusion. Being is always One. **Putting it another way, my true** 
+**self and your true self are the same self. There is only one Self,** 
+**one Being, one Existence, one Ocean.** In the Upanishads it is 
+said that Atman is Brahman — **the individual soul is the Exis-** 
+**tence, is the totality. There is only the One.** 
 
-This is keenly disappointing to the mind, which hopes 
+This is <u>keenly</u> disappointing to the mind, which hopes 
 to survive physical death through the notion of an individual 
-soul or essence which goes to heaven or reincarnates into a 
-new body or whatever. But heaven and hell and anything we 
-could desire in the afterlife are all here now. “The kingdom of 
+soul or essence which goes to heaven or <u>reincarnates</u> into a 
+new body or whatever. But **heaven and hell and anything we** 
+**could desire in the afterlife are all here now**. “The kingdom of 
 heaven is within you,” Jesus said. It is Existence itself which 
 reincarnates into new forms. 
 
-Existence keeps taking new forms and the surface of 
-things keeps changing just as the surface of the ocean is con- 
-stantly in motion. But underneath, all is changeless, silent, 
-still. Who we really are is vast and open like the sky. Who we 
-really are cannot die because it was never born. 
+**Existence keeps taking new forms and the surface of** 
+**things keeps changing just as the surface of the ocean is con-** 
+**stantly in motion. But underneath, all is changeless, silent,** 
+**still. Who we really are is vast and open like the sky. Who we** 
+**really are cannot die because it was never born.** 
 
 All aspects of the mind, on the other hand, are merely 
-surface and are destined for annihilation. All the things that 
+surface and are <u>destined</u> for <u>annihilation</u>. All the things that 
 we think we are, all of the things which we cling to — our atti- 
 tudes, emotions, thoughts, memories, patterns, viewpoints — 
 will die as surely as a blooming rose or a wave on the ocean. 
 
 All of what we think is important and unique about us 
-is transitory and will fade as quickly as a leaf in autumn. The 
+is <u>transitory</u> and will fade as quickly as a leaf in autumn. The 
 mind’s problem is not solvable. It is trying to survive and it 
 cannot. And meanwhile its efforts and struggles keep it in 
-anguish, which it polishes over with transitory gratifications. 
+<u>anguish</u>, which it <u>polishes</u> over with transitory <u>gratifications</u>. 
 This going-through-the-motions, this daily round — eating, 
 sleeping, working, relaxing, improving, eating, sleeping, all as 
 a means to an end — is what we call life. 
@@ -1958,9 +1953,9 @@ never be solved. All of the mind's efforts to solve it, improve
 it, change it, make it better only deepen the problem. Yet the 
 problem can be transcended. What happens is that Being 
 awakens from a dream, so to speak, and discovers It’s the 
-Ocean and not the wave. The problem in the dream does not 
-need to be solved. Awakening is enough. Then the dream 
-vanishes and the unsolvable problem vanishes with it. 
+Ocean and not the wave. **The problem in the dream does not** 
+**need to be solved. Awakening is enough. Then the dream** 
+**vanishes and the unsolvable problem vanishes with it.** 
 
 
 
