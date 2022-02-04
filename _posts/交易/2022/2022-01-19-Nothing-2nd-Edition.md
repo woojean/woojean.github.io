@@ -1969,7 +1969,7 @@ let us look at the mind from still another perspective:
 
 At each moment the mind is running its stimulus- 
 response programs — tapes, thoughts, stories. These programs 
-are used to paint reality, to project on the screen of Existence 
+are used to <u>paint</u> reality, to project on the screen of Existence 
 the version of reality that the mind wants to see. In order to 
 see these tapes as reality it is necessary not to see them as 
 tapes — that is, it is necessary not to notice them as generated 
@@ -1978,7 +1978,7 @@ there; they must be seen as the real world, as reality, as “the way
 things really are.” 
 
 An analogy of watching a movie can be used. If we get 
-really engrossed in watching the story on the screen we may 
+really <u>engrossed</u> in watching the story on the screen we may 
 forget that it’s not real. We’re feeling anxiety or hope, tears or 
 joy, when suddenly the projector breaks down and the screen 
 goes dark. And then we remember that it’s only a movie, that 
@@ -1986,7 +1986,6 @@ it’s not real.
 
 Similarly, if with one of the mind’s tapes or programs 
 we suddenly remember that it’s only a tape, if we suddenly 
-
 notice it as a tape — a beautiful tape or an ugly tape, but still 
 only a tape — then the movie is over for that moment. The 
 program is exposed as merely a program; the screen has gone 
@@ -1995,9 +1994,9 @@ dark, so to speak.
 In that moment we no longer see the tape as reality 
 because we are seeing it as merely a tape, as merely a program. 
 Since the purpose of a tape is to present itself as reality, the 
-instant its lack of reality is exposed the program simply stops 
+<u>instant</u> its lack of reality is exposed the program simply stops 
 running. The tape disappears. The program, the tape, the act, 
-the number, the thought — whatever we want to call it — -just 
+the number, the thought — whatever we want to call it — just 
 goes back to where it came from. In that instant of awareness 
 there is no mind anymore; there is only Being. 
 
@@ -2009,12 +2008,12 @@ that the particular tape running at that moment is simply a
 tape and not reality, the moment the Self notices the program 
 as a program — in that moment the program that was running 
 simply disappears. In that moment there is only the Self, there 
-is no mind. Metaphorically speaking, in that moment the Self 
+is no mind. <u>Metaphorically</u> speaking, in that moment the Self 
 has awakened, the wave has discovered it is the Ocean. 
 
 But in the next moment another tape will be called up 
 and run as a response to stimuli from the environment. In this 
-metaphor, if the Self identifies with this tape and sees it as 
+<u>metaphor</u>, if the Self identifies with this tape and sees it as 
 reality, then, so to speak, the Self is caught once more; then 
 the Being has been sucked into the illusion once again. Again 
 It has fallen asleep. Once more It has become identified with 
@@ -2030,21 +2029,21 @@ no longer present itself as real. In that instant the Self can be
 said to be awakened once more. 
 
 So it goes, back and forth. Self awakens from its long 
-slumber for a moment, then goes back to sleep again. And 
+<u>slumber</u> for a moment, then goes back to sleep again. And 
 again It awakens, only to return to sleep once more. In the 
-beginning the Self awakens only fitfully. It is like someone 
+beginning the Self awakens only <u>fitfully</u>. It is like someone 
 engrossed in a vivid dream trying to remember that it is only 
 a dream — and the moment she does, of course, the dream is 
-no longer there. It is like someone in a deep hallucination try- 
+no longer there. It is like someone in a deep <u>hallucination</u> try- 
 ing to remember that the hallucination is not real. 
 
 In the beginning this process seems difficult because 
 the moments of awareness are few and far between. But that 
-is just the appearance. The moment of awareness itself is not 
-difficult because awareness is not a doingness of any kind. The 
-Self does not exist in time or space; it is not engaged in any 
-activity, striving or effort. So awareness is not something that 
-is done; it simply is. It simply happens. 
+is just the appearance. **The moment of awareness itself is not** 
+**difficult because awareness is not a doingness of any kind. The** 
+**Self does not exist in time or space; it is not engaged in any** 
+**activity, striving or effort. So awareness is not something that** 
+**is done; it simply is. It simply happens.** 
 
 If awareness of a tape is an effort then it is not aware- 
 ness, it is something being done by the mind. For the mind is 
@@ -2054,7 +2053,7 @@ be somewhere other than where it is.
 
 Awareness, not being of the mind, is effortless. It takes 
 place outside of the whole stimulus-response mechanism, and 
-isn’t an activity. It is not active, but passive. 
+isn’t an activity. It is not active, but <u>passive</u>. 
 
 The difference can be seen in a metaphor suggested by 
 Osho. Imagine waiting in a train station where we are to meet 
@@ -2068,36 +2067,35 @@ watching the leaves on the river float by. As each leaf passes
 by, it is noticed without effort. No leaf is more important than 
 any other, yet no leaf passes by without being noticed. There 
 is no concern for results, there is no end in view. There is just 
-a choiceless, silent watching. This is passive awareness. This is 
-awareness by the Self; indeed, it is the Self. Each leaf is sim- 
-ply noticed and let go; there is no concern about it. 
+a choiceless, silent watching. **This is passive awareness. This is** 
+**awareness by the Self; indeed, it is the Self. Each leaf is sim-** 
+**ply noticed and let go; there is no concern about it.** 
 
 This is what one does with one's tapes, programs, 
-thoughts, feelings, sensations, models, acts and demands. We 
-simply notice whatever comes up, whatever is running, with 
-bare attention. Nothing is added; no judgment, no evaluation, 
-no feeling that it’s good or bad, or that it should or shouldn't 
-be there. 
+thoughts, feelings, sensations, models, acts and demands. **We** 
+**simply notice whatever comes up, whatever is running, with** 
+**bare attention. Nothing is added; no judgment, no evaluation,** 
+**no feeling that it’s good or bad, or that it should or shouldn't** 
+**be there.** 
 
-We simply allow what is there to be there, and notice it 
-without encouragement or condemnation. Adding encour- 
-agement, condemnation, judgment, evaluation, or anything 
-else would be doing something with the tape/story, and pure 
-awareness is a non-doingness. 
-
+**We simply allow what is there to be there, and notice it** 
+**without encouragement or <u>condemnation</u>. Adding encour-** 
+**agement, condemnation, judgment, evaluation, or anything** 
+**else would be doing something with the tape/story, and pure** 
+**awareness is a non-doingness.** 
 
 We allow each leaf — each tape — to come into our 
 awareness without desire or avoidance, and we allow it to 
 leave without clinging or pushing. There are no preferences. 
 Each thought is allowed to come in and it’s allowed to go. It 
-is simply noticed without adding anything. And if the mind 
-does add something to it, then the addition is also simply 
-noticed. 
+is simply noticed without adding anything. **And if the mind** 
+**does add something to it, then the addition is also simply** 
+**noticed.** 
 
-It’s like noticing waves on the sea. Each wave comes up 
+**It’s like noticing waves on the sea.** Each wave comes up 
 out of the depths, is noticed and allowed to be, and then dis- 
-appears back into the ocean from which it came. It is like 
-watching clouds in the sky. Each cloud appears, moves across 
+appears back into the ocean from which it came. **It is like** 
+**watching clouds in the sky.** Each cloud appears, moves across 
 the sky, then disappears. There is no reason for the cloud to be 
 there; it just happens to be there. And while it is there it is 
 silently watched. We watch the thoughts of the mind in just 
