@@ -652,6 +652,8 @@ What’s the master doing? Actually, he is not teaching atall, for there’s no 
 The effort of the master is to pull all supports out fromunderneath us until the mind has no place left to stand. Allanswers just fill our mind again, so how can a master give usanswers? And since he’s not giving answers he’s inexhaustible,he can go on forever. A body of knowledge is limited, but amaster is unlimited. He knows nothing; he has attained toperfect ignorance, so he can keep on talking for all eternityand never exhaust the subject.
 
 
+
+
 ## Chapter Twenty-five
 It’s said that a master is awakened, but what does thatmean? What does it mean to be a master? What is this thingawakening? Is it some kind of insight? Is it formulating thefinal system, achieving the ultimate solution? Is it reachingthe final goal?
 None of those things. Freedom is seeing that there is nogoal at all. It’s the dropping of all goals, of all seeking. It’s thedropping of all attempts to improve, get better or change. Butthis dropping is not a doingness or decision. Rather, it is adeep seeing that all attempts to get somewhere in any wayonly lead nowhere, that they only lead further into the mind.
@@ -973,6 +975,7 @@ There is a kind of great drunkenness with life — but nodrunkard, for no one is
 In this state life is like the notes of a symphony, in AlanWatts’ great metaphor. There is no attempt to get to the endof anything, for each moment is the whole point. Each note isprecious, perfect, needed, complete in itself.
 The purpose of all of Reality is now gathered into eachtimeless instant, the eternal present.
 Life is now like listening to the rain — each drop of raina brilliant jewel, the scripture of Existence. There is only therain, the sound of the rain, the suchness of the rain. There isno mind, no awakening, no awareness, no listener. There is noanything anymore. All things have merged into emptiness,the void.. .Nothing. Now there is only the pat-pat-pat of therain itself, vanishing into silence.
+
 
 
 # Afterword
