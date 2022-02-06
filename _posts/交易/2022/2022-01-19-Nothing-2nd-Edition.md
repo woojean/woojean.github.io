@@ -637,19 +637,29 @@ We do not have to do concentration meditations, we donot have to go to the mount
 
 
 ## Chapter Twenty-four
-The same is true of a master. She is not necessary, forthe true master is inside us. But the inside master is, in asense, still asleep, so the outside master is needed. She simplycreates situation after situation until we begin to wake up andbecome aware, until we begin to see the true nature of our sit-uation. She surrounds us with a fragrance to arouse us out ofour slumbers and dreams.
-Once we begin to become aware, then she assists us toavoid the various traps and attachments that can arise. And atrue master eventually assists us to see into the nature of per-haps the greatest attachment of all — the attachment to themaster. Ultimately, even the master must be transcended.
-A master is not necessary, but desirable. For while we’reasleep were always dreaming that we’re awake. To dream thatwe’re awake is the best way to stay asleep. The mind’s bestdefense is to imagine that it’s already gone, that we’re alreadyawake or enlightened. Without the disturbing fragrance of amaster, our slumbers may continue for quite a while.
-An interesting attachment is the feeling that we have tosave the world. The world doesn’t need saving because it’salready perfect.
-As Byron Katie says, How do we know that the way theworld is is for the highest good? Because it is that way. Howdo we know the world should be the way it is? Because it isthat way. Simple. “Saving the world” can sometimes lead toforce, violence, fanaticism. Immense suffering throughouthistory has been caused by those of us who were intent on sav-ing the world by converting it to some cause or other.
-Let’s observe. We see the mind at work, for this is justanother form of doingness, of striving. The feeling that theworld needs to be saved somehow is a deep non-acceptance ofExistence as it is. It is the mind creating imperfection andwrongness out there and demanding that it be changed outthere.
-This is the same disease of living in the future. Now thewhole world must struggle toward some glorious imaginedutopia. What is herenow is never enough to the mind. It cannever see that nothing needs to be achieved.
-But if nothing needs to be achieved, why then does amaster bother to teach others? Because the master has noachievement in mind; they’re simply sharing who they are.
-A true master is like a flower that has bloomed in thedesert. The flower gives off its fragrance not out of some com-pulsion but because that is its nature, that is what it does. Thefragrance will be there whether anyone notices it or not. Andthere is no choice about it. If someone passes by, the flowerdoes not determine whether it likes the person or not beforeit shares its fragrance; nor does it ask itself whether it is liked.No, the fragrance is simply there.
+The same is true of a master. She is not necessary, for the true master is inside us. But the inside master is, in a sense, still asleep, so the outside master is needed. She simply creates situation after situation until we begin to wake up and become aware, until we begin to see the true nature of our situation. She surrounds us with a fragrance to arouse us out of our <u>slumbers</u> and dreams.
 
-And the fragrance is not given off to help you or saveyou. It is simply there out of the flower’s abundance, out of itsbliss and exuberance. The master is the same.
-What’s the master doing? Actually, he is not teaching atall, for there’s no doctrine or body of knowledge to convey.That is why a master never really gives an answer, but simplydestroys the question. Because he is not out to teach us someknowledge. Instead, he is out to destroy our mind.
-The effort of the master is to pull all supports out fromunderneath us until the mind has no place left to stand. Allanswers just fill our mind again, so how can a master give usanswers? And since he’s not giving answers he’s inexhaustible,he can go on forever. A body of knowledge is limited, but amaster is unlimited. He knows nothing; he has attained toperfect ignorance, so he can keep on talking for all eternityand never exhaust the subject.
+Once we begin to become aware, then she assists us to avoid the various traps and attachments that can arise. And a true master eventually assists us to see into the nature of perhaps the greatest attachment of all — the attachment to the master. Ultimately, even the master must be transcended.
+
+A master is not necessary, but desirable. For while we’re asleep were always dreaming that we’re awake. To dream that we’re awake is the best way to stay asleep. The mind’s best defense is to imagine that it’s already gone, that we’re already awake or enlightened. Without the disturbing fragrance of amaster, our slumbers may continue for quite a while.
+
+An interesting attachment is the feeling that we have to save the world. The world doesn’t need saving because it’s already perfect.
+
+As Byron Katie says, How do we know that the way the world is is for the highest good? Because it is that way. How do we know the world should be the way it is? Because it is that way. Simple. “Saving the world” can sometimes lead to force, violence, fanaticism. Immense suffering throughout history has been caused by those of us who were intent on saving the world by converting it to some cause or other.
+
+Let’s observe. We see the mind at work, for this is just another form of doingness, of striving. The feeling that the world needs to be saved somehow is a deep non-acceptance of Existence as it is. It is the mind creating <u>imperfection</u> and wrongness out there and demanding that it be changed out there.
+
+This is the same disease of living in the future. Now the whole world must struggle toward some <u>glorious</u> imagined <u>utopia</u>. What is herenow is never enough to the mind. It can never see that nothing needs to be achieved.
+
+But if nothing needs to be achieved, why then does a master bother to teach others? Because the master has no achievement in mind; they’re simply sharing who they are.
+
+A true master is like a flower that has bloomed in the desert. The flower gives off its fragrance not out of some com-<u>pulsion</u> but because that is its nature, that is what it does. The fragrance will be there whether anyone notices it or not. And there is no choice about it. If someone passes by, the flowerdoes not determine whether it likes the person or not before it shares its fragrance; nor does it ask itself whether it is liked.No, the fragrance is simply there.
+
+And the fragrance is not given off to help you or save you. It is simply there out of the flower’s <u>abundance</u>, out of its bliss and <u>exuberance</u>. The master is the same.
+
+What’s the master doing? Actually, he is not teaching at all, for there’s no <u>doctrine</u> or body of knowledge to convey.That is why a master never really gives an answer, but simply destroys the question. Because he is not out to teach us some knowledge. Instead, he is out to destroy our mind.
+
+The effort of the master is to pull all supports out from underneath us until the mind has no place left to stand. All answers just fill our mind again, so how can a master give us answers? And since he’s not giving answers he’s in exhaustible,he can go on forever. A body of knowledge is limited, but a master is unlimited. He knows nothing; he has attained to perfect ignorance, so he can keep on talking for all eternity and never exhaust the subject.
 
 
 
