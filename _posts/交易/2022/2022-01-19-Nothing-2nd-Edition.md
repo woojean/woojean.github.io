@@ -665,22 +665,35 @@ The effort of the master is to pull all supports out from underneath us until th
 
 
 ## Chapter Twenty-five
-It’s said that a master is awakened, but what does thatmean? What does it mean to be a master? What is this thingawakening? Is it some kind of insight? Is it formulating thefinal system, achieving the ultimate solution? Is it reachingthe final goal?
-None of those things. Freedom is seeing that there is nogoal at all. It’s the dropping of all goals, of all seeking. It’s thedropping of all attempts to improve, get better or change. Butthis dropping is not a doingness or decision. Rather, it is adeep seeing that all attempts to get somewhere in any wayonly lead nowhere, that they only lead further into the mind.
-It is seeing that all attempts to solve the problem, toimprove, to survive, only perpetuate the problem and deepenit. It is seeing that all such attempts to solve the problem arethe problem itself, and that the problem is an illusion, that itdoesn’t exist except as attempts to solve it. All striving of anykind, therefore, simply falls away.
-It is a moment when all doingness simply drops. Notthat we drop it. We simply see the true reality of things and inthat moment the doingness drops away of itself. This doesn’tmean that we necessarily become inactive.
+It’s said that a master is awakened, but what does that mean? What does it mean to be a master? What is this thing awakening? Is it some kind of insight? Is it formulating the final system, achieving the ultimate solution? Is it reaching the final goal?
 
-Instead, it means that we do whatever we do — withoutstrivingness, without compulsiveness or concern. WeVe beenchasing our tail in a thousand different ways, whirling aroundfaster and faster. Were dizzy from the chase, insane. Suddenlywe see that the tail cannot ever be caught, that in fact thechasing is the problem and that there is no problem outside ofthe chasing.
-In that moment we simply stop. All the doingnessstops. We simply sit down, take a rest and let the dizzinessclear. In fact the dizziness and insanity were part-and-parcelof the chasing itself. Now they simply drop when the chasingdrops. We see that we re flowing down the river and have beenflowing down the river forever and will be flowing down theriver forever.
-Mind wants to be different, unique, special; it wants toget somewhere, to go in its own direction. So it starts tryingnot to flow down the river, it starts trying to go upstream. Andthen the whole river, the whole Existence seems to be againstus. We are trying so hard, struggling so valiantly against theriver, but the river just keeps pushing us in the direction of theflow. The river seems so implacable, relentless, indifferent toour plight and our struggle. The river seems to be hostile,actively working against our will and our desires.
-Awakening is seeing that we are creating the problem.Its seeing that the river is not against us, its simply flowingthe way its flowing. And the issue is not whether or not we regoing to flow with the river, because were going to do that inany event. It is vast, and “you” and “I” are atoms.
-Rather, the issue really is whether we will struggle ornot as we flow down the river. The question is whether we’llbecome aware of who is creating the struggle in our life. Tothe extent that we push against the river the river seems topush back, but the river is not the problem.
-If there is awareness moment-to-moment of the mind’sstruggles then moment-to-moment they disappear; then wecan listen to our inner voice and cease our struggling with theriver. We stop struggling with Existence. Then we’re in a deepbliss as we flow down the river. Then we celebrate existencemoment-by-moment.
-We see that all attempts to improve our struggles areonly more struggling. And if we try to stop struggling and tryto flow down the river, then we’re in tension. How can we tryto flow down the river? We’re already doing it. It’s just a deeplet-go, there’s no trying or efforting. All trying, all effortingjust keeps the game going.
-Mind is like a bicycle — it must keep moving or it willfall down. It goes on creating struggle, searching, survival,desire. It creates movement, striving, change, because other-wise it simply disappears, it falls down. Mind is the struggleitself. Without the struggle there’s no mind either.
-The mind as controller, as chooser, as decider, as the “I”just disappears. It was an illusion all along, it never existedexcept as the struggle. But the computing mechanism is stillthere, and it can be used as a tool just as a hammer is pickedup and used when needed. The capability to compute is stillthere, but the computer is silent unless called upon.
-If an awakened person crosses a street the computer-brain will figure out the right time to cross. But the mind, the“separate” person is vanished. That which struggled to control,that which thought of itself as the “I” is gone because it wasonly the struggle itself. Now the Existence, the Self crossesthe street. The guests — thoughts, tapes, the mind — took overthe house while the host was away, but now the host hasreturned.
-The master does not need to effort. After all, the riverflows by itself. Indeed, at the deepest level we are the river.We’ve already arrived. What are we struggling about?
+None of those things. Freedom is seeing that there is no goal at all. It’s the dropping of all goals, of all seeking. It’s the dropping of all attempts to improve, get better or change. But this dropping is not a doingness or decision. Rather, **it is a deep seeing that all attempts to get somewhere in anyway only lead nowhere, that they only lead further into the mind**.
+
+It is seeing that all attempts to solve the problem, to improve, to survive, only perpetuate the problem and deepen it. It is seeing that all such attempts to solve the problem are the problem itself, and that **the problem is an illusion, that it doesn’t exist except as attempts to solve it**. All striving of anykind, therefore, simply falls away.
+
+It is a moment when all doingness simply drops. Not that we drop it. We simply see the true reality of things and in that moment the doingness drops away of itself. This doesn’t mean that we necessarily become inactive.
+
+Instead, it means that we do whatever we do — without strivingness, without compulsiveness or concern. We've been chasing our tail in a thousand different ways, whirling around faster and faster. We're <u>dizzy</u> from the chase, insane. Suddenly we see that the tail cannot ever be caught, that in fact the chasing is the problem and that there is no problem outside of the chasing.
+
+In that moment we simply stop. All the doingnessstops. We simply sit down, take a rest and let the <u>dizziness</u> clear. In fact the dizziness and insanity were part-and-parcel of the chasing itself. Now they simply drop when the chasing drops. **We see that we're flowing down the river and have been flowing down the river forever and will be flowing down the river forever.**
+
+Mind wants to be different, unique, special; it wants to get somewhere, to go in its own direction. So it starts trying not to flow down the river, it starts trying to go upstream. And then the whole river, the whole Existence seems to be <u>againstus</u>. We are trying so hard, struggling so <u>valiantly</u> against the river, but the river just keeps pushing us in the direction of the flow. The river seems so implacable, relentless, indifferent to our <u>plight</u> and our struggle. The river seems to be <u>hostile</u>,actively working against our will and our desires.
+
+Awakening is seeing that we are creating the problem.Its seeing that **the river is not against us, its simply flowing the way its flowing**. And the issue is not whether or not we <u>regoing</u> to flow with the river, because we're going to do that in any event. **It is vast, and “you” and “I” are atoms.**`无我`
+
+Rather, the issue really is whether we will struggle or not as we flow down the river. The question is whether we’ll become aware of who is creating the struggle in our life. To the extent that we push against the river the river seems to push back, but the river is not the problem.
+
+If there is awareness moment-to-moment of the mind’s struggles then moment-to-moment they disappear; then we can listen to our inner voice and cease our struggling with the river. We stop struggling with Existence. Then we’re in a deep bliss as we flow down the river. Then we celebrate existence moment-by-moment.
+
+We see that all attempts to improve our struggles are only more struggling. And if we try to stop struggling and try to flow down the river, then we’re in tension. How can we try to flow down the river? We’re already doing it. It’s just a deep let-go, there’s no trying or efforting. All trying, all efforting just keeps the game going.
+
+**Mind is like a bicycle — it must keep moving or it will fall down. It goes on creating struggle, searching, survival,desire. It creates movement, striving, change, because other-wise it simply disappears, it falls down. Mind is the struggle itself. Without the struggle there’s no mind either.**
+
+The mind as controller, as chooser, as decider, as the “I” just disappears. It was an illusion all along, it never existed except as the struggle. But the computing mechanism is still there, and it can be used as a tool just as a hammer is picked up and used when needed. The capability to compute is still there, but the computer is silent unless called upon.
+
+If an awakened person crosses a street the computer-brain will figure out the right time to cross. But the mind, the“separate” person is vanished. That which struggled to control,that which thought of itself as the “I” is gone because it was only the struggle itself. Now the Existence, the Self crosses the street. The guests — thoughts, tapes, the mind — took over the house while the host was away, but now the host has  returned.
+
+The master does not need to effort. After all, the river flows by itself. **Indeed, at the deepest level we are the river. **We’ve already arrived. What are we struggling about?
 
 
 
