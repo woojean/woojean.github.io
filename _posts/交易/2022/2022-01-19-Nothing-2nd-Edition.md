@@ -905,58 +905,90 @@ Even to say that they are there is inaccurate, for there is no concept that they
 
 
 ## Chapter Thirty-three
-Love is often thought of as something we do. But have you ever tried to love? It feels shallow, false. Whenever we aretrying to be some thing, it means were not that thing. Other-wise, what’s the point of trying? If we’re trying to be pregnant,we’re not. If we’re trying to be loving, we’re not loving. Thevery effort of trying means it is not genuine, it is not natural.Love isn’t a trying, it’s not an attitude. It is not an activity. It’snot a shining glow in the eyes, and it’s not a melting feeling.And it’s not an intoxication with someone or something.
-Love isn’t a feeling or a point of view or a doingness. Ithas no form to it, it doesn’t look a particular way. The minddoesn’t love, for love is possible only when there aren’t anyattachments or objectives, when the moment alone is every-thing. It is the Self that loves.
-Love isn’t something that has to be achieved, not some-thing that has to be put into place. It is always there. Alwaysit is there, but it’s obscured by mind just as clouds obscure thesun. Let the mind fall away through awareness, and suddenlylove is there, it is already there. It has always been there. It isthe bottom-line. We can’t do it. Yet become still inside and itis already present. When mind is absent, love is present.
+Love is often thought of as something we do. But have you ever tried to love? It feels shallow, false. Whenever we are trying to be some thing, it means were not that thing. Otherwise, what’s the point of trying? If we’re trying to be pregnant,we’re not. If we’re trying to be loving, we’re not loving. The very effort of trying means it is not <u>genuine</u>, it is not natural. Love isn’t a trying, it’s not an attitude. It is not an activity. It’s not a shining glow in the eyes, and it’s not a <u>melting</u> feeling. And it’s not an <u>intoxication</u> with someone or something.
 
-Since love is at the level of the Self, it has no form to it.Its like a fragrance emanating from a flower. It is there; wemay partake or not, as we wish. Its like a gentle rain whichwaters good crops and bad crops alike. It has no preferences,it makes no choices.
-It is unconditional, it asks for nothing in return. On thecontrary, its an overflowing, it has too much already. It is likerain clouds pregnant with water; theres a gratitude that thethirsty earth is willing to receive the rain. It is like an orangeblossom heavy with nectar; it is grateful when the bee takessome. Love asks for nothing. What could it ask for? It isalready full, it is overflowing.
-Love doesn't try to possess, for it doesn't need anything.It allows perfect freedom, for nothing is needed in return. Ifsomething is needed — some commitment, some expression ofgratitude — then it's not love. Love and freedom are not sepa-rable; they're two wings of the same bird. Possessiveness isalways of the mind; it is about being unfilled, about lackingsomething. Love is full, it doesn’t cling. It will not try to holdanyone. It accepts whatever is, each moment. It's not attached,it has no preferences. Like the sun, it shines on all things.
-To love, the quality of all relationships is the same. Thequantity may differ — more time may be spent with some thanwith others — but the quality is identical. The mind rebels atthis, for it always wants to be special and unique and to focuson the special and unique. But to love, each person has thesame essence; indeed, everything in Existence has the sameessence.
-True love is non-directional, therefore. It’s not directedtowards particular persons or things; it has no address on it. Itis open to everyone and everything.
-Love is easily misunderstood by the mind. For instance,the mind may decide that it is very loving now and that itslove is unconditional. This has nothing to do with love, forreal love is unconscious of itself and has nothing to do withdecisions or self-image.
-Alternatively, mind may interpret having no preferencesas some formula about sexual promiscuity or celibacy. Thisconceives of love as an activity or a denial, and it’s neither one.Romance, sex, renunciation are all drugs, intoxicants; they area doingness and we come down from them. We don’t comedown from love because it is not an up.
-Love is not hot as passion is. Neither is it cold. It is justin the middle — a quiet, subde, warm fragrance which can’t bepracticed or implemented, but which expresses spontaneouslywhen the mind is no longer there.
+Love isn’t a feeling or a point of view or a doingness. It has no form to it, it doesn’t look a particular way. The mind doesn’t love, for love is possible only when there aren’t any attachments or objectives, when the moment alone is everything. It is the Self that loves.
+
+Love isn’t something that has to be achieved, not something that has to be put into place. It is always there. Always it is there, but it’s obscured by mind just as clouds obscure the sun. Let the mind fall away through awareness, and suddenly love is there, it is already there. It has always been there. It is the bottomline. We can’t do it. Yet become still inside and it is already present. When mind is absent, love is present.
+
+Since love is at the level of the Self, it has no form to it. Its like a fragrance <u>emanating</u> from a flower. It is there; we may <u>partake</u> or not, as we wish. Its like a gentle rain which waters good <u>crops</u> and bad crops alike. It has no preferences,it makes no choices.
+
+It is unconditional, it asks for nothing in return. On the contrary, its an overflowing, it has too much already. It is like rain clouds pregnant with water; theres a gratitude that the thirsty earth is willing to receive the rain. It is like an orange blossom heavy with <u>nectar</u>; it is grateful when the bee takes  some. Love asks for nothing. What could it ask for? It isalready full, it is overflowing.
+
+Love doesn't try to <u>possess</u>, for it doesn't need anything. It allows perfect freedom, for nothing is needed in return. If something is needed — some commitment, some expression of gratitude — then it's not love. Love and freedom are not separable; they're two wings of the same bird. Possessiveness is always of the mind; it is about being unfilled, about lacking something. Love is full, it doesn’t cling. It will not try to hold anyone. It accepts whatever is, each moment. It's not attached,it has no preferences. Like the sun, it shines on all things.
+
+To love, the quality of all relationships is the same. The quantity may differ — more time may be spent with some than with others — but the quality is identical. The mind <u>rebels</u> at this, for it always wants to be special and unique and to focus on the special and unique. But to love, each person has the same essence; indeed, everything in Existence has the same essence.
+
+True love is non-directional, therefore. It’s not directed towards particular persons or things; it has no address on it. It is open to everyone and everything.
+
+Love is easily misunderstood by the mind. For instance,the mind may decide that it is very loving now and that its love is unconditional. This has nothing to do with love, for real love is unconscious of itself and has nothing to do with decisions or self-image.
+
+Alternatively, mind may interpret having no preferences as some formula about sexual <u>promiscuity</u> or <u>celibacy</u>. This conceives of love as an activity or a <u>denial</u>, and it’s neither one.Romance, sex, <u>renunciation</u> are all drugs, <u>intoxicants</u>; they are a doingness and we come down from them. We don’t come down from love because it is not an up.
+
+Love is not hot as passion is. Neither is it cold. It is just in the middle — a quiet, <u>subde</u>, warm fragrance which can’t be practiced or implemented, but which expresses spontaneously when the mind is no longer there.
 
 
 
 
 ## Chapter Thirty-four
-Acceptance is also easily misconceived by the mind. “Soif all things are perfect then I might as well hurt or deceiveothers — what difference does it make?” Such an attitude seesacceptance or its lack as a decision. But acceptance just ariseson its own when the mind is silent. So it has nothing to dowith any conclusion by the mind that hurting or deceivingothers is okay. Such a decision would merely be another tapeof the mind, more of its survival programming.
-This does not mean to stop doing what we do. Thatwould just be a suppression, a violence; the thwarted energywill not go away but will distort us, it will show up in someother form.
-If we eat meat, we might continue to do so but now eatmeat with awareness. If we deceive others, we might continueto do so but observe ourselves as we do it. Let’s watch. Let’sobserve. If we’re a thief let’s add awareness to our thievery —it will fall from us, for it’s not possible to steal consciously.Let’s not try to change ourselves or blame ourselves, becauseall that is the usual game. Trying to change ourselves hasn’tworked and won’t work at the deepest level. Yet in becomingaware, certain things fall away from us.
-If we force ourselves to give something up then thedesire will still be there, just suppressed. But as we becomeaware, certain things just fall away. There is no effort, nostruggle involved. Those things that drop away are “sins.”Those that don’t are “virtues.” It’s a natural process.
-Ultimately, the attempt to fight or suppress “sin” or theundesirable is an attempt to fight with darkness. But at thedeepest level, as Osho points out, darkness does not exist — it’sjust an absence of light. How then can we defeat it? How canwe defeat something that fundamentally is an absence?
-The mind says in effect, “I must get rid of this darknessfirst before I can turn on the light.” Can we see what the mindis doing? We don’t need to bother about the darkness in ourlife or in the lives of others, it’s a futile struggle.
-Far more effective is to turn on a light.
-When the light is turned on, darkness vanishes. Thereis no need to fight with it; no effort is needed. A room can bedark for many years, yet it still takes only a moment to turn onthe light and then the darkness is gone.
-Fighting sin is like fighting an enemy in a dream. Wedon’t need to defeat him; we can just wake up. If we’re beingharmed by others, or if we’re the one doing the harming, or ifwe’re harming ourself, we can put our focus and energy onturning on a light in the situation.
-What is that light? It can be finding a positive goal thatall can put their energy toward. It can be a love warm enoughto dissolve barriers and hatreds. It can be looking within to seehow our own stories are perpetuating our separateness.
+Acceptance is also easily misconceived by the mind. “So if all things are perfect then I might as well hurt or deceive others — what difference does it make?” **Such an attitude sees acceptance or its lack as a decision. But acceptance just arises on its own when the mind is silent**. So it has nothing to do with any conclusion by the mind that hurting or deceiving others is okay. Such a decision would merely be another tape of the mind, more of its survival programming.
 
-In doing this, any type of rigidity that we try to imposeon ourself or life is again a suppression, a form of violence.Life is flexibility, openness, a plunge into the unknown eachmoment. How can this occur if we re frozen into a structure?A slavish devotion to rules or discipline can make us deadinside. Even awareness can be made into a discipline if it isapproached rigidly; then it is not awareness because it has thesmell of effort, of tension. The whole point is to become lessand less tense inside, more and more open and relaxed.
-Like anything else, rules and disciplines can be useful asdevices. They can alter the dream so that the dreamer maybegin to rouse from his slumbers. But whatever we might useas a device, lets relax into it, ease into it, flow with it.
-Lets let everything lead us to increased relaxation, forawakening is simply the ultimate relaxation. If we decide to sitquietly from six to seven every morning, for instance, letsapproach it as a relaxation; lets let it be a deep easiness. If weapproach it as a heavy, serious duty we’ll destroy the wholevalue of it.
-If we use discipline on ourself, lets use it with someawareness. Lets watch ourself as we use it; then somethingwill begin to awaken within us. At first it will be very fragile.Thus as awareness first develops, we may want to maintainour discipline just as you would keep a wire fence around asmall sapling to protect it. But once the dreamer is fullyawake, all rules and disciplines fall away; they’re just irrelevantnow. An awakened being may look disciplined because of adaily routine or rhythm, but that’s just the appearance.
-The routine of an awakened person is not a disciplinebecause it’s not something imposed. Rather, it’s a rhythm thathas arisen naturally, spontaneously, by itself. The Melody ismoving unimpeded now in that vessel. The light is on.
+This does not mean to stop doing what we do. That would just be a suppression, a violence; the thwarted energy will not go away but will <u>distort</u> us, it will show up in someother form.
+
+If we eat meat, we might continue to do so but now eat meat with awareness. If we deceive others, we might continue to do so but observe ourselves as we do it. Let’s watch. Let’s observe. If we’re a thief let’s add awareness to our thievery —it will fall from us, for it’s not possible to steal consciously. **Let’s not try to change ourselves or blame ourselves, because all that is the usual game. Trying to change ourselves hasn’t worked and won’t work at the deepest level. Yet in becoming aware, certain things fall away from us.**
+
+If we force ourselves to give something up then the desire will still be there, just suppressed. But as we become aware, certain things just fall away. There is no effort, no struggle involved. Those things that drop away are “sins.” Those that don’t are “<u>virtues</u>.” **It’s a natural process**.
+
+Ultimately, the attempt to fight or suppress “sin” or the undesirable is an attempt to fight with darkness. But at the deepest level, as Osho points out, darkness does not exist — it’s just an absence of light. How then can we defeat it? How can we defeat something that fundamentally is an absence?
+
+The mind says in effect, “I must get rid of this darkness first before I can turn on the light.” Can we see what the mind is doing? We don’t need to bother about the darkness in ourlife or in the lives of others, it’s a <u>futile</u> struggle.
+Far more effective is to turn on a light.
+
+When the light is turned on, darkness vanishes. There is no need to fight with it; no effort is needed. A room can be dark for many years, yet it still takes only a moment to turn on the light and then the darkness is gone.
+
+**Fighting sin is like fighting an enemy in a dream. We don’t need to defeat him; we can just wake up.** If we’re being <u>harmed</u> by others, or if we’re the one doing the harming, or if we’re harming ourself, we can put our focus and energy on turning on a light in the situation.
+
+What is that light? It can be finding a positive goal that all can put their energy toward. It can be a love warm enough to dissolve barriers and <u>hatreds</u>. It can be looking within to see how our own stories are perpetuating our separateness.
+
+In doing this, any type of <u>rigidity</u> that we try to impose on ourself or life is again a suppression, a form of violence.Life is flexibility, openness, a plunge into the unknown each moment. How can this occur if we're frozen into a structure? A <u>slavish</u> <u>devotion</u> to rules or discipline can make us dead inside. Even awareness can be made into a discipline if it is approached rigidly; then it is not awareness because it has the smell of effort, of tension. The whole point is to become less and less tense inside, more and more open and relaxed.
+
+Like anything else, rules and disciplines can be useful as devices. They can alter the dream so that the dreamer may begin to rouse from his slumbers. But whatever we might use as a device, lets relax into it, ease into it, flow with it.
+
+**Lets let everything lead us to increased relaxation, for awakening is simply the ultimate relaxation**. If we decide to sit quietly from six to seven every morning, for instance, lets approach it as a relaxation; lets let it be a deep easiness. **If we approach it as a heavy, serious duty we’ll destroy the whole value of it.**
+
+If we use discipline on ourself, lets use it with some awareness. Lets watch ourself as we use it; then something will begin to awaken within us. At first it will be very fragile. Thus as awareness first develops, we may want to maintain our discipline just as you would keep a <u>wire</u> <u>fence</u> around as mall <u>sapling</u> to protect it. But once the dreamer is fully awake, all rules and disciplines fall away; they’re just irrelevant now. An awakened being may look disciplined because of a daily routine or rhythm, but that’s just the appearance.
+
+The routine of an awakened person is not a discipline because it’s not something imposed. Rather, it’s a rhythm that has arisen naturally, spontaneously, by itself. The Melody is moving <u>unimpeded</u> now in that <u>vessel</u>. The light is on.
 
 
 
 
 ## Chapter Thirty-five
 Just be natural, the Taoist master Chuang Tzu says.
-“When the shoe fits, the foot is forgotten.” He is sayingthat only when there is struggle or discomfort do we becomeaware of something. This is the situation of the mind — con-tinually in a struggle, in a discomfort. Let’s see the point: Howelse can it maintain itself? It is the struggle, the discomfort. Ithas no existence other than that. If we’re just natural, if we’reordinary, if we’re balanced, there is no place for the mind tostand. It must fall.
-To be natural means to be balanced, it means to be inthe middle. This is Buddha’s middle way. Mind always wantsto go to extremes, so it can keep moving. First we eat toomuch, then we starve ourself. Or we work very competitively,and then we go to the other side and relax very competitively.Or first we’re a playboy, then we get sick of that and want tobecome a saint. The mind tends to move to extremes, it oftendoesn’t know where or when to stop. This keeps the mindalive, because by moving to extremes it keeps moving.
-The master is a contrast to that. She’s balanced, like atightrope walker. She leans neither to the left nor the right;but stays balanced over the center, not going to extremes.
-She has a great sense of appropriateness. She’s just easy,ordinary. To be ordinary is a rare quality, for the mind isalways trying to be extraordinary. It wants to distinguish itself,it wants to stand out from the crowd. Even humility can servethis purpose — the mind will try to be the most humble. Thiseffort to be unique keeps the mind alive, but it is absolutelyabsurd. The universe is so vast. We’re like a grain of sand onthe beach trying to stand out from the other grains. Prettyabsurd.
-The master knows better; she has seen through suchnonsense. She’s natural, she’s easy, she’s light. “Easy is right,”says Chuang Tzu. Easy in the beginning, easy in the middle,easy in the end. The master is effortless, non-serious, playful.She knows there is nothing to do, so everything she does is“nothing special.”
-She just does what she’s doing — without compulsion,without attachment. It’s a good test: Does what we’re doingfeel aligned deep down, regardless of what’s happening on thesurface? If not, the message may be that we’re fighting theRiver somehow. The mind can make a tension even out ofeasiness by making a rule out of it. “Be easy.” This won't work.So how do we become easy?
-Actually, mind cannot ever really be easy and relaxedbecause it’s always trying to change or control things. Justlook: The Existence is vast, infinite, incomprehensible — andwe are going to change it? We know better than God howthings should go? We make war on Reality — especially in ourmind — and then wonder why life seems so difficult.
 
-Since the mind finds it difficult to relax, one device is touse the mind against the mind, to use the mind to go furtherinto doingness. By pushing the pendulum to an extreme —heavy physical exertion, primal therapy, sustained dancing,etc. — the pendulum automatically swings back to the otherside and a silence ensues.
-In that silence, awareness can arise.
-Awareness is the true road to easiness. All devices —concentration, meditations, therapies, austerities, martial arts,whatever — are only to create situations where awareness canbegin to arise, where the dreamer can begin to awaken. Wecan go on cutting a few leaves off the tree in our life, trying toimprove this or that, but the leaves just keep growing back. Orwe can cut the root.
-Jesus said, “I bring a sword.” It’s all very well to loveeverything, but sometimes we need a sword too, in this sense:Sometimes when we’re sitting for long periods in meditation,“just sitting,” we need to face the fear or the anxiety or theboredom and just not move. Just be unmoving in the face ofthose things that we’ve always moved away from before.
-The sword that actually cuts the root of the mind is thisunflinching awareness. What we’re doing, the lifestyle we’releading, the methods we’re using are of little importance.Awareness of what we’re doing is the key. For awareness leadsto silence, and silence in turn leads to deeper awareness; atbottom, they are the same. Awakening is going so far into thepresent moment that you can’t get back out.
+“When the shoe fits, the foot is forgotten.” He is saying that only when there is struggle or discomfort do we become aware of something. This is the situation of the mind — continually in a struggle, in a discomfort. Let’s see the point: How else can it maintain itself? It is the struggle, the discomfort. It has no existence other than that. If we’re just natural, if we’re ordinary, if we’re balanced, there is no place for the mind to stand. It must fall.
+
+To be natural means to be balanced, it means to be in the middle. This is Buddha’s middle way. Mind always wants to go to extremes, so it can keep moving. First we eat too much, then we <u>starve</u> ourself. Or we work very competitively,and then we go to the other side and relax very competitively. Or first we’re a playboy, then we get sick of that and want to become a <u>saint</u>. The mind tends to move to extremes, it often doesn’t know where or when to stop. This keeps the mind alive, because by moving to extremes it keeps moving.
+
+The master is a contrast to that. She’s balanced, like a <u>tightrope</u> walker. She leans neither to the left nor the right;but stays balanced over the center, not going to extremes.
+
+She has a great sense of appropriateness. She’s just easy,ordinary. To be ordinary is a rare quality, for the mind is always trying to be extraordinary. It wants to distinguish itself,it wants to stand out from the crowd. Even humility can serve this purpose — the mind will try to be the most humble. This effort to be unique keeps the mind alive, but it is absolutely absurd. The universe is so vast. We’re like a <u>grain</u> of sand on the beach trying to stand out from the other grains. Pretty absurd.
+
+The master knows better; she has seen through such nonsense. She’s natural, she’s easy, she’s light. “**Easy is right**,”says Chuang Tzu. Easy in the beginning, easy in the middle,easy in the end. **The master is effortless, non-serious, playful.** She knows there is nothing to do, so everything she does is“nothing special.”
+
+She just does what she’s doing — without compulsion,without attachment. It’s a good test: Does what we’re doing feel aligned deep down, regardless of what’s happening on the surface? If not, the message may be that we’re fighting the River somehow. The mind can make a tension even out of  easiness by making a rule out of it. “Be easy.” This won't work. So how do we become easy?
+
+Actually, mind cannot ever really be easy and relaxed because it’s always trying to change or control things. Just look: The Existence is vast, infinite, incomprehensible — and we are going to change it? We know better than God how things should go? We make war on Reality — especially in our mind — and then wonder why life seems so difficult.
+
+Since the mind finds it difficult to relax, one device is <u>touse</u> the mind against the mind, to use the mind to go further into doingness. By pushing the <u>pendulum</u> to an extreme —heavy physical <u>exertion</u>, primal <u>therapy</u>, sustained dancing,etc. — the pendulum automatically swings back to the otherside and a silence ensues.In that silence, awareness can arise.
+
+Awareness is the true road to easiness. All devices —concentration, meditations, therapies, <u>austerities</u>, martial arts,whatever — are only to create situations where awareness can begin to arise, where the dreamer can begin to awaken. We can go on cutting a few leaves off the tree in our life, trying to improve this or that, but the leaves just keep growing back. Or we can cut the root.
+
+Jesus said, “I bring a sword.” It’s all very well to love everything, but sometimes we need a sword too, in this sense:Sometimes when we’re sitting for long periods in meditation,“just sitting,” we need to face the fear or the anxiety or the boredom and just not move. **Just be unmoving in the face of those things that we’ve always moved away from before.**
+
+The sword that actually cuts the root of the mind is this <u>unflinching</u> awareness. What we’re doing, the lifestyle we’re leading, the methods we’re using are of little importance. Awareness of what we’re doing is the key. For awareness leads to silence, and silence in turn leads to deeper awareness; at bottom, they are the same. Awakening is going so far into the present moment that you can’t get back out.
+
+
 
 
 ## Chapter Thirty-six
@@ -981,6 +1013,8 @@ When we’re silent within we’ll be spontaneously lovingand compassionate; we 
 Sharing is being responsible for our experience — “I hada thought just now that you’re conceited and I turned itaround and saw how I’m conceited when I’m thinking thatabout you.” Dumping is when we put the responsibility forour experience out there — “You know, you’re conceited!”
 Dumping activates the automatic mechanisms of othersand creates conflict and estrangement. Sharing creates a com-munion; it makes us real to others, it makes us available. Thenwe’re not trying to protect anything, for example our story, forwe’ve seen that there’s nothing to protect.
 The mind always feels that certain things need to beprotected for the sake of our survival. But what is really beingprotected? Yes, the mind itself, the survival programmingitself. To the extent that we’re willing to share ourself withothers, to that extent we weaken the hold of the mind andopen up space with others instead of shutting it down. Andwe’ll see more and more that what we are protecting isn’tworth protecting, and conversely, that what is really worthprotecting — the vast pregnant spaciousness and emptinesswithin that we really are — needs no protection at all.
+
+
 
 
 ## Chapter Thirty-seven
