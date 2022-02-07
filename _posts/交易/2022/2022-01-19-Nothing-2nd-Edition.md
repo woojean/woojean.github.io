@@ -992,300 +992,215 @@ The sword that actually cuts the root of the mind is this <u>unflinching</u> awa
 
 
 ## Chapter Thirty-six
-Watch. We’ll see that we create our version of reality bywhat our attention is focused on. “The floor.” We just createdthe floor by bringing our attention and energy to it.
-What is the difference between attention and aware-ness? Simply that attention is directed, focused, while aware-ness is non-directed, passive. One way of putting it is thatawareness is noticing what we notice. It’s noticing the labels,discriminations, responses, models, activities, evaluations anddemands that constitute our version of reality.
-And as awareness develops, it becomes obvious that weare entirely responsible for the reality that we live in, becauseit’s our version of it. God is not responsible. The world is notresponsible. We are responsible. Our experience of reality isour own creation.
-The world is a perfect echo of us. It is like standing ina canyon. If we shout “God!” we’ll hear “God!” back. If weshout “Hate!” we’ll hear “Hate!” back. We hear our own pro-jections. The River mirrors our own struggles. For instance,the qualities that annoy us about others are projections ofqualities that we ourselves have. Otherwise, we would noticethem but they wouldn’t have any charge for us.
+Watch. We’ll see that we create our version of reality by what our attention is focused on. “The floor.” We just created the floor by bringing our attention and energy to it.
 
-If arrogance in someone bothers us it’s because we’rearrogant. If resentment in someone bothers us it’s because wehave resentment. Otherwise it would make no impression onus, it would be irrelevant, it would have no more significancethan the ceiling. The canyon echos us. And this is true in thewidest sense. If the world seems violent, let’s look within atourself. What is violent in us?
-All this being so, if we truly want to help the world thenwe can work on ourself. That is where it starts and ends. If wewant to improve someone else then we can work on ourself.We’ll be surprised — as our own consciousness is raised we’llfind that the other person has “improved.” They are muchmore okay now. A miracle!
-As our consciousness deepens we gradually find that weare living in a different reality. The game is to work on our-self — not on others, not on the world. The mind always findswrongness and problems out there and then wants to solvethem there, but the mind has created the wrongness and theproblems in the first place. How can we ever solve somethingexternally which is being created internally?
-A special trap is taking any of the concepts discussedhere and using them to make others wrong. For example, if wepoint out to someone that they are running a tape, we are theone who is running a tape — about them. We are the one whois missing. In our universe, we are the person who has theopportunity to get off it. And there is no way to get off it andstill be right. Working on other people is a good way to staystuck in the mind. Let’s work on ourselves.
-Does this mean that we never communicate how wefeel if were upset about something? Does it mean that wedon’t ever correct “wrongness” if we feel that something can beconstructively done? No. The mind is always looking for ruleswith which to achieve certainty, but no rule is always appro-priate.
-Let’s be a witness to ourselves. What stories or tapes arewe running now? How are we creating our experience of thesituation? As Ken Keyes said, first become centered and thenact. When we’re uncentered and upset in any way we’ll tendto create turbulence and disharmony whatever we do or say.So let’s let our primary emphasis always be our own con-sciousness. Let’s slowly fall silent inside.
-When we’re silent inside we’ll naturally, spontaneouslydo whatever is most appropriate, whatever might create thegreatest overall harmony. There won’t be a decision involved,no rule to follow. It will happen of itself. We will literally beliving in a different reality, and the world will look entirelydifferent to us, even though it’s entirely the same. What usedto be problems will no longer be problems.
-So let’s not try to solve problems while staying attachedto our stories. Our individual problems are not the problem.The world’s problems are not the problem. A lack of con-sciousness is the only real “problem” in this world.
-Always, our first priority can be to be more conscious ofour stories about how others and this world and ourselvesought to be different — and how those stories are creating oursense of isolation and suffering.
+What is the difference between attention and awareness? Simply that attention is directed, focused, while awareness is non-directed, passive. One way of putting it is that **awareness is noticing what we notice**. It’s noticing the labels,discriminations, responses, models, activities, evaluations and demands that constitute our version of reality.
 
-When we become more silent within it will all begin towork. We’ll experience the perfection of Existence, not as aconcept but as an experiential reality. Nothing will be seen asa problem, not even death. For when we’re really silent we’regone, we are no more; we have joined Existence Itself. Thedrop has merged in the ocean.
-How then can death trouble us? Death is a problem tothe mind, to “you” and “I.” How can disease or pain or loss orpoverty or suffering or anything at all trouble us when we nolonger exist? Only the Ocean exists, and It’s not troubled. Allwe ever were was the disturbance, the mind’s movement.When that is gone, we too are gone. And so is death.
+And as awareness develops, it becomes obvious that we are entirely responsible for the reality that we live in, because it’s our version of it. God is not responsible. The world is not responsible. We are responsible. Our experience of reality is our own creation.
+
+The world is a perfect echo of us. It is like standing in a <u>canyon</u>. If we shout “God!” we’ll hear “God!” back. If we shout “Hate!” we’ll hear “Hate!” back. We hear our own projections. The River mirrors our own struggles. For instance,the qualities that annoy us about others are projections of qualities that we ourselves have. Otherwise, we would notice them but they wouldn’t have any charge for us.
+
+If arrogance in someone bothers us it’s because we’re arrogant. If <u>resentment</u> in someone bothers us it’s because we have resentment. Otherwise it would make no impression on us, it would be irrelevant, it would have no more significance than the ceiling. The canyon echos us. And this is true in the widest sense. If the world seems violent, let’s look within at ourself. What is violent in us?
+
+All this being so, if we truly want to help the world then we can work on ourself. That is where it starts and ends. If we want to improve someone else then we can work on ourself. We’ll be surprised — as our own consciousness is raised we’ll find that the other person has “improved.” They are much more okay now. A miracle!
+
+As our consciousness deepens we gradually find that we are living in a different reality. The game is to work on ourself — not on others, not on the world. The mind always finds wrongness and problems out there and then wants to solvethem there, but the mind has created the wrongness and the problems in the first place. How can we ever solve something externally which is being created internally?
+
+A special trap is taking any of the concepts discussed here and using them to make others wrong. For example, if we point out to someone that they are running a tape, we are the one who is running a tape — about them. We are the one whois missing. In our universe, we are the person who has the opportunity to get off it. And there is no way to get off it and still be right. Working on other people is a good way to stay stuck in the mind. Let’s work on ourselves.
+
+Does this mean that we never communicate how we feel if we're upset about something?  Does it mean that we don’t ever correct “wrongness” if we feel that something can be constructively done? No. The mind is always looking for rules with which to achieve certainty, but no rule is always appropriate.
+
+Let’s be a witness to ourselves. What stories or tapes are we running now? How are we creating our experience of the situation? As Ken Keyes said, first become centered and then act. When we’re uncentered and upset in any way we’ll tend to create <u>turbulence</u> and <u>disharmony</u> whatever we do or say. So let’s let our primary emphasis always be our own consciousness. **Let’s slowly fall silent inside**.
+
+When we’re silent inside we’ll naturally, spontaneously do whatever is most appropriate, whatever might create the greatest overall harmony. There won’t be a decision involved,no rule to follow. It will happen of itself. We will literally beliving in a different reality, and the world will look entirely different to us, even though it’s entirely the same. What used to be problems will no longer be problems.
+
+So let’s not try to solve problems while staying attached to our stories. Our individual problems are not the problem. The world’s problems are not the problem. A lack of consciousness is the only real “problem” in this world.
+
+Always, our first priority can be to be more conscious of our stories about how others and this world and ourselves <u>ought</u> to be different — and how those stories are creating oursense of isolation and suffering.
+
+When we become more silent within it will all begin to work. We’ll experience the perfection of Existence, not as a concept but as an experiential reality. Nothing will be seen as a problem, not even death. For when we’re really silent we’re gone, we are no more; we have joined Existence Itself. The drop has merged in the ocean.
+
+How then can death trouble us? Death is a problem to the mind, to “you” and “I.”  How can disease or pain or loss or poverty or suffering or anything at all trouble us when we nolonger exist? Only the Ocean exists, and It’s not troubled. All we ever were was the <u>disturbance</u>, the mind’s movement. When that is gone, we too are gone. And so is death.
+
 When we’re silent within we’ll be spontaneously lovingand compassionate; we will be love, we will be compassion,but there will be no thought of “love” or “compassion.” It willjust happen. And when we communicate with someone wewon’t be dumping our tapes and justifications and blame onthem, but simply sharing our experience.
-Sharing is being responsible for our experience — “I hada thought just now that you’re conceited and I turned itaround and saw how I’m conceited when I’m thinking thatabout you.” Dumping is when we put the responsibility forour experience out there — “You know, you’re conceited!”
-Dumping activates the automatic mechanisms of othersand creates conflict and estrangement. Sharing creates a com-munion; it makes us real to others, it makes us available. Thenwe’re not trying to protect anything, for example our story, forwe’ve seen that there’s nothing to protect.
-The mind always feels that certain things need to beprotected for the sake of our survival. But what is really beingprotected? Yes, the mind itself, the survival programmingitself. To the extent that we’re willing to share ourself withothers, to that extent we weaken the hold of the mind andopen up space with others instead of shutting it down. Andwe’ll see more and more that what we are protecting isn’tworth protecting, and conversely, that what is really worthprotecting — the vast pregnant spaciousness and emptinesswithin that we really are — needs no protection at all.
+
+Sharing is being responsible for our experience — “I had a thought just now that you’re <u>conceited</u> and I turned it around and saw how I’m conceited when I’m thinking that about you.” Dumping is when we put the responsibility for our experience out there — “You know, you’re conceited!”
+
+Dumping activates the automatic mechanisms of others and creates conflict and <u>estrangement</u>. Sharing creates a communion; it makes us real to others, it makes us available. Then we’re not trying to protect anything, for example our story, for we’ve seen that there’s nothing to protect.
+
+The mind always feels that certain things need to be protected for the sake of our survival. But what is really being protected? Yes, the mind itself, the survival programming itself. To the extent that we’re willing to share ourself with others, to that extent we weaken the hold of the mind and open up space with others instead of shutting it down. And we’ll see more and more that what we are protecting isn’t worth protecting, and conversely, that what is really worth protecting — the vast pregnant <u>spaciousness</u> and emptinesswithin that we really are — needs no protection at all.
 
 
 
 
 ## Chapter Thirty-seven
-The person of final awakening is like the open sky. Sheis boundless, infinite. The bodily form is merely a contactpoint with Existence itself. And like the sky, her true dwellingplace has no walls, no roof and no floor either. How to protecta dwelling place that has no structure and no location?
-The liberated person has a body-mind package but sheis not that package; she is the void, the emptiness out of whichthat package has arisen. How to protect an absence, a void?Since it cannot be harmed, there is no need to protect it andno possibility of protecting it. Consequently, the person ofawakening is totally open to life, totally transparent, totallyreceptive to all things.
-She says “yes” to all aspects of life without reservation.The mind gathers energy and strength by saying “no” to partsof Existence. This is liked and that is disliked. But the personof wisdom says “yes” to all of it. And nothing is excluded, noteven the mind.
-For she knows that Existence is a vast mystery whichcannot be penetrated. She knows that she knows nothing atall, and so she simply opens her heart. She trusts. She allowsthe River to carry her, she knows not where, she knows not
-why. But with that trusting heart she experiences the bliss ofallowing herself to be a part of the flow. Just to exist in eachmoment is a benediction.
-He has no attachment to particular concepts or beliefs,and so he’s willing to let others have them. He’s willing to letothers be “right.” After all, each concept is part of Existencetoo, it is perfect in its own way. And each person is a part ofExistence, a part of God — so the divine is speaking througheveryone.
-He sometimes uses the master Mahavir's logic when it’sappropriate. If someone makes a statement of some kind hisattitude toward it might be, “Perhaps you are right.” He letsthe other person know that he understood what was said, buthe’s lost the compulsion to agree or disagree — least of all withphilosophical or metaphysical systems. He’s receptive to allthings large and small, including all concepts, but he’s notattached to any. He plays with them as what they are — toys inthe sandbox.
-He has abandoned trying to know the how or why ofExistence or of his situation, he’s abandoned gathering factsand data and answers and solutions. He’s willing to play withdata and questions and so on, but doesn't take them seriouslybecause he has accepted his complete ignorance.
-Ultimately, Existence is unknown and unknowable. It iswild, mysterious, infinite, un-boxable. The mind keeps tryingto box it up and pin it down, but it isn’t boxable or pinnable.We can pin the butterfly down, but then it’s not a butterflyanymore; it’s dead.
+The person of final awakening is like the open sky. She is boundless, infinite. The <u>bodily</u> form is merely a contact point with Existence itself. And like the sky, her true <u>dwellingplace</u> has no walls, no roof and no floor either. How to protect a dwelling place that has no structure and no location?
 
-Only the trusting heart really sees. As the fox said to thelittle prince, “It is only with the heart that one sees rightly;what is essential is invisible to the eye.” Facts, data, boxes donot touch what is essential.
-Buddha used to tell a story about a man wounded by apoisoned arrow. His friends and relatives procure a physicianto pull out the arrow, but the man says he won’t have the arrowpulled out until he knows the name of the man who wound-ed him and the name of his clan. And he won’t have the arrowpulled out until he knows the height of the attacker and hisvillage and his race. And he will not have the arrow pulled outuntil he knows the type of feathers used in the arrow and thetype of wood and the type of metal in the tip and many otherthings. Buddha points out that the man will die in the middleof finding all this out.
-This is our situation. We will die in the middle of col-lecting our data and answers and goals unless we awaken toour situation. We might think we can go toward happinesslike an arrow going towards the target. We might imagine itis a matter of getting certain things in place.
-But aiming directly toward the target can sometimesguarantee that we’ll miss it. For instance, someone lies back ina lake feeling the sun on her face. She’s not trying to accom-plish anything; she’s relaxed, surrendered. And a moment maycome when bliss descends on her. We hear about it, let’s say,and we go to the lake to find this happiness. We lie back inthe lake waiting for the moment of bliss, but it doesn’t come.Why not?
-Perhaps because we were direct. We sought directly. ButExistence is indirect. It moves through hints and whispers, Itreveals itself through silence. Only when all seeking is goneand were willing to wait for all eternity with no striving, nodesire, no goal, not waiting for anything in particular but justwaiting for no reason — then, in that empty silence, Existencereveals Itself.
-The mind thinks it can find happiness, thinks it canfind God, thinks it can find enlightenment. But what mapwill we use? And how can there be a map when there’s noaddress, no location?
-When there is no more seeking after anything at all,when there is simply waiting with no goal in mind, then Godfinds you. The seeker is the sought. You are the goal.
+The liberated person has a body-mind package but she is not that package; she is the void, the emptiness out of which that package has arisen. How to protect an absence, a void? Since it cannot be harmed, there is no need to protect it and no possibility of protecting it. Consequently, the person of awakening is totally open to life, totally transparent, totally receptive to all things.
+
+She says “yes” to all aspects of life without <u>reservation</u>. The mind gathers energy and strength by saying “no” to parts of Existence. This is liked and that is disliked. But the person of wisdom says “yes” to all of it. And nothing is excluded, not even the mind.
+
+For she knows that Existence is a vast mystery which cannot be penetrated. She knows that she knows nothing at all, and so she simply opens her heart. She trusts. She allows the River to carry her, she knows not where, she knows not why. But with that trusting heart she experiences the bliss of allowing herself to be a part of the flow. Just to exist in eachmoment is a <u>benediction</u>.
+
+He has no attachment to particular concepts or beliefs,and so he’s willing to let others have them. He’s willing to let others be “right.” After all, each concept is part of Existence too, it is perfect in its own way. And each person is a part of Existence, a part of God — so the <u>divine</u> is speaking through everyone.
+
+He sometimes uses the master Mahavir's logic when it’s appropriate. If someone makes a statement of some kind his attitude toward it might be, “Perhaps you are right.” He lets the other person know that he understood what was said, but he’s lost the compulsion to agree or disagree — least of all with philosophical or metaphysical systems. He’s receptive to all things large and small, including all concepts, but he’s not attached to any. He plays with them as what they are — toys in the sandbox.
+
+He has abandoned trying to know the how or why of Existence or of his situation, he’s abandoned gathering facts and data and answers and solutions. He’s willing to play with. data and questions and so on, but doesn't take them seriously because he has accepted his complete ignorance.
+
+Ultimately, Existence is unknown and unknowable. It is wild, mysterious, infinite, unboxable. The mind keeps trying to box it up and pin it down, but it isn’t boxable or pinnable.  We can pin the butterfly down, but then it’s not a butterfly anymore; it’s dead.
+
+Only the trusting heart really sees. As the fox said to the little prince, “It is only with the heart that one sees rightly;what is essential is invisible to the eye.” Facts, data, boxes do not touch what is essential.
+
+Buddha used to tell a story about a man wounded by a poisoned arrow. His friends and relatives <u>procure</u> a physician to pull out the arrow, but the man says he won’t have the arrow pulled out until he knows the name of the man who wounded him and the name of his <u>clan</u>. And he won’t have the arrow pulled out until he knows the height of the attacker and his village and his race. And he will not have the arrow pulled out until he knows the type of feathers used in the arrow and the type of wood and the type of metal in the tip and many otherthings. Buddha points out that the man will die in the middle of finding all this out.
+
+This is our situation. **We will die in the middle of collecting our data and answers and goals unless we awaken to our situation.** We might think we can go toward happiness like an arrow going towards the target. We might imagine it is a matter of getting certain things in place.
+
+But aiming directly toward the target can sometimes guarantee that we’ll miss it. For instance, someone lies back in a lake feeling the sun on her face. She’s not trying to accom-plish anything; she’s relaxed, surrendered. And a moment may come when bliss descends on her. We hear about it, let’s say,and we go to the lake to find this happiness. We lie back in the lake waiting for the moment of bliss, but it doesn’t come.Why not?
+
+Perhaps because we were direct. We sought directly. But Existence is indirect. It moves through hints and whispers, It reveals itself through silence. Only when all seeking is gone and were willing to wait for all <u>eternity</u> with no striving, no desire, no goal, not waiting for anything in particular but just waiting for no reason — then, in that empty silence, Existence reveals Itself.
+
+The mind thinks it can find happiness, thinks it can find God, thinks it can find enlightenment. But what map will we use? And how can there be a map when there’s no address, no location?
+
+When there is no more seeking after anything at all,when there is simply waiting with no goal in mind, then God finds you. The seeker is the sought. You are the goal.
 
 
 
 
 ## Chapter Thirty-eight
-God finds us when we’re not away from home. But Godcan come only to us when we’re totally naked. As long as weare clinging to something in our version of reality, God can’tcome to us. The Unlimited, so to speak, makes contact withus when we’re not clinging to something limited.
-Sufis tell a story of blind men feeling an elephant. Onefeels the trunk and declares that an elephant is curving andlong. One feels the ear and announces that an elephant is wideand flat. One feels the tail and concludes that an elephant islike a rope. As long as we cling to our partial version of thingswe can never see the Real.
-Another example: Three people walk down the street.One is hungry and notices the different restaurants. One islustful and notices the appropriate sex objects. One just had awallet stolen and notices only the thief up ahead. All are onthe same street, but all are in different versions of reality.
-To see the Real is to be unencumbered by thoughts ordesires about part of it; it is to have no identification left withanything partial. And this means to have no attachment evento any concept of God or Existence or enlightenment, becauseall concepts whatsoever are partial.
-How can we leave our partial versions of reality behindwhen were so mired in them? Awareness does it. We see thatthey are partial. We see moment-to-moment that our versionof things is only a version and that it is not reality itself.
-We observe ourself moment-to-moment — what we aredoing, what we are thinking and feeling, how we’re reactingtowards this and that. As this continues, the thoughts of themind gradually die down, and we begin to notice the gapsbetween our thoughts like the clouds parting and allowing aglimpse of the sun. Then we begin to enter the Silence wherewe encounter Existence itself. And one day when the Silenceis complete we disappear and then, in this metaphor, God cantruly play the divine Song through us.
-The ultimate value of awareness, therefore, is that itleads to Silence and Stillness within us. And in that Stillness,Existence is. God arises. The Self is “born.” Existence, Self —whatever the name — was always there but wasn’t noticedbecause of the incessant activity, the incessant static of themind’s beliefs and clutchings.
-Silence then, as Ramana Maharshi once said, is the trueinstruction. There’s no teacher like Silence. It is incomparable.Mind is like the surface of a lake when one is trying to see intothe depths. When the surface is choppy and agitated, thedepths cannot be seen. Once the surface is still and silent,though, the depths can be seen easily. They were always therebut could not be observed.
-The value of concentration meditations — focusing onan object such as a mantra, an image, a koan, the breath, and
+God finds us when we’re not away from home. But God can come only to us when we’re totally naked. As long as we are clinging to something in our version of reality, God can’t come to us. The Unlimited, so to speak, makes contact with us when we’re not clinging to something limited.
 
-so on — is that they can still the waves of the mind and thusgive a taste of Silence. However, the effect is only temporary.The mind is being suppressed, that’s all; it does not fall, it isnot extinguished. Concentrations are an activity of the mind,they are the mind suppressing and drugging itself. They’re aform of getting high, and so we have to gradually come downwhen the concentration ends.
-Concentration is an active awareness and not the true,passive awareness. Instead of being an effortless witness to theflow of leaves down the river, concentration is focusing on aparticular leaf. It is attached rather than detached, of the mindrather than the Self. Concentration is thinking, it is the mindaddressed in some particular direction. Yet it can be a usefuldevice. It can give a glimpse through the door. And its powerof focus can assist our awareness in going deeper.
-But true meditation is awareness — passive, choicelessawareness, the witness. It is this which can still the waves for-ever, which can uncover Silence permanently. It is throughawareness that a moment can happen from which there is noslipping back, no coming down.
-For only through awareness can one see the illusorynature of the mind and its survival-oriented thinking. Onlythrough awareness can we awaken and see that the mind isnot actually there, that the tapes are simply what they are andnot reality, that the mind as self-determiner does not exist,that the “I” does not exist, that all the grasping and seekingand judgments and aversion concerning the problems of lifeare the problem itself.
-Only through awareness can we see that at the deepestlevel there is nowhere to go, that the goingness itself was theproblem, that this moment is all there ever is and that beingaware is what there is to “do” with it.
-Beyond this awakening, however, is a final awakeningwhere we simply disappear. This is the final extinguishment ofall qualities that we’ve thought of as ourself. It is total Silenceand Stillness, the final annihilation of all thoughts, tapes, pro-grams, desires, disturbances. We can use thoughts, of course,but it is like picking up a ruler to draw a line. When there isno more use for the ruler, it is laid down; there is simplySilence, Spaciousness.
-Then we have attained to being a nobody, a nothing.Now rivers flow in us, stars are born in us, the wind blowsthrough the trees in us. There is the bliss of Existence Itself, abliss which transcends what is normally thought of as joy andhappiness in human life.
-In this state of final awakening, everything that wouldhave to be given up at physical death has already been givenup before physical death. The body is still alive, but now thereis no inhabitant anymore. This awakening, therefore, is trulya dying. It is death. Not bodily death, but the death of “you”or “I,” the death of the mind, the illusory controller.
-It’s the death of everything we’ve ever associated with“you” or “I.” Everything has been thrown, nothing is carriedany longer. The luggage full of stories and tapes and desireshas been put down forever. We leave behind all our burdens,including the ultimate burden — the separate “I.”
+<u>Sufis</u> tell a story of blind men feeling an elephant. One feels the <u>trunk</u> and declares that an elephant is <u>curving</u> and long. One feels the ear and announces that an elephant is wide and flat. One feels the tail and concludes that an elephant is like a rope. As long as we cling to our partial version of things we can never see the Real.
+
+Another example: Three people walk down the street.One is hungry and notices the different restaurants. One is <u>lustful</u> and notices the appropriate sex objects.  One just had awallet stolen and notices only the thief up ahead. All are on the same street, but all are in different versions of reality.
+
+To see the Real is to be <u>unencumbered</u> by thoughts or desires about part of it; it is to have no identification left with anything partial. And this means to have no attachment even to any concept of God or Existence or enlightenment, because **all concepts whatsoever are partial**.
+
+How can we leave our partial versions of reality behind when were so <u>mired</u> in them?  Awareness does it. We see that they are partial. We see moment-to-moment that our version of things is only a version and that it is not reality itself.
+
+We observe ourself moment-to-moment — what we are doing, what we are thinking and feeling, how we’re reacting towards this and that.  As this continues, the thoughts of the mind gradually die down, and we begin to notice the gaps between our thoughts like the clouds parting and allowing <u>aglimpse</u> of the sun. Then we begin to enter the Silence where we encounter Existence itself. And one day when the Silence is complete we disappear and then, in this metaphor, God can truly play the divine Song through us.
+
+The ultimate value of awareness, therefore, is that it leads to Silence and Stillness within us. And in that Stillness,Existence is. God arises. The Self is “born.” Existence, Self —whatever the name — was always there but wasn’t noticed because of the incessant activity, the incessant static of the mind’s beliefs and <u>clutchings</u>.
+
+Silence then, as Ramana Maharshi once said, is the true instruction. There’s no teacher like Silence. It is incomparable. Mind is like the surface of a lake when one is trying to see into the depths. When the surface is <u>choppy</u> and <u>agitated</u>, the depths cannot be seen. Once the surface is still and silent,though, the depths can be seen easily. They were always there but could not be observed.
+
+The value of concentration meditations — focusing on an object such as a <u>mantra</u>, an image, a koan, the breath, and so on — is that they can still the waves of the mind and thus give a taste of Silence. However, the effect is only temporary.The mind is being suppressed, that’s all; it does not fall, it is not extinguished. Concentrations are an activity of the mind,they are the mind suppressing and drugging itself.  They’re a form of getting high, and so we have to gradually come down when the concentration ends.
+
+Concentration is an active awareness and not the true,passive awareness. Instead of being an effortless witness to the flow of leaves down the river, concentration is focusing on a particular leaf. It is attached rather than detached, of the mind rather than the Self. Concentration is thinking, it is the mind addressed in some particular direction. Yet it can be a useful device. It can give a <u>glimpse</u> through the door. And its power of focus can assist our awareness in going deeper.
+
+But true meditation is awareness — passive, choiceless awareness, the witness. It is this which can still the waves for-ever, which can uncover Silence permanently. It is through awareness that a moment can happen from which there is no slipping back, no coming down.
+
+For only through awareness can one see the illusory nature of the mind and its survival-oriented thinking. Only through awareness can we awaken and see that the mind is not actually there, that the tapes are simply what they are and not reality, that the mind as self-determiner does not exist,that the “I” does not exist, that all the <u>grasping</u> and seeking and judgments and a version concerning the problems of life are the problem itself.
+
+Only through awareness can we see that at the deepest level there is nowhere to go, that the goingness itself was the problem, that this moment is all there ever is and that being aware is what there is to “do” with it.
+
+Beyond this awakening, however, is a final awakening where we simply disappear. This is the final extinguishment of all qualities that we’ve thought of as ourself. It is total Silence and Stillness, the final <u>annihilation</u> of all thoughts, tapes, programs, desires, disturbances. We can use thoughts, of course,but it is like picking up a <u>ruler</u> to draw a line. When there is no more use for the ruler, it is laid down; there is simply. Silence, Spaciousness.
+
+Then we have attained to being a nobody, a nothing. Now rivers flow in us, stars are born in us, the wind blows through the trees in us. There is the bliss of Existence Itself, a bliss which transcends what is normally thought of as joy and happiness in human life.
+
+In this state of final awakening, everything that would have to be given up at physical death has already been given up before physical death. The body is still alive, but now there is no <u>inhabitant</u> anymore. This awakening, therefore, is truly a dying. It is death. Not bodily death, but the death of “you”or “I,” the death of the mind, the illusory controller.
+
+It’s the death of everything we’ve ever associated with“you” or “I.” Everything has been thrown, nothing is carried any longer. The <u>luggage</u> full of stories and tapes and desires has been put down forever. We leave behind all our <u>burdens</u>,including the ultimate burden — the separate “I.”
+
 Now death has no hold anymore. Death is dead, for wehave already died. In that death we are reborn, but it is not us.Now we are not, but God is. God has been “born” through ourabsence. The Existence lives and breathes through the vesselnow. It’s like the open sky — eternal, deathless.
-The Existence expresses through a human form. Thenwe are Everything and Nothing. We are Oneness and theVoid. Who we are now was never born, so it cannot die. Bothlife and death have been transcended. Such a person, as Jesussaid, is in the world but not of it anymore.
+
+The Existence expresses through a human form. Then we are Everything and Nothing. We are Oneness and the Void. Who we are now was never born, so it cannot die. Both life and death have been transcended. Such a person, as Jesus said, is in the world but not of it anymore.
 And the Ocean itself rises in the wave.
 
 
-## Chapter Thirty-nine
-Is an innocent young infant in this state? Is an animalenlightened? In one sense they are because there is no mind,there is no rational-controller. There is no problem about lifebecause there is no past or future, no expectations or models,no concepts or comparisons. There is just life from moment tomoment. On the other hand there is strong instinctual, lower-brain programming to survive and avoid extinction. In con-trast, an awakened being has no desire to seek or avoid extinc-tion, because the separate “I” has already become extinct.
-But this isn’t the crux of the matter. What about a cloudor a blade of grass? Now there is no desire even to survive.There is simply the bliss of perfect harmony with Existence.Are they enlightened?
-No.. .and now we come to the heart of it.
-There is no possibility of a cloud or a leaf or a waveawakening because they aren’t conscious. Only humans — orany other sentient beings — can become self-realized, for onlysentient beings are conscious. Only humans or other sentientbeings have the capability to experience the hell of conscious-ness, the hell of mind — and that is what we do experience.But this hell also contains the seeds of another possibility.
 
-To be conscious means to be split, to be divided. Themind is always trying to be somewhere other than where it is.The conscious mind is pulling in one direction and theunconscious conditioning is pulling in another. Or the desiresystem wants something other than the Reality herenow. Oneis not whole. This is the anguish, the tension of mind.
-As Osho says, entities who don’t have sentience have notension because they’re unconscious; then there is no problem.And the free being has no tension because they are consciouscompletely; then there is no problem either. Only we humansand other sentient beings are partial; only we live in the hellof being divided. But this partial consciousness means also thepossibility is there of becoming completely conscious.
-Awakening means first going to hell and then comingback to paradise. Liberation means first battling and strug-gling with the River and then seeing the illusion and ceasingthe struggle... through awareness, through silence, through theextinguishing of who we think we are.
-The tragedy of the human is that only he or she trulysuffers. No animal, no plant, no river can suffer as humans dobecause there is no mind to struggle, no mind to live in thepast and future, no mind to compare and judge and crave.Self-realization has depth to it because it has first known themisery of mind.
-This is why a fetus, even though existing in bliss, isn’tawakened — it is not yet conscious. One must pass through thepain of partial consciousness before the doors of heaven canopen in complete consciousness.
-And then deliverance is here, in this life. In one sense,the pathless path to awakening can be considered a regressionback through the history of the organism to life in the womb.As awareness deepens, we go back through a psychodynamicstage, bringing consciousness to and disappearing the tapesformed by painful and traumatic incidents in childhood.
-Then as awareness increases further we undergo a kindof birthing stage, confronting the human condition of painand suffering, dying and death and the desire for survival —corresponding to the agony of the fetus as it dies as a fetus inorder to be born.
-Finally, as awareness becomes complete, one goes backto a transpersonal reality. The fetus is in undisturbed peace,undisturbed bliss. It has no sense of “I,” no desires, no urge toget somewhere, to control. It simply is, and there is no prob-lem whatever. The awakened person is like this, but there is acrucial difference — whereas the fetus is unconscious, the self-realized person is totally conscious. Both are in bliss, bothhave no identity, no mind, but one is conscious and the otheris not. To have no mind, no ego, no disturbance within, yet tobe fully conscious — this is liberation.
-How do we reach it? “You” and “I” can never reach itbecause we are the obstacle. Only when we disappear can it bereached. Indeed, the moment we are not, It is already there.But we cannot attain to our own non-existence; there is noway for us to reach that, for the very attempt to reach keeps“us” in existence. All that can be done is to cultivate theground — and then it happens of its own accord.
-Existence does it. It’s like the farmer growing his crop.He tills the soil, plants the seeds and then waits. He must havegreat patience. By and by, Existence Itself brings the crop upout of the soil. Yet the farmer also makes a contribution. Andwhen awakening happens it’s clearly a grace bestowed by theWhole; there is clearly no doer except the Totality. And yet wecontribute too, by tilling the ground.
-And how is the ground tilled? How is the seed planted?Through the non-doingness of awareness, mindfulness. Butawareness can only become fully mature in perfect silence andstillness. So like the farmer, we set aside periods of just sittingsilently and waiting. Unlike the farmer, though, we wait notfor anything in particular, but for nothing at all.
-We are just waiting. Waiting with an open heart, with atrusting heart. We can reach a point where even the goal orconcept of awakening is no longer there, where we’re preparedto just wait with no end or goal for all eternity. We can reachthe point where time drops away from us, when we see ourown uselessness, when we see that the world is doing just finewithout us and that we’ve been discarded, thrown on the junkpile. Only when time drops from us completely has the mindalso dropped.
-We cultivate then the greatest art, the art of just sittingsilently. But sitting silently in great awakeness, consciousness,awareness. It’s simply stopping, it is simply coming to a halt.It’s allowing the waves of the mind to subside, it’s allowing thebicycle to come to a stop and then just topple over. It is theultimate in doing nothing.
+
+## Chapter Thirty-nine
+Is an <u>innocent</u> young infant in this state? Is an animal enlightened? In one sense they are because there is no mind,there is no rational-controller. There is no problem about life because there is no past or future, no expectations or models,no concepts or comparisons. There is just life from moment tomoment. On the other hand there is strong <u>instinctual</u>, lower-brain programming to survive and avoid extinction. In contrast, an awakened being has no desire to seek or avoid extinction, because the separate “I” has already become extinct.
+
+But this isn’t the <u>crux</u> of the matter. What about a cloud or a <u>blade</u> of grass? Now there is no desire even to survive.There is simply the bliss of perfect harmony with Existence.Are they enlightened? No.. .and now we come to the heart of it.
+
+There is no possibility of a cloud or a leaf or a wave awakening because they aren’t conscious. Only humans — or any other <u>sentient</u> beings — can become self-realized, for only sentient beings are conscious. Only humans or other sentient beings have the capability to experience the hell of consciousness, the hell of mind — and that is what we do experience. But this hell also contains the seeds of another possibility.
+
+To be conscious means to be split, to be divided. The mind is always trying to be somewhere other than where it is.The conscious mind is pulling in one direction and the unconscious conditioning is pulling in another. Or the desire system wants something other than the Reality herenow. One is not whole. This is the anguish, the tension of mind.
+
+As Osho says, entities who don’t have sentience have no tension because they’re unconscious; then there is no problem. And the free being has no tension because they are conscious completely; then there is no problem either. Only we humans and other sentient beings are partial; only we live in the hell of being divided. But this partial consciousness means also the possibility is there of becoming completely conscious.
+
+Awakening means first going to hell and then coming back to <u>paradise</u>. Liberation means first battling and struggling with the River and then seeing the illusion and ceasing the struggle... through awareness, through silence, through the extinguishing of who we think we are.
+
+The tragedy of the human is that only he or she truly suffers. No animal, no plant, no river can suffer as humans do because there is no mind to struggle, no mind to live in the past and future, no mind to compare and judge and crave. Self-realization has depth to it because it has first known the misery of mind.
+
+This is why a <u>fetus</u>, even though existing in bliss, isn’t awakened — it is not yet conscious. One must pass through the pain of partial consciousness before the doors of heaven can open in complete consciousness.
+
+And then <u>deliverance</u> is here, in this life. In one sense,the pathless path to awakening can be considered a regression back through the history of the organism to life in the <u>womb</u>. As awareness deepens, we go back through a psychodynamic stage, bringing consciousness to and disappearing the tapes formed by painful and <u>traumatic</u> incidents in childhood.
+
+Then as awareness increases further we undergo a kindof birthing stage, confronting the human condition of pain and suffering, dying and death and the desire for survival —corresponding to the <u>agony</u> of the fetus as it dies as a fetus inorder to be born.
+
+Finally, as awareness becomes complete, one goes back to a <u>transpersonal</u> reality. The fetus is in undisturbed peace,undisturbed bliss. It has no sense of “I,” no desires, no urge to get somewhere, to control. It simply is, and there is no problem whatever. The awakened person is like this, but there is <u>acrucial</u> difference — where as the fetus is unconscious, the self-realized person is totally conscious. Both are in bliss, both have no identity, no mind, but one is conscious and the other is not. To have no mind, no ego, no <u>disturbance</u> within, yet to be fully conscious — this is liberation.
+
+How do we reach it? “You” and “I” can never reach it because we are the obstacle. Only when we disappear can it be reached. Indeed, the moment we are not, It is already there. But we cannot attain to our own non-existence; there is noway for us to reach that, for the very attempt to reach keeps “us” in existence. All that can be done is to cultivate the ground — and then it happens of its own accord.
+
+Existence does it. It’s like the farmer growing his crop. He <u>tills</u> the <u>soil</u>, plants the seeds and then waits. He must have great patience. By and by, Existence Itself brings the crop up out of the soil. Yet the farmer also makes a contribution. And when awakening happens it’s clearly a grace <u>bestowed</u> by the Whole; there is clearly no doer except the Totality. And yet we contribute too, by tilling the ground.
+
+And how is the ground tilled? How is the seed planted? Through the non-doingness of awareness, mindfulness. But awareness can only become fully <u>mature</u> in perfect silence and stillness. So like the farmer, we set aside periods of just sitting silently and waiting. Unlike the farmer, though, we wait not for anything in particular, but for nothing at all.
+
+We are just waiting. Waiting with an open heart, with a trusting heart. We can reach a point where even the goal or concept of awakening is no longer there, where we’re prepared to just wait with no end or goal for all <u>eternity</u>. We can reach the point where time drops away from us, when we see our own uselessness, when we see that the world is doing just fine without us and that we’ve been discarded, thrown on the <u>junkpile</u>. Only when time drops from us completely has the mind also dropped.
+
+We cultivate then **the greatest art, the art of just sitting silently**. But sitting silently in great awakeness, consciousness,awareness. It’s simply stopping, it is simply coming to a halt. It’s allowing the waves of the mind to subside, it’s allowing the bicycle to come to a stop and then just <u>topple</u> over. It is the ultimate in doing nothing.
 And in that absence Existence reveals Itself.
 The Zen master Zenrin said:
-Sitting silently, doing nothing,
-Spring comes and the grass grows by itself.
-Sitting silently, doing nothing, we imperceptibly mergeinto a harmony with the Existence... which is not trying to getanywhere, which is not trying to accomplish anything, whichis simply the bliss of being what It is.
+**Sitting silently, doing nothing,**
+**Spring comes and the grass grows by itself.**
+**Sitting silently, doing nothing, we <u>imperceptibly</u> merge into a harmony with the Existence... which is not trying to get anywhere, which is not trying to accomplish anything, which is simply the bliss of being what It is.**
+
+
 
 
 ## Chapter Forty
-Sitting silently, doing nothing, waiting for nothing, justwaiting — with no end in view, with no goals or desires orattachments, simply being silent and aware.. .this is how thefinal awakening comes.
-In our ordinary life the mind pulls away from boredombecause it needs excitement to stay alive. It knows only twopossibilities, movement or sleeping. If nothing is going on themind is just bored, it wants to go to sleep. But sitting silently,doing nothing is a third possibility — consciousness withoutoccupation.
-It is the ultimate facing of boredom. It is going deeperand deeper into the boredom, into the emptiness, into thehollowness beneath all the onion-layers of the mind. It is pen-etrating deeper into tedium, into silence, into nothing, intolack of stimulation.
-It can be done with eyes closed or open-and-unmoving,it makes no difference. The body is put into a relaxed positionwhere it can be still for awhile. And then the essential thing isthat we are no longer moving in a particular direction ordimension but are open to all dimensions, all directions.. .opento whatever is happening, open to the Totality.
+**Sitting silently, doing nothing, waiting for nothing, just waiting — with no end in view, with no goals or desires or attachments, simply being silent and aware.. .this is how the final awakening comes.**
+
+In our ordinary life the mind pulls away from <u>boredom</u> because it needs excitement to stay alive. It knows only two possibilities, movement or sleeping. If nothing is going on the mind is just bored, it wants to go to sleep. But sitting silently,doing nothing is a third possibility — consciousness without occupation.
+
+It is the ultimate facing of boredom. It is going deeper and deeper into the boredom, into the emptiness, into the hollowness beneath all the onion-layers of the mind. It is penetrating deeper into <u>tedium</u>, into silence, into nothing, into lack of stimulation.
+
+It can be done with eyes closed or open-and-unmoving,it makes no difference. The body is put into a relaxed position where it can be still for awhile. And then the essential thing is that we are no longer moving in a particular direction or dimension but are open to all dimensions, all directions.. .open to whatever is happening, open to the Totality.
+
 An interesting metaphor:
-Wakefulness is consciousness plus mental activity. Deepsleep is neither, it is unconsciousness plus mental inactivity.Dreams are activity without consciousness. But silent, open,aware sitting is the most interesting of all — it’s consciousnesswithout activity. Appropriately enough, silent sitting is theopposite of dreaming.
-In one sense, this final awakening could be described asbeing in a state of deep sleep while being fully conscious. Inthe normal waking state of the brain, beta waves of 14-26cycles per second predominate. In the deep relaxation broughtabout by various concentration meditations we pass down toalpha waves of 8-13 cycles per second.
-Then it was discovered that Zen monks who are expe-rienced in mindfulness meditation pass down while remainingconscious to theta waves of 4-7 cycles per second, which arenormally present only during the medium stages of sleep. Andawakening might then be characterized as remaining fullyconscious while passing down to delta waves of 0-4 cycles persecond, which are normally present only during the deepeststage of sleep.
-Deep sleep is very beautiful. In deep sleep there are nothoughts, no desires, no tapes, no stories. There is no struggle,no striving. In deep sleep we are not a particular identity; infact, we are not anything at all, our identity is gone. There isno clinging, no mind, no “I.” On the other hand, there is noconsciousness either. Freedom is adding consciousness to thisstate of inner stillness, and living in the world with it.
-It is awareness without attachment, consciousness with-out an object. The only difference between ourselves and aBuddha, then, is that we have something that the Buddhadoesn’t have. The Buddha merely has consciousness. We haveconsciousness plus stories and dreams. Final liberation is thecomplete disappearance of all stories of the mind.
-In this state every moment of life is a benediction, anatural gratitude for the overwhelming loveliness and majestyof life. Every moment is a spontaneous prayer, a spontaneoussurrender to Existence itself. But there is no decision to do orbe these things, for there’s no one to make the decision. Thereis simply emptiness, open sky, and in that emptiness thosequalities are just there.
-There is bliss because all is as it should be: It’s perfect,It’s exactly the way It is. In a cloud, a leaf, an animal, a personis seen the Eternal, the Deathless, the Nameless. The face ofthe unfathomable Mystery is present everywhere.
-The whole universe is seen in a river or a blade of grass,and yet, there’s no one to see it. It is the Existence Itself nowwho sees. The old inhabitant and all her sufferings is gone;now God is the only inhabitant. God looks out at God. Godsings a song to God. Infinity can be held in the palm of thehand. Less has become more, for there is a grace over the mostmundane details of daily life, or over nothing at all.
-There is a kind of great drunkenness with life — but nodrunkard, for no one is there. There is nobody, nothing. Thereis simply bliss, peace, grace, enchantment for no reason, nocause. It’s just the quality' of the Mystery.
-In this state life is like the notes of a symphony, in AlanWatts’ great metaphor. There is no attempt to get to the endof anything, for each moment is the whole point. Each note isprecious, perfect, needed, complete in itself.
-The purpose of all of Reality is now gathered into eachtimeless instant, the eternal present.
-Life is now like listening to the rain — each drop of raina brilliant jewel, the scripture of Existence. There is only therain, the sound of the rain, the suchness of the rain. There isno mind, no awakening, no awareness, no listener. There is noanything anymore. All things have merged into emptiness,the void.. .Nothing. Now there is only the pat-pat-pat of therain itself, vanishing into silence.
+Wakefulness is consciousness plus mental activity. Deepsleep is neither, it is unconsciousness plus mental inactivity. Dreams are activity without consciousness. But silent, open,aware sitting is the most interesting of all — it’s consciousness without activity.  Appropriately enough, silent sitting is the opposite of dreaming.
+In one sense, **this final awakening could be described as being in a state of deep sleep while being fully conscious**. In the normal waking state of the brain, beta waves of 14-26 cycles per second predominate. In the deep relaxation brought about by various concentration meditations we pass down to alpha waves of 8-13 cycles per second.
+
+Then it was discovered that Zen <u>monks</u> who are experienced in mindfulness meditation pass down while remaining conscious to <u>theta</u> waves of 4-7 cycles per second, which are normally present only during the medium stages of sleep. And awakening might then be characterized as remaining fully conscious while passing down to delta waves of 0-4 cycles persecond, which are normally present only during the deepeststage of sleep.
+
+Deep sleep is very beautiful. In deep sleep there are nothoughts, no desires, no tapes, no stories. There is no struggle,no striving. In deep sleep we are not a particular identity; infact, we are not anything at all, our identity is gone. There is no clinging, no mind, no “I.” On the other hand, there is no consciousness either. Freedom is adding consciousness to this state of inner stillness, and living in the world with it.
+
+It is awareness without attachment, consciousness without an object. The only difference between ourselves and a Buddha, then, is that we have something that the Buddha doesn’t have. The Buddha merely has consciousness. We have consciousness plus stories and dreams. **Final liberation is the complete disappearance of all stories of the mind.**
+
+In this state every moment of life is a <u>benediction</u>, a natural gratitude for the <u>overwhelming</u> loveliness and <u>majesty</u> of life. Every moment is a spontaneous prayer, a spontaneous surrender to Existence itself. But there is no decision to do or be these things, for there’s no one to make the decision. There is simply emptiness, open sky, and in that emptiness those qualities are just there.
+
+There is bliss because all is as it should be: It’s perfect,It’s exactly the way It is. In a cloud, a leaf, an animal, a <u>personis</u> seen the Eternal, the Deathless, the Nameless. The face of the <u>unfathomable</u> Mystery is present everywhere.
+
+The whole universe is seen in a river or a blade of grass,and yet, there’s no one to see it. It is the Existence Itself now who sees. The old inhabitant and all her sufferings is gone;now God is the only inhabitant. God looks out at God. God sings a song to God. Infinity can be held in the <u>palm</u> of the hand. Less has become more, for there is a grace over the most mundane details of daily life, or over nothing at all.
+
+There is a kind of great drunkenness with life — but no drunkard, for no one is there. There is nobody, nothing. Ther eis simply bliss, peace, grace, enchantment for no reason, nocause. It’s just the quality' of the Mystery.
+
+In this state life is like the notes of a <u>symphony</u>, in AlanWatts’ great metaphor. There is no attempt to get to the end of anything, for each moment is the whole point. Each note is precious, perfect, needed, complete in itself.
+
+The purpose of all of Reality is now gathered into <u>eachtimeless</u> instant, the eternal present.
+
+Life is now like listening to the rain — each drop of rain a brilliant <u>jewel</u>, the <u>scripture</u> of Existence. There is only the  rain, the sound of the rain, the suchness of the rain. There is no mind, no awakening, no awareness, no listener. There is no anything anymore. All things have merged into emptiness,the void.. .Nothing. Now there is only the pat-pat-pat of the rain itself, vanishing into silence.
 
 
 
 # Afterword
 
-The true revolution is always the same. It lies not inattempting to change things to the way our mind wants themto be, but in waking up to find ourselves in love with the waythey are. Theres no logic to it; its an illogical falling in lovewith all of Reality as It is. Its waking up from the dream-sleepof stories and attachments we normally call being awake.
-To do this great attentiveness is needed. This brings thetransformation. Actually, such mindful awareness is itself thetransformation, for nothing additional needs to be done. Inthat pure fire, certain things will drop away. All things willbecome new even as we change nothing.
-But this mindfulness is subtle. The difference betweenrunning the tapes of the mind and watching them as they runis microscopic, a hair’s breadth. Yet that difference ultimatelyis very vast. In other words, it takes a lot of alertness to bealert. And if you’re like me, you’ll forget over and over.
-It’s good to allow ourselves some time each day to sitsilently, to be aware in silence. In effect, we just sit on the bankand watch the mud in the pond begin to settle by itself — forthat is its natural tendency when it isn’t being continuouslystirred up by the mind’s motion.
+The true revolution is always the same. It lies not in attempting to change things to the way our mind wants them to be, but in waking up to find ourselves in love with the way they are. Theres no logic to it; its an illogical falling in love with all of Reality as It is. Its waking up from the dream-sleep of stories and attachments we normally call being awake.
 
-We don’t need to be unduly concerned about the “right”posture, schedule or technique. An undue concern would justcreate more tension. There are many useful devices, such asverbalizing our watching or mentally sweeping the body, butultimately they have to be allowed to drop or they becomepart of the obstacle. Ultimately, awareness has to stand com-pletely on its own. Since it is your unique journey, the naturalrhythms that are right for you will eventually find you.
-As the mind quiets down — or perhaps more accurately,as it becomes more absent — the infinite Mystery, the undyingIntelligence will manifest more and more within us. We can’tever leave It, for It is us, yet paradoxically we journey far afieldbefore awareness or total exhaustion allows us to discover thatwe have always been home.
-I am also on this journeyless journey with you. For all ofus, there is no limit to how far we can walk into this limitless,mysterious Ocean that is ourselves.
-On this journey to yourself, this pathless path that leadsto where you are — to where “you” aren't — may you experiencemuch love. And may you experience the peace that passes allunderstanding.
-James M. Sloman is an investigative writer whosesubject is the human condition. He has sought under-standing from a wide range of great teachers past andpresent, famous and obscure, and traditions ranging fromIndia to the kitchen table.
-Originally trained in philosophy at Princeton andwith an MFA in film from Columbia, he draws fromexperience in an eclectic career which has included beinga copywriter, assistant editor and computer programmerin New York, a novelist in rural Massachusetts, a traderin Chicago and a market theorist in San Diego.
-In addition to presenting occasional courses ontheories of financial markets, Sloman has spent over twodecades teaching seminars and workshops on spirituality,consciousness in everyday life, diet and nutrition, findingour true calling in life, and accessing our inner guidance.He currently lives near San Francisco.
-(This photo was used in the 1st editionand in honor of that is used here.)
+To do this great attentiveness is needed. This brings the transformation. Actually, such mindful awareness is itself the transformation, for nothing additional needs to be done. In that pure fire, certain things will drop away. All things will become new even as we change nothing.
 
-Thank you for reading Nothing.If you liked it, please tellyour friends about it.
+But this mindfulness is <u>subtle</u>. The difference between running the tapes of the mind and watching them as they run is <u>microscopic</u>, a hair’s breadth. Yet that difference ultimately is very vast. In other words, it takes a lot of alertness to be alert. And if you’re like me, you’ll forget over and over.
 
-Products by James Sloman,available from OceanBluePublishing, include:
+It’s good to allow ourselves some time each day to sit silently, to be aware in silence. In effect, we just sit on the bank and watch the mud in the <u>pond</u> begin to settle by itself — for that is its natural tendency when it isn’t being continuously <u>stirred</u> up by the mind’s motion.
 
-May You Be HappyHandbook for Humans
-Nothing
-The Ripple
-Affecting Our RealitySongs From The Bottom Of The Sea
-Descriptions are on the next pages.
-To place an order:
-1-800-838-7360
-Abroad: (707) 838-6200
-Or mail the order formin back to:
-OceanBlue Publishing
-98 Main StreetTiburon, CA 94920
-www.ocean-blue.com
+We don’t need to be <u>unduly</u> concerned about the “right”posture, schedule or technique. An undue concern would just create more tension. There are many useful devices, such as <u>verbalizing</u> our watching or mentally <u>sweeping</u> the body, but ultimately they have to be allowed to drop or they become part of the obstacle. Ultimately, awareness has to stand completely on its own. Since it is your unique journey, the natural rhythms that are right for you will eventually find you.
 
-MAY YOU BE HAPPY
-Blossoming Our Inner Guide
-2nd edition, 160 pages, $12
-We all want to be happy. Andwe are sometimes. But thenother times we are not. Andwhen we’re not, we wonder,why aren’t we happy all thetime? Why does there have tobe suffering?
-In May You Be Happy,James Sloman uncovers whatmany of the great teachers of modern and ancient timeshave discovered, and then clearly, heartfully, and elegant-ly shares with us their secret of true happiness.
-This newly expanded version of May You Be Happyis divided into three parts: Heart , Spirit, Mind.
-Part 1, Heart, is grounded in the teachings of Jesus,though a number of other teachers are included. It isabout opening the heart and beginning to fall in love withthe world.
-Part 2, Spirit, is grounded in the teachings of theBuddha, though again other teachers are included. Thispart, reflecting the practical, how-to-do-it emphasis ofthe Buddha, talks about the inner journey in a number ofpractical ways.
-Part 3, Mind, discusses following our inner guide,
-May YouBe Happy
-our inner voice or knowing, and how to distinguish itfrom the other voices in our mind. (And other topicsincluding trusting and abundance.)
-The emphasis of all three parts of the book is aboutthe gradual blossoming and uncovering of the warm,bright, loving intelligence within each of us.
+As the mind quiets down — or perhaps more accurately,as it becomes more absent — the infinite Mystery, the **undying Intelligence** will manifest more and more within us. We can’t ever leave It, for It is us, yet paradoxically we journey far afield before awareness or total exhaustion allows us to discover that we have always been home.
 
-True unsolicited comments from readers:
-“A great job with an incredibly important lesson inthe secret of happiness.”
-— MG, executive
-“I have read and re-read May You Be Happy andfeel expanded and open-hearted with each reading. I willgladly share this with others as it has greatly enhancedmy life. Thank you for this precious gift.”
-—AW
+I am also on this journeyless journey with you. For all of us, there is no limit to how far we can walk into this limitless,mysterious Ocean that is ourselves.
 
-“This is so clarifying, so clearing, it’s just incredi-ble. It’s just beautiful... Thank you.”
-— LR, teacher
-“I really love it. I’m very happy... It’s so beautiful.Incredible reminders for being love, being peace. Great,great job.”
-
-— RB, marketer
-
-HANDBOOK
-FOR HUMANS
-A Comprehensive Synthesisof Paths to Personal Growth
-560 pages, $24
-We get handbooks when webuy appliances and cars — whynot one on basic informationfor living?
-“A wonderful new book byJimmy Sloman is the manual he wishes he had receivedwhen he was growing up. Handbook for Humans is theculmination of a lifetime of learning and eight years ofwriting. In it, the author distills the wisdom of dozens oftraditional paths to health, happiness, success and peaceinto an easy-to-digest overview of how our lives reallywork. Handbook for Humans succeeds as an excellentguide to help us achieve balance, equanimity, vibrancyand wholeness in our lives. We recommend it highly.”
-— Patti Breitman, EarthSave Marin
-Handbook for Humans is actually a collection of fourbooks in one cover, addressing the Spirit, Mind, Heartand Body. Each of these dimensions is then divided intoan inner and outer area, allowing the reader to clearly
-
-Handbook
-Humans
-
-
-James Sloman
-grasp the inner work that will support the expressions heor she would like to take into the world.
-“If there were only one book you could read to nav-igate your way on the path of life, Handbook for Humanswould be the perfect choice. Jimmy Sloman has createda treasure trove of wisdom. ..that feeds the soul and body.I am grateful for this book.”
-— Susan Smith Jones, author ofChoose to Live Each Day Fully
-Peppered with dozens of real-life stories along withfables, folk tales, quotes & studies, Handbook for Humansis the manual many have been looking for to use in dailylife as a course in what works.
-“...I complimented James Sloman on his skill inintegrating ideas from many spiritual sources in his bookHandbook for Humans. Sloman is known in financial cir-cles for his work on the Delta Phenomenon and AdamTheory.. He started a book on markets more than eightyears ago but put it aside when he felt directed to preparethe Handbook. (He didn’t know writing it would take solong), but readers will not be surprised because his bookis so thoroughly researched, from Taoism to diets, fromevolution to empathy...”
-— Vern Barnett, Kansas City Star
-
-NOTHING
-Uncovering Our True Nature
-2nd edition, 200 pages, $14
-“Sitting silently,
-Doing nothing,
-Spring comes,
-And the grass grows by itself.”— Zenrin
-What is our true nature? Andhow do we access it? How do weglimpse it? A facial mirror willdo for our face, but what about the mind itself?
-Nothing is a mind-mirror which holds up a glass to themind so that we can begin to observe it. And in that looking,an opening can occur in which life is seen as inherently gra-cious and rewarding.
-“Thank you for Nothing... I was overwhelmed.”
-— KJ, San Diego
-“Nothing came at a time when I was at a peak of dissat-isfaction with my life.. .it worked for me and on me very natu-rally and easily.”
-— AB, South Carolina
-“The single best adjective to describe Nothing is ‘beau-tiful’.. .a superb job.”
-— DO, Fort Lauderdale
-
-THE RIPPLE
-A Mystery StoryOf A Seing’s Journey
-A novel, 400 pages, $15
-“ The Ripple , by James Sloman,shows the broad range of Mr.Sloman’s prodigious talent. Setin the overpowering environ-ment of New York City in the70s (when it was written), TheRipple chronicles the break-down of the human psyche as itstrives for autonomy and recognition against the metropolis’spiraling whirlpool of anonymity and powerlessness.
-“Sloman creates a darkly tragic yet humorous worldwhere rage and regret dance a tango of bittersweet promiseresigned to inevitable defeat. Punkin Miller, a computer pro-grammer who is tormented by fellow workers, shop keepersand women beyond his means, reaches a breaking point... Theresult is a horrific, heartbreaking and mesmerizing ride as thereader follows Punkin Miller through the maze of mentalmeltdown, cat and mouse intrigue, and finally, total surrenderto the crashing permanence of fate.
-“There are valuable lessons to be learned from TheRipple about the human condition. But make no mistake. TheRipple is a dark journey through the underside of the beast,and though redemption is found at last, the price is the loss ofa soul.”
-— Michael Gottlieb, author of Squeeze Play
-AFFECTING
-OUR REALITY
-Chicago Talk Series
-Set of 4 cassettes, $22
-Topics of Discussion:
-• Finding your calling in life
-• The role of play in vision
-• Looking at what’s real
-• Loving, accepting ourselves
-• Surrender and freedom
-• The paradox of feelings
-• Everything as a gift
-• Life as mystery and magic
-“A kind and soothing voice... I felt a sense of self-awareness, a warmth, a glow, a knowledge I’ve knownbefore only I don’t know where.. .a real insight to life andliving.”
-— S.K., Miami, FL
-“Thank you... wonderful!”
-— St. Louis, MO
-“So good.. .excellent!”
-— C. C., Monterey, CA
-
-y-VM F.S rtUVW AN
-
-AffectingOur Reality
-
-
-
-SONGS FROM THEBOTTOM OF THE SEA
-1& songs, voice & guitar
-Set of 2 CDs, $22
-“Jackpot!”
-“Now, perhaps more thanever, it seems that you can’t swing a Martin steel-stringwithout hitting a folk singer. But one of the great thingsabout the persistence and popularity of singer-songwritertypes is that every so often a new voice comes along thatreminds us that folk singers can still be legit and likeableeven in the ‘90s.
-“In the vast sea of singer/songwriters, Sloman’s rich,clear, well-recorded voice stands out...
-“There’s plenty here for folkies and non-folk fansalike to grab. In addition to his use of abundantly vividpersonal details and storytelling and songwriting tactics(“Charlie”), Sloman’s most surprising trick could be hisrewrites of cover songs like “The Night They Drove OldDixie Down” or “Summertime,” where he gets the wordsdown right but embellishes and distends the music, add-ing his own melody underneath to create a completelynew song that’s respectful and appreciative of the original,but fresh and vital nonetheless.”
-— CMJ New Music Report
-
-
-TO PLACE AN ORDER:
-Call: 300-333-7360Abroad: 707-333-6200
-Or mail the order form with yourcheck to 0cean3lue Publishing
-
-•SHIPPING & HANDLING
-In the US, add $4 shipping forfirst item, $1 for each additionalitem. Express and international,please call for shipping.
-
-www.ocean-blue.com
-
-Ocean3\ue Publishing
-93 Main StreetTiburon, CA 9-4920
-
-ITEM QTY PRICE AMOUNT
-May You Be Happy $12
-Handbook for Humane $24
-Nothing $14
-The Ripple $15
-Affecting Our Reality eet $22
-Songe From, ...Sea eet $22
-
-Subtotal CA residents add 7.5% tax
-
-Shipping* Total Enclosed
-
-Name Address C ityStateZip DayPhone/e-mail
-
-SpiritualityPersonal Growth
-
-
-UNCOVERING OUR TRUE NATURE
-What is our true nature? And how do we access it?How do we glimpse it? A facial mirror will do for ourface, but what about the mind itself?
-Nothing is a mind-mirror which holds up a glass tothe mind so that we can begin to observe it. And in thatlooking, an opening can occur in which life is seen as in-herently gracious and rewarding.
-In Nothing, investigative writer James Sloman takesus on a journey through the mind and the context inwhich it resides. In the process, he clearly and preciselydemystifies the essence of the mind so that our truenature can be revealed. He skillfully and playfully usesstories, quotes and fables from many different paths andtraditions to assist in uncovering our inherently bright,warm and loving nature.
-In reading Nothing the eye is pleased as well as thesoul through simple, beautiful and elegant illustrations bythe noted artist Tonia Weeks. Nothing was awarded theDesign Award of the Printers of the Carolinas.
-
-ISBN 1-Aflb77T-15-5
-
-
-$14 Ocean3\ue Publishing
+On this journey to yourself, this pathless path that leads to where you are — to where “you” aren't — may you experience much love. And may you experience the peace that passes all understanding.
 
