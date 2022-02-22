@@ -13,21 +13,24 @@ excerpt : ""
 # Foreword
 
 Nothing was **originally published in 1981**.
-For this new second edition an extensive revision was undertaken, but an attempt was made also to retain the basic <u>essence</u> and <u>flavor</u> of the original book.
+For this new second edition an extensive revision was undertaken, but an attempt was made also to retain the basic essence and flavor of the original book.
 Nothing has the grand certainty of youth — I was 37 at the time — but from my current vantage point that seems like one of its charms.
 Currently, its increasingly clear that I know nothing at all about anything at all, least of all about anything discussed in this book. And I like that.
+
 *Adapted from the Foreword in 1981:*
-This book is the result of an experience in March of 1980 which did not bring about <u>mastery</u> but did bring a clear <u>glimpse</u> of an alternate reality, or rather, an alternate way of <u>perceiving</u> this reality.
+This book is the result of an experience in March of 1980 which did not bring about mastery but did bring a clear glimpse of an alternate reality, or rather, an alternate way of perceiving this reality.
 In order to communicate about this experience, stories and concepts from various sources have been used. The work of such benefactors to humanity as Jesus, the Buddha, Byron Katie, Osho, Lao-Tzu, etc. has been very influential.
 I've also been influenced by other teachers such as Ram Dass, Werner Erhard, Ken Keyes Jr., Mahaghossananda, my friend Richard Gobeille, and many others.
 
-This book was originally made possible by the gracious assistance of Howard Brown, Carol Schroeder, John Weeks, the late and great Alfred Kapuler, and others.
-More recently, I would also like to thank these heartful people: Bill Anderson, Rebecca Bell, RayAnn Burnham, Tom and Nilza Kallos, John Keiser, Peggy MacKay, Dan Marcellus, Mary Poling, Van and Kala Tharp, Franz Wanowitz, David Waterhouse, Caroline Whitehead, Tom Zagara and especial-ly Carroll Stephenson. And many others. Thank you all.
-A special gratitude to my former wife Tonia Weeks, my mother Ann Romanchuck and my associate JoAnne Munley for their great open hearts.
-I would like to express my special appreciation in this book to Osho. He had a profoundly beneficial impact on my early life, and I’d like to acknowledge my special <u>indebtedness</u> to him. I’ve tried to incorporate here wherever possible his beautiful <u>metaphors</u> about the Mystery.
-I would like finally to express my gratitude to the many people who cannot be named here and who have touched my life in profound ways. Thank you all so much.
+*This book was originally made possible by the gracious assistance of Howard Brown, Carol Schroeder, John Weeks, the late and great Alfred Kapuler, and others.*
+*More recently, I would also like to thank these heartful people: Bill Anderson, Rebecca Bell, RayAnn Burnham, Tom and Nilza Kallos, John Keiser, Peggy MacKay, Dan Marcellus, Mary Poling, Van and Kala Tharp, Franz Wanowitz, David Waterhouse, Caroline Whitehead, Tom Zagara and especial-ly Carroll Stephenson. And many others. Thank you all.*
+*A special gratitude to my former wife Tonia Weeks, my mother Ann Romanchuck and my associate JoAnne Munley for their great open hearts.*
+*I would like to express my special appreciation in this book to Osho. He had a profoundly beneficial impact on my early life, and I’d like to acknowledge my special indebtedness to him. I’ve tried to incorporate here wherever possible his beautiful metaphors about the Mystery.*
+*I would like finally to express my gratitude to the many people who cannot be named here and who have touched my life in profound ways. Thank you all so much.*
+
 Last, I would like to acknowledge the countless people in all ages and situations who have labored mightily, most of them in obscurity, to benefit their corner of the world. You are all an inspiration.
-Everything said here has been said many times before, in many different ways over thousands of years. I hope you might find useful this particular arrangement and expression of what has gone before.
+
+**Everything said here has been said many times before, in many different ways over thousands of years.** I hope you might find useful this particular arrangement and expression of what has gone before.
 
 
 
@@ -35,80 +38,140 @@ Everything said here has been said many times before, in many different ways ove
 # The Mind
 ## Chapter One
 A true story...
-It concerns Alexander the Great, the world conqueror, and Diogenes, a <u>mystic</u> who lI'ved in Athens during the fourth century BC. Diogenes possessed nothing except for a begging bowl, and one day he threw even that small possession away. Diogenes was well known then for his <u>serene</u>, <u>blissful</u> state. Alexander had heard of him and desired to meet him.
-It’s one of the more interesting meetings in history. Diogenes was sunning himself alongside a rI'ver bank as the conqueror approached. Alexander looked into those silent, blissful eyes and told Diogenes that he greatly admired him, and then asked if there was anything he could do for him.
+It concerns Alexander the Great, the world conqueror, and Diogenes, a mystic who lived in Athens during the fourth century BC. Diogenes possessed nothing except for a begging bowl, and one day he threw even that small possession away. Diogenes was well known then for his serene, blissful state. Alexander had heard of him and desired to meet him.
+
+It’s one of the more interesting meetings in history. Diogenes was sunning himself alongside a river bank as the conqueror approached. Alexander looked into those silent, blissful eyes and told Diogenes that he greatly admired him, and then asked if there was anything he could do for him.
+
 Diogenes paused a moment, and then said, “Yes, there is one thing you could do for me. You could move a little to the side, you’re blocking the sun.”
-An <u>eerie</u> and beautiful reply. The most powerful man in the world was offering anything, and Diogenes asked him not to block the sun. **Here was a person who needed nothing.**
-Alexander said, “When I am finished conquering the world I am going to come and join you on the rI'ver bank and just relax.”
+
+An eerie and beautiful reply. The most powerful man in the world was offering anything, and Diogenes asked him not to block the sun. **Here was a person who needed nothing.**
+
+Alexander said, “When I am finished conquering the world I am going to come and join you on the river bank and just relax.”
 
 Diogenes replied, “There is no need to conquer the world first. I have not conquered the world and I am relaxing. **What is preventing you? You can relax now.**”
-Alexander said, “No, I must conquer the world first.” Then Diogenes said to him, “You will never finish. Youwill die in the middle of it.” And Alexander did indeed. In the midst of a war campaign he died.
-This is our mind, always needing to do something first before it can relax. In fact, it can never relax because it is always occupied. The mind’s disease is constant occupation. If the mind stops being occupied it simply <u>ceases</u> to exist. It is like a shark, which must stay moving to breathe. Without movement the mind will die.
+
+Alexander said, “No, I must conquer the world first.” Then Diogenes said to him, “You will never finish. You will die in the middle of it.” And Alexander did indeed. In the midst of a war campaign he died.
+
+This is our mind, always needing to do something first before it can relax. In fact, it can never relax because it is always occupied. The mind’s disease is constant occupation. If the mind stops being occupied it simply ceases to exist. It is like a shark, which must stay moving to breathe. **Without movement the mind will die**.
+
 Even to say it will die is incorrect, because the very movement is the mind. It is not the shark but the movement itself. **When the movement stops, the mind is already gone** **because it never actually existed.** But the movement — mind’s constant occupation — made it seem as if it did.
-And with what is the mind occupied? With thoughts, emotions, sensations, desires, goals, problems,preferences, activities and so on. Anything at all that is said or done or felt or thought is of the mind. It is all mind, and mind is always in movement. The mind can be compared to a dance. There is no dance apart from the movement, and the moment the movement stops there is no dance.
-It looks as if there are many problems in our lI'ves. But the masters say there is only one: the mind. There is only that one problem, they say, and if that problem is solved then all
-other problems are solved instantly, they simply cease to exist, because they never existed in the first place apart from the problem of mind itself. Mind created all our problems, they say, and no matter how many problems we solve more will appear unless we solve the basic problem of mind itself.
-It’s like a tree where we’re cutting off leaves one by one, solving one problem after another. But we’re surprised, too, because for every leaf we cut off three more appear. Every gardener knows that the way to <u>thicken</u> a tree is to <u>prune</u> it. Thus for every problem we solve others appear; the process never ends. We become exhausted solving this never-ending series of problems.
-If we look deeply enough, we’ll see that the process will never end; new leaves will always keep growing. So we must look not to the leaves but to the root — the mind — for that is where the real problem resides. If we cut the root all the leaves will wither <u>simultaneously</u>.
+
+And with what is the mind occupied? 
+
+With thoughts,emotions,sensations,desires,goals,problems,preferences, activities and so on. Anything at all that is said or done or felt or thought is of the mind. It is all mind, and mind is always in movement. The mind can be compared to a dance. There is no dance apart from the movement, and the moment the movement stops there is no dance.
+
+It looks as if there are many problems in our lives. But the masters say there is only one: the mind. There is only that one problem, they say, and if that problem is solved then all other problems are solved instantly, they simply cease to exist, because they never existed in the first place apart from the problem of mind itself. Mind created all our problems, they say, and no matter how many problems we solve more will appear unless we solve the basic problem of mind itself.
+
+It’s like a tree where we’re cutting off leaves one by one, solving one problem after another. But we’re surprised, too, because for every leaf we cut off three more appear. Every gardener knows that the way to thicken a tree is to prune it. Thus for every problem we solve others appear; the process never ends. We become exhausted solving this never-ending series of problems.
+
+If we look deeply enough, we’ll see that the process will never end; new leaves will always keep growing. So we must look not to the leaves but to the root — the mind — for that is where the real problem resides. If we cut the root all the leaves will wither simultaneously.
+
 So let’s look to the root, not to the leaves. Let’s look to the nature of mind itself.
 
 
 
 ## Chapter Two
-What is this nature? It is the nature of mind to always seek, to want. It is a <u>pursuer</u>, a goal-seeking mechanism. It is always trying to get somewhere; that is why it is never here. Look at the way we talk to ourselves: “Once I get the right partner, then everything will be fine.” “As soon as I get the new raise, then I can relax.” “Once the addition is on the house, then I can really enjoy myself.” “Once I get over the hump with this problem, then I'll be happy.”
+What is this nature? It is the nature of mind to always seek, to want. It is a pursuer, a goal-seeking mechanism. **It is always trying to get somewhere; that is why it is never here**. Look at the way we talk to ourselves: “Once I get the right partner, then everything will be fine.” “As soon as I get the new raise, then I can relax.” “Once the addition is on the house, then I can really enjoy myself.” “Once I get over the hump with this problem, then I'll be happy.”
+
 Our mind is always in the future, and it is never here. Happiness is always a goal a little way off that will be achieved when the problems are solved. But have we noticed? As soon as one problem is solved, others are there. As soon as one goal is reached there are new goals. It has to be so, for the mind is a goal-seeker. Without goals, without desires it cannot exist. It must have movement, it must have something to go toward. That is its nature.
-Then we might ask, what is a problem to this mind? A problem is anything that the mind cannot accept. It’s the mind’s desire for something or other to be different than the way it is. It’s some situation inconsistent with the mind's model of how the situation should be.
-**If we have no desire for anything to be different than it** **is, there’s no problem.** But the mind always has a list of things which it wants to be different; hence it always has many prob-lems to solve. This keeps it occupied; it keeps it alI've.
-What is the <u>ultimate</u> problem the mind is working on? Its ultimate problem is death. The mind does not want to be <u>annihilated</u>, and it remains in fear because it knows that death can come at any time. If we look deeply inside we can see a trembling, a tension — the fear of annihilation. The mind is constandy working on the problem of how to survI've. Its goal is to find a way to keep on existing, forever if possible.
-To <u>assuage</u> this inner fear mind tries to gather more and more security, power and pleasure. Mind becomes a collector. It collects more status, <u>prestige</u>, wealth, possessions. It collects more knowledge, more data, more answers. It collects more sensations, and then more yet. More food or more sex or more adventure. More partners, friends or allies. More technology. More houses or cars or clothes or books, more experiences, more solutions. Each of us is different but each of us wants more of something. It’s the nature of the mind.
-But no amount of more, no amount of collecting will satisfy the fear and trembling because **all collecting is outer** **and the fear and trembling are inner**. And this outer can never satisfy the inner. That’s why the mind is <u>greedy</u>. It gathers more and more, hoping to fill the inner <u>hollowness</u>, but it can never fill it, and so it goes on gathering, wanting, seeking. The game never ends, it goes on until the day of death. **We always die in the middle — in the middle of getting what we want.**
+
+Then we might ask, what is a problem to this mind? A problem is anything that the mind cannot accept. **It’s the mind’s desire for something or other to be different than the way it is**. It’s some situation inconsistent with the mind's model of how the situation should be.
+
+**If we have no desire for anything to be different than it** **is, there’s no problem.** But the mind always has a list of things which it wants to be different; hence it always has many problems to solve. This keeps it occupied; it keeps it aIive.
+
+What is the ultimate problem the mind is working on? Its ultimate problem is death. The mind does not want to be annihilated, and it remains in fear because it knows that death can come at any time. If we look deeply inside we can see a trembling, a tension — the fear of annihilation. **The mind is constantly working on the problem of how to survive**. Its goal is to find a way to keep on existing, forever if possible.
+
+To assuage this inner fear mind tries to gather more and more security, power and pleasure. Mind becomes a collector. It collects more status, prestige, wealth, possessions. It collects more knowledge, more data, more answers. It collects more sensations, and then more yet. More food or more sex or more adventure. More partners, friends or allies. More technology. More houses or cars or clothes or books, more experiences, more solutions. **Each of us is different but each of us wants more of something. It’s the nature of the mind.**
+
+But no amount of more, no amount of collecting will satisfy the fear and trembling because **all collecting is outer** **and the fear and trembling are inner**. And this outer can never satisfy the inner. That’s why the mind is greedy. It gathers more and more, hoping to fill the inner hollowness, but it can never fill it, and so it goes on gathering, wanting, seeking. The game never ends, it goes on until the day of death. **We always die in the middle — in the middle of getting what we want.**
+
+
 
 
 ## Chapter Three
-The mind has been compared to a drunken monkey swinging through the trees, for its <u>incessant</u> activity never stops. Look at a monkey; it’s always doing something. It fid-gets, it <u>scratches</u>, it eats, it looks around; it never stops except when it sleeps. Now look at the thoughts of our mind, they have the same quality. Our mind flies from one thing to another endlessly. “The table... made of hard wood... where does it come from?... Oregon, I imagine... I wonder what it would be like to lI've there... I hear it's rainy. . .we've certainlyhad very little rain here recently.. .the farmers need some rain . . .that’s a hard life, farming. . .” And on it goes.
-Incessant thought is manifested in incessant activity. Even during relaxation we often stay actI've: chewing gum, <u>leafing</u> through a magazine, listening to the radio, cooking, snacking, reading, watching TV. To the mind the question is always, “What’s next?” And so we go from eating to talking to working to making love to reading to watching a movie to going to the beach to eating to going to a party... forever.
-“What’s next?” The mind gets a <u>gratification</u> moment, but then the moment passes and the mind wants another. It gets another and that passes too; then it wants yet another, ad <u>infinitum</u>. **The mind can never be in the present because to** **the mind the present is only a means to an end.**
-This is why the mind is always essentially in misery, because it can never be here in the present moment.
-Our mind’s pictures of what we’re supposed to do are based on memories from the past. It uses the past to try to get to the future. Since the mind is always in in the past or future, it has to be mostly <u>miserable</u>.
-**Misery is just another name for never being here now,** **always being somewhere other than where we are.** The misery is pushed down so we won’t notice it too much, but it’s always there. Even when we’re seemingly feeling good, deep down the buried misery remains.
-It looks as if we’re herenow, but almost always we’re not. If we’re washing dishes we’re not just washing dishes. First we set up a short-term goal which we may not even notice — to get to the end of washing dishes. And we want to accomplish something by washing the dishes.
-In the meantime we’re thinking a thousand and one thoughts: what Bob said yesterday... the dinner we’re going to have tonight... oh, the plants need watering... how beautiful Carrie is... but she likes the temperature of the house too high... on and on. And we’re <u>restimulated</u> by the memory of when we were washing the dishes last year and burned our hand. We’re not herenow.
-The mind can never truly play, because playing is of the present, it hasn’t any past or future in it. To have fun is to do something without having any goal in it, neither the goal of pleasure nor the goal of getting to the end of it. Its just play, <u>frolic</u>; theres no purpose to it.
-True play is <u>incomprehensible</u> to the mind because to the mind everything must have a purpose, it must serve some end, it must have a meaning. Otherwise, what is the point? But **fun and play have no point; that's their point. They're just what they are.**
+The mind has been compared to a drunken monkey swinging through the trees, for its incessant activity never stops. Look at a monkey; it’s always doing something. It fidgets, it scratches, it eats, it looks around; it never stops except when it sleeps. Now look at the thoughts of our mind, they have the same quality. Our mind flies from one thing to another endlessly. “The table... made of hard wood... where does it come from?... Oregon, I imagine... I wonder what it would be like to live there... I hear it's rainy. . .we've certainly had very little rain here recently.. .the farmers need some rain . . .that’s a hard life, farming. . .” And on it goes.
 
-<u>Osho</u> tells the story of a seeker who was very good at <u>archery</u>. He would hit the target virtually every time. He went to Japan to study under an archery master, to get the certifi-cate from him. In Japan they use all sorts of excuses to teach <u>meditation</u>. Archery is one of them. The seeker would hit the target again and again but the master would only say, “**You are** **shooting the arrow. The arrow must shoot itself.**”
-This sounds <u>absurd</u>. How can the arrow shoot itself? The seeker continued hitting the target. Then he attempted to <u>deliberately</u> not hit the target. That didn't work either. The master said, ”The target is not the target. You are the target.” The master wasn't interested in the end, the outcome. He was interested in the beginning.
+Incessant thought is manifested in incessant activity. Even during relaxation we often stay active: chewing gum, leafing through a magazine, listening to the radio, cooking, snacking, reading, watching TV. To the mind the question is always, “What’s next?” And so we go from eating to talking to working to making love to reading to watching a movie to going to the beach to eating to going to a party... forever.
+
+“What’s next?” The mind gets a gratification moment, but then the moment passes and the mind wants another. It gets another and that passes too; then it wants yet another, ad infinitum. **The mind can never be in the present because to** **the mind the present is only a means to an end.**
+
+This is why the mind is always essentially in misery, because it can never be here in the present moment.
+
+**Our mind’s pictures of what we’re supposed to do are based on memories from the past**. It uses the past to try to get to the future. Since the mind is always in in the past or future, it has to be mostly miserable.
+
+**Misery is just another name for never being here now,** **always being somewhere other than where we are.** The misery is pushed down so we won’t notice it too much, but it’s always there. Even when we’re seemingly feeling good, deep down the buried misery remains.
+
+It looks as if we’re herenow, but almost always we’re not. If we’re washing dishes we’re not just washing dishes. First we set up a short-term goal which we may not even notice — to get to the end of washing dishes. And we want to accomplish something by washing the dishes.
+
+In the meantime we’re thinking a thousand and one thoughts: what Bob said yesterday... the dinner we’re going to have tonight... oh, the plants need watering... how beautiful Carrie is... but she likes the temperature of the house too high... on and on. And we’re restimulated by the memory of when we were washing the dishes last year and burned our hand. We’re not herenow.
+
+The mind can never truly play, because playing is of the present, it hasn’t any past or future in it. To have fun is to do something without having any goal in it, neither the goal of pleasure nor the goal of getting to the end of it. Its just play, frolic; there's no purpose to it.
+
+True play is incomprehensible to the mind because to the mind everything must have a purpose, it must serve some end, it must have a meaning. Otherwise, what is the point? But **fun and play have no point; that's their point. They're just what they are.**
+
+Osho tells the story of a seeker who was very good at archery. He would hit the target virtually every time. He went to Japan to study under an archery master, to get the certificate from him. In Japan they use all sorts of excuses to teach meditation. Archery is one of them. The seeker would hit the target again and again but the master would only say, “**You are** **shooting the arrow. The arrow must shoot itself.**”
+
+This sounds absurd. How can the arrow shoot itself? The seeker continued hitting the target. Then he attempted to deliberately not hit the target. That didn't work either. The master said, ”The target is not the target. You are the target.” **The master wasn't interested in the end, the outcome. He was interested in the beginning.**
+
 The seeker couldn't get the certificate from the master, so after three years he gave up and packed his bags to return home. He went to say goodbye to the master, who was on the archery range.
-The seeker sat down to watch and now he was no longer interested in the certificate; he had gI'ven that up.
-And he saw the master for the first time. **The master was just having fun; there was nobody interested in hitting the** **target.** The seeker then took the bow and pulled back the arrow. He was no longer concerned, **he was just playing now**. Before the arrow had left the bow the master turned away andsaid, “Finished. The target has been reached.”
-Deep down, our minds are always serious, always trying to reach to the target. Mind can’t understand that the target is already here because its very nature is to be <u>striving</u> to reach the target.
-Thus the mind is almost always involved in struggle, in trying. It’s always making an effort, involved in difficulties and <u>obstacles</u>.
-**The mind never sees that this endless seeking is the real** **problem.** It never sees that its attempts to find a solution are the very <u>motions</u> that keep it from seeing that no solution is necessary. It’s like a <u>muddy</u> <u>pond</u> where our motion in the pond to clear up the mud is the very thing that keeps the water muddy and prevents us from seeing <u>beneath</u> the surface to the <u>mysterious</u> bottom.
+
+The seeker sat down to watch and now he was no longer interested in the certificate; he had given that up.
+And he saw the master for the first time. **The master was just having fun; there was nobody interested in hitting the** **target.** The seeker then took the bow and pulled back the arrow. He was no longer concerned, **he was just playing now**. Before the arrow had left the bow the master turned away and said, “Finished. The target has been reached.”
+
+Deep down, our minds are always serious, always trying to reach to the target. Mind can’t understand that the target is already here because its very nature is to be striving to reach the target.
+
+Thus the mind is almost always involved in struggle, in trying. It’s always making an effort, involved in difficulties and obstacles.
+
+**The mind never sees that this endless seeking is the real** **problem.** It never sees that its attempts to find a solution are the very motions that keep it from seeing that no solution is necessary. It’s like a muddy pond where our motion in the pond to clear up the mud is the very thing that keeps the water muddy and prevents us from seeing beneath the surface to the mysterious bottom.
+
+
 
 
 ## Chapter Four
-The basis of the mind’s motion towards all its goals is <u>discriminations</u>. The world is a <u>totality</u> but the mind separates it into a <u>multiplicity</u> through its labels, concepts, categories. The mind is a labeler and labels everything. “This is a tree, that is a <u>fence</u>. This is moving, that is <u>stationary</u>. This is red, that is orange. He is well-dressed, she is average. The boy is good-looking, his father is not. This is a cloudy day, too bad, yesterday was sunny.”
-Mind then <u>perceI'ves</u> reality through its constructs and concepts rather than directly. Experiments have indicated that a person shown a red ace of spades will see an ace of hearts, because he has a concept that red means a heart or diamond. Other experiments have shown that if by prearrangement a crowd of people claims to see something that isn't there then the <u>uninitiated</u> observer will see it too. They will actually see something that isn’t there because the mind computes that it must be there.
-In fact all labels, all concepts set up <u>dualities</u>. To create a category of “tree” we must <u>simultaneously</u> create a category of “not-tree,” of all that which is not a tree. Otherwise this category of “tree” has no meaning. It’s the same with all our categories. “Up” has no meaning without “down.” Something can only be “up” in relation to something else which is “down.” The two concepts come into being together. **No “up” or “down” exists in reality.** Such labels are mind-creations.
+The basis of the mind’s motion towards all its goals is discriminations. The world is a totality but the mind separates it into a multiplicity through its labels, concepts, categories. The mind is a labeler and labels everything. “This is a tree, that is a fence. This is moving, that is stationary. This is red, that is orange. He is well-dressed, she is average. The boy is good-looking, his father is not. This is a cloudy day, too bad, yesterday was sunny.”
+
+Mind then perceives reality through its constructs and concepts **rather than directly**. Experiments have indicated that a person shown a red ace of spades will see an ace of hearts, because he has a concept that red means a heart or diamond. Other experiments have shown that if by prearrangement a crowd of people claims to see something that isn't there then the uninitiated observer will see it too. They will actually see something that isn’t there because the mind computes that it must be there.
+
+In fact all labels, all concepts set up dualities. To create a category of “tree” we must simultaneously create a category of “not-tree,” of all that which is not a tree. Otherwise this category of “tree” has no meaning. It’s the same with all our categories. “Up” has no meaning without “down.” Something can only be “up” in relation to something else which is “down.” The two concepts come into being together. **No “up” or “down” exists in reality.** Such labels are mind-creations.
+
+```
+有无相生，相反相成。
+```
+
 Similarly, “beautiful” can’t exist without “ugly.” “Good” cannot exist without “bad.” It is all the mind’s creation. **The** **mind’s experiences are determined by its theories, and in turn** **reinforce those theories.**
-Through some experience we set up a belief, let’s say, that men with <u>beards</u> are <u>impolite</u>. And we find that every man with a beard follows the rule. We bring our expectation to each situation, and then we get to be right.
-Mind wants to be right at all costs because **the mind is** **a collection of points of view**. Thus, being right about its point of view is <u>tantamount</u> to survival. And then when we come across a bearded man who is not impolite, we’re still right, because he becomes “the exception that proves the rule.” And the moment he <u>slips</u> up we say, “See? I knew I was right. Men with beards are impolite.” **Mind lI'ves in its own reality**.
-There’s an Hassidic story about this. There was a zad-dic, an Hassidic master, who became a judge. Because he was very <u>conscious</u> he was not concerned with being right but saw <u>rightness</u> in everything. The first case came up and the judge heard the <u>plaintiff</u> and then said, “Right. You are right.”
-The court <u>clerk</u> took him aside and said, “Are you crazy? You have only heard one side; how can you pronounce it right?” The judge said, “You’re right. Let’s hear the defense.” After hearing the defense the judge said, “Yes, right. You are absolutely right.” The clerk took the judge aside again and said, “Now you are <u>insane</u>. You have done what you should never do, you have made both sides right.” And the judge said, “Of course, you’re right. How can both sides be right?”
-This is the opposite of what the mind does. Mind clings to its point of view, it clings to its rightness. Mind is a clinger. As soon as it discriminates it starts preferring one thing to another. It makes a multiplicity out of the totality and then starts picking and choosing among the multiplicity. It prefers <u>palm</u> trees over <u>fir</u> trees, or <u>vice-versa</u>. It prefers blue over red, or tall women over short, or a big house over a small one, or <u>prestige</u> over <u>disgrace</u>, or whatever. <u>Desire</u> has <u>arisen</u>.
-Now what exists in the moment is not enough. Now something must be obtained before the moment will be enough. And something else must be pushed away. Mind clings to what it likes and tries to avoid what it dislikes. It becomes attached to its desires, preferences, points of view, beliefs and goals. It clings to people, <u>possessions</u>, money, power, youth. It attaches itself to particular solutions, answers, <u>rituals</u>, <u>habitual</u> attitudes, ways of acting and models of how things should be. The mind becomes as <u>brittle</u> and <u>rigid</u> as adead stick of wood. **It loses the flexibility of life and becomes** **dead inside**. But it continues to cling because it <u>equates</u> that with survival.
-The most basic point of view that the mind has, the most basic <u>duality</u> that it creates, is that it is separate. This <u>assumption</u> is so fundamental that the mind cannot even see it as an assumption. It’s like water to a fish. The mind sees this
-as simply one of the gI'vens of existence. It doesn’t question this <u>paradigm</u> because the paradigm runs so deep that it can’t even be seen as a paradigm. <u>Intellectually</u> perhaps, yes; but at the level of blood and bone, no.
-And this paradigm colors all of life. Naturally, since the mind feels separate it must struggle, strI've, survI've, and make things go right.
-In fact, this whole question of rightness or wrongness is one of the most <u>intriguing</u> aspects of the mind. The mind sees many things as wrong because it sees many things as directly or indirecdy threatening to its survival as a separate thing.
+
+Through some experience we set up a belief, let’s say, that men with beards are impolite. And we find that every man with a beard follows the rule. We bring our expectation to each situation, and then we get to be right.
+
+Mind wants to be right at all costs because **the mind is** **a collection of points of view**. Thus, being right about its point of view is tantamount to survival. And then when we come across a bearded man who is not impolite, we’re still right, because he becomes “the exception that proves the rule.” And the moment he slips up we say, “See? I knew I was right. Men with beards are impolite.” **Mind lives in its own reality**.
+
+There’s an Hassidic story about this. There was a <u>zaddic</u>, an Hassidic master, who became a judge. Because he was very conscious he was not concerned with being right but saw rightness in everything. The first case came up and the judge heard the plaintiff and then said, “Right. You are right.”
+
+The court clerk took him aside and said, “Are you crazy? You have only heard one side; how can you pronounce it right?” The judge said, “You’re right. Let’s hear the defense.” After hearing the defense the judge said, “Yes, right. You are absolutely right.” The clerk took the judge aside again and said, “Now you are insane. You have done what you should never do, you have made both sides right.” And the judge said, “Of course, you’re right. How can both sides be right?”
+
+This is the opposite of what the mind does. Mind clings to its point of view, it clings to its rightness. Mind is a clinger. As soon as it discriminates it starts preferring one thing to another. It makes a multiplicity out of the totality and then starts picking and choosing among the multiplicity. It prefers palm trees over fir trees, or vice-versa. It prefers blue over red, or tall women over short, or a big house over a small one, or prestige over disgrace, or whatever. Desire has arisen.
+
+Now what exists in the moment is not enough. Now something must be obtained before the moment will be enough. And something else must be pushed away. Mind clings to what it likes and tries to avoid what it dislikes. It becomes attached to its desires, preferences, points of view, beliefs and goals. It clings to people, possessions, money, power, youth. It attaches itself to particular solutions, answers, rituals, habitual attitudes, ways of acting and models of how things should be. The mind becomes as brittle and rigid as a dead stick of wood. **It loses the flexibility of life and becomes** **dead inside**. But it continues to cling because it equates that with survival.
+
+The most basic point of view that the mind has, the most basic duality that it creates, is that it is separate. This assumption is so fundamental that the mind cannot even see it as an assumption. It’s like water to a fish. The mind sees this as simply one of the givens of existence. It doesn’t question this paradigm because the paradigm runs so deep that it can’t even be seen as a paradigm. Intellectually perhaps, yes; but at the level of blood and bone, no.
+
+And this paradigm colors all of life. Naturally, since the mind feels separate it must struggle, strive, survive, and make things go right.
+
+In fact, this whole question of rightness or wrongness is one of the most intriguing aspects of the mind. The mind sees many things as wrong because it sees many things as directly or indirecdy threatening to its survival as a separate thing.
+
 If somebody steals our computer it’s “wrong” because the mind sees it as threatening to survival. If somebody or something is different from the model in our head then we call them or it “wrong.”
-All minds are ill, but a simple test of how much illness a mind has is to observe how much “complaint” it has.
+
+All minds are ill, but **a simple test of how much illness a mind has is to observe how much “complaint” it has.**
 
 
-## Chapter FI've
-One night as the master Shichiri Kojun was meditating a thief entered with a sword, demanding his money or his life. “Do not disturb me,” the master said. “The money is in that drawer over there.” The thief gathered the money and pre-pared to leave. “Remember to thank me,” the master said. The thief thanked him and left.
-Caught for other crimes, the thief <u>confessed</u> also to the <u>burglary</u> against the master. Called to <u>testify</u> and asked what happened, Shichiri said, “A man came and I gave him a gift of money. He thanked me and left. There was no thief.”
-Each of us creates our own reality by what we notice, by the concepts and <u>interpretations</u> that we overlay onto what is. Reality itself is not knowable by the mind. Our senses are small windows indeed. Our <u>faculty</u> of sight, for instance, is only a tiny segment of the whole <u>electromagnetic</u> <u>spectrum</u>.
+
+
+## Chapter Five
+One night as the master Shichiri Kojun was meditating a thief entered with a sword, demanding his money or his life. “Do not disturb me,” the master said. “The money is in that drawer over there.” The thief gathered the money and prepared to leave. “Remember to thank me,” the master said. The thief thanked him and left.
+
+Caught for other crimes, the thief confessed also to the burglary against the master. Called to testify and asked what happened, Shichiri said, “A man came and I gave him a gift of money. He thanked me and left. There was no thief.”
+
+Each of us creates our own reality by what we notice, by the concepts and interpretations that we overlay onto what is. **Reality itself is not knowable by the mind**. Our senses are small windows indeed. Our faculty of sight, for instance, is only a tiny segment of the whole electromagnetic spectrum.
+
 And concerning the data that is available, our senses act to filter out most of it. For example, it’s been demonstrated that a frog’s eye notices only nearby movements <u>characteristic</u> of insects. All other visual data is <u>screened</u> out.
 And what little data the brain does receI've **must then be** **interpreted by the brain before we experience the sensation of sight or any other sense**. There is no way to know for sure that the brain is not manufacturing its product completely inter-nally — and that what we think of as sense data may just be part of the internal computation.
 In other words, we don’t really know what’s out there, we have actually no idea of what exists external to us. And there may be nothing at all out there; all of our <u>sensory</u> data may be a completely internal product of the brain. There’s no way to be certain about it.
@@ -140,7 +203,7 @@ The mind is always in suffering since it is always trying to be somewhere else; 
 Mind wants to <u>impose</u> an order on existence because existence is too wild, too chaotic. As Osho says, just when we’re getting settled with our wisdom and our ways... we die. And a new baby is brought into the world, knowing nothing, not even knowing who it is.
 It is a chaos! Big trees die and little seeds <u>sprout</u>. Galaxies die and new galaxies are born. A chaos! If mind had its way there would be no death, but then there would be no life either. Everything would be perfect, mechanical, efficient, ordered — and dead. Because the new would be impossible.
 Chaos makes the new possible; that is its significance. **Mind binds itself in rules, <u>doctrines</u>, attitudes, “shoulds,” and** **then wonders why the flavor has gone out of life, why life** **seems more and more a matter of going through the motions.** **Mind becomes a <u>prisoner</u> of its own boxes.**
-Mind is a perfectionist, trying to find the structures and the answers that will be just right. It’s an idealist, trying to attain some <u>beckoning</u> goal — political, moral, legal, cultural, scientific, artistic, economic, religious, whatever. And only the impossible looks really attractI've as an ideal because only the impossible looks perfect.
+Mind is a perfectionist, trying to find the structures and the answers that will be just right. It’s an idealist, trying to attain some <u>beckoning</u> goal — political, moral, legal, cultural, scientific, artistic, economic, religious, whatever. And only the impossible looks really attractive as an ideal because only the impossible looks perfect.
 And mind falls short of its ideal again and again... tries again, falls short again, becomes miserable again... the game goes on. It’s an ego-trip, the impossible must be attained.
 Only the possible and imperfect is human. Mind always desires the super-human, and the super-human is always inhuman. **The most difficult thing for the mind is just to be** **ordinary, natural, “nothing special.**
 On the contrary, the ego/mind is trying very hard to be unique, special, extraordinary. It wants to stand out and be noticed. In fact this desire to be extraordinary is absolutely ordinary because it is <u>ubiquitous</u>, it’s the everyday nature of the mind.
@@ -358,14 +421,14 @@ Similarly, if with one of the mind’s tapes or programswe suddenly remember tha
 In that moment we no longer see the tape as realitybecause we are seeing it as merely a tape, as merely a program.Since the purpose of a tape is to present itself as reality, the<u>instant</u> its lack of reality is exposed the program simply stopsrunning. The tape disappears. The program, the tape, the act,the number, the thought — whatever we want to call it — justgoes back to where it came from. In that instant of awarenessthere is no mind anymore; there is only Being.
 Who or what does the noticing? The mind cannot do itbecause the mind is inescapably stuck in its dreams, in itsmanufactured version of reality. Only the Self, only the Beingcan be aware. It is awareness. The moment the Self noticesthat the particular tape running at that moment is simply atape and not reality, the moment the Self notices the programas a program — in that moment the program that was runningsimply disappears. In that moment there is only the Self, thereis no mind. <u>Metaphorically</u> speaking, in that moment the Selfhas awakened, the wave has discovered it is the Ocean.
 But in the next moment another tape will be called upand run as a response to stimuli from the environment. In this<u>metaphor</u>, if the Self identifies with this tape and sees it asreality, then, so to speak, the Self is caught once more; thenthe Being has been sucked into the illusion once again. AgainIt has fallen asleep. Once more It has become identified with
-the mind, with the automatic stimulus-response mechanism.Now the survival programming of the mechanism is in thedrI'ver's seat.
+the mind, with the automatic stimulus-response mechanism.Now the survival programming of the mechanism is in thedriver's seat.
 Then at some point another moment comes when theSelf notices a program as a program, notices a tape as simplya projected version of Reality itself. The tape vanishes; it canno longer present itself as real. In that instant the Self can besaid to be awakened once more.
 So it goes, back and forth. Self awakens from its long<u>slumber</u> for a moment, then goes back to sleep again. Andagain It awakens, only to return to sleep once more. In thebeginning the Self awakens only <u>fitfully</u>. It is like someoneengrossed in a vivid dream trying to remember that it is onlya dream — and the moment she does, of course, the dream isno longer there. It is like someone in a deep <u>hallucination</u> try-ing to remember that the hallucination is not real.
 In the beginning this process seems difficult becausethe moments of awareness are few and far between. But thatis just the appearance. **The moment of awareness itself is not difficult because awareness is not a doingness of any kind. The Self does not exist in time or space; it is not engaged in any activity, striving or effort. So awareness is not something that is done; it simply is. It simply happens.**
 If awareness of a tape is an effort then it is not aware-ness, it is something being done by the mind. For the mind isall about effort and struggle and striving; the mind can neverbe effortless since it is always in one way or another trying tobe somewhere other than where it is.
-Awareness, not being of the mind, is effortless. It takesplace outside of the whole stimulus-response mechanism, andisn’t an activity. It is not actI've, but <u>passI've</u>.
-The difference can be seen in a metaphor suggested byOsho. Imagine waiting in a train station where we are to meetour lover. We actI'vely watch the doors; we are looking for aparticular face, our lover's face. We are not interested in otherfaces. This is actI've awareness. This is mind. Mind is lookingfor a result; it is looking for something in particular.
-Now imagine sitting by the side of a rI'ver in autumn,watching the leaves on the rI'ver float by. As each leaf passesby, it is noticed without effort. No leaf is more important thanany other, yet no leaf passes by without being noticed. Thereis no concern for results, there is no end in view. There is justa choiceless, silent watching. **This is passI've awareness. This is awareness by the Self; indeed, it is the Self. Each leaf is sim-ply noticed and let go; there is no concern about it.**
+Awareness, not being of the mind, is effortless. It takesplace outside of the whole stimulus-response mechanism, andisn’t an activity. It is not active, but <u>passI've</u>.
+The difference can be seen in a metaphor suggested byOsho. Imagine waiting in a train station where we are to meetour lover. We actively watch the doors; we are looking for aparticular face, our lover's face. We are not interested in otherfaces. This is active awareness. This is mind. Mind is lookingfor a result; it is looking for something in particular.
+Now imagine sitting by the side of a river in autumn,watching the leaves on the river float by. As each leaf passesby, it is noticed without effort. No leaf is more important thanany other, yet no leaf passes by without being noticed. Thereis no concern for results, there is no end in view. There is justa choiceless, silent watching. **This is passI've awareness. This is awareness by the Self; indeed, it is the Self. Each leaf is sim-ply noticed and let go; there is no concern about it.**
 This is what one does with one's tapes, programs,thoughts, feelings, sensations, models, acts and demands. **We simply notice whatever comes up, whatever is running, with bare attention. Nothing is added; no judgment, no evaluation,no feeling that it’s good or bad, or that it should or shouldn't be there.**
 **We simply allow what is there to be there, and notice it without encouragement or <u>condemnation</u>. Adding encour-agement, condemnation, judgment, evaluation, or anything else would be doing something with the tape/story, and pure awareness is a non-doingness.**
 We allow each leaf — each tape — to come into ourawareness without desire or avoidance, and we allow it toleave without clinging or pushing. There are no preferences.Each thought is allowed to come in and it’s allowed to go. Itis simply noticed without adding anything. **And if the mind does add something to it, then the addition is also simply noticed.**
@@ -376,7 +439,7 @@ We allow each leaf — each tape — to come into ourawareness without desire or
 Depending on the tradition this is called awareness orwitnessing or mindfulness. Sometimes it is referred to as bareattention or self-remembering. The name doesn't matter, for thesame phenomenon underlies the different names. It is a deepallowing. It’s a deep let-go. It is a deep willingness for what-ever exists to exist. It is a deep loving of whatever is there, andchoosing it to be the way it is. It’s a deep gratitude and cele-bration of what is. It’s a deep observation of what exists with-out attachment or avoidance.
 There are two main branches on this tree. The first isabout beginning where we are — in our daily life. For instance,if we’re taking a shower we’re usually not herenow with it;we’re not aware of the <u>loveliness</u> of the water falling on us.Instead, we’re thinking of various things, wondering aboutthis and that, getting ready for work or whatever. Usually,we’re not just taking a shower when we're taking a shower.
 Using awareness in daily life would mean, for instance,noticing the stories/tapes that are running as we’re taking theshower. It would mean noticing what is getting in the way ofjust being there with the shower. As we notice the tapes, weneither reject them nor encourage them.
-We do nothing with them. Its simply a noticing thatthey are tapes, that the mind is in motion. One accepts them,allows them, chooses them to be there, but not as an actI'vething. Rather, the acceptance is implicit in the awareness it-self. As we notice the tapes as just tapes, the motion as justmotion, the tapes become more <u>flimsy</u> — and then were justtaking a shower, nothing else.
+We do nothing with them. Its simply a noticing thatthey are tapes, that the mind is in motion. One accepts them,allows them, chooses them to be there, but not as an activething. Rather, the acceptance is implicit in the awareness it-self. As we notice the tapes as just tapes, the motion as justmotion, the tapes become more <u>flimsy</u> — and then were justtaking a shower, nothing else.
 When we see a story as reality instead of as a story, itsas if we've become fascinated by one of the leaves in thestream and are now following it as it moves downstream. **Our attention is caught; we re clinging**. Then we re living in theversion of reality produced by taking that thought as reality.Then **we miss reality itself by clinging to something limited.**Conversely, as we simply watch each tape with detachment asit comes in and goes out, with no preferences, then we arrI'veat the doorway of the spiritual — **the present moment**.
 When Buddha talks about attachment being the causeof suffering, an image can arise of attachment to objects orpeople. And indeed we do get attached to people and objects.But we do so because of the stories we tell ourselves.
 **We cannot be attached to people or objects without being attached to our story about them.** That is the realattachment that the Buddha was talking about. And thatclinging means seeing that belief or story as reality. If there isno "reality” in the perception of a tape/story then there will beno attachment to it either. Then it will be just another beliefor story and will be seen as such. DI'vested of the quality ofbeing ""true” and ‘"real,” it ceases to engage us.
@@ -587,9 +650,9 @@ Concentration meditations effects are only temporary because they don’t involv
 
 This is a difference between concentration meditationand awareness. Awareness does not suppress anything. On the contrary it welcomes everything, accepts it all, sees everything for what it is. And in that effortless seeing, that seeing which is non-doing and which is not of the mind, the tapes simply begin to dissolve. There is no attempt to change or improve anything. Awareness is identical with a deep acceptance. But neither is there a decision to accept either; rather, acceptance is simply there.
 
-Another way of expressing this is to recall the difference between actI've and passI've awareness. Concentration meditation is an actI've awareness; it is an intense watching of the door of the train in order to see one’s lover. It’s a doingness; it is pointed in a particular direction. True awareness is totally passI've, it is merely watching the leaves go by on the rI'ver —choosing none, preferring none, clinging to nothing. It is a silence, a stillness that dissolves all things.
+Another way of expressing this is to recall the difference between active and passI've awareness. Concentration meditation is an active awareness; it is an intense watching of the door of the train in order to see one’s lover. It’s a doingness; it is pointed in a particular direction. True awareness is totally passI've, it is merely watching the leaves go by on the river —choosing none, preferring none, clinging to nothing. It is a silence, a stillness that dissolves all things.
 
-Concentration meditation is not necessary, but can be avaluable device. It is useful in that it can create a situation where awareness can begin to happen. In slowing down the mind it slows down the flow of leaves in the rI'ver, so to speak,so that a beginning awareness can more readily perceI've the gaps between the leaves. But it’s not necessary. The essence of awareness is that we start just where we are, with whatever ourpresent circumstances are.
+Concentration meditation is not necessary, but can be avaluable device. It is useful in that it can create a situation where awareness can begin to happen. In slowing down the mind it slows down the flow of leaves in the river, so to speak,so that a beginning awareness can more readily perceI've the gaps between the leaves. But it’s not necessary. The essence of awareness is that we start just where we are, with whatever ourpresent circumstances are.
 
 We do not have to do concentration meditations, we donot have to go to the mountains, we do not have to change our present situation. We simply do whatever we’re doing, but now with awareness. We begin where we are. But if we don’t yet see the nature of the mind’s game then concentration meditation can be useful. It creates a situation where awareness can begin <u>spontaneously</u>, and be more <u>penetrating</u>.
 
@@ -631,21 +694,21 @@ None of those things. Freedom is seeing that there is no goal at all. It’s the
 
 It is seeing that all attempts to solve the problem, to improve, to survI've, only perpetuate the problem and deepen it. It is seeing that all such attempts to solve the problem are the problem itself, and that **the problem is an illusion, that it doesn’t exist except as attempts to solve it**. All striving of anykind, therefore, simply falls away.
 
-It is a moment when all doingness simply drops. Not that we drop it. We simply see the true reality of things and in that moment the doingness drops away of itself. This doesn’t mean that we necessarily become inactI've.
+It is a moment when all doingness simply drops. Not that we drop it. We simply see the true reality of things and in that moment the doingness drops away of itself. This doesn’t mean that we necessarily become inactive.
 
 Instead, it means that we do whatever we do — without strivingness, without compulsI'veness or concern. We've been chasing our tail in a thousand different ways, whirling around faster and faster. We're <u>dizzy</u> from the chase, insane. Suddenly we see that the tail cannot ever be caught, that in fact the chasing is the problem and that there is no problem outside of the chasing.
 
-In that moment we simply stop. All the doingnessstops. We simply sit down, take a rest and let the <u>dizziness</u> clear. In fact the dizziness and insanity were part-and-parcel of the chasing itself. Now they simply drop when the chasing drops. **We see that we're flowing down the rI'ver and have been flowing down the rI'ver forever and will be flowing down the rI'ver forever.**
+In that moment we simply stop. All the doingnessstops. We simply sit down, take a rest and let the <u>dizziness</u> clear. In fact the dizziness and insanity were part-and-parcel of the chasing itself. Now they simply drop when the chasing drops. **We see that we're flowing down the river and have been flowing down the river forever and will be flowing down the river forever.**
 
-Mind wants to be different, unique, special; it wants to get somewhere, to go in its own direction. So it starts trying not to flow down the rI'ver, it starts trying to go upstream. And then the whole rI'ver, the whole Existence seems to be against us. We are trying so hard, struggling so <u>valiantly</u> against the rI'ver, but the rI'ver just keeps pushing us in the direction of the flow. The rI'ver seems so implacable, relentless, indifferent to our <u>plight</u> and our struggle. The rI'ver seems to be <u>hostile</u>,actI'vely working against our will and our desires.
+Mind wants to be different, unique, special; it wants to get somewhere, to go in its own direction. So it starts trying not to flow down the river, it starts trying to go upstream. And then the whole river, the whole Existence seems to be against us. We are trying so hard, struggling so <u>valiantly</u> against the river, but the river just keeps pushing us in the direction of the flow. The river seems so implacable, relentless, indifferent to our <u>plight</u> and our struggle. The river seems to be <u>hostile</u>,actively working against our will and our desires.
 
-Awakening is seeing that we are creating the problem.Its seeing that **the rI'ver is not against us, its simply flowing the way its flowing**. And the issue is not whether or not we're going to flow with the rI'ver, because we're going to do that in any event. **It is vast, and “you” and “I” are atoms.**`无我`
+Awakening is seeing that we are creating the problem.Its seeing that **the river is not against us, its simply flowing the way its flowing**. And the issue is not whether or not we're going to flow with the river, because we're going to do that in any event. **It is vast, and “you” and “I” are atoms.**`无我`
 
-Rather, the issue really is whether we will struggle or not as we flow down the rI'ver. The question is whether we’ll become aware of who is creating the struggle in our life. To the extent that we push against the rI'ver the rI'ver seems to push back, but the rI'ver is not the problem.
+Rather, the issue really is whether we will struggle or not as we flow down the river. The question is whether we’ll become aware of who is creating the struggle in our life. To the extent that we push against the river the river seems to push back, but the river is not the problem.
 
-If there is awareness moment-to-moment of the mind’s struggles then moment-to-moment they disappear; then we can listen to our inner voice and cease our struggling with the rI'ver. We stop struggling with Existence. Then we’re in a deep bliss as we flow down the rI'ver. Then we celebrate existence moment-by-moment.
+If there is awareness moment-to-moment of the mind’s struggles then moment-to-moment they disappear; then we can listen to our inner voice and cease our struggling with the river. We stop struggling with Existence. Then we’re in a deep bliss as we flow down the river. Then we celebrate existence moment-by-moment.
 
-We see that all attempts to improve our struggles are only more struggling. And if we try to stop struggling and try to flow down the rI'ver, then we’re in tension. How can we try to flow down the rI'ver? We’re already doing it. It’s just a deep let-go, there’s no trying or efforting. All trying, all efforting just keeps the game going.
+We see that all attempts to improve our struggles are only more struggling. And if we try to stop struggling and try to flow down the river, then we’re in tension. How can we try to flow down the river? We’re already doing it. It’s just a deep let-go, there’s no trying or efforting. All trying, all efforting just keeps the game going.
 
 **Mind is like a bicycle — it must keep moving or it will fall down. It goes on creating struggle, searching, survival,desire. It creates movement, striving, change, because other-wise it simply disappears, it falls down. Mind is the struggle itself. Without the struggle there’s no mind either.**
 
@@ -653,7 +716,7 @@ The mind as controller, as chooser, as decider, as the “I” just disappears. 
 
 If an awakened person crosses a street the computer-brain will figure out the right time to cross. But the mind, the“separate” person is vanished. That which struggled to control,that which thought of itself as the “I” is gone because it was only the struggle itself. Now the Existence, the Self crosses the street. The guests — thoughts, tapes, the mind — took over the house while the host was away, but now the host has returned.
 
-The master does not need to effort. After all, the rI'ver flows by itself. **Indeed, at the deepest level we are the rI'ver. **We’ve already arrI'ved. What are we struggling about?
+The master does not need to effort. After all, the river flows by itself. **Indeed, at the deepest level we are the river. **We’ve already arrI'ved. What are we struggling about?
 
 
 
@@ -661,13 +724,13 @@ The master does not need to effort. After all, the rI'ver flows by itself. **Ind
 ## Chapter Twenty-six
 Freedom is a deep seeing that this is it. This is the way it is. This is the way it turned out. Is is is... **Things are the way they are**. And things are not the way they are not. Right now,nothing can be any different than the way it is. **In the next moment it may be different, but right now it can’t be any different**. And all there ever is is right now. **The future never arrI'ves, because it’s always just right now.**
 
-This is it, this is the way the rI'ver is flowing. To accept it is to enjoy it. But the acceptance is not a decision, it’s rather a deep awareness that this is the way it is. Love and acceptanceare carried within awareness as a seed.
+This is it, this is the way the river is flowing. To accept it is to enjoy it. But the acceptance is not a decision, it’s rather a deep awareness that this is the way it is. Love and acceptanceare carried within awareness as a seed.
 
-**Awakening is seeing that things are never going to be any different than the way they are... until they are.** It is seeing that the rI'ver is going to flow this way forever... unless it flows some other way. The clouds will go north until they don't.The sun will rise unless it doesn’t. All attempts to change or find the answer simply fall away as we become aware of this. At the deepest level, all there ever is to do is to notice the way it is right now, to be fully conscious of it. Then we’re in deep harmony with the way things are. We’re in deep harmony with Existence.
+**Awakening is seeing that things are never going to be any different than the way they are... until they are.** It is seeing that the river is going to flow this way forever... unless it flows some other way. The clouds will go north until they don't.The sun will rise unless it doesn’t. All attempts to change or find the answer simply fall away as we become aware of this. At the deepest level, all there ever is to do is to notice the way it is right now, to be fully conscious of it. Then we’re in deep harmony with the way things are. We’re in deep harmony with Existence.
 
 To use a different <u>terminology</u>, all there ever is to do is to get off our positions. We get on a position, get off it, on another position, off it, on it, off it — forever. It’s not as if we get off all our positions once and for all. That would be like trying to eat breakfast once and for all.
 
-No, the tapes will always be running... until they don't. And what there is to do when they come up is to notice them,be aware of them as what they are. Then they flatten, they disappear. **We don’t do anything with them. We don’t ignore them, reject them or try to change them. We simply notice them... like leaves on the rI'ver.**
+No, the tapes will always be running... until they don't. And what there is to do when they come up is to notice them,be aware of them as what they are. Then they flatten, they disappear. **We don’t do anything with them. We don’t ignore them, reject them or try to change them. We simply notice them... like leaves on the river.**
 
 The ground from which we perceI've things transforms. Before, the ground was unawareness and sometimes we were aware. After, the ground is awareness and sometimes we’re unaware. But the circumstances of our life look the same — the same tapes still run, and sometimes we’re aware of them and sometimes not.. .just as before. Everything is the same.
 
@@ -734,7 +797,7 @@ All of Existence is like this. There is no purpose to it,no meaning, no goal. As
 
 The purpose of Existence is just to be here right now,being what It is. It is totally sufficient in Itself at each instant.It has no purpose except Itself. It has no reason except Itself.The rose is not trying to be something else; it is in bliss to be what it is this moment.
 
-Clouds, rI'vers, trees, life itself — all of Existence is in adeep <u>ecstasy</u>. All except us humans. We humans are in secret misery because our mind can't accept this moment; we must try to be somewhere else. We must try to control. We must make decisions. The mind is always serious — there are things to be done. Even when we let go, even when we laugh its only on the surface. Deep down the mind is still serious.
+Clouds, rivers, trees, life itself — all of Existence is in adeep <u>ecstasy</u>. All except us humans. We humans are in secret misery because our mind can't accept this moment; we must try to be somewhere else. We must try to control. We must make decisions. The mind is always serious — there are things to be done. Even when we let go, even when we laugh its only on the surface. Deep down the mind is still serious.
 
 Existence, on the other hand, is playing. It is having fun with no goal. Yes, there is death. There is pain. But death is an <u>integral</u> part of life, its absolutely necessary to life. Life and death are not opposed to each other, they are two faces of the same thing. Death clears out the <u>rigidity</u>, the <u>calcification</u>, the stuckness, the willfulness, the dead <u>unbending</u> ness and thus makes life possible.
 
@@ -798,11 +861,11 @@ Who is beating our heart right now? If we are, then let’s will it to stop beat
 
 It’s doing all of it — all of it absolutely. Why, then, do we persist in believing that we must <u>fend</u> for ourself, that we must look out for #1? Existence is taking care of our heart; will it not take care of us? Our life is no more than a <u>dewdrop</u> on a leaf, slowly falling off — why all this fighting, ambition, struggling, seeking? We are a drop of rain <u>evaporating</u> in the sun. Let’s enjoy it! Can we see our real situation?
 
-Let’s look within and let a deep trust arise. Let’s let ourself be borne on the back of Existence. Let’s let the RI'ver carry us. In truth, It’s carrying us anyway. Why struggle?
+Let’s look within and let a deep trust arise. Let’s let ourself be borne on the back of Existence. Let’s let the river carry us. In truth, It’s carrying us anyway. Why struggle?
 
 But this is not enough for the mind. The mind finds it difficult to trust. The mind asks, “But what if I die? What if I don’t get enough to eat? What if I don’t get enough money? What if I don’t get the right partner?” And so on.
 
-Mind’s questions presuppose certain preferences. But the awakened person has no more preferences. If death comes,good; she’ll celebrate it. If hunger comes, good; she’ll celebrate it. If illness comes, good; she’ll celebrate it. If joy comes, good;she’ll celebrate it. If the wind blows through the trees, good;she’ll celebrate it. Whatsoever it is, she will celebrate it, she will be grateful for it. And in truth, the RI'ver is going to flow wherever It flows anyway. Why not celebrate the way It is,whatever It is?
+Mind’s questions presuppose certain preferences. But the awakened person has no more preferences. If death comes,good; she’ll celebrate it. If hunger comes, good; she’ll celebrate it. If illness comes, good; she’ll celebrate it. If joy comes, good;she’ll celebrate it. If the wind blows through the trees, good;she’ll celebrate it. Whatsoever it is, she will celebrate it, she will be grateful for it. And in truth, the river is going to flow wherever It flows anyway. Why not celebrate the way It is,whatever It is?
 
 There is a true story of the Sufi master Bayazid and his disciples who came to a town at night. It was cold and raining and they were hungry, but the <u>townspeople</u> would not let them in. So they went to an <u>adjacent</u> hill, and there Bayazid praised God for his many blessings. One of his disciples said,“Now this is too much, you have gone too far. We are hungry,cold, wet tonight — and you’re praising God?” Bayazid replied,“I must praise Him, for He fulfills my needs so beautifully. Tonight I need to be hungry. Tonight I need to be cold and in <u>poverty</u>. Tonight I need to be wet and <u>shI'vering</u>. Otherwise,why should He gI've them to me? He takes care of my needs so perfectly.”
 
@@ -836,7 +899,7 @@ All other so-called moralities are suppressions of the mind’s greed and violen
 
 Humans have become the most unnatural animal, infact the only unnatural animal. We’re addicted to force since we want to change things and we feel it is very important that they be changed. We don’t see that all problems <u>reside</u> within our own mind, are creations of our mind. We don’t see that using force to accomplish our ends is like trying to pry open a flower by force. Nothing is accomplished except destroying the flower.
 
-Existence is doing it all. Existence opens up millions of flowers everyday, no force is needed. No help at all is needed. What can we do? We can just stay out of the way and let the RI'ver flow. It will take care of everything. It already is taking care of everything, we just don’t see it. When we drop our struggling and our models of how it should be, we find that It’s already carrying us and always has been.
+Existence is doing it all. Existence opens up millions of flowers everyday, no force is needed. No help at all is needed. What can we do? We can just stay out of the way and let the river flow. It will take care of everything. It already is taking care of everything, we just don’t see it. When we drop our struggling and our models of how it should be, we find that It’s already carrying us and always has been.
 
 We humans have surrounded ourselves with dogmas,rules, regulations. We create our own prison with our mind,and then cling to our bars because they are familiar to us, they are a known item. Mind feels comfortable with the known,threatened by the unknown because mind cannot exist in the unknown. The unknown is infinite, wild, unpredictable; it is the very <u>fabric</u> of Existence itself. So even though we may be in misery in our prison, we cling to our dogmas and our rules and <u>rituals</u>.
 
@@ -936,7 +999,7 @@ She has a great sense of appropriateness. She’s just easy,ordinary. To be ordi
 
 The master knows better; she has seen through such nonsense. She’s natural, she’s easy, she’s light. “**Easy is right**,”says Chuang Tzu. Easy in the beginning, easy in the middle,easy in the end. **The master is effortless, non-serious, playful.** She knows there is nothing to do, so everything she does is“nothing special.”
 
-She just does what she’s doing — without compulsion,without attachment. It’s a good test: Does what we’re doing feel aligned deep down, regardless of what’s happening on the surface? If not, the message may be that we’re fighting the RI'ver somehow. The mind can make a tension even out of easiness by making a rule out of it. “Be easy.” This won't work. So how do we become easy?
+She just does what she’s doing — without compulsion,without attachment. It’s a good test: Does what we’re doing feel aligned deep down, regardless of what’s happening on the surface? If not, the message may be that we’re fighting the river somehow. The mind can make a tension even out of easiness by making a rule out of it. “Be easy.” This won't work. So how do we become easy?
 
 Actually, mind cannot ever really be easy and relaxed because it’s always trying to change or control things. Just look: The Existence is vast, infinite, incomprehensible — and we are going to change it? We know better than God how things should go? We make war on Reality — especially in our mind — and then wonder why life seems so difficult.
 
@@ -958,7 +1021,7 @@ What is the difference between attention and awareness? Simply that attention is
 
 And as awareness develops, it becomes obvious that we are entirely responsible for the reality that we lI've in, because it’s our version of it. God is not responsible. The world is not responsible. We are responsible. Our experience of reality is our own creation.
 
-The world is a perfect echo of us. It is like standing in a <u>canyon</u>. If we shout “God!” we’ll hear “God!” back. If we shout “Hate!” we’ll hear “Hate!” back. We hear our own projections. The RI'ver mirrors our own struggles. For instance,the qualities that annoy us about others are projections of qualities that we ourselves have. Otherwise, we would notice them but they wouldn’t have any charge for us.
+The world is a perfect echo of us. It is like standing in a <u>canyon</u>. If we shout “God!” we’ll hear “God!” back. If we shout “Hate!” we’ll hear “Hate!” back. We hear our own projections. The river mirrors our own struggles. For instance,the qualities that annoy us about others are projections of qualities that we ourselves have. Otherwise, we would notice them but they wouldn’t have any charge for us.
 
 If arrogance in someone bothers us it’s because we’re arrogant. If <u>resentment</u> in someone bothers us it’s because we have resentment. Otherwise it would make no impression on us, it would be irrelevant, it would have no more significance than the ceiling. The canyon echos us. And this is true in the widest sense. If the world seems violent, let’s look within at ourself. What is violent in us?
 
@@ -1000,7 +1063,7 @@ The liberated person has a body-mind package but she is not that package; she is
 
 She says “yes” to all aspects of life without <u>reservation</u>. The mind gathers energy and strength by saying “no” to parts of Existence. This is liked and that is disliked. But the person of wisdom says “yes” to all of it. And nothing is excluded, not even the mind.
 
-For she knows that Existence is a vast mystery which cannot be penetrated. She knows that she knows nothing at all, and so she simply opens her heart. She trusts. She allows the RI'ver to carry her, she knows not where, she knows not why. But with that trusting heart she experiences the bliss of allowing herself to be a part of the flow. Just to exist in eachmoment is a <u>benediction</u>.
+For she knows that Existence is a vast mystery which cannot be penetrated. She knows that she knows nothing at all, and so she simply opens her heart. She trusts. She allows the river to carry her, she knows not where, she knows not why. But with that trusting heart she experiences the bliss of allowing herself to be a part of the flow. Just to exist in eachmoment is a <u>benediction</u>.
 
 He has no attachment to particular concepts or beliefs,and so he’s willing to let others have them. He’s willing to let others be “right.” After all, each concept is part of Existence too, it is perfect in its own way. And each person is a part of Existence, a part of God — so the <u>divine</u> is speaking through everyone.
 
@@ -1046,7 +1109,7 @@ Silence then, as Ramana Maharshi once said, is the true instruction. There’s n
 
 The value of concentration meditations — focusing on an object such as a <u>mantra</u>, an image, a koan, the breath, and so on — is that they can still the waves of the mind and thus gI've a taste of Silence. However, the effect is only temporary.The mind is being suppressed, that’s all; it does not fall, it is not extinguished. Concentrations are an activity of the mind,they are the mind suppressing and drugging itself. They’re a form of getting high, and so we have to gradually come down when the concentration ends.
 
-Concentration is an actI've awareness and not the true,passI've awareness. Instead of being an effortless witness to the flow of leaves down the rI'ver, concentration is focusing on a particular leaf. It is attached rather than detached, of the mind rather than the Self. Concentration is thinking, it is the mind addressed in some particular direction. Yet it can be a useful device. It can gI've a <u>glimpse</u> through the door. And its power of focus can assist our awareness in going deeper.
+Concentration is an active awareness and not the true,passI've awareness. Instead of being an effortless witness to the flow of leaves down the river, concentration is focusing on a particular leaf. It is attached rather than detached, of the mind rather than the Self. Concentration is thinking, it is the mind addressed in some particular direction. Yet it can be a useful device. It can gI've a <u>glimpse</u> through the door. And its power of focus can assist our awareness in going deeper.
 
 But true meditation is awareness — passI've, choiceless awareness, the witness. It is this which can still the waves for-ever, which can uncover Silence permanently. It is through awareness that a moment can happen from which there is no slipping back, no coming down.
 
@@ -1056,7 +1119,7 @@ Only through awareness can we see that at the deepest level there is nowhere to 
 
 Beyond this awakening, however, is a final awakening where we simply disappear. This is the final extinguishment of all qualities that we’ve thought of as ourself. It is total Silence and Stillness, the final <u>annihilation</u> of all thoughts, tapes, programs, desires, disturbances. We can use thoughts, of course,but it is like picking up a <u>ruler</u> to draw a line. When there is no more use for the ruler, it is laid down; there is simply. Silence, Spaciousness.
 
-Then we have attained to being a nobody, a nothing. Now rI'vers flow in us, stars are born in us, the wind blows through the trees in us. There is the bliss of Existence Itself, a bliss which transcends what is normally thought of as joy and happiness in human life.
+Then we have attained to being a nobody, a nothing. Now rivers flow in us, stars are born in us, the wind blows through the trees in us. There is the bliss of Existence Itself, a bliss which transcends what is normally thought of as joy and happiness in human life.
 
 In this state of final awakening, everything that would have to be gI'ven up at physical death has already been gI'ven up before physical death. The body is still alI've, but now there is no <u>inhabitant</u> anymore. This awakening, therefore, is truly a dying. It is death. Not bodily death, but the death of “you”or “I,” the death of the mind, the illusory controller.
 
@@ -1081,9 +1144,9 @@ To be conscious means to be split, to be divided. The mind is always trying to b
 
 As Osho says, entities who don’t have sentience have no tension because they’re unconscious; then there is no problem. And the free being has no tension because they are conscious completely; then there is no problem either. Only we humans and other sentient beings are partial; only we lI've in the hell of being divided. But this partial consciousness means also the possibility is there of becoming completely conscious.
 
-Awakening means first going to hell and then coming back to <u>paradise</u>. Liberation means first battling and struggling with the RI'ver and then seeing the illusion and ceasing the struggle... through awareness, through silence, through the extinguishing of who we think we are.
+Awakening means first going to hell and then coming back to <u>paradise</u>. Liberation means first battling and struggling with the river and then seeing the illusion and ceasing the struggle... through awareness, through silence, through the extinguishing of who we think we are.
 
-The tragedy of the human is that only he or she truly suffers. No animal, no plant, no rI'ver can suffer as humans do because there is no mind to struggle, no mind to lI've in the past and future, no mind to compare and judge and crave. Self-realization has depth to it because it has first known the misery of mind.
+The tragedy of the human is that only he or she truly suffers. No animal, no plant, no river can suffer as humans do because there is no mind to struggle, no mind to lI've in the past and future, no mind to compare and judge and crave. Self-realization has depth to it because it has first known the misery of mind.
 
 This is why a <u>fetus</u>, even though existing in bliss, isn’t awakened — it is not yet conscious. One must pass through the pain of partial consciousness before the doors of heaven can open in complete consciousness.
 
@@ -1134,7 +1197,7 @@ In this state every moment of life is a <u>benediction</u>, a natural gratitude 
 
 There is bliss because all is as it should be: It’s perfect,It’s exactly the way It is. In a cloud, a leaf, an animal, a person is seen the Eternal, the Deathless, the Nameless. The face of the <u>unfathomable</u> Mystery is present everywhere.
 
-The whole unI'verse is seen in a rI'ver or a blade of grass,and yet, there’s no one to see it. It is the Existence Itself now who sees. The old inhabitant and all her sufferings is gone;now God is the only inhabitant. God looks out at God. God sings a song to God. Infinity can be held in the <u>palm</u> of the hand. Less has become more, for there is a grace over the most mundane details of daily life, or over nothing at all.
+The whole unI'verse is seen in a river or a blade of grass,and yet, there’s no one to see it. It is the Existence Itself now who sees. The old inhabitant and all her sufferings is gone;now God is the only inhabitant. God looks out at God. God sings a song to God. Infinity can be held in the <u>palm</u> of the hand. Less has become more, for there is a grace over the most mundane details of daily life, or over nothing at all.
 
 There is a kind of great drunkenness with life — but no drunkard, for no one is there. There is nobody, nothing. Ther eis simply bliss, peace, grace, enchantment for no reason, nocause. It’s just the quality' of the Mystery.
 
