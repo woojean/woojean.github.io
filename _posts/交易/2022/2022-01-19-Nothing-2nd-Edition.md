@@ -172,8 +172,10 @@ Caught for other crimes, the thief confessed also to the burglary against the ma
 
 Each of us creates our own reality by what we notice, by the concepts and interpretations that we overlay onto what is. **Reality itself is not knowable by the mind**. Our senses are small windows indeed. Our faculty of sight, for instance, is only a tiny segment of the whole electromagnetic spectrum.
 
-And concerning the data that is available, our senses act to filter out most of it. For example, it’s been demonstrated that a frog’s eye notices only nearby movements <u>characteristic</u> of insects. All other visual data is <u>screened</u> out.
-And what little data the brain does receI've **must then be** **interpreted by the brain before we experience the sensation of sight or any other sense**. There is no way to know for sure that the brain is not manufacturing its product completely inter-nally — and that what we think of as sense data may just be part of the internal computation.
+And concerning the data that is available, our senses act to filter out most of it. For example, it’s been demonstrated that a frog’s eye notices only nearby movements characteristic of insects. All other visual data is screened out.
+
+And what little data the brain does receive **must then be** **interpreted by the brain before we experience the sensation of sight or any other sense**. There is no way to know for sure that the brain is not manufacturing its product completely internally — and that what we think of as sense data may just be part of the internal computation.
+
 In other words, we don’t really know what’s out there, we have actually no idea of what exists external to us. And there may be nothing at all out there; all of our <u>sensory</u> data may be a completely internal product of the brain. There’s no way to be certain about it.
 Yet all of our concepts, beliefs, opinions, knowledge are <u>ultimately</u> based upon sensory data. Reality in its ultimate essence simply cannot be known by the mind. Someone sits in a room, and in the same room an ant crawls across the floor. It <u>perceI'ves</u> a totally different reality than the person does. Which reality is correct? Both. Neither. Neither perceI'ves ultimate reality. Both have their own version.
 The Taoist master **Chuang Tzu** said, “How can you talk about the sea to a frog in a well?” Mind is always in its own little well, <u>hemmed</u> in by its limited data and then hemming itself in further by the concepts and beliefs it forms about the data. Then those concepts, beliefs, attitudes, models and so on form the screen through which further data is perceI'ved and interpreted. Mind lI'ves in its well and thinks that its well isthe totality. It thinks that its well is the way things really are, it thinks that its well is the sea itself.
@@ -188,6 +190,8 @@ Imagine sitting silently with no desires, <u>blissful</u>, calm. There is no tim
 And we have not one but thousands of desires large and small. Thus there is never enough time. We feel that time is slipping away from us, life is passing us by. That is why we are afraid of death, because we need more time. We have not yet fulfilled our desires, we have not yet accomplished what we want to do. We need more time and there is not enough of it. Our desires have created this. If we had no desires we wouldhave no fear of death either; we would be ready for it.
 Mind is in hell because of its desires. Have we noticed? When we’re <u>miserable</u> time goes very slowly, it seems to drag on and on. Deep down, mind is always miserable since it spends its time outside the present moment. This is it, this is what hell looks like. It looks like our life when were outside of the moment.
 Conversely, if we had no desires, no goals, we would be totally blissful and time would have speeded up until there was no time — until there was just the moment. That would be <u>paradise</u>, heaven. But that is not possible for the mind, since it’s filled with desires. Desire is its very essence.
+
+
 
 
 ## Chapter Six
