@@ -417,54 +417,98 @@ A joke: How can we find God? She is waiting at home for us, and meanwhile we can
 
 Then there is the ultimate solution — to just not give a damn, to simply not do anything at all about it. But that does not alter anything, because the deep-down suffering is still there. And who is it that is choosing not to give a damn? Yes,the mind. To choose not to care is to perpetuate the chooser,is to perpetuate this illusory “I.” It’s the same game and the problem continues. Pretending that it doesn’t exist is merely another way for the problem to sustain itself.
 
-Mind is the problem, but look carefully and we see thatthere is nothing we can do to escape from it. Because allescape attempts are the mind, are the problem. Even decidingnot to escape is another attempt to escape because such adecision perpetuates the illusion that there is a decider. Allattempts to get there are ways of not getting there. All waysout lead back in. It is like holding up a mirror to a mirror — aninfinite regression, limitless, never-ending.
-Everything whatsoever is <u>grist</u> for the mind in terms ofit perpetuating itself. There is absolutely no activity of anykind that cannot serve the mind's purpose, since activity is themind. All efforts to choose, to struggle, to seek goals and tocontrol are mind. Conversely, all efforts not to choose, not tostruggle, not to seek goals and not to control are also mind.It’s all mind.
-All thoughts, feelings, attitudes, opinions, sensations,viewpoints, acts, positions, stories, presentations, responses —all of it, everything sustains the mind, is the mind. Nothing isleft out. Everything whatsoever about us is part-and-parcel ofthe problem. “We” ourselves are the problem.
-**If “you” and “I” are the problem in our life, how can that problem be solved? It can’t. How can we get away from this <u>fictitious</u> “you” and “I” then? We can't; that's who “we” are.**How can we improve our situation then? We can't. We can fool ourselves of course, but at the deepest level there is no way to improve it.
-Just see that all our solutions are the problem, all ourescapes are the <u>imprisonment</u>, all of our getting better is theillness. Further, see that we must try to solve it, escape from it,improve it because that is the nature of the mind, that is whatit does, that is who “we” are. It is totally unsolvable. All of oursolutions and non-solutions are the obstacle.
-Question: If all this is so, then what should be done?Answer: **Nothing**, because nothing can be done. Question: Ifnothing can be done, then where do we go from here?Answer: **Nowhere**. Question: But then what is the point of allthis? Answer: There is no point.
-The mind thinks that everything must have a point,because otherwise what is the point? This, too, is part of theproblem. The mind thinks that these words must have apoint, but actually they have no point. These words are justconcepts, structures, boxes — of no importance.
-Thus there’s nothing “true” about any of this. None ofthe concepts being used here are true in any sense. Usefultemporarily, perhaps, but not true. If the mind clings to themthat is simply another way of perpetuating itself, perpetuatingthe separate “you” and “me.”
-In fact, a logician would note that these concepts havecontained a number of <u>contradictions</u>. It doesn’t matter. Therewill be more; it has to be that way. Besides, they’re fun.
-All these words — past and future and this sentencetoo — are just devices to create a situation where somethingother than concepts can happen. That may not happen imme-diately, it may not happen for months or years, but it doesn'tmatter because it can't be rushed or forced anyway. And itcan’t be slowed down either.
-In truth — do you enjoy the joke? — in truth, these wordsare merely a playing in the sandbox, a passing of toys back andforth, a building of <u>castles</u> in the damp sand. There is no pointto them at all. See the point.
+Mind is the problem, but look carefully and we see that there is nothing we can do to escape from it. Because all escape attempts are the mind, are the problem. Even deciding not to escape is another attempt to escape because such a decision perpetuates the illusion that there is a decider. All attempts to get there are ways of not getting there. **All ways out lead back in.** It is like holding up a mirror to a mirror — an infinite regression, limitless, never-ending.
+
+Everything what so ever is grist for the mind in terms of it perpetuating itself. There is absolutely no activity of any kind that cannot serve the mind's purpose, since activity is the mind. All efforts to choose, to struggle, to seek goals and to control are mind. Conversely, all efforts not to choose, not to struggle, not to seek goals and not to control are also mind.It’s all mind.
+
+All thoughts, feelings, attitudes, opinions, sensations,viewpoints, acts, positions, stories, presentations, responses —all of it, everything sustains the mind, is the mind. Nothing is left out. Everything what so ever about us is part-and-parcel of the problem. “We” ourselves are the problem.
+
+**If “you” and “I” are the problem in our life, how can that problem be solved? It can’t. How can we get away from this fictitious “you” and “I” then? We can't; that's who “we” are.**How can we improve our situation then? We can't. We can fool ourselves of course, but at the deepest level there is no way to improve it.
+
+Just see that all our solutions are the problem, all our escapes are the imprisonment, all of our getting better is the illness. Further, see that we must try to solve it, escape from it,improve it because that is the nature of the mind, that is what it does, that is who “we” are. It is totally unsolvable. All of our solutions and non-solutions are the obstacle.
+
+Question: If all this is so, then what should be done?
+
+Answer: **Nothing**, because nothing can be done. 
+
+Question: If nothing can be done, then where do we go from here?
+
+Answer: **No where**. 
+
+Question: But then what is the point of all this? 
+
+Answer: There is no point.
+
+The mind thinks that everything must have a point,because otherwise what is the point? This, too, is part of the problem. The mind thinks that these words must have a point, but actually they have no point. These words are just concepts, structures, boxes — of no importance.
+
+Thus there’s nothing “true” about any of this. None of the concepts being used here are true in any sense. Useful temporarily, perhaps, but not true. If the mind clings to them that is simply another way of perpetuating itself, perpetuating the separate “you” and “me.”
+
+In fact, a logician would note that these concepts have contained a number of contradictions. It doesn’t matter. There will be more; it has to be that way. Besides, they’re fun.
+
+All these words — past and future and this sentence too — are just devices to create a situation where something other than concepts can happen. That may not happen immediately, it may not happen for months or years, but it doesn't matter because it can't be rushed or forced anyway. And it can’t be slowed down either.
+
+In truth — do you enjoy the joke? — in truth, these words are merely a playing in the sandbox, a passing of toys back and forth, a building of castles in the damp sand. There is no point to them at all. See the point.
 
 
 
 ## Chapter Twelve
-The central dilemma that we humans find ourselves in,the central problem of our life, is not solvable at the level atwhich the problem is posed. It is an extraordinary problem inthat all the attempts to solve it constitute the problem itself.Every attempt to change it, improve it, suppress it, solve it —only deepens it. It is like someone in quicksand whose everyeffort to get out only sinks him deeper and deeper into thesand.
-What is the problem? The problem is that the mind isa problem-solving mechanism which is by the prob-lem of its own survival. It seems as if this problem is some-thing inherited by the mind. It seems as if the mind findsitself alone and separate in a world which seems indifferent at
-best and <u>overtly</u> <u>hostile</u> at worst. But it isn’t that way. **The mind creates its own problem — and then spends its energy trying to solve its self-created problem.**
-Of course, since the problem is an illusion it cannot besolved. The mind as controller, chooser, guider of its <u>destiny</u>does not exist — only stimulus-response exists. If the mind-as-controller doesn’t exist, how can it survive? By pretense; by notseeing that it doesn’t exist.
-The mind is a magic show, a trick with mirrors, it’s the<u>magician</u> who makes something appear to be so when it isn't.You see the lady in the box sawed in half, yet she is not sawedin half; something is ficticious. This is like the mind. Thenon-existent mind-magician survives through the <u>sleight</u>-of-hand of working on the problem of its survival.
-If we look at our life carefully, we see that it is aboutsurvival. The mind survives through the problem itself; theattempts to solve the problem are the mind. If the striving ofthe mind were to vanish, the mind itself would vanish.
-The mind is willing to spend an entire lifetime trying tokeep this shell game going — trying to arrange things so thatsomething which doesn't exist can survive. It’s willing to usea whole lifetime in the misery of this absurd struggle.
-And it is not only willing to do so but it must do so; thatis its nature. The mind — you and I — will act out this <u>comic</u><u>tragedy</u> right up to the moment of stepping into our <u>grave</u>.The mind has no choice; this is what it must do. It cannot doanything else than be the magician — and it is the ultimatemagician, for its trick is that the magician herself appears tobe there but is non-existent.
-So the problem cannot in any way be solved, since allefforts to do so constitute the problem. The problem can onlybe <u>transcended</u>, but that transcendence is not a doingness ofany kind. Nothing is done. Nothing is improved or changed,since at the deepest level no improvement or change is possi-ble. Rather an awareness, a seeing arises and then the problemis no longer experienced as a problem.
+The central dilemma that we humans find ourselves in,the central problem of our life, is not solvable at the level at which the problem is posed. It is an extraordinary problem in that all the attempts to solve it constitute the problem itself.Every attempt to change it, improve it, suppress it, solve it —only deepens it. It is like someone in quicksand whose every effort to get out only sinks him deeper and deeper into the sand.
+
+What is the problem? The problem is that the mind is a problem-solving mechanism which is by the problem of its own survival. It seems as if this problem is something inherited by the mind. It seems as if the mind finds itself alone and separate in a world which seems indifferent at best and overtly hostile at worst. But it isn’t that way. **The mind creates its own problem — and then spends its energy trying to solve its self-created problem.**
+
+Of course, since the problem is an illusion it cannot be solved. The mind as controller, chooser, guider of its destiny does not exist — only stimulus-response exists. If the mind-as-controller doesn’t exist, how can it survive? By pretense; by not seeing that it doesn’t exist.
+
+The mind is a magic show, a trick with mirrors, it’s the magician who makes something appear to be so when it isn't.You see the lady in the box sawed in half, yet she is not sawed in half; something is ficticious. This is like the mind. The non-existent mind-magician survives through the sleight-of-hand of working on the problem of its survival.
+
+If we look at our life carefully, we see that it is about survival. The mind survives through the problem itself; the attempts to solve the problem are the mind. If the striving of the mind were to vanish, the mind itself would vanish.
+
+The mind is willing to spend an entire lifetime trying to keep this shell game going — trying to arrange things so that something which doesn't exist can survive. It’s willing to use a whole lifetime in the misery of this absurd struggle.
+
+And it is not only willing to do so but it must do so; that is its nature. The mind — you and I — will act out this comic tragedy right up to the moment of stepping into our grave.The mind has no choice; this is what it must do. It cannot do anything else than be the magician — and it is the ultimate magician, for its trick is that the magician herself appears to be there but is non-existent.
+
+So the problem cannot in any way be solved, since all efforts to do so constitute the problem. The problem can only be transcended, but that transcendence is not a doingness of any kind. Nothing is done. Nothing is improved or changed,since at the deepest level no improvement or change is possible. Rather an awareness, a seeing arises and then the problemis no longer experienced as a problem.
 
 
 
 # Existence
-Since it is no longer experienced as a problem, theproblem can be said to have disappeared. Nothing haschanged, the situation remains the same, but the problem hasvanished.
-In fact there is not now and there has never been anyproblem in life — other than the magic-show, the mind’s interpretations and stories about what’s happening.
-To actually see this is to have transcended the problemof mind. And when that happens the problem of life becomeslike the favorite toy of a child when the child has grown up —it’s simply left behind. The toy is still there in the closet andnothing has changed about it. But now it’s no longer relevant.It has been transcended.
-This transcendence, of course, is not a doingness of anykind. It’s nothing that the mind does, nothing that “you” and“I” do. Transcendence is not accomplished by the mind at all.Rather, it is the mind itself that is transcended. “You” and “I”are transcended.
-But how in the world is this done? Because remember,there is no way out for the mind, no way out for “you” and “I.”All of our attempts to change our life in any way merely keepit fundamentally the way it is. So how does this transcendencearise?
-Consider the following: Imagine a <u>caterpillar</u> whichcreates a goal of becoming a butterfly. It spends its time imag-ining ways to do so, trying this method and that method, butnothing seems to work. Because no matter how hard it tries tobe a butterfly, it still stays a caterpillar.
-It may be an “improved” or “better” caterpillar but itsfundamental essence is still caterpillarness.
-Now imagine for a moment that our caterpillar couldthink. If it could, it could not actually even conceI've of beinga butterfly because its only experience is of being a caterpillar.So if it thinks of becoming a butterfly it's actually thinking ofbeing a better caterpillar.
-Being a butterfly is literally unthinkable. Therefore ourcaterpillar’s attempts to become a butterfly are manifested asattempts to improve itself as a caterpillar. Futile. How does ourcaterpillar become a butterfly?
-The thing to notice is that nothing the caterpillar doescauses it to <u>transmute</u> into a butterfly. **Nature handles the problem, the caterpillar doesn’t have to.** All it has to do is bea caterpillar — which it already is — and the transmutation thenhappens by itself.
-The key is being a caterpillar. If the caterpillar is busytrying to become a butterfly or a better caterpillar it is notsimply being a caterpillar. **Let it just be a caterpillar — then the butterfly part will take care of itself.**
+Since it is no longer experienced as a problem, the problem can be said to have disappeared. Nothing has changed, the situation remains the same, but the problem has vanished.
+
+In fact there is not now and there has never been any problem in life — other than the magic-show, the mind’s interpretations and stories about what’s happening.
+
+To actually see this is to have transcended the problem of mind. And when that happens the problem of life becomes like the favorite toy of a child when the child has grown up —it’s simply left behind. The toy is still there in the closet and nothing has changed about it. But now it’s no longer relevant. It has been transcended.
+
+This transcendence, of course, is not a doingness of any kind. It’s nothing that the mind does, nothing that “you” and“I” do. **Transcendence is not accomplished by the mind at all**. Rather, it is the mind itself that is transcended. “You” and “I”are transcended.
+
+But how in the world is this done? Because remember,there is no way out for the mind, no way out for “you” and “I.”All of our attempts to change our life in any way merely keep it fundamentally the way it is. So how does this transcendence arise?
+
+Consider the following: Imagine a caterpillar which creates a goal of becoming a butterfly. It spends its time imagining ways to do so, trying this method and that method, but nothing seems to work. Because no matter how hard it tries to be a butterfly, it still stays a caterpillar.
+
+It may be an “improved” or “better” caterpillar but its fundamental essence is still caterpillarness.
+
+Now imagine for a moment that our caterpillar could think. If it could, it could not actually even conceive of being a butterfly because its only experience is of being a caterpillar.So if it thinks of becoming a butterfly it's actually thinking of being a better caterpillar.
+
+Being a butterfly is literally unthinkable. Therefore our caterpillar’s attempts to become a butterfly are manifested as attempts to improve itself as a caterpillar. Futile. How does our caterpillar become a butterfly?
+
+The thing to notice is that nothing the caterpillar does causes it to transmute into a butterfly. **Nature handles the problem, the caterpillar doesn’t have to.** All it has to do is be a caterpillar — which it already is — and the transmutation then happens by itself.
+
+The key is being a caterpillar. If the caterpillar is busy trying to become a butterfly or a better caterpillar it is not simply being a caterpillar. **Let it just be a caterpillar — then the butterfly part will take care of itself.**
+
+
 
 
 ## Chapter Thirteen
-In the case of a caterpillar that’s no problem because acaterpillar has no mind, it has no notion of itself as a chooseror self-guider. But in our case what will we do? We are themind, everything we’ve ever thought of ourselves as being isthe mind. If the mind decides to “be the way it is,” that is justanother decision by the mind, it’s the mind surviving. And themind can never be herenow, can never simply be the way it is.No, **it’s very busy trying to get somewhere**. So how is thisparadox resolved?
-To answer that question we must introduce the notionof being or the **true self**. It is who we really are, but it is not“you” or “I.” It has nothing to do with who or what we thinkwe are. It has nothing to do with the mind, nothing to do withour tapes, models, programs, voice-overs, thoughts, emotions,sensations, stories, actions, presentations, metaphysics or any-thing else about “you” or “I.” No, **it’s who we really are. And it’s beyond the world of stimulus-response.**
+In the case of a caterpillar that’s no problem because a caterpillar has no mind, it has no notion of itself as a chooseror self-guider. But in our case what will we do? We are the mind, everything we’ve ever thought of ourselves as being is the mind. If the mind decides to “be the way it is,” that is just another decision by the mind, it’s the mind surviving. And the mind can never be herenow, can never simply be the way it is. No, **it’s very busy trying to get somewhere**. So how is this paradox resolved?
+
+To answer that question we must introduce the notion of being or the **true self**. It is who we really are, but it is not“you” or “I.” It has nothing to do with who or what we think we are. It has nothing to do with the mind, nothing to do with our tapes, models, programs, voice-overs, thoughts, emotions,sensations, stories, actions, presentations, metaphysics or anything else about “you” or “I.” No, **it’s who we really are. And it’s beyond the world of stimulus-response.**
+
 **The true self is like an empty blue sky — vast, silent,unchanging. It’s pure consciousness, pure existence. It has no form, and it doesn't look like anything. It is reality, but has nothing to do with the mind’s stories of reality.**
-It is truth, but has nothing to do with concepts orwords. It is beauty itself, but a beauty beyond form or image.It is bliss, but it has nothing to do with what is normallythought of as happiness because it has no cause. It is peace,<u>stillness</u>, silence, but it has nothing to do with what normallyis thought of as relaxation in human life.
-No formulations of any kind can really describe being,the self, the existence. It is emptiness, nothing, the absence ofanything. It is unsayable, unthinkable, not reachable by anyconceptualization. That is, we can conceptualize it but theconceptualization is just <u>nonsense</u> because it has nothing todo with existence or being itself. **Being is unlimited and words are limited — the gap is more or less unbridgeable**. Thus allwords and concepts about it are fundamentally false, because words come from a context of exclusion and existence is not that way.
-Lets look directly. In order for any conceptualization atall to be formed something must be excluded; otherwise wehave the totality, the whole, but no concept. In order to formthe concept of ‘pencil” we must exclude that which is “not-pencil.” In order to form the concept of “red” we must excludethat which is not-red.”This is why no mental formulation, noconceptual system no matter how <u>subtle</u> or sublime can be thetruth. Because concepts are ultimately grounded in limitation,exclusion, logic — and truth is unlimited, non-exclusI've and, tothe mind, illogical.
+
+It is truth, but has nothing to do with concepts or words. It is beauty itself, but a beauty beyond form or image.It is bliss, but it has nothing to do with what is normally thought of as happiness because it has no cause. It is peace,stillness, silence, but it has nothing to do with what normally is thought of as relaxation in human life.
+
+No formulations of any kind can really describe being,the self, the existence. It is emptiness, nothing, the absence of anything. It is unsayable, unthinkable, not reachable by any conceptualization. That is, we can conceptualize it but the conceptualization is just nonsense because it has nothing todo with existence or being itself. **Being is unlimited and words are limited — the gap is more or less unbridgeable**. Thus allwords and concepts about it are fundamentally false, because words come from a context of exclusion and existence is not that way.
+
+Lets look directly. In order for any conceptualization at all to be formed something must be excluded; otherwise we have the totality, the whole, but no concept. In order to form the concept of ‘pencil” we must exclude that which is “not-pencil.” In order to form the concept of “red” we must exclude that which is not-red.”This is why no mental formulation, no conceptual system no matter how subtle or sublime can be the truth. Because concepts are ultimately grounded in limitation,exclusion, logic — and truth is unlimited, non-exclusive and, to the mind, illogical.
+
 What is truth? Truth is a sunset, truth is rain on thestreets, truth is <u>percolating</u> coffee. It is whole. Truth is like a
 <u>hologram</u> in that each part of it contains the totality. Truth isnot a sum of the parts and no amount of explanation can everreach it; **it simply is what it is**.
 **What is truth? Truth is a rose — not the word “rose” nor any theory about roses but purely a rose itself.** We can experi-ence a rose, we can experience reality, we can experience truth,but as soon as we try to put it into words we <u>distort</u> it. Wecould write a million words about experiencing a rose on awarm spring evening but they would not even come close tothe experience itself.
