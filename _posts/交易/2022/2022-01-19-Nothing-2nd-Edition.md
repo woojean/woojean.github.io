@@ -419,9 +419,9 @@ Then there is the ultimate solution — to just not give a damn, to simply not d
 
 Mind is the problem, but look carefully and we see that there is nothing we can do to escape from it. Because all escape attempts are the mind, are the problem. Even deciding not to escape is another attempt to escape because such a decision perpetuates the illusion that there is a decider. All attempts to get there are ways of not getting there. **All ways out lead back in.** It is like holding up a mirror to a mirror — an infinite regression, limitless, never-ending.
 
-Everything what so ever is grist for the mind in terms of it perpetuating itself. There is absolutely no activity of any kind that cannot serve the mind's purpose, since activity is the mind. All efforts to choose, to struggle, to seek goals and to control are mind. Conversely, all efforts not to choose, not to struggle, not to seek goals and not to control are also mind.It’s all mind.
+Everything whatsoever is grist for the mind in terms of it perpetuating itself. There is absolutely no activity of any kind that cannot serve the mind's purpose, since activity is the mind. All efforts to choose, to struggle, to seek goals and to control are mind. Conversely, all efforts not to choose, not to struggle, not to seek goals and not to control are also mind.It’s all mind.
 
-All thoughts, feelings, attitudes, opinions, sensations,viewpoints, acts, positions, stories, presentations, responses —all of it, everything sustains the mind, is the mind. Nothing is left out. Everything what so ever about us is part-and-parcel of the problem. “We” ourselves are the problem.
+All thoughts, feelings, attitudes, opinions, sensations,viewpoints, acts, positions, stories, presentations, responses —all of it, everything sustains the mind, is the mind. Nothing is left out. Everything whatsoever about us is part-and-parcel of the problem. “We” ourselves are the problem.
 
 **If “you” and “I” are the problem in our life, how can that problem be solved? It can’t. How can we get away from this fictitious “you” and “I” then? We can't; that's who “we” are.**How can we improve our situation then? We can't. We can fool ourselves of course, but at the deepest level there is no way to improve it.
 
@@ -509,45 +509,90 @@ No formulations of any kind can really describe being,the self, the existence. I
 
 Lets look directly. In order for any conceptualization at all to be formed something must be excluded; otherwise we have the totality, the whole, but no concept. In order to form the concept of ‘pencil” we must exclude that which is “not-pencil.” In order to form the concept of “red” we must exclude that which is not-red.”This is why no mental formulation, no conceptual system no matter how subtle or sublime can be the truth. Because concepts are ultimately grounded in limitation,exclusion, logic — and truth is unlimited, non-exclusive and, to the mind, illogical.
 
-What is truth? Truth is a sunset, truth is rain on thestreets, truth is <u>percolating</u> coffee. It is whole. Truth is like a
-<u>hologram</u> in that each part of it contains the totality. Truth isnot a sum of the parts and no amount of explanation can everreach it; **it simply is what it is**.
-**What is truth? Truth is a rose — not the word “rose” nor any theory about roses but purely a rose itself.** We can experi-ence a rose, we can experience reality, we can experience truth,but as soon as we try to put it into words we <u>distort</u> it. Wecould write a million words about experiencing a rose on awarm spring evening but they would not even come close tothe experience itself.
-To really see this is to understand, as Osho often said,that <u>ignorance</u> is so vast that it can never be destroyed. Whatis water? Science answers that it is H2O, hydrogen and oxy-gen. What is hydrogen, what is oxygen? Science answers thatthey are certain configurations of <u>protons</u> and <u>electrons</u>, mat-ter and energy, but these are just new names.
-Nobody knows what an electron is, nobody knows whatmatter is, nobody knows what hydrogen is and nobody knowswhat water is. We have added a few new labels and categories,but the mystery is still <u>profound</u>, totally <u>impenetrable</u>. Ourignorance is infinite, it can never be overcome. It is not possi-ble to ever really know anything.
-This being so, it follows that even the simplest thingsare basically incommunicable, they can’t actually be accurate-ly talked about. Words immediately distort them. If this istrue of water or a rose, how much more true is it of wordsabout being.. .self.. .existence. **The moment we talk about it we fall into error and distortion and <u>falsity</u>.**
-Thus when we say that being is truth or bliss or peaceit must be remembered that this is the language of <u>poetry</u>, of<u>metaphor</u>, of indirect allusion. Even the very words “being” or“self” or “existence” are merely labels created by the mind, andwe do well not to take them literally.
-The <u>apt phrase</u> used in the Buddhist Surangama Sutrais that all words and concepts about existence are “a fingerpointing at the moon.” Words can only indicate, suggest; theyare not the moon — reality — but only a finger pointing at it.
-The mind, however, misses the moon and focuses onthe finger. Mind <u>pores</u> over philosophies, <u>theologies</u>, meta-physical systems and then feels that the existence is reallysuch-and-such a way. Mind always misses the point. Even theconcepts in this paragraph are just toys in the sandbox.
-An interesting true story: A seeker once came to theZen master Joshu and asked, “What is the Buddha? Who isthe Buddha? Where can he be found?” Joshu replied, “Go intothe temple. You will find the Buddha there.” Then the mansaid, “But inside the temple there is only a stone <u>statue</u>. Andyou know and I know that a stone statue is not the Buddha.”Joshu replied, “You are absolutely right. A stone statue is notthe Buddha.”
-And so the man said, “Then who is the Buddha?” AndJoshu replied, “Go into the temple. You will find the Buddhathere.”
-A curious story. This seeker had seen beyond the sym-bolism of stone statues, but not beyond other <u>symbolisms</u>. Sohe assumed that Joshu was talking about external temples.
-But Joshu had no interest in external temples, he wastalking about the temple within. He was saying that **unless we see into the nature of the mind we are lost, we’ll never find out that were already the Buddha.**
-Mind needs excitement; it needs <u>dI'version</u>, the <u>chase</u>,the search. It is like a spider constantly <u>spinning</u> and thenbeing caught in its own web. The spinning, the excitement,the activity, the seeking are <u>smokescreens</u> which prevent usfrom seeing into the nature of all this. **We’ve become like a man searching around the world for the nose on his face. So he can’t see that he already has what he’s looking for.**
-Truth is the immediate, the foreground, but we don’tsee it because we’re scanning the heavens for it.
+What is truth? Truth is a sunset, truth is rain on the streets, truth is percolating coffee. It is whole. Truth is like a hologram in that each part of it contains the totality. Truth is not a sum of the parts and no amount of explanation can ever reach it; **it simply is what it is**.
+
+**What is truth? Truth is a rose — not the word “rose” nor any theory about roses but purely a rose itself.** We can experience a rose, we can experience reality, we can experience truth,but as soon as we try to put it into words we distort it. We could write a million words about experiencing a rose on a warm spring evening but they would not even come close to the experience itself.
+
+To really see this is to understand, as Osho often said,that ignorance is so vast that it can never be destroyed. What is water? Science answers that it is H2O, hydrogen and oxygen. What is hydrogen, what is oxygen? Science answers that they are certain configurations of protons and electrons, matter and energy, but these are just new names.
+
+Nobody knows what an electron is, nobody knows what matter is, nobody knows what hydrogen is and nobody knows what water is. We have added a few new labels and categories,but the mystery is still profound, totally impenetrable. Our ignorance is infinite, it can never be overcome. It is not possible to ever really know anything.
+
+This being so, it follows that even the simplest things are basically incommunicable, they can’t actually be accurately talked about. Words immediately distort them. If this is true of water or a rose, how much more true is it of words about being.. .self.. .existence. **The moment we talk about it we fall into error and distortion and falsity.**
+
+Thus when we say that being is truth or bliss or peace it must be remembered that this is the language of poetry, of metaphor, of indirect allusion. Even the very words “being” or“self” or “existence” are merely labels created by the mind, and we do well not to take them literally.
+
+The apt phrase used in the Buddhist Surangama Sutrais that all words and concepts about existence are “a finger pointing at the moon.” Words can only indicate, suggest; they are not the moon — reality — but only a finger pointing at it.
+
+The mind, however, misses the moon and focuses onthe finger. Mind pores over philosophies, theologies, meta-physical systems and then feels that the existence is really such-and-such a way. Mind always misses the point. Even the concepts in this paragraph are just toys in the sandbox.
+
+An interesting true story: A seeker once came to the Zen master Joshu and asked, “What is the Buddha? Who is the Buddha? Where can he be found?” Joshu replied, “Go into the temple. You will find the Buddha there.” Then the man said, “But inside the temple there is only a stone statue. And you know and I know that a stone statue is not the Buddha.”Joshu replied, “You are absolutely right. A stone statue is not the Buddha.”And so the man said, “Then who is the Buddha?” And Joshu replied, “Go into the temple. You will find the Buddha there.”
+
+A curious story. This seeker had seen beyond the symbolism of stone statues, but not beyond other symbolisms. So he assumed that Joshu was talking about external temples.But Joshu had no interest in external temples, he was talking about the temple within. He was saying that **unless we see into the nature of the mind we are lost, we’ll never find out that we're already the Buddha.**
+
+Mind needs excitement; it needs diversion, the chase,the search. It is like a spider constantly spinning and then being caught in its own web. The spinning, the excitement,the activity, the seeking are smokescreens which prevent us from seeing into the nature of all this. **We’ve become like a man searching around the world for the nose on his face. So he can’t see that he already has what he’s looking for.**
+
+Truth is the immediate, the foreground, but we don’t see it because we’re scanning the heavens for it.
 
 
 
 
 ## Chapter Fourteen
-Mind is <u>enmeshed</u> in symbolism, in stories, and it takesthese for reality, for truth. Yet nothing which can be expressedin words or symbols is “true”; neither is it “false.” Rather, it ismerely useful or non-useful. Science is <u>replete</u> with examplesof “truths” which became <u>supplanted</u>. First light was a parti-cle, then a wave; now it’s something of both. First the worldwas flat, now it is round; someday it may be perceI'ved in someother way. First Newton's laws were “true”; now relativity isconsidered “true,” and someday it in turn will be supplanted.**No concept or law or symbolic relation is ultimately “true”; it's simply useful or not useful for a limited period.**
-Is “The tree is green” true? Certain <u>vibrations</u> are hit-ting our eyes and we have agreed to label those “green.” A dif-ferent interpretation of the vibrations we have agreed to label“tree.” When we say “The tree is green” we're simply attach-ing two labels together; **it may be useful, but there’s nothing true about it.** Conjoining the labels “tree” and “green” has a lotof agreement, but somebody may disagree — to them the tree may be <u>chartreuse</u>.
-This might seem like an out-of-the-way or <u>irrelevant</u>matter, but it extends into our whole life.
-Let's say we feel that our girlfriend is boring. To usthat’s true, but to someone else it’s false. Let’s say we feel wedon’t have enough money. To us that’s true — our desires out-strip what we have. But actually it’s a matter of desires — themind — rather than money. We’re creating our experience ofthe sum of money we have.
-Similarly, we’re creating our experience of everythingwhatsoever in our life. It’s all our creation. We create what isgood, bad, true, false, right, wrong, desirable and undesirablein our life.
-Existence is none of these categories. It simply is whatit is. It is <u>pristine</u>, pure, ever-new. It has no past, no future, itis simply herenow. Then the mind comes in and imposes itstapes and stories upon it. The mind imposes its judgments,evaluations, discriminations, dualities, categories, labels andmultiplicities. It boxes up reality and then is caught in its ownbox. It projects its own movie onto the screen of reality andthen lives in the movie. And it’s in deep suffering because it’soff in the past or the future somewhere.
-Something is wrong, because happiness is the <u>criterion</u>in life. If our path in life is giving us deep bliss, deep abidingjoy then it is the right path. But look carefully and let’s askourselves truthfully: How many moments in our life have weexperienced such profound <u>rapture</u> and peace that we had nodesire for anything more whatsoever? A handful of times?
-If bliss is the criterion — and it is — then we’re missingthe mark. What is wrong? We go on fixing things, improving,solving problems — and our situation remains the same.
-Seeing this, we begin to look at the root of the prob-lem — the mind itself — instead of the leaves. Once we begin tosee direcly into the <u>con</u> game of the mind we’re astonished,<u>stupefied</u> as to why we go on carrying this madman.
-For it is us as the self, existence itself, who is carryingthe mind. Not the self that we identify with — our thoughts,emotions, attitudes, points of view, etc. — for that is all mind.No, us as existence itself is carrying it.
-Let’s be alert now, for the mind will immediately try tobox up “the self,” “the existence.” Mind will create pictures ofwhat it is, images of what it looks like: Infinite space. Whitelight. Blue light. Darkness. Pure energy. The <u>eternal</u>. And soon. None of these are wrong, and neither are they right. Noneof these symbols can be taken seriously, for they’re all justplaythings. They’re only fingers pointing at the moon.
-And there are many such symbols, reflecting theattempts of those who have awakened to communicate theincommunicable.
-There is the tradition known as the via positI've, thepositI've way, in which existence is given some of the labels wehave been using, such as being, the self, reality, the whole, theeternal, the infinite, consciousness, truth. These are not sepa-rate aspects of the existence but merely different labels for thesame thing. Yet because these positI've labels use a descriptI'veform they are deceiving, they tend to be taken literally.
-To get around this tendency some other traditions havefollowed the via negativa , the negatI've way, in referring toexistence. They refer to it by indicating what it is not.
-Thus in the Upanishads there’s a famous passage whichdescribes the existence as “not this, not that.” Whateverdescription we use, it is not that. This seems a bit closer. Forreferring to the existence is <u>akin</u> to describing the color blueto someone born blind: Is it loud? No. Is it soft? No. Is itrough? No. Is it smooth? No. Is it sweet? No. Is it <u>fragrant</u>?No. Is it <u>melodic</u>? No. Saying what it is not is in a sense moreaccurate than trying to say what it is.
-So when the existence is referred to in these traditionsit’s given names such as nothingness, emptiness, the void, the<u>abyss</u>. The advantage of such labels is that they don't suggestany particular attribute to which the mind can cling, since allattributes are <u>negated</u>. On the other hand, the mind can takeeven “nothingness” or “emptiness” literally — so it’s <u>fruitful</u> toremember that even via negativa labels are not actually true oraccurate.
-Still another way of approaching being or existence is torefer to it as oneness or the <u>non-dual</u> or the One. When mindlooks upon the world it looks through its glasses of discrimi-nation and sees a multiplicity of separate entities — includingitself — all struggling for survival. This, however, is just theappearance.
-Beneath the surface, existence is a totality; it is One. Atthis level there is no struggle of any kind because there mustbe a duality in order for struggle to exist; struggle must be forsomething or against something. But the One is everything; itexcludes nothing, desires nothing, seeks nothing, is againstnothing. How then can there be a struggle? The existence is
-playing, it likes to look upon itself from different points ofview... different entities. And part of this play or <u>*lela*</u> is that those points of view which have consciousness imagine them-selves to be separate entities.
+Mind is enmeshed in symbolism, in stories, and it takes these for reality, for truth. Yet nothing which can be expressed in words or symbols is “true”; neither is it “false.” Rather, it is merely useful or non-useful. 
+
+Science is replete with examples of “truths” which became supplanted. First light was a particle, then a wave; now it’s something of both. First the world was flat, now it is round; someday it may be perceived in some other way. First Newton's laws were “true”; now relativity is considered “true,” and someday it in turn will be supplanted.**No concept or law or symbolic relation is ultimately “true”; it's simply useful or not useful for a limited period.**
+
+Is “The tree is green” true? Certain vibrations are hitting our eyes and we have agreed to label those “green.” A different interpretation of the vibrations we have agreed to label “tree.” When we say “The tree is green” we're simply attaching two labels together; **it may be useful, but there’s nothing true about it.** Conjoining the labels “tree” and “green” has a lot of agreement, but somebody may disagree — to them the tree may be chartreuse.
+
+```
+chartreuse [ʃɑːrˈtruːz] 察吐士酒，荨麻酒(一种烈性甜酒，呈绿色或黄色);浅黄色;浅绿色
+```
+
+This might seem like an out-of-the-way or irrelevant matter, but it extends into our whole life.
+Let's say we feel that our girlfriend is boring. To us that’s true, but to someone else it’s false. Let’s say we feel we don’t have enough money. To us that’s true — our desires out-strip what we have. But actually it’s a matter of desires — the mind — rather than money. We’re creating our experience of the sum of money we have.
+
+Similarly, we’re creating our experience of everything whatsoever in our life. It’s all our creation. We create what is good, bad, true, false, right, wrong, desirable and undesirable in our life.
+
+Existence is none of these categories. It simply is what it is. It is pristine, pure, ever-new. It has no past, no future, it is simply herenow. Then the mind comes in and imposes its tapes and stories upon it. The mind imposes its judgments,evaluations, discriminations, dualities, categories, labels and multiplicities. It boxes up reality and then is caught in its own box. It projects its own movie onto the screen of reality and then lives in the movie. And it’s in deep suffering because it’s off in the past or the future some where.
+
+Something is wrong, because happiness is the criterion in life. If our path in life is giving us deep bliss, deep abiding joy then it is the right path. But look carefully and let’s ask ourselves truthfully: How many moments in our life have we experienced such profound rapture and peace that we had no desire for anything more whatsoever? A handful of times?
+
+If bliss is the criterion — and it is — then we’re missing the mark. What is wrong? We go on fixing things, improving,solving problems — and our situation remains the same.
+
+Seeing this, we begin to look at the root of the problem — the mind itself — instead of the leaves. Once we begin to see direcly into the con game of the mind we’re astonished,stupefied as to why we go on carrying this madman.
+
+```
+stupefy [ˈstuːpɪfaɪ] 使惊讶(或惊呆、思维不清、神志不清)
+```
+
+For it is us as the self, existence itself, who is carrying the mind. Not the self that we identify with — our thoughts,emotions, attitudes, points of view, etc. — for that is all mind.No, us as existence itself is carrying it.
+
+Let’s be alert now, for the mind will immediately try to box up “the self,” “the existence.” Mind will create pictures of what it is, images of what it looks like: Infinite space. White light. Blue light. Darkness. Pure energy. The eternal. And soon. None of these are wrong, and neither are they right. Nonevof these symbols can be taken seriously, for they’re all just play things. They’re only fingers pointing at the moon.
+
+And there are many such symbols, reflecting the attempts of those who have awakened to communicate the incommunicable.
+
+There is the tradition known as the via positive, the positive way, in which existence is given some of the labels we have been using, such as being, the self, reality, the whole, the eternal, the infinite, consciousness, truth. These are not separate aspects of the existence but merely different labels for the same thing. Yet because these positive labels use a descriptive form they are deceiving, they tend to be taken literally.
+
+To get around this tendency some other traditions have followed the via negative , the negative way, in referring to existence. They refer to it by indicating what it is not.
+
+Thus in the Upanishads there’s a famous passage which describes the existence as “not this, not that.” 
+
+```
+Upanishads 奥义书
+```
+
+Whatever description we use, it is not that. This seems a bit closer. For referring to the existence is akin to describing the color blue to someone born blind: Is it loud? No. Is it soft? No. Is it rough? No. Is it smooth? No. Is it sweet? No. Is it fragrant?No. Is it melodic? No. Saying what it is not is in a sense more accurate than trying to say what it is.
+
+So when the existence is referred to in these traditions it’s given names such as nothingness, emptiness, the void, the abyss. The advantage of such labels is that they don't suggest any particular attribute to which the mind can cling, since all attributes are negated. On the other hand, the mind can take even “nothingness” or “emptiness” literally — so it’s fruitful to remember that even via negative labels are not actually true or accurate.
+
+Still another way of approaching being or existence is to refer to it as oneness or the non-dual or the One. 
+
+When mind looks upon the world it looks through its glasses of discrimination and sees a multiplicity of separate entities — including itself — all struggling for survival. This, however, is just the appearance.
+
+Beneath the surface, existence is a totality; it is One. At this level there is no struggle of any kind because there must be a duality in order for struggle to exist; struggle must be for something or against something. 
+
+But the One is everything; it excludes nothing, desires nothing, seeks nothing, is against nothing. How then can there be a struggle? The existence is playing, it likes to look upon itself from different points of view... different entities. And part of this play or lela is that those points of view which have consciousness imagine themselves to be separate entities.
+
+
 
 
 ## Chapter Fifteen
