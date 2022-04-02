@@ -727,22 +727,44 @@ In Zen they call this disappearance no-mind. In this state all dualities, all mo
 
 
 ## Chapter Eighteen
-When we look closely at the stories we give meaning to,the positions we get on, it becomes clear that certain stories orpositions recur over and over. There are dominant themes or<u>leitmotifs</u> in the life of each of us, and it’s no accident thateach of us creates certain situations, runs certain tapes, gets oncertain positions, again and again.
+When we look closely at the stories we give meaning to,the positions we get on, it becomes clear that certain stories or positions recur over and over. There are dominant themes or leitmotifs in the life of each of us, and it’s no accident that each of us creates certain situations, runs certain tapes, gets on certain positions, again and again.
 
-It’s similar to a <u>post-hypnotic</u> suggestion. Let’s supposethat someone hypnotizes us and <u>implants</u> a post-hypnoticsuggestion that whenever he raises an eyebrow we will <u>crave</u> abowl of soup, but that we won’t remember the suggestion.Now after the hypnotic session we will feel perfectly normal.We and the hypnotist are talking, let's say, when suddenly heraises an eyebrow. Immediately we will desire a bowl of soup,and to justify this desire we will mention something perhapsabout it being time for lunch.
-Notice that the <u>justification</u> we use has nothing what-ever to do with the <u>impulse</u> itself. Our desire for soup isbecause of the post-hypnotic suggestion. Yet on top of that wewill add a soundtrack, a voice-over, a story or rationalizationabout why we are desiring soup now. That is, we’ll justify ourimpulse. That’s one of the things the mind does.
-More than that, we’ll feel that we’ve chosen now to havea bowl of soup because it’s lunchtime, when in fact we’re act-ing out a situation which is entirely mechanical for us, whichis entirely stimulus-response.
-If we spend our life around people who often raise aneyebrow we will find ourself frequendy desiring a bowl ofsoup. And in each case where we have a bowl of soup we’ll feelthat we have chosen to do so, that we’ve made a decisionabout it.
-And in each case our mind will supply a reason as towhy we’ve chosen to have a bowl of soup at that moment. Andthe reason in each case will be entirely irrelevant because ourhaving a bowl of soup is pure stimulus-response — yet we willfeel that we are the decider, the controller, the chooser in thesituation.
-It will become a dominant theme in our life. We’llbecome known as a person who especially likes soup and whoenjoys a bowl of it in all sorts of different situations. And ifsomeone asks us why we like soup so much we’ll give themsome reasons, and those reasons will be completely irrelevant.Yet we will present ourself as — and feel ourself to be — some-one who chooses to have this theme of soup in our fife becauseof those reasons. And it will all be an illusion.
-Couldn’t any <u>neurosis</u>, <u>compulsion</u>, pattern, <u>obsession</u>,<u>psychosis</u> or character disorder be created in someone byimplanting the proper combination of post-hypnotic sugges-tions? Yes. Why is this important? Because **early experiences in life function essentially like post-hypnotic suggestions.**
-When were experiencing the shock and pain, physicalor emotional, of a deeply perceI'ved threat to survival thenwhatever “suggestions” are present at that time will be burnedinto our mind just as if they were post-hypnotic suggestions.And even though forgotten, they will affect us <u>subsequently</u> injust the same way.
-For instance, a husband and wife <u>quarrel</u> <u>violently</u> whilea young baby girl watches. The husband leaves in a rage, acci-dentally knocking against the baby, and the wife <u>mutters</u> at hisback, “You bastard!” The baby experiences a threat to survivalfrom the violence of the scene and from the loss of her fatherfor a few days.
-Yet the mind of the baby notices that it survived. By thelogic of the primitI've mind, therefore, survival was achieved bya quarrel where daddy left. The “post-hypnotic suggestion” thebaby picks up is that people similar to daddy — i.e., tall menwith dark hair, let’s say — are bastards, and that one survives byentering into a relationship with one and then causing him toleave. And later in life, that is exactly what this baby-turned-woman will do. And in each case she will have brilliant rea-sons for causing things to turn out that way. And of course thereasons will look like reality; they will look like the truth.
-<u>Absurd</u>? Yes. <u>Nonsensical</u>? Yes. DestructI've? Yes. But tothe mind, effectI've for survival? Yes. The mind equates thatbehavior with survival and will create that situation over andover again in order to “survive.” Look around and we’ll seepeople (including ourselves) creating recurring patterns againand again in their lives.
-These patterns in our lives are absolutely non-<u>nurturing</u>and yet we are all frozen in them, clinging to them — andclinging to all our brilliant reasons as to why our life keepsturning out this way or that way.
-Watch the recurring themes and patterns that run ourlives: some of us make our lives about trying very hard butnever quite making it. Some of us are habitual <u>victims</u> of onething or another. Some of us become <u>chronic</u> complainers orbored <u>cynics</u> or <u>righteously</u> <u>indignant</u> <u>crusaders</u>.
-Some of us make our lives about getting others beforethey get us. Some of us smile a lot while feeling lonely inside.Some of us make our lives about producing guilt in othersthrough self-sacrifice. Some of us make ourselves the centralfigure in an ever-recurring tragic drama. Some of us use being“on” as a means of not really being with others.
+```
+leitmotifs [ˈlaɪtmoʊˌtifs] 主旨
+```
+
+It’s similar to a post-hypnotic suggestion. Let’s suppose that someone hypnotizes us and implants a post-hypnotic suggestion that whenever he raises an eyebrow we will crave a bowl of soup, but that we won’t remember the suggestion. Now after the hypnotic session we will feel perfectly normal. We and the hypnotist are talking, let's say, when suddenly he raises an eyebrow. Immediately we will desire a bowl of soup,and to justify this desire we will mention something perhaps about it being time for lunch.
+
+Notice that the justification we use has nothing whatever to do with the impulse itself. Our desire for soup is because of the post-hypnotic suggestion. Yet on top of that we will add a soundtrack, a voice-over, a story or rationalization about why we are desiring soup now. That is, we’ll justify our impulse. That’s one of the things the mind does.
+
+More than that, we’ll feel that we’ve chosen now to have a bowl of soup because it’s lunchtime, when in fact we’re acting out a situation which is entirely mechanical for us, which is entirely stimulus-response.
+
+If we spend our life around people who often raise an eyebrow we will find ourself frequendy desiring a bowl of soup. And in each case where we have a bowl of soup we’ll feel that we have chosen to do so, that we’ve made a decision about it.
+
+And in each case our mind will supply a reason as to why we’ve chosen to have a bowl of soup at that moment. And the reason in each case will be entirely irrelevant because our having a bowl of soup is pure stimulus-response — yet we will feel that we are the decider, the controller, the chooser in the situation.
+
+It will become a dominant theme in our life. We’ll become known as a person who especially likes soup and who enjoys a bowl of it in all sorts of different situations. And if someone asks us why we like soup so much we’ll give them some reasons, and those reasons will be completely irrelevant. Yet we will present ourself as — and feel ourself to be — someone who chooses to have this theme of soup in our life because of those reasons. And it will all be an illusion.
+
+Couldn’t any neurosis, compulsion, pattern, obsession,psychosis or character disorder be created in someone by implanting the proper combination of post-hypnotic suggestions? Yes. Why is this important? Because **early experiences in life function essentially like post-hypnotic suggestions.**
+
+When were experiencing the shock and pain, physical or emotional, of a deeply perceived threat to survival then whatever “suggestions” are present at that time will be burned into our mind just as if they were post-hypnotic suggestions. And even though forgotten, they will affect us subsequently in just the same way.
+
+For instance, a husband and wife quarrel violently while a young baby girl watches. The husband leaves in a rage, accidentally knocking against the baby, and the wife mutters at his back, “You bastard!” The baby experiences a threat to survival from the violence of the scene and from the loss of her father for a few days.
+
+Yet the mind of the baby notices that it survived. By the logic of the primitive mind, therefore, survival was achieved by a quarrel where daddy left. The “post-hypnotic suggestion” the baby picks up is that people similar to daddy — i.e., tall men with dark hair, let’s say — are bastards, and that one survives by entering into a relationship with one and then causing him to leave. And later in life, that is exactly what this baby-turned-woman will do. And in each case she will have brilliant reasons for causing things to turn out that way. And of course the reasons will look like reality; they will look like the truth.
+
+Absurd? Yes. Nonsensical? Yes. Destructive? Yes. But to the mind, effective for survival? Yes. The mind equates that behavior with survival and will create that situation over and over again in order to “survive.” Look around and we’ll see people (including ourselves) creating recurring patterns again and again in their lives.
+
+These patterns in our lives are absolutely non-nurturing and yet we are all frozen in them, clinging to them — and clinging to all our brilliant reasons as to why our life keeps turning out this way or that way.
+
+Watch the recurring themes and patterns that run our lives: some of us make our lives about trying very hard but never quite making it. Some of us are habitual victims of one thing or another. Some of us become chronic complainers or bored cynics or righteously indignant crusaders.
+
+```
+righteously indignant crusaders 理直气壮的、愤慨的改革者
+```
+
+Some of us make our lives about getting others before they get us. Some of us smile a lot while feeling lonely inside. Some of us make our lives about producing guilt in others through self-sacrifice. Some of us make ourselves the central figure in an ever-recurring tragic drama. Some of us use being “on” as a means of not really being with others.
+
 A list of the different themes and patterns that run ourlives in various ways would be virtually infinite. And each oneis no different in quality from the post-hypnotic suggestionabout having a bowl of soup. Each is mechanical, automatic —and yet accompanied by all sorts of voice-overs, all sorts ofreasons and explanations. We get stuck in these patterns,frozen in them, just as if we were to emphasize a few notes onthe piano over and over.
 The payoff in this automatism is survival, and **survival means being right.** For example, the baby who heard hermother say “You bastard!” as her father left the house is now,as a woman, engaged on an unconscious level in proving thatmen are bastards. And when through her unwitting behavior each love affair breaks up abruptly and that man leaves her too, she gets to be right again. She gets to feel self-righteousand self-justified. “See? I told you. Men are bastards.”
 Since the mind is nothing but this collection of tapes,positions, patterns, programs, points of view — all names forthe same thing — getting to be right about them is <u>tantamount</u>to validating the existence of the mind. Since the mind is itspoints of view, then perpetuating them, running them, beingjustified about them is the very act of survival itself. It is iden-tical to perpetuating the “I.” “You” and “I” survive by runningtapes, by getting on positions and being right about them.
@@ -1012,7 +1034,7 @@ No, the tapes will always be running... until they don't. And what there is to d
 
 The ground from which we perceI've things transforms. Before, the ground was unawareness and sometimes we were aware. After, the ground is awareness and sometimes we’re unaware. But the circumstances of our life look the same — the same tapes still run, and sometimes we’re aware of them and sometimes not.. .just as before. Everything is the same.
 
-Everything is the same, but it is being perceI'ved in a new way. If life is a bowl of cherries, then the cherries — the circumstances of our life — have not changed, but the bowl itself has changed.
+Everything is the same, but it is being perceived in a new way. If life is a bowl of cherries, then the cherries — the circumstances of our life — have not changed, but the bowl itself has changed.
 
 And what is that difference? Before, the bowl — the context in which everything is held — was that certain things needed to be achieved or changed. After, the ground is that this is the way it is, and that all there ever is to do is to beaware of the way it is. Since that is not a doingness, it’s doing nothing. But again, doing nothing doesn’t necessarily look like inactivity; it looks like just doing what we do.
 
@@ -1243,7 +1265,7 @@ If we force ourselves to give something up then the desire will still be there, 
 Ultimately, the attempt to fight or suppress “sin” or the undesirable is an attempt to fight with darkness. But at the deepest level, as Osho points out, darkness does not exist — it’s just an absence of light. How then can we defeat it? How can we defeat something that fundamentally is an absence?
 
 The mind says in effect, “I must get rid of this darkness first before I can turn on the light.” Can we see what the mind is doing? We don’t need to bother about the darkness in ourlife or in the lives of others, it’s a <u>futile</u> struggle.
-Far more effectI've is to turn on a light.
+Far more effective is to turn on a light.
 
 When the light is turned on, darkness vanishes. There is no need to fight with it; no effort is needed. A room can be dark for many years, yet it still takes only a moment to turn on the light and then the darkness is gone.
 
