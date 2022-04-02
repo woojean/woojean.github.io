@@ -596,63 +596,139 @@ But the One is everything; it excludes nothing, desires nothing, seeks nothing, 
 
 
 ## Chapter Fifteen
-Picture an ocean.. .waves moving on its surface. Eachwave rises up, exists for a while, then falls back into the oceanfrom <u>whence</u> it came. Now imagine that each wave has thenotion that it exists separately. Naturally, each wave is thenconcerned with survival, with the problem of how to go onexisting.
-Notice that the problem is unsolvable, because in fact atsome point the wave is going to cease to exist. But this is onlya problem at the level of wave, where the wave is trying to goon existing separately. The wave is clinging to its separateness,which creates its problem. Notice that at the level of oceanthere is no problem, because the ocean is neither coming intoexistence nor going out of existence. Nor is it trying to sur-vI've. It simply is.
-Notice too that at no time is the wave actually separatefrom the ocean. Indeed, even to call it a “wave” separates it inour minds, but in fact there is only the ocean. Even if the wavethinks it is separate, it is not. The attempt to survive perpetu-ates its sense of separateness, but actually it is never separate.There is only the ocean, <u>evolving</u> and changing its form onthe surface, yet remaining always the same.
-Actually, the only problem the wave has is that it is try-ing to solve a problem. The moment it gives up its problem ofsurvival it is at the level of ocean, where there is no problemof any kind. At that level there is only the <u>serenity</u> and bliss ofexistence itself.
-The wave is already the ocean; it doesn't have to achieveanything in order to become the ocean. It already is that. Itsonly problem is its illusion that it has to achieve something,that it has to get somewhere, that it has to make its way, thatit has to survive. The shift from the level of wave to the levelof ocean can come in an <u>instant</u>; it takes no time becausenothing has to be changed or achieved. Everything is alreadyin place except for the wave dropping its <u>cherished</u> illusion ofbeing separate.
-But notice that the wave itself cannot drop this illusionof separateness. Separateness is how it conceI'ves of its exis-tence; how can it drop itself? Similarly, the mind feels separateand will always feel separate; that is its nature. Separateness isits very existence; it cannot see through itself.
-But if the mind somehow disappears then there is noproblem. Then Being, Existence shines forth from that empty<u>vessel</u>, It experiences itself without any <u>impediment</u> from themind. It was always there. When the mind is gone, Being is.It is there automatically since it was never not there.
-An <u>analogy</u> can be used of a <u>lamp</u> <u>encased</u> in mud. Thelight is there but it cannot be seen, cannot be experiencedbecause of the mud blocking it. Remove that mud, and thelight that was always there is <u>revealed</u>.
-Another analogy is of the sun shining on a cloudy day.If clouds cover the sky then the sun cannot be seen, yet it isstill there. This is our situation. Those clouds are thoughts,stories, tapes. Let one cloud be removed and the sun can beseen a little. Let another be removed and the sun can be seena little more.
-The sun is then seen through the gaps, just as Being orExistence is experienced through gaps in the thoughts/tapesof the mind. As more gaps open up and the Mystery is moreavailable, it can be said — in a manner of speaking — that theSelf awakens. But the mind itself cannot open up the gaps, asany attempt to do so would be just another tape, just anothercloud in the way.
-To say that Being or the Self awakens is perhaps to givethe impression that there is a separate being or self in eachperson. But no, only minds are separate; that is why they're anillusion. Being is always One. **Putting it another way, my true self and your true self are the same self. There is only one Self, one Being, one Existence, one Ocean.** In the Upanishads it issaid that Atman is Brahman — **the individual soul is the Exis-tence, is the totality. There is only the One.**
-This is <u>keenly</u> disappointing to the mind, which hopesto survive physical death through the notion of an individualsoul or essence which goes to heaven or <u>reincarnates</u> into anew body or whatever. But **heaven and hell and anything we could desire in the afterlife are all here now**. “The kingdom ofheaven is within you,” Jesus said. It is Existence itself whichreincarnates into new forms.
-**Existence keeps taking new forms and the surface of things keeps changing just as the surface of the ocean is con-stantly in motion. But underneath, all is changeless, silent,still. Who we really are is vast and open like the sky. Who we really are cannot die because it was never born.**
-All aspects of the mind, on the other hand, are merelysurface and are <u>destined</u> for <u>annihilation</u>. All the things thatwe think we are, all of the things which we cling to — our atti-tudes, emotions, thoughts, memories, patterns, viewpoints —will die as surely as a blooming rose or a wave on the ocean.
-All of what we think is important and unique about usis <u>transitory</u> and will fade as quickly as a leaf in autumn. Themind’s problem is not solvable. It is trying to survive and itcannot. And meanwhile its efforts and struggles keep it in<u>anguish</u>, which it <u>polishes</u> over with transitory <u>gratifications</u>.This going-through-the-motions, this daily round — eating,sleeping, working, relaxing, improving, eating, sleeping, all asa means to an end — is what we call life.
-So the problem of life can only be transcended. It cannever be solved. All of the mind's efforts to solve it, improveit, change it, make it better only deepen the problem. Yet theproblem can be transcended. What happens is that Beingawakens from a dream, so to speak, and discovers It’s theOcean and not the wave. **The problem in the dream does not need to be solved. Awakening is enough. Then the dream vanishes and the unsolvable problem vanishes with it.**
+Picture an ocean...waves moving on its surface. Each wave rises up, exists for a while, then falls back into the ocean from whence it came. Now imagine that each wave has the notion that it exists separately. Naturally, each wave is then concerned with survival, with the problem of how to go on existing.
+
+Notice that the problem is unsolvable, because in fact at some point the wave is going to cease to exist. But this is only a problem at the level of wave, where the wave is trying to go on existing separately. The wave is clinging to its separateness,which creates its problem. Notice that at the level of ocean there is no problem, because the ocean is neither coming into existence nor going out of existence. Nor is it trying to survive. It simply is.
+
+Notice too that at no time is the wave actually separate from the ocean. Indeed, even to call it a “wave” separates it in our minds, but in fact there is only the ocean. Even if the wave thinks it is separate, it is not. The attempt to survive perpetuates its sense of separateness, but actually it is never separate.There is only the ocean, evolving and changing its form on the surface, yet remaining always the same.
+
+Actually, the only problem the wave has is that it is trying to solve a problem. **The moment it gives up its problem of survival it is at the level of ocean, where there is no problem of any kind.** At that level there is only the serenity and bliss of existence itself.
+
+```
+及吾无身，吾有何患？
+廓然而大公，物来而顺应。
+```
+
+The wave is already the ocean; it doesn't have to achieve anything in order to become the ocean. It already is that. Its only problem is its illusion that it has to achieve something,that it has to get some where, that it has to make its way, that it has to survive. The shift from the level of wave to the level of ocean can come in an instant; it takes no time because nothing has to be changed or achieved. Everything is already in place except for the wave dropping its cherished illusion of being separate.
+
+But notice that the wave itself cannot drop this illusion of separateness. Separateness is how it conceives of its existence; how can it drop itself? Similarly, the mind feels separate and will always feel separate; that is its nature. Separateness is its very existence; it cannot see through itself.
+
+But if the mind somehow disappears then there is no problem. Then Being, Existence shines forth from that empty vessel, It experiences itself without any impediment from the mind. It was always there. When the mind is gone, Being is.It is there automatically since it was never not there.
+
+```
+无名关照
+```
+
+An analogy can be used of a lamp encased in mud. The light is there but it cannot be seen, cannot be experienced because of the mud blocking it. Remove that mud, and the light that was always there is revealed.
+
+Another analogy is of the sun shining on a cloudy day.If clouds cover the sky then the sun cannot be seen, yet it is still there. This is our situation. Those clouds are thoughts,stories, tapes. Let one cloud be removed and the sun can be seen a little. Let another be removed and the sun can be seen a little more.
+
+The sun is then seen through the gaps, just as Being or Existence is experienced through gaps in the thoughts/tapes of the mind. As more gaps open up and the Mystery is more available, it can be said — in a manner of speaking — that the Self awakens. But the mind itself cannot open up the gaps, as any attempt to do so would be just another tape, just another cloud in the way.
+
+To say that Being or the Self awakens is perhaps to give the impression that there is a separate being or self in each person. But no, only minds are separate; that is why they're an illusion. Being is always One. **Putting it another way, my true self and your true self are the same self. There is only one Self, one Being, one Existence, one Ocean.** In the Upanishads it is said that At man is Brahman — **the individual soul is the Existence, is the totality. There is only the One.**
+
+```
+人同此心，心同此理。
+```
+
+This is keenly disappointing to the mind, which hopes to survive physical death through the notion of an individual soul or essence which goes to heaven or reincarnates into a new body or whatever. But **heaven and hell and anything we could desire in the after life are all here now**. “The kingdom of heaven is within you,” Jesus said. It is Existence itself which reincarnates into new forms.
+
+**Existence keeps taking new forms and the surface of things keeps changing just as the surface of the ocean is constantly in motion. But underneath, all is changeless, silent,still. Who we really are is vast and open like the sky. Who we really are cannot die because it was never born.**
+
+All aspects of the mind, on the other hand, are merely surface and are destined for annihilation. All the things that we think we are, all of the things which we cling to — our attitudes, emotions, thoughts, memories, patterns, view points —will die as surely as a blooming rose or a wave on the ocean.
+
+All of what we think is important and unique about us is transitory and will fade as quickly as a leaf in autumn. The mind’s problem is not solvable. It is trying to survive and it can not. And meanwhile its efforts and struggles keep it in anguish, which it polishes over with transitory gratifications. This going-through-the-motions, this daily round — eating,sleeping, working, relaxing, improving, all as a means to an end — is what we call life.
+
+So the problem of life can only be transcended. It can never be solved. All of the mind's efforts to solve it, improve it, change it, make it better only deepen the problem. Yet the problem can be transcended. What happens is that Being awakens from a dream, so to speak, and discovers It’s the Ocean and not the wave. 
+
+**The problem in the dream does not need to be solved. Awakening is enough. Then the dream vanishes and the unsolvable problem vanishes with it.**
+
+
 
 
 ## Chapter Sixteen
 
-But how is this awakening, this transcendence accom-plished? If the mind does not do it, if indeed there is no doinginvolved, then how does it happen? To answer this question,let us look at the mind from still another perspectI've:
-At each moment the mind is running its stimulus-response programs — tapes, thoughts, stories. These programsare used to <u>paint</u> reality, to project on the screen of Existencethe version of reality that the mind wants to see. In order tosee these tapes as reality it is necessary not to see them astapes — that is, it is necessary not to notice them as generatedwithin the mechanism. The tapes must be seen as being outthere; they must be seen as the real world, as reality, as “the waythings really are.”
-An analogy of watching a movie can be used. If we getreally <u>engrossed</u> in watching the story on the screen we mayforget that it’s not real. We’re feeling anxiety or hope, tears orjoy, when suddenly the projector breaks down and the screengoes dark. And then we remember that it’s only a movie, thatit’s not real.
-Similarly, if with one of the mind’s tapes or programswe suddenly remember that it’s only a tape, if we suddenlynotice it as a tape — a beautiful tape or an ugly tape, but stillonly a tape — then the movie is over for that moment. Theprogram is exposed as merely a program; the screen has gonedark, so to speak.
-In that moment we no longer see the tape as realitybecause we are seeing it as merely a tape, as merely a program.Since the purpose of a tape is to present itself as reality, the<u>instant</u> its lack of reality is exposed the program simply stopsrunning. The tape disappears. The program, the tape, the act,the number, the thought — whatever we want to call it — justgoes back to where it came from. In that instant of awarenessthere is no mind anymore; there is only Being.
-Who or what does the noticing? The mind cannot do itbecause the mind is inescapably stuck in its dreams, in itsmanufactured version of reality. Only the Self, only the Beingcan be aware. It is awareness. The moment the Self noticesthat the particular tape running at that moment is simply atape and not reality, the moment the Self notices the programas a program — in that moment the program that was runningsimply disappears. In that moment there is only the Self, thereis no mind. <u>Metaphorically</u> speaking, in that moment the Selfhas awakened, the wave has discovered it is the Ocean.
-But in the next moment another tape will be called upand run as a response to stimuli from the environment. In this<u>metaphor</u>, if the Self identifies with this tape and sees it asreality, then, so to speak, the Self is caught once more; thenthe Being has been sucked into the illusion once again. AgainIt has fallen asleep. Once more It has become identified with
-the mind, with the automatic stimulus-response mechanism.Now the survival programming of the mechanism is in thedriver's seat.
-Then at some point another moment comes when theSelf notices a program as a program, notices a tape as simplya projected version of Reality itself. The tape vanishes; it canno longer present itself as real. In that instant the Self can besaid to be awakened once more.
-So it goes, back and forth. Self awakens from its long<u>slumber</u> for a moment, then goes back to sleep again. Andagain It awakens, only to return to sleep once more. In thebeginning the Self awakens only <u>fitfully</u>. It is like someoneengrossed in a vivid dream trying to remember that it is onlya dream — and the moment she does, of course, the dream isno longer there. It is like someone in a deep <u>hallucination</u> try-ing to remember that the hallucination is not real.
-In the beginning this process seems difficult becausethe moments of awareness are few and far between. But thatis just the appearance. **The moment of awareness itself is not difficult because awareness is not a doingness of any kind. The Self does not exist in time or space; it is not engaged in any activity, striving or effort. So awareness is not something that is done; it simply is. It simply happens.**
-If awareness of a tape is an effort then it is not aware-ness, it is something being done by the mind. For the mind isall about effort and struggle and striving; the mind can neverbe effortless since it is always in one way or another trying tobe somewhere other than where it is.
-Awareness, not being of the mind, is effortless. It takesplace outside of the whole stimulus-response mechanism, andisn’t an activity. It is not active, but <u>passI've</u>.
-The difference can be seen in a metaphor suggested byOsho. Imagine waiting in a train station where we are to meetour lover. We actively watch the doors; we are looking for aparticular face, our lover's face. We are not interested in otherfaces. This is active awareness. This is mind. Mind is lookingfor a result; it is looking for something in particular.
-Now imagine sitting by the side of a river in autumn,watching the leaves on the river float by. As each leaf passesby, it is noticed without effort. No leaf is more important thanany other, yet no leaf passes by without being noticed. Thereis no concern for results, there is no end in view. There is justa choiceless, silent watching. **This is passI've awareness. This is awareness by the Self; indeed, it is the Self. Each leaf is sim-ply noticed and let go; there is no concern about it.**
+But how is this awakening, this transcendence accomplished? If the mind does not do it, if indeed there is no doing involved, then how does it happen? To answer this question,let us look at the mind from still another perspective:
+At each moment the mind is running its stimulus-response programs — tapes, thoughts, stories. These programs are used to paint reality, to project on the screen of Existence the version of reality that the mind wants to see. In order to see these tapes as reality it is necessary not to see them as tapes — that is, it is necessary not to notice them as generated within the mechanism. The tapes must be seen as being out there; they must be seen as the real world, as reality, as “the way things really are.”
+
+An analogy of watching a movie can be used. If we get really engrossed in watching the story on the screen we may forget that it’s not real. We’re feeling anxiety or hope, tears or joy, when suddenly the projector breaks down and the screen goes dark. And then we remember that it’s only a movie, that it’s not real.
+
+Similarly, if with one of **the mind’s tapes** or programs we suddenly remember that it’s only a tape, if we suddenly notice it as a tape — a beautiful tape or an ugly tape, but still only a tape — then the movie is over for that moment. The program is exposed as merely a program; the screen has gone dark, so to speak.
+
+In that moment we no longer see the tape as reality because we are seeing it as merely a tape, as merely a program.Since **the purpose of a tape is to present itself as reality**, the instant its lack of reality is exposed the program simply stops running. The tape disappears. The program, the tape, the act,the number, the thought — whatever we want to call it — just goes back to where it came from. **In that instant of awareness there is no mind anymore; there is only Being.**
+
+Who or what does the noticing? The mind cannot do it because the mind is inescapably stuck in its dreams, in its manufactured version of reality. Only the Self, only the Being can be aware. It is awareness. The moment the Self notices that the particular tape running at that moment is simply a tape and not reality, the moment the Self notices the program as a program — in that moment the program that was running simply disappears. In that moment there is only the Self, there is no mind. Metaphorically speaking, in that moment the Self has awakened, **the wave has discovered it is the Ocean**.
+
+But in the next moment another tape will be called up and run as a response to stimuli from the environment. In this metaphor, if the Self identifies with this tape and sees it as reality, then, so to speak, the Self is caught once more; then the Being has been sucked into the illusion once again. Again It has fallen asleep. Once more It has become identified with the mind, with the automatic stimulus-response mechanism. Now the survival programming of the mechanism is in the driver's seat.
+
+Then at some point another moment comes when the Self notices a program as a program, **notices a tape as simply a projected version of Reality itself**. The tape vanishes; it can no longer present itself as real. In that instant the Self can be said to be awakened once more.
+
+So it goes, back and forth. Self awakens from its long slumber for a moment, then goes back to sleep again. And again It awakens, only to return to sleep once more. In the beginning the Self awakens only fitfully. It is like some one engrossed in a vivid dream trying to remember that it is only a dream — and the moment she does, of course, the dream is no longer there. It is like someone in a deep hallucination trying to remember that the hallucination is not real.
+
+```
+hallucination  [həˌluːsɪˈneɪʃn]  幻觉;幻视，幻听(尤指生病或毒品所致);幻视(或幻听)到的东西;幻象
+```
+
+In the beginning this process seems difficult because the moments of awareness are *few and far between*. But that is just the appearance. The moment of awareness itself is not difficult because awareness is not a doingness of any kind. **The Self does not exist in time or space**; it is not engaged in any activity, striving or effort. So **awareness is not something that is done; it simply is. It simply happens.**
+
+If awareness of a tape is an effort then it is not awareness, it is something being done by the mind. For the mind is all about effort and struggle and striving; the mind can never be effortless since it is always in one way or another trying to be somewhere other than where it is.
+
+Awareness, not being of the mind, is effortless. It takes place outside of the whole stimulus-response mechanism, and isn’t an activity. It is not active, but passive.
+
+The difference can be seen in a metaphor suggested by Osho. Imagine waiting in a train station where we are to meet our lover. We actively watch the doors; we are looking for a particular face, our lover's face. We are not interested in other faces. This is active awareness. This is mind. **Mind is looking for a result; it is looking for something in particular.**
+
+Now imagine sitting by the side of a river in autumn,watching the leaves on the river float by. As each leaf passes by, it is **noticed without effort.** No leaf is more important than any other, yet no leaf passes by without being noticed. There is no concern for results, there is no end in view. There is just a choiceless, silent watching. **This is passive awareness. This is awareness by the Self; indeed, it is the Self. Each leaf is simply noticed and let go; there is no concern about it.**
+
 This is what one does with one's tapes, programs,thoughts, feelings, sensations, models, acts and demands. **We simply notice whatever comes up, whatever is running, with bare attention. Nothing is added; no judgment, no evaluation,no feeling that it’s good or bad, or that it should or shouldn't be there.**
-**We simply allow what is there to be there, and notice it without encouragement or <u>condemnation</u>. Adding encour-agement, condemnation, judgment, evaluation, or anything else would be doing something with the tape/story, and pure awareness is a non-doingness.**
-We allow each leaf — each tape — to come into ourawareness without desire or avoidance, and we allow it toleave without clinging or pushing. There are no preferences.Each thought is allowed to come in and it’s allowed to go. Itis simply noticed without adding anything. **And if the mind does add something to it, then the addition is also simply noticed.**
-**It’s like noticing waves on the sea.** Each wave comes upout of the depths, is noticed and allowed to be, and then dis-appears back into the ocean from which it came. **It is like watching clouds in the sky.** Each cloud appears, moves acrossthe sky, then disappears. There is no reason for the cloud to bethere; it just happens to be there. And while it is there it issilently watched. We watch the thoughts of the mind in justthe way that we would watch clouds pass across the sky.
+
+**We simply allow what is there to be there, and notice it without encouragement or condemnation. Adding encouragement, condemnation, judgment, evaluation, or anything else would be doing something with the tape/story, and pure awareness is a non-doingness.**
+
+```
+condemnation [ˌkɑːndemˈneɪʃn] 谴责;指责
+```
+
+We allow each leaf — each tape — to come into our awareness without desire or avoidance, and we allow it to leave without clinging or pushing. There are no preferences. Each thought is allowed to come in and it’s allowed to go. It is simply noticed without adding anything. **And if the mind does add something to it, then the addition is also simply noticed.**
+
+**It’s like noticing waves on the sea.** Each wave comes up out of the depths, is noticed and allowed to be, and then disappears back into the ocean from which it came. **It is like watching clouds in the sky.** Each cloud appears, moves across the sky, then disappears. There is no reason for the cloud to be there; it just happens to be there. And while it is there it is silently watched. We watch the thoughts of the mind in just the way that we would watch clouds pass across the sky.
+
+
 
 
 ## Chapter Seventeen
-Depending on the tradition this is called awareness orwitnessing or mindfulness. Sometimes it is referred to as bareattention or self-remembering. The name doesn't matter, for thesame phenomenon underlies the different names. It is a deepallowing. It’s a deep let-go. It is a deep willingness for what-ever exists to exist. It is a deep loving of whatever is there, andchoosing it to be the way it is. It’s a deep gratitude and cele-bration of what is. It’s a deep observation of what exists with-out attachment or avoidance.
-There are two main branches on this tree. The first isabout beginning where we are — in our daily life. For instance,if we’re taking a shower we’re usually not herenow with it;we’re not aware of the <u>loveliness</u> of the water falling on us.Instead, we’re thinking of various things, wondering aboutthis and that, getting ready for work or whatever. Usually,we’re not just taking a shower when we're taking a shower.
-Using awareness in daily life would mean, for instance,noticing the stories/tapes that are running as we’re taking theshower. It would mean noticing what is getting in the way ofjust being there with the shower. As we notice the tapes, weneither reject them nor encourage them.
-We do nothing with them. Its simply a noticing thatthey are tapes, that the mind is in motion. One accepts them,allows them, chooses them to be there, but not as an activething. Rather, the acceptance is implicit in the awareness it-self. As we notice the tapes as just tapes, the motion as justmotion, the tapes become more <u>flimsy</u> — and then were justtaking a shower, nothing else.
-When we see a story as reality instead of as a story, itsas if we've become fascinated by one of the leaves in thestream and are now following it as it moves downstream. **Our attention is caught; we re clinging**. Then we re living in theversion of reality produced by taking that thought as reality.Then **we miss reality itself by clinging to something limited.**Conversely, as we simply watch each tape with detachment asit comes in and goes out, with no preferences, then we arrI'veat the doorway of the spiritual — **the present moment**.
-When Buddha talks about attachment being the causeof suffering, an image can arise of attachment to objects orpeople. And indeed we do get attached to people and objects.But we do so because of the stories we tell ourselves.
-**We cannot be attached to people or objects without being attached to our story about them.** That is the realattachment that the Buddha was talking about. And thatclinging means seeing that belief or story as reality. If there isno "reality” in the perception of a tape/story then there will beno attachment to it either. Then it will be just another beliefor story and will be seen as such. DI'vested of the quality ofbeing ""true” and ‘"real,” it ceases to engage us.
-Thus attachment to a person or object actually consistsof the moment-to-moment clinging that occurs when there isa story about it. And the interactions and circumstances ofdaily life tend to bring up exactly those tapes that most needto be noticed. So using mindfulness moment-to-moment ineveryday situations is a fast way to bring awareness to deep-seated attachments.
-But also, there is great value in sitting silently, free for aperiod of the <u>hustling</u> and <u>bustling</u> of the daily routine, so thatone can observe without <u>distraction</u> the tapes that bubble upout of the depths of one's mind. In the silence of just sittingstill, we can more easily become aware of the movement of themind. Then, as the stories gradually become more flimsy, themind also becomes more flimsy since the mind is nothingother than its stories. Then Reality starts to move through usa little more.
-These two approaches complement each other well. It’shelpful to use awareness in periods of silence as well as inone's daily routine. When used together they open a commondoor — the <u>gradual</u> disappearance of the mind.
-In Zen they call this disappearance no-mind. In thisstate all dualities, all models, all beliefs, concepts, limitations,demands, exclusions, positions and versions of reality havebeen transcended, for there is no mind to sustain them. In theresulting emptiness, Existence can play its Melody through usmore and more, like Breath through a <u>hollow</u> <u>flute</u>.
+Depending on the tradition this is called awareness or witnessing or mindfulness. Sometimes it is referred to as bare attention or self-remembering. The name doesn't matter, for the same phenomenon underlies the different names. **It is a deep allowing. It’s a deep let-go. It is a deep willingness for whatever exists to exist. It is a deep loving of whatever is there, and choosing it to be the way it is. It’s a deep gratitude and celebration of what is. It’s a deep observation of what exists without attachment or avoidance.**
+
+There are two main branches on this tree. The first is about beginning where we are — in our daily life. For instance,if we’re taking a shower we’re usually not herenow with it; we’re not aware of the loveliness of the water falling on us.Instead, we’re thinking of various things, wondering about this and that, getting ready for work or whatever. Usually,we’re not just taking a shower when we're taking a shower.
+
+Using awareness in daily life would mean, for instance,noticing the stories/tapes that are running as we’re taking the shower. It would mean noticing what is getting in the way of just being there with the shower. **As we notice the tapes, we neither reject them nor encourage them.**
+
+We do nothing with them. Its simply a noticing that they are tapes, that the mind is in motion. One accepts them,allows them, chooses them to be there, but not as an active thing. Rather, the acceptance is implicit in the awareness it-self. As we notice the tapes as just tapes, the motion as just motion, the tapes become more flimsy — and then were just taking a shower, nothing else.
+
+When we see a story as reality instead of as a story, its as if we've become fascinated by one of the leaves in the stream and are now following it as it moves downstream. **Our attention is caught; we re clinging**. Then we re living in the version of reality produced by taking that thought as reality.Then **we miss reality itself by clinging to something limited.** Conversely, as we simply watch each tape with detachment as it comes in and goes out, with no preferences, then we arrive at the door way of the spiritual — **the present moment**.
+
+When Buddha talks about attachment being the cause of suffering, an image can arise of attachment to objects or people. And indeed we do get attached to people and objects.But we do so because of the stories we tell ourselves.
+
+**We cannot be attached to people or objects without being attached to our story about them.** That is the real attachment that the Buddha was talking about. And that clinging means seeing that belief or story as reality. If there is no "reality” in the perception of a tape/story then there will be no attachment to it either. Then it will be just another belief or story and will be seen as such. Divested of the quality of being "true" and "real" it ceases to engage us.
+
+Thus attachment to a person or object actually consists of the moment-to-moment clinging that occurs when there is a story about it. And the interactions and circumstances of daily life tend to bring up exactly those tapes that most need to be noticed. So **using mindfulness moment-to-moment in everyday situations is a fast way to bring awareness to deep-seated attachments**.
+
+But also, there is great value in sitting silently, free for a period of the hustling and bustling of the daily routine, so that one can observe without distraction the tapes that *bubble up out of the depths of* one's mind. In the silence of just sitting still, we can more easily become aware of the movement of the mind. 
+
+```
+hustling and bustling 熙熙攘攘
+```
+
+Then, as the stories gradually become more flimsy, the mind also becomes more flimsy since the mind is nothing other than its stories. Then Reality starts to move through us a little more.
+
+These two approaches complement each other well. It’s helpful to use awareness in periods of silence as well as in one's daily routine. When used together they open a common door — the gradual disappearance of the mind.
+
+In Zen they call this disappearance no-mind. In this state all dualities, all models, all beliefs, concepts, limitations,demands, exclusions, positions and versions of reality have been transcended, for there is no mind to sustain them. In the resulting emptiness, Existence can play its Melody through us more and more, like Breath through a hollow flute.
+
+
 
 
 ## Chapter Eighteen
 When we look closely at the stories we give meaning to,the positions we get on, it becomes clear that certain stories orpositions recur over and over. There are dominant themes or<u>leitmotifs</u> in the life of each of us, and it’s no accident thateach of us creates certain situations, runs certain tapes, gets oncertain positions, again and again.
+
 It’s similar to a <u>post-hypnotic</u> suggestion. Let’s supposethat someone hypnotizes us and <u>implants</u> a post-hypnoticsuggestion that whenever he raises an eyebrow we will <u>crave</u> abowl of soup, but that we won’t remember the suggestion.Now after the hypnotic session we will feel perfectly normal.We and the hypnotist are talking, let's say, when suddenly heraises an eyebrow. Immediately we will desire a bowl of soup,and to justify this desire we will mention something perhapsabout it being time for lunch.
 Notice that the <u>justification</u> we use has nothing what-ever to do with the <u>impulse</u> itself. Our desire for soup isbecause of the post-hypnotic suggestion. Yet on top of that wewill add a soundtrack, a voice-over, a story or rationalizationabout why we are desiring soup now. That is, we’ll justify ourimpulse. That’s one of the things the mind does.
 More than that, we’ll feel that we’ve chosen now to havea bowl of soup because it’s lunchtime, when in fact we’re act-ing out a situation which is entirely mechanical for us, whichis entirely stimulus-response.
