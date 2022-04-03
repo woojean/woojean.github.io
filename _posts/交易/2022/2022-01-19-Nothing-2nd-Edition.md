@@ -765,49 +765,60 @@ righteously indignant crusaders 理直气壮的、愤慨的改革者
 
 Some of us make our lives about getting others before they get us. Some of us smile a lot while feeling lonely inside. Some of us make our lives about producing guilt in others through self-sacrifice. Some of us make ourselves the central figure in an ever-recurring tragic drama. Some of us use being “on” as a means of not really being with others.
 
-A list of the different themes and patterns that run ourlives in various ways would be virtually infinite. And each oneis no different in quality from the post-hypnotic suggestionabout having a bowl of soup. Each is mechanical, automatic —and yet accompanied by all sorts of voice-overs, all sorts ofreasons and explanations. We get stuck in these patterns,frozen in them, just as if we were to emphasize a few notes onthe piano over and over.
-The payoff in this automatism is survival, and **survival means being right.** For example, the baby who heard hermother say “You bastard!” as her father left the house is now,as a woman, engaged on an unconscious level in proving thatmen are bastards. And when through her unwitting behavior each love affair breaks up abruptly and that man leaves her too, she gets to be right again. She gets to feel self-righteousand self-justified. “See? I told you. Men are bastards.”
-Since the mind is nothing but this collection of tapes,positions, patterns, programs, points of view — all names forthe same thing — getting to be right about them is <u>tantamount</u>to validating the existence of the mind. Since the mind is itspoints of view, then perpetuating them, running them, beingjustified about them is the very act of survival itself. It is iden-tical to perpetuating the “I.” “You” and “I” survive by runningtapes, by getting on positions and being right about them.
-Of course, methods exist for improving this situation.Going back into one's past, locating and re-experiencing theincident that burned in a recurring pattern in one's life willcause the pattern to cease running, just as re-experiencing themoment when a post-hypnotic suggestion was implanted willcause that suggestion to cease also. This is Patanjali's pratiprasov method, and in the West exists as various forms ofregression analysis.
-Another method is to consciously focus one's attentionupon the complex of attitudes, body sensations, postures,expressions, points of view, conclusions and images associatedwith a recurring theme or pattern in one's life. In its variousaspects, this is the method of psychotherapy, and works togive us some insight into our patterns and thus to <u>lessen</u> theirforce and power.
-These methods are valuable in helping us to adjust tolife. But while they can <u>ameliorate</u> some of the problems that
-we humans create for ourselves, they cannot relieve the deep-est suffering of the mind because they don’t involve a deepseeing into the nature of the mind itself, which creates its suf-fering by saying that its stories mean something.
-Even if these methods could deal with all the patternsset up by intense threat-to-survival incidents — very unlikelysince there are so many of them — they would still not lead tono-mind, to liberation. Why? Because liberation is not of youand I; it is from you and I.
+A list of the different themes and patterns that run our lives in various ways would be virtually infinite. And each one is no different in quality from the post-hypnotic suggestion about having a bowl of soup. Each is mechanical, automatic —and yet accompanied by all sorts of voice-overs, all sorts of reasons and explanations. We get stuck in these patterns,frozen in them, just as if we were to emphasize a few notes on the piano over and over.
+
+The payoff in this automatism is survival, and **survival means being right.** For example, the baby who heard her mother say “You bastard!” as her father left the house is now,as a woman, engaged on an unconscious level in proving that men are bastards. And when through her unwitting behavior each love affair breaks up abruptly and that man leaves her too, she gets to be right again. She gets to feel self-righteous and self-justified. “See? I told you. Men are bastards.”
+
+Since the mind is nothing but this collection of tapes,positions, patterns, programs, points of view — all names for the same thing — getting to be right about them is tantamount to validating the existence of the mind. Since the mind is its points of view, then perpetuating them, running them, being justified about them is the very act of survival itself. **It is identical to perpetuating the “I.**” “You” and “I” survive by running tapes, by getting on positions and being right about them.
+
+Of course, methods exist for improving this situation.Going back into one's past, locating and re-experiencing the incident that burned in a recurring pattern in one's life will cause the pattern to cease running, just as re-experiencing the moment when a post-hypnotic suggestion was implanted will cause that suggestion to cease also. This is *Patanjali's pratiprasov* method, and in the West exists as various forms of regression analysis.
+
+Another method is to consciously focus one's attention upon the complex of attitudes, body sensations, postures,expressions, points of view, conclusions and images associated with a recurring theme or pattern in one's life. In its various aspects, this is the method of psychotherapy, and works to give us some insight into our patterns and thus to lessen their force and power.
+
+These methods are valuable in helping us to adjust to life. But while they can ameliorate some of the problems that we humans create for ourselves, they cannot relieve the deepest suffering of the mind because they don’t involve a deep seeing into the nature of the mind itself, which creates its suffering by saying that its stories mean something.
+
+Even if these methods could deal with all the patterns set up by intense threat-to-survival incidents — very unlikely since there are so many of them — they would still not lead to no-mind, to liberation. Why? Because liberation is not of you and I; it is from you and I.
 
 
 
 
 ## Chapter Nineteen
-All methods, all devices can be valuable because they have the <u>potential</u> to begin to <u>rouse</u> us from our <u>slumbers</u>,they can create the critical <u>mass</u> where <u>witnessing</u> begins, they can be a door out of the box in which we spend our life. On the other hand, any method, any device can become a trap if we become attached to it, if it becomes one more link on the <u>treadmill</u> of improving, changing, seeking, achieving.. .all the material around which the ego <u>condenses</u>.
+All methods, all devices can be valuable because they have the potential to begin to rouse us from our slumbers,they can create the critical mass where witnessing begins, they can be a door out of the box in which we spend our life. On the other hand, any method, any device can become a trap if we become attached to it, if it becomes one more link on the treadmill of improving, changing, seeking, achieving.. .all the material around which the ego condenses.
 
-Anything can be the prison, anything can be the firststep into the <u>eternal</u>, into liberation, and it depends upon our willingness to watch. **We become enlightened not by what we do or don't do, but by watching what we do or don’t do**. If we cling to a method it cannot help us with the real problem.And what is the real problem? That we’re trying to survive and improve something — our separate selves — which at the deepest level are an illusion, which don’t actually exist.
+Anything can be the prison, anything can be the firststep into the eternal, into liberation, and it depends upon our willingness to watch. **We become enlightened not by what we do or don't do, but by watching what we do or don’t do**. If we cling to a method it cannot help us with the real problem. And what is the real problem? That we’re trying to survive and improve something — our separate selves — which at the deepest level are an illusion, which don’t actually exist.
 
-Only awareness doesn’t feed this doingness of the mind,because only awareness is not an activity and doesn’t keep the mind's motion going. Only awareness is silent, effortless, passI've, not of the mind. Only awareness cuts at the root by watching the very nature of mind itself.
+Only awareness doesn’t feed this doingness of the mind,because only awareness is not an activity and doesn’t keep the mind's motion going. Only awareness is silent, effortless, passive, not of the mind. Only awareness cuts at the root by **watching the very nature of mind itself**.
 
-For example, let's suppose we're running a tape that men are bastards and thereby creating a situation where our current lover will leave us, making us right again. Good; let’s not change anything. Let’s simply watch this process without encouragement or <u>condemnation</u> or any evaluation at all.
+For example, let's suppose we're running a tape that men are bastards and thereby creating a situation where our current lover will leave us, making us right again. Good; let’s not change anything. Let’s simply watch this process without encouragement or condemnation or any evaluation at all.
 
-Let’s simply watch as we set up the situation. Let’s watch as we create ourself being right. Let’s watch as we tell ourself that men are bastards. As we watch, these tapes wil lstart losing force, they will start disappearing of their own accord. We don’t need to do anything. Indeed, anything we do is simply another tape.
+Let’s simply watch as we set up the situation. Let’s watch as we create ourself being right. Let’s watch as we tell ourself that men are bastards. As we watch, these tapes will start losing force, they will start disappearing of their own accord. We don’t need to do anything. Indeed, anything we do is simply another tape.
 
 We just become a witness to our positions, patterns,presentations. We notice them as positions now instead of as reality. We see that our version of reality is being generated internally moment-to-moment by the automatic programs of the mind.
 
 “That bastard!” If we’re running that tape, for example,what’s real for us is that he’s a bastard — until we notice that it’s just a story, a position, an automatic product of the mind.Actually, he just did whatever he did; that is what is. On top of that we add our interpretations, judgments, programs, etc.and project them out there.
 
-We see wrongness out there and want to change it or bemad about it or whatever. But once we see that wrongness —and rightness too — is being manufactured internally by the mind’s survival programming, and that it’s merely the mind dreaming, then the wrongness and the rightness, the labels and interpretations and acts gradually disappear.
+We see wrongness out there and want to change it or be mad about it or whatever. But once we see that wrongness —and rightness too — is being manufactured internally by the mind’s survival programming, and that it’s merely the mind dreaming, then the wrongness and the rightness, the labels and interpretations and acts gradually disappear.
 
 Then we can simply be with what’s there — a child, a flower, a tax form, a lover, a sunset. **In that moment there are no obstacles between us and Existence in all Its many forms**.The very obstacles become channels.
 
-Without awareness we suffer even if all is seemingly okay on the surface. There’s nothing wrong in that, but we pay a price. The cost is being frozen in our mechanical series of presentations. The cost is being dead while we’re still alI've,dragging along, acting out programmed dramas.
+Without awareness we suffer even if all is seemingly okay on the surface. There’s nothing wrong in that, but we pay a price. The cost is being frozen in our mechanical series of presentations. The cost is being dead while we’re still alIive,dragging along, acting out programmed dramas.
 
-Dragging along in life is heart-<u>wrenching</u>. For the cost of dragging along is missing the mystery and loveliness of Existence. Existence is knocking, but we’re not at home to answer the door.
+```
+dragging along 拖着，得过且过
+```
 
-Instead we’re off with our stories, dreaming with them,<u>hypnotized</u> by them. We can miss our own life in this way. We can miss the wholeness, the fulfillment, the effortlessness, the bliss that is waiting. We can miss experiencing ourself as the Ocean and not the wave. We can stay <u>entangled</u> in a fight for survival, security, pleasure, rightness.
+Dragging along in life is heart-wrenching. For the cost of dragging along is missing the mystery and loveliness of Existence. Existence is knocking, but we’re not at home to answer the door.
 
-Let’s become a witness to the mind in our daily life.Let’s become aware. Let’s let everything be <u>grist</u> for the <u>mill</u>. Let’s observe our thoughts coming and going just as we might observe cars on the street coming and going. And in addition,using whatever posture allows us to forget the body without becoming sleepy, let’s take some time out each day to just sit quietly with no activity. In the stillness and silence of sitting quietly, the mind will come to seem more and more <u>flimsy</u>,distant. And one day it will simply be gone.
+Instead we’re off with our stories, dreaming with them,hypnotized by them. We can miss our own life in this way. We can miss the wholeness, the fulfillment, the effortlessness, the bliss that is waiting. We can miss experiencing ourself as the Ocean and not the wave. We can stay entangled in a fight for survival, security, pleasure, rightness.
 
-A question: If awareness is not a doingness of any kind,how do we start? How do we get it to begin? Actually its there already, so beginning is really a matter of allowing it to be there. **Its simply an allowing**. It just happens when we reaware that it will.
+Let’s become a witness to the mind in our daily life.Let’s become aware. Let’s let everything be grist for the mill. **Let’s observe our thoughts coming and going just as we might observe cars on the street coming and going**. And in addition,using whatever posture allows us to forget the body without becoming sleepy, let’s take some time out each day to just sit quietly with no activity. In the stillness and silence of sitting quietly, the mind will come to seem more and more flimsy,distant. And one day it will simply be gone.
 
-Many things happen which we don’t understand. And there’s no need to understand them. Let’s watch. How do we eat? By moving our hand with its <u>utensil</u> to our mouth. Yes,but how do we get our hand to move? By contracting the muscles in our arm. Yes, but how do we contract the muscles in our arm? By sending down a <u>nerve</u> impulse from the brain?And how do we do that? Ultimately, we don't know how we accomplish even a simple thing like eating. We just eat. It just happens.
+A question: If awareness is not a doingness of any kind,how do we start? How do we get it to begin? Actually its there already, so beginning is really a matter of allowing it to be there. **Its simply an allowing**. It just happens when we’re aware that it will.
+
+**Many things happen which we don’t understand. And there’s no need to understand them**. Let’s watch. How do we eat? By moving our hand with its utensil to our mouth. Yes,but how do we get our hand to move? By contracting the muscles in our arm. Yes, but how do we contract the muscles in our arm? By sending down a nerve impulse from the brain?And how do we do that? **Ultimately, we don't know how we accomplish even a simple thing like eating. We just eat. It just happens.**
+
 When we look deeply we see that everything in our life is like this. Things happen, but at the deepest level we don't know how.
+
 Awareness is the same. It begins by itself, and we won’t understand it. We can just allow it. We just become a witness to our own movement. There are no instructions.
 
 
@@ -815,13 +826,13 @@ Awareness is the same. It begins by itself, and we won’t understand it. We can
 # Opening
 
 ## Chapter Twenty
-We're always seeking. That might be the best definition of a human being: the seeker. Were looking for ways to survive, to be secure and powerful, to be gratified and fulfilled. As we have seen, the mind normally never stops seeking. It is its very nature.
+We're always seeking. That might be the best definition of a human being: the seeker. We're looking for ways to survive, to be secure and powerful, to be gratified and fulfilled. As we have seen, the mind normally never stops seeking. It is its very nature.
 
-In sum, each of us has certain stimulus-response programs which are predominant and which determine what canbe called our prevalent theme or pattern or <u>racket</u> in life. It is our predominant attitude.
+In sum, each of us has certain stimulus-response programs which are predominant and which determine what can be called our prevalent theme or pattern or racket in life. It is our predominant attitude.
 
-For some of us the habitual response may be anger. For others the habitual <u>tone</u> might be <u>cynicism</u>. Some of us have a life which is about trying very hard. For some the habitualt one is grief. Some of us stuff down our emotions and become very <u>monotone</u>. Many other examples could be given.
+For some of us the habitual response may be anger. For others the habitual tone might be cynicism. Some of us have a life which is about trying very hard. For some the habitual one is grief. Some of us stuff down our emotions and become very monotone. Many other examples could be given.
 
-The tone is not always apparent, but is always there as an <u>undercurrent</u>. Our predominant theme or pattern in life is our mode of survival moment-to-moment, our unconscious method of coping. According to our programming, it is how we seek to survive.
+The tone is not always apparent, but is always there as an undercurrent. Our predominant theme or pattern in life is our mode of survival moment-to-moment, our unconscious method of coping. According to our programming, it is how we seek to survive.
 
 Along with this predominant pattern or survival-mode,each of us has a predominant method or complex of methods for seeking happiness. This is how we feel we can achieve fulfillment, completion, satisfaction. It’s our dream, our search.It’s our path. If the survival-mode is our way of seeking to avoid the stick, then this is our predominant way of seeking the <u>carrot</u>. It’s the rainbow on the horizon for us.
 
@@ -908,7 +919,7 @@ Also, all methods are a doingness and they presuppose that there is some goal we
 
 For instance, surrendering to a lover or an avatar is very beautiful. To surrender is to love, it means making the other more important than oneself. It suppresses many programs and stories because to the extent that one surrenders one has no goals other than to be surrendered, to be in love. It gives us a taste of Existence, of bliss because the controller becomes mostly and temporarily absent.
 
-But who is it that makes the decision to be surrendered?The mind, for all decisions are of the mind. Behind the act of surrender is the mind, alI've and well. And too, we can become attached to the object of our surrender, and this also is of the mind.
+But who is it that makes the decision to be surrendered?The mind, for all decisions are of the mind. Behind the act of surrender is the mind, alIive and well. And too, we can become attached to the object of our surrender, and this also is of the mind.
 
 The act of surrendering is a drug, a program, another dream — a subtle and beautiful one. Nevertheless its effects are not permanent because they have not involved a deep awareness of the nature of the mind itself. The tapes are suppressed but not extinguished, and will return when one falls out of love, when one is no longer surrendered.
 
@@ -950,7 +961,7 @@ Concentration meditations effects are only temporary because they don’t involv
 
 This is a difference between concentration meditationand awareness. Awareness does not suppress anything. On the contrary it welcomes everything, accepts it all, sees everything for what it is. And in that effortless seeing, that seeing which is non-doing and which is not of the mind, the tapes simply begin to dissolve. There is no attempt to change or improve anything. Awareness is identical with a deep acceptance. But neither is there a decision to accept either; rather, acceptance is simply there.
 
-Another way of expressing this is to recall the difference between active and passI've awareness. Concentration meditation is an active awareness; it is an intense watching of the door of the train in order to see one’s lover. It’s a doingness; it is pointed in a particular direction. True awareness is totally passI've, it is merely watching the leaves go by on the river —choosing none, preferring none, clinging to nothing. It is a silence, a stillness that dissolves all things.
+Another way of expressing this is to recall the difference between active and passive awareness. Concentration meditation is an active awareness; it is an intense watching of the door of the train in order to see one’s lover. It’s a doingness; it is pointed in a particular direction. True awareness is totally passive, it is merely watching the leaves go by on the river —choosing none, preferring none, clinging to nothing. It is a silence, a stillness that dissolves all things.
 
 Concentration meditation is not necessary, but can be avaluable device. It is useful in that it can create a situation where awareness can begin to happen. In slowing down the mind it slows down the flow of leaves in the river, so to speak,so that a beginning awareness can more readily perceI've the gaps between the leaves. But it’s not necessary. The essence of awareness is that we start just where we are, with whatever ourpresent circumstances are.
 
@@ -1080,7 +1091,7 @@ And we’ve seen that ultimately this witnessing is all that can ever be done, a
 
 As we continue to watch the mind, awareness deepens. And as the awareness deepens, more and more tapes lose energy, lose force, lose reality. More and more of them become transparent and then disappear. It’s not that we’re trying to make them disappear. There’s an acceptance of them, we’re perfectly willing to have them there. In that very acceptance,though, they start disappearing of their own accord. And as they start disappearing a great silence increasingly descendson us. We become more and more still within.
 
-And then one day the final, the ultimate happens. The tapes are all gone, they are simply there no more. And we’re there no more either. All desires, all goals, all clingings, all programs are absent, extinguished. There is no past and no future anymore, there is only the moment. The ego’s smoky candle flame has gone out, but now the sun lights up the sky.We are dead, we are gone, but now God is alI've. While we were, God was not. Now that we are not, God is. Existence Itself now dances through the form where we used to be. The inner <u>Melody</u> just moves through us.
+And then one day the final, the ultimate happens. The tapes are all gone, they are simply there no more. And we’re there no more either. All desires, all goals, all clingings, all programs are absent, extinguished. There is no past and no future anymore, there is only the moment. The ego’s smoky candle flame has gone out, but now the sun lights up the sky.We are dead, we are gone, but now God is alIive. While we were, God was not. Now that we are not, God is. Existence Itself now dances through the form where we used to be. The inner <u>Melody</u> just moves through us.
 
 This is <u>nirvana</u>, the final enlightenment. And “nirvana”is such a beautiful word, for it means “no burning.” There’s nolonger the burning of desire, of striving and <u>clutching</u>. And in the absence of that, in that <u>utter</u> emptiness there’s a quiet bliss that’s beyond happiness, beyond excitement, beyond the thrill of any kind of experience. The bliss of Existence Itself.
 Now It moves, It controls.
@@ -1205,7 +1216,7 @@ We humans have surrounded ourselves with dogmas,rules, regulations. We create ou
 
 They serve the purpose of reducing the unlimited to the limited. They reduce the unknowable to the knowable. They are familiar, a comfortable misery. Then we try to escape this prison by improving things, including improving our rules and dogmas. This is like decorating our cell with <u>jewels</u>,replacing the iron bars with gold ones. Were still in prison.
 
-The person of wisdom, on the other hand, is free. One of the names for awakening is <u>moksha</u> , liberation. She's willing to go wherever life leads her. She knows nothing, and knows that she knows nothing. She has no rules, no guidelines, no security. She <u>plunges</u> into the unknown moment-by-moment. She is surrendered to Existence, she trusts it totally. She is grateful just to be alI've, just to breathe. If life gives her bitter fruit to eat, she is grateful for it. If life gives her sweet fruit,she's grateful for it. It's all the same, there's no sweet or bitter.She is simply aware; she watches.
+The person of wisdom, on the other hand, is free. One of the names for awakening is <u>moksha</u> , liberation. She's willing to go wherever life leads her. She knows nothing, and knows that she knows nothing. She has no rules, no guidelines, no security. She <u>plunges</u> into the unknown moment-by-moment. She is surrendered to Existence, she trusts it totally. She is grateful just to be alIive, just to breathe. If life gives her bitter fruit to eat, she is grateful for it. If life gives her sweet fruit,she's grateful for it. It's all the same, there's no sweet or bitter.She is simply aware; she watches.
 
 This awareness is the key. If her body-mind cries or becomes sad, she's not identified with it. She’s a witness to it,she watches this beautiful flower of sadness. She doesn't try to stop it or push it away or distract herself. She watches it just as she would watch the clouds in the sky or the <u>ripples</u> on a lake. The sadness has its own beauty.
 
@@ -1213,7 +1224,7 @@ There's no difference for her between inner phenomenaand outer phenomena, betwee
 
 Now she witnesses whatever is next. It might sound as if she’s in different, but she’s not — she’s just detached. To be indifferent is to have little or no interest in life. Either life has beaten down such a person and they’ve become filled with hopelessness, or they’ve become <u>jaded</u> and <u>cynical</u> about life and it appears <u>dull</u> and <u>tedious</u>.
 
-The person of freedom is not in different at all. He is very alI've to life. He is filled with it moment-to-moment,whatsoever it is; he is spontaneous. But he’s detached because he does not cling to any particular part of life. He lets each moment go to make way for whatever is in the next moment. He is open, receptI've, flexible... but not in different in the least.He watches all, accepts all, but clings to nothing, identifies with nothing.
+The person of freedom is not in different at all. He is very alIive to life. He is filled with it moment-to-moment,whatsoever it is; he is spontaneous. But he’s detached because he does not cling to any particular part of life. He lets each moment go to make way for whatever is in the next moment. He is open, receptI've, flexible... but not in different in the least.He watches all, accepts all, but clings to nothing, identifies with nothing.
 
 He is **like an empty mirror**. Whatsoever stands in front of the mirror is reflected <u>faithfully</u>. The mirror does not ask whether you are beautiful or ugly, male or female, friendly or <u>hostile</u>, healthy or sick, rich or poor, young or old, powerful or helpless. The mirror doesn’t try to avoid you, it doesn’t ask you to stand in front of it. It has neither a version nor desire.
 
@@ -1291,11 +1302,11 @@ Just be natural, the Taoist master Chuang Tzu says.
 
 “When the shoe fits, the foot is forgotten.” He is saying that only when there is struggle or discomfort do we become aware of something. This is the situation of the mind — continually in a struggle, in a discomfort. Let’s see the point: How else can it maintain itself? It is the struggle, the discomfort. It has no existence other than that. If we’re just natural, if we’re ordinary, if we’re balanced, there is no place for the mind to stand. It must fall.
 
-To be natural means to be balanced, it means to be in the middle. This is Buddha’s middle way. Mind always wants to go to extremes, so it can keep moving. First we eat too much, then we <u>starve</u> ourself. Or we work very competitI'vely,and then we go to the other side and relax very competitI'vely. Or first we’re a playboy, then we get sick of that and want to become a <u>saint</u>. The mind tends to move to extremes, it often doesn’t know where or when to stop. This keeps the mind alI've, because by moving to extremes it keeps moving.
+To be natural means to be balanced, it means to be in the middle. This is Buddha’s middle way. Mind always wants to go to extremes, so it can keep moving. First we eat too much, then we <u>starve</u> ourself. Or we work very competitI'vely,and then we go to the other side and relax very competitI'vely. Or first we’re a playboy, then we get sick of that and want to become a <u>saint</u>. The mind tends to move to extremes, it often doesn’t know where or when to stop. This keeps the mind alIive, because by moving to extremes it keeps moving.
 
 The master is a contrast to that. She’s balanced, like a <u>tightrope</u> walker. She leans neither to the left nor the right;but stays balanced over the center, not going to extremes.
 
-She has a great sense of appropriateness. She’s just easy,ordinary. To be ordinary is a rare quality, for the mind is always trying to be extraordinary. It wants to distinguish itself,it wants to stand out from the crowd. Even humility can serve this purpose — the mind will try to be the most humble. This effort to be unique keeps the mind alI've, but it is absolutely absurd. The unI'verse is so vast. We’re like a <u>grain</u> of sand on the beach trying to stand out from the other grains. Pretty absurd.
+She has a great sense of appropriateness. She’s just easy,ordinary. To be ordinary is a rare quality, for the mind is always trying to be extraordinary. It wants to distinguish itself,it wants to stand out from the crowd. Even humility can serve this purpose — the mind will try to be the most humble. This effort to be unique keeps the mind alIive, but it is absolutely absurd. The unI'verse is so vast. We’re like a <u>grain</u> of sand on the beach trying to stand out from the other grains. Pretty absurd.
 
 The master knows better; she has seen through such nonsense. She’s natural, she’s easy, she’s light. “**Easy is right**,”says Chuang Tzu. Easy in the beginning, easy in the middle,easy in the end. **The master is effortless, non-serious, playful.** She knows there is nothing to do, so everything she does is“nothing special.”
 
@@ -1317,7 +1328,7 @@ The sword that actually cuts the root of the mind is this <u>unflinching</u> awa
 ## Chapter Thirty-six
 Watch. We’ll see that we create our version of reality by what our attention is focused on. “The floor.” We just created the floor by bringing our attention and energy to it.
 
-What is the difference between attention and awareness? Simply that attention is directed, focused, while awareness is non-directed, passI've. One way of putting it is that **awareness is noticing what we notice**. It’s noticing the labels,discriminations, responses, models, activities, evaluations and demands that constitute our version of reality.
+What is the difference between attention and awareness? Simply that attention is directed, focused, while awareness is non-directed, passive. One way of putting it is that **awareness is noticing what we notice**. It’s noticing the labels,discriminations, responses, models, activities, evaluations and demands that constitute our version of reality.
 
 And as awareness develops, it becomes obvious that we are entirely responsible for the reality that we lI've in, because it’s our version of it. God is not responsible. The world is not responsible. We are responsible. Our experience of reality is our own creation.
 
@@ -1409,9 +1420,9 @@ Silence then, as Ramana Maharshi once said, is the true instruction. There’s n
 
 The value of concentration meditations — focusing on an object such as a <u>mantra</u>, an image, a koan, the breath, and so on — is that they can still the waves of the mind and thus give a taste of Silence. However, the effect is only temporary.The mind is being suppressed, that’s all; it does not fall, it is not extinguished. Concentrations are an activity of the mind,they are the mind suppressing and drugging itself. They’re a form of getting high, and so we have to gradually come down when the concentration ends.
 
-Concentration is an active awareness and not the true,passI've awareness. Instead of being an effortless witness to the flow of leaves down the river, concentration is focusing on a particular leaf. It is attached rather than detached, of the mind rather than the Self. Concentration is thinking, it is the mind addressed in some particular direction. Yet it can be a useful device. It can give a <u>glimpse</u> through the door. And its power of focus can assist our awareness in going deeper.
+Concentration is an active awareness and not the true,passive awareness. Instead of being an effortless witness to the flow of leaves down the river, concentration is focusing on a particular leaf. It is attached rather than detached, of the mind rather than the Self. Concentration is thinking, it is the mind addressed in some particular direction. Yet it can be a useful device. It can give a <u>glimpse</u> through the door. And its power of focus can assist our awareness in going deeper.
 
-But true meditation is awareness — passI've, choiceless awareness, the witness. It is this which can still the waves for-ever, which can uncover Silence permanently. It is through awareness that a moment can happen from which there is no slipping back, no coming down.
+But true meditation is awareness — passive, choiceless awareness, the witness. It is this which can still the waves for-ever, which can uncover Silence permanently. It is through awareness that a moment can happen from which there is no slipping back, no coming down.
 
 For only through awareness can one see the illusory nature of the mind and its survival-oriented thinking. Only through awareness can we awaken and see that the mind is not actually there, that the tapes are simply what they are and not reality, that the mind as self-determiner does not exist,that the “I” does not exist, that all the <u>grasping</u> and seeking and judgments and a version concerning the problems of life are the problem itself.
 
@@ -1421,7 +1432,7 @@ Beyond this awakening, however, is a final awakening where we simply disappear. 
 
 Then we have attained to being a nobody, a nothing. Now rivers flow in us, stars are born in us, the wind blows through the trees in us. There is the bliss of Existence Itself, a bliss which transcends what is normally thought of as joy and happiness in human life.
 
-In this state of final awakening, everything that would have to be given up at physical death has already been given up before physical death. The body is still alI've, but now there is no <u>inhabitant</u> anymore. This awakening, therefore, is truly a dying. It is death. Not bodily death, but the death of “you”or “I,” the death of the mind, the illusory controller.
+In this state of final awakening, everything that would have to be given up at physical death has already been given up before physical death. The body is still alIive, but now there is no <u>inhabitant</u> anymore. This awakening, therefore, is truly a dying. It is death. Not bodily death, but the death of “you”or “I,” the death of the mind, the illusory controller.
 
 It’s the death of everything we’ve ever associated with“you” or “I.” Everything has been thrown, nothing is carried any longer. The <u>luggage</u> full of stories and tapes and desires has been put down forever. We leave behind all our <u>burdens</u>,including the ultimate burden — the separate “I.”
 
@@ -1477,7 +1488,7 @@ The Zen master Zenrin said:
 ## Chapter Forty
 **Sitting silently, doing nothing, waiting for nothing, just waiting — with no end in view, with no goals or desires or attachments, simply being silent and aware.. .this is how the final awakening comes.**
 
-In our ordinary life the mind pulls away from <u>boredom</u> because it needs excitement to stay alI've. It knows only two possibilities, movement or sleeping. If nothing is going on the mind is just bored, it wants to go to sleep. But sitting silently,doing nothing is a third possibility — consciousness without occupation.
+In our ordinary life the mind pulls away from <u>boredom</u> because it needs excitement to stay alIive. It knows only two possibilities, movement or sleeping. If nothing is going on the mind is just bored, it wants to go to sleep. But sitting silently,doing nothing is a third possibility — consciousness without occupation.
 
 It is the ultimate facing of boredom. It is going deeper and deeper into the boredom, into the emptiness, into the hollowness beneath all the onion-layers of the mind. It is penetrating deeper into <u>tedium</u>, into silence, into nothing, into lack of stimulation.
 
