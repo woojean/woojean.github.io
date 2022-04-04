@@ -879,13 +879,15 @@ The unfoldment of freedom is awareness. All doingness, all attempts to do someth
 
 Each new path is like a drug trip. It feels good at first,we get high on it. But after a while it becomes obsessive; we cling just to avoid coming down. “I'll be able to relax as soon as I achieve such-and-such.”
 
-Awareness is seeing that this version of reality — the one we’re running now — isn’t reality either but just another story,another dream. It’s seen and accepted for what it really is. And in that moment of clear-sighted seeing the dream loses its force; it is transcended. Suddenly it drops away from us, like a toy from a <u>maturing</u> child. We didn’t reject anything. Just inthe observation, things can fall away — or stay.
+Awareness is seeing that this version of reality — the one we’re running now — isn’t reality either but just another story,another dream. It’s seen and accepted for what it really is. And in that moment of clear-sighted seeing the dream loses its force; it is transcended. Suddenly it drops away from us, like a toy from a maturing child. We didn’t reject anything. Just in the observation, things can fall away — or stay.
 
-As the current clinging either falls away through awareness or is rejected because of <u>disillusionment</u>, it is replaced by a new path to happiness. The illusory nature of all paths, all searches, all paths, all doingness isn’t apparent right away.
+As the current clinging either falls away through awareness or is rejected because of disillusionment, it is replaced by a new path to happiness. The illusory nature of all paths, all searches, all doingness isn’t apparent right away.So we couldn’t find the door out of the room that way,now we look for it this way. We become aware, perhaps, of the illusory nature of that path, but now we get sucked into this one. So our life can be a series of substitutions, continuing to substitute new dreams for the old ones.
 
-So we couldn’t find the door out of the room that way,now we look for it this way. We become aware, perhaps, of the illusory nature of that path, but now we get sucked into this one. So our life can be a series of substitutions, continuing to <u>substitute</u> new dreams for the old ones.
+No path is ultimately “bad” or “good”; there is nothing intrinsically wrong or right about any path per se. **Setting up goals and paths is what mind does — that’s what is. To reject that process would be like rejecting a cloud — foolish.**
 
-No path is ultimately “bad” or “good”; there is nothing <u>intrinsically</u> wrong or right about any path per se. **Setting up goals and paths is what mind does — that’s what is. To reject that process would be like rejecting a cloud — foolish.**
+```
+per se  [ˌpɜːr ˈseɪ] 本身;本质上
+```
 
 We see the story/tape for what it is, then we’re nolonger fascinated by it. We include it, make room for it,choose it to be that way, love it for what it is. Then it becomes flimsy, it becomes less relevant, it stops running our life.
 
@@ -897,13 +899,17 @@ All devices, all the rapies can be useful. All are channels to Reality as our aw
 
 
 ## Chapter Twenty-two
-If we're fortunate, we sooner or later begin to see that all <u>materialist</u> paths — that is, all paths that involve trying to manipulate our environment — do not lead to happiness. Then our search takes on a spiritual form. This is very significant,and it opens up a danger too, because attachments to spiritual paths are more difficult to see as attachments.
+If we're fortunate, we sooner or later begin to see that all materialist paths — that is, all paths that involve trying to manipulate our environment — do not lead to happiness. Then our search takes on a spiritual form. This is very significant,and it opens up a danger too, because attachments to spiritual paths are more difficult to see as attachments.
 
-Now we’re searching for enlightenment or heaven or God or no-mind or whatever the name is. As Osho points out, this is the same movement. Again, we become attached to our path, to our method. The attachment now may be to a teacher or leader. It may be to forms and <u>rituals</u> and <u>dogma</u>,or to a particular growth or consciousness movement.
+Now we’re searching for enlightenment or heaven or God or no-mind or whatever the name is. As Osho points out, this is the same movement. Again, we become attached to our path, to our method. The attachment now may be to a teacher or leader. It may be to forms and rituals and dogma,or to a particular growth or consciousness movement.
 
-It may be to a particular organization of seekers. It maybe to a set of <u>consoling</u> beliefs, or to <u>sacred</u> <u>scriptures</u>. The attachment may be to beautiful or terrible images encountered during <u>meditation</u>, or it might be to psychic powers developed in such meditations. Inevitably there’s a certain <u>metaphysical</u> formulation involved, a certain way of looking at things, and we can become attached to that.
+It may be to a particular organization of seekers. It may be to a set of consoling beliefs, or to sacred scriptures. The attachment may be to beautiful or terrible images encountered during meditation, or it might be to psychic powers developed in such meditations. Inevitably there’s a certain metaphysical formulation involved, a certain way of looking at things, and we can become attached to that.
 
-The attachment may be to serving others or to saving the world. It may be to a certain way of acting — very loving,or very high, or very surrendered. It may be to the <u>rapture</u> found in certain absorption states. All such attachments are accompanied by an attitude of “I’ve found it” or “I know the right way.”
+```
+metaphysical [ˌmetəˈfɪzɪkl] 形而上学的
+```
+
+The attachment may be to serving others or to saving the world. It may be to a certain way of acting — very loving,or very high, or very surrendered. It may be to the rapture found in certain absorption states. All such attachments are accompanied by an attitude of “I’ve found it” or “I know the right way.”
 
 Thus we may become also attached to <u>proselytizing</u> — not seeing that attachment to converting others covers over a deep doubt within. Otherwise, what is the need? Otherwise,we simply share what we have like a flower sharing <u>fragrance</u>. There’s no concern about the outcome, there is no <u>compulsion</u> to convert others.
 
