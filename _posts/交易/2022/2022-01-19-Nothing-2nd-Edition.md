@@ -911,17 +911,21 @@ metaphysical [ˌmetəˈfɪzɪkl] 形而上学的
 
 The attachment may be to serving others or to saving the world. It may be to a certain way of acting — very loving,or very high, or very surrendered. It may be to the rapture found in certain absorption states. All such attachments are accompanied by an attitude of “I’ve found it” or “I know the right way.”
 
-Thus we may become also attached to <u>proselytizing</u> — not seeing that attachment to converting others covers over a deep doubt within. Otherwise, what is the need? Otherwise,we simply share what we have like a flower sharing <u>fragrance</u>. There’s no concern about the outcome, there is no <u>compulsion</u> to convert others.
+Thus we may become also attached to proselytizing — not seeing that attachment to converting others covers over a deep doubt within. Otherwise, what is the need? Otherwise,we simply share what we have like a flower sharing fragrance. There’s no concern about the outcome, there is no compulsion to convert others.
 
-Spiritual attachments are more difficult to drop than material ones <u>precisely</u> because they’re less <u>dense</u>, less solid,more transparent and thus more difficult to see. It can be more difficult to see them as a dream, as just more of the mind’s tapes, as just more of the mind’s clingings.
+```
+proselytizing [ˈprɑːsələtaɪzɪŋ] 传教
+```
 
-Very often our spiritual metaphysics is associated with very <u>reverential</u> thoughts, very sublime conceptions. They feel better than material attachments. We feel now that we’ve left illusion behind and are on the true road. How, we ask, can these sublime thoughts and feelings possibly be just more tapes and stories? Yet they are. It is still the mind engaged in the old game of surviving by trying to get somewhere, and clinging to something as a means.
+Spiritual attachments are more difficult to drop than material ones precisely because they’re less dense, less solid,more transparent and thus more difficult to see. It can be more difficult to see them as a dream, as just more of the mind’s tapes, as just more of the mind’s clingings.
+
+Very often our spiritual metaphysics is associated with very reverential thoughts, very sublime conceptions. They feel better than material attachments. We feel now that we’ve left illusion behind and are on the true road. How, we ask, can these sublime thoughts and feelings possibly be just more tapes and stories? Yet they are. It is still the mind engaged in the old game of surviving by trying to get somewhere, and clinging to something as a means.
 
 When awareness happens in this moment, then seeking drops for a moment, the tapes disappear for a moment. And what is left is nothing, silence. For in that moment of awareness there is no mind, since the mind is just tapes, thoughts. When there are no tapes there is no mind either.
 
 In that moment there’s only silence. In this silence we encounter the Existence. It is already there waiting, but we are not silent, we are not absent, so there’s no experience of It. **Actually, it’s not accurate to say that we experience/encounter Existence, since the Existence is always subject, never object, and since in that moment of awareness “you” or “I” are not there. Only the Existence is there. It encounters Itself.**
 
-The goal of all meditation, all prayer, all spiritual pathsis simply to reach this point of silence where the mind is not.Each method is beautiful in itself in that it quiets the mind, it gives us a taste, but then we become attached to the method and in this way the mind survives.
+The goal of all meditation, all prayer, all spiritual paths is simply to reach this point of silence where the mind is not.Each method is beautiful in itself in that it quiets the mind, it gives us a taste, but then we become attached to the method and in this way the mind survives.
 
 Also, all methods are a doingness and they presuppose that there is some goal we’re trying to reach. Methods can be extremely useful in freeing ourselves from other attachments,**but ultimately all methods must themselves be transcended**.Unless awareness happens along with the methods, we simply continue the same game of the mind at a more <u>subtle</u> level.Only awareness is not a method, not a trap because it’s not an activity of any kind, and does not involve trying to change anything.
 
