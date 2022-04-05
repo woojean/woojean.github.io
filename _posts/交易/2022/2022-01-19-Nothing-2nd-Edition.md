@@ -975,57 +975,61 @@ Seductive too are experiences of rapture in jhanic states,brought about by prolo
 ecstasy [ˈekstəsi] 摇头丸;狂喜;入迷;陶醉;迷幻药
 ```
 
-The state of each successI've jhana is less exciting, moresubtle and still than the one below. We reach each higher jhanic state by being willing to let go of the <u>grosser</u> rapture of the one below. We see that rapture itself is a <u>disturbance</u>, and we <u>relinquish</u> the more exciting forms of rapture in order to obtain the deeper and more subtle ones. And each higher one can become then the new attachment. But, we may ask, what is wrong with an attachment to rapture?
+The state of each successive jhana is less exciting, more subtle and still than the one below. We reach each higher jhanic state by being willing to let go of the grosser rapture of the one below. We see that rapture itself is a disturbance, and we relinquish the more exciting forms of rapture in order to obtain the deeper and more subtle ones. And each higher one can become then the new attachment. But, we may ask, what is wrong with an attachment to rapture?
 
-Nothing is wrong, yet it’s still a clinging to the limited;it’s still of the mind. The mind is still pursuing pleasure. We’ve tasted the <u>saltiness</u> of the ocean but we haven’t entered into it.The changes brought about are temporary, and when the meditation ends the changes slowly fade. Thus we can become attached to the meditation, to retaining the rapture resulting from it.
+Nothing is wrong, yet it’s still a clinging to the limited;it’s still of the mind. The mind is still pursuing pleasure. We’ve tasted the saltiness of the ocean but we haven’t entered into it.The changes brought about are temporary, and when the meditation ends the changes slowly fade. Thus we can become attached to the meditation, to retaining the rapture resulting from it.
 
-Concentration meditation, as it’s sometimes called, is a magnificent dream, the most beautiful of all dreams, but still a dream. It’s an exotic drug, the mind drugging itself; but it’s still a kind of drug and sooner or later we come down from it.It’s no different in essence from other drugs we seek — power,money, fame, sex, knowledge, altered realities, cosmic satoris,saving the world, belonging to a group and so on.
+Concentration meditation, as it’s sometimes called, is a magnificent dream, the most beautiful of all dreams, but still a dream. It’s an exotic drug, the mind drugging itself; **but it’s still a kind of drug and sooner or later we come down from it.It’s no different in essence from other drugs we seek — power,money, fame, sex, knowledge, altered realities, cosmic satoris,saving the world, belonging to a group and so on.**
 Concentration meditation is still a doingness, it is still the mind trying to get somewhere.
 
-Why do we meditate? In order to obtain peace, rapture,enlightenment or whatever label we give our goal. But it is still a goal-process. And who is doing the meditating, who is keeping the attention concentrated on the object? Observe closely and we see once more the fingerprints of the mind; we see the doingness of the controller.
+Why do we meditate? In order to obtain peace, rapture,enlightenment or whatever label we give our goal. **But it is still a goal-process**. And who is doing the meditating, who is keeping the attention concentrated on the object? Observe closely and we see once more the fingerprints of the mind; we see the doingness of the controller.
 
 Concentration meditations effects are only temporary because they don’t involve a deep seeing into the nature of the mind itself. The tapes and programs have been suppressed but they have not disappeared. They are still there, and they will surface again when we come down from this special drug.
 
-This is a difference between concentration meditationand awareness. Awareness does not suppress anything. On the contrary it welcomes everything, accepts it all, sees everything for what it is. And in that effortless seeing, that seeing which is non-doing and which is not of the mind, the tapes simply begin to dissolve. There is no attempt to change or improve anything. Awareness is identical with a deep acceptance. But neither is there a decision to accept either; rather, acceptance is simply there.
+This is a difference between concentration meditation and awareness. **Awareness does not suppress anything. On the contrary it welcomes everything, accepts it all, sees everything for what it is. And in that effortless seeing, that seeing which is non-doing and which is not of the mind, the tapes simply begin to dissolve. There is no attempt to change or improve anything. Awareness is identical with a deep acceptance. But neither is there a decision to accept either; rather, acceptance is simply there.**
 
 Another way of expressing this is to recall the difference between active and passive awareness. Concentration meditation is an active awareness; it is an intense watching of the door of the train in order to see one’s lover. It’s a doingness; it is pointed in a particular direction. True awareness is totally passive, it is merely watching the leaves go by on the river —choosing none, preferring none, clinging to nothing. It is a silence, a stillness that dissolves all things.
 
-Concentration meditation is not necessary, but can be avaluable device. It is useful in that it can create a situation where awareness can begin to happen. In slowing down the mind it slows down the flow of leaves in the river, so to speak,so that a beginning awareness can more readily perceI've the gaps between the leaves. But it’s not necessary. The essence of awareness is that we start just where we are, with whatever ourpresent circumstances are.
+Concentration meditation is not necessary, but can be a valuable device. It is useful in that it can create a situation where awareness can begin to happen. In slowing down the mind it slows down the flow of leaves in the river, so to speak,so that a beginning awareness can more readily perceive the gaps between the leaves. But it’s not necessary. The essence of awareness is that we start just where we are, with whatever our present circumstances are.
 
-We do not have to do concentration meditations, we donot have to go to the mountains, we do not have to change our present situation. We simply do whatever we’re doing, but now with awareness. We begin where we are. But if we don’t yet see the nature of the mind’s game then concentration meditation can be useful. It creates a situation where awareness can begin <u>spontaneously</u>, and be more <u>penetrating</u>.
+We do not have to do concentration meditations, **we do not have to go to the mountains, we do not have to change our present situation. We simply do whatever we’re doing, but now with awareness.** We begin where we are. But if we don’t yet see the nature of the mind’s game then concentration meditation can be useful. It creates a situation where awareness can begin spontaneously, and be more penetrating.
+
+```
+spontaneously  [spɔnˈtenɪəslɪ] 自发;自然;自动;自然地
+```
 
 
 
 
 ## Chapter Twenty-four
-The same is true of a master. She is not necessary, for the true master is inside us. But the inside master is, in a sense, still asleep, so the outside master is needed. She simply creates situation after situation until we begin to wake up and become aware, until we begin to see the true nature of our situation. She surrounds us with a fragrance to arouse us out of our <u>slumbers</u> and dreams.
+The same is true of a master. She is not necessary, for **the true master is inside us**. But the inside master is, in a sense, still asleep, so the outside master is needed. She simply creates situation after situation until we begin to wake up and become aware, until we begin to see the true nature of our situation. She surrounds us with a fragrance to arouse us out of our slumbers and dreams.
 
-Once we begin to become aware, then she assists us to avoid the various traps and attachments that can arise. And a true master eventually assists us to see into the nature of perhaps the greatest attachment of all — the attachment to the master. Ultimately, even the master must be transcended.
+Once we begin to become aware, then she assists us to avoid the various traps and attachments that can arise. And a true master eventually assists us to see into the nature of perhaps the greatest attachment of all — the attachment to the master. **Ultimately, even the master must be transcended.**
 
-A master is not necessary, but desirable. For while we’re asleep were always dreaming that we’re awake. To dream that we’re awake is the best way to stay asleep. The mind’s best defense is to imagine that it’s already gone, that we’re already awake or enlightened. Without the disturbing fragrance of amaster, our slumbers may continue for quite a while.
+A master is not necessary, but desirable. For while we’re asleep we're always dreaming that we’re awake. To dream that we’re awake is the best way to stay asleep. The mind’s best defense is to imagine that it’s already gone, that we’re already awake or enlightened. Without the disturbing fragrance of a master, our slumbers may continue for quite a while.
 
 An interesting attachment is the feeling that we have to save the world. The world doesn’t need saving because it’s already perfect.
 
 As Byron Katie says, How do we know that the way the world is is for the highest good? Because it is that way. How do we know the world should be the way it is? Because it is that way. Simple. “Saving the world” can sometimes lead to force, violence, fanaticism. Immense suffering throughout history has been caused by those of us who were intent on saving the world by converting it to some cause or other.
 
-Let’s observe. We see the mind at work, for this is just another form of doingness, of striving. The feeling that the world needs to be saved somehow is a deep non-acceptance of Existence as it is. It is the mind creating <u>imperfection</u> and wrongness out there and demanding that it be changed out there.
+Let’s observe. We see the mind at work, for this is just another form of doingness, of striving. The feeling that the world needs to be saved somehow is a deep non-acceptance of Existence as it is. It is the mind creating imperfection and wrongness out there and demanding that it be changed out there.
 
-This is the same disease of living in the future. Now the whole world must struggle toward some <u>glorious</u> imagined <u>utopia</u>. What is herenow is never enough to the mind. It can never see that nothing needs to be achieved.
+This is the same **disease of living in the future**. Now the whole world must struggle toward some glorious imagined utopia. What is herenow is never enough to the mind. It can never see that nothing needs to be achieved.
 
 But if nothing needs to be achieved, why then does a master bother to teach others? Because the master has no achievement in mind; they’re simply sharing who they are.
 
-A true master is like a flower that has bloomed in the desert. The flower gives off its fragrance not out of some com-<u>pulsion</u> but because that is its nature, that is what it does. The fragrance will be there whether anyone notices it or not. And there is no choice about it. If someone passes by, the flowerdoes not determine whether it likes the person or not before it shares its fragrance; nor does it ask itself whether it is liked.No, the fragrance is simply there.
+A true master is like a flower that has bloomed in the desert. The flower gives off its fragrance not out of some compulsion but because that is its nature, that is what it does. The fragrance will be there whether anyone notices it or not. And there is no choice about it. If someone passes by, the flower does not determine whether it likes the person or not before it shares its fragrance; nor does it ask itself whether it is liked. No, the fragrance is simply there.
 
-And the fragrance is not given off to help you or save you. It is simply there out of the flower’s <u>abundance</u>, out of its bliss and <u>exuberance</u>. The master is the same.
+And the fragrance is not given off to help you or save you. It is simply there out of the flower’s abundance, out of its bliss and exuberance. The master is the same.
 
-What’s the master doing? Actually, he is not teaching at all, for there’s no <u>doctrine</u> or body of knowledge to convey.That is why a master never really gives an answer, but simply destroys the question. Because he is not out to teach us some knowledge. Instead, he is out to destroy our mind.
+What’s the master doing? Actually, he is not teaching at all, for there’s no doctrine or body of knowledge to convey.That is why a master never really gives an answer, but simply destroys the question. Because he is not out to teach us some knowledge. Instead, he is out to destroy our mind.
 
-The effort of the master is to pull all supports out from underneath us until the mind has no place left to stand. All answers just fill our mind again, so how can a master give us answers? And since he’s not giving answers he’s in exhaustible,he can go on forever. A body of knowledge is limited, but a master is unlimited. He knows nothing; he has attained to perfect ignorance, so he can keep on talking for all eternity and never exhaust the subject.
-
-
+The effort of the master is to pull all supports out from underneath us until the mind has no place left to stand. All answers just fill our mind again, so how can a master give us answers? And since he’s not giving answers he’s inexhaustible,he can go on forever. A body of knowledge is limited, but a master is unlimited. He knows nothing; he has attained to perfect ignorance, so he can keep on talking for all eternity and never exhaust the subject.
 
 
-## Chapter Twenty-fI've
+
+
+## Chapter Twenty-five
 It’s said that a master is awakened, but what does that mean? What does it mean to be a master? What is this thing awakening? Is it some kind of insight? Is it formulating the final system, achieving the ultimate solution? Is it reaching the final goal?
 
 None of those things. Freedom is seeing that there is no goal at all. It’s the dropping of all goals, of all seeking. It’s the dropping of all attempts to improve, get better or change. But this dropping is not a doingness or decision. Rather, **it is a deep seeing that all attempts to get somewhere in anyway only lead nowhere, that they only lead further into the mind**.
