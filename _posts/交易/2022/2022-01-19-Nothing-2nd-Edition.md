@@ -1034,15 +1034,19 @@ It’s said that a master is awakened, but what does that mean? What does it mea
 
 None of those things. Freedom is seeing that there is no goal at all. It’s the dropping of all goals, of all seeking. It’s the dropping of all attempts to improve, get better or change. But this dropping is not a doingness or decision. Rather, **it is a deep seeing that all attempts to get somewhere in anyway only lead nowhere, that they only lead further into the mind**.
 
-It is seeing that all attempts to solve the problem, to improve, to survive, only perpetuate the problem and deepen it. It is seeing that all such attempts to solve the problem are the problem itself, and that **the problem is an illusion, that it doesn’t exist except as attempts to solve it**. All striving of anykind, therefore, simply falls away.
+It is seeing that all attempts to solve the problem, to improve, to survive, only perpetuate the problem and deepen it. It is seeing that all such attempts to solve the problem are the problem itself, and that **the problem is an illusion, that it doesn’t exist except as attempts to solve it**. All striving of any kind, therefore, simply falls away.
 
 It is a moment when all doingness simply drops. Not that we drop it. We simply see the true reality of things and in that moment the doingness drops away of itself. This doesn’t mean that we necessarily become inactive.
 
-Instead, it means that we do whatever we do — without strivingness, without compulsI'veness or concern. We've been chasing our tail in a thousand different ways, whirling around faster and faster. We're <u>dizzy</u> from the chase, insane. Suddenly we see that the tail cannot ever be caught, that in fact the chasing is the problem and that there is no problem outside of the chasing.
+Instead, it means that **we do whatever we do — without strivingness, without compulsiveness or concern.** We've been chasing our tail in a thousand different ways, whirling around faster and faster. We're dizzy from the chase, insane. Suddenly we see that the tail cannot ever be caught, that **in fact the chasing is the problem** and that there is no problem outside of the chasing.
 
-In that moment we simply stop. All the doingnessstops. We simply sit down, take a rest and let the <u>dizziness</u> clear. In fact the dizziness and insanity were part-and-parcel of the chasing itself. Now they simply drop when the chasing drops. **We see that we're flowing down the river and have been flowing down the river forever and will be flowing down the river forever.**
+In that moment we simply stop. All the doingness stops. We simply sit down, take a rest and let the dizziness clear. In fact the dizziness and insanity were *part-and-parcel* of the chasing itself. Now they simply drop when the chasing drops. **We see that we're flowing down the river and have been flowing down the river forever and will be flowing down the river forever.**
 
-Mind wants to be different, unique, special; it wants to get somewhere, to go in its own direction. So it starts trying not to flow down the river, it starts trying to go upstream. And then the whole river, the whole Existence seems to be against us. We are trying so hard, struggling so <u>valiantly</u> against the river, but the river just keeps pushing us in the direction of the flow. The river seems so implacable, relentless, indifferent to our <u>plight</u> and our struggle. The river seems to be <u>hostile</u>,actively working against our will and our desires.
+```
+part and parcel 必要部分；重要的部分
+```
+
+**Mind wants to be different, unique, special; it wants to get somewhere, to go in its own direction. So it starts trying not to flow down the river, it starts trying to go upstream. And then the whole river, the whole Existence seems to be against us. We are trying so hard, struggling so valiantly against the river, but the river just keeps pushing us in the direction of the flow. The river seems so implacable, relentless, indifferent to our plight and our struggle. The river seems to be hostile,actively working against our will and our desires.**
 
 Awakening is seeing that we are creating the problem.Its seeing that **the river is not against us, its simply flowing the way its flowing**. And the issue is not whether or not we're going to flow with the river, because we're going to do that in any event. **It is vast, and “you” and “I” are atoms.**`无我`
 
@@ -1058,7 +1062,7 @@ The mind as controller, as chooser, as decider, as the “I” just disappears. 
 
 If an awakened person crosses a street the computer-brain will figure out the right time to cross. But the mind, the“separate” person is vanished. That which struggled to control,that which thought of itself as the “I” is gone because it was only the struggle itself. Now the Existence, the Self crosses the street. The guests — thoughts, tapes, the mind — took over the house while the host was away, but now the host has returned.
 
-The master does not need to effort. After all, the river flows by itself. **Indeed, at the deepest level we are the river. **We’ve already arrI'ved. What are we struggling about?
+The master does not need to effort. After all, the river flows by itself. **Indeed, at the deepest level we are the river. **We’ve already arrived. What are we struggling about?
 
 
 
