@@ -957,15 +957,24 @@ Meditation, on the other hand, gradually quiets the mind. It is more powerful th
 
 If, then, the mind is held to a single object, other things are excluded. So meditation can be one-pointedness, keeping the mind focused and concentrated on one object. When attention wanders from the object we just gently bring the attention back to it. And we do so without condemning our wandering, for to do so would be to wander again. **Meditation does not involve thinking or feeling about the object in anyway. We just focus on the object without adding anything.**
 
-The object of meditation can be almost anything. It canbe a <u>mantra</u> or a <u>mandala</u>, an internal image or sound, or an unanswerable question or <u>paradoxical</u> statement (a <u>koan</u>). It can be a picture of an avatar or a particular movement or pose by the body (<u>tai-chi</u>, sufi dancing, yoga). The object can be pain or the breath or a pair of eyes (tratak); it can be a candle flame, the sky, a rock or a flower. The object itself is not all that important. What makes the difference is holding one’s attention to it.
+The object of meditation can be almost anything. It canbe a mantra or a mandala, an internal image or sound, or an unanswerable question or paradoxical statement (a koan). It can be a picture of an avatar or a particular movement or pose by the body (tai-chi, sufi dancing, yoga). The object can be pain or the breath or a pair of eyes (tratak); it can be a candle flame, the sky, a rock or a flower. The object itself is not all that important. What makes the difference is holding one’s attention to it.
 
-A well-developed meditation prevents our tapes from surfacing and thus quiets down the mind. It can give a taste of Reality by keeping tapes and programs out of consciousness.That taste can be a real eye-opener and can <u>spur</u> our efforts on the spiritual path. And meditation can bring about states of intense <u>rapture</u>, referred to as absorption levels or <u>jhanic</u> states.It can bring about lovely, <u>exquisite</u> images. It can bring about psychic powers of various kinds.
+A well-developed meditation prevents our tapes from surfacing and thus quiets down the mind. It can give a taste of Reality by keeping tapes and programs out of consciousness.That taste can be a real eye-opener and can **spur our efforts on the spiritual path**. And meditation can bring about states of intense rapture, referred to as absorption levels or *jhanic* states.It can bring about lovely, exquisite images. It can bring about psychic powers of various kinds.
+
+```
+psychic [ˈsaɪkɪk] 通灵的;心灵的;关于通灵的;超自然的;有特异功能的;灵魂的
+```
 
 There are many possibilities for attachment here. We can see white lights, blue lights, hear heavenly sounds and see forms of incomparable beauty. We can meet the Buddha or Christ and have a conversation. That is why Zen people call this “going to the movies.” If we become attached to these images and sounds, then we’re simply on a sensuous mind-trip once more, for all images and sounds are mind.
 
-Still more addictI've are the psychic powers one might develop. If we meditate very intensely for a long time, especially in certain ways, then psychic powers can occur. We can develop the ability to leave our body, to foretell the future, to read minds. It is a rare person who will not become attached to such powers and others once developed. Yet ultimately it’s just another power trip on a more subtle level. It’s still the mind working and in motion.
+Still more addictive are the psychic powers one might develop. If we meditate very intensely for a long time, especially in certain ways, then psychic powers can occur. We can develop the ability to leave our body, to foretell the future, to read minds. It is a rare person who will not become attached to such powers and others once developed. Yet ultimately it’s just another power trip on a more subtle level. It’s still the mind working and in motion.
 
-<u>SeductI've</u> too are experiences of rapture in jhanic states,brought about by <u>prolonged</u> and intense meditations. They are states of vast <u>ecstasy</u>, quite overshadowing what normally passes for pleasure in our life.
+Seductive too are experiences of rapture in jhanic states,brought about by prolonged and intense meditations. They are states of vast ecstasy, quite overshadowing what normally passes for pleasure in our life.
+
+```
+ecstasy [ˈekstəsi] 摇头丸;狂喜;入迷;陶醉;迷幻药
+```
+
 The state of each successI've jhana is less exciting, moresubtle and still than the one below. We reach each higher jhanic state by being willing to let go of the <u>grosser</u> rapture of the one below. We see that rapture itself is a <u>disturbance</u>, and we <u>relinquish</u> the more exciting forms of rapture in order to obtain the deeper and more subtle ones. And each higher one can become then the new attachment. But, we may ask, what is wrong with an attachment to rapture?
 
 Nothing is wrong, yet it’s still a clinging to the limited;it’s still of the mind. The mind is still pursuing pleasure. We’ve tasted the <u>saltiness</u> of the ocean but we haven’t entered into it.The changes brought about are temporary, and when the meditation ends the changes slowly fade. Thus we can become attached to the meditation, to retaining the rapture resulting from it.
