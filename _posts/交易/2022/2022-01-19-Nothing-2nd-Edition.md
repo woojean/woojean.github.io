@@ -1068,29 +1068,37 @@ The master does not need to effort. After all, the river flows by itself. **Inde
 
 
 ## Chapter Twenty-six
-Freedom is a deep seeing that this is it. This is the way it is. This is the way it turned out. Is is is... **Things are the way they are**. And things are not the way they are not. Right now,nothing can be any different than the way it is. **In the next moment it may be different, but right now it can’t be any different**. And all there ever is is right now. **The future never arrI'ves, because it’s always just right now.**
+Freedom is a deep seeing that this is it. This is the way it is. This is the way it turned out. Is is is... **Things are the way they are**. And things are not the way they are not. Right now,nothing can be any different than the way it is. **In the next moment it may be different, but right now it can’t be any different**. And all there ever is is right now. **The future never arrives, because it’s always just right now.**
 
-This is it, this is the way the river is flowing. To accept it is to enjoy it. But the acceptance is not a decision, it’s rather a deep awareness that this is the way it is. Love and acceptanceare carried within awareness as a seed.
+This is it, this is the way the river is flowing. To accept it is to enjoy it. But the acceptance is not a decision, it’s rather a deep awareness that this is the way it is. Love and acceptance are carried within awareness as a seed.
 
-**Awakening is seeing that things are never going to be any different than the way they are... until they are.** It is seeing that the river is going to flow this way forever... unless it flows some other way. The clouds will go north until they don't.The sun will rise unless it doesn’t. All attempts to change or find the answer simply fall away as we become aware of this. At the deepest level, all there ever is to do is to notice the way it is right now, to be fully conscious of it. Then we’re in deep harmony with the way things are. We’re in deep harmony with Existence.
+**Awakening is seeing that things are never going to be any different than the way they are... until they are.** It is seeing that the river is going to flow this way forever... unless it flows some other way. The clouds will go north until they don't.The sun will rise unless it doesn’t. All attempts to change or find the answer simply fall away as we become aware of this. At the deepest level, all there ever is to do is to notice the way it is right now, to be fully conscious of it. Then we’re **in deep harmony with the way things are**. We’re in deep harmony with Existence.
 
-To use a different <u>terminology</u>, all there ever is to do is to get off our positions. We get on a position, get off it, on another position, off it, on it, off it — forever. It’s not as if we get off all our positions once and for all. That would be like trying to eat breakfast once and for all.
+To use a different terminology, all there ever is to do is to get off our positions. We get on a position, get off it, on another position, off it, on it, off it — forever. It’s not as if we get off all our positions *once and for all*. That would be like trying to eat breakfast once and for all.
+
+```
+once and for all 彻底地 ; 一劳永逸地
+```
 
 No, the tapes will always be running... until they don't. And what there is to do when they come up is to notice them,be aware of them as what they are. Then they flatten, they disappear. **We don’t do anything with them. We don’t ignore them, reject them or try to change them. We simply notice them... like leaves on the river.**
 
-The ground from which we perceI've things transforms. Before, the ground was unawareness and sometimes we were aware. After, the ground is awareness and sometimes we’re unaware. But the circumstances of our life look the same — the same tapes still run, and sometimes we’re aware of them and sometimes not.. .just as before. Everything is the same.
+The ground from which we perceive things transforms. Before, the ground was unawareness and sometimes we were aware. After, the ground is awareness and sometimes we’re unaware. But the circumstances of our life look the same — the same tapes still run, and sometimes we’re aware of them and sometimes not.. .just as before. Everything is the same.
 
 Everything is the same, but it is being perceived in a new way. If life is a bowl of cherries, then the cherries — the circumstances of our life — have not changed, but the bowl itself has changed.
 
 And what is that difference? Before, the bowl — the context in which everything is held — was that certain things needed to be achieved or changed. After, the ground is that this is the way it is, and that all there ever is to do is to beaware of the way it is. Since that is not a doingness, it’s doing nothing. But again, doing nothing doesn’t necessarily look like inactivity; it looks like just doing what we do.
 
-Just doing what we do, following our inner guidance,without performing our actions as means to an end. Then each action can become a blissful end-in-itself.
+**Just doing what we do, following our inner guidance,without performing our actions as means to an end. Then each action can become a blissful end-in-itself.**
 
-It is as if we’ve been trying all our life to liberate ourself from a room in which we’re trapped. And we’ve been pushing <u>ceaselessly</u> against the door, trying to get out, and it hasn’t budged. Our efforts in pushing against the door — the movements of the mind — never flag even for a moment, but it’s all to no avail. The door just won’t open. Awakening is seeing that the door opens inwards, and that pushing against the door is what has been preventing it from opening.
+```
+致吾心之良知
+```
+
+It is as if we’ve been trying all our life to liberate ourself from a room in which we’re trapped. And we’ve been pushing ceaselessly against the door, trying to get out, and it hasn’t budged. Our efforts in pushing against the door — the movements of the mind — never flag even for a moment, but it’s all to no avail. The door just won’t open. Awakening is seeing that the door opens inwards, and that pushing against the door is what has been preventing it from opening.
 
 Or to put it another way, awakening is seeing that the door won’t open because it’s the wrong door — so why push against it? But it’s worse than that. Awakening is seeing that it’s impossible to ever find the right door, and then, seeing that there are no doors at all, just solid walls. And then seeing that not only are there no doors, there are no walls either; infact, there is no room!
 
-It’s seeing that we’re already out of the room, because no room is there. The room was an illusion created by the mind so that it would have something to do — to try to getout. But how can we get out of a room when we’re already out? This is mind, struggling to get to a place where it already is, striving to achieve a result that’s already achieved.
+It’s seeing that we’re already out of the room, because no room is there. The room was an illusion created by the mind so that it would have something to do — to try to get out. But how can we get out of a room when we’re already out? This is mind, struggling to get to a place where it already is, striving to achieve a result that’s already achieved.
 
 
 
