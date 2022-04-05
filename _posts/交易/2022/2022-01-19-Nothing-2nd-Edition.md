@@ -925,31 +925,37 @@ When awareness happens in this moment, then seeking drops for a moment, the tape
 
 In that moment there’s only silence. In this silence we encounter the Existence. It is already there waiting, but we are not silent, we are not absent, so there’s no experience of It. **Actually, it’s not accurate to say that we experience/encounter Existence, since the Existence is always subject, never object, and since in that moment of awareness “you” or “I” are not there. Only the Existence is there. It encounters Itself.**
 
-The goal of all meditation, all prayer, all spiritual paths is simply to reach this point of silence where the mind is not.Each method is beautiful in itself in that it quiets the mind, it gives us a taste, but then we become attached to the method and in this way the mind survives.
+The goal of all meditation, all prayer, all spiritual paths is simply to reach this point of silence where the mind is not.Each method is beautiful in itself in that it **quiets the mind**, it gives us a taste, but then we become attached to the method and in this way the mind survives.
 
-Also, all methods are a doingness and they presuppose that there is some goal we’re trying to reach. Methods can be extremely useful in freeing ourselves from other attachments,**but ultimately all methods must themselves be transcended**.Unless awareness happens along with the methods, we simply continue the same game of the mind at a more <u>subtle</u> level.Only awareness is not a method, not a trap because it’s not an activity of any kind, and does not involve trying to change anything.
+Also, all methods are a doingness and they presuppose that there is some goal we’re trying to reach. Methods can be extremely useful in freeing ourselves from other attachments,**but ultimately all methods must themselves be transcended**.Unless awareness happens along with the methods, we simply continue the same game of the mind at a more subtle level.Only awareness is not a method, not a trap because it’s not an activity of any kind, and does not involve trying to change anything.
 
-For instance, surrendering to a lover or an avatar is very beautiful. To surrender is to love, it means making the other more important than oneself. It suppresses many programs and stories because to the extent that one surrenders one has no goals other than to be surrendered, to be in love. It gives us a taste of Existence, of bliss because the controller becomes mostly and temporarily absent.
+For instance, surrendering to a lover or an avatar is very beautiful. To surrender is to love, it means making the other more important than oneself. It suppresses many programs and stories because *to the extent* that one surrenders one has no goals other than to be surrendered, to be in love. It gives us a taste of Existence, of bliss because the controller becomes mostly and temporarily absent.
 
-But who is it that makes the decision to be surrendered?The mind, for all decisions are of the mind. Behind the act of surrender is the mind, alIive and well. And too, we can become attached to the object of our surrender, and this also is of the mind.
+But who is it that makes the decision to be surrendered? The mind, for all decisions are of the mind. Behind the act of surrender is the mind, active and well. And too, we can become attached to the object of our surrender, and this also is of the mind.
 
 The act of surrendering is a drug, a program, another dream — a subtle and beautiful one. Nevertheless its effects are not permanent because they have not involved a deep awareness of the nature of the mind itself. The tapes are suppressed but not extinguished, and will return when one falls out of love, when one is no longer surrendered.
 
 Prayer is beautiful, because it too is a form of surrender.It acknowledges that there is something greater than who we think we are, and thus the act of prayer by its very nature is an act of humility, of surrender.
+
 Yet, what is the mind’s ultimate defense of itself? It is to set up something which is other-than-itself. The notion of a God that can be prayed to presupposes that She is separate from us in some way. It also presupposes the existence of that which is praying. In the very humility and surrender of the act of prayer can be a subtle strengthening of the mind. Can we hear ourself praying? If so, God has heard it.
 
-Guided <u>imagery</u> is another method, a kind of mentalmotion picture, a visual story in the mind. It is very beautiful and powerful as a device for <u>therapy</u>, for goal-achieving, for relaxation. It can be a <u>preliminary</u> act to meditation. Guided“meditation” is often confused with meditation itself, but it’s not. It’s actually a kind of guided day dreaming.
+Guided imagery is another method, a kind of mental motion picture, a visual story in the mind. It is very beautiful and powerful as a device for therapy, for goal-achieving, for relaxation. It can be a preliminary act to meditation. Guided“meditation” is often confused with meditation itself, but it’s not. It’s actually a kind of guided day dreaming.
 
-Both prayer and guided imagery are still mind-motions,one with ideas and the other with images. Prayer is noisy still,it’s a mental talking. Guided imagery is the visual form of this,a visual occupation, something it shares with <u>hallucinogenic</u> drugs. Except for Teresa of Avila’s “prayer of quiet,” both can keep the mind involved in its doingness. This can also be so of <u>affirmations</u> — another kind of mind-occupation.
-All things have their uses at the appropriate time. All is exactly as it should be. And it’s also so, as the saying goes, that“when we give it all up we get it all back.”
+Both prayer and guided imagery are still mind-motions,one with ideas and the other with images. Prayer is noisy still,it’s a mental talking. Guided imagery is the visual form of this,a visual occupation, something it shares with hallucinogenic drugs. Except for Teresa of Avila’s “prayer of quiet,” both can keep the mind involved in its doingness. This can also be so of affirmations — another kind of mind-occupation.
+
+```
+hallucinogenic [həˌluːsɪnəˈdʒenɪk] 致幻剂
+```
+
+All things have their uses at the appropriate time. All is exactly as it should be. And it’s also so, as the saying goes, that“**when we give it all up we get it all back.**”
 
 
 
 
 ## Chapter Twenty-three
-Meditation, on the other hand, gradually quiets the mind. It is more powerful than prayer or guided imagery or affirmations since it marks a turning point — the first step from talking to listening, from visualizing to watching.To do this, meditation makes use of a particular quality of the mind, which is that the mind can only focus on onething at a time. It can and does move very rapidly from onething to another, but at a given instant it can only be occupied with one thing.
+Meditation, on the other hand, gradually quiets the mind. It is more powerful than prayer or guided imagery or affirmations since it marks a turning point — the first step from talking to listening, from visualizing to watching.To do this, meditation makes use of a particular quality of the mind, which is that the mind can only focus on one thing at a time. It can and does move very rapidly from one thing to another, but at a given instant it can only be occupied with one thing.
 
-If, then, the mind is held to a single object, other things are excluded. So meditation can be one-pointedness, keeping the mind focused and concentrated on one object. When attention wanders from the object we just gently bring the attention back to it. And we do so without condemning ourwandering, for to do so would be to wander again. Meditationdoes not involve thinking or feeling about the object in anyway. We just focus on the object without adding anything.
+If, then, the mind is held to a single object, other things are excluded. So meditation can be one-pointedness, keeping the mind focused and concentrated on one object. When attention wanders from the object we just gently bring the attention back to it. And we do so without condemning our wandering, for to do so would be to wander again. **Meditation does not involve thinking or feeling about the object in anyway. We just focus on the object without adding anything.**
 
 The object of meditation can be almost anything. It canbe a <u>mantra</u> or a <u>mandala</u>, an internal image or sound, or an unanswerable question or <u>paradoxical</u> statement (a <u>koan</u>). It can be a picture of an avatar or a particular movement or pose by the body (<u>tai-chi</u>, sufi dancing, yoga). The object can be pain or the breath or a pair of eyes (tratak); it can be a candle flame, the sky, a rock or a flower. The object itself is not all that important. What makes the difference is holding one’s attention to it.
 
