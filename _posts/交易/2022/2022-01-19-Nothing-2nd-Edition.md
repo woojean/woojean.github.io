@@ -1104,7 +1104,7 @@ It’s seeing that we’re already out of the room, because no room is there. Th
 
 
 ## Chapter Twenty-seven
-It’s been said that awakening is finding out that there’s no such thing as awakening. The mind sets up awakening or <u>cosmic</u> consciousness or whatever as another goal, the greatest goal. In Osho’s great <u>metaphor</u>, mind thinks that freedom is the top <u>rung</u> of a <u>ladder</u> somewhere. Mind is a compulsI've ladder-climber; it carries its ladder around with it and when it finds a good <u>spot</u> it sets it down and starts climbing again. Of course, others need to be <u>elbowed</u> out of the way. And there’s no end to the <u>rungs</u> — mind can always create more.
+It’s been said that awakening is finding out that there’s no such thing as awakening. The mind sets up awakening or cosmic consciousness or whatever as another goal, the greatest goal. In Osho’s great metaphor, mind thinks that freedom is the top rung of a ladder somewhere. Mind is a compulsive ladder-climber; it carries its ladder around with it and when it finds a good spot it sets it down and starts climbing again. Of course, others need to be elbowed out of the way. And there’s no end to the rungs — mind can always create more.
 
 But awakening is not at the top of some ladder, some hierarchy. It’s getting down off all the ladders forever. More accurately, it’s seeing that the ladders are a creation of the mind, that there are no ladders. So there’s no need to get to the top of them, and no need to get off them either.
 
