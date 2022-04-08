@@ -1149,59 +1149,80 @@ As Jesus said: “Thy will be done.”
 # Silence
 
 ## Chapter Twenty-nine
-Clouds float across the sky. They’re not trying to go anywhere. They’re not trying to accomplish anything. They are not choosing where to go. They are just drifting, letting the Existence carry them along. There is no decision-making,no trying, no struggle. There is a let-go, but not even a let-go,for there is no controller to let go. There’s simply peace. There is what is.
+Clouds float across the sky. They’re not trying to go anywhere. They’re not trying to accomplish anything. They are not choosing where to go. They are just drifting, letting the Existence carry them along. There is no decision-making,no trying, no struggle. There is a let-go, but **not even a let-go,for there is no controller to let go**. There’s simply peace. There is what is.
 
-All of Existence is like this. There is no purpose to it,no meaning, no goal. As Osho said, meaning and purpose are constructions of the mind which it imposes on Existence. The mind thinks that Existence has to get somewhere, that there has to be some purpose to it all, that someday some far-<u>flung</u> <u>omega</u>-point will be reached and that was the purpose. But then what is the purpose of the omega-point? Purpose is always an infinite regression, it always depends on something else. What is right now is never enough.
+All of Existence is like this. There is no purpose to it,no meaning, no goal. As Osho said, meaning and purpose are constructions of the mind which it imposes on Existence. The mind thinks that Existence has to get somewhere, that there has to be some purpose to it all, that someday some far-*flung omega*-point will be reached and that was the purpose. But then what is the purpose of the omega-point? Purpose is always an infinite regression, it always depends on something else. What is right now is never enough.
 
 The purpose of Existence is just to be here right now,being what It is. It is totally sufficient in Itself at each instant.It has no purpose except Itself. It has no reason except Itself.The rose is not trying to be something else; it is in bliss to be what it is this moment.
 
-Clouds, rivers, trees, life itself — all of Existence is in adeep <u>ecstasy</u>. All except us humans. We humans are in secret misery because our mind can't accept this moment; we must try to be somewhere else. We must try to control. We must make decisions. The mind is always serious — there are things to be done. Even when we let go, even when we laugh its only on the surface. Deep down the mind is still serious.
+Clouds, rivers, trees, life itself — all of Existence is in a deep ecstasy. All except us humans. We humans are in secret misery because our mind can't accept this moment; we must try to be somewhere else. We must try to control. We must make decisions. The mind is always serious — there are things to be done. Even when we let go, even when we laugh its only on the surface. Deep down the mind is still serious.
 
-Existence, on the other hand, is playing. It is having fun with no goal. Yes, there is death. There is pain. But death is an <u>integral</u> part of life, its absolutely necessary to life. Life and death are not opposed to each other, they are two faces of the same thing. Death clears out the <u>rigidity</u>, the <u>calcification</u>, the stuckness, the willfulness, the dead <u>unbending</u> ness and thus makes life possible.
+Existence, on the other hand, is playing. It is having fun with no goal. Yes, there is death. There is pain. But death is an integral part of life, its absolutely necessary to life. **Life and death are not opposed to each other, they are two faces of the same thing**. Death clears out the rigidity, the calcification, the stuckness, the willfulness, the dead unbending ness and thus makes life possible.
 
-Life is flexibility, its <u>suppleness</u>, its the ability to adjust to change, to <u>bend</u> with the wind. A tree begins as a flexible <u>sapling</u> and ends as dried-out <u>stiffness</u>. Without death there would be no life, for there could be no change, no room for life. All would come to a standstill. Death/life are inseparable;they’re the same phenomenon.
+```
+unbending ness 不屈不挠
+```
 
-Similarly, pleasure is impossible without pain. They’re inseparable; they’re also one phenomenon. The mind creates them, separates them, then tries to cling to the one and avoidthe other. Mind can’t accept the totality; that’s why it misses.When we’re feeling pleasure, pain is taking a rest. It’s gather-ing energy, it will soon come to the fore. When we’re feeling pain, pleasure is taking a rest and gathering energy; soon it will come.
+Life is flexibility, its suppleness, its the ability to adjust to change, to bend with the wind. A tree begins as a flexible sapling and ends as dried-out stiffness. **Without death there would be no life, for there could be no change, no room for life.** All would come to a standstill. Death/life are inseparable;they’re the same phenomenon.
 
-When the <u>pendulum</u> swings to one side it must then swing to the other, but it remains the same pendulum. Beauty is impossible without ugliness. Good is impossible without evil. Happiness and sadness depend on each other. Love and hate include each other. <u>Dualities</u> come into existence at the same time. Mind creates them. Existence is simply what it is.Mind creates <u>polarities</u> and interpretations about it.
+Similarly, pleasure is impossible without pain. They’re inseparable; they’re also one phenomenon. The mind creates them, separates them, then tries to cling to the one and avoid the other. **Mind can’t accept the totality; that’s why it misses.**When we’re feeling pleasure, pain is taking a rest. It’s gathering energy, it will soon come to the fore. When we’re feeling pain, pleasure is taking a rest and gathering energy; soon it will come.
 
-Existence in its suchness is perfect as it is. Which is more perfect, ice or water? All is equal, nothing is better than anything else. Nothing is more important than anything else.Nothing is needed for all to be complete. Which is better, along <u>blade</u> of grass or a short blade? Both are perfect. The Existence is perfect, and goes from perfection to perfection.This looks <u>illogical</u>. If reality is going to be perfect, how can it already be perfect? This makes no sense to the mind, for the mind is a perfectionist — always wanting to achieve perfection.But how can it achieve perfection when Existence is already perfect? It’s an <u>absurd</u> task.
+When the pendulum swings to one side it must then swing to the other, but it remains the same pendulum. Beauty is impossible without ugliness. Good is impossible without evil. Happiness and sadness depend on each other. Love and hate include each other. Dualities come into existence at the same time. Mind creates them. **Existence is simply what it is.Mind creates polarities and interpretations about it.**
 
-But what about disease, <u>poverty</u>, evil? What exists is what exists, only the mind labels certain parts of it as “bad.”Good and bad depend upon our point of view. If we see a cat kill a mouse, that is not evil to us; that’s just nature. But to the brother of the mouse it is evil. What threatens our survival or the survival of that which we identify with is “bad” to us; what assists our survival we then call “good.” To see good and bad requires a position, a point of view, an identity. When there is no identity and no position there is no bad, and no good either. Then all simply is what it is.
+Existence in its suchness is perfect as it is. Which is more perfect, ice or water? All is equal, nothing is better than anything else. Nothing is more important than anything else. Nothing is needed for all to be complete. Which is better, a long blade of grass or a short blade? Both are perfect. The Existence is perfect, and goes from perfection to perfection.This looks illogical. If reality is going to be perfect, how can it already be perfect? This makes no sense to the mind, for the mind is a perfectionist — always wanting to achieve perfection. But how can it achieve perfection when Existence is already perfect? It’s an absurd task.
 
-**There is no way to foresee the ultimate consequences of anything. That which we call bad may lead to good. That which we label good may lead to bad**. Certain <u>monastic</u> orders did many good deeds and also administered the <u>Inquisition</u>;was the founding of the orders good or bad? Drug pushing in Harlem led to capital formation for black businesses. Was this good or bad? The mind is a limited instrument and cannot seemore than very limited consequences.
+But what about disease, poverty, evil? What exists is what exists, only the mind labels certain parts of it as “bad.”Good and bad depend upon our point of view. If we see a cat kill a mouse, that is not evil to us; that’s just nature. But to the brother of the mouse it is evil. What threatens our survival or the survival of that which we identify with is “bad” to us; what assists our survival we then call “good.” **To see good and bad requires a position, a point of view, an identity.** When there is no identity and no position there is no bad, and no good either. Then all simply is what it is.
 
-Finally, Existence appears to be a multiplicity on the surface, but that is just appearance, that is the projections and discriminations of mind. Beneath the apparent multiplicity created by the mind, we find <u>oneness</u>.. .the One. Existence is <u>non-dual</u>. Existence is eternal and changeless and yet appears to change, just as the sky has light and darkness and snow and rain, yet remains itself unaffected by any of it. The One is not poor, not rich, neither diseased nor healthy, neither good nor bad — and that is who we really are, that is all there is.
+**There is no way to foresee the ultimate consequences of anything. That which we call bad may lead to good. That which we label good may lead to bad**. Certain monastic orders did many good deeds and also administered the Inquisition;was the founding of the orders good or bad? Drug pushing in Harlem led to capital formation for black businesses. Was this good or bad? The mind is a limited instrument and cannot see more than very limited consequences.
 
-The One has no attributes and yet has all attributes — It has all the forms of the world. This is the <u>divine</u> dance, the divine play. Beneath each form is the One, is Existence itself,and It is bliss. Existence does not suffer. Except for humans,the forms of Existence can feel pain but not suffering. Only we suffer, because only we compare and desire and feel our-selves to be separate. Only we are attached to things being a certain way — and that’s the only cause of suffering. It isn’t logical, but it can be seen.
+```
+祸兮福之所倚，福兮祸之所伏。
+```
+
+Finally, Existence appears to be a multiplicity on the surface, but that is just appearance, that is the projections and discriminations of mind. Beneath the apparent multiplicity created by the mind, we find oneness.. .the One. Existence is non-dual. Existence is eternal and changeless and yet appears to change, **just as the sky has light and darkness and snow and rain, yet remains itself unaffected by any of it.** The One is not poor, not rich, neither diseased nor healthy, neither good nor bad — and that is who we really are, that is all there is.
+
+The One has no attributes and yet has all attributes — It has all the forms of the world. This is the divine dance, the divine play. Beneath each form is the One, is Existence itself,and It is bliss. Existence does not suffer. Except for humans,the forms of Existence can feel pain but not suffering. Only we suffer, because only we compare and desire and feel ourselves to be separate. Only we are attached to things being a certain way — and that’s the only cause of suffering. It isn’t logical, but it can be seen.
 
 
 
 
 ## Chapter Thirty
-To say that Existence is One is the same as saying that Existence is everything, for if it is One it leaves nothing out.If something were left out then Existence would no longer be non-dual, it would no longer be One.
+To say that Existence is One is the same as saying that Existence is everything, **for if it is One it leaves nothing out**.If something were left out then Existence would no longer be non-dual, it would no longer be One.
 
-Similarly, to say that Existence is One is the same as saying that It is emptiness, nothingness, for one can only be understood in contrast to two; if Existence is One then there’s nothing to contrast it with, and so it is the same as saying it’s nothing.
+Similarly, to say that Existence is One is the same as saying that It is emptiness, nothingness, for one can only be understood in contrast to two; **if Existence is One then there’s nothing to contrast it with, and so it is the same as saying it’s nothing.**
+
+```
+Existence = One = Nothing
+因为One包含所有，所以没有任何东西可以拿来和One比较，因为无法被比较，所以无法被分辨，所以One什么也不是。
+```
 
 The ocean is one, but to a fish it’s the very quality of existence. There is no way to get outside of it, no way to contrast it with anything else, so to a fish the ocean is nothing, it doesn't exist. If a pencil is expanded until it is everything it vanishes, it becomes nothing. Not only is the One everything,the totality — It is also nothing, emptiness, the Void.
 
-This description can also apply to the person who has reached nirvana, final awakening. **They are everything, they are nothing, they are one.** They’re one because they’re unified,they’re in harmony. There’s no longer any distinction between the conscious and unconscious mind, because everything isconscious.
+This description can also apply to the person who has reached nirvana, final awakening. **They are everything, they are nothing, they are one.** They’re one because they’re unified,they’re in harmony. There’s no longer any distinction between the conscious and unconscious mind, because everything is conscious.
 
-Such a person is no longer a <u>cacophony</u> of successI've mind-states — anger replaced by hope replaced by frustration replaced by gratification, etc. Instead, they are in peace and serenity; they are in a deep harmony with All. There are nolonger conflicting elements — love competing with hate, greed competing with fear, happiness competing with grief. Now all of it is included, all is transcended. They are whole, complete,serene. They are One.
+```
+nirvana = final awakening
+```
 
-Such a person is also everything, the Totality, because there are no longer any boundaries. Trees merge into the sky merge into clouds merge into others. Not that they don’t use labels and concepts when appropriate, but they just play with them as <u>utensils</u>, devices. They no longer see the labels and concepts as reality. Reality for them is All, is One.
+Such a person is **no longer a cacophony of successive mind-states** — anger replaced by hope replaced by frustration replaced by gratification, etc. Instead, they are in peace and serenity; they are in a deep harmony with All. There are nolonger conflicting elements — love competing with hate, greed competing with fear, happiness competing with grief. Now all of it is included, all is transcended. They are whole, complete,serene. They are One.
+
+Such a person is also everything, the Totality, because there are no longer any boundaries. Trees merge into the sky merge into clouds merge into others. **Not that they don’t use labels and concepts when appropriate, but they just play with them as utensils, devices. They no longer see the labels and concepts as reality. Reality for them is All, is One.**
+
+```
+一切皆是”物“，天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。
+```
 
 There’s no longer any experiential separation between such a person and someone else. When she helps her neighbor there is no thought of “help,” when she loves her neighbor there is no thought of “love.” The neighbor is her, she is her neighbor. It is simply the left hand washing the right.
 
-She is also nothing, for she is empty. She is empty of desires, attitudes, models, concepts, positions, attachments,goals, judgments, <u>rigidities</u>. She is empty of tapes, empty of programming. She can use such things when appropriate, but otherwise there is silence within; they do not run her. For instance, if she talks about what has happened to her she will use concepts and positions to do so, but she won’t take them seriously. They won’t be “truth” to her, they won’t be “reality.”She’ll just play with them.
+She is also nothing, for she is empty. She is empty of desires, attitudes, models, concepts, positions, attachments,goals, judgments, rigidities. She is empty of tapes, empty of programming. **She can use such things when appropriate, but otherwise there is silence within; they do not run her.** For instance, if she talks about what has happened to her she will use concepts and positions to do so, but she won’t take them seriously. They won’t be “truth” to her, they won’t be “reality.”She’ll just play with them.
 
-And if she talks again tomorrow she’ll probably contradict what she said today, and <u>deliberately</u> so. For the listening mind will try to box up what she says, to position it, to make it into the “truth.” So the awakened person will break up tomorrow the concepts she put together today.
+And if she talks again tomorrow she’ll probably contradict what she said today, and deliberately so. For the listening mind will try to box up what she says, to position it, to make it into the “truth.” So the awakened person will break up tomorrow the concepts she put together today.
 
-For she knows that what she is talking about can’t be contained anyway. What she is really doing is using words to point to something beyond words, she is using structures to allude to something beyond structures. She’s hinting, she’s using metaphor, she’s playing with boxes and structures but doesn’t take them seriously. She’s not attached to them. Herreal message is the silence between the words, the emptiness beneath the structures. She uses words to <u>seduce</u> people into silence.
+For she knows that what she is talking about can’t be contained anyway. What she is really doing is using words to point to something beyond words, she is using structures to allude to something beyond structures. She’s hinting, she’s using metaphor, she’s playing with boxes and structures but doesn’t take them seriously. She’s not attached to them. Her real message is the silence between the words, the emptiness beneath the structures. She uses words to seduce people into silence.
 
 She’s empty of goals. Yet if she goes to the supermarket to buy apples it will appear that she’s set up a goal to that effect. But that’s only the appearance. It is all equal to her. If her car has a flat tire on the way, that is just as good as the apples to her. She has no preference. She was just playing with the apples and the supermarket, it was just a dance.
 
-If now the dance moves this way instead of that way, it is all the same to her. It is beautiful this way too. What soever happens is beautiful to her, she’ll celebrate it. For she is silent inside. She can play with goals, models, concepts, attitudes when the moment arises, but she doesn’t cling to them — and they don’t come unless she asks them. They do not run her because they don’t come uninvited. Besides, she’s not there,there is nobody to run.
+If now the dance moves this way instead of that way, it is all the same to her. It is beautiful this way too. Whatsoever happens is beautiful to her, she’ll celebrate it. For she is **silent inside**. **She can play with goals, models, concepts, attitudes when the moment arises, but she doesn’t cling to them — and they don’t come unless she asks them.** They do not run her because they don’t come uninvited. Besides, she’s not there,there is nobody to run.
 
 She is not there because who she was has died. Who she thought she was was her beliefs, attitudes, thoughts, goals,emotions, sensations, desires, status — all of her positions, all the limited things that she clung to. She thought she was her programming. Now all that is dead.
 
@@ -1215,25 +1236,29 @@ Now she is gone and there is no-mind, emptiness. Now the Divine is there, the Ex
 
 
 ## Chapter Thirty-one
-Who is beating our heart right now? If we are, then let’s will it to stop beating. Who is filtering our blood? If we are,then let’s will it to stop for a few moments. In truth, Existence caused us to be born, Existence is beating our heart, Existence is breathing us. It is moving the sun and stars, it is moving the electron around the <u>nucleus</u>, it’s blowing the wind and raining the rain.
+Who is beating our heart right now? If we are, then let’s will it to stop beating. Who is filtering our blood? If we are,then let’s will it to stop for a few moments. In truth, Existence caused us to be born, Existence is beating our heart, Existence is breathing us. It is moving the sun and stars, it is moving the electron around the nucleus, it’s blowing the wind and raining the rain.
 
-It’s doing all of it — all of it absolutely. Why, then, do we persist in believing that we must <u>fend</u> for ourself, that we must look out for #1? Existence is taking care of our heart; will it not take care of us? Our life is no more than a <u>dewdrop</u> on a leaf, slowly falling off — why all this fighting, ambition, struggling, seeking? We are a drop of rain <u>evaporating</u> in the sun. Let’s enjoy it! Can we see our real situation?
+It’s doing all of it — all of it absolutely. Why, then, do we persist in believing that we must fend for ourself, that we must look out for #1? Existence is taking care of our heart; will it not take care of us? Our life is no more than a dewdrop on a leaf, slowly falling off — why all this fighting, ambition, struggling, seeking? We are a drop of rain evaporating in the sun. Let’s enjoy it! Can we see our real situation?
 
 Let’s look within and let a deep trust arise. Let’s let ourself be borne on the back of Existence. Let’s let the river carry us. In truth, It’s carrying us anyway. Why struggle?
+
+```
+大块载我
+```
 
 But this is not enough for the mind. The mind finds it difficult to trust. The mind asks, “But what if I die? What if I don’t get enough to eat? What if I don’t get enough money? What if I don’t get the right partner?” And so on.
 
 Mind’s questions presuppose certain preferences. But the awakened person has no more preferences. If death comes,good; she’ll celebrate it. If hunger comes, good; she’ll celebrate it. If illness comes, good; she’ll celebrate it. If joy comes, good;she’ll celebrate it. If the wind blows through the trees, good;she’ll celebrate it. Whatsoever it is, she will celebrate it, she will be grateful for it. And in truth, the river is going to flow wherever It flows anyway. Why not celebrate the way It is,whatever It is?
 
-There is a true story of the Sufi master Bayazid and his disciples who came to a town at night. It was cold and raining and they were hungry, but the <u>townspeople</u> would not let them in. So they went to an <u>adjacent</u> hill, and there Bayazid praised God for his many blessings. One of his disciples said,“Now this is too much, you have gone too far. We are hungry,cold, wet tonight — and you’re praising God?” Bayazid replied,“I must praise Him, for He fulfills my needs so beautifully. Tonight I need to be hungry. Tonight I need to be cold and in <u>poverty</u>. Tonight I need to be wet and <u>shI'vering</u>. Otherwise,why should He give them to me? He takes care of my needs so perfectly.”
+There is a true story of the Sufi master Bayazid and his disciples who came to a town at night. It was cold and raining and they were hungry, but the townspeople would not let them in. So they went to an adjacent hill, and there Bayazid praised God for his many blessings. One of his disciples said,“Now this is too much, you have gone too far. We are hungry,cold, wet tonight — and you’re praising God?” Bayazid replied,“I must praise Him, for He fulfills my needs so beautifully. Tonight I need to be hungry. Tonight I need to be cold and in poverty. Tonight I need to be wet and shivering. Otherwise,why should He give them to me? He takes care of my needs so perfectly.”
 
-This is the trusting being. There’s a let-go, there is nostruggle anymore. In his heart there is acceptance and joy and a deep gratitude for All that is. His gratitude and acceptanceare so great that he cannot contain them; they overflow in a profound bliss that is independent of circumstances.
+This is the trusting being. There’s a let-go, there is **no struggle anymore**. In his heart there is acceptance and joy and a deep gratitude for All that is. His gratitude and acceptance are so great that he cannot contain them; they overflow in a profound bliss that is independent of circumstances.
 
-Just to see the sky is too great a gift for him, it overflows into bliss. Just to see a tree blow in the wind or hear the <u>crickets</u> cry is the fulfillment of his being. To eat his dinner or to look into the eyes of another is the meaning of his existence. It is totally complete, moment-by-moment. Nothing is lacking. All is perfect. Simply that things be what they are, that is all that he asks.
+Just to see the sky is too great a gift for him, it overflows into bliss. Just to see a tree blow in the wind or hear the crickets cry is the fulfillment of his being. To eat his dinner or to look into the eyes of another is the meaning of his existence. It is totally complete, moment-by-moment. Nothing is lacking. All is perfect. Simply that things be what they are, that is all that he asks.
 
 Actually, it is not even accurate to say that he is trusting or accepting, for that implies a decision about it. Accurately,he doesn’t trust, he doesn’t accept, for there’s nobody there.There is no one to be trusting or accepting. Simply, there is trust, there is acceptance. There is gratitude, celebration, bliss. They’re simply there.
 
-Such a person sees that there is nothing to do and that nothing is needed, so he doesn’t do anything. To the mind this sounds as if he lays down and goes to sleep, but in fact it just means that he does what he does. The inner Melody moves by Itself. The Voice moves through that hollow <u>flute</u>.
+Such a person sees that there is nothing to do and that nothing is needed, so he doesn’t do anything. To the mind this sounds as if he lays down and goes to sleep, but in fact it just means that he does what he does. The inner Melody moves by Itself. The Voice moves through that hollow flute.
 
 
 
