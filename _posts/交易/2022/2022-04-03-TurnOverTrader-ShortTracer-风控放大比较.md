@@ -3,7 +3,7 @@ layout : post
 title : "TurnOverTrader-ShortTracer-风控放大比较"
 date : 2022-04-03 00:00:01
 categories : 交易
-tags : 交易系统
+tags : 【交易实战总结】
 excerpt : ""
 ---
 

@@ -1333,70 +1333,94 @@ True love is non-directional, therefore. It’s not directed towards particular 
 
 Love is easily misunderstood by the mind. For instance,the mind may decide that it is very loving now and that its love is unconditional. This has nothing to do with love, for **real love is unconscious of itself and has nothing to do with decisions or self-image**.
 
-Alternatively, mind may interpret having no preferences as some formula about sexual promiscuity or celibacy. This conceives of love as an activity or a <u>denial</u>, and it’s neither one.Romance, sex, <u>renunciation</u> are all drugs, <u>intoxicants</u>; they are a doingness and we come down from them. We don’t come down from love because it is not an up.
+Alternatively, mind may interpret having no preferences as some formula about sexual promiscuity or celibacy. This conceives of love as an activity or a denial, and it’s neither one. **Romance, sex, renunciation are all drugs, intoxicants; they are a doingness and we come down from them.** We don’t come down from love because it is not an up.
 
-Love is not hot as passion is. Neither is it cold. It is just in the middle — a quiet, <u>subtle</u>, warm fragrance which can’t be practiced or implemented, but which expresses spontaneously when the mind is no longer there.
+Love is not hot as passion is. Neither is it cold. It is just in the middle — a quiet, subtle, warm fragrance which can’t be practiced or implemented, but which expresses spontaneously when the mind is no longer there.
 
 
 
 
 ## Chapter Thirty-four
-Acceptance is also easily misconceI'ved by the mind. “So if all things are perfect then I might as well hurt or deceI've others — what difference does it make?” **Such an attitude sees acceptance or its lack as a decision. But acceptance just arises on its own when the mind is silent**. So it has nothing to do with any conclusion by the mind that hurting or deceiving others is okay. Such a decision would merely be another tape of the mind, more of its survival programming.
+Acceptance is also easily misconceived by the mind. “So if all things are perfect then I might as well hurt or deceive others — what difference does it make?” **Such an attitude sees acceptance *or its lack* as a decision. But acceptance just arises on its own when the mind is silent**. So it has nothing to do with any conclusion by the mind that hurting or deceiving others is okay. Such a decision would merely be another tape of the mind, more of its survival programming.
 
-This does not mean to stop doing what we do. That would just be a suppression, a violence; the thwarted energy will not go away but will <u>distort</u> us, it will show up in someother form.
+This does not mean to stop doing what we do. That would just be a suppression, a violence; the thwarted energy will not go away but will distort us, it will show up in some other form.
 
-If we eat meat, we might continue to do so but now eat meat with awareness. If we deceI've others, we might continue to do so but observe ourselves as we do it. Let’s watch. Let’s observe. If we’re a thief let’s add awareness to our thievery —it will fall from us, for it’s not possible to steal consciously. **Let’s not try to change ourselves or blame ourselves, because all that is the usual game. Trying to change ourselves hasn’t worked and won’t work at the deepest level. Yet in becoming aware, certain things fall away from us.**
+If we eat meat, we might continue to do so but now eat meat with awareness. If we deceive others, we might continue to do so but observe ourselves as we do it. Let’s watch. Let’s observe. If we’re a thief let’s add awareness to our thievery —it will fall from us, for it’s not possible to steal consciously. **Let’s not try to change ourselves or blame ourselves, because all that is the usual game. Trying to change ourselves hasn’t worked and won’t work at the deepest level. Yet in becoming aware, certain things fall away from us.**
 
-If we force ourselves to give something up then the desire will still be there, just suppressed. But as we become aware, certain things just fall away. There is no effort, no struggle involved. Those things that drop away are “sins.” Those that don’t are “<u>virtues</u>.” **It’s a natural process**.
+If we force ourselves to give something up then the desire will still be there, just suppressed. But as we become aware, certain things just fall away. There is no effort, no struggle involved. Those things that drop away are “sins.” Those that don’t are “virtues.” **It’s a natural process**.
+
+```
+force and suppressed，是一种低阶手段，高阶手段都是自然的。
+```
 
 Ultimately, the attempt to fight or suppress “sin” or the undesirable is an attempt to fight with darkness. But at the deepest level, as Osho points out, darkness does not exist — it’s just an absence of light. How then can we defeat it? How can we defeat something that fundamentally is an absence?
 
-The mind says in effect, “I must get rid of this darkness first before I can turn on the light.” Can we see what the mind is doing? We don’t need to bother about the darkness in ourlife or in the lives of others, it’s a <u>futile</u> struggle.
-Far more effective is to turn on a light.
+The mind says in effect, “I must get rid of this darkness first before I can turn on the light.” Can we see what the mind is doing? We don’t need to bother about the darkness in our life or in the lives of others, it’s a futile struggle.Far more effective is to turn on a light.
 
 When the light is turned on, darkness vanishes. There is no need to fight with it; no effort is needed. A room can be dark for many years, yet it still takes only a moment to turn on the light and then the darkness is gone.
 
-**Fighting sin is like fighting an enemy in a dream. We don’t need to defeat him; we can just wake up.** If we’re being <u>harmed</u> by others, or if we’re the one doing the harming, or if we’re harming ourself, we can put our focus and energy on turning on a light in the situation.
+**Fighting sin is like fighting an enemy in a dream. We don’t need to defeat him; we can just wake up.** If we’re being harmed by others, or if we’re the one doing the harming, or if we’re harming ourself, we can put our focus and energy on turning on a light in the situation.
 
-What is that light? It can be finding a positI've goal that all can put their energy toward. It can be a love warm enough to dissolve barriers and <u>hatreds</u>. It can be looking within to see how our own stories are perpetuating our separateness.
+What is that light? It **can be finding a positive goal that all can put their energy toward.** It **can be a love warm enough to dissolve barriers and hatreds**. It **can be looking within to see how our own stories are perpetuating our separateness.**
 
-In doing this, any type of <u>rigidity</u> that we try to impose on ourself or life is again a suppression, a form of violence.Life is flexibility, openness, a plunge into the unknown each moment. How can this occur if we're frozen into a structure? A <u>slavish</u> <u>devotion</u> to rules or discipline can make us dead inside. Even awareness can be made into a discipline if it is approached rigidly; then it is not awareness because it has the smell of effort, of tension. The whole point is to become less and less tense inside, more and more open and relaxed.
+In doing this, any type of rigidity that we try to impose on ourself or life is again a suppression, a form of violence.Life is flexibility, openness, a plunge into the unknown each moment. How can this occur if we're frozen into a structure? **A slavish devotion to rules or discipline can make us dead inside**. Even awareness can be made into a discipline if it is approached rigidly; then it is not awareness because it has the smell of effort, of tension. **The whole point is to become less and less tense inside, more and more open and relaxed.**
 
-Like anything else, rules and disciplines can be useful as devices. They can alter the dream so that the dreamer may begin to rouse from his slumbers. But whatever we might use as a device, lets relax into it, ease into it, flow with it.
+```
+对任何规则任何教条奴隶般的忠诚将会使我们原本拥有的内在的灵活性死亡。
+```
+
+Like anything else, rules and disciplines can be useful as devices. They can alter the dream so that the dreamer may begin to rouse from his slumbers. But **whatever we might use as a device, lets relax into it, ease into it, flow with it.**
 
 **Lets let everything lead us to increased relaxation, for awakening is simply the ultimate relaxation**. If we decide to sit quietly from six to seven every morning, for instance, lets approach it as a relaxation; lets let it be a deep easiness. **If we approach it as a heavy, serious duty we’ll destroy the whole value of it.**
 
-If we use discipline on ourself, lets use it with some awareness. Lets watch ourself as we use it; then something will begin to awaken within us. At first it will be very fragile. Thus as awareness first develops, we may want to maintain our discipline just as you would keep a <u>wire</u> <u>fence</u> around as mall <u>sapling</u> to protect it. But once the dreamer is fully awake, all rules and disciplines fall away; they’re just irrelevant now. An awakened being may look disciplined because of a daily routine or rhythm, but that’s just the appearance.
+```
+awakening is simply the ultimate relaxation.
+```
 
-The routine of an awakened person is not a discipline because it’s not something imposed. Rather, it’s a rhythm that has arisen naturally, spontaneously, by itself. The Melody is moving <u>unimpeded</u> now in that <u>vessel</u>. The light is on.
+**If we use discipline on ourself, lets use it with some awareness. Lets watch ourself as we use it; then something will begin to awaken within us.** At first it will be very fragile. Thus as awareness first develops, we may want to maintain our discipline just as you would keep a wire fence around a small sapling to protect it. But once the dreamer is fully awake, all rules and disciplines fall away; they’re just irrelevant now. An awakened being may look disciplined because of a daily routine or rhythm, but that’s just the appearance.
+
+The routine of an awakened person is not a discipline because it’s not something imposed. Rather, it’s a rhythm that has **arisen naturally, spontaneously, by itself**. The Melody is moving unimpeded now in that vessel. The light is on.
 
 
 
 
-## Chapter Thirty-fI've
+## Chapter Thirty-five
 Just be natural, the Taoist master Chuang Tzu says.
 
 “When the shoe fits, the foot is forgotten.” He is saying that only when there is struggle or discomfort do we become aware of something. This is the situation of the mind — continually in a struggle, in a discomfort. Let’s see the point: How else can it maintain itself? It is the struggle, the discomfort. It has no existence other than that. If we’re just natural, if we’re ordinary, if we’re balanced, there is no place for the mind to stand. It must fall.
 
-To be natural means to be balanced, it means to be in the middle. This is Buddha’s middle way. Mind always wants to go to extremes, so it can keep moving. First we eat too much, then we <u>starve</u> ourself. Or we work very competitI'vely,and then we go to the other side and relax very competitI'vely. Or first we’re a playboy, then we get sick of that and want to become a <u>saint</u>. The mind tends to move to extremes, it often doesn’t know where or when to stop. This keeps the mind alIive, because by moving to extremes it keeps moving.
+To be natural means to be balanced, it means to be in the middle. This is Buddha’s middle way. Mind always wants to go to extremes, so it can keep moving. First we eat too much, then we starve ourself. Or we work very competitively,and then we go to the other side and relax very competitively. Or first we’re a playboy, then we get sick of that and want to become a saint. The mind tends to move to extremes, it often doesn’t know where or when to stop. This keeps the mind alIive, because by moving to extremes it keeps moving.
 
-The master is a contrast to that. She’s balanced, like a <u>tightrope</u> walker. She leans neither to the left nor the right;but stays balanced over the center, not going to extremes.
+The master is a contrast to that. She’s balanced, like a tight rope walker. She leans neither to the left nor the right;but stays balanced over the center, not going to extremes.
 
-She has a great sense of appropriateness. She’s just easy,ordinary. To be ordinary is a rare quality, for the mind is always trying to be extraordinary. It wants to distinguish itself,it wants to stand out from the crowd. Even humility can serve this purpose — the mind will try to be the most humble. This effort to be unique keeps the mind alIive, but it is absolutely absurd. The unI'verse is so vast. We’re like a <u>grain</u> of sand on the beach trying to stand out from the other grains. Pretty absurd.
+She has a great sense of appropriateness. She’s just easy,ordinary. **To be ordinary is a rare quality, for the mind is always trying to be extraordinary.** It wants to distinguish itself,it wants to stand out from the crowd. Even humility can serve this purpose — the mind will try to be the most humble. This effort to be unique keeps the mind alIive, but it is absolutely absurd. The universe is so vast. **We’re like *a grain of sand* on the beach trying to stand out from the other grains. Pretty absurd.**
 
 The master knows better; she has seen through such nonsense. She’s natural, she’s easy, she’s light. “**Easy is right**,”says Chuang Tzu. Easy in the beginning, easy in the middle,easy in the end. **The master is effortless, non-serious, playful.** She knows there is nothing to do, so everything she does is“nothing special.”
 
-She just does what she’s doing — without compulsion,without attachment. It’s a good test: Does what we’re doing feel aligned deep down, regardless of what’s happening on the surface? If not, the message may be that we’re fighting the river somehow. The mind can make a tension even out of easiness by making a rule out of it. “Be easy.” This won't work. So how do we become easy?
+She just does what she’s doing — without compulsion,without attachment. It’s a good test: Does what we’re doing feel aligned *deep down*, regardless of what’s happening on the surface? If not, the message may be that we’re fighting the river somehow. The mind can make a tension even out of easiness by making a rule out of it. “Be easy.” This won't work. So how do we become easy?
 
-Actually, mind cannot ever really be easy and relaxed because it’s always trying to change or control things. Just look: The Existence is vast, infinite, incomprehensible — and we are going to change it? We know better than God how things should go? We make war on Reality — especially in our mind — and then wonder why life seems so difficult.
+```
+deep down 在内心深处，在心底（知道）
+```
 
-Since the mind finds it difficult to relax, one device is to use the mind against the mind, to use the mind to go further into doingness. By pushing the <u>pendulum</u> to an extreme —heavy physical <u>exertion</u>, primal <u>therapy</u>, sustained dancing,etc. — the pendulum automatically swings back to the otherside and a silence ensues.In that silence, awareness can arise.
+Actually, mind cannot ever really be easy and relaxed because it’s always trying to change or control things. Just look: The Existence is vast, infinite, incomprehensible — and we are going to change it? **We know better than God how things should go?** We make war on Reality — especially in our mind — and then wonder why life seems so difficult.
 
-Awareness is the true road to easiness. All devices —concentration, meditations, therapies, <u>austerities</u>, martial arts,whatever — are only to create situations where awareness can begin to arise, where the dreamer can begin to awaken. We can go on cutting a few leaves off the tree in our life, trying to improve this or that, but the leaves just keep growing back. Or we can cut the root.
+Since the mind finds it difficult to relax, one device is to use the mind against the mind, to use the mind to go further into doingness. By pushing the pendulum to an extreme —heavy physical exertion, *primal therapy*, sustained dancing,etc. — the pendulum automatically swings back to the otherside and a silence ensues. In that silence, awareness can arise.
+
+```
+primal therapy 原始疗法
+```
+
+Awareness is the true road to easiness. All devices —concentration, meditations, therapies, austerities, *martial arts*,whatever — are only to create situations where awareness can begin to arise, where the dreamer can begin to awaken. We can go on cutting a few leaves off the tree in our life, trying to improve this or that, but the leaves just keep growing back. Or we can cut the root.
+
+```
+austerities 苦行;禁欲;
+martial arts 武术
+```
 
 Jesus said, “I bring a sword.” It’s all very well to love everything, but sometimes we need a sword too, in this sense:Sometimes when we’re sitting for long periods in meditation,“just sitting,” we need to face the fear or the anxiety or the boredom and just not move. **Just be unmoving in the face of those things that we’ve always moved away from before.**
 
-The sword that actually cuts the root of the mind is this <u>unflinching</u> awareness. What we’re doing, the lifestyle we’re leading, the methods we’re using are of little importance. Awareness of what we’re doing is the key. For awareness leads to silence, and silence in turn leads to deeper awareness; at bottom, they are the same. Awakening is going so far into the present moment that you can’t get back out.
+The sword that actually cuts the root of the mind is this unflinching awareness. What we’re doing, the lifestyle we’re leading, the methods we’re using are of little importance. Awareness of what we’re doing is the key. For awareness leads to silence, and silence in turn leads to deeper awareness; at bottom, they are the same. Awakening is going so far into the present moment that you can’t get back out.
 
 
 
@@ -1404,17 +1428,21 @@ The sword that actually cuts the root of the mind is this <u>unflinching</u> awa
 ## Chapter Thirty-six
 Watch. We’ll see that we create our version of reality by what our attention is focused on. “The floor.” We just created the floor by bringing our attention and energy to it.
 
-What is the difference between attention and awareness? Simply that attention is directed, focused, while awareness is non-directed, passive. One way of putting it is that **awareness is noticing what we notice**. It’s noticing the labels,discriminations, responses, models, activities, evaluations and demands that constitute our version of reality.
+What is the difference between attention and awareness? Simply that **attention is directed, focused, while awareness is non-directed, passive.** One way of putting it is that **awareness is noticing what we notice**. It’s noticing the labels,discriminations, responses, models, activities, evaluations and demands that constitute our version of reality.
 
 And as awareness develops, it becomes obvious that we are entirely responsible for the reality that we live in, because it’s our version of it. God is not responsible. The world is not responsible. We are responsible. Our experience of reality is our own creation.
 
-The world is a perfect echo of us. It is like standing in a <u>canyon</u>. If we shout “God!” we’ll hear “God!” back. If we shout “Hate!” we’ll hear “Hate!” back. We hear our own projections. The river mirrors our own struggles. For instance,the qualities that annoy us about others are projections of qualities that we ourselves have. Otherwise, we would notice them but they wouldn’t have any charge for us.
+The world is a perfect echo of us. It is like standing in a canyon. If we shout “God!” we’ll hear “God!” back. If we shout “Hate!” we’ll hear “Hate!” back. We hear our own projections. The river mirrors our own struggles. For instance,the qualities that annoy us about others are projections of qualities that we ourselves have. Otherwise, we would notice them but they wouldn’t have any charge for us.
 
-If arrogance in someone bothers us it’s because we’re arrogant. If <u>resentment</u> in someone bothers us it’s because we have resentment. Otherwise it would make no impression on us, it would be irrelevant, it would have no more significance than the ceiling. The canyon echos us. And this is true in the widest sense. If the world seems violent, let’s look within at ourself. What is violent in us?
+If arrogance in someone bothers us it’s because we’re arrogant. If resentment in someone bothers us it’s because we have resentment. Otherwise it would make no impression on us, it would be irrelevant, it would have no more significance than the ceiling. The canyon echos us. And this is true in the widest sense. If the world seems violent, let’s look within at ourself. What is violent in us?
 
-All this being so, if we truly want to help the world then we can work on ourself. That is where it starts and ends. If we want to improve someone else then we can work on ourself. We’ll be surprised — as our own consciousness is raised we’ll find that the other person has “improved.” They are much more okay now. A miracle!
+All this being so, **if we truly want to help the world then we can work on ourself. That is where it starts and ends.** If we want to improve someone else then we can work on ourself. We’ll be surprised — as our own consciousness is raised we’ll find that the other person has “improved.” They are much more okay now. A miracle!
 
-As our consciousness deepens we gradually find that we are living in a different reality. The game is to work on ourself — not on others, not on the world. The mind always finds wrongness and problems out there and then wants to solvethem there, but the mind has created the wrongness and the problems in the first place. How can we ever solve something externally which is being created internally?
+As our consciousness deepens we gradually find that we are living in a different reality. **The game is to work on ourself — not on others, not on the world.** The mind always finds wrongness and problems out there and then wants to solve them there, but the mind has created the wrongness and the problems in the first place. How can we ever solve something externally which is being created internally?
+
+```
+吾心即是宇宙，宇宙即是吾心。
+```
 
 A special trap is taking any of the concepts discussed here and using them to make others wrong. For example, if we point out to someone that they are running a tape, we are the one who is running a tape — about them. We are the one whois missing. In our unI'verse, we are the person who has the opportunity to get off it. And there is no way to get off it and still be right. Working on other people is a good way to stay stuck in the mind. Let’s work on ourselves.
 
