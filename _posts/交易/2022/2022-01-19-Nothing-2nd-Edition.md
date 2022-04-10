@@ -1444,45 +1444,49 @@ As our consciousness deepens we gradually find that we are living in a different
 吾心即是宇宙，宇宙即是吾心。
 ```
 
-A special trap is taking any of the concepts discussed here and using them to make others wrong. For example, if we point out to someone that they are running a tape, we are the one who is running a tape — about them. We are the one whois missing. In our unI'verse, we are the person who has the opportunity to get off it. And there is no way to get off it and still be right. Working on other people is a good way to stay stuck in the mind. Let’s work on ourselves.
+A special trap is taking any of the concepts discussed here and using them to make others wrong. For example, **if we point out to someone that they are running a tape, we are the one who is running a tape — about them**. We are the one who is missing. In our universe, we are the person who has the opportunity to get off it. And there is no way to get off it and still be right. Working on other people is a good way to stay stuck in the mind. Let’s work on ourselves.
 
-Does this mean that we never communicate how we feel if we're upset about something? Does it mean that we don’t ever correct “wrongness” if we feel that something can be constructI'vely done? No. The mind is always looking for rules with which to achieve certainty, but no rule is always appropriate.
+Does this mean that we never communicate how we feel if we're upset about something? Does it mean that we don’t ever correct “wrongness” if we feel that something can be constructively done? No. **The mind is always looking for rules with which to achieve certainty, but no rule is always appropriate.**
 
-Let’s be a witness to ourselves. What stories or tapes are we running now? How are we creating our experience of the situation? As Ken Keyes said, first become centered and then act. When we’re uncentered and upset in any way we’ll tend to create <u>turbulence</u> and <u>disharmony</u> whatever we do or say. So let’s let our primary emphasis always be our own consciousness. **Let’s slowly fall silent inside**.
+Let’s be a witness to ourselves. What stories or tapes are we running now? How are we creating our experience of the situation? As Ken Keyes said, first become centered and then act. When we’re uncentered and upset in any way we’ll tend to create turbulence and disharmony whatever we do or say. So let’s let our *primary emphasis* always be our own consciousness. **Let’s slowly fall silent inside**.
 
-When we’re silent inside we’ll naturally, spontaneously do whatever is most appropriate, whatever might create the greatest overall harmony. There won’t be a decision involved,no rule to follow. It will happen of itself. We will literally beliving in a different reality, and the world will look entirely different to us, even though it’s entirely the same. What used to be problems will no longer be problems.
+```
+浊以静之徐清。
+```
 
-So let’s not try to solve problems while staying attached to our stories. Our individual problems are not the problem. The world’s problems are not the problem. A lack of consciousness is the only real “problem” in this world.
+**When we’re silent inside we’ll naturally, spontaneously do whatever is most appropriate, whatever might create the greatest overall harmony. There won’t be a decision involved,no rule to follow. It will happen of itself. We will literally beliving in a different reality, and the world will look entirely different to us, even though it’s entirely the same. What used to be problems will no longer be problems.**
 
-Always, our first priority can be to be more conscious of our stories about how others and this world and ourselves <u>ought</u> to be different — and how those stories are creating oursense of isolation and suffering.
+So let’s not try to solve problems while staying attached to our stories. **Our individual problems are not the problem. The world’s problems are not the problem. A lack of consciousness is the only real “problem” in this world.**
 
-When we become more silent within it will all begin to work. We’ll experience the perfection of Existence, not as a concept but as an experiential reality. Nothing will be seen as a problem, not even death. For when we’re really silent we’re gone, we are no more; we have joined Existence Itself. The drop has merged in the ocean.
+Always, our first priority can be to be more conscious of our stories about how others and this world and ourselves ought to be different — and how those stories are creating our sense of isolation and suffering.
 
-How then can death trouble us? Death is a problem to the mind, to “you” and “I.” How can disease or pain or loss or poverty or suffering or anything at all trouble us when we nolonger exist? Only the Ocean exists, and It’s not troubled. All we ever were was the <u>disturbance</u>, the mind’s movement. When that is gone, we too are gone. And so is death.
+**When we become more silent within it will all begin to work. We’ll experience the perfection of Existence, not as a concept but as an experiential reality. Nothing will be seen as a problem, not even death. For when we’re really silent we’re gone, we are no more; we have joined Existence Itself. The drop has merged in the ocean.**
 
-When we’re silent within we’ll be spontaneously lovingand compassionate; we will be love, we will be compassion,but there will be no thought of “love” or “compassion.” It willjust happen. And when we communicate with someone wewon’t be dumping our tapes and justifications and blame onthem, but simply sharing our experience.
+How then can death trouble us? Death is a problem to the mind, to “you” and “I.” How can disease or pain or loss or poverty or suffering or anything at all trouble us when we nolonger exist? Only the Ocean exists, and It’s not troubled. All we ever were was the disturbance, the mind’s movement. When that is gone, we too are gone. And so is death.
 
-Sharing is being responsible for our experience — “I had a thought just now that you’re <u>conceited</u> and I turned it around and saw how I’m conceited when I’m thinking that about you.” Dumping is when we put the responsibility for our experience out there — “You know, you’re conceited!”
+When we’re silent within we’ll be spontaneously loving and compassionate; we will be love, we will be compassion,but there will be no thought of “love” or “compassion.” It will just happen. And when we communicate with someone we won’t be dumping our tapes and justifications and blame on them, but simply sharing our experience.
 
-Dumping activates the automatic mechanisms of others and creates conflict and <u>estrangement</u>. Sharing creates a communion; it makes us real to others, it makes us available. Then we’re not trying to protect anything, for example our story, for we’ve seen that there’s nothing to protect.
+Sharing is being responsible for our experience — “I had a thought just now that you’re conceited and I turned it around and saw how I’m conceited when I’m thinking that about you.” Dumping is when we put the responsibility for our experience out there — “You know, you’re conceited!”
 
-The mind always feels that certain things need to be protected for the sake of our survival. But what is really being protected? Yes, the mind itself, the survival programming itself. To the extent that we’re willing to share ourself with others, to that extent we weaken the hold of the mind and open up space with others instead of shutting it down. And we’ll see more and more that what we are protecting isn’t worth protecting, and conversely, that what is really worth protecting — the vast pregnant <u>spaciousness</u> and emptinesswithin that we really are — needs no protection at all.
+Dumping activates the automatic mechanisms of others and creates conflict and estrangement. Sharing creates a communion; it makes us real to others, it makes us available. Then we’re not trying to protect anything, for example our story, for we’ve seen that there’s nothing to protect.
+
+The mind always feels that certain things need to be protected for the sake of our survival. But what is really being protected? Yes, the mind itself, the survival programming itself. To the extent that we’re willing to share ourself with others, to that extent we weaken the hold of the mind and open up space with others instead of shutting it down. And we’ll see more and more that what we are protecting isn’t worth protecting, and conversely, that what is really worth protecting — **the vast pregnant spaciousness and emptiness** within that we really are — needs no protection at all.
 
 
 
 
 ## Chapter Thirty-seven
-The person of final awakening is like the open sky. She is boundless, infinite. The <u>bodily</u> form is merely a contact point with Existence itself. And like the sky, her true dwelling place has no walls, no roof and no floor either. How to protect a dwelling place that has no structure and no location?
+The person of final awakening is like the open sky. She is boundless, infinite. **The bodily form is merely a contact point with Existence itself.** And like the sky, her true dwelling place has no walls, no roof and no floor either. How to protect a dwelling place that has no structure and no location?
 
-The liberated person has a body-mind package but she is not that package; she is the void, the emptiness out of which that package has arisen. How to protect an absence, a void? Since it cannot be harmed, there is no need to protect it and no possibility of protecting it. Consequently, the person of awakening is totally open to life, totally transparent, totally receptI've to all things.
+The liberated person has a body-mind package but she is not that package; she is the void, the emptiness out of which that package has arisen. How to protect an absence, a void? Since it cannot be harmed, there is no need to protect it and no possibility of protecting it. Consequently, **the person of awakening is totally open to life, totally transparent, totally receptive to all things.**
 
-She says “yes” to all aspects of life without <u>reservation</u>. The mind gathers energy and strength by saying “no” to parts of Existence. This is liked and that is disliked. But the person of wisdom says “yes” to all of it. And nothing is excluded, not even the mind.
+She says “yes” to all aspects of life without reservation. **The mind gathers energy and strength by saying “no” to parts of Existence. This is liked and that is disliked. But the person of wisdom says “yes” to all of it. And nothing is excluded, not even the mind.**
 
-For she knows that Existence is a vast mystery which cannot be penetrated. She knows that she knows nothing at all, and so she simply opens her heart. She trusts. She allows the river to carry her, she knows not where, she knows not why. But with that trusting heart she experiences the bliss of allowing herself to be a part of the flow. Just to exist in eachmoment is a <u>benediction</u>.
+For she knows that Existence is a vast mystery which cannot be penetrated. She knows that she knows nothing at all, and so she simply opens her heart. She trusts. She allows the river to carry her, she knows not where, she knows not why. But **with that trusting heart she experiences the bliss of allowing herself to be a part of the flow. Just to exist in each moment is a benediction.**
 
-He has no attachment to particular concepts or beliefs,and so he’s willing to let others have them. He’s willing to let others be “right.” After all, each concept is part of Existence too, it is perfect in its own way. And each person is a part of Existence, a part of God — so the <u>divine</u> is speaking through everyone.
+He has no attachment to particular concepts or beliefs,and so he’s willing to let others have them. He’s willing to let others be “right.” After all, each concept is part of Existence too, it is perfect in its own way. And **each person is a part of Existence, a part of God — so the divine is speaking through everyone.**
 
-He sometimes uses the master Mahavir's logic when it’s appropriate. If someone makes a statement of some kind his attitude toward it might be, “Perhaps you are right.” He lets the other person know that he understood what was said, but he’s lost the compulsion to agree or disagree — least of all with philosophical or metaphysical systems. He’s receptI've to all things large and small, including all concepts, but he’s not attached to any. He plays with them as what they are — toys in the sandbox.
+He sometimes uses the master Mahavir's logic when it’s appropriate. If someone makes a statement of some kind his attitude toward it might be, “Perhaps you are right.” He lets the other person know that he understood what was said, but he’s lost the compulsion to agree or disagree — least of all with philosophical or metaphysical systems. He’s receptive to all things large and small, including all concepts, but he’s not attached to any. He plays with them as what they are — toys in the sandbox.
 
 He has abandoned trying to know the how or why of Existence or of his situation, he’s abandoned gathering facts and data and answers and solutions. He’s willing to play with. data and questions and so on, but doesn't take them seriously because he has accepted his complete ignorance.
 
