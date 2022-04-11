@@ -1488,23 +1488,23 @@ He has no attachment to particular concepts or beliefs,and so he’s willing to 
 
 He sometimes uses the master Mahavir's logic when it’s appropriate. If someone makes a statement of some kind his attitude toward it might be, “Perhaps you are right.” He lets the other person know that he understood what was said, but he’s lost the compulsion to agree or disagree — least of all with philosophical or metaphysical systems. He’s receptive to all things large and small, including all concepts, but he’s not attached to any. He plays with them as what they are — toys in the sandbox.
 
-He has abandoned trying to know the how or why of Existence or of his situation, he’s abandoned gathering facts and data and answers and solutions. He’s willing to play with. data and questions and so on, but doesn't take them seriously because he has accepted his complete ignorance.
+He has abandoned trying to know the how or why of Existence or of his situation, he’s abandoned gathering facts and data and answers and solutions. He’s willing to play with data and questions and so on, but doesn't take them seriously because he has accepted his complete ignorance.
 
-Ultimately, Existence is unknown and unknowable. It is wild, mysterious, infinite, unboxable. The mind keeps trying to box it up and pin it down, but it isn’t boxable or pinnable. We can pin the butterfly down, but then it’s not a butterfly anymore; it’s dead.
+Ultimately, Existence is unknown and unknowable. It is wild, mysterious, infinite, unboxable. The mind keeps trying to box it up and *pin it down*, but it isn’t boxable or pinnable. We can pin the butterfly down, but then it’s not a butterfly anymore; it’s dead.
 
 Only the trusting heart really sees. As the fox said to the little prince, “It is only with the heart that one sees rightly;what is essential is invisible to the eye.” Facts, data, boxes do not touch what is essential.
 
-Buddha used to tell a story about a man wounded by a poisoned arrow. His friends and relatI'ves <u>procure</u> a physician to pull out the arrow, but the man says he won’t have the arrow pulled out until he knows the name of the man who wounded him and the name of his <u>clan</u>. And he won’t have the arrow pulled out until he knows the height of the attacker and his village and his race. And he will not have the arrow pulled out until he knows the type of feathers used in the arrow and the type of wood and the type of metal in the tip and many otherthings. Buddha points out that the man will die in the middle of finding all this out.
+Buddha used to tell a story about a man wounded by a poisoned arrow. His friends and relatives procure a physician to pull out the arrow, but the man says he won’t have the arrow pulled out until he knows the name of the man who wounded him and the name of his clan. And he won’t have the arrow pulled out until he knows the height of the attacker and his village and his race. And he will not have the arrow pulled out until he knows the type of feathers used in the arrow and the type of wood and the type of metal in the tip and many other things. Buddha points out that the man will die in the middle of finding all this out.
 
 This is our situation. **We will die in the middle of collecting our data and answers and goals unless we awaken to our situation.** We might think we can go toward happiness like an arrow going towards the target. We might imagine it is a matter of getting certain things in place.
 
-But aiming directly toward the target can sometimes guarantee that we’ll miss it. For instance, someone lies back in a lake feeling the sun on her face. She’s not trying to accom-plish anything; she’s relaxed, surrendered. And a moment may come when bliss descends on her. We hear about it, let’s say,and we go to the lake to find this happiness. We lie back in the lake waiting for the moment of bliss, but it doesn’t come.Why not?
+But aiming directly toward the target can sometimes guarantee that we’ll miss it. For instance, someone lies back in a lake feeling the sun on her face. She’s not trying to accomplish anything; she’s relaxed, surrendered. And a moment may come when bliss descends on her. We hear about it, let’s say,and we go to the lake to find this happiness. We lie back in the lake waiting for the moment of bliss, but it doesn’t come.Why not?
 
-Perhaps because we were direct. We sought directly. But Existence is indirect. It moves through hints and whispers, It reveals itself through silence. Only when all seeking is gone and were willing to wait for all <u>eternity</u> with no striving, no desire, no goal, not waiting for anything in particular but just waiting for no reason — then, in that empty silence, Existence reveals Itself.
+Perhaps because we were direct. We sought directly. But **Existence is indirect. It moves through hints and whispers, It reveals itself through silence.** Only when all seeking is gone and we're willing to wait for all eternity with no striving, no desire, no goal, not waiting for anything in particular but just waiting for no reason — then, in that empty silence, Existence reveals Itself.
 
 The mind thinks it can find happiness, thinks it can find God, thinks it can find enlightenment. But what map will we use? And how can there be a map when there’s no address, no location?
 
-When there is no more seeking after anything at all,when there is simply waiting with no goal in mind, then God finds you. The seeker is the sought. You are the goal.
+When there is no more seeking after anything at all,when there is **simply waiting with no goal in mind**, then God finds you. The seeker is the sought. You are the goal.
 
 
 
