@@ -1556,42 +1556,62 @@ The Existence expresses through a human form. Then we are Everything and Nothing
 
 
 ## Chapter Thirty-nine
-Is an <u>innocent</u> young infant in this state? Is an animal enlightened? In one sense they are because there is no mind,there is no rational-controller. There is no problem about life because there is no past or future, no expectations or models,no concepts or comparisons. There is just life from moment tomoment. On the other hand there is strong <u>instinctual</u>, lower-brain programming to survive and avoid extinction. In contrast, an awakened being has no desire to seek or avoid extinction, because the separate “I” has already become extinct.
+Is an innocent young infant in this state? Is an animal enlightened? In one sense they are because there is no mind,there is no rational-controller. There is no problem about life because there is no past or future, no expectations or models,no concepts or comparisons. There is just life from moment to moment. On the other hand there is strong instinctual, lower-brain programming to survive and avoid extinction. **In contrast, an awakened being has no desire to seek or avoid extinction, because the separate “I” has already become extinct.**
 
-But this isn’t the <u>crux</u> of the matter. What about a cloud or a <u>blade</u> of grass? Now there is no desire even to survive.There is simply the bliss of perfect harmony with Existence.Are they enlightened? No.. .and now we come to the heart of it.
+```
+instinctual [ɪkˈstɪŋkʃn] 灭绝;(植物、动物、生活方式等的)绝种;消亡
+```
 
-There is no possibility of a cloud or a leaf or a wave awakening because they aren’t conscious. Only humans — or any other <u>sentient</u> beings — can become self-realized, for only sentient beings are conscious. Only humans or other sentient beings have the capability to experience the hell of consciousness, the hell of mind — and that is what we do experience. But this hell also contains the seeds of another possibility.
+But this isn’t the crux of the matter. What about a cloud or *a blade of* grass? Now there is no desire even to survive.There is simply the bliss of perfect harmony with Existence. Are they enlightened? No.. .and now we come to the heart of it.
 
-To be conscious means to be split, to be divided. The mind is always trying to be somewhere other than where it is.The conscious mind is pulling in one direction and the unconscious conditioning is pulling in another. Or the desire system wants something other than the Reality herenow. One is not whole. This is the anguish, the tension of mind.
+There is no possibility of a cloud or a leaf or a wave awakening because they aren’t conscious. Only humans — or any other sentient beings — can become **self-realized**, for only sentient beings are conscious. **Only humans or other sentient beings have the capability to experience the hell of consciousness, the hell of mind — and that is what we do experience.** But this hell also contains the seeds of another possibility.
 
-As Osho says, entities who don’t have sentience have no tension because they’re unconscious; then there is no problem. And the free being has no tension because they are conscious completely; then there is no problem either. Only we humans and other sentient beings are partial; only we live in the hell of being divided. But this partial consciousness means also the possibility is there of becoming completely conscious.
+```
+the hell of mind
+```
 
-Awakening means first going to hell and then coming back to <u>paradise</u>. Liberation means first battling and struggling with the river and then seeing the illusion and ceasing the struggle... through awareness, through silence, through the extinguishing of who we think we are.
+To be conscious means to be split, to be divided. The mind is always trying to be somewhere other than where it is. The conscious mind is pulling in one direction and the unconscious conditioning is pulling in another. Or the desire system wan‘ts something other than the Reality herenow. One is not whole. This is the anguish, the tension of mind.
 
-The tragedy of the human is that only he or she truly suffers. No animal, no plant, no river can suffer as humans do because there is no mind to struggle, no mind to live in the past and future, no mind to compare and judge and crave. Self-realization has depth to it because it has first known the misery of mind.
+As Osho says, entities who don’t have sentience have no tension because they’re unconscious; then there is no problem. And the free being has no tension because they are conscious completely; then there is no problem either. Only we humans and other sentient beings are partial; **only we live in the hell of being divided**. But this partial consciousness means also the possibility is there of becoming completely conscious.
 
-This is why a <u>fetus</u>, even though existing in bliss, isn’t awakened — it is not yet conscious. One must pass through the pain of partial consciousness before the doors of heaven can open in complete consciousness.
+**Awakening means first going to hell and then coming back to paradise**. Liberation means first battling and struggling with the river and then seeing the illusion and ceasing the struggle... through awareness, through silence, through the extinguishing of who we think we are.
 
-And then <u>deliverance</u> is here, in this life. In one sense,the pathless path to awakening can be considered a regression back through the history of the organism to life in the <u>womb</u>. As awareness deepens, we go back through a psychodynamic stage, bringing consciousness to and disappearing the tapes formed by painful and <u>traumatic</u> incidents in childhood.
+The tragedy of the human is that only he or she truly suffers. No animal, no plant, no river can suffer as humans do because there is no mind to struggle, no mind to live in the past and future, no mind to compare and judge and crave. **Self-realization has depth to it because it has first known the misery of mind.**
 
-Then as awareness increases further we undergo a kindof birthing stage, confronting the human condition of pain and suffering, dying and death and the desire for survival —corresponding to the <u>agony</u> of the fetus as it dies as a fetus inorder to be born.
+```
+作为一个有自我意识的人，从ming的幻象中清醒，“复其初”。
+```
 
-Finally, as awareness becomes complete, one goes back to a <u>transpersonal</u> reality. The fetus is in undisturbed peace,undisturbed bliss. It has no sense of “I,” no desires, no urge to get somewhere, to control. It simply is, and there is no problem whatever. The awakened person is like this, but there is a <u>crucial</u> difference — where as the fetus is unconscious, the self-realized person is totally conscious. Both are in bliss, both have no identity, no mind, but one is conscious and the other is not. To have no mind, no ego, no <u>disturbance</u> within, yet to be fully conscious — this is liberation.
+This is why a fetus, even though existing in bliss, isn’t awakened — it is not yet conscious. **One must pass through the pain of partial consciousness before the doors of heaven can open in complete consciousness.**
 
-How do we reach it? “You” and “I” can never reach it because we are the obstacle. Only when we disappear can it be reached. Indeed, the moment we are not, It is already there. But we cannot attain to our own non-existence; there is noway for us to reach that, for the very attempt to reach keeps “us” in existence. All that can be done is to cultivate the ground — and then it happens of its own accord.
+And then deliverance is here, in this life. In one sense,the pathless path to awakening can be considered a regression back through the history of the organism to life in the womb. As awareness deepens, we go back through a psychodynamic stage, bringing consciousness to and disappearing the tapes formed by painful and traumatic incidents in childhood.
 
-Existence does it. It’s like the farmer growing his crop. He <u>tills</u> the <u>soil</u>, plants the seeds and then waits. He must have great patience. By and by, Existence Itself brings the crop up out of the soil. Yet the farmer also makes a contribution. And when awakening happens it’s clearly a grace <u>bestowed</u> by the Whole; there is clearly no doer except the Totality. And yet we contribute too, by tilling the ground.
+```
+psychodynamic [ˌsaɪkoʊdaɪˈnæmɪk] 心理动力;精神动力学;精神动力;以心理动力学;精神动态
+```
 
-And how is the ground tilled? How is the seed planted? Through the non-doingness of awareness, mindfulness. But awareness can only become fully <u>mature</u> in perfect silence and stillness. So like the farmer, we set aside periods of just sitting silently and waiting. Unlike the farmer, though, we wait not for anything in particular, but for nothing at all.
+Then as awareness increases further we undergo a kind of birthing stage, confronting the human condition of pain and suffering, dying and death and the desire for survival —corresponding to the agony of the fetus as it dies as a fetus inorder to be born.
 
-We are just waiting. Waiting with an open heart, with a trusting heart. We can reach a point where even the goal or concept of awakening is no longer there, where we’re prepared to just wait with no end or goal for all <u>eternity</u>. We can reach the point where time drops away from us, when we see our own uselessness, when we see that the world is doing just fine without us and that we’ve been discarded, thrown on the junk pile. Only when time drops from us completely has the mind also dropped.
+Finally, as awareness becomes complete, one goes back to a transpersonal reality. The fetus is in undisturbed peace,undisturbed bliss. It has no sense of “I,” no desires, no urge to get somewhere, to control. It simply is, and there is no problem whatever. The awakened person is like this, but there is a crucial difference — where as the fetus is unconscious, the self-realized person is totally conscious. Both are in bliss, both have no identity, no mind, but one is conscious and the other is not. To have no mind, no ego, no disturbance within, yet to be fully conscious — this is liberation.
 
-We cultivate then **the greatest art, the art of just sitting silently**. But sitting silently in great awakeness, consciousness,awareness. It’s simply stopping, it is simply coming to a halt. It’s allowing the waves of the mind to subside, it’s allowing the bicycle to come to a stop and then just <u>topple</u> over. It is the ultimate in doing nothing.
+How do we reach it? “You” and “I” can never reach it because we are the obstacle. **Only when we disappear can it be reached.** Indeed, the moment we are not, It is already there. But **we cannot attain to our own non-existence**; there is noway for us to reach that, for the very attempt to reach keeps “us” in existence. **All that can be done is to cultivate the ground — and then it happens of its own accord**.
+
+Existence does it. It’s like the farmer growing his crop. He tills the soil, plants the seeds and then waits. He must have great patience. By and by, Existence Itself brings the crop up out of the soil. Yet the farmer also makes a contribution. And when awakening happens it’s clearly a grace bestowed by the Whole; there is clearly no doer except the Totality. And yet we contribute too, by tilling the ground.
+
+And how is the ground tilled? How is the seed planted? Through the non-doingness of awareness, mindfulness. But awareness can only become fully mature in perfect silence and stillness. So like the farmer, we set aside periods of just sitting silently and waiting. Unlike the farmer, though, we wait not for anything in particular, but for nothing at all.
+
+We are just waiting. Waiting with an open heart, with a trusting heart. **We can reach a point where even the goal or concept of awakening is no longer there, where we’re prepared to just wait with no end or goal for all eternity.** We can reach the point where time drops away from us, when we see our own uselessness, when we see that the world is doing just fine without us and that we’ve been discarded, thrown on the junk pile. **Only when time drops from us completely has the mind also dropped.**
+
+We cultivate then **the greatest art, the art of just sitting silently**. But sitting silently in great awakeness, consciousness,awareness. **It’s simply stopping, it is simply coming to a halt. It’s allowing the waves of the mind to subside, it’s allowing the bicycle to come to a stop and then just topple over. It is the ultimate in doing nothing.**
 And in that absence Existence reveals Itself.
 The Zen master Zenrin said:
 **Sitting silently, doing nothing,**
 **Spring comes and the grass grows by itself.**
-**Sitting silently, doing nothing, we <u>imperceptibly</u> merge into a harmony with the Existence... which is not trying to get anywhere, which is not trying to accomplish anything, which is simply the bliss of being what It is.**
+**Sitting silently, doing nothing, we imperceptibly merge into a harmony with the Existence... which is not trying to get anywhere, which is not trying to accomplish anything, which is simply the bliss of being what It is.**
+
+```
+imperceptibly 极微地；微细地；察觉不到地; 不知不觉地
+```
 
 
 
