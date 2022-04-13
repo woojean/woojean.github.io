@@ -1619,35 +1619,48 @@ imperceptibly 极微地；微细地；察觉不到地; 不知不觉地
 ## Chapter Forty
 **Sitting silently, doing nothing, waiting for nothing, just waiting — with no end in view, with no goals or desires or attachments, simply being silent and aware.. .this is how the final awakening comes.**
 
-In our ordinary life the mind pulls away from <u>boredom</u> because it needs excitement to stay alIive. It knows only two possibilities, movement or sleeping. If nothing is going on the mind is just bored, it wants to go to sleep. But sitting silently,doing nothing is a third possibility — consciousness without occupation.
+In our ordinary life the mind pulls away from boredom because it needs excitement to stay alIive. It knows only two possibilities, movement or sleeping. If nothing is going on the mind is just bored, it wants to go to sleep. But **sitting silently,doing nothing is a third possibility — consciousness without occupation**.
 
-It is the ultimate facing of boredom. It is going deeper and deeper into the boredom, into the emptiness, into the hollowness beneath all the onion-layers of the mind. It is penetrating deeper into <u>tedium</u>, into silence, into nothing, into lack of stimulation.
+It is the ultimate facing of boredom. It is going deeper and deeper into the boredom, into the emptiness, into the hollowness beneath all the onion-layers of the mind. It is penetrating deeper into tedium, into silence, into nothing, into lack of stimulation.
 
 It can be done with eyes closed or open-and-unmoving,it makes no difference. The body is put into a relaxed position where it can be still for awhile. And then the essential thing is that we are no longer moving in a particular direction or dimension but are open to all dimensions, all directions.. .open to whatever is happening, open to the Totality.
 
 An interesting metaphor:
-Wakefulness is consciousness plus mental activity. Deepsleep is neither, it is unconsciousness plus mental inactivity. Dreams are activity without consciousness. But silent, open,aware sitting is the most interesting of all — it’s consciousness without activity. Appropriately enough, silent sitting is the opposite of dreaming.
+Wakefulness is consciousness plus mental activity. Deepsleep is neither, it is unconsciousness plus mental inactivity. Dreams are activity without consciousness. But silent, open,aware sitting is the most interesting of all — it’s **consciousness without activity**. Appropriately enough, silent sitting is the opposite of dreaming.
+
 In one sense, **this final awakening could be described as being in a state of deep sleep while being fully conscious**. In the normal waking state of the brain, beta waves of 14-26 cycles per second predominate. In the deep relaxation brought about by various concentration meditations we pass down to alpha waves of 8-13 cycles per second.
 
-Then it was discovered that Zen <u>monks</u> who are experienced in mindfulness meditation pass down while remaining conscious to <u>theta</u> waves of 4-7 cycles per second, which are normally present only during the medium stages of sleep. And awakening might then be characterized as remaining fully conscious while passing down to delta waves of 0-4 cycles persecond, which are normally present only during the deepeststage of sleep.
+Then it was discovered that Zen monks who are experienced in mindfulness meditation pass down while remaining conscious to theta waves of 4-7 cycles per second, which are normally present only during the medium stages of sleep. And awakening might then be characterized as remaining fully conscious while passing down to delta waves of 0-4 cycles persecond, which are normally present only during the deepeststage of sleep.
 
 Deep sleep is very beautiful. In deep sleep there are nothoughts, no desires, no tapes, no stories. There is no struggle,no striving. In deep sleep we are not a particular identity; infact, we are not anything at all, our identity is gone. There is no clinging, no mind, no “I.” On the other hand, there is no consciousness either. Freedom is adding consciousness to this state of inner stillness, and living in the world with it.
 
 It is awareness without attachment, consciousness without an object. The only difference between ourselves and a Buddha, then, is that we have something that the Buddha doesn’t have. The Buddha merely has consciousness. We have consciousness plus stories and dreams. **Final liberation is the complete disappearance of all stories of the mind.**
 
-In this state every moment of life is a <u>benediction</u>, a natural gratitude for the <u>overwhelming</u> loveliness and <u>majesty</u> of life. Every moment is a spontaneous prayer, a spontaneous surrender to Existence itself. But there is no decision to do or be these things, for there’s no one to make the decision. There is simply emptiness, open sky, and in that emptiness those qualities are just there.
+In this state every moment of life is a benediction, a natural gratitude for the overwhelming loveliness and majesty of life. Every moment is a spontaneous prayer, a spontaneous surrender to Existence itself. But there is no decision to do or be these things, for there’s no one to make the decision. There is simply emptiness, open sky, and in that emptiness those qualities are just there.
 
-There is bliss because all is as it should be: It’s perfect,It’s exactly the way It is. In a cloud, a leaf, an animal, a person is seen the Eternal, the Deathless, the Nameless. The face of the <u>unfathomable</u> Mystery is present everywhere.
+There is bliss because all is as it should be: It’s perfect,It’s exactly the way It is. In a cloud, a leaf, an animal, a person is seen the Eternal, the Deathless, the Nameless. The face of the unfathomable Mystery is present everywhere.
 
-The whole unI'verse is seen in a river or a blade of grass,and yet, there’s no one to see it. It is the Existence Itself now who sees. The old inhabitant and all her sufferings is gone;now God is the only inhabitant. God looks out at God. God sings a song to God. Infinity can be held in the <u>palm</u> of the hand. Less has become more, for there is a grace over the most mundane details of daily life, or over nothing at all.
+```
+unfathomable  [ʌnˈfæðəməbl] 深不可测
+```
 
-There is a kind of great drunkenness with life — but no drunkard, for no one is there. There is nobody, nothing. Ther eis simply bliss, peace, grace, enchantment for no reason, nocause. It’s just the quality' of the Mystery.
+**The whole universe is seen in a river or a blade of grass,and yet, there’s no one to see it. It is the Existence Itself now who sees.** The old inhabitant and all her sufferings is gone;now God is the only inhabitant. God looks out at God. God sings a song to God. Infinity can be held in the palm of the hand. Less has become more, for there is a grace over the most mundane details of daily life, or over nothing at all.
 
-In this state life is like the notes of a <u>symphony</u>, in AlanWatts’ great metaphor. There is no attempt to get to the end of anything, for each moment is the whole point. Each note is precious, perfect, needed, complete in itself.
+```
+一花一世界,一叶一菩提。
+```
+
+There is a kind of great drunkenness with life — but no drunkard, for no one is there. There is nobody, nothing. There is simply bliss, peace, grace, enchantment for no reason, nocause. It’s just the quality of the Mystery.
+
+```
+enchantment [ɪnˈtʃæntmənt] 魅力
+```
+
+In this state life is like the notes of a symphony, in Alan Watts’ great metaphor. There is no attempt to get to the end of anything, for each moment is the whole point. Each note is precious, perfect, needed, complete in itself.
 
 The purpose of all of Reality is now gathered into each timeless instant, the eternal present.
 
-Life is now like listening to the rain — each drop of rain a brilliant <u>jewel</u>, the <u>scripture</u> of Existence. There is only the rain, the sound of the rain, the suchness of the rain. There is no mind, no awakening, no awareness, no listener. There is no anything anymore. All things have merged into emptiness,the void.. .Nothing. Now there is only the pat-pat-pat of the rain itself, vanishing into silence.
+Life is now like listening to the rain — each drop of rain a brilliant jewel, the scripture of Existence. There is only the rain, the sound of the rain, the suchness of the rain. There is no mind, no awakening, no awareness, no listener. There is no anything anymore. All things have merged into emptiness,the void.. .Nothing. Now there is only the pat-pat-pat of the rain itself, vanishing into silence.
 
 
 
@@ -1655,13 +1668,17 @@ Life is now like listening to the rain — each drop of rain a brilliant <u>jewe
 
 The true revolution is always the same. It lies not in attempting to change things to the way our mind wants them to be, but in waking up to find ourselves in love with the way they are. Theres no logic to it; its an illogical falling in love with all of Reality as It is. Its waking up from the dream-sleep of stories and attachments we normally call being awake.
 
-To do this great attentI'veness is needed. This brings the transformation. Actually, such mindful awareness is itself the transformation, for nothing additional needs to be done. In that pure fire, certain things will drop away. All things will become new even as we change nothing.
+To do this great attentiveness is needed. This brings the transformation. Actually, such mindful awareness is itself the transformation, for nothing additional needs to be done. In that pure fire, certain things will drop away. All things will become new even as we change nothing.
 
-But this mindfulness is <u>subtle</u>. The difference between running the tapes of the mind and watching them as they run is <u>microscopic</u>, a hair’s breadth. Yet that difference ultimately is very vast. In other words, it takes a lot of alertness to be alert. And if you’re like me, you’ll forget over and over.
+```
+attentiveness 注意力；专注
+```
 
-It’s good to allow ourselves some time each day to sit silently, to be aware in silence. In effect, we just sit on the bank and watch the mud in the <u>pond</u> begin to settle by itself — for that is its natural tendency when it isn’t being continuously <u>stirred</u> up by the mind’s motion.
+But this mindfulness is subtle. **The difference between running the tapes of the mind and watching them as they run is microscopic, a hair’s breadth. Yet that difference ultimately is very vast.** In other words, it takes a lot of alertness to be alert. And if you’re like me, you’ll forget over and over.
 
-We don’t need to be <u>unduly</u> concerned about the “right”posture, schedule or technique. An undue concern would just create more tension. There are many useful devices, such as <u>verbalizing</u> our watching or mentally <u>sweeping</u> the body, but ultimately they have to be allowed to drop or they become part of the obstacle. Ultimately, awareness has to stand completely on its own. Since it is your unique journey, the natural rhythms that are right for you will eventually find you.
+It’s good to allow ourselves some time each day to sit silently, to be aware in silence. In effect, we just sit on the bank and watch the mud in the pond begin to settle by itself — for that is its natural tendency when it isn’t being continuously stirred up by the mind’s motion.
+
+We don’t need to be unduly concerned about the “right”posture, schedule or technique. An undue concern would just create more tension. **There are many useful devices, such as verbalizing our watching or mentally sweeping the body, but ultimately they have to be allowed to drop or they become part of the obstacle.** Ultimately, awareness has to stand completely on its own. Since it is your unique journey, the natural rhythms that are right for you will eventually find you.
 
 As the mind quiets down — or perhaps more accurately,as it becomes more absent — the infinite Mystery, the **undying Intelligence** will manifest more and more within us. We can’t ever leave It, for It is us, yet paradoxically we journey far afield before awareness or total exhaustion allows us to discover that we have always been home.
 
