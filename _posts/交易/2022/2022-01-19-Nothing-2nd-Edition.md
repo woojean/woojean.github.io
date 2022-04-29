@@ -52,7 +52,7 @@ Diogenes replied, “There is no need to conquer the world first. I have not con
 
 Alexander said, “No, I must conquer the world first.” Then Diogenes said to him, “You will never finish. You will die in the middle of it.” And Alexander did indeed. In the midst of a war campaign he died.
 
-This is our mind, always needing to do something first before it can relax. In fact, it can never relax because it is always occupied. The mind’s disease is constant occupation. If the mind stops being occupied it simply ceases to exist. It is like a shark, which must stay moving to breathe. **Without movement the mind will die**.
+<font color=red>This is our mind, always needing to do something first before it can relax</font>. In fact, it can never relax because it is always occupied. The mind’s disease is constant occupation. If the mind stops being occupied it simply ceases to exist. It is like a shark, which must stay moving to breathe. **Without movement the mind will die**.
 
 Even to say it will die is incorrect, because the very movement is the mind. It is not the shark but the movement itself. **When the movement stops, the mind is already gone** **because it never actually existed.** But the movement — mind’s constant occupation — made it seem as if it did.
 
@@ -60,13 +60,13 @@ And with what is the mind occupied?
 
 With thoughts,emotions,sensations,desires,goals,problems,preferences, activities and so on. Anything at all that is said or done or felt or thought is of the mind. It is all mind, and mind is always in movement. The mind can be compared to a dance. There is no dance apart from the movement, and the moment the movement stops there is no dance.
 
-It looks as if there are many problems in our lives. But the masters say there is only one: the mind. There is only that one problem, they say, and if that problem is solved then all other problems are solved instantly, they simply cease to exist, because they never existed in the first place apart from the problem of mind itself. Mind created all our problems, they say, and no matter how many problems we solve more will appear unless we solve the basic problem of mind itself.
+It looks as if there are many problems in our lives. But the masters say there is only one: the mind. There is **only that one problem**, they say, and if that problem is solved then all other problems are solved instantly, they simply cease to exist, because they never existed in the first place apart from the problem of mind itself. <font color=red>Mind created all our problems</font>, they say, and no matter how many problems we solve more will appear unless we solve the basic problem of mind itself.
 
 It’s like a tree where we’re cutting off leaves one by one, solving one problem after another. But we’re surprised, too, because for every leaf we cut off three more appear. Every gardener knows that the way to thicken a tree is to prune it. Thus for every problem we solve others appear; the process never ends. We become exhausted solving this never-ending series of problems.
 
 If we look deeply enough, we’ll see that the process will never end; new leaves will always keep growing. So we must look not to the leaves but to the root — the mind — for that is where the real problem resides. If we cut the root all the leaves will wither simultaneously.
 
-So let’s look to the root, not to the leaves. Let’s look to the nature of mind itself.
+So let’s <font color=red>look to the root</font>, not to the leaves. Let’s <font color=red>look to the nature of mind itself</font>.
 
 
 
