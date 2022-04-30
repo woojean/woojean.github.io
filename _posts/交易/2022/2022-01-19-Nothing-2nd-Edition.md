@@ -71,35 +71,43 @@ So let’s <font color=red>look to the root</font>, not to the leaves. Let’s <
 
 
 ## Chapter Two
-What is this nature? It is the nature of mind to always seek, to want. It is a pursuer, a goal-seeking mechanism. **It is always trying to get somewhere; that is why it is never here**. Look at the way we talk to ourselves: “Once I get the right partner, then everything will be fine.” “As soon as I get the new raise, then I can relax.” “Once the addition is on the house, then I can really enjoy myself.” “Once I get over the hump with this problem, then I'll be happy.”
+What is this nature? <font color=red> It is the nature of mind to always seek, to want</font>. It is a pursuer, a goal-seeking mechanism. **It is always trying to get somewhere; that is why it is never here**. Look at the way we talk to ourselves: “Once I get the right partner, then everything will be fine.” “As soon as I get the new raise, then I can relax.” “Once the addition is on the house, then I can really enjoy myself.” “Once I get over the hump with this problem, then I'll be happy.”
 
 Our mind is always in the future, and it is never here. Happiness is always a goal a little way off that will be achieved when the problems are solved. But have we noticed? As soon as one problem is solved, others are there. As soon as one goal is reached there are new goals. It has to be so, for the mind is a goal-seeker. Without goals, without desires it cannot exist. It must have movement, it must have something to go toward. That is its nature.
 
-Then we might ask, what is a problem to this mind? A problem is anything that the mind cannot accept. **It’s the mind’s desire for something or other to be different than the way it is**. It’s some situation inconsistent with the mind's model of how the situation should be.
+Then we might ask, <font color=red>what is a problem to this mind? </font>A problem is anything that the mind cannot accept. **It’s the mind’s desire for something or other to be different than the way it is**. It’s some situation inconsistent with the mind's model of how the situation should be.
 
 **If we have no desire for anything to be different than it** **is, there’s no problem.** But the mind always has a list of things which it wants to be different; hence it always has many problems to solve. This keeps it occupied; it keeps it aIive.
 
-What is the ultimate problem the mind is working on? Its ultimate problem is death. The mind does not want to be annihilated, and it remains in fear because it knows that death can come at any time. If we look deeply inside we can see a trembling, a tension — the fear of annihilation. **The mind is constantly working on the problem of how to survive**. Its goal is to find a way to keep on existing, forever if possible.
+```
+no desire for anything to be different than it is ?
+```
+
+What is the ultimate problem the mind is working on? <font color=red>Its ultimate problem is death. </font>The mind does not want to be annihilated, and <font color=red> it remains in fear</font> because it knows that death can come at any time. If we look deeply inside we can see a trembling, a tension — the fear of annihilation. **The mind is constantly working on the problem of how to survive**. Its goal is to find a way to keep on existing, forever if possible.
 
 To assuage this inner fear mind tries to gather more and more security, power and pleasure. Mind becomes a collector. It collects more status, prestige, wealth, possessions. It collects more knowledge, more data, more answers. It collects more sensations, and then more yet. More food or more sex or more adventure. More partners, friends or allies. More technology. More houses or cars or clothes or books, more experiences, more solutions. **Each of us is different but each of us wants more of something. It’s the nature of the mind.**
 
-But no amount of more, no amount of collecting will satisfy the fear and trembling because **all collecting is outer** **and the fear and trembling are inner**. And this outer can never satisfy the inner. That’s why the mind is greedy. It gathers more and more, hoping to fill the inner hollowness, but it can never fill it, and so it goes on gathering, wanting, seeking. The game never ends, it goes on until the day of death. **We always die in the middle — in the middle of getting what we want.**
+But no amount of more, no amount of collecting will satisfy the fear and trembling because <font color=red>all collecting is outer and the fear and trembling are inner</font>. And this outer can never satisfy the inner. That’s why the mind is greedy. It gathers more and more, hoping to fill the inner hollowness, but it can never fill it, and so it goes on gathering, wanting, seeking. The game never ends, it goes on until the day of death. **We always die in the middle — in the middle of getting what we want.**
 
 
 
 
 ## Chapter Three
-The mind has been compared to a drunken monkey swinging through the trees, for its incessant activity never stops. Look at a monkey; it’s always doing something. It fidgets, it scratches, it eats, it looks around; it never stops except when it sleeps. Now look at the thoughts of our mind, they have the same quality. Our mind flies from one thing to another endlessly. “The table... made of hard wood... where does it come from?... Oregon, I imagine... I wonder what it would be like to live there... I hear it's rainy. . .we've certainly had very little rain here recently.. .the farmers need some rain . . .that’s a hard life, farming. . .” And on it goes.
+The mind has been compared to a drunken monkey swinging through the trees, for its incessant activity never stops. Look at a monkey; it’s always doing something. It fidgets, it scratches, it eats, it looks around; it never stops except when it sleeps. Now look at the thoughts of our mind, they have the same quality. <font color=red>Our mind flies from one thing to another endlessly.</font> “The table... made of hard wood... where does it come from?... Oregon, I imagine... I wonder what it would be like to live there... I hear it's rainy. . .we've certainly had very little rain here recently.. .the farmers need some rain . . .that’s a hard life, farming. . .” And on it goes.
 
 Incessant thought is manifested in incessant activity. Even during relaxation we often stay active: chewing gum, leafing through a magazine, listening to the radio, cooking, snacking, reading, watching TV. To the mind the question is always, “What’s next?” And so we go from eating to talking to working to making love to reading to watching a movie to going to the beach to eating to going to a party... forever.
 
 “What’s next?” The mind gets a gratification moment, but then the moment passes and the mind wants another. It gets another and that passes too; then it wants yet another, ad infinitum. **The mind can never be in the present because to** **the mind the present is only a means to an end.**
 
-This is why the mind is always essentially in misery, because it can never be here in the present moment.
+```
+ad infinitum [ˌæd ɪnfɪˈnaɪtəm] adv. 无止境地;无休止地
+```
 
-**Our mind’s pictures of what we’re supposed to do are based on memories from the past**. It uses the past to try to get to the future. Since the mind is always in in the past or future, it has to be mostly miserable.
+This is why the mind is always essentially in misery, because<font color=red> it can never be here in the present moment.</font>
 
-**Misery is just another name for never being here now,** **always being somewhere other than where we are.** The misery is pushed down so we won’t notice it too much, but it’s always there. Even when we’re seemingly feeling good, deep down the buried misery remains.
+<font color=red>Our mind’s pictures of what we’re supposed to do are based on memories from the past</font>. It uses the past to try to get to the future. Since the mind is always in in the past or future, it has to be mostly miserable.
+
+<font color=red>Misery is just another name for never being here now</font>, always being somewhere other than where we are. The misery is pushed down so we won’t notice it too much, but it’s always there. Even when we’re seemingly feeling good, deep down the buried misery remains.
 
 It looks as if we’re herenow, but almost always we’re not. If we’re washing dishes we’re not just washing dishes. First we set up a short-term goal which we may not even notice — to get to the end of washing dishes. And we want to accomplish something by washing the dishes.
 
