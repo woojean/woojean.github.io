@@ -113,9 +113,13 @@ It looks as if we’re herenow, but almost always we’re not. If we’re washin
 
 In the meantime we’re thinking a thousand and one thoughts: what Bob said yesterday... the dinner we’re going to have tonight... oh, the plants need watering... how beautiful Carrie is... but she likes the temperature of the house too high... on and on. And we’re restimulated by the memory of when we were washing the dishes last year and burned our hand. We’re not herenow.
 
-The mind can never truly play, because playing is of the present, it hasn’t any past or future in it. To have fun is to do something without having any goal in it, neither the goal of pleasure nor the goal of getting to the end of it. Its just play, frolic; there's no purpose to it.
+```
+意识在不停流动
+```
 
-True play is incomprehensible to the mind because to the mind everything must have a purpose, it must serve some end, it must have a meaning. Otherwise, what is the point? But **fun and play have no point; that's their point. They're just what they are.**
+The mind can never truly play, because <font color=red>playing is of the present, it hasn’t any past or future in it</font>. To have fun is to do something without having any goal in it, neither the goal of pleasure nor the goal of getting to the end of it. Its just play, frolic; there's no purpose to it.
+
+<font color=red>True play is incomprehensible to the mind</font> because to the mind everything must have a purpose, it must serve some end, it must have a meaning. Otherwise, what is the point? But **fun and play have no point; that's their point. They're just what they are.**
 
 Osho tells the story of a seeker who was very good at archery. He would hit the target virtually every time. He went to Japan to study under an archery master, to get the certificate from him. In Japan they use all sorts of excuses to teach meditation. Archery is one of them. The seeker would hit the target again and again but the master would only say, “**You are** **shooting the arrow. The arrow must shoot itself.**”
 
