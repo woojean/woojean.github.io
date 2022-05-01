@@ -123,18 +123,23 @@ The mind can never truly play, because <font color=red>playing is of the present
 
 Osho tells the story of a seeker who was very good at archery. He would hit the target virtually every time. He went to Japan to study under an archery master, to get the certificate from him. In Japan they use all sorts of excuses to teach meditation. Archery is one of them. The seeker would hit the target again and again but the master would only say, “**You are** **shooting the arrow. The arrow must shoot itself.**”
 
-This sounds absurd. How can the arrow shoot itself? The seeker continued hitting the target. Then he attempted to deliberately not hit the target. That didn't work either. The master said, ”The target is not the target. You are the target.” **The master wasn't interested in the end, the outcome. He was interested in the beginning.**
+This sounds absurd. How can the arrow shoot itself? The seeker continued hitting the target. Then he attempted to deliberately not hit the target. That didn't work either. The master said, ”The target is not the target. <font color=red>You are the target.</font>” **The master wasn't interested in the end, the outcome. He was interested in the beginning.**
 
 The seeker couldn't get the certificate from the master, so after three years he gave up and packed his bags to return home. He went to say goodbye to the master, who was on the archery range.
 
 The seeker sat down to watch and now he was no longer interested in the certificate; he had given that up.
 And he saw the master for the first time. **The master was just having fun; there was nobody interested in hitting the** **target.** The seeker then took the bow and pulled back the arrow. He was no longer concerned, **he was just playing now**. Before the arrow had left the bow the master turned away and said, “Finished. The target has been reached.”
 
-Deep down, our minds are always serious, always trying to reach to the target. Mind can’t understand that the target is already here because its very nature is to be striving to reach the target.
+Deep down, our minds are always serious, always trying to reach to the target. <font color=red>Mind can’t understand that the target is already here</font> because its very nature is to be striving to reach the target.
+
+```
+You are the target.
+given that up and just having fun.
+```
 
 Thus the mind is almost always involved in struggle, in trying. It’s always making an effort, involved in difficulties and obstacles.
 
-**The mind never sees that this endless seeking is the real** **problem.** It never sees that its attempts to find a solution are the very motions that keep it from seeing that no solution is necessary. It’s like a muddy pond where our motion in the pond to clear up the mud is the very thing that keeps the water muddy and prevents us from seeing beneath the surface to the mysterious bottom.
+The mind never sees that <font color=red>this endless seeking is the real problem</font>. It never sees that its attempts to find a solution are the very motions that keep it from seeing that no solution is necessary. It’s like a muddy pond where our motion in the pond to clear up the mud is the very thing that keeps the water muddy and prevents us from seeing beneath the surface to the mysterious bottom.
 
 
 
