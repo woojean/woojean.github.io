@@ -145,11 +145,11 @@ The mind never sees that <font color=red>this endless seeking is the real proble
 
 
 ## Chapter Four
-The basis of the mind’s motion towards all its goals is discriminations. The world is a totality but the mind separates it into a multiplicity through its labels, concepts, categories. The mind is a labeler and labels everything. “This is a tree, that is a fence. This is moving, that is stationary. This is red, that is orange. He is well-dressed, she is average. The boy is good-looking, his father is not. This is a cloudy day, too bad, yesterday was sunny.”
+The basis of the mind’s motion towards all its goals is discriminations. <font color=red>The world is a totality but the mind separates it into a multiplicity through its labels, concepts, categories</font>. The mind is a labeler and labels everything. “This is a tree, that is a fence. This is moving, that is stationary. This is red, that is orange. He is well-dressed, she is average. The boy is good-looking, his father is not. This is a cloudy day, too bad, yesterday was sunny.”
 
-Mind then perceives reality through its constructs and concepts **rather than directly**. Experiments have indicated that a person shown a red ace of spades will see an ace of hearts, because he has a concept that red means a heart or diamond. Other experiments have shown that if by prearrangement a crowd of people claims to see something that isn't there then the uninitiated observer will see it too. They will actually see something that isn’t there because the mind computes that it must be there.
+<font color=red>Mind then perceives reality through its constructs and concepts rather than directly</font>. Experiments have indicated that a person shown a red ace of spades will see an ace of hearts, because he has a concept that red means a heart or diamond. Other experiments have shown that if by prearrangement a crowd of people claims to see something that isn't there then the uninitiated observer will see it too. They will actually see something that isn’t there because the mind computes that it must be there.
 
-In fact all labels, all concepts set up dualities. To create a category of “tree” we must simultaneously create a category of “not-tree,” of all that which is not a tree. Otherwise this category of “tree” has no meaning. It’s the same with all our categories. “Up” has no meaning without “down.” Something can only be “up” in relation to something else which is “down.” The two concepts come into being together. **No “up” or “down” exists in reality.** Such labels are mind-creations.
+In fact all labels, <font color=red>all concepts set up dualities</font>. To create a category of “tree” we must simultaneously create a category of “not-tree,” of all that which is not a tree. Otherwise this category of “tree” has no meaning. It’s the same with all our categories. “Up” has no meaning without “down.” Something can only be “up” in relation to something else which is “down.” The two concepts come into being together. **No “up” or “down” exists in reality.** Such labels are mind-creations.
 
 ```
 有无相生，相反相成。
@@ -159,19 +159,23 @@ Similarly, “beautiful” can’t exist without “ugly.” “Good” cannot e
 
 Through some experience we set up a belief, let’s say, that men with beards are impolite. And we find that every man with a beard follows the rule. We bring our expectation to each situation, and then we get to be right.
 
-Mind wants to be right at all costs because **the mind is** **a collection of points of view**. Thus, being right about its point of view is tantamount to survival. And then when we come across a bearded man who is not impolite, we’re still right, because he becomes “the exception that proves the rule.” And the moment he slips up we say, “See? I knew I was right. Men with beards are impolite.” **Mind lives in its own reality**.
+Mind wants to be right at all costs because **the mind is** **a collection of points of view**. Thus, being right about its point of view is tantamount to survival. And then when we come across a bearded man who is not impolite, we’re still right, because he becomes “the exception that proves the rule.” And the moment he slips up we say, “See? I knew I was right. Men with beards are impolite.” <font color=red>Mind lives in its own reality</font>.
 
-There’s an Hassidic story about this. There was a <u>zaddic</u>, an Hassidic master, who became a judge. Because he was very conscious he was not concerned with being right but saw rightness in everything. The first case came up and the judge heard the plaintiff and then said, “Right. You are right.”
+There’s an Hassidic story about this. There was a zaddic, an Hassidic master, who became a judge. Because he was very conscious he was not concerned with being right but saw rightness in everything. The first case came up and the judge heard the plaintiff and then said, “Right. You are right.”
 
 The court clerk took him aside and said, “Are you crazy? You have only heard one side; how can you pronounce it right?” The judge said, “You’re right. Let’s hear the defense.” After hearing the defense the judge said, “Yes, right. You are absolutely right.” The clerk took the judge aside again and said, “Now you are insane. You have done what you should never do, you have made both sides right.” And the judge said, “Of course, you’re right. How can both sides be right?”
 
-This is the opposite of what the mind does. Mind clings to its point of view, it clings to its rightness. Mind is a clinger. As soon as it discriminates it starts preferring one thing to another. It makes a multiplicity out of the totality and then starts picking and choosing among the multiplicity. It prefers palm trees over fir trees, or vice-versa. It prefers blue over red, or tall women over short, or a big house over a small one, or prestige over disgrace, or whatever. Desire has arisen.
+This is the opposite of what the mind does. <font color=red>Mind clings to its point of view, it clings to its rightness. Mind is a clinger</font>. As soon as it discriminates it starts preferring one thing to another. It makes a multiplicity out of the totality and then starts picking and choosing among the multiplicity. It prefers palm trees over fir trees, or vice-versa. It prefers blue over red, or tall women over short, or a big house over a small one, or prestige over disgrace, or whatever. Desire has arisen.
 
 Now what exists in the moment is not enough. Now something must be obtained before the moment will be enough. And something else must be pushed away. Mind clings to what it likes and tries to avoid what it dislikes. It becomes attached to its desires, preferences, points of view, beliefs and goals. It clings to people, possessions, money, power, youth. It attaches itself to particular solutions, answers, rituals, habitual attitudes, ways of acting and models of how things should be. The mind becomes as brittle and rigid as a dead stick of wood. **It loses the flexibility of life and becomes** **dead inside**. But it continues to cling because it equates that with survival.
 
-The most basic point of view that the mind has, the most basic duality that it creates, is that it is separate. This assumption is so fundamental that the mind cannot even see it as an assumption. It’s like water to a fish. The mind sees this as simply one of the givens of existence. It doesn’t question this paradigm because the paradigm runs so deep that it can’t even be seen as a paradigm. Intellectually perhaps, yes; but at the level of blood and bone, no.
+<font color=red>The most basic point of view that the mind has, the most basic duality that it creates, is that it is separate</font>. This assumption is so fundamental that the mind cannot even see it as an assumption. It’s like water to a fish. The mind sees this as simply one of the givens of existence. It doesn’t question this paradigm because the paradigm runs so deep that it can’t even be seen as a paradigm. Intellectually perhaps, yes; but at the level of blood and bone, no.
 
-And this paradigm colors all of life. Naturally, since the mind feels separate it must struggle, strive, survive, and make things go right.
+```
+分别心
+```
+
+And this paradigm colors all of life. Naturally, <font color=red>since the mind feels separate it must struggle, strive, survive, and make things go right</font>.
 
 In fact, this whole question of rightness or wrongness is one of the most intriguing aspects of the mind. The mind sees many things as wrong because it sees many things as directly or indirecdy threatening to its survival as a separate thing.
 
@@ -187,7 +191,7 @@ One night as the master Shichiri Kojun was meditating a thief entered with a swo
 
 Caught for other crimes, the thief confessed also to the burglary against the master. Called to testify and asked what happened, Shichiri said, “A man came and I gave him a gift of money. He thanked me and left. There was no thief.”
 
-Each of us creates our own reality by what we notice, by the concepts and interpretations that we overlay onto what is. **Reality itself is not knowable by the mind**. Our senses are small windows indeed. Our faculty of sight, for instance, is only a tiny segment of the whole electromagnetic spectrum.
+<font color=red>Each of us creates our own reality by what we notice</font>, by the concepts and interpretations that we overlay onto what is. <font color=red>Reality itself is not knowable by the mind</font>. Our senses are small windows indeed. Our faculty of sight, for instance, is only a tiny segment of the whole electromagnetic spectrum.
 
 And concerning the data that is available, our senses act to filter out most of it. For example, it’s been demonstrated that a frog’s eye notices only nearby movements characteristic of insects. All other visual data is screened out.
 
