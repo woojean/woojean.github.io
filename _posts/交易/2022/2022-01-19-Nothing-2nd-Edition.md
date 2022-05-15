@@ -248,19 +248,31 @@ Mind wants to impose an order on existence because existence is too wild, too ch
 
 It is a chaos! Big trees die and little seeds sprout. Galaxies die and new galaxies are born. A chaos! If mind had its way there would be no death, but then there would be no life either. Everything would be perfect, mechanical, efficient, ordered — and dead. Because the new would be impossible.
 
-Chaos makes the new possible; that is its significance. **Mind binds itself in rules, doctrines, attitudes, “shoulds,” and  then wonders why the flavor has gone out of life, why life seems more and more a matter of going through the motions. Mind becomes a prisoner of its own boxes.**
+```
+perfect, mechanical, efficient, ordered = no chaos = dead
+```
 
-Mind is a perfectionist, trying to find the structures and the answers that will be just right. It’s an idealist, trying to attain some beckoning goal — political, moral, legal, cultural, scientific, artistic, economic, religious, whatever. And only the impossible looks really attractive as an ideal because **only the impossible looks perfect.**
+Chaos makes the new possible; that is its significance. <font color=red>Mind binds itself in rules, doctrines, attitudes, “shoulds,”</font> and  then wonders why the flavor has gone out of life, why life seems more and more a matter of going through the motions. Mind becomes a prisoner of its own boxes.
+
+```
+going through the motions 走过场，做做样子
+```
+
+<font color=red>Mind is a perfectionist</font>, trying to find the structures and the answers that will be just right. It’s an idealist, trying to attain some beckoning goal — political, moral, legal, cultural, scientific, artistic, economic, religious, whatever. And only the impossible looks really attractive as an ideal because **only the impossible looks perfect.**
 
 And mind falls short of its ideal again and again... tries again, falls short again, becomes miserable again... the game goes on. It’s an ego-trip, the impossible must be attained.
 
-Only the possible and imperfect is human. Mind always desires the super-human, and the super-human is always inhuman. **The most difficult thing for the mind is just to be ordinary, natural, nothing special.**
+```
+falls short of 不足以,达不到
+```
 
-On the contrary, the ego/mind is trying very hard to be unique, special, extraordinary. It wants to stand out and be noticed. In fact this desire to be extraordinary is absolutely ordinary because it is ubiquitous, it’s the everyday nature of the mind.
+Only the possible and imperfect is human. Mind always desires the super-human, and the super-human is always inhuman. <font color=red>The most difficult thing for the mind is just to be ordinary, natural, nothing special.</font>
 
-And mind is an extremist, going from one extreme to the other in its efforts to be unique and special. **It can never be simply in balance because then it would cease to exist**. Mind is the imbalance itself, and it will go to any lengths to be special. If it perceives failure in seeking pleasure then it will start seeking pain. If it thinks it can be superior by debasing itself it will do that. If it does not succeed in life then it will seek suicide, death.
+On the contrary, the ego/mind is trying very hard to be unique, special, extraordinary. It wants to stand out and be noticed. <font color=red>In fact this desire to be extraordinary is absolutely ordinary because it is ubiquitous, it’s the everyday nature of the mind</font>.
 
-Above all, mind is a doer. Something must be done — about one’s life, about the world, about someone else, about this situation and that situation. And mind is innately violent, it is always willing to use force if necessary. To achieve its perfect ideal, coercion may have to be used. To the mind, the end justifies the means.
+And <font color=red>mind is an extremist</font>, going from one extreme to the other in its efforts to be unique and special. **It can never be simply in balance because then it would cease to exist**. Mind is the imbalance itself, and it will go to any lengths to be special. If it perceives failure in seeking pleasure then it will start seeking pain. If it thinks it can be superior by debasing itself it will do that. If it does not succeed in life then it will seek suicide, death.
+
+Above all, <font color=red>mind is a doer</font>. Something must be done — about one’s life, about the world, about someone else, about this situation and that situation. And mind is innately violent, it is always willing to use force if necessary. To achieve its perfect ideal, coercion may have to be used. <font color=red>To the mind, the end justifies the means</font>.
 
 ```
 coercion  [koʊˈɜːrʒn] 强迫;胁迫
@@ -268,24 +280,36 @@ coercion  [koʊˈɜːrʒn] 强迫;胁迫
 
 It wants to pry open the rosebud in order to obtain the rose, and is then surprised when petals fall to the ground and it holds nothing.
 
+```
+Mind is a perfectionist.
+mind is an extremist.
+mind is a doer.
+```
+
+
+
 
 
 ## Chapter Seven
-So this is the mind: It feels separate and alone, and feels a need to survive. It sees much wrongness everywhere and wants to change things including parts of itself so that they will be “right.” It is doingness, movement, struggle, striving — always trying to get somewhere but never being here. It’s self-centered, selfish, always figuring its payoff in everything — even in altruism.
+So this is the mind: It feels separate and alone, and feels a need to survive. It sees much wrongness everywhere and wants to change things including parts of itself so that they will be “right.” It is doingness, movement, struggle, striving — <font color=red>always trying to get somewhere but never being here</font>. It’s self-centered, selfish, <font color=red>always figuring its payoff in everything</font> — even in altruism.
 
 And what is its payoff? Survival of its attitudes, points of view, opinions, beliefs, rationalizations, acts, stories, presentations. The payoff is that it gets to be right. Finally, mind is a self-deceiver. It suffers but persuades itself it is reasonably happy. It lives in the past and future but persuades itself that it lives in the moment. It knows nothing but persuades itself that it knows the truth.
 
-Now let’s look deeper. The first thing to notice is that the mind is a crowd. . .at one moment satisfied, at another one sad, at one moment jealous, at another one frustrated, at one moment gratified, at another one bored. There is no unity. At different times a different actor has center stage. And so many thoughts!. . .pulling this way and that, on this subject and that, constantly changing.
+Now let’s look deeper. The first thing to notice is that <font color=red>the mind is a crowd</font>. . .at one moment satisfied, at another one sad, at one moment jealous, at another one frustrated, at one moment gratified, at another one bored. There is no unity. At different times a different actor has center stage. And so many thoughts!. . .pulling this way and that, on this subject and that, constantly changing.
 
 If we consider emotions and sensations as simply different types of thought, then we notice that there is an endless parade of thoughts each different from the last. It is a melange, a grouping... a crowd.
 
 The most interesting feature of a crowd is that there is no such thing as a crowd. Can we find a crowd apart from the individuals standing there? No. A crowd is an abstraction. Only individuals exist, but all of them standing together give the impression that something apart from the individuals exists. But only individuals exist.
 
-**Mind is like this. If we look closely we’ll see that <u>there is no such thing as mind</u>. There are only individual thoughts.** One thought following another in endless succession gives the feeling that something apart from thoughts themselves exists, but it doesn’t. **If we search for our mind we’ll never find it.** We’ll only find individual thoughts. **<u>Mind is an abstraction. It doesn’t actually exist.</u>**
+**Mind is like this.<font color=red>If we look closely we’ll see that there is no such thing as mind</font>. There are only individual thoughts.** One thought following another in endless succession gives the feeling that something apart from thoughts themselves exists, but it doesn’t. **If we search for our mind we’ll never find it.** We’ll only find individual thoughts. **<font color=red>Mind is an abstraction. It doesn’t actually exist.</font>**
 
-What is this sense of “I” then, this sense of a separate existence? It is itself a series of thoughts, as the Buddha first pointed out. In fact, we think about ourself all the time. The telephone company did a study and found that by far the most common word used by people was “I.” **This “I” is actually an** **assumption, a conclusion formed out of a long succession of** **thoughts. It is itself a thought.**
+What is this sense of “I” then, this sense of a separate existence? It is itself **a series of thoughts**, as the Buddha first pointed out. In fact, we think about ourself all the time. The telephone company did a study and found that by far the most common word used by people was “I.” **This “I” is actually an** **assumption, a conclusion formed out of a long succession of** **thoughts. It is itself a thought.**
 
-And if we look at our thoughts we’ll see that they are things just like a glass or a chair. Each thought is like a wave rising out of the ocean. **It appears out of nowhere, has a brief** **lifespan and then disappears back to where it came from.**
+```
+I = a series of thoughts
+```
+
+And if we look at our thoughts we’ll see that they are things just like a glass or a chair. <font color=red>Each thought is like a wave rising out of the ocean</font>. **It appears out of nowhere, has a brief** **lifespan and then disappears back to where it came from.**
 
 Each thought rises and falls of its own accord, **it is not** **under any control**. Ask yourself: Can you change the thoughts you had yesterday? No. Can you change the thoughts that you will have tomorrow? No. Can you change the thought you’re having right now? No. The “right now” has already passed. You’ll be surprised — you can't change any of your thoughts. “You” have no control over them. They appear and disappear of their own accord. They are independent things.
 
