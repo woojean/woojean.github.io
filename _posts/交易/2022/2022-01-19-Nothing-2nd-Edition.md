@@ -334,28 +334,28 @@ mind = 心
 ## Chapter Eight
 So to say that “mind” does not exist means that “you” and “I” do not exist. We think of ourselves as making decisions, but nobody is there to make them. “You” and “I” as self-guiders, as controllers, as choosers don’t exist. There’s nobody home. There are simply thoughts... **and thoughts expressing** **themselves in activity through a servo-mechanism**. Each thing that we think of as “us” is just another thought. There is no center. “You” and “I” are an illusion.
 
-In fact, we’re entirely a stimulus/response mechanism. A machine. A very complex machine, but a machine never-theless. Normally we’re accustomed to think only of objects such as jukeboxes and billiard balls as being completely in the realm of stimulus-response. We push a button on the jukebox and it plays “White Christmas.” We knock a billiard ball and it rolls across the table.
+<font color=red>In fact, we’re entirely a stimulus/response mechanism. A machine. </font>A very complex machine, but a machine never-theless. Normally we’re accustomed to think only of objects such as jukeboxes and billiard balls as being completely in the realm of stimulus-response. We push a button on the jukebox and it plays “White Christmas.” We knock a billiard ball and it rolls across the table.
 
 But now let’s move up the scale to plant life. A plant is a mechanism which is wired up to respond to the environment in a particular way. Light shines on it and its chemistry turns carbon and minerals to sugar and oxygen.
 
 Now consider animals. Behaviorists demonstrate that animals act entirely within the parameters of stimulus-response. We may like that or not, approve of it or not, but the demonstration remains. It looks as if the cat chooses whether or not to walk into the bedroom, but actually it’s simply responding to stimuli.
-The difference between a plant and an animal in this respect is that an animal has a much more complex set of responses and it can distinguish between different types of stimuli. For instance, a pet can normally distinguish between someone it knows and someone it doesn’t know, and it can respond accordingly in a variety of different ways. **Stimulus-response in animals is much richer than that of plants, but the quality is the same.**
+**The difference between a plant and an animal in this respect is that an animal has a much more complex set of responses and it can distinguish between different types of stimuli.** For instance, a pet can normally distinguish between someone it knows and someone it doesn’t know, and it can respond accordingly in a variety of different ways. **Stimulus-response in animals is much richer than that of plants, but the quality is the same.**
 
 Now let’s move up to humans. A human being is also a stimulus-response mechanism, but a vastly more complex one. The human mechanism has an ability to distinguish between many thousands of different types of stimuli, and its range of responses is exceedingly broad and rich.
 
-But this is perhaps not the most significant difference between the human and animal mechanisms. Perhaps the most significant difference is that we humans have a sound-track — an accompanying voice-over which takes all of our responses and explains them, justifies them, rationalizes them. This **mental sound-track** is absolutely part-and-parcel of the stimulus-response system, but it gives rise to the idea of the“I” and thus to the idea that this “I” is guiding itself, that this “I” is choosing and deciding.
+But this is perhaps not the most significant difference between the human and animal mechanisms. Perhaps the most significant difference is that <font color=red>we humans have a sound-track</font> — an accompanying voice-over which takes all of our responses and explains them, justifies them, rationalizes them. This **mental sound-track** is absolutely part-and-parcel of the stimulus-response system, but it gives rise to the idea of the“I” and thus to the idea that this “I” is guiding itself, that this “I” is choosing and deciding.
 
 If a billiard ball is thrown off of a cliff it will fall. If an animal is thrown off a cliff it will fall and its organism will produce the emotion of fear on the way down. If you or I are thrown off a cliff we will fall and our responses will include a range of emotions such as fear, anger, regret, etc. However, in addition there will be something else — there will be a sound-track all the way down giving our stories as to why we were thrown, what's happening, what's going to happen and so on. All of which will be part of the response mechanism.
 
-One of the things which makes it so difficult to see us humans as being entirely stimulus-response is that part of the mechanism’s range of responses is the ability to alter its future responses to stimuli. One of our human responses is to alter our future responses. This very sophisticated response tends to look like “choice,” even though it is still stimulus-response.
+One of the things which makes it so difficult to see us humans as being entirely stimulus-response is that part of the mechanism’s range of responses is the ability to alter its future responses to stimuli. <font color=red>One of our human responses is to alter our future responses. This very sophisticated response tends to look like “choice,” even though it is still stimulus-response.</font>
 
 Another smokescreen is that the human mechanism’s responses are often unpredictable — simply because we are so complex. The human mechanism is so unbelievably complex that there is often no way to predict what the responses will be, and this unpredictability is taken as further evidence of choice and control.
 
 **To say on the one hand that the mind is totally a stimulus-response mechanism and to say on the other hand that  the mind creates its own version of reality seems like a paradox. But look closely and we’ll see that the two statements are actually saying the same thing.**
 
-The mind responds to stimuli from the environment and part of its response is to label, categorize, judge, evaluate. On the basis of this it desires certain things and desires to avoid other things. And then it feels a sense of pleasure or pain depending on whether the environment provides what it desires. But what it desires, and its response to what it gets, is entirely a function of its own programming. Thus its sense of pleasure or pain in a given moment is dependent on its own stimulus-response conditioning, not on what the environment is providing.
+The mind responds to stimuli from the environment and <font color=red>part of its response is to label, categorize, judge, evaluate</font>. On the basis of this it desires certain things and desires to avoid other things. And then it feels a sense of pleasure or pain depending on whether the environment provides what it desires. But what it desires, and its response to what it gets, is entirely a function of its own programming. Thus<font color=red> its sense of pleasure or pain in a given moment is dependent on its own stimulus-response conditioning, not on what the environment is providing</font>.
 
-In other words,**<u>mind responds to reality by creating its own version of reality</u>.** That horse is really no good. Cherries really taste better than melons. I was really justified in doing that. And so forth. Each of those statements is a version of reality; each is totally created by the mind.
+In other words,<font color=red>**mind responds to reality by creating its own version of reality**</font>. That horse is really no good. Cherries really taste better than melons. I was really justified in doing that. And so forth. Each of those statements is a version of reality; each is totally created by the mind.
 
 Mind is totally stimulus-response and simultaneously it is totally responsible for its experience of reality. And not only is the mind stimulus-response, but the environment is too; it is all stimulus-response. Mind is trying to maintain control when there is no such thing as independent control. **All parts** **of the environment, including the mind as one of those parts,** **are simply responding.** Long before the days of behaviorists, the Buddha called this “co-dependent co-origination.”
 
@@ -366,17 +366,21 @@ Mind is totally stimulus-response and simultaneously it is totally responsible f
 Another way of considering this is to look at the mind as a very sophisticated computer. What are the components of a computer? A computer has input terminals where data comes in to be processed. It has output terminals where processed data is exported out to the environment. It has a central processing unit or CPU where the data is processed. And memory units where data and programs are stored.
 
 And what is a program? A program is simply a list of instructions for the CPU to execute.. .first do this, then do that, then do this... on and on. **Each instruction is simple, but** **since computers can do many millions of these instructions** **per second the end result can look and be very sophisticated** **indeed.**
-Now among a computer’s programs is a master program — a list of instructions as to which programs will be done and in what order and under what circumstances. It is worth noting that the master program is a program just like any other program. It has no quality of self-determination or self-guidance about it. Depending on circumstances — stimuli — it responds according to its instructions. The result can be veryrefined, but is pure stimulus-response.
+Now among a computer’s programs is a master program — a list of instructions as to which programs will be done and in what order and under what circumstances. It is worth noting that the master program is a program just like any other program. It has no quality of self-determination or self-guidance about it. Depending on circumstances — stimuli — it responds according to its instructions. The result can be very refined, but is pure stimulus-response.
 
-Now compare the mind to this computer. The minds input is the five senses. Its output is thoughts, emotions, facial expressions, postures, actions, etc... our whole presentation,internally and externally. We can call all of the output by the word “tapes.” **A stimulus comes in and the mind processes it and comes up with a response, a tape.** The tape may be anger, may be a smile, may be a thought about the weather, may be driving to work. Anything at all that the mind does, mental or physical, is a tape.
+Now compare the mind to this computer. The minds input is the five senses. Its output is thoughts, emotions, facial expressions, postures, actions, etc... our whole presentation,internally and externally. <font color=red>We can call all of the output by the word “tapes.” A stimulus comes in and the mind processes it and comes up with a response, a tape. </font> The tape may be anger, may be a smile, may be a thought about the weather, may be driving to work. Anything at all that the mind does, mental or physical, is a tape.
 
-The mind has memory banks, of course, where data and programs of various kinds are stored. And the mind has an executive sub-routine which determines — on the basis of the directions in it — which program will be running at any given time and thus which tape will be presented.
+The mind has memory banks, of course, where data and programs of various kinds are stored. And <font color=red>the mind has an executive sub-routine which determines — on the basis of the directions in it — which program will be running at any given time and thus which tape will be presented</font>.
 
-**This master program is about one thing and one thing** **only — survival**. Each moment the executive sub-routine gives center stage to that subsidiary program which, according to its instructions, will most ensure survival. Survival may look like lying out on the beach getting a tan, it may look like finishing one's homework, it may look like getting jealous. The tape will be whatever seems to optimize survival the most in that moment, considering all factors.
+<font color=red>This master program is about one thing and one thing only — survival</font>. Each moment the executive sub-routine gives center stage to that subsidiary program which, according to its instructions, will most ensure survival. Survival may look like lying out on the beach getting a tan, it may look like finishing one's homework, it may look like getting jealous. **The tape will be whatever seems to optimize survival the most in that moment, considering all factors.**
+
+```
+getting a tan 晒成棕褐色
+```
 
 And this business of survival can take strange forms. Lets say somebody slaps us in the face. **The mind will search** **its memory banks for an earlier situation that looks similar.** Lets say it finds an early episode where someone hit us and we went unconscious — but we survived. It pulls that program out of storage and runs it.
 
-Now, in the present, after the slap we faint. To this mind, this is what looks most like survival. To some other mind with a different history, survival in that situation could take some other form — anger, propitiation, tears, whatever. But to this mind in this circumstance, survival looks most like fainting. So that is what it does.
+Now, in the present, after the slap we faint. To this mind, this is what looks most like survival. To some other mind with a different history, survival in that situation could take some other form — anger, propitiation, tears, whatever. But **to this mind in this circumstance**, survival looks most like fainting. So that is what it does.
 
 ```
 propitiation 安抚，平息
@@ -386,9 +390,9 @@ But the mind goes further than that. Not only will it respond to this particular
 
 If we observe ourselves, we can see us creating certain patterns over and over again in our lives. The boss who always finds himself with irresponsible employees. The man or woman who is always late because of unavoidable circumstances. The person who always likes his new job until he gradually discovers that his co-workers are unfair to him. The number of possible patterns is infinite.
 
-Mind gets a payoff from setting up such situations over and over; it gets to survive, it gets to be right about its point of view. Employees really are irresponsible. The circumstances really forced me to be late. My co-workers really are unfair. To the mind, this is survival. And it is all stimulus-response, it is all automatic machinery.
+Mind gets a payoff from setting up such situations over and over; **it gets to survive, it gets to be right about its point of view**. Employees really are irresponsible. The circumstances really forced me to be late. My co-workers really are unfair. To the mind, this is survival. And it is all stimulus-response, it is all automatic machinery.
 
-To see the mind as a computer (in its current beginning incarnation) conveys a sense of the mind’s mechanicalness and automaticity, but it doesn’t do it justice. **For the mind is far** **more refined than any present-day computer**. For example, as said before, part of the mind’s programming is an ability to alter its response to future stimuli.
+To see the mind as a computer (in its current beginning incarnation) conveys a sense of the mind’s mechanicalness and automaticity, but it doesn’t do it justice. **For the mind is far** **more refined than any present-day computer**. For example, as said before, <font color=red>part of the mind’s programming is an ability to alter its response to future stimuli</font>.
 
 This quality is not unique to the mind, but is possessed by it to a unique degree here on earth at the present time. It‘s a very complex form of stimulus-response. These programming alterations are labeled as “improvements” when they are conscious and are taken by the mind as evidence of its self-choosing and independent nature.
 
@@ -400,39 +404,43 @@ If we were to dismantle this computer-mind we would never find this “I,” we 
 
 
 ## Chapter Ten
-Yet because of this sense of an “I,” all sorts of bizarre phenomena take place. Since there is an “I,” an attempt must be made to have this “I” survive. **This separate “I” which does** **not actually exist tries to find ways to maintain its existence.** This controller which in fact controls nothing tries to find ways to maintain and increase its control. **No wonder the** **mind is so busy; it has an impossible problem to solve!**
+Yet because of <font color=red>this sense of an “I,”</font> all sorts of bizarre phenomena take place.<font color=red> Since there is an “I,” an attempt must be made to have this “I” survive</font>. This separate “I” which does not actually exist tries to find ways to maintain its existence. This controller which in fact controls nothing tries to find ways to maintain and increase its control. **No wonder the** **mind is so busy; it has an impossible problem to solve!**
 
-Actually the only problem is the “I” itself, but the mind cannot see this. Mind itself is the only problem, which is why the mind cannot solve its problem.
+<font color=red>Actually the only problem is the “I” itself</font>, but the mind cannot see this. <font color=red>Mind itself is the only problem</font>, which is why the mind cannot solve its problem.
 
-And so the whole game arises. The mind engages in its struggles and strivings, its activities and efforts in the attempt to solve a problem which cannot be solved. Preoccupied with the problem of survival and security, reaching toward the future and responding from the past, it can never be herenow. It can never let go, can never be completely in the moment because it ceases to exist if it does.
+And so the whole game arises. The mind engages in its struggles and strivings, its activities and efforts in the attempt to solve a problem which cannot be solved. Preoccupied with the problem of survival and security, reaching toward the future and responding from the past, <font color=red>it can never be herenow. It can never let go, can never be completely in the moment because it ceases to exist if it does.</font>
 
 The mind collects power, money, status, allies, lovers, possessions, answers and agreement from the environment in the vain attempt to solve its problem. It projects its stories onto reality so that it doesn’t see reality, and then ponders how reality ought to be changed. Mind tries to improve, change, get better and be different, but at bottom the game remains the same.
 
-Just see deeply into the illusion. Mind is activity, mind is thought. Mind is the solving of problems, the running of tapes, the striving toward goals. It is all movement. Mind is occupation; occupation is mind. **Since mind itself is the only problem in life, this means that the movement of the mind is the actual problem.**
+Just see deeply into the illusion. Mind is activity, mind is thought. Mind is the solving of problems, the running of tapes, the striving toward goals. It is all movement. <font color=red>Mind is occupation; occupation is mind</font>. Since mind itself is the only problem in life, this means that <font color=red>the movement of the mind is the actual problem</font>.
 
-Further, since movement is mind, any movement or doingness at all will be contributing to the problem instead of solving it. **Indeed, it is the movement or doingness which is** **the problem.**
+Further, since movement is mind, <font color=red>any movement or doingness at all will be contributing to the problem instead of solving it</font>. Indeed, it is the movement or doingness which is **the problem.**
 
 If we look closely we’ll see that ultimately all of our attempts to improve, change, be different or better are part of the problem. Who is trying to be better? The mind. Trying to be better or different is simply a way of sustaining the mind's motion and thus of sustaining mind itself.
 
-In attempting to change or be different, who is doing the attempting? The mind. The very effort involved is the problem, is the mind. **It perpetuates the only suffering in life,** **which is wanting things to be different than they are at this** **moment.**
+In attempting to change or be different, who is doing the attempting? The mind. The very effort involved is the problem, is the mind. It perpetuates the only suffering in life, which is <font color=red>wanting things to be different than they are at this moment</font>.
 
-That is, everything in our life which we conceive of as the solution to our problems is the problem. Every effort we make to achieve happiness is what keeps us in suffering deep down. Everything we do to make things better is what keeps things the way they are.
+That is, <font color=red>everything in our life which we conceive of as the solution to our problems is the problem</font>. Every effort we make to achieve happiness is what keeps us in suffering deep down. Everything we do to make things better is what keeps things the way they are.
 
 Watch. You’ll see that the motions of the mind — its desires, discriminations, efforting, struggling — are the only problem. There is no problem outside of that.
 
-The mind creates its own version of reality, which it then takes for reality itself. Finding this “reality” inadequate, it then attempts to change things, not seeing that the problem is not reality but its own created version of it. **Reality is never** **a problem; only our stories about it are the problem.**
+The mind creates its own version of reality, which it then takes for reality itself. Finding this “reality” inadequate, it then attempts to change things, not seeing that the problem is not reality but its own created version of it. <font color=red>Reality is never a problem; only our stories about it are the problem</font>.
+
+```
+???
+```
 
 The mind creates problems out of what is in order to give itself something to do, since the very doingness sustains the existence of the mind. There is no problem other than this craving of the mind itself.
 
 If mind is the problem, then why not do something to nullify or alter or extinguish the mind? Just see that the very question comes from the mind. In attempting to extinguish the mind, who would be making the attempt? The mind. In endeavoring to alter the mind, who would be making the endeavor? The mind.
 
-This is what the mind is doing now. It’s trying to improve, change, make things different and better. All of that may temporarily palliate the problem, distract us from it or better adjust us to it, but it won’t remove or solve it. How can it? All of that is the problem.
+<font color=red>This is what the mind is doing now. It’s trying to improve, change, make things different and better</font>. All of that may temporarily palliate the problem, distract us from it or better adjust us to it, but it won’t remove or solve it. How can it? All of that is the problem.
 
 Our desire to have things be something other than what they are, as Byron Katie says, is the suffering in our life. All desire is wanting something that isn’t herenow. The desire itself is the suffering because it prevents us from experiencing the perfection and enoughness of this moment.
 
 Thus, our desires to reach satisfaction in life are what keep it unsatisfactory. Our desires to alter the world so that it will be more acceptable are what keep it unacceptable in our version of reality. Our desires to make things perfect are what keep them imperfect.
 
-It is possible to deeply see that nothing can be done. **There’s nothing we can do to solve the situation or escape** **from it, because anything we do becomes simply another way** **of maintaining it.**
+It is possible to deeply see that nothing can be done. <font color=red>There’s nothing we can do to solve the situation or escape  from it</font>, because anything we do becomes simply another way of maintaining it.
 
 There is no way to get out of the mind because “we” are the mind, there is no part of what we think we are which is left out. The very idea that “you” exist (as a separate entity) is the problem of life; how therefore are “you” going to solve the problem?
 
@@ -442,31 +450,31 @@ There is no way to get out of the mind because “we” are the mind, there is n
 ## Chapter Eleven
 So, you may ask, why not just let go then? Why not just accept everything the way it is? Observe. This is simply another way for the mind to preserve itself. For who is deciding to let go? Who is deciding to accept everything? The mind. How can the controller not try to control? How can the achiever not try to achieve? How can the improver not try to improve? It’s like asking the nose not to be the nose.
 
-**The mind can’t really let go or accept what is, because the very attempt to do so perpetuates the mind, perpetuates the non-accepter.** Of course we can pretend to be accepting,we can convince ourself that we are accepting everything, but that’s just a head-trip. Deep down the solidity of the “I” is being reinforced.
+<font color=red>The mind can’t really let go or accept what is</font>, because the very attempt to do so perpetuates the mind, perpetuates the non-accepter. Of course we can pretend to be accepting,we can convince ourself that we are accepting everything, but that’s just a head-trip. Deep down the solidity of the “I” is being reinforced.
 
-What about other solutions then? To love everyone. To serve others. To seek God or enlightenment. Or to not give a damn. But look deeply. To decide to love everyone is just another tape. Who is it that is deciding to love? The mind.And **deciding to or trying to love is a misguided effort because real love has nothing to do with trying to be loving.**
+What about other solutions then? To love everyone. To serve others. To seek God or enlightenment. Or to not give a damn. But look deeply. <font color=red>To decide to love everyone is just another tape</font>. Who is it that is deciding to love? The mind. And **deciding to or trying to love is a misguided effort because real love has nothing to do with trying to be loving.**
 
 Love just happens; it’s effortless and involuntary. It’s a falling; it just happens of itself. There’s no way to force it.
 
 Attempting to love is of the mind. It’s false and far removed from love itself.
 
-Well then, perhaps we’ll decide to forget about ourself and serve others. But how can we truly serve others when we can’t serve ourself? If the water in our own pond is still muddy,how can we expect to clear up the muddiness in the ponds of others? What looks good to us may have a bad result. To think we are doing something good is of the mind; it reinforces the illusions that constitute the mind.
+Well then, perhaps we’ll decide to forget about ourself and serve others. But how can we truly serve others when we can’t serve ourself? <font color=red>If the water in our own pond is still muddy,how can we expect to clear up the muddiness in the ponds of others?</font> What looks good to us may have a bad result. To think we are doing something good is of the mind; it reinforces the illusions that constitute the mind.
 
 Not that serving others is bad. But when it truly happens it’s like love — involuntary, effortless. And there is no thought that one is serving others, no decision about it. It just happens.
 
 Perhaps, then, we’ll seek God or enlightenment. But who will be doing the seeking? Yes, the mind. To seek God or enlightenment or transformation or whatever is just another way for the mind to sustain itself, another way for the mind to keep up its motion.
 
-Seeking money-power-pleasure and seeking the divine may look much different, but they have the same quality. It’s still a seeking. It’s still an attempt to get to some place other than where we are. It’s still the mind trying to go beyond the mind. The trying is the mind. The solution is the obstacle.
+<font color=red>Seeking money-power-pleasure and seeking the divine may look much different, but they have the same quality. It’s still a seeking. It’s still an attempt to get to some place other than where we are. It’s still the mind trying to go beyond the mind. The trying is the mind. The solution is the obstacle.</font>
 
 A joke: How can we find God? She is waiting at home for us, and meanwhile we cannot find Her because we are off seeking Her.
 
-Then there is the ultimate solution — to just not give a damn, to simply not do anything at all about it. But that does not alter anything, because the deep-down suffering is still there. And who is it that is choosing not to give a damn? Yes,the mind. To choose not to care is to perpetuate the chooser,is to perpetuate this illusory “I.” It’s the same game and the problem continues. Pretending that it doesn’t exist is merely another way for the problem to sustain itself.
+Then there is the ultimate solution — to just not give a damn, to simply not do anything at all about it. But that does not alter anything, because the deep-down suffering is still there. And who is it that is choosing not to give a damn? Yes,the mind. To choose not to care is to perpetuate the chooser,is to perpetuate this illusory “I.” It’s the same game and the problem continues. <font color=red>Pretending that it doesn’t exist is merely another way for the problem to sustain itself</font>.
 
 Mind is the problem, but look carefully and we see that there is nothing we can do to escape from it. Because all escape attempts are the mind, are the problem. Even deciding not to escape is another attempt to escape because such a decision perpetuates the illusion that there is a decider. All attempts to get there are ways of not getting there. **All ways out lead back in.** It is like holding up a mirror to a mirror — an infinite regression, limitless, never-ending.
 
 Everything whatsoever is grist for the mind in terms of it perpetuating itself. There is absolutely no activity of any kind that cannot serve the mind's purpose, since activity is the mind. All efforts to choose, to struggle, to seek goals and to control are mind. Conversely, all efforts not to choose, not to struggle, not to seek goals and not to control are also mind.It’s all mind.
 
-All thoughts, feelings, attitudes, opinions, sensations,viewpoints, acts, positions, stories, presentations, responses —all of it, everything sustains the mind, is the mind. Nothing is left out. Everything whatsoever about us is part-and-parcel of the problem. “We” ourselves are the problem.
+All thoughts, feelings, attitudes, opinions, sensations,viewpoints, acts, positions, stories, presentations, responses —all of it, everything sustains the mind, is the mind. Nothing is left out. Everything whatsoever about us is part-and-parcel of the problem. <font color=red>“We” ourselves are the problem</font>.
 
 **If “you” and “I” are the problem in our life, how can that problem be solved? It can’t. How can we get away from this fictitious “you” and “I” then? We can't; that's who “we” are.**How can we improve our situation then? We can't. We can fool ourselves of course, but at the deepest level there is no way to improve it.
 
@@ -486,41 +494,49 @@ Answer: There is no point.
 
 The mind thinks that everything must have a point,because otherwise what is the point? This, too, is part of the problem. The mind thinks that these words must have a point, but actually they have no point. These words are just concepts, structures, boxes — of no importance.
 
-Thus there’s nothing “true” about any of this. None of the concepts being used here are true in any sense. Useful temporarily, perhaps, but not true. If the mind clings to them that is simply another way of perpetuating itself, perpetuating the separate “you” and “me.”
+<font color=red>Thus there’s nothing “true” about any of this. None of the concepts being used here are true in any sense. Useful temporarily, perhaps, but not true. If the mind clings to them that is simply another way of perpetuating itself, perpetuating the separate “you” and “me.”</font>
 
 In fact, a logician would note that these concepts have contained a number of contradictions. It doesn’t matter. There will be more; it has to be that way. Besides, they’re fun.
 
-All these words — past and future and this sentence too — are just devices to create a situation where something other than concepts can happen. That may not happen immediately, it may not happen for months or years, but it doesn't matter because it can't be rushed or forced anyway. And it can’t be slowed down either.
+All these words — past and future and this sentence too — **are just devices to create a situation where something other than concepts can happen**. That may not happen immediately, it may not happen for months or years, but it doesn't matter because it can't be rushed or forced anyway. And it can’t be slowed down either.
+
+```
+words are just devices to create a situation where something other than concepts can happen.
+```
 
 In truth — do you enjoy the joke? — in truth, these words are merely a playing in the sandbox, a passing of toys back and forth, a building of castles in the damp sand. There is no point to them at all. See the point.
 
 
 
 ## Chapter Twelve
-The central dilemma that we humans find ourselves in,the central problem of our life, is not solvable at the level at which the problem is posed. It is an extraordinary problem in that all the attempts to solve it constitute the problem itself.Every attempt to change it, improve it, suppress it, solve it —only deepens it. It is like someone in quicksand whose every effort to get out only sinks him deeper and deeper into the sand.
+<font color=red>The central dilemma that we humans find ourselves in,the central problem of our life, is not solvable at the level at which the problem is posed. It is an extraordinary problem in that all the attempts to solve it constitute the problem itself. Every attempt to change it, improve it, suppress it, solve it —only deepens it</font>. It is like someone in quicksand whose every effort to get out only sinks him deeper and deeper into the sand.
 
 What is the problem? The problem is that the mind is a problem-solving mechanism which is by the problem of its own survival. It seems as if this problem is something inherited by the mind. It seems as if the mind finds itself alone and separate in a world which seems indifferent at best and overtly hostile at worst. But it isn’t that way. **The mind creates its own problem — and then spends its energy trying to solve its self-created problem.**
 
-Of course, since the problem is an illusion it cannot be solved. The mind as controller, chooser, guider of its destiny does not exist — only stimulus-response exists. If the mind-as-controller doesn’t exist, how can it survive? By pretense; by not seeing that it doesn’t exist.
+Of course, since the problem is an illusion it cannot be solved. The mind as controller, chooser, guider of its destiny does not exist — only stimulus-response exists. If the <font color=red>mind-as-controller doesn’t exist</font>, how can it survive? By pretense; by not seeing that it doesn’t exist.
 
 The mind is a magic show, a trick with mirrors, it’s the magician who makes something appear to be so when it isn't.You see the lady in the box sawed in half, yet she is not sawed in half; something is ficticious. This is like the mind. The non-existent mind-magician survives through the sleight-of-hand of working on the problem of its survival.
 
-If we look at our life carefully, we see that it is about survival. The mind survives through the problem itself; the attempts to solve the problem are the mind. If the striving of the mind were to vanish, the mind itself would vanish.
+```
+sleight-of-hand 花招，戏法。
+```
+
+If we look at our life carefully, we see that it is about survival. <font color=red>The mind survives through the problem itself</font>; the attempts to solve the problem are the mind. If the striving of the mind were to vanish, the mind itself would vanish.
 
 The mind is willing to spend an entire lifetime trying to keep this shell game going — trying to arrange things so that something which doesn't exist can survive. It’s willing to use a whole lifetime in the misery of this absurd struggle.
 
 And it is not only willing to do so but it must do so; that is its nature. The mind — you and I — will act out this comic tragedy right up to the moment of stepping into our grave.The mind has no choice; this is what it must do. It cannot do anything else than be the magician — and it is the ultimate magician, for its trick is that the magician herself appears to be there but is non-existent.
 
-So the problem cannot in any way be solved, since all efforts to do so constitute the problem. The problem can only be transcended, but that transcendence is not a doingness of any kind. Nothing is done. Nothing is improved or changed,since at the deepest level no improvement or change is possible. Rather an awareness, a seeing arises and then the problemis no longer experienced as a problem.
+So the problem cannot in any way be solved, since all efforts to do so constitute the problem. <font color=red>The problem can only be transcended, but that transcendence is not a doingness of any kind. Nothing is done.</font> Nothing is improved or changed,since at the deepest level no improvement or change is possible. Rather an awareness, a seeing arises and then the problemis no longer experienced as a problem.
 
 
 
 # Existence
 Since it is no longer experienced as a problem, the problem can be said to have disappeared. Nothing has changed, the situation remains the same, but the problem has vanished.
 
-In fact there is not now and there has never been any problem in life — other than the magic-show, the mind’s interpretations and stories about what’s happening.
+In fact there is not now and <font color=red>there has never been any problem in life — other than the magic-show, the mind’s interpretations and stories about what’s happening</font>.
 
-To actually see this is to have transcended the problem of mind. And when that happens the problem of life becomes like the favorite toy of a child when the child has grown up —it’s simply left behind. The toy is still there in the closet and nothing has changed about it. But now it’s no longer relevant. It has been transcended.
+To actually see this is to have transcended the problem of mind. And when that happens **the problem of life becomes like the favorite toy of a child when the child has grown up —it’s simply left behind.** The toy is still there in the closet and nothing has changed about it. But now it’s no longer relevant. It has been transcended.
 
 This transcendence, of course, is not a doingness of any kind. It’s nothing that the mind does, nothing that “you” and“I” do. **Transcendence is not accomplished by the mind at all**. Rather, it is the mind itself that is transcended. “You” and “I”are transcended.
 
@@ -544,31 +560,31 @@ The key is being a caterpillar. If the caterpillar is busy trying to become a bu
 ## Chapter Thirteen
 In the case of a caterpillar that’s no problem because a caterpillar has no mind, it has no notion of itself as a chooseror self-guider. But in our case what will we do? We are the mind, everything we’ve ever thought of ourselves as being is the mind. If the mind decides to “be the way it is,” that is just another decision by the mind, it’s the mind surviving. And the mind can never be herenow, can never simply be the way it is. No, **it’s very busy trying to get somewhere**. So how is this paradox resolved?
 
-To answer that question we must introduce the notion of being or the **true self**. It is who we really are, but it is not“you” or “I.” It has nothing to do with who or what we think we are. It has nothing to do with the mind, nothing to do with our tapes, models, programs, voice-overs, thoughts, emotions,sensations, stories, actions, presentations, metaphysics or anything else about “you” or “I.” No, **it’s who we really are. And it’s beyond the world of stimulus-response.**
+To answer that question we must introduce <font color=red>the notion of being or the true self</font>. It is who we really are, but it is not“you” or “I.” It has nothing to do with who or what we think we are. It has nothing to do with the mind, nothing to do with our tapes, models, programs, voice-overs, thoughts, emotions,sensations, stories, actions, presentations, metaphysics or anything else about “you” or “I.” No, **it’s who we really are. And it’s beyond the world of stimulus-response.**
 
-**The true self is like an empty blue sky — vast, silent,unchanging. It’s pure consciousness, pure existence. It has no form, and it doesn't look like anything. It is reality, but has nothing to do with the mind’s stories of reality.**
+**<font color=red>The true self is like an empty blue sky — vast, silent,unchanging. It’s pure consciousness, pure existence. It has no form, and it doesn't look like anything. It is reality, but has nothing to do with the mind’s stories of reality.</font>**
 
 It is truth, but has nothing to do with concepts or words. It is beauty itself, but a beauty beyond form or image.It is bliss, but it has nothing to do with what is normally thought of as happiness because it has no cause. It is peace,stillness, silence, but it has nothing to do with what normally is thought of as relaxation in human life.
 
-No formulations of any kind can really describe being,the self, the existence. It is emptiness, nothing, the absence of anything. It is unsayable, unthinkable, not reachable by any conceptualization. That is, we can conceptualize it but the conceptualization is just nonsense because it has nothing todo with existence or being itself. **Being is unlimited and words are limited — the gap is more or less unbridgeable**. Thus allwords and concepts about it are fundamentally false, because words come from a context of exclusion and existence is not that way.
+No formulations of any kind can really describe being,the self, the existence. <font color=red>It is emptiness, nothing, the absence of anything</font>. It is unsayable, unthinkable, not reachable by any conceptualization. That is, we can conceptualize it but the conceptualization is just nonsense because it has nothing todo with existence or being itself. **Being is unlimited and words are limited — the gap is more or less unbridgeable**. Thus all words and concepts about it are fundamentally false, because <font color=red>words come from a context of exclusion and existence is not that way</font>.
 
-Lets look directly. In order for any conceptualization at all to be formed something must be excluded; otherwise we have the totality, the whole, but no concept. In order to form the concept of ‘pencil” we must exclude that which is “not-pencil.” In order to form the concept of “red” we must exclude that which is not-red.”This is why no mental formulation, no conceptual system no matter how subtle or sublime can be the truth. Because concepts are ultimately grounded in limitation,exclusion, logic — and truth is unlimited, non-exclusive and, to the mind, illogical.
+Lets look directly. In order for any conceptualization at all to be formed something must be excluded; otherwise we have the totality, the whole, but no concept. In order to form the concept of ‘pencil” we must exclude that which is “not-pencil.” In order to form the concept of “red” we must exclude that which is not-red.”This is why no mental formulation, no conceptual system no matter how subtle or sublime can be the truth. <font color=red>Because concepts are ultimately grounded in limitation,exclusion, logic — and truth is unlimited, non-exclusive and, to the mind, illogical</font>.
 
 What is truth? Truth is a sunset, truth is rain on the streets, truth is percolating coffee. It is whole. Truth is like a hologram in that each part of it contains the totality. Truth is not a sum of the parts and no amount of explanation can ever reach it; **it simply is what it is**.
 
-**What is truth? Truth is a rose — not the word “rose” nor any theory about roses but purely a rose itself.** We can experience a rose, we can experience reality, we can experience truth,but as soon as we try to put it into words we distort it. We could write a million words about experiencing a rose on a warm spring evening but they would not even come close to the experience itself.
+**What is truth? Truth is a rose — not the word “rose” nor any theory about roses but purely a rose itself.** We can experience a rose, we can experience reality, we can experience truth,but <font color=red>as soon as we try to put it into words we distort it</font>. We could write a million words about experiencing a rose on a warm spring evening but they would not even come close to the experience itself.
 
 To really see this is to understand, as Osho often said,that ignorance is so vast that it can never be destroyed. What is water? Science answers that it is H2O, hydrogen and oxygen. What is hydrogen, what is oxygen? Science answers that they are certain configurations of protons and electrons, matter and energy, but these are just new names.
 
-Nobody knows what an electron is, nobody knows what matter is, nobody knows what hydrogen is and nobody knows what water is. We have added a few new labels and categories,but the mystery is still profound, totally impenetrable. Our ignorance is infinite, it can never be overcome. It is not possible to ever really know anything.
+Nobody knows what an electron is, nobody knows what matter is, nobody knows what hydrogen is and nobody knows what water is. We have added a few new labels and categories,but the mystery is still profound, totally impenetrable. Our ignorance is infinite, it can never be overcome. <font color=red>It is not possible to ever really know anything</font>.
 
 This being so, it follows that even the simplest things are basically incommunicable, they can’t actually be accurately talked about. Words immediately distort them. If this is true of water or a rose, how much more true is it of words about being.. .self.. .existence. **The moment we talk about it we fall into error and distortion and falsity.**
 
 Thus when we say that being is truth or bliss or peace it must be remembered that this is the language of poetry, of metaphor, of indirect allusion. Even the very words “being” or“self” or “existence” are merely labels created by the mind, and we do well not to take them literally.
 
-The apt phrase used in the Buddhist Surangama Sutrais that all words and concepts about existence are “a finger pointing at the moon.” Words can only indicate, suggest; they are not the moon — reality — but only a finger pointing at it.
+The apt phrase used in the Buddhist Surangama Sutrais that <font color=red>all words and concepts about existence are “a finger pointing at the moon.”</font> Words can only indicate, suggest; they are not the moon — reality — but only a finger pointing at it.
 
-The mind, however, misses the moon and focuses onthe finger. Mind pores over philosophies, theologies, meta-physical systems and then feels that the existence is really such-and-such a way. Mind always misses the point. Even the concepts in this paragraph are just toys in the sandbox.
+<font color=red>The mind, however, misses the moon and focuses on the finger</font>. Mind pores over philosophies, theologies, meta-physical systems and then feels that the existence is really such-and-such a way. Mind always misses the point. Even the concepts in this paragraph are just toys in the sandbox.
 
 An interesting true story: A seeker once came to the Zen master Joshu and asked, “What is the Buddha? Who is the Buddha? Where can he be found?” Joshu replied, “Go into the temple. You will find the Buddha there.” Then the man said, “But inside the temple there is only a stone statue. And you know and I know that a stone statue is not the Buddha.”Joshu replied, “You are absolutely right. A stone statue is not the Buddha.”And so the man said, “Then who is the Buddha?” And Joshu replied, “Go into the temple. You will find the Buddha there.”
 
@@ -582,9 +598,9 @@ Truth is the immediate, the foreground, but we don’t see it because we’re sc
 
 
 ## Chapter Fourteen
-Mind is enmeshed in symbolism, in stories, and it takes these for reality, for truth. Yet nothing which can be expressed in words or symbols is “true”; neither is it “false.” Rather, it is merely useful or non-useful. 
+Mind is enmeshed in symbolism, in stories, and it takes these for reality, for truth. Yet <font color=red>nothing which can be expressed in words or symbols is “true”; neither is it “false.” Rather, it is merely useful or non-useful</font>. 
 
-Science is replete with examples of “truths” which became supplanted. First light was a particle, then a wave; now it’s something of both. First the world was flat, now it is round; someday it may be perceived in some other way. First Newton's laws were “true”; now relativity is considered “true,” and someday it in turn will be supplanted.**No concept or law or symbolic relation is ultimately “true”; it's simply useful or not useful for a limited period.**
+Science is replete with examples of “truths” which became supplanted. First light was a particle, then a wave; now it’s something of both. First the world was flat, now it is round; someday it may be perceived in some other way. First Newton's laws were “true”; now relativity is considered “true,” and someday it in turn will be supplanted. **No concept or law or symbolic relation is ultimately “true”; it's simply useful or not useful for a limited period.**
 
 Is “The tree is green” true? Certain vibrations are hitting our eyes and we have agreed to label those “green.” A different interpretation of the vibrations we have agreed to label “tree.” When we say “The tree is green” we're simply attaching two labels together; **it may be useful, but there’s nothing true about it.** Conjoining the labels “tree” and “green” has a lot of agreement, but somebody may disagree — to them the tree may be chartreuse.
 
@@ -592,14 +608,13 @@ Is “The tree is green” true? Certain vibrations are hitting our eyes and we 
 chartreuse [ʃɑːrˈtruːz] 察吐士酒，荨麻酒(一种烈性甜酒，呈绿色或黄色);浅黄色;浅绿色
 ```
 
-This might seem like an out-of-the-way or irrelevant matter, but it extends into our whole life.
-Let's say we feel that our girlfriend is boring. To us that’s true, but to someone else it’s false. Let’s say we feel we don’t have enough money. To us that’s true — our desires out-strip what we have. But actually it’s a matter of desires — the mind — rather than money. We’re creating our experience of the sum of money we have.
+This might seem like an out-of-the-way or irrelevant matter, but it extends into our whole life.Let's say we feel that our girlfriend is boring. To us that’s true, but to someone else it’s false. Let’s say we feel we don’t have enough money. To us that’s true — our desires out-strip what we have. But actually it’s a matter of desires — the mind — rather than money. We’re creating our experience of the sum of money we have.
 
 Similarly, we’re creating our experience of everything whatsoever in our life. It’s all our creation. We create what is good, bad, true, false, right, wrong, desirable and undesirable in our life.
 
-Existence is none of these categories. It simply is what it is. It is pristine, pure, ever-new. It has no past, no future, it is simply herenow. Then the mind comes in and imposes its tapes and stories upon it. The mind imposes its judgments,evaluations, discriminations, dualities, categories, labels and multiplicities. It boxes up reality and then is caught in its own box. It projects its own movie onto the screen of reality and then lives in the movie. And it’s in deep suffering because it’s off in the past or the future some where.
+**Existence is none of these categories. It simply is what it is. It is pristine, pure, ever-new. It has no past, no future, it is simply herenow. Then the mind comes in and imposes its tapes and stories upon it. The mind imposes its judgments,evaluations, discriminations, dualities, categories, labels and multiplicities. It boxes up reality and then is caught in its own box. It projects its own movie onto the screen of reality and then lives in the movie. And it’s in deep suffering because it’s off in the past or the future some where.**
 
-Something is wrong, because happiness is the criterion in life. If our path in life is giving us deep bliss, deep abiding joy then it is the right path. But look carefully and let’s ask ourselves truthfully: How many moments in our life have we experienced such profound rapture and peace that we had no desire for anything more whatsoever? A handful of times?
+Something is wrong, because <font color=red>happiness is the criterion in life</font>. If our path in life is giving us deep bliss, deep abiding joy then it is the right path. But look carefully and let’s ask ourselves truthfully: <font color=red>**How many moments in our life have we experienced such profound rapture and peace that we had no desire for anything more whatsoever? A handful of times?**</font>
 
 If bliss is the criterion — and it is — then we’re missing the mark. What is wrong? We go on fixing things, improving,solving problems — and our situation remains the same.
 
@@ -609,9 +624,9 @@ Seeing this, we begin to look at the root of the problem — the mind itself —
 stupefy [ˈstuːpɪfaɪ] 使惊讶(或惊呆、思维不清、神志不清)
 ```
 
-For it is us as the self, existence itself, who is carrying the mind. Not the self that we identify with — our thoughts,emotions, attitudes, points of view, etc. — for that is all mind.No, us as existence itself is carrying it.
+For <font color=red>it is us as the self, existence itself, who is carrying the mind</font>. Not the self that we identify with — our thoughts,emotions, attitudes, points of view, etc. — for that is all mind. No, us as existence itself is carrying it.
 
-Let’s be alert now, for the mind will immediately try to box up “the self,” “the existence.” Mind will create pictures of what it is, images of what it looks like: Infinite space. White light. Blue light. Darkness. Pure energy. The eternal. And soon. None of these are wrong, and neither are they right. Nonevof these symbols can be taken seriously, for they’re all just play things. They’re only fingers pointing at the moon.
+**Let’s be alert now, for the mind will immediately try to box up “the self,” “the existence.”** Mind will create pictures of what it is, images of what it looks like: Infinite space. White light. Blue light. Darkness. Pure energy. The eternal. And soon. None of these are wrong, and neither are they right. None of these symbols can be taken seriously, for they’re all just play things. They’re only fingers pointing at the moon.
 
 And there are many such symbols, reflecting the attempts of those who have awakened to communicate the incommunicable.
 
@@ -619,7 +634,7 @@ There is the tradition known as the via positive, the positive way, in which exi
 
 To get around this tendency some other traditions have followed the via negative , the negative way, in referring to existence. They refer to it by indicating what it is not.
 
-Thus in the Upanishads there’s a famous passage which describes the existence as “not this, not that.” 
+Thus in the Upanishads there’s a famous passage which <font color=red>describes the existence as “not this, not that.”</font> 
 
 ```
 Upanishads 奥义书
@@ -633,9 +648,9 @@ Still another way of approaching being or existence is to refer to it as oneness
 
 When mind looks upon the world it looks through its glasses of discrimination and sees a multiplicity of separate entities — including itself — all struggling for survival. This, however, is just the appearance.
 
-Beneath the surface, existence is a totality; it is One. At this level there is no struggle of any kind because there must be a duality in order for struggle to exist; struggle must be for something or against something. 
+Beneath the surface, existence is a totality; it is One. <font color=red>At this level there is no struggle of any kind because there must be a duality in order for struggle to exist</font>; struggle must be for something or against something. 
 
-But the One is everything; it excludes nothing, desires nothing, seeks nothing, is against nothing. How then can there be a struggle? The existence is playing, it likes to look upon itself from different points of view... different entities. And part of this play or lela is that those points of view which have consciousness imagine themselves to be separate entities.
+But <font color=red>the One is everything; it excludes nothing, desires nothing, seeks nothing, is against nothing</font>. How then can there be a struggle? The existence is playing, it likes to look upon itself from different points of view... different entities. And part of this play or lela is that those points of view which have consciousness imagine themselves to be separate entities.
 
 
 
@@ -647,30 +662,30 @@ Notice that the problem is unsolvable, because in fact at some point the wave is
 
 Notice too that at no time is the wave actually separate from the ocean. Indeed, even to call it a “wave” separates it in our minds, but in fact there is only the ocean. Even if the wave thinks it is separate, it is not. The attempt to survive perpetuates its sense of separateness, but actually it is never separate.There is only the ocean, evolving and changing its form on the surface, yet remaining always the same.
 
-Actually, the only problem the wave has is that it is trying to solve a problem. **The moment it gives up its problem of survival it is at the level of ocean, where there is no problem of any kind.** At that level there is only the serenity and bliss of existence itself.
+Actually, the only problem the wave has is that it is trying to solve a problem. <font color=red>The moment it gives up its problem of survival it is at the level of ocean</font>, where there is no problem of any kind. At that level there is only the serenity and bliss of existence itself.
 
 ```
 及吾无身，吾有何患？
 廓然而大公，物来而顺应。
 ```
 
-The wave is already the ocean; it doesn't have to achieve anything in order to become the ocean. It already is that. Its only problem is its illusion that it has to achieve something,that it has to get some where, that it has to make its way, that it has to survive. The shift from the level of wave to the level of ocean can come in an instant; it takes no time because nothing has to be changed or achieved. Everything is already in place except for the wave dropping its cherished illusion of being separate.
+**The wave is already the ocean; it doesn't have to achieve anything in order to become the ocean. It already is that. Its only problem is its illusion that it has to achieve something,that it has to get some where, that it has to make its way, that it has to survive. The shift from the level of wave to the level of ocean can come in an instant; it takes no time because nothing has to be changed or achieved. Everything is already in place except for the wave dropping its cherished illusion of being separate.**
 
-But notice that the wave itself cannot drop this illusion of separateness. Separateness is how it conceives of its existence; how can it drop itself? Similarly, the mind feels separate and will always feel separate; that is its nature. Separateness is its very existence; it cannot see through itself.
+But notice that <font color=red>the wave itself cannot drop this illusion of separateness</font>. Separateness is how it conceives of its existence; how can it drop itself? Similarly, the mind feels separate and will always feel separate; that is its nature. Separateness is its very existence; it cannot see through itself.
 
-But if the mind somehow disappears then there is no problem. Then Being, Existence shines forth from that empty vessel, It experiences itself without any impediment from the mind. It was always there. When the mind is gone, Being is.It is there automatically since it was never not there.
+But <font color=red>if the mind somehow disappears then there is no problem</font>. Then Being, Existence shines forth from that empty vessel, It experiences itself without any impediment from the mind. It was always there. When the mind is gone, Being is.It is there automatically since it was never not there.
 
 ```
 无名关照
 ```
 
-An analogy can be used of a lamp encased in mud. The light is there but it cannot be seen, cannot be experienced because of the mud blocking it. Remove that mud, and the light that was always there is revealed.
+An analogy can be used of a lamp encased in mud. The light is there but it cannot be seen, cannot be experienced because of the mud blocking it. <font color=red>Remove that mud, and the light that was always there is revealed</font>.
 
 Another analogy is of the sun shining on a cloudy day.If clouds cover the sky then the sun cannot be seen, yet it is still there. This is our situation. Those clouds are thoughts,stories, tapes. Let one cloud be removed and the sun can be seen a little. Let another be removed and the sun can be seen a little more.
 
 The sun is then seen through the gaps, just as Being or Existence is experienced through gaps in the thoughts/tapes of the mind. As more gaps open up and the Mystery is more available, it can be said — in a manner of speaking — that the Self awakens. But the mind itself cannot open up the gaps, as any attempt to do so would be just another tape, just another cloud in the way.
 
-To say that Being or the Self awakens is perhaps to give the impression that there is a separate being or self in each person. But no, only minds are separate; that is why they're an illusion. Being is always One. **Putting it another way, my true self and your true self are the same self. There is only one Self, one Being, one Existence, one Ocean.** In the Upanishads it is said that At man is Brahman — **the individual soul is the Existence, is the totality. There is only the One.**
+To say that Being or the Self awakens is perhaps to give the impression that there is a separate being or self in each person. But no, <font color=red>only minds are separate</font>; that is why they're an illusion. <font color=red>Being is always One</font>. **Putting it another way, my true self and your true self are the same self. There is only one Self, one Being, one Existence, one Ocean.** In the Upanishads it is said that At man is Brahman — **the individual soul is the Existence, is the totality. There is only the One.**
 
 ```
 人同此心，心同此理。
@@ -696,13 +711,13 @@ So the problem of life can only be transcended. It can never be solved. All of t
 But how is this awakening, this transcendence accomplished? If the mind does not do it, if indeed there is no doing involved, then how does it happen? To answer this question,let us look at the mind from still another perspective:
 At each moment the mind is running its stimulus-response programs — tapes, thoughts, stories. These programs are used to paint reality, to project on the screen of Existence the version of reality that the mind wants to see. In order to see these tapes as reality it is necessary not to see them as tapes — that is, it is necessary not to notice them as generated within the mechanism. The tapes must be seen as being out there; they must be seen as the real world, as reality, as “the way things really are.”
 
-An analogy of watching a movie can be used. If we get really engrossed in watching the story on the screen we may forget that it’s not real. We’re feeling anxiety or hope, tears or joy, when suddenly the projector breaks down and the screen goes dark. And then we remember that it’s only a movie, that it’s not real.
+An analogy of watching a movie can be used. <font color=red>If we get really engrossed in watching the story on the screen we may forget that it’s not real</font>. We’re feeling anxiety or hope, tears or joy, when suddenly the projector breaks down and the screen goes dark. And then we remember that it’s only a movie, that it’s not real.
 
-Similarly, if with one of **the mind’s tapes** or programs we suddenly remember that it’s only a tape, if we suddenly notice it as a tape — a beautiful tape or an ugly tape, but still only a tape — then the movie is over for that moment. The program is exposed as merely a program; the screen has gone dark, so to speak.
+Similarly, if with one of **the mind’s tapes** or programs we suddenly <font color=red>remember that it’s only a tape</font>, if we suddenly notice it as a tape — a beautiful tape or an ugly tape, but still only a tape — then the movie is over for that moment. The program is exposed as merely a program; the screen has gone dark, so to speak.
 
-In that moment we no longer see the tape as reality because we are seeing it as merely a tape, as merely a program.Since **the purpose of a tape is to present itself as reality**, the instant its lack of reality is exposed the program simply stops running. The tape disappears. The program, the tape, the act,the number, the thought — whatever we want to call it — just goes back to where it came from. **In that instant of awareness there is no mind anymore; there is only Being.**
+In that moment we no longer see the tape as reality because we are seeing it as merely a tape, as merely a program.Since **the purpose of a tape is to present itself as reality**, <font color=red>the instant its lack of reality is exposed the program simply stops running</font>. The tape disappears. The program, the tape, the act,the number, the thought — whatever we want to call it — just goes back to where it came from. **In that instant of awareness there is no mind anymore; there is only Being.**
 
-Who or what does the noticing? The mind cannot do it because the mind is inescapably stuck in its dreams, in its manufactured version of reality. Only the Self, only the Being can be aware. It is awareness. The moment the Self notices that the particular tape running at that moment is simply a tape and not reality, the moment the Self notices the program as a program — in that moment the program that was running simply disappears. In that moment there is only the Self, there is no mind. Metaphorically speaking, in that moment the Self has awakened, **the wave has discovered it is the Ocean**.
+Who or what does the noticing? The mind cannot do it because the mind is inescapably stuck in its dreams, in its manufactured version of reality. <font color=red>Only the Self, only the Being can be aware</font>. It is awareness. The moment the Self notices that the particular tape running at that moment is simply a tape and not reality, the moment the Self notices the program as a program — in that moment the program that was running simply disappears. In that moment there is only the Self, there is no mind. Metaphorically speaking, in that moment the Self has awakened, **the wave has discovered it is the Ocean**.
 
 But in the next moment another tape will be called up and run as a response to stimuli from the environment. In this metaphor, if the Self identifies with this tape and sees it as reality, then, so to speak, the Self is caught once more; then the Being has been sucked into the illusion once again. Again It has fallen asleep. Once more It has become identified with the mind, with the automatic stimulus-response mechanism. Now the survival programming of the mechanism is in the driver's seat.
 
@@ -714,11 +729,15 @@ So it goes, back and forth. Self awakens from its long slumber for a moment, the
 hallucination  [həˌluːsɪˈneɪʃn]  幻觉;幻视，幻听(尤指生病或毒品所致);幻视(或幻听)到的东西;幻象
 ```
 
-In the beginning this process seems difficult because the moments of awareness are *few and far between*. But that is just the appearance. The moment of awareness itself is not difficult because awareness is not a doingness of any kind. **The Self does not exist in time or space**; it is not engaged in any activity, striving or effort. So **awareness is not something that is done; it simply is. It simply happens.**
+In the beginning this process seems difficult because the moments of awareness are *few and far between*. But that is just the appearance. The moment of awareness itself is not difficult because awareness is not a doingness of any kind. <font color=red>The Self does not exist in time or space</font>; it is not engaged in any activity, striving or effort. So **awareness is not something that is done; it simply is. It simply happens.**
+
+```
+few and far between 稀少的;罕见的
+```
 
 If awareness of a tape is an effort then it is not awareness, it is something being done by the mind. For the mind is all about effort and struggle and striving; the mind can never be effortless since it is always in one way or another trying to be somewhere other than where it is.
 
-Awareness, not being of the mind, is effortless. It takes place outside of the whole stimulus-response mechanism, and isn’t an activity. It is not active, but passive.
+Awareness, not being of the mind, is effortless. It takes place outside of the whole stimulus-response mechanism, and isn’t an activity. <font color=red>It is not active, but passive</font>.
 
 The difference can be seen in a metaphor suggested by Osho. Imagine waiting in a train station where we are to meet our lover. We actively watch the doors; we are looking for a particular face, our lover's face. We are not interested in other faces. This is active awareness. This is mind. **Mind is looking for a result; it is looking for something in particular.**
 
@@ -742,31 +761,47 @@ We allow each leaf — each tape — to come into our awareness without desire o
 ## Chapter Seventeen
 Depending on the tradition this is called awareness or witnessing or mindfulness. Sometimes it is referred to as bare attention or self-remembering. The name doesn't matter, for the same phenomenon underlies the different names. **It is a deep allowing. It’s a deep let-go. It is a deep willingness for whatever exists to exist. It is a deep loving of whatever is there, and choosing it to be the way it is. It’s a deep gratitude and celebration of what is. It’s a deep observation of what exists without attachment or avoidance.**
 
-There are two main branches on this tree. The first is about beginning where we are — in our daily life. For instance,if we’re taking a shower we’re usually not herenow with it; we’re not aware of the loveliness of the water falling on us.Instead, we’re thinking of various things, wondering about this and that, getting ready for work or whatever. Usually,we’re not just taking a shower when we're taking a shower.
+There are two main branches on this tree. The first is about beginning where we are — in our daily life. For instance,if we’re taking a shower we’re usually not herenow with it; we’re not aware of the loveliness of the water falling on us. Instead, we’re thinking of various things, wondering about this and that, getting ready for work or whatever. Usually,we’re not just taking a shower when we're taking a shower.
 
-Using awareness in daily life would mean, for instance,noticing the stories/tapes that are running as we’re taking the shower. It would mean noticing what is getting in the way of just being there with the shower. **As we notice the tapes, we neither reject them nor encourage them.**
+Using awareness in daily life would mean, for instance,noticing the stories/tapes that are running as we’re taking the shower. It would mean noticing what is getting in the way of just being there with the shower. As we <font color=red>notice the tapes</font>, we neither reject them nor encourage them.
 
-We do nothing with them. Its simply a noticing that they are tapes, that the mind is in motion. One accepts them,allows them, chooses them to be there, but not as an active thing. Rather, the acceptance is implicit in the awareness it-self. As we notice the tapes as just tapes, the motion as just motion, the tapes become more flimsy — and then were just taking a shower, nothing else.
+```
+勿忘勿助
+```
 
-When we see a story as reality instead of as a story, its as if we've become fascinated by one of the leaves in the stream and are now following it as it moves downstream. **Our attention is caught; we re clinging**. Then we re living in the version of reality produced by taking that thought as reality.Then **we miss reality itself by clinging to something limited.** Conversely, as we simply watch each tape with detachment as it comes in and goes out, with no preferences, then we arrive at the door way of the spiritual — **the present moment**.
+We do nothing with them. Its simply a noticing that they are tapes, that the mind is in motion. One accepts them,allows them, chooses them to be there, but not as an active thing. Rather, the acceptance is implicit in the awareness it-self. As we notice the tapes as just tapes, the motion as just motion, the tapes become more flimsy — and then we're just taking a shower, nothing else.
 
-When Buddha talks about attachment being the cause of suffering, an image can arise of attachment to objects or people. And indeed we do get attached to people and objects.But we do so because of the stories we tell ourselves.
+When we see a story as reality instead of as a story, its as if we've become fascinated by one of the leaves in the stream and are now following it as it moves downstream. **Our attention is caught; we're clinging**. Then we're living in the version of reality produced by taking that thought as reality.Then **we miss reality itself by clinging to something limited.** Conversely, as we simply watch each tape with detachment as it comes in and goes out, with no preferences, then we arrive at <font color=red>the door way of the spiritual — the present moment</font>.
 
-**We cannot be attached to people or objects without being attached to our story about them.** That is the real attachment that the Buddha was talking about. And that clinging means seeing that belief or story as reality. If there is no "reality” in the perception of a tape/story then there will be no attachment to it either. Then it will be just another belief or story and will be seen as such. Divested of the quality of being "true" and "real" it ceases to engage us.
+When Buddha talks about attachment being the cause of suffering, an image can arise of attachment to objects or people. And indeed we do get attached to people and objects. But we do so because of the stories we tell ourselves.
+
+```
+attachment = 执
+```
+
+<font color=red>We cannot be attached to people or objects without being attached to our story about them</font>. That is the real attachment that the Buddha was talking about. And that clinging means seeing that belief or story as reality. If there is no "reality” in the perception of a tape/story then there will be no attachment to it either. Then it will be just another belief or story and will be seen as such. Divested of the quality of being "true" and "real" it ceases to engage us.
 
 Thus attachment to a person or object actually consists of the moment-to-moment clinging that occurs when there is a story about it. And the interactions and circumstances of daily life tend to bring up exactly those tapes that most need to be noticed. So **using mindfulness moment-to-moment in everyday situations is a fast way to bring awareness to deep-seated attachments**.
 
-But also, there is great value in sitting silently, free for a period of the hustling and bustling of the daily routine, so that one can observe without distraction the tapes that *bubble up out of the depths of* one's mind. In the silence of just sitting still, we can more easily become aware of the movement of the mind. 
+```
+mindfulness 正念减压法
+```
+
+But also, there is great value in sitting silently, free for a period of the hustling and bustling of the daily routine, so that one can observe without distraction the tapes that *bubble up out of the depths of* one's mind. <font color=red>In the silence of just sitting still, we can more easily become aware of the movement of the mind</font>. 
 
 ```
 hustling and bustling 熙熙攘攘
 ```
 
-Then, as the stories gradually become more flimsy, the mind also becomes more flimsy since the mind is nothing other than its stories. Then Reality starts to move through us a little more.
+Then, as the stories gradually become more flimsy, the mind also becomes more flimsy since the mind is nothing other than its stories. Then <font color=red>Reality starts to move through us a little more</font>.
 
 These two approaches complement each other well. It’s helpful to use awareness in periods of silence as well as in one's daily routine. When used together they open a common door — the gradual disappearance of the mind.
 
 In Zen they call this disappearance no-mind. In this state all dualities, all models, all beliefs, concepts, limitations,demands, exclusions, positions and versions of reality have been transcended, for there is no mind to sustain them. In the resulting emptiness, Existence can play its Melody through us more and more, like Breath through a hollow flute.
+
+```
+no-mind 无念
+```
 
 
 
@@ -780,25 +815,29 @@ leitmotifs [ˈlaɪtmoʊˌtifs] 主旨
 
 It’s similar to a post-hypnotic suggestion. Let’s suppose that someone hypnotizes us and implants a post-hypnotic suggestion that whenever he raises an eyebrow we will crave a bowl of soup, but that we won’t remember the suggestion. Now after the hypnotic session we will feel perfectly normal. We and the hypnotist are talking, let's say, when suddenly he raises an eyebrow. Immediately we will desire a bowl of soup,and to justify this desire we will mention something perhaps about it being time for lunch.
 
+```
+post-hypnotic 催眠后的
+```
+
 Notice that the justification we use has nothing whatever to do with the impulse itself. Our desire for soup is because of the post-hypnotic suggestion. Yet on top of that we will add a soundtrack, a voice-over, a story or rationalization about why we are desiring soup now. That is, we’ll justify our impulse. That’s one of the things the mind does.
 
 More than that, we’ll feel that we’ve chosen now to have a bowl of soup because it’s lunchtime, when in fact we’re acting out a situation which is entirely mechanical for us, which is entirely stimulus-response.
 
-If we spend our life around people who often raise an eyebrow we will find ourself frequendy desiring a bowl of soup. And in each case where we have a bowl of soup we’ll feel that we have chosen to do so, that we’ve made a decision about it.
+If we spend our life around people who often raise an eyebrow we will find ourself frequendy desiring a bowl of soup. And in each case where we have a bowl of soup <font color=red>we’ll feel that we have chosen to do so, that we’ve made a decision about it</font>.
 
 And in each case our mind will supply a reason as to why we’ve chosen to have a bowl of soup at that moment. And the reason in each case will be entirely irrelevant because our having a bowl of soup is pure stimulus-response — yet we will feel that we are the decider, the controller, the chooser in the situation.
 
 It will become a dominant theme in our life. We’ll become known as a person who especially likes soup and who enjoys a bowl of it in all sorts of different situations. And if someone asks us why we like soup so much we’ll give them some reasons, and those reasons will be completely irrelevant. Yet we will present ourself as — and feel ourself to be — someone who chooses to have this theme of soup in our life because of those reasons. And it will all be an illusion.
 
-Couldn’t any neurosis, compulsion, pattern, obsession,psychosis or character disorder be created in someone by implanting the proper combination of post-hypnotic suggestions? Yes. Why is this important? Because **early experiences in life function essentially like post-hypnotic suggestions.**
+Couldn’t any neurosis, compulsion, pattern, obsession,psychosis or character disorder be created in someone by implanting the proper combination of post-hypnotic suggestions? Yes. Why is this important? Because <font color=red>early experiences in life function essentially like post-hypnotic suggestions.</font>
 
-When were experiencing the shock and pain, physical or emotional, of a deeply perceived threat to survival then whatever “suggestions” are present at that time will be burned into our mind just as if they were post-hypnotic suggestions. And even though forgotten, they will affect us subsequently in just the same way.
+When we're experiencing the shock and pain, physical or emotional, of a deeply perceived threat to survival then whatever “suggestions” are present at that time will be burned into our mind just as if they were post-hypnotic suggestions. And even though forgotten, they will affect us subsequently in just the same way.
 
 For instance, a husband and wife quarrel violently while a young baby girl watches. The husband leaves in a rage, accidentally knocking against the baby, and the wife mutters at his back, “You bastard!” The baby experiences a threat to survival from the violence of the scene and from the loss of her father for a few days.
 
 Yet the mind of the baby notices that it survived. By the logic of the primitive mind, therefore, survival was achieved by a quarrel where daddy left. The “post-hypnotic suggestion” the baby picks up is that people similar to daddy — i.e., tall men with dark hair, let’s say — are bastards, and that one survives by entering into a relationship with one and then causing him to leave. And later in life, that is exactly what this baby-turned-woman will do. And in each case she will have brilliant reasons for causing things to turn out that way. And of course the reasons will look like reality; they will look like the truth.
 
-Absurd? Yes. Nonsensical? Yes. Destructive? Yes. But to the mind, effective for survival? Yes. The mind equates that behavior with survival and will create that situation over and over again in order to “survive.” Look around and we’ll see people (including ourselves) creating recurring patterns again and again in their lives.
+Absurd? Yes. Nonsensical? Yes. Destructive? Yes. <font color=red>But to the mind, effective for survival? Yes.</font> The mind equates that behavior with survival and will create that situation over and over again in order to “survive.” <font color=red>Look around and we’ll see people (including ourselves) creating recurring patterns again and again in their lives.</font>
 
 These patterns in our lives are absolutely non-nurturing and yet we are all frozen in them, clinging to them — and clinging to all our brilliant reasons as to why our life keeps turning out this way or that way.
 
@@ -810,13 +849,17 @@ righteously indignant crusaders 理直气壮的、愤慨的改革者
 
 Some of us make our lives about getting others before they get us. Some of us smile a lot while feeling lonely inside. Some of us make our lives about producing guilt in others through self-sacrifice. Some of us make ourselves the central figure in an ever-recurring tragic drama. Some of us use being “on” as a means of not really being with others.
 
+```
+central figure 中心人物
+```
+
 A list of the different themes and patterns that run our lives in various ways would be virtually infinite. And each one is no different in quality from the post-hypnotic suggestion about having a bowl of soup. Each is mechanical, automatic —and yet accompanied by all sorts of voice-overs, all sorts of reasons and explanations. We get stuck in these patterns,frozen in them, just as if we were to emphasize a few notes on the piano over and over.
 
 The payoff in this automatism is survival, and **survival means being right.** For example, the baby who heard her mother say “You bastard!” as her father left the house is now,as a woman, engaged on an unconscious level in proving that men are bastards. And when through her unwitting behavior each love affair breaks up abruptly and that man leaves her too, she gets to be right again. She gets to feel self-righteous and self-justified. “See? I told you. Men are bastards.”
 
-Since the mind is nothing but this collection of tapes,positions, patterns, programs, points of view — all names for the same thing — getting to be right about them is tantamount to validating the existence of the mind. Since the mind is its points of view, then perpetuating them, running them, being justified about them is the very act of survival itself. **It is identical to perpetuating the “I.**” “You” and “I” survive by running tapes, by getting on positions and being right about them.
+Since the mind is nothing but this collection of tapes,positions, patterns, programs, points of view — all names for the same thing — <font color=red>getting to be right about them is tantamount to validating the existence of the mind</font>. Since the mind is its points of view, then perpetuating them, running them, being justified about them is the very act of survival itself. **It is identical to perpetuating the “I.**” “You” and “I” survive by running tapes, by getting on positions and being right about them.
 
-Of course, methods exist for improving this situation.Going back into one's past, locating and re-experiencing the incident that burned in a recurring pattern in one's life will cause the pattern to cease running, just as re-experiencing the moment when a post-hypnotic suggestion was implanted will cause that suggestion to cease also. This is *Patanjali's pratiprasov* method, and in the West exists as various forms of regression analysis.
+Of course, methods exist for improving this situation. Going back into one's past, locating and re-experiencing the incident that burned in a recurring pattern in one's life will cause the pattern to cease running, just as re-experiencing the moment when a post-hypnotic suggestion was implanted will cause that suggestion to cease also. This is *Patanjali's pratiprasov* method, and in the West exists as various forms of regression analysis.
 
 Another method is to consciously focus one's attention upon the complex of attitudes, body sensations, postures,expressions, points of view, conclusions and images associated with a recurring theme or pattern in one's life. In its various aspects, this is the method of psychotherapy, and works to give us some insight into our patterns and thus to lessen their force and power.
 
@@ -830,17 +873,21 @@ Even if these methods could deal with all the patterns set up by intense threat-
 ## Chapter Nineteen
 All methods, all devices can be valuable because they have the potential to begin to rouse us from our slumbers,they can create the critical mass where witnessing begins, they can be a door out of the box in which we spend our life. On the other hand, any method, any device can become a trap if we become attached to it, if it becomes one more link on the treadmill of improving, changing, seeking, achieving.. .all the material around which the ego condenses.
 
-Anything can be the prison, anything can be the firststep into the eternal, into liberation, and it depends upon our willingness to watch. **We become enlightened not by what we do or don't do, but by watching what we do or don’t do**. If we cling to a method it cannot help us with the real problem. And what is the real problem? That we’re trying to survive and improve something — our separate selves — which at the deepest level are an illusion, which don’t actually exist.
+```
+critical mass 临界质量
+```
 
-Only awareness doesn’t feed this doingness of the mind,because only awareness is not an activity and doesn’t keep the mind's motion going. Only awareness is silent, effortless, passive, not of the mind. Only awareness cuts at the root by **watching the very nature of mind itself**.
+Anything can be the prison, anything can be the firststep into the eternal, into liberation, and it depends upon our willingness to watch. We become enlightened not by what we do or don't do, but by watching what we do or don’t do. If we cling to a method it cannot help us with the real problem. And <font color=red>what is the real problem? That we’re trying to survive and improve something — our separate selves — which at the deepest level are an illusion, which don’t actually exist</font>.
 
-For example, let's suppose we're running a tape that men are bastards and thereby creating a situation where our current lover will leave us, making us right again. Good; let’s not change anything. Let’s simply watch this process without encouragement or condemnation or any evaluation at all.
+Only awareness doesn’t feed this doingness of the mind,because only awareness is not an activity and doesn’t keep the mind's motion going. Only awareness is silent, effortless, passive, not of the mind. Only awareness <font color=red>cuts at the root by watching the very nature of mind itself</font>.
+
+For example, let's suppose we're running a tape that men are bastards and thereby creating a situation where our current lover will leave us, making us right again. Good; let’s not change anything. Let’s <font color=red>simply watch this process without encouragement or condemnation or any evaluation at all</font>.
 
 Let’s simply watch as we set up the situation. Let’s watch as we create ourself being right. Let’s watch as we tell ourself that men are bastards. As we watch, these tapes will start losing force, they will start disappearing of their own accord. We don’t need to do anything. Indeed, anything we do is simply another tape.
 
-We just become a witness to our positions, patterns,presentations. We notice them as positions now instead of as reality. We see that our version of reality is being generated internally moment-to-moment by the automatic programs of the mind.
+We just become a witness to our positions, patterns,presentations. <font color=red>We notice them as positions now instead of as reality</font>. We see that our version of reality is being generated internally moment-to-moment by the automatic programs of the mind.
 
-“That bastard!” If we’re running that tape, for example,what’s real for us is that he’s a bastard — until we notice that it’s just a story, a position, an automatic product of the mind.Actually, he just did whatever he did; that is what is. On top of that we add our interpretations, judgments, programs, etc.and project them out there.
+“That bastard!” If we’re running that tape, for example,what’s real for us is that he’s a bastard — until we notice that it’s just a story, a position, an automatic product of the mind. Actually, he just did whatever he did; that is what is. On top of that we add our interpretations, judgments, programs, etc.and project them out there.
 
 We see wrongness out there and want to change it or be mad about it or whatever. But once we see that wrongness —and rightness too — is being manufactured internally by the mind’s survival programming, and that it’s merely the mind dreaming, then the wrongness and the rightness, the labels and interpretations and acts gradually disappear.
 
@@ -852,13 +899,13 @@ Without awareness we suffer even if all is seemingly okay on the surface. There�
 dragging along 拖着，得过且过
 ```
 
-Dragging along in life is heart-wrenching. For the cost of dragging along is missing the mystery and loveliness of Existence. Existence is knocking, but we’re not at home to answer the door.
+Dragging along in life is heart-wrenching. For <font color=red>the cost of dragging along is missing the mystery and loveliness of Existence</font>. Existence is knocking, but we’re not at home to answer the door.
 
 Instead we’re off with our stories, dreaming with them,hypnotized by them. We can miss our own life in this way. We can miss the wholeness, the fulfillment, the effortlessness, the bliss that is waiting. We can miss experiencing ourself as the Ocean and not the wave. We can stay entangled in a fight for survival, security, pleasure, rightness.
 
-Let’s become a witness to the mind in our daily life.Let’s become aware. Let’s let everything be grist for the mill. **Let’s observe our thoughts coming and going just as we might observe cars on the street coming and going**. And in addition,using whatever posture allows us to forget the body without becoming sleepy, let’s take some time out each day to just sit quietly with no activity. In the stillness and silence of sitting quietly, the mind will come to seem more and more flimsy,distant. And one day it will simply be gone.
+Let’s become a witness to the mind in our daily life.Let’s become aware. Let’s let everything be grist for the mill. **Let’s observe our thoughts coming and going just as we might observe cars on the street coming and going**. And in addition,<font color=red>using whatever posture allows us to forget the body without becoming sleepy, let’s take some time out each day to just sit quietly with no activity</font>. In the stillness and silence of sitting quietly, the mind will come to seem more and more flimsy,distant. And one day it will simply be gone.
 
-A question: If awareness is not a doingness of any kind,how do we start? How do we get it to begin? Actually its there already, so beginning is really a matter of allowing it to be there. **Its simply an allowing**. It just happens when we’re aware that it will.
+A question: If awareness is not a doingness of any kind,how do we start? How do we get it to begin? <font color=red>Actually its there already, so beginning is really a matter of allowing it to be there</font>. **Its simply an allowing**. It just happens when we’re aware that it will.
 
 **Many things happen which we don’t understand. And there’s no need to understand them**. Let’s watch. How do we eat? By moving our hand with its utensil to our mouth. Yes,but how do we get our hand to move? By contracting the muscles in our arm. Yes, but how do we contract the muscles in our arm? By sending down a nerve impulse from the brain?And how do we do that? **Ultimately, we don't know how we accomplish even a simple thing like eating. We just eat. It just happens.**
 
@@ -873,11 +920,11 @@ Awareness is the same. It begins by itself, and we won’t understand it. We can
 ## Chapter Twenty
 We're always seeking. That might be the best definition of a human being: the seeker. We're looking for ways to survive, to be secure and powerful, to be gratified and fulfilled. As we have seen, the mind normally never stops seeking. It is its very nature.
 
-In sum, each of us has certain stimulus-response programs which are predominant and which determine what can be called our prevalent theme or pattern or racket in life. It is our predominant attitude.
+In sum, <font color=red>each of us has certain stimulus-response programs which are predominant and which determine what can be called our prevalent theme or pattern or racket in life. It is our predominant attitude</font>.
 
 For some of us the habitual response may be anger. For others the habitual tone might be cynicism. Some of us have a life which is about trying very hard. For some the habitual one is grief. Some of us stuff down our emotions and become very monotone. Many other examples could be given.
 
-The tone is not always apparent, but is always there as an undercurrent. Our predominant theme or pattern in life is our mode of survival moment-to-moment, our unconscious method of coping. According to our programming, it is how we seek to survive.
+The tone is not always apparent, but is always there as an undercurrent. Our predominant theme or pattern in life is our mode of survival moment-to-moment, <font color=red>our unconscious method of coping</font>. According to our programming, it is how we seek to survive.
 
 Along with this predominant pattern or survival-mode,each of us has a predominant method or complex of methods for seeking happiness. This is how we feel we can achieve fulfillment, completion, satisfaction. It’s our dream, our search.It’s our path. If the survival-mode is our way of seeking to avoid the stick, then this is our predominant way of seeking the carrot. It’s the rainbow on the horizon for us.
 
@@ -885,23 +932,23 @@ It takes many forms. To some of us, happiness means obtaining enough money — a
 
 Or the path can take a more down-to-earth form. The right degree will make us happy. Fulfillment will be achieved when the perfect lover or soulmate is found.. .or married.. .or remarried. To some of us, the holy grail is good health. To others, the advancement of the arts. To be able to retire. The list is endless.
 
-Our path here is that which we think of as bringing happiness once it is perfectly achieved. Once it is perfectly achieved, we tell ourselves, all seeking will end. It will be enough. Of course, there are always barriers or obstacles to the achievement, otherwise that which is being sought would already be here. So the mind’s thinking runs something like this: “Once I get this, I'll be happy.” “As soon as I get over the hump, I'll relax.” “Once I get past these obstacles, I'll be able to enjoy myself.”
+<font color=red>Our path here is that which we think of as bringing happiness once it is perfectly achieved</font>. Once it is perfectly achieved, we tell ourselves, all seeking will end. It will be enough. Of course, there are always barriers or obstacles to the achievement, otherwise that which is being sought would already be here. So the mind’s thinking runs something like this: “Once I get this, I'll be happy.” “As soon as I get over the hump, I'll relax.” “Once I get past these obstacles, I'll be able to enjoy myself.”
 
 Now the interesting thing is that sometimes we do reach our goal. We achieve what we wanted to achieve. And what happens? We’re gratified for a little while. But then we make an interesting discovery. We discover that our achievement is perhaps not enough after all. We find that we still feel a gnawing dissatisfaction.
 
-And we even see the cause of it. It is because we over-looked something, something that we very much need to behappy. Whatever this something is to us — the right job, the right place to live, the right man or woman, whatever — we now set off to achieve it.
+And we even see the cause of it. It is because we over-looked something, something that we very much need to be happy. Whatever this something is to us — the right job, the right place to live, the right man or woman, whatever — we now set off to achieve it.
 
-And so the search continues. It has to be so, for that is the nature of mind. What we’ve done is to exchange our old path for a new path. Before, let’s say, what was most important was the spread of the movement we were involved in.Now we know that that was not quite correct. Now, let’s say,we know that the most important thing is to own our own house. And so we have a new path now, a new rainbow-goal to reach.
+And so the search continues. It has to be so, for that is the nature of mind. What we’ve done is to exchange our old path for a new path. Before, let’s say, what was most important was the spread of the movement we were involved in. Now we know that that was not quite correct. Now, let’s say,we know that the most important thing is to own our own house. And so we have a new path now, a new rainbow-goal to reach.
 
 Each new path starts out as a fragrance, as a game, as something pleasant to pursue. It ends in misery and suffering,as we become more and more attached to our path. Before, we were like a dog chasing its tail. Now once again, we’re chasing our own tail. The only difference is that since the tail is now decorated a little differently we think it’s a different game. As our attachment grows and we whirl around faster we descend further into suffering. We don’t have what we want, or we’re afraid of losing what we have.
 
-If our attachments cause suffering, why do we cling to them? Because all our attachments feel comfortable on the surface. We like our attachments. We get a payoff from them.We get a sense of certainty from them, a sense of comfortable familiarity, a sense of being right. We identify with them.
+<font color=red>If our attachments cause suffering, why do we cling to them? Because all our attachments feel comfortable on the surface. We like our attachments. We get a payoff from them. We get a sense of certainty from them, a sense of comfortable familiarity, a sense of being right. We identify with them.</font>
 
-As the master Adyashanti says, we get a thrill from our desires; that’s why we follow them. **We enjoy the excitement of wanting something; if the excitement of wanting were not there we might start losing track of who we are.** When the freedom of emptiness starts staring us in the face, it can be very scary. We go back to our wantings and attachments and identities as to a safe refuge.
+As the master Adyashanti says, we get a thrill from our desires; that’s why we follow them. <font color=red>**We enjoy the excitement of wanting something; if the excitement of wanting were not there we might start losing track of who we are.**</font> When the freedom of emptiness starts staring us in the face, it can be very scary. We go back to our wantings and attachments and identities as to a safe refuge.
 
 We feel a desire or an attachment as part of us, as a part of our identity, as our point of view. We cling because our path is our hope of happiness, it is what we think will make us feel good. No wonder we can't imagine giving it up. It would be like wrenching out a tooth, only much more so. We feel as if we would be giving up a part of who we are.
 
-And all attachment involves exclusion. It involves the limited, the partial. **We cling to something because we’re afraid to cling to nothing**. The latter would involve insecurity,falling into the abyss, stepping into the Unknown moment-by-moment. We normally shrink back from that. The Totality is scary to our mind because the mind cannot comprehend it. So we cling to the partial, missing the bliss of the Whole.
+<font color=red>And all attachment involves exclusion. It involves the limited, the partial. **We cling to something because we’re afraid to cling to nothing**. The latter would involve insecurity,falling into the abyss, stepping into the Unknown moment-by-moment. We normally shrink back from that. The Totality is scary to our mind because the mind cannot comprehend it. So we cling to the partial, missing the bliss of the Whole.</font>
 
 
 
