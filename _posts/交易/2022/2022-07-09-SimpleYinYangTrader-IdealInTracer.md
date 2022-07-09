@@ -3,7 +3,7 @@ layout : post
 title : "2022-07-09-SimpleYinYangTrader-IdealInTracer-2020选股，2021回测"
 date : 2022-07-09 00:00:01
 categories : 交易
-tags : 【交易实战总结】
+tags : 回测记录
 excerpt : ""
 ---
 

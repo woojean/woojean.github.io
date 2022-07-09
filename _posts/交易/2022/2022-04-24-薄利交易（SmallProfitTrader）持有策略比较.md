@@ -3,7 +3,7 @@ layout : post
 title : "薄利交易（SmallProfitTrader）持有策略比较"
 date : 2022-04-24 00:00:02
 categories : 交易
-tags : 【交易实战总结】
+tags : 回测记录
 excerpt : ""
 ---
 

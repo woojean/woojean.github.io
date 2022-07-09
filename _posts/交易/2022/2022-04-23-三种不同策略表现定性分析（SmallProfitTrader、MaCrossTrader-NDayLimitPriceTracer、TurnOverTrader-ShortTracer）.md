@@ -3,7 +3,7 @@ layout : post
 title : "三种不同策略表现【定性】分析（SmallProfitTrader、MaCrossTrader-NDayLimitPriceTracer、TurnOverTrader-ShortTracer）"
 date : 2022-04-23 00:00:01
 categories : 交易
-tags : 【交易实战总结】
+tags : 回测记录
 excerpt : ""
 ---
 

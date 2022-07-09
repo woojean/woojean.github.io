@@ -3,7 +3,7 @@ layout : post
 title : "薄利交易系统回测（SmallProfitTrader）"
 date : 2022-04-16 00:00:01
 categories : 交易
-tags : 【交易实战总结】
+tags : 回测记录
 excerpt : ""
 ---
 
