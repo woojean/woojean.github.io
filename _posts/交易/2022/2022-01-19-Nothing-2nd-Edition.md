@@ -953,7 +953,7 @@ We feel a desire or an attachment as part of us, as a part of our identity, as o
 
 
 ## Chapter Twenty-one
-Beneath the comfort and certainty on the surface is tension and anguish, which is the hidden part of the iceberg,buried deep in the unconscious part of the mind because we normally don’t want to be aware of it. Yet it’s there, and in unguarded moments we allow ourselves to feel it. Our attachments cause us to live in the future, missing the moment. We live in our dreams, missing the enoughness of Reality, missing the suchness of Existence.
+Beneath the comfort and certainty on the surface is tension and anguish, which is the hidden part of the iceberg, buried deep in the unconscious part of the mind because we normally don’t want to be aware of it. Yet it’s there, and in unguarded moments we allow ourselves to feel it. Our attachments cause us to live in the future, missing the moment. We live in our dreams, missing the enoughness of Reality, missing the suchness of Existence.
 
 **The mind is like a thirsty person who dreams of drinking water but doesn’t drink it, thinking that the dreams will slake the thirst. Or it’s like a person who studies all about water and imagines that knowledge of water is the same as drinking it. The mind is like a hungry person who instead of eating is always reading the menu. It imagines the delights of eating, but doesn’t eat. It dwells in its stories.**
 
