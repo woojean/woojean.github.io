@@ -1,6 +1,6 @@
 ---
 layout : post
-title : "SmallProfitTrader-NDayWinTracer-中证100成分股回测"
+title : "中证100成分股回测（SmallProfitTrader-NDayWinTracer）"
 date : 2022-07-06 00:00:01
 categories : 交易
 tags : 回测记录

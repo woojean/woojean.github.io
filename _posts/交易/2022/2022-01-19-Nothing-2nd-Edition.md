@@ -957,7 +957,7 @@ Beneath the comfort and certainty on the surface is tension and anguish, which i
 
 **The mind is like a thirsty person who dreams of drinking water but doesn’t drink it, thinking that the dreams will slake the thirst. Or it’s like a person who studies all about water and imagines that knowledge of water is the same as drinking it. The mind is like a hungry person who instead of eating is always reading the menu. It imagines the delights of eating, but doesn’t eat. It dwells in its stories.**
 
-What is the way out of this dilemma? Every seeking for a new answer, each renewed search for happiness only keeps us stuck in tension and suffering. Do we then forcibly give up our attachments? Do we reject them, run away from them? It doesn’t work. To reject something is still to be attached to it;it’s just the opposite side of the same coin.
+What is the way out of this dilemma? Every seeking for a new answer, each renewed search for happiness only keeps us stuck in tension and suffering. Do we then forcibly give up our attachments? Do we reject them, run away from them? It doesn’t work. <font color=red>To reject something is still to be attached to it;it’s just the opposite side of the same coin</font>.
 
 The attachment is still running us; we're still at the effect of it. That is why force doesn’t work, because it doesn't really alter anything. It alters the arrangement, but not the inner essence.
 
@@ -967,7 +967,7 @@ When an attachment is renounced we’re still attached;otherwise what is the poi
 
 Then the attachment will simply move somewhere else. It will take a new form. The energy of the attachment remains, because energy can neither be created nor destroyed. It simply moves. If it does not move upward into greater consciousness then it will move into a new attachment.
 
-The unfoldment of freedom is awareness. All doingness, all attempts to do something about our attachments lead only deeper into the mind, because all doingness is of the mind. Only awareness is not a doingness, not a new goal. We simply see that we’ve gotten caught again, and the nature of what has caught us. No need to reject the attachment, which wouldn’t work anyway — a doingness. No, we just see it. Then the unattachment happens. The tape disappears.
+<font color=red>The unfoldment of freedom is awareness</font>. All doingness, all attempts to do something about our attachments lead only deeper into the mind, because all doingness is of the mind. Only awareness is not a doingness, not a new goal. We simply see that we’ve gotten caught again, and the nature of what has caught us. No need to reject the attachment, which wouldn’t work anyway — a doingness. No, <font color=red>we just see it. Then the unattachment happens. The tape disappears</font>.
 
 Each new path is like a drug trip. It feels good at first,we get high on it. But after a while it becomes obsessive; we cling just to avoid coming down. “I'll be able to relax as soon as I achieve such-and-such.”
 
@@ -983,7 +983,7 @@ per se  [ˌpɜːr ˈseɪ] 本身;本质上
 
 We see the story/tape for what it is, then we’re nolonger fascinated by it. We include it, make room for it,choose it to be that way, love it for what it is. Then it becomes flimsy, it becomes less relevant, it stops running our life.
 
-The path is never the problem. It is not the path but our unconsciousness that keeps us trapped. All paths are good not only for whatever value is there, but also in the sense that they provide opportunities to see through them too.
+The path is never the problem. It is not the path but our 9 that keeps us trapped. All paths are good not only for whatever value is there, but also in the sense that they provide opportunities to see through them too.
 
 All devices, all the rapies can be useful. All are channels to Reality as our awareness becomes more real. Awareness makes our moment-to-moment living — just as it is — the road to heaven.
 
@@ -991,7 +991,7 @@ All devices, all the rapies can be useful. All are channels to Reality as our aw
 
 
 ## Chapter Twenty-two
-If we're fortunate, we sooner or later begin to see that all materialist paths — that is, all paths that involve trying to manipulate our environment — do not lead to happiness. Then our search takes on a spiritual form. This is very significant,and it opens up a danger too, because attachments to spiritual paths are more difficult to see as attachments.
+If we're fortunate, we sooner or later begin to see that all materialist paths — that is, all paths that involve trying to manipulate our environment — do not lead to happiness. Then our search takes on a spiritual form. This is very significant,and it opens up a danger too, because <font color=red>attachments to spiritual paths are more difficult to see as attachments</font>.
 
 Now we’re searching for enlightenment or heaven or God or no-mind or whatever the name is. As Osho points out, this is the same movement. Again, we become attached to our path, to our method. The attachment now may be to a teacher or leader. It may be to forms and rituals and dogma,or to a particular growth or consciousness movement.
 
@@ -1009,15 +1009,15 @@ Thus we may become also attached to proselytizing — not seeing that attachment
 proselytizing [ˈprɑːsələtaɪzɪŋ] 传教
 ```
 
-Spiritual attachments are more difficult to drop than material ones precisely because they’re less dense, less solid,more transparent and thus more difficult to see. It can be more difficult to see them as a dream, as just more of the mind’s tapes, as just more of the mind’s clingings.
+<font color=red>Spiritual attachments are more difficult to drop than material ones precisely</font> because they’re less dense, less solid,more transparent and thus more difficult to see. It can be more difficult to see them as a dream, as just more of the mind’s tapes, as just more of the mind’s clingings.
 
-Very often our spiritual metaphysics is associated with very reverential thoughts, very sublime conceptions. They feel better than material attachments. We feel now that we’ve left illusion behind and are on the true road. How, we ask, can these sublime thoughts and feelings possibly be just more tapes and stories? Yet they are. It is still the mind engaged in the old game of surviving by trying to get somewhere, and clinging to something as a means.
+Very often our spiritual metaphysics is associated with very reverential thoughts, very sublime conceptions. They feel better than material attachments. We feel now that we’ve left illusion behind and are on the true road. **How, we ask, can these sublime thoughts and feelings possibly be just more tapes and stories? Yet they are. It is still the mind engaged in the old game of surviving by trying to get somewhere, and clinging to something as a means.**
 
-When awareness happens in this moment, then seeking drops for a moment, the tapes disappear for a moment. And what is left is nothing, silence. For in that moment of awareness there is no mind, since the mind is just tapes, thoughts. When there are no tapes there is no mind either.
+When awareness happens in this moment, then seeking drops for a moment, the tapes disappear for a moment. And what is left is nothing, silence. <font color=red>For in that moment of awareness there is no mind, since the mind is just tapes, thoughts. When there are no tapes there is no mind either</font>.
 
 In that moment there’s only silence. In this silence we encounter the Existence. It is already there waiting, but we are not silent, we are not absent, so there’s no experience of It. **Actually, it’s not accurate to say that we experience/encounter Existence, since the Existence is always subject, never object, and since in that moment of awareness “you” or “I” are not there. Only the Existence is there. It encounters Itself.**
 
-The goal of all meditation, all prayer, all spiritual paths is simply to reach this point of silence where the mind is not.Each method is beautiful in itself in that it **quiets the mind**, it gives us a taste, but then we become attached to the method and in this way the mind survives.
+The goal of all meditation, all prayer, all spiritual paths is simply to reach this point of silence where the mind is not. Each method is beautiful in itself in that it **quiets the mind**, it gives us a taste, but then we become attached to the method and in this way the mind survives.
 
 Also, all methods are a doingness and they presuppose that there is some goal we’re trying to reach. Methods can be extremely useful in freeing ourselves from other attachments,**but ultimately all methods must themselves be transcended**.Unless awareness happens along with the methods, we simply continue the same game of the mind at a more subtle level.Only awareness is not a method, not a trap because it’s not an activity of any kind, and does not involve trying to change anything.
 
@@ -1028,6 +1028,10 @@ But who is it that makes the decision to be surrendered? The mind, for all decis
 The act of surrendering is a drug, a program, another dream — a subtle and beautiful one. Nevertheless its effects are not permanent because they have not involved a deep awareness of the nature of the mind itself. The tapes are suppressed but not extinguished, and will return when one falls out of love, when one is no longer surrendered.
 
 Prayer is beautiful, because it too is a form of surrender.It acknowledges that there is something greater than who we think we are, and thus the act of prayer by its very nature is an act of humility, of surrender.
+
+```
+Prayer is a form of surrender <= It acknowledges that there is something greater than who we think we are
+```
 
 Yet, what is the mind’s ultimate defense of itself? It is to set up something which is other-than-itself. The notion of a God that can be prayed to presupposes that She is separate from us in some way. It also presupposes the existence of that which is praying. In the very humility and surrender of the act of prayer can be a subtle strengthening of the mind. Can we hear ourself praying? If so, God has heard it.
 
@@ -1045,11 +1049,11 @@ All things have their uses at the appropriate time. All is exactly as it should 
 
 
 ## Chapter Twenty-three
-Meditation, on the other hand, gradually quiets the mind. It is more powerful than prayer or guided imagery or affirmations since it marks a turning point — the first step from talking to listening, from visualizing to watching.To do this, meditation makes use of a particular quality of the mind, which is that the mind can only focus on one thing at a time. It can and does move very rapidly from one thing to another, but at a given instant it can only be occupied with one thing.
+Meditation, on the other hand, gradually quiets the mind. It is more powerful than prayer or guided imagery or affirmations since it marks a turning point — the first step from talking to listening, from visualizing to watching. To do this, meditation makes use of a particular quality of the mind, which is that the mind can only focus on one thing at a time. <font color=red>It can and does move very rapidly from one thing to another, but at a given instant it can only be occupied with one thing</font>.
 
-If, then, the mind is held to a single object, other things are excluded. So meditation can be one-pointedness, keeping the mind focused and concentrated on one object. When attention wanders from the object we just gently bring the attention back to it. And we do so without condemning our wandering, for to do so would be to wander again. **Meditation does not involve thinking or feeling about the object in anyway. We just focus on the object without adding anything.**
+If, then, the mind is held to a single object, other things are excluded. So meditation can be one-pointedness, keeping the mind focused and concentrated on one object. <font color=red>When attention wanders from the object we just gently bring the attention back to it. And we do so without condemning our wandering, for to do so would be to wander again</font>. **Meditation does not involve thinking or feeling about the object in anyway. We just focus on the object without adding anything.**
 
-The object of meditation can be almost anything. It canbe a mantra or a mandala, an internal image or sound, or an unanswerable question or paradoxical statement (a koan). It can be a picture of an avatar or a particular movement or pose by the body (tai-chi, sufi dancing, yoga). The object can be pain or the breath or a pair of eyes (tratak); it can be a candle flame, the sky, a rock or a flower. The object itself is not all that important. What makes the difference is holding one’s attention to it.
+The object of meditation can be almost anything. It can be a mantra or a mandala, an internal image or sound, or an unanswerable question or paradoxical statement (a koan). It can be a picture of an avatar or a particular movement or pose by the body (tai-chi, sufi dancing, yoga). The object can be pain or the breath or a pair of eyes (tratak); it can be a candle flame, the sky, a rock or a flower. The object itself is not all that important. What makes the difference is holding one’s attention to it.
 
 A well-developed meditation prevents our tapes from surfacing and thus quiets down the mind. It can give a taste of Reality by keeping tapes and programs out of consciousness.That taste can be a real eye-opener and can **spur our efforts on the spiritual path**. And meditation can bring about states of intense rapture, referred to as absorption levels or *jhanic* states.It can bring about lovely, exquisite images. It can bring about psychic powers of various kinds.
 
@@ -1067,20 +1071,25 @@ Seductive too are experiences of rapture in jhanic states,brought about by prolo
 ecstasy [ˈekstəsi] 摇头丸;狂喜;入迷;陶醉;迷幻药
 ```
 
-The state of each successive jhana is less exciting, more subtle and still than the one below. We reach each higher jhanic state by being willing to let go of the grosser rapture of the one below. We see that rapture itself is a disturbance, and we relinquish the more exciting forms of rapture in order to obtain the deeper and more subtle ones. And each higher one can become then the new attachment. But, we may ask, what is wrong with an attachment to rapture?
+<font color=red>The state of each successive jhana is less exciting, more subtle and still than the one below</font>. We reach each higher jhanic state by being willing to let go of the grosser rapture of the one below. We see that rapture itself is a disturbance, and <font color=red>we relinquish the more exciting forms of rapture in order to obtain the deeper and more subtle ones. And each higher one can become then the new attachment</font>. But, we may ask, what is wrong with an attachment to rapture?
 
-Nothing is wrong, yet it’s still a clinging to the limited;it’s still of the mind. The mind is still pursuing pleasure. We’ve tasted the saltiness of the ocean but we haven’t entered into it.The changes brought about are temporary, and when the meditation ends the changes slowly fade. Thus we can become attached to the meditation, to retaining the rapture resulting from it.
+Nothing is wrong, yet it’s still a clinging to the limited;it’s still of the mind. The mind is still pursuing pleasure. We’ve tasted the saltiness of the ocean but we haven’t entered into it. The changes brought about are temporary, and when the meditation ends the changes slowly fade. Thus we can become attached to the meditation, to retaining the rapture resulting from it.
 
 Concentration meditation, as it’s sometimes called, is a magnificent dream, the most beautiful of all dreams, but still a dream. It’s an exotic drug, the mind drugging itself; **but it’s still a kind of drug and sooner or later we come down from it.It’s no different in essence from other drugs we seek — power,money, fame, sex, knowledge, altered realities, cosmic satoris,saving the world, belonging to a group and so on.**
-Concentration meditation is still a doingness, it is still the mind trying to get somewhere.
+
+Concentration meditation <font color=red>is still a doingness, it is still the mind trying to get somewhere</font>.
 
 Why do we meditate? In order to obtain peace, rapture,enlightenment or whatever label we give our goal. **But it is still a goal-process**. And who is doing the meditating, who is keeping the attention concentrated on the object? Observe closely and we see once more the fingerprints of the mind; we see the doingness of the controller.
 
 Concentration meditations effects are only temporary because they don’t involve a deep seeing into the nature of the mind itself. The tapes and programs have been suppressed but they have not disappeared. They are still there, and they will surface again when we come down from this special drug.
 
-This is a difference between concentration meditation and awareness. **Awareness does not suppress anything. On the contrary it welcomes everything, accepts it all, sees everything for what it is. And in that effortless seeing, that seeing which is non-doing and which is not of the mind, the tapes simply begin to dissolve. There is no attempt to change or improve anything. Awareness is identical with a deep acceptance. But neither is there a decision to accept either; rather, acceptance is simply there.**
+```
+专注冥想，仍然是一种有为，一种目标导向的行动，仍然属于一种念头的药物。
+```
 
-Another way of expressing this is to recall the difference between active and passive awareness. Concentration meditation is an active awareness; it is an intense watching of the door of the train in order to see one’s lover. It’s a doingness; it is pointed in a particular direction. True awareness is totally passive, it is merely watching the leaves go by on the river —choosing none, preferring none, clinging to nothing. It is a silence, a stillness that dissolves all things.
+This is a difference between concentration meditation and awareness. <font color=red>Awareness does not suppress anything. On the contrary it welcomes everything, accepts it all, sees everything for what it is. And in that effortless seeing, that seeing which is non-doing and which is not of the mind, the tapes simply begin to dissolve. There is no attempt to change or improve anything. Awareness is identical with a deep acceptance. But neither is there a decision to accept either; rather, acceptance is simply there.</font>
+
+Another way of expressing this is to recall the difference between active and passive awareness. Concentration meditation is an active awareness; it is an intense watching of the door of the train in order to see one’s lover. It’s a doingness; it is pointed in a particular direction. <font color=red>True awareness is totally passive, it is merely watching the leaves go by on the river —choosing none, preferring none, clinging to nothing. It is a silence, **a stillness that dissolves all things**.</font>
 
 Concentration meditation is not necessary, but can be a valuable device. It is useful in that it can create a situation where awareness can begin to happen. In slowing down the mind it slows down the flow of leaves in the river, so to speak,so that a beginning awareness can more readily perceive the gaps between the leaves. But it’s not necessary. The essence of awareness is that we start just where we are, with whatever our present circumstances are.
 
@@ -1094,13 +1103,13 @@ spontaneously  [spɔnˈtenɪəslɪ] 自发;自然;自动;自然地
 
 
 ## Chapter Twenty-four
-The same is true of a master. She is not necessary, for **the true master is inside us**. But the inside master is, in a sense, still asleep, so the outside master is needed. She simply creates situation after situation until we begin to wake up and become aware, until we begin to see the true nature of our situation. She surrounds us with a fragrance to arouse us out of our slumbers and dreams.
+The same is true of a master. She is not necessary, for <font color=red>the true master is inside us</font>. But the inside master is, in a sense, still asleep, so the outside master is needed. She simply creates situation after situation until we begin to wake up and become aware, until we begin to see the true nature of our situation. She surrounds us with a fragrance to arouse us out of our slumbers and dreams.
 
-Once we begin to become aware, then she assists us to avoid the various traps and attachments that can arise. And a true master eventually assists us to see into the nature of perhaps the greatest attachment of all — the attachment to the master. **Ultimately, even the master must be transcended.**
+Once we begin to become aware, then she assists us to avoid the various traps and attachments that can arise. And a true master eventually assists us to see into the nature of perhaps the greatest attachment of all — the attachment to the master. <font color=red>Ultimately, even the master must be transcended.</font>
 
 A master is not necessary, but desirable. For while we’re asleep we're always dreaming that we’re awake. To dream that we’re awake is the best way to stay asleep. The mind’s best defense is to imagine that it’s already gone, that we’re already awake or enlightened. Without the disturbing fragrance of a master, our slumbers may continue for quite a while.
 
-An interesting attachment is the feeling that we have to save the world. The world doesn’t need saving because it’s already perfect.
+An interesting attachment is the feeling that we have to save the world. <font color=red>The world doesn’t need saving because it’s already perfect</font>.
 
 As Byron Katie says, How do we know that the way the world is is for the highest good? Because it is that way. How do we know the world should be the way it is? Because it is that way. Simple. “Saving the world” can sometimes lead to force, violence, fanaticism. Immense suffering throughout history has been caused by those of us who were intent on saving the world by converting it to some cause or other.
 
@@ -1124,7 +1133,7 @@ The effort of the master is to pull all supports out from underneath us until th
 ## Chapter Twenty-five
 It’s said that a master is awakened, but what does that mean? What does it mean to be a master? What is this thing awakening? Is it some kind of insight? Is it formulating the final system, achieving the ultimate solution? Is it reaching the final goal?
 
-None of those things. Freedom is seeing that there is no goal at all. It’s the dropping of all goals, of all seeking. It’s the dropping of all attempts to improve, get better or change. But this dropping is not a doingness or decision. Rather, **it is a deep seeing that all attempts to get somewhere in anyway only lead nowhere, that they only lead further into the mind**.
+None of those things. <font color=red>Freedom is seeing that there is no goal at all</font>. It’s the dropping of all goals, of all seeking. It’s the dropping of all attempts to improve, get better or change. But this dropping is not a doingness or decision. Rather, **it is a deep seeing that all attempts to get somewhere in anyway only lead nowhere, that they only lead further into the mind**.
 
 It is seeing that all attempts to solve the problem, to improve, to survive, only perpetuate the problem and deepen it. It is seeing that all such attempts to solve the problem are the problem itself, and that **the problem is an illusion, that it doesn’t exist except as attempts to solve it**. All striving of any kind, therefore, simply falls away.
 
@@ -1144,23 +1153,23 @@ Awakening is seeing that we are creating the problem.Its seeing that **the river
 
 Rather, the issue really is whether we will struggle or not as we flow down the river. The question is whether we’ll become aware of who is creating the struggle in our life. To the extent that we push against the river the river seems to push back, but the river is not the problem.
 
-If there is awareness moment-to-moment of the mind’s struggles then moment-to-moment they disappear; then we can listen to our inner voice and cease our struggling with the river. We stop struggling with Existence. Then we’re in a deep bliss as we flow down the river. Then we celebrate existence moment-by-moment.
+<font color=red>If there is awareness moment-to-moment of the mind’s struggles then moment-to-moment they disappear; then we can listen to our inner voice and cease our struggling with the river. We stop struggling with Existence. Then we’re in a deep bliss as we flow down the river. Then we celebrate existence moment-by-moment.</font>
 
-We see that all attempts to improve our struggles are only more struggling. And if we try to stop struggling and try to flow down the river, then we’re in tension. How can we try to flow down the river? We’re already doing it. It’s just a deep let-go, there’s no trying or efforting. All trying, all efforting just keeps the game going.
+We see that all attempts to improve our struggles are only more struggling. And if we try to stop struggling and try to flow down the river, then we’re in tension. How can we try to flow down the river? We’re already doing it. <font color=red>It’s just a deep let-go</font>, there’s no trying or efforting. All trying, all efforting just keeps the game going.
 
-**Mind is like a bicycle — it must keep moving or it will fall down. It goes on creating struggle, searching, survival,desire. It creates movement, striving, change, because other-wise it simply disappears, it falls down. Mind is the struggle itself. Without the struggle there’s no mind either.**
+**Mind is like a bicycle — it must keep moving or it will fall down. It goes on creating struggle, searching,survival,desire. It creates movement, striving, change, because otherwise it simply disappears, it falls down. <font color=red>Mind is the struggle itself</font>. Without the struggle there’s no mind either.**
 
 The mind as controller, as chooser, as decider, as the “I” just disappears. It was an illusion all along, it never existed except as the struggle. But the computing mechanism is still there, and it can be used as a tool just as a hammer is picked up and used when needed. The capability to compute is still there, but the computer is silent unless called upon.
 
 If an awakened person crosses a street the computer-brain will figure out the right time to cross. But the mind, the“separate” person is vanished. That which struggled to control,that which thought of itself as the “I” is gone because it was only the struggle itself. Now the Existence, the Self crosses the street. The guests — thoughts, tapes, the mind — took over the house while the host was away, but now the host has returned.
 
-The master does not need to effort. After all, the river flows by itself. **Indeed, at the deepest level we are the river. **We’ve already arrived. What are we struggling about?
+The master does not need to effort. After all, the river flows by itself. Indeed, at the deepest level we are the river. <font color=red>We’ve already arrived. What are we struggling about?</font>
 
 
 
 
 ## Chapter Twenty-six
-Freedom is a deep seeing that this is it. This is the way it is. This is the way it turned out. Is is is... **Things are the way they are**. And things are not the way they are not. Right now,nothing can be any different than the way it is. **In the next moment it may be different, but right now it can’t be any different**. And all there ever is is right now. **The future never arrives, because it’s always just right now.**
+Freedom is a deep seeing that this is it. This is the way it is. This is the way it turned out. Is is is... **Things are the way they are**. And things are not the way they are not. Right now,nothing can be any different than the way it is. **In the next moment it may be different, but right now it can’t be any different**. And <font color=red>all there ever is is right now</font>. **The future never arrives, because it’s always just right now.**
 
 This is it, this is the way the river is flowing. To accept it is to enjoy it. But the acceptance is not a decision, it’s rather a deep awareness that this is the way it is. Love and acceptance are carried within awareness as a seed.
 
@@ -1172,13 +1181,13 @@ To use a different terminology, all there ever is to do is to get off our positi
 once and for all 彻底地 ; 一劳永逸地
 ```
 
-No, the tapes will always be running... until they don't. And what there is to do when they come up is to notice them,be aware of them as what they are. Then they flatten, they disappear. **We don’t do anything with them. We don’t ignore them, reject them or try to change them. We simply notice them... like leaves on the river.**
+No, the tapes will always be running... until they don't. And what there is to do when they come up is to <font color=red>notice them,be aware of them as what they are</font>. Then they flatten, they disappear. **We don’t do anything with them. We don’t ignore them, reject them or try to change them. We simply notice them... like leaves on the river.**
 
 The ground from which we perceive things transforms. Before, the ground was unawareness and sometimes we were aware. After, the ground is awareness and sometimes we’re unaware. But the circumstances of our life look the same — the same tapes still run, and sometimes we’re aware of them and sometimes not.. .just as before. Everything is the same.
 
 Everything is the same, but it is being perceived in a new way. If life is a bowl of cherries, then the cherries — the circumstances of our life — have not changed, but the bowl itself has changed.
 
-And what is that difference? Before, the bowl — the context in which everything is held — was that certain things needed to be achieved or changed. After, the ground is that this is the way it is, and that all there ever is to do is to beaware of the way it is. Since that is not a doingness, it’s doing nothing. But again, doing nothing doesn’t necessarily look like inactivity; it looks like just doing what we do.
+And what is that difference? Before, the bowl — the context in which everything is held — was that certain things needed to be achieved or changed. After, the ground is that this is the way it is, and that <font color=red>all there ever is to do is to be aware of the way it is</font>. Since that is not a doingness, it’s doing nothing. But again, doing nothing doesn’t necessarily look like inactivity; it looks like just doing what we do.
 
 **Just doing what we do, following our inner guidance,without performing our actions as means to an end. Then each action can become a blissful end-in-itself.**
 
@@ -1190,7 +1199,7 @@ It is as if we’ve been trying all our life to liberate ourself from a room in 
 
 Or to put it another way, awakening is seeing that the door won’t open because it’s the wrong door — so why push against it? But it’s worse than that. Awakening is seeing that it’s impossible to ever find the right door, and then, seeing that there are no doors at all, just solid walls. And then seeing that not only are there no doors, there are no walls either; infact, there is no room!
 
-It’s seeing that we’re already out of the room, because no room is there. The room was an illusion created by the mind so that it would have something to do — to try to get out. But how can we get out of a room when we’re already out? This is mind, struggling to get to a place where it already is, striving to achieve a result that’s already achieved.
+It’s seeing that we’re already out of the room, because no room is there. The room was an illusion created by the mind so that it would have something to do — to try to get out. But how can we get out of a room when we’re already out? <font color=red>This is mind, struggling to get to a place where it already is, striving to achieve a result that’s already achieved</font>.
 
 
 
@@ -1198,9 +1207,9 @@ It’s seeing that we’re already out of the room, because no room is there. Th
 ## Chapter Twenty-seven
 It’s been said that awakening is finding out that there’s no such thing as awakening. The mind sets up awakening or cosmic consciousness or whatever as another goal, the greatest goal. In Osho’s great metaphor, mind thinks that freedom is the top rung of a ladder somewhere. Mind is a compulsive ladder-climber; it carries its ladder around with it and when it finds a good spot it sets it down and starts climbing again. Of course, others need to be elbowed out of the way. And there’s no end to the rungs — mind can always create more.
 
-But awakening is not at the top of some ladder, some hierarchy. It’s getting down off all the ladders forever. More accurately, it’s seeing that the ladders are a creation of the mind, that there are no ladders. So there’s no need to get to the top of them, and no need to get off them either.
+**But awakening is not at the top of some ladder, some hierarchy. It’s getting down off all the ladders forever.** More accurately, it’s seeing that the ladders are a creation of the mind, that there are no ladders. So there’s no need to get to the top of them, and no need to get off them either.
 
-We’re already off — as soon as we see that we are. As soon as we see that we’re off the ladders, we see that we have always been off them because there are no ladders. In the instant of awakening, we see that we’ve always been awakened because there’s no awakening to achieve. Awakening is seeing that nothing whatever needs to be achieved, including of course awakening itself. It just happens when it does.
+<font color=red>We’re already off — as soon as we see that we are</font>. As soon as we see that we’re off the ladders, we see that we have always been off them because there are no ladders. In the instant of awakening, we see that we’ve always been awakened because there’s no awakening to achieve. Awakening is seeing that nothing whatever needs to be achieved, including of course awakening itself. It just happens when it does.
 
 We’ve been dreaming, and in the dream creating walls,obstacles, barriers, as well as power and money, achievements and pleasures. We’ve gone quite far away in the dream, to a distant city, and finally in the dream we begin to realize that we are very far away indeed from home.
 
@@ -1208,7 +1217,7 @@ Then it seems as if it will be very arduous to get back.We begin using various d
 
 But the problem is the dreaming itself. The problem is that we’re still in a dream. In fact, **who we really are is already herenow, we have only to awaken to it**. It only seems as if we are far away — **we have only to awaken and we’re back home instantly**.
 
-All spiritual methods are simply to change the nature of our dream so that we can awaken from it. Until we awaken,methods and devices are necessary to tamper with the dream.. .make it more pleasant, less pleasant, more peaceful,more anxious, whatever.. .until we awaken. Then the dreaming is ended and the devices are too. So a master uses different devices with different people. It depends on what they see in the dream, how they sense that someone’s dream needs to be disturbed.
+All spiritual methods are simply to change the nature of our dream so that we can awaken from it. Until we awaken,methods and devices are necessary to tamper with the dream.. .make it more pleasant, less pleasant, more peaceful,more anxious, whatever.. .until we awaken. Then the dreaming is ended and the devices are too. So **a master uses different devices with different people. It depends on what they see in the dream**, how they sense that someone’s dream needs to be disturbed.
 
 The great teachings stress that awakening happens in an instant. For no preparation needs to be made. It’s not a journey, therefore nothing needs to be done. There is no question of changing the circumstances of one’s life first, or of changing one’s programming. Journeys and preparations and changes all take time; they are all of the mind, part of the dream. No, one simply awakens; it is instantaneous. We just see, no preparation is needed. And in that seeing the concept of awakening itself is discarded. It too was simply a device. **Infact, the mind cannot be enlightened. The mind is actually an illusion; with what will we enlighten it?**
 
@@ -1216,7 +1225,7 @@ The great teachings stress that awakening happens in an instant. For no preparat
 
 
 ## Chapter Twenty-eight
-If awakening happens in an instant, why doesn’t it happen to us right now, this instant? Because we — the mind —don’t want it to. We want to continue to cling to our goals, our attitudes, our beliefs, our patterns and payoffs. We want to stay in movement. We don’t want to be awakened this instant because we would have to let go of the idea that we can control, choose, decide, make things different or better. We would have to let go of who we think we are and what we think we are doing. We would have to let go of “you” and “I,” and we’re not ready. The dream is familiar, and the problems are old friends — we’re not ready.
+<font color=red>If awakening happens in an instant, why doesn’t it happen to us right now, this instant? </font>Because we — the mind —don’t want it to. We want to continue to cling to our goals, our attitudes, our beliefs, our patterns and payoffs. We want to stay in movement. We don’t want to be awakened this instant because we would have to let go of the idea that we can control, choose, decide, make things different or better. We would have to let go of who we think we are and what we think we are doing. We would have to let go of “you” and “I,” and we’re not ready. The dream is familiar, and the problems are old friends — we’re not ready.
 
 So, paradoxically, time is needed. There is actually no need for it, but we cause it to be needed. Now time is needed for awareness to develop. It’s not a preparation, for no changes are necessary. Rather, we’ll continue to cling, but awareness will flower in us by and by.. .and then one day it will happen.Our awareness will have become strong enough so that suddenly we see through all our efforts to remain occupied. We see that awareness is all that is ever needed or possible, and that our efforts to achieve a result are what have been causing the delay.
 
