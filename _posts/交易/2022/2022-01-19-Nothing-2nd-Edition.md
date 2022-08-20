@@ -1229,9 +1229,9 @@ The great teachings stress that awakening happens in an instant. For no preparat
 
 So, paradoxically, time is needed. There is actually no need for it, but we cause it to be needed. Now time is needed for awareness to develop. It’s not a preparation, for no changes are necessary. Rather, we’ll continue to cling, but awareness will flower in us by and by.. .and then one day it will happen.Our awareness will have become strong enough so that suddenly we see through all our efforts to remain occupied. We see that awareness is all that is ever needed or possible, and that our efforts to achieve a result are what have been causing the delay.
 
-This is satori, awakening. But it’s not the final, ultimate liberation. It is not the case that after satori we will never run a tape again, never desire again, never again project our version of reality onto reality. Those things will still happen, we can expect them. But the ground has shifted. Now when those things happen we watch them, observe them. ..except when we don’t.
+This is satori, awakening. But it’s not the final, ultimate liberation. It is not the case that after satori we will never run a tape again, never desire again, never again project our version of reality onto reality. Those things will still happen, we can expect them. But the ground has shifted. Now <font color=red>when those things happen we watch them, observe them</font>. ..except when we don’t.
 
-And we’ve seen that ultimately this witnessing is all that can ever be done, and that it’s not a doing. So nothing is being done, nothing is being changed, everything is the same. Yet things begin happening around us. As awareness increases,reality changes for us. We begin living in a different world,even though it’s the same world. Problems clear up or are nolonger experienced as problems, because all problems at bottom are just due to insufficient consciousness.
+And we’ve seen that ultimately this witnessing is all that can ever be done, and that it’s not a doing. So nothing is being done, nothing is being changed, everything is the same. Yet things begin happening around us. <font color=red>As awareness increases,reality changes for us</font>. We begin living in a different world,even though it’s the same world. Problems clear up or are nolonger experienced as problems, because all problems at bottom are just due to insufficient consciousness.
 
 As we continue to **watch the mind**, awareness deepens. And as the awareness deepens, more and more tapes lose energy, lose force, lose reality. More and more of them become transparent and then disappear. It’s not that we’re trying to make them disappear. There’s an acceptance of them, we’re perfectly willing to have them there. In that very acceptance,though, they start disappearing of their own accord. And as they start disappearing a great silence increasingly descends on us. We become more and more still within.
 
@@ -1239,9 +1239,9 @@ As we continue to **watch the mind**, awareness deepens. And as the awareness de
 watch the mind
 ```
 
-And then one day the final, the ultimate happens. The tapes are all gone, they are simply there no more. And we’re there no more either. All desires, all goals, all clingings, all programs are absent, extinguished. There is no past and no future anymore, there is only the moment. **The ego’s smoky candle flame has gone out, but now the sun lights up the sky.We are dead, we are gone, but now God is alIive.** While we were, God was not. Now that we are not, God is. Existence Itself now dances through the form where we used to be. The inner Melody just moves through us.
+And then one day the final, the ultimate happens. The tapes are all gone, they are simply there no more. And we’re there no more either. All desires, all goals, all clingings, all programs are absent, extinguished. There is no past and no future anymore, there is only the moment. <font color=red>**The ego’s smoky candle flame has gone out, but now the sun lights up the sky.We are dead, we are gone, but now God is alIive.**</font> While we were, God was not. Now that we are not, God is. Existence Itself now dances through the form where we used to be. The inner Melody just moves through us.
 
-This is nirvana, the final enlightenment. And “nirvana”is such a beautiful word, for it means “no burning.” There’s nolonger the burning of desire, of striving and clutching. And in the absence of that, in that utter emptiness there’s a quiet bliss that’s beyond happiness, beyond excitement, beyond the thrill of any kind of experience. The bliss of Existence Itself.
+<font color=red>This is nirvana, the final enlightenment.</font> And “nirvana”is such a beautiful word, for it means “no burning.” There’s nolonger the burning of desire, of striving and clutching. And in the absence of that, in that utter emptiness there’s a quiet bliss that’s beyond happiness, beyond excitement, beyond the thrill of any kind of experience. The bliss of Existence Itself.
 Now It moves, It controls.
 As Jesus said: “Thy will be done.”
 
@@ -1252,13 +1252,18 @@ As Jesus said: “Thy will be done.”
 ## Chapter Twenty-nine
 Clouds float across the sky. They’re not trying to go anywhere. They’re not trying to accomplish anything. They are not choosing where to go. They are just drifting, letting the Existence carry them along. There is no decision-making,no trying, no struggle. There is a let-go, but **not even a let-go,for there is no controller to let go**. There’s simply peace. There is what is.
 
-All of Existence is like this. There is no purpose to it,no meaning, no goal. As Osho said, meaning and purpose are constructions of the mind which it imposes on Existence. The mind thinks that Existence has to get somewhere, that there has to be some purpose to it all, that someday some far-*flung omega*-point will be reached and that was the purpose. But then what is the purpose of the omega-point? Purpose is always an infinite regression, it always depends on something else. What is right now is never enough.
+All of Existence is like this. There is no purpose to it,no meaning, no goal. As Osho said, <font color=red>meaning and purpose are constructions of the mind which it imposes on Existence</font>. The mind thinks that Existence has to get somewhere, that there has to be some purpose to it all, that someday some far-flung omega-point will be reached and that was the purpose. But then what is the purpose of the omega-point? <font color=red>Purpose is always an infinite regression, it always depends on something else. What is right now is never enough.</font>
 
-The purpose of Existence is just to be here right now,being what It is. It is totally sufficient in Itself at each instant.It has no purpose except Itself. It has no reason except Itself.The rose is not trying to be something else; it is in bliss to be what it is this moment.
+```
+far-flung 遥远的；分布广的；广泛的；
+omega-point 奥米茄点，一切发展与进化的终点；
+```
+
+<font color=red>**The purpose of Existence is just to be here right now,being what It is. It is totally sufficient in Itself at each instant.It has no purpose except Itself. It has no reason except Itself. The rose is not trying to be something else; it is in bliss to be what it is this moment**.</font>
 
 Clouds, rivers, trees, life itself — all of Existence is in a deep ecstasy. All except us humans. We humans are in secret misery because our mind can't accept this moment; we must try to be somewhere else. We must try to control. We must make decisions. The mind is always serious — there are things to be done. Even when we let go, even when we laugh its only on the surface. Deep down the mind is still serious.
 
-Existence, on the other hand, is playing. It is having fun with no goal. Yes, there is death. There is pain. But death is an integral part of life, its absolutely necessary to life. **Life and death are not opposed to each other, they are two faces of the same thing**. Death clears out the rigidity, the calcification, the stuckness, the willfulness, the dead unbending ness and thus makes life possible.
+Existence, on the other hand, is playing. It is having fun with no goal. Yes, there is death. There is pain. But death is an integral part of life, its absolutely necessary to life. <font color=red>Life and death are not opposed to each other, they are two faces of the same thing</font>. Death clears out the rigidity, the calcification, the stuckness, the willfulness, the dead unbending ness and thus makes life possible.
 
 ```
 unbending ness 不屈不挠
@@ -1266,23 +1271,35 @@ unbending ness 不屈不挠
 
 Life is flexibility, its suppleness, its the ability to adjust to change, to bend with the wind. A tree begins as a flexible sapling and ends as dried-out stiffness. **Without death there would be no life, for there could be no change, no room for life.** All would come to a standstill. Death/life are inseparable;they’re the same phenomenon.
 
-Similarly, pleasure is impossible without pain. They’re inseparable; they’re also one phenomenon. The mind creates them, separates them, then tries to cling to the one and avoid the other. **Mind can’t accept the totality; that’s why it misses.**When we’re feeling pleasure, pain is taking a rest. It’s gathering energy, it will soon come to the fore. When we’re feeling pain, pleasure is taking a rest and gathering energy; soon it will come.
+<font color=red>Similarly, pleasure is impossible without pain. They’re inseparable; they’re also one phenomenon. The mind creates them, separates them, then tries to cling to the one and avoid the other. **Mind can’t accept the totality; that’s why it misses.**When we’re feeling pleasure, pain is taking a rest. It’s gathering energy, it will soon come to the fore. When we’re feeling pain, pleasure is taking a rest and gathering energy; soon it will come.</font>
 
-When the pendulum swings to one side it must then swing to the other, but it remains the same pendulum. Beauty is impossible without ugliness. Good is impossible without evil. Happiness and sadness depend on each other. Love and hate include each other. Dualities come into existence at the same time. Mind creates them. **Existence is simply what it is.Mind creates polarities and interpretations about it.**
+When the pendulum swings to one side it must then swing to the other, but it remains the same pendulum. Beauty is impossible without ugliness. Good is impossible without evil. Happiness and sadness depend on each other. Love and hate include each other. <font color=red>Dualities come into existence at the same time</font>. Mind creates them. **Existence is simply what it is.Mind creates polarities and interpretations about it.**
 
-Existence in its suchness is perfect as it is. Which is more perfect, ice or water? All is equal, nothing is better than anything else. Nothing is more important than anything else. Nothing is needed for all to be complete. Which is better, a long blade of grass or a short blade? Both are perfect. The Existence is perfect, and goes from perfection to perfection.This looks illogical. If reality is going to be perfect, how can it already be perfect? This makes no sense to the mind, for the mind is a perfectionist — always wanting to achieve perfection. But how can it achieve perfection when Existence is already perfect? It’s an absurd task.
+```
+有无相生
+polarities n.
+(两种倾向、意见等的)截然对立，两极化;极性(两极并存的状态) polarity的复数
+```
 
-But what about disease, poverty, evil? What exists is what exists, only the mind labels certain parts of it as “bad.”Good and bad depend upon our point of view. If we see a cat kill a mouse, that is not evil to us; that’s just nature. But to the brother of the mouse it is evil. What threatens our survival or the survival of that which we identify with is “bad” to us; what assists our survival we then call “good.” **To see good and bad requires a position, a point of view, an identity.** When there is no identity and no position there is no bad, and no good either. Then all simply is what it is.
+Existence in its suchness is perfect as it is. Which is more perfect, ice or water? **All is equal, nothing is better than anything else. Nothing is more important than anything else.** Nothing is needed for all to be complete. Which is better, a long blade of grass or a short blade? Both are perfect. The Existence is perfect, and goes from perfection to perfection.This looks illogical. If reality is going to be perfect, how can it already be perfect? This makes no sense to the mind, for the mind is a perfectionist — always wanting to achieve perfection. But how can it achieve perfection when Existence is already perfect? It’s an absurd task.
+
+```
+All is equal ?
+```
+
+But what about disease, poverty, evil? What exists is what exists, only the mind labels certain parts of it as “bad.”Good and bad depend upon our point of view. If we see a cat kill a mouse, that is not evil to us; that’s just nature. But to the brother of the mouse it is evil. What threatens our survival or the survival of that which we identify with is “bad” to us; what assists our survival we then call “good.” **To see good and bad requires a position, a point of view, an identity.** <font color=red>When there is no identity and no position there is no bad, and no good either. Then all simply is what it is</font>.
 
 **There is no way to foresee the ultimate consequences of anything. That which we call bad may lead to good. That which we label good may lead to bad**. Certain monastic orders did many good deeds and also administered the Inquisition;was the founding of the orders good or bad? Drug pushing in Harlem led to capital formation for black businesses. Was this good or bad? The mind is a limited instrument and cannot see more than very limited consequences.
 
 ```
 祸兮福之所倚，福兮祸之所伏。
+monastic orders 修道会
+cannot see more than 只能看到
 ```
 
 Finally, Existence appears to be a multiplicity on the surface, but that is just appearance, that is the projections and discriminations of mind. Beneath the apparent multiplicity created by the mind, we find oneness.. .the One. Existence is non-dual. Existence is eternal and changeless and yet appears to change, **just as the sky has light and darkness and snow and rain, yet remains itself unaffected by any of it.** The One is not poor, not rich, neither diseased nor healthy, neither good nor bad — and that is who we really are, that is all there is.
 
-The One has no attributes and yet has all attributes — It has all the forms of the world. This is the divine dance, the divine play. Beneath each form is the One, is Existence itself,and It is bliss. Existence does not suffer. Except for humans,the forms of Existence can feel pain but not suffering. Only we suffer, because only we compare and desire and feel ourselves to be separate. Only we are attached to things being a certain way — and that’s the only cause of suffering. It isn’t logical, but it can be seen.
+The One has no attributes and yet has all attributes — It has all the forms of the world. This is the divine dance, the divine play. Beneath each form is the One, is Existence itself,and It is bliss. Existence does not suffer. Except for humans,the forms of Existence can feel pain but not suffering. Only we suffer, because <font color=red>only we compare and desire and feel ourselves to be separate</font>. Only we are attached to things being a certain way — and that’s the only cause of suffering. It isn’t logical, but it can be seen.
 
 
 
@@ -1299,15 +1316,15 @@ Existence = One = Nothing
 
 The ocean is one, but to a fish it’s the very quality of existence. There is no way to get outside of it, no way to contrast it with anything else, so to a fish the ocean is nothing, it doesn't exist. If a pencil is expanded until it is everything it vanishes, it becomes nothing. Not only is the One everything,the totality — It is also nothing, emptiness, the Void.
 
-This description can also apply to the person who has reached nirvana, final awakening. **They are everything, they are nothing, they are one.** They’re one because they’re unified,they’re in harmony. There’s no longer any distinction between the conscious and unconscious mind, because everything is conscious.
+This description can also apply to the person who has reached <font color=red>nirvana, final awakening</font>. **They are everything, they are nothing, they are one.** They’re one because they’re unified,they’re in harmony. There’s no longer any distinction between the conscious and unconscious mind, because everything is conscious.
 
 ```
 nirvana = final awakening
 ```
 
-Such a person is **no longer a cacophony of successive mind-states** — anger replaced by hope replaced by frustration replaced by gratification, etc. Instead, they are in peace and serenity; they are in a deep harmony with All. There are nolonger conflicting elements — love competing with hate, greed competing with fear, happiness competing with grief. Now all of it is included, all is transcended. They are whole, complete,serene. They are One.
+Such a person is **no longer a cacophony of successive mind-states** — anger replaced by hope frustration replaced by gratification, etc. Instead, they are in peace and serenity; they are in a deep harmony with All. There are nolonger conflicting elements — love competing with hate, greed competing with fear, happiness competing with grief. Now all of it is included, all is transcended. They are whole, complete,serene. They are One.
 
-Such a person is also everything, the Totality, because there are no longer any boundaries. Trees merge into the sky merge into clouds merge into others. **Not that they don’t use labels and concepts when appropriate, but they just play with them as utensils, devices. They no longer see the labels and concepts as reality. Reality for them is All, is One.**
+Such a person is also everything, the Totality, because there are no longer any boundaries. Trees merge into the sky merge into clouds merge into others. **Not that they don’t use labels and concepts when appropriate, but they <font color=red>just play with them as utensils, devices</font>. They <font color=red>no longer see the labels and concepts as reality</font>. Reality for them is All, is One.**
 
 ```
 一切皆是”物“，天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。
