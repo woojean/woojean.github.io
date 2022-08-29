@@ -1356,7 +1356,7 @@ Now she is gone and there is no-mind, emptiness. Now the Divine is there, the Ex
 ## Chapter Thirty-one
 Who is beating our heart right now? If we are, then let’s will it to stop beating. Who is filtering our blood? If we are,then let’s will it to stop for a few moments. In truth, Existence caused us to be born, Existence is beating our heart, Existence is breathing us. It is moving the sun and stars, it is moving the electron around the nucleus, it’s blowing the wind and raining the rain.
 
-It’s doing all of it — all of it absolutely. Why, then, do we persist in believing that we must fend for ourself, that we must look out for #1? Existence is taking care of our heart; will it not take care of us? Our life is no more than a dewdrop on a leaf, slowly falling off — why all this fighting, ambition, struggling, seeking? We are a drop of rain evaporating in the sun. Let’s enjoy it! Can we see our real situation?
+It’s doing all of it — all of it absolutely. Why, then, do we persist in believing that we must fend for ourself, that we must look out for #1? <font color=red>Existence is taking care of our heart; will it not take care of us?</font> Our life is no more than a dewdrop on a leaf, slowly falling off — why all this fighting, ambition, struggling, seeking? We are a drop of rain evaporating in the sun. Let’s enjoy it! Can we see our real situation?
 
 Let’s look within and let a deep trust arise. Let’s let ourself be borne on the back of Existence. Let’s let the river carry us. In truth, It’s carrying us anyway. Why struggle?
 
@@ -1366,11 +1366,16 @@ Let’s look within and let a deep trust arise. Let’s let ourself be borne on 
 
 But this is not enough for the mind. The mind finds it difficult to trust. The mind asks, “But what if I die? What if I don’t get enough to eat? What if I don’t get enough money? What if I don’t get the right partner?” And so on.
 
-Mind’s questions presuppose certain preferences. But the awakened person has no more preferences. If death comes,good; she’ll celebrate it. If hunger comes, good; she’ll celebrate it. If illness comes, good; she’ll celebrate it. If joy comes, good;she’ll celebrate it. If the wind blows through the trees, good;she’ll celebrate it. Whatsoever it is, she will celebrate it, she will be grateful for it. And in truth, the river is going to flow wherever It flows anyway. Why not celebrate the way It is,whatever It is?
+<font color=red>Mind’s questions presuppose certain preferences</font>. But the awakened person has no more preferences. If death comes,good; she’ll celebrate it. If hunger comes, good; she’ll celebrate it. If illness comes, good; she’ll celebrate it. If joy comes, good;she’ll celebrate it. If the wind blows through the trees, good;she’ll celebrate it. **Whatsoever it is, she will celebrate it, she will be grateful for it.** And in truth, the river is going to flow wherever It flows anyway. Why not celebrate the way It is,whatever It is?
+
+```
+Whatsoever it is, she will celebrate it, she will be grateful for it. 
+???
+```
 
 There is a true story of the Sufi master Bayazid and his disciples who came to a town at night. It was cold and raining and they were hungry, but the townspeople would not let them in. So they went to an adjacent hill, and there Bayazid praised God for his many blessings. One of his disciples said,“Now this is too much, you have gone too far. We are hungry,cold, wet tonight — and you’re praising God?” Bayazid replied,“I must praise Him, for He fulfills my needs so beautifully. Tonight I need to be hungry. Tonight I need to be cold and in poverty. Tonight I need to be wet and shivering. Otherwise,why should He give them to me? He takes care of my needs so perfectly.”
 
-This is the trusting being. There’s a let-go, there is **no struggle anymore**. In his heart there is acceptance and joy and a deep gratitude for All that is. His gratitude and acceptance are so great that he cannot contain them; they overflow in a profound bliss that is independent of circumstances.
+This is the trusting being. There’s a let-go, there is **no struggle anymore**. <font color=red>In his heart there is acceptance and joy and a deep gratitude for All that is</font>. His gratitude and acceptance are so great that he cannot contain them; they overflow in a profound bliss that is independent of circumstances.
 
 Just to see the sky is too great a gift for him, it overflows into bliss. Just to see a tree blow in the wind or hear the crickets cry is the fulfillment of his being. To eat his dinner or to look into the eyes of another is the meaning of his existence. It is totally complete, moment-by-moment. Nothing is lacking. All is perfect. Simply that things be what they are, that is all that he asks.
 
