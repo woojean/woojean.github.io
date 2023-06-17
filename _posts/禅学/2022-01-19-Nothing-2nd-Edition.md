@@ -2,8 +2,8 @@
 layout : post
 title : "Nothing(2nd Edition)"
 date : 2022-01-19 19:06:58
-categories : 交易
-tags : 亚当理论
+categories : 禅学
+tags : 国外禅学
 excerpt : ""
 ---
 
@@ -67,6 +67,8 @@ It’s like a tree where we’re cutting off leaves one by one, solving one prob
 If we look deeply enough, we’ll see that the process will never end; new leaves will always keep growing. So we must look not to the leaves but to the root — the mind — for that is where the real problem resides. If we cut the root all the leaves will wither simultaneously.
 
 So let’s <font color=red>look to the root</font>, not to the leaves. Let’s <font color=red>look to the nature of mind itself</font>.
+
+
 
 
 
@@ -147,7 +149,7 @@ The mind never sees that <font color=red>this endless seeking is the real proble
 ## Chapter Four
 The basis of the mind’s motion towards all its goals is discriminations. <font color=red>The world is a totality but the mind separates it into a multiplicity through its labels, concepts, categories</font>. The mind is a labeler and labels everything. “This is a tree, that is a fence. This is moving, that is stationary. This is red, that is orange. He is well-dressed, she is average. The boy is good-looking, his father is not. This is a cloudy day, too bad, yesterday was sunny.”
 
-<font color=red>Mind then perceives reality through its constructs and concepts rather than directly</font>. Experiments have indicated that a person shown a red ace of spades will see an ace of hearts, because he has a concept that red means a heart or diamond. Other experiments have shown that if by prearrangement a crowd of people claims to see something that isn't there then the uninitiated observer will see it too. They will actually see something that isn’t there because the mind computes that it must be there.
+<font color=red><b>Mind then perceives reality through its constructs and concepts rather than directly</b></font>. Experiments have indicated that a person shown a red ace of spades will see an ace of hearts, because he has a concept that red means a heart or diamond. Other experiments have shown that if by prearrangement a crowd of people claims to see something that isn't there then the uninitiated observer will see it too. They will actually see something that isn’t there because the mind computes that it must be there.
 
 In fact all labels, <font color=red>all concepts set up dualities</font>. To create a category of “tree” we must simultaneously create a category of “not-tree,” of all that which is not a tree. Otherwise this category of “tree” has no meaning. It’s the same with all our categories. “Up” has no meaning without “down.” Something can only be “up” in relation to something else which is “down.” The two concepts come into being together. **No “up” or “down” exists in reality.** Such labels are mind-creations.
 
@@ -236,7 +238,7 @@ There is a great true story. A student of Zen said, “Master, do we survive dea
 
 “Your breakfast is getting cold, ” the master replied.
 
-<font color=red>Mind can understand the complicated but has a hard time with the simple</font>. Life is simple... a sunset, a rainstorm, a flower. Life is so simple that it is beyond our understanding. The mind cannot comprehend it, <font color=red>cannot comprehend simply being in the moment without any purpose or goal</font>. So mind keeps trying to fit life into a box, to structure it, to create order out of what it sees as chaos. Mind feels deeply anxious when confronted with the unlimited and unknown, so it clings to its boxes and structures and tries desperately to be certain.
+<font color=red>Mind can understand the complicated but has a hard time with the simple</font>. Life is simple... a sunset, a rainstorm, a flower. Life is so simple that it is beyond our understanding. The mind cannot comprehend it, <font color=red><b>cannot comprehend simply being in the moment without any purpose or goal</b></font>. So mind keeps trying to fit life into a box, to structure it, to create order out of what it sees as chaos. Mind feels deeply anxious when confronted with the unlimited and unknown, so it clings to its boxes and structures and tries desperately to be certain.
 
 It asks questions. Why is there suffering? Why is there disease? Why is there hate? Why is there pain? Why is there death? <font color=red>Mind wants answers</font>.
 
@@ -266,11 +268,11 @@ And mind falls short of its ideal again and again... tries again, falls short ag
 falls short of 不足以,达不到
 ```
 
-Only the possible and imperfect is human. Mind always desires the super-human, and the super-human is always inhuman. <font color=red>The most difficult thing for the mind is just to be ordinary, natural, nothing special.</font>
+Only the possible and imperfect is human. Mind always desires the super-human, and the super-human is always inhuman. <font color=red><b>The most difficult thing for the mind is just to be ordinary, natural, nothing special.</b></font>
 
 On the contrary, the ego/mind is trying very hard to be unique, special, extraordinary. It wants to stand out and be noticed. <font color=red>In fact this desire to be extraordinary is absolutely ordinary because it is ubiquitous, it’s the everyday nature of the mind</font>.
 
-And <font color=red>mind is an extremist</font>, going from one extreme to the other in its efforts to be unique and special. **It can never be simply in balance because then it would cease to exist**. Mind is the imbalance itself, and it will go to any lengths to be special. If it perceives failure in seeking pleasure then it will start seeking pain. If it thinks it can be superior by debasing itself it will do that. If it does not succeed in life then it will seek suicide, death.
+And <font color=red>mind is an extremist</font>, going from one extreme to the other in its efforts to be unique and special. **It can never <u>be simply in balance</u> because then it would cease to exist**. Mind is the imbalance itself, and it will go to any lengths to be special. If it perceives failure in seeking pleasure then it will start seeking pain. If it thinks it can be superior by debasing itself it will do that. If it does not succeed in life then it will seek suicide, death.
 
 Above all, <font color=red>mind is a doer</font>. Something must be done — about one’s life, about the world, about someone else, about this situation and that situation. And mind is innately violent, it is always willing to use force if necessary. To achieve its perfect ideal, coercion may have to be used. <font color=red>To the mind, the end justifies the means</font>.
 
@@ -309,7 +311,7 @@ What is this sense of “I” then, this sense of a separate existence? It is it
 I = a series of thoughts
 ```
 
-And if we look at our thoughts we’ll see that they are things just like a glass or a chair. <font color=red>Each thought is like a wave rising out of the ocean</font>. **It appears out of nowhere, has a brief** **lifespan and then disappears back to where it came from.**
+And if we look at our thoughts we’ll see that they are things just like a glass or a chair. <font color=red size=4><b>Each thought is like a wave rising out of the ocean</b></font>. **It appears out of nowhere, has a brief** **lifespan and then disappears back to where it came from.**
 
 Each thought rises and falls of its own accord, **it is not** **under any control**. Ask yourself: Can you change the thoughts you had yesterday? No. Can you change the thoughts that you will have tomorrow? No. Can you change the thought you’re having right now? No. The “right now” has already passed. You’ll be surprised — you can't change any of your thoughts. “You” have no control over them. They appear and disappear of their own accord. They are independent things.
 
@@ -1389,6 +1391,10 @@ Such a person sees that there is nothing to do and that nothing is needed, so he
 ## Chapter Thirty-two
 Doing nothing does not have a particular form to it; it doesn't look a certain way. It is not a form or doingness, but **a state of mind. More accurately, a state of no-mind, a state of absence.**
 
+```
+a state !
+```
+
 When a bird sings it isn’t thinking about how it must sing today and it doesn’t have a goal about finishing its song. It has no purpose in mind, it is not trying to accomplish anything. It’s simply singing out of its exuberance, there is no goal or meaning about it. It’s doing nothing. The awakened person is the same. He “does nothing” because he is not attached to any goal; **his mind is silent, absent**.
 
 From that silence he spontaneously does each moment whatever will be most harmonious and appropriate. He does not think about it, there’s no decision. He simply does what he does; whatever happens, happens. There is no doingness,there is no effort anymore. All effort is gone. All is spontaneous, effortless, harmonious, compassionate. Yet to some-one’s mind it may not look that way.
@@ -1438,7 +1444,7 @@ Even to say that they are there is inaccurate, for there is no concept that they
 
 
 ## Chapter Thirty-three
-Love is often thought of as something we do. But have you ever tried to love? It feels shallow, false. Whenever we are trying to be something, it means we're not that thing. Otherwise, what’s the point of trying? If we’re trying to be pregnant,we’re not. If we’re trying to be loving, we’re not loving. The very effort of trying means it is not genuine, it is not natural. Love isn’t a trying, it’s not an attitude. It is not an activity. It’s not a shining glow in the eyes, and it’s not a melting feeling. And it’s not an intoxication with someone or something.
+Love is often thought of as something we do. But have you ever tried to love? It feels shallow, false. <font color=red>Whenever we are trying to be something, it means we're not that thing</font>. Otherwise, what’s the point of trying? If we’re trying to be pregnant,we’re not. If we’re trying to be loving, we’re not loving. <font color=red>The very effort of trying means it is not genuine, it is not natural.</font> Love isn’t a trying, it’s not an attitude. It is not an activity. It’s not a shining glow in the eyes, and it’s not a melting feeling. And it’s not an intoxication with someone or something.
 
 Love isn’t a feeling or a point of view or a doingness. It has no form to it, it doesn’t look a particular way. The mind doesn’t love, for love is possible only when there aren’t any attachments or objectives, when the moment alone is everything. It is the Self that loves.
 
@@ -1458,13 +1464,13 @@ Love is easily misunderstood by the mind. For instance,the mind may decide that 
 
 Alternatively, mind may interpret having no preferences as some formula about sexual promiscuity or celibacy. This conceives of love as an activity or a denial, and it’s neither one. **Romance, sex, renunciation are all drugs, intoxicants; they are a doingness and we come down from them.** We don’t come down from love because it is not an up.
 
-Love is not hot as passion is. Neither is it cold. It is just in the middle — a quiet, subtle, warm fragrance which can’t be practiced or implemented, but which expresses spontaneously when the mind is no longer there.
+<font color=red>Love is not hot as passion is. Neither is it cold. It is just in the middle — a quiet, subtle, warm fragrance which can’t be practiced or implemented, but which expresses spontaneously when the mind is no longer there.</font>
 
 
 
 
 ## Chapter Thirty-four
-Acceptance is also easily misconceived by the mind. “So if all things are perfect then I might as well hurt or deceive others — what difference does it make?” **Such an attitude sees acceptance *or its lack* as a decision. But acceptance just arises on its own when the mind is silent**. So it has nothing to do with any conclusion by the mind that hurting or deceiving others is okay. Such a decision would merely be another tape of the mind, more of its survival programming.
+Acceptance is also easily misconceived by the mind. “So if all things are perfect then I might as well hurt or deceive others — what difference does it make?” **Such an attitude sees acceptance *or its lack* as a decision. But <font color=red>acceptance just arises on its own when the mind is silent</font>**. So it has nothing to do with any conclusion by the mind that hurting or deceiving others is okay. Such a decision would merely be another tape of the mind, more of its survival programming.
 
 This does not mean to stop doing what we do. That would just be a suppression, a violence; the thwarted energy will not go away but will distort us, it will show up in some other form.
 
@@ -1476,17 +1482,17 @@ If we force ourselves to give something up then the desire will still be there, 
 force and suppressed，是一种低阶手段，高阶手段都是自然的。
 ```
 
-Ultimately, the attempt to fight or suppress “sin” or the undesirable is an attempt to fight with darkness. But at the deepest level, as Osho points out, darkness does not exist — it’s just an absence of light. How then can we defeat it? How can we defeat something that fundamentally is an absence?
+Ultimately, the attempt to fight or suppress “sin” or the undesirable is an attempt to fight with darkness. But at the deepest level, as Osho points out, darkness does not exist — it’s just an absence of light. How then can we defeat it? <font color=red>How can we defeat something that fundamentally is an absence?</font>
 
-The mind says in effect, “I must get rid of this darkness first before I can turn on the light.” Can we see what the mind is doing? We don’t need to bother about the darkness in our life or in the lives of others, it’s a futile struggle.Far more effective is to turn on a light.
+The mind says in effect, “I must get rid of this darkness first before I can turn on the light.” Can we see what the mind is doing? <font color=red>We don’t need to bother about the darkness in our life or in the lives of others, it’s a futile struggle. Far more effective is to turn on a light.</font>
 
 When the light is turned on, darkness vanishes. There is no need to fight with it; no effort is needed. A room can be dark for many years, yet it still takes only a moment to turn on the light and then the darkness is gone.
 
 **Fighting sin is like fighting an enemy in a dream. We don’t need to defeat him; we can just wake up.** If we’re being harmed by others, or if we’re the one doing the harming, or if we’re harming ourself, we can put our focus and energy on turning on a light in the situation.
 
-What is that light? It **can be finding a positive goal that all can put their energy toward.** It **can be a love warm enough to dissolve barriers and hatreds**. It **can be looking within to see how our own stories are perpetuating our separateness.**
+<font color=red>What is that light?</font> It **can be finding a positive goal that all can put their energy toward.** It **can be a love warm enough to dissolve barriers and hatreds**. It **can be looking within to see how our own stories are perpetuating our separateness.**
 
-In doing this, any type of rigidity that we try to impose on ourself or life is again a suppression, a form of violence.Life is flexibility, openness, a plunge into the unknown each moment. How can this occur if we're frozen into a structure? **A slavish devotion to rules or discipline can make us dead inside**. Even awareness can be made into a discipline if it is approached rigidly; then it is not awareness because it has the smell of effort, of tension. **The whole point is to become less and less tense inside, more and more open and relaxed.**
+In doing this, any type of rigidity that we try to impose on ourself or life is again a suppression, a form of violence. <font color=red>Life is flexibility, openness, a plunge into the unknown each moment.</font> How can this occur if we're frozen into a structure? **A slavish devotion to rules or discipline can make us dead inside**. Even awareness can be made into a discipline if it is approached rigidly; then it is not awareness because it has the smell of effort, of tension. **The whole point is to become less and less tense inside, more and more open and relaxed.**
 
 ```
 对任何规则任何教条奴隶般的忠诚将会使我们原本拥有的内在的灵活性死亡。
@@ -1494,13 +1500,13 @@ In doing this, any type of rigidity that we try to impose on ourself or life is 
 
 Like anything else, rules and disciplines can be useful as devices. They can alter the dream so that the dreamer may begin to rouse from his slumbers. But **whatever we might use as a device, lets relax into it, ease into it, flow with it.**
 
-**Lets let everything lead us to increased relaxation, for awakening is simply the ultimate relaxation**. If we decide to sit quietly from six to seven every morning, for instance, lets approach it as a relaxation; lets let it be a deep easiness. **If we approach it as a heavy, serious duty we’ll destroy the whole value of it.**
+<font color=red>Lets let everything lead us to increased relaxation, for awakening is simply the ultimate relaxation</font>.**If we decide to sit quietly from six to seven every morning, for instance, lets approach it as a relaxation; lets let it be a deep easiness. **If we approach it as a heavy, serious duty we’ll destroy the whole value of it.**
 
 ```
 awakening is simply the ultimate relaxation.
 ```
 
-**If we use discipline on ourself, lets use it with some awareness. Lets watch ourself as we use it; then something will begin to awaken within us.** At first it will be very fragile. Thus as awareness first develops, we may want to maintain our discipline just as you would keep a wire fence around a small sapling to protect it. But once the dreamer is fully awake, all rules and disciplines fall away; they’re just irrelevant now. An awakened being may look disciplined because of a daily routine or rhythm, but that’s just the appearance.
+<font color=red>If we use discipline on ourself, lets use it with some awareness. Lets watch ourself as we use it; then something will begin to awaken within us.</font> At first it will be very fragile. Thus as awareness first develops, we may want to maintain our discipline just as you would keep a wire fence around a small sapling to protect it. But once the dreamer is fully awake, all rules and disciplines fall away; they’re just irrelevant now. An awakened being may look disciplined because of a daily routine or rhythm, but that’s just the appearance.
 
 The routine of an awakened person is not a discipline because it’s not something imposed. Rather, it’s a rhythm that has **arisen naturally, spontaneously, by itself**. The Melody is moving unimpeded now in that vessel. The light is on.
 
@@ -1510,17 +1516,17 @@ The routine of an awakened person is not a discipline because it’s not somethi
 ## Chapter Thirty-five
 Just be natural, the Taoist master Chuang Tzu says.
 
-“When the shoe fits, the foot is forgotten.” He is saying that only when there is struggle or discomfort do we become aware of something. This is the situation of the mind — continually in a struggle, in a discomfort. Let’s see the point: How else can it maintain itself? It is the struggle, the discomfort. It has no existence other than that. If we’re just natural, if we’re ordinary, if we’re balanced, there is no place for the mind to stand. It must fall.
+“When the shoe fits, the foot is forgotten.” He is saying that only when there is struggle or discomfort do we become aware of something. **This is the situation of the mind — continually in a struggle, in a discomfort.** Let’s see the point: How else can it maintain itself? It is the struggle, the discomfort. It has no existence other than that. If we’re just natural, if we’re ordinary, if we’re balanced, there is no place for the mind to stand. It must fall.
 
-To be natural means to be balanced, it means to be in the middle. This is Buddha’s middle way. Mind always wants to go to extremes, so it can keep moving. First we eat too much, then we starve ourself. Or we work very competitively,and then we go to the other side and relax very competitively. Or first we’re a playboy, then we get sick of that and want to become a saint. The mind tends to move to extremes, it often doesn’t know where or when to stop. This keeps the mind alIive, because by moving to extremes it keeps moving.
+To be natural means to be balanced, it means to be in the middle. This is Buddha’s middle way. Mind always wants to go to extremes, so it can keep moving. First we eat too much, then we starve ourself. Or we work very competitively,and then we go to the other side and relax very competitively. Or first we’re a playboy, then we get sick of that and want to become a saint. **The mind tends to move to extremes, it often doesn’t know where or when to stop. This keeps the mind alIive, because by moving to extremes it keeps moving.**
 
 The master is a contrast to that. She’s balanced, like a tight rope walker. She leans neither to the left nor the right;but stays balanced over the center, not going to extremes.
 
-She has a great sense of appropriateness. She’s just easy,ordinary. **To be ordinary is a rare quality, for the mind is always trying to be extraordinary.** It wants to distinguish itself,it wants to stand out from the crowd. Even humility can serve this purpose — the mind will try to be the most humble. This effort to be unique keeps the mind alIive, but it is absolutely absurd. The universe is so vast. **We’re like *a grain of sand* on the beach trying to stand out from the other grains. Pretty absurd.**
+She has a great sense of appropriateness. She’s just easy,ordinary. <font color=red>To be ordinary is a rare quality, for the mind is always trying to be extraordinary.</font> It wants to distinguish itself,it wants to stand out from the crowd. Even humility can serve this purpose — the mind will try to be the most humble. This effort to be unique keeps the mind alIive, but it is absolutely absurd. The universe is so vast. **We’re like *a grain of sand* on the beach trying to stand out from the other grains. Pretty absurd.**
 
 The master knows better; she has seen through such nonsense. She’s natural, she’s easy, she’s light. “**Easy is right**,”says Chuang Tzu. Easy in the beginning, easy in the middle,easy in the end. **The master is effortless, non-serious, playful.** She knows there is nothing to do, so everything she does is“nothing special.”
 
-She just does what she’s doing — without compulsion,without attachment. It’s a good test: Does what we’re doing feel aligned *deep down*, regardless of what’s happening on the surface? If not, the message may be that we’re fighting the river somehow. The mind can make a tension even out of easiness by making a rule out of it. “Be easy.” This won't work. So how do we become easy?
+She just does what she’s doing — without compulsion,without attachment. It’s a good test: <font color=red>Does what we’re doing feel aligned *deep down*, regardless of what’s happening on the surface? If not, the message may be that we’re fighting the river somehow.</font> The mind can make a tension even out of easiness by making a rule out of it. “Be easy.” This won't work. So how do we become easy?
 
 ```
 deep down 在内心深处，在心底（知道）
@@ -1541,7 +1547,7 @@ austerities 苦行;禁欲;
 martial arts 武术
 ```
 
-Jesus said, “I bring a sword.” It’s all very well to love everything, but sometimes we need a sword too, in this sense:Sometimes when we’re sitting for long periods in meditation,“just sitting,” we need to face the fear or the anxiety or the boredom and just not move. **Just be unmoving in the face of those things that we’ve always moved away from before.**
+Jesus said, “I bring a sword.” It’s all very well to love everything, but sometimes we need a sword too, in this sense:Sometimes when we’re sitting for long periods in meditation,“just sitting,” we need to face the fear or the anxiety or the boredom and just not move. <font color=red>Just be unmoving in the face of those things that we’ve always moved away from before.</font>
 
 The sword that actually cuts the root of the mind is this unflinching awareness. What we’re doing, the lifestyle we’re leading, the methods we’re using are of little importance. Awareness of what we’re doing is the key. For awareness leads to silence, and silence in turn leads to deeper awareness; at bottom, they are the same. Awakening is going so far into the present moment that you can’t get back out.
 
@@ -1549,17 +1555,17 @@ The sword that actually cuts the root of the mind is this unflinching awareness.
 
 
 ## Chapter Thirty-six
-Watch. We’ll see that we create our version of reality by what our attention is focused on. “The floor.” We just created the floor by bringing our attention and energy to it.
+Watch. We’ll see that <font color=red>we create our version of reality by what our attention is focused on.</font> “The floor.” We just created the floor by bringing our attention and energy to it.
 
-What is the difference between attention and awareness? Simply that **attention is directed, focused, while awareness is non-directed, passive.** One way of putting it is that **awareness is noticing what we notice**. It’s noticing the labels,discriminations, responses, models, activities, evaluations and demands that constitute our version of reality.
+What is the difference between attention and awareness? Simply that **attention is directed, focused, while awareness is non-directed, passive.** One way of putting it is that <font color=red>**awareness is noticing what we notice**</font>. It’s noticing the labels,discriminations, responses, models, activities, evaluations and demands that constitute our version of reality.
 
 And as awareness develops, it becomes obvious that we are entirely responsible for the reality that we live in, because it’s our version of it. God is not responsible. The world is not responsible. We are responsible. Our experience of reality is our own creation.
 
-The world is a perfect echo of us. It is like standing in a canyon. If we shout “God!” we’ll hear “God!” back. If we shout “Hate!” we’ll hear “Hate!” back. We hear our own projections. The river mirrors our own struggles. For instance,the qualities that annoy us about others are projections of qualities that we ourselves have. Otherwise, we would notice them but they wouldn’t have any charge for us.
+<font color=red>The world is a perfect echo of us</font>. It is like standing in a canyon. If we shout “God!” we’ll hear “God!” back. If we shout “Hate!” we’ll hear “Hate!” back. We hear our own projections. The river mirrors our own struggles. For instance,the qualities that annoy us about others are projections of qualities that we ourselves have. Otherwise, we would notice them but they wouldn’t have any charge for us.
 
 If arrogance in someone bothers us it’s because we’re arrogant. If resentment in someone bothers us it’s because we have resentment. Otherwise it would make no impression on us, it would be irrelevant, it would have no more significance than the ceiling. The canyon echos us. And this is true in the widest sense. If the world seems violent, let’s look within at ourself. What is violent in us?
 
-All this being so, **if we truly want to help the world then we can work on ourself. That is where it starts and ends.** If we want to improve someone else then we can work on ourself. We’ll be surprised — as our own consciousness is raised we’ll find that the other person has “improved.” They are much more okay now. A miracle!
+All this being so, **if we truly want to help the world then we can work on ourself. <font color=red>That is where it starts and ends</font>.** If we want to improve someone else then we can work on ourself. We’ll be surprised — as our own consciousness is raised we’ll find that the other person has “improved.” They are much more okay now. A miracle!
 
 As our consciousness deepens we gradually find that we are living in a different reality. **The game is to work on ourself — not on others, not on the world.** The mind always finds wrongness and problems out there and then wants to solve them there, but the mind has created the wrongness and the problems in the first place. How can we ever solve something externally which is being created internally?
 
@@ -1571,7 +1577,7 @@ A special trap is taking any of the concepts discussed here and using them to ma
 
 Does this mean that we never communicate how we feel if we're upset about something? Does it mean that we don’t ever correct “wrongness” if we feel that something can be constructively done? No. **The mind is always looking for rules with which to achieve certainty, but no rule is always appropriate.**
 
-Let’s be a witness to ourselves. What stories or tapes are we running now? How are we creating our experience of the situation? As Ken Keyes said, first become centered and then act. When we’re uncentered and upset in any way we’ll tend to create turbulence and disharmony whatever we do or say. So let’s let our *primary emphasis* always be our own consciousness. **Let’s slowly fall silent inside**.
+<font color=red>Let’s be a witness to ourselves. What stories or tapes are we running now? How are we creating our experience of the situation?</font> As Ken Keyes said, first become centered and then act. When we’re uncentered and upset in any way we’ll tend to create turbulence and disharmony whatever we do or say. So let’s let our *primary emphasis* always be our own consciousness. **Let’s slowly fall silent inside**.
 
 ```
 浊以静之徐清。
@@ -1579,11 +1585,11 @@ Let’s be a witness to ourselves. What stories or tapes are we running now? How
 
 **When we’re silent inside we’ll naturally, spontaneously do whatever is most appropriate, whatever might create the greatest overall harmony. There won’t be a decision involved,no rule to follow. It will happen of itself. We will literally beliving in a different reality, and the world will look entirely different to us, even though it’s entirely the same. What used to be problems will no longer be problems.**
 
-So let’s not try to solve problems while staying attached to our stories. **Our individual problems are not the problem. The world’s problems are not the problem. A lack of consciousness is the only real “problem” in this world.**
+So let’s not try to solve problems while staying attached to our stories. **Our individual problems are not the problem. The world’s problems are not the problem. <font color=red>A lack of consciousness is the only real “problem” in this world.</font>**
 
 Always, our first priority can be to be more conscious of our stories about how others and this world and ourselves ought to be different — and how those stories are creating our sense of isolation and suffering.
 
-**When we become more silent within it will all begin to work. We’ll experience the perfection of Existence, not as a concept but as an experiential reality. Nothing will be seen as a problem, not even death. For when we’re really silent we’re gone, we are no more; we have joined Existence Itself. The drop has merged in the ocean.**
+**When we become more silent within it will all begin to work. We’ll experience the perfection of Existence, <font color=red>not as a concept but as an experiential reality</font>. Nothing will be seen as a problem, not even death. For when we’re really silent we’re gone, we are no more; we have joined Existence Itself. The drop has merged in the ocean.**
 
 How then can death trouble us? Death is a problem to the mind, to “you” and “I.” How can disease or pain or loss or poverty or suffering or anything at all trouble us when we nolonger exist? Only the Ocean exists, and It’s not troubled. All we ever were was the disturbance, the mind’s movement. When that is gone, we too are gone. And so is death.
 
@@ -1592,6 +1598,10 @@ When we’re silent within we’ll be spontaneously loving and compassionate; we
 Sharing is being responsible for our experience — “I had a thought just now that you’re conceited and I turned it around and saw how I’m conceited when I’m thinking that about you.” Dumping is when we put the responsibility for our experience out there — “You know, you’re conceited!”
 
 Dumping activates the automatic mechanisms of others and creates conflict and estrangement. Sharing creates a communion; it makes us real to others, it makes us available. Then we’re not trying to protect anything, for example our story, for we’ve seen that there’s nothing to protect.
+
+```
+Sharing & Dumping
+```
 
 The mind always feels that certain things need to be protected for the sake of our survival. But what is really being protected? Yes, the mind itself, the survival programming itself. To the extent that we’re willing to share ourself with others, to that extent we weaken the hold of the mind and open up space with others instead of shutting it down. And we’ll see more and more that what we are protecting isn’t worth protecting, and conversely, that what is really worth protecting — **the vast pregnant spaciousness and emptiness** within that we really are — needs no protection at all.
 
@@ -1603,13 +1613,13 @@ The person of final awakening is like the open sky. She is boundless, infinite. 
 
 The liberated person has a body-mind package but she is not that package; she is the void, the emptiness out of which that package has arisen. How to protect an absence, a void? Since it cannot be harmed, there is no need to protect it and no possibility of protecting it. Consequently, **the person of awakening is totally open to life, totally transparent, totally receptive to all things.**
 
-She says “yes” to all aspects of life without reservation. **The mind gathers energy and strength by saying “no” to parts of Existence. This is liked and that is disliked. But the person of wisdom says “yes” to all of it. And nothing is excluded, not even the mind.**
+She says “yes” to all aspects of life without reservation. **The mind gathers energy and strength by saying “no” to parts of Existence. This is liked and that is disliked. But <font color=red>the person of wisdom says “yes” to all of it. And nothing is excluded, not even the mind</font>.**
 
 For she knows that Existence is a vast mystery which cannot be penetrated. She knows that she knows nothing at all, and so she simply opens her heart. She trusts. She allows the river to carry her, she knows not where, she knows not why. But **with that trusting heart she experiences the bliss of allowing herself to be a part of the flow. Just to exist in each moment is a benediction.**
 
 He has no attachment to particular concepts or beliefs,and so he’s willing to let others have them. He’s willing to let others be “right.” After all, each concept is part of Existence too, it is perfect in its own way. And **each person is a part of Existence, a part of God — so the divine is speaking through everyone.**
 
-He sometimes uses the master Mahavir's logic when it’s appropriate. If someone makes a statement of some kind his attitude toward it might be, “Perhaps you are right.” He lets the other person know that he understood what was said, but he’s lost the compulsion to agree or disagree — least of all with philosophical or metaphysical systems. He’s receptive to all things large and small, including all concepts, but he’s not attached to any. He plays with them as what they are — toys in the sandbox.
+He sometimes uses the master Mahavir's logic when it’s appropriate. If someone makes a statement of some kind his attitude toward it might be, “Perhaps you are right.” He lets the other person know that he understood what was said, but he’s lost the compulsion to agree or disagree — least of all with philosophical or metaphysical systems. He’s receptive to all things large and small, including all concepts, but he’s not attached to any. He <font color=red>plays with them as what they are — toys in the sandbox</font>.
 
 He has abandoned trying to know the how or why of Existence or of his situation, he’s abandoned gathering facts and data and answers and solutions. He’s willing to play with data and questions and so on, but doesn't take them seriously because he has accepted his complete ignorance.
 
@@ -1621,9 +1631,9 @@ Buddha used to tell a story about a man wounded by a poisoned arrow. His friends
 
 This is our situation. **We will die in the middle of collecting our data and answers and goals unless we awaken to our situation.** We might think we can go toward happiness like an arrow going towards the target. We might imagine it is a matter of getting certain things in place.
 
-But aiming directly toward the target can sometimes guarantee that we’ll miss it. For instance, someone lies back in a lake feeling the sun on her face. She’s not trying to accomplish anything; she’s relaxed, surrendered. And a moment may come when bliss descends on her. We hear about it, let’s say,and we go to the lake to find this happiness. We lie back in the lake waiting for the moment of bliss, but it doesn’t come.Why not?
+But <font color=red>aiming directly toward the target can sometimes guarantee that we’ll miss it</font>. For instance, someone lies back in a lake feeling the sun on her face. She’s not trying to accomplish anything; she’s relaxed, surrendered. And a moment may come when bliss descends on her. We hear about it, let’s say,and we go to the lake to find this happiness. We lie back in the lake waiting for the moment of bliss, but it doesn’t come.Why not?
 
-Perhaps because we were direct. We sought directly. But **Existence is indirect. It moves through hints and whispers, It reveals itself through silence.** Only when all seeking is gone and we're willing to wait for all eternity with no striving, no desire, no goal, not waiting for anything in particular but just waiting for no reason — then, in that empty silence, Existence reveals Itself.
+Perhaps because we were direct. We sought directly. But **Existence is indirect. It moves through hints and whispers, It reveals itself through silence.** Only when all seeking is gone and we're willing to wait for all eternity with no striving, no desire, no goal, <font color=red>not waiting for anything in particular but just waiting for no reason — then, in that empty silence, Existence reveals Itself</font>.
 
 The mind thinks it can find happiness, thinks it can find God, thinks it can find enlightenment. But what map will we use? And how can there be a map when there’s no address, no location?
 
@@ -1633,7 +1643,7 @@ When there is no more seeking after anything at all,when there is **simply waiti
 
 
 ## Chapter Thirty-eight
-God finds us when we’re not away from home. But God can come only to us when we’re totally naked. As long as we are clinging to something in our version of reality, God can’t come to us. The Unlimited, so to speak, makes contact with us when we’re not clinging to something limited.
+God finds us when we’re not away from home. But God can come only to us when we’re totally naked. **As long as we are clinging to something in our version of reality, God can’t come to us.** The Unlimited, so to speak, makes contact with us when we’re not clinging to something limited.
 
 Sufis tell a story of blind men feeling an elephant. One feels the trunk and declares that an elephant is curving and long. One feels the ear and announces that an elephant is wide and flat. One feels the tail and concludes that an elephant is like a rope. **As long as we cling to our partial version of things we can never see the Real.**
 
@@ -1649,7 +1659,7 @@ How can we leave our partial versions of reality behind when we're so mired in t
 
 **We observe ourself moment-to-moment — what we are doing, what we are thinking and feeling, how we’re reacting towards this and that.** As this continues, the thoughts of the mind gradually die down, and we begin to notice the gaps between our thoughts like the clouds parting and allowing a glimpse of the sun. Then we begin to enter the Silence where we encounter Existence itself. And one day when the Silence is complete we disappear and then, in this metaphor, God can truly play the divine Song through us.
 
-The ultimate value of awareness, therefore, is that it leads to Silence and Stillness within us. And in that Stillness,Existence is. God arises. The Self is “born.” Existence, Self —whatever the name — was always there but wasn’t noticed because of the incessant activity, the incessant static of the mind’s beliefs and clutchings.
+<font color=red>The ultimate value of awareness, therefore, is that it leads to Silence and Stillness within us</font>. And in that Stillness,Existence is. God arises. The Self is “born.” Existence, Self —whatever the name — was always there but wasn’t noticed because of the incessant activity, the incessant static of the mind’s beliefs and clutchings.
 
 Silence then, as Ramana Maharshi once said, is the true instruction. There’s no teacher like Silence. It is incomparable. Mind is like the surface of a lake when one is trying to see into the depths. When the surface is choppy and agitated, the depths cannot be seen. Once the surface is still and silent,though, the depths can be seen easily. They were always there but could not be observed.
 
@@ -1667,23 +1677,19 @@ Beyond this awakening, however, is **a final awakening where we simply disappear
 
 **Then we have attained to being a nobody, a nothing.** Now rivers flow in us, stars are born in us, the wind blows through the trees in us. There is the bliss of Existence Itself, a bliss which transcends what is normally thought of as joy and happiness in human life.
 
-In this state of final awakening, **everything that would have to be given up at physical death has already been given up before physical death**. The body is still alIive, but now there is no inhabitant anymore. This awakening, therefore, is truly a dying. **It is death. Not bodily death, but the death of “you”or “I,” the death of the mind, the illusory controller.**
+In this state of final awakening, <font color=red>**everything that would have to be given up at physical death has already been given up before physical death**</font>. The body is still alIive, but now there is no inhabitant anymore. This awakening, therefore, is truly a dying. **It is death. Not bodily death, but the death of “you”or “I,” the death of the mind, the illusory controller.**
 
 It’s the death of everything we’ve ever associated with“you” or “I.” Everything has been thrown, nothing is carried any longer. The luggage full of stories and tapes and desires has been put down forever. We leave behind all our burdens,including the ultimate burden — the separate “I.”
 
 Now death has no hold anymore. Death is dead, for we have already died. In that death we are reborn, but it is not us. Now we are not, but God is. **God has been “born” through our absence. The Existence lives and breathes through the vessel now. It’s like the open sky — eternal, deathless.**
 
-The Existence expresses through a human form. Then we are Everything and Nothing. We are Oneness and the Void. Who we are now was never born, so it cannot die. Both life and death have been transcended. Such a person, as Jesus said, is in the world but not of it anymore.And the Ocean itself rises in the wave.
+The Existence expresses through a human form. Then we are Everything and Nothing. We are Oneness and the Void. Who we are now was never born, so it cannot die. Both life and death have been transcended. Such a person, as Jesus said, is in the world but not of it anymore. And the Ocean itself rises in the wave.
 
 
 
 
 ## Chapter Thirty-nine
 Is an innocent young infant in this state? Is an animal enlightened? In one sense they are because there is no mind,there is no rational-controller. There is no problem about life because there is no past or future, no expectations or models,no concepts or comparisons. There is just life from moment to moment. On the other hand there is strong instinctual, lower-brain programming to survive and avoid extinction. **In contrast, an awakened being has no desire to seek or avoid extinction, because the separate “I” has already become extinct.**
-
-```
-instinctual [ɪkˈstɪŋkʃn] 灭绝;(植物、动物、生活方式等的)绝种;消亡
-```
 
 But this isn’t the crux of the matter. What about a cloud or *a blade of* grass? Now there is no desire even to survive.There is simply the bliss of perfect harmony with Existence. Are they enlightened? No.. .and now we come to the heart of it.
 
@@ -1702,7 +1708,7 @@ As Osho says, entities who don’t have sentience have no tension because they�
 The tragedy of the human is that only he or she truly suffers. No animal, no plant, no river can suffer as humans do because there is no mind to struggle, no mind to live in the past and future, no mind to compare and judge and crave. **Self-realization has depth to it because it has first known the misery of mind.**
 
 ```
-作为一个有自我意识的人，从ming的幻象中清醒，“复其初”。
+作为一个有自我意识的人，从mind的幻象中清醒，“复其初”。
 ```
 
 This is why a fetus, even though existing in bliss, isn’t awakened — it is not yet conscious. **One must pass through the pain of partial consciousness before the doors of heaven can open in complete consciousness.**
