@@ -6,8 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Winston Wolfe
-brief-intro: ☀️
+title: 温斯顿吴
+brief-intro: 程序员/期货作手/禅宗爱好者
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://woojean.com" # the base hostname & protocol for your site
 
