@@ -7,7 +7,7 @@
 
 # Site settings
 title: 温斯顿吴
-brief-intro: 程序员|交易员
+brief-intro: 程序员 | 交易员
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://woojean.com" # the base hostname & protocol for your site
 
