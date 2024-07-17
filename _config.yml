@@ -26,7 +26,6 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-
 # url
 category_dir: category/
 tag_dir: tag/
