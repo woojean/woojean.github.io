@@ -7,7 +7,7 @@
 
 # Site settings
 title: woojean.com
-brief-intro: 以前是个程序员，现在是个投机客，以后是个大和尚。
+brief-intro: 写代码，搞期货，学禅。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://woojean.com" # the base hostname & protocol for your site
 
