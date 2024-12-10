@@ -2,7 +2,7 @@
 layout : post
 title : "Nothing(2nd Edition)"
 date : 2022-01-19 19:06:58
-categories : 佛学
+categories : 其他
 tags : 国外禅学
 excerpt : ""
 ---
