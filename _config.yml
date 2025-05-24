@@ -29,7 +29,6 @@ kramdown:
 # url
 category_dir: category/
 tag_dir: tag/
-quality_dir: quality/
 
 # excerpt
 excerpt_separator: "\n\n\n\n"
